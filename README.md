@@ -1,5 +1,3 @@
-# cat2151.github.io
-
-DEMO
+# DEMO
 
 https://cat2151.github.io
