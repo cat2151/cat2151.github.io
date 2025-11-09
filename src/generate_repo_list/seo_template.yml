@@ -1,24 +1,24 @@
 # SEO Configuration Template
-# このファイルはPythonスクリプトによって読み込まれ、index.mdのフロントマターに挿入されます
+# This file is loaded by Python script and inserted into index.md frontmatter
 
 layout: default
-title: "{username}のGitHubリポジトリ一覧"
-description: "{username}のGitHubリポジトリとプロジェクトの一覧です。最新のプログラミングプロジェクト、ツール、ライブラリを掲載しています。"
-keywords: "GitHub, リポジトリ, プログラミング, オープンソース, {username}, プロジェクト一覧"
+title: "{username}'s GitHub Repository List"
+description: "A comprehensive list of {username}'s GitHub repositories and projects. Featuring the latest programming projects, tools, and libraries."
+keywords: "GitHub, repositories, programming, open source, {username}, project list"
 author: "{username}"
 canonical_url: "https://{username}.github.io/"
 
 # OGP (Open Graph) tags
-og_title: "{username}のGitHubリポジトリ一覧"
+og_title: "{username}'s GitHub Repository List"
 og_description: "{og_description}"
 og_image: "https://{username}.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
-og_site_name: "{username}のGitHub Portfolio"
+og_site_name: "{username}'s GitHub Projects"
 
 # Twitter Card tags
 twitter_card: "summary_large_image"
-twitter_title: "{username}のGitHubリポジトリ一覧"
+twitter_title: "{username}'s GitHub Repository List"
 twitter_description: "{og_description}"
 twitter_image: "https://{username}.github.io/assets/favicon-512x512.png"
 
