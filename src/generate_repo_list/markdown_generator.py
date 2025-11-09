@@ -186,16 +186,6 @@ class MarkdownGenerator:
         github_url = self.url_utils.get_github_repo_url(repo["name"], username)
         github_link = f"[{github_url}]({github_url})"
 
-        # README.ja.md が存在する場合、Japaneseバッジを追加
-        if repo.get("has_readme_ja", False):
-            readme_ja_url = (
-                f"{repo['pages_url']}README.ja.html" if repo["has_pages"] else f"{repo['url']}/blob/main/README.ja.md"
-            )
-            japanese_badge = (
-                f'<a href="{readme_ja_url}"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a>'
-            )
-            github_link = f"{github_link} {japanese_badge}"
-
         # Pages URL も明示的なリンクとして生成（利用可能な場合）
         if repo["has_pages"]:
             pages_link = f"[{repo['pages_url']}]({repo['pages_url']})"
