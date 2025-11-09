@@ -1,19 +1,24 @@
 ---
 layout: "default"
-title: "cat2151のGitHubリポジトリ一覧"
-description: "cat2151のGitHubリポジトリとプロジェクトの一覧です。最新のプログラミングプロジェクト、ツール、ライブラリを掲載しています。"
-keywords: "GitHub, リポジトリ, プログラミング, オープンソース, cat2151, プロジェクト一覧"
+title: |
+  cat2151's GitHub Repository List
+description: |
+  A comprehensive list of cat2151's GitHub repositories and projects. Featuring the latest programming projects, tools, and libraries.
+keywords: "GitHub, repositories, programming, open source, cat2151, project list"
 author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
-og_title: "cat2151のGitHubリポジトリ一覧"
-og_description: "75個のプロジェクトを掲載（⭐49個）。JavaScript、Python、Rustなど多様な技術を使用したオープンソースプロジェクト集。"
+og_title: |
+  cat2151's GitHub Repository List
+og_description: "Featuring 75 projects (⭐49 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
-og_site_name: "cat2151のGitHub Portfolio"
+og_site_name: |
+  cat2151's GitHub Projects
 twitter_card: "summary_large_image"
-twitter_title: "cat2151のGitHubリポジトリ一覧"
-twitter_description: "75個のプロジェクトを掲載（⭐49個）。JavaScript、Python、Rustなど多様な技術を使用したオープンソースプロジェクト集。"
+twitter_title: |
+  cat2151's GitHub Repository List
+twitter_description: "Featuring 75 projects (⭐49 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -28,14 +33,11 @@ category: "technology"
 tags: [programming, opensource, portfolio, github, developer, projects]
 changefreq: "daily"
 priority: "1.0"
-breadcrumb: true
-...
+breadcrumb: True
 organization: "cat2151 Open Source Projects"
 robots: "index, follow"
 revisit_after: "1 days"
 rating: "general"
-
-# JSON-LD Structured Data
 json_ld: |
   {
     "@context": "https://schema.org",
@@ -48,7 +50,7 @@ json_ld: |
       "description": "Programmer and developer. Publishing 75 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "75個のプロジェクトを掲載（⭐49個）。JavaScript、Python、Rustなど多様な技術を使用したオープンソースプロジェクト集。",
+    "description": "Featuring 75 projects (⭐49 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -69,7 +71,7 @@ Last Updated: 2025-11-09
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/リポジトリ総数-75-blue) ![Active](https://img.shields.io/badge/アクティブ-69-green) ![Archived](https://img.shields.io/badge/アーカイブ-0-yellow) ![Forks](https://img.shields.io/badge/フォーク-6-purple) ![Stars](https://img.shields.io/badge/総スター数-49-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-75-blue) ![Active](https://img.shields.io/badge/Active-69-green) ![Archived](https://img.shields.io/badge/Archived-0-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-49-gold)
 
 ### Core Technologies
 
@@ -101,7 +103,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/cat2151-zenn-contents
 - **Live Demo**: https://cat2151.github.io/cat2151-zenn-contents/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2025-11-09
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
@@ -109,7 +111,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/ym2151-log-play-server
 - **Live Demo**: https://cat2151.github.io/ym2151-log-play-server/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2025-11-09
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
@@ -124,8 +126,8 @@ Last Updated: 2025-11-09
 ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/cat-edit-mml
-- **Live Demo**: なし
-- **Overview**: 説明なし
+- **Live Demo**: None
+- **Overview**: No description available
 - 📅 2025-11-08
 
 ## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
@@ -133,7 +135,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/cat-play-mml
 - **Live Demo**: https://cat2151.github.io/cat-play-mml/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2025-11-08
 
 ## [cat-clipboard-launcher](https://cat2151.github.io/cat-clipboard-launcher/)
@@ -141,7 +143,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/cat-clipboard-launcher
 - **Live Demo**: https://cat2151.github.io/cat-clipboard-launcher/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2025-11-08
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
@@ -164,7 +166,7 @@ Last Updated: 2025-11-09
 ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/super-easy-vim
-- **Live Demo**: なし
+- **Live Demo**: None
 - **Overview**: vim初心者に成功体験を与える用のジョークアプリ。vimのサブセット。極端に機能を削減し、モードとキーバインドを過剰に派手に表示する
 - 📅 2025-11-06
 
@@ -172,15 +174,15 @@ Last Updated: 2025-11-09
 ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/ym2151-tone-editor
-- **Live Demo**: なし
-- **Overview**: 説明なし
+- **Live Demo**: None
+- **Overview**: No description available
 - 📅 2025-11-05
 
 ## [smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
 ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/smf-to-ym2151log-rust
-- **Live Demo**: なし
+- **Live Demo**: None
 - **Overview**: smf-to-ym2151log のRust版
 - 📅 2025-11-04
 
@@ -205,7 +207,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/mmlabc-to-smf
 - **Live Demo**: https://cat2151.github.io/mmlabc-to-smf/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2025-11-02
 
 ## [smf-to-ym2151log](https://cat2151.github.io/smf-to-ym2151log/)
@@ -213,30 +215,30 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/smf-to-ym2151log
 - **Live Demo**: https://cat2151.github.io/smf-to-ym2151log/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2025-11-02
 
 ## [ym2151-typescipt-cli-zig-cc](https://github.com/cat2151/ym2151-typescipt-cli-zig-cc)
 ![C](https://img.shields.io/badge/C-555555?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/ym2151-typescipt-cli-zig-cc
-- **Live Demo**: なし
-- **Overview**: 説明なし
+- **Live Demo**: None
+- **Overview**: No description available
 - 📅 2025-11-01
 
 ## [ym2151-golang-zig-cc](https://github.com/cat2151/ym2151-golang-zig-cc)
 ![C](https://img.shields.io/badge/C-555555?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/ym2151-golang-zig-cc
-- **Live Demo**: なし
-- **Overview**: 説明なし
+- **Live Demo**: None
+- **Overview**: No description available
 - 📅 2025-10-31
 
 ## [ym2151-python-zig-cc](https://github.com/cat2151/ym2151-python-zig-cc)
 ![C](https://img.shields.io/badge/C-555555?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/ym2151-python-zig-cc
-- **Live Demo**: なし
+- **Live Demo**: None
 - **Overview**: Nuked-OPMを使った最低限の音を出すexampleを、Windowsで、Pythonで、Cコンパイラにzig ccを使って実装を検証する用
 - 📅 2025-10-31
 
@@ -244,16 +246,16 @@ Last Updated: 2025-11-09
 ![C](https://img.shields.io/badge/C-555555?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/ym2151-typescript-webaudio
-- **Live Demo**: なし
-- **Overview**: 説明なし
+- **Live Demo**: None
+- **Overview**: No description available
 - 📅 2025-10-31
 
 ## [ym2151-rust-zig-cc](https://github.com/cat2151/ym2151-rust-zig-cc)
 ![C](https://img.shields.io/badge/C-555555?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/ym2151-rust-zig-cc
-- **Live Demo**: なし
-- **Overview**: 説明なし
+- **Live Demo**: None
+- **Overview**: No description available
 - 📅 2025-10-31
 
 ## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
@@ -261,7 +263,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/cat-oscillator-sync
 - **Live Demo**: https://cat2151.github.io/cat-oscillator-sync/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2025-10-29
 
 ## [cat-incremental-search-filter](https://cat2151.github.io/cat-incremental-search-filter/)
@@ -269,15 +271,15 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/cat-incremental-search-filter
 - **Live Demo**: https://cat2151.github.io/cat-incremental-search-filter/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2025-10-28
 
 ## [cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
 ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/cat-window-watcher
-- **Live Demo**: なし
-- **Overview**: 説明なし
+- **Live Demo**: None
+- **Overview**: No description available
 - 📅 2025-10-28
 
 ## [cat-jekyll-config-generator](https://cat2151.github.io/cat-jekyll-config-generator/)
@@ -420,7 +422,7 @@ Last Updated: 2025-11-09
 ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/command-challenge
-- **Live Demo**: なし
+- **Live Demo**: None
 - **Overview**: 格ゲーの操作コマンドに短時間で慣れるためのアプリ（experimental）
 - 📅 2025-06-22
 
@@ -444,7 +446,7 @@ Last Updated: 2025-11-09
 ![Stars](https://img.shields.io/badge/Stars-5-yellow) ![C++](https://img.shields.io/badge/C++-f34b7d?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/STed2.07m
-- **Live Demo**: なし
+- **Live Demo**: None
 - **Overview**: STed2 from STED_ALL.LZH
 - 📅 2025-06-02
 
@@ -485,23 +487,23 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/mml-repl-like
 - **Live Demo**: https://cat2151.github.io/mml-repl-like/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2023-08-03
 
 ## [wsl2-docker-mingw-hello](https://github.com/cat2151/wsl2-docker-mingw-hello)
 ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Batchfile](https://img.shields.io/badge/Batchfile-8b407a?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/wsl2-docker-mingw-hello
-- **Live Demo**: なし
-- **Overview**: 説明なし
+- **Live Demo**: None
+- **Overview**: No description available
 - 📅 2022-12-06
 
 ## [VRC7-preset-tone](https://github.com/cat2151/VRC7-preset-tone)
 ![Stars](https://img.shields.io/badge/Stars-1-yellow)
 
 - **Repository**: https://github.com/cat2151/VRC7-preset-tone
-- **Live Demo**: なし
-- **Overview**: 説明なし
+- **Live Demo**: None
+- **Overview**: No description available
 - 📅 2022-09-24
 
 ## [mini-command-palette-hidemaru](https://cat2151.github.io/mini-command-palette-hidemaru/)
@@ -509,7 +511,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/mini-command-palette-hidemaru
 - **Live Demo**: https://cat2151.github.io/mini-command-palette-hidemaru/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2022-04-13
 
 ## [mini-command-palette-mery](https://cat2151.github.io/mini-command-palette-mery/)
@@ -517,7 +519,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/mini-command-palette-mery
 - **Live Demo**: https://cat2151.github.io/mini-command-palette-mery/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2022-04-11
 
 ## [mini-command-palette-sakura-editor](https://cat2151.github.io/mini-command-palette-sakura-editor/)
@@ -525,7 +527,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/mini-command-palette-sakura-editor
 - **Live Demo**: https://cat2151.github.io/mini-command-palette-sakura-editor/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2022-04-11
 
 ## [migemo-auto-install-for-windows](https://cat2151.github.io/migemo-auto-install-for-windows/)
@@ -533,7 +535,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/migemo-auto-install-for-windows
 - **Live Demo**: https://cat2151.github.io/migemo-auto-install-for-windows/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2022-04-09
 
 ## [migemo-auto-install-for-windows-and-python](https://cat2151.github.io/migemo-auto-install-for-windows-and-python/)
@@ -541,7 +543,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/migemo-auto-install-for-windows-and-python
 - **Live Demo**: https://cat2151.github.io/migemo-auto-install-for-windows-and-python/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2022-04-09
 
 ## [cygwin-auto-get-install](https://cat2151.github.io/cygwin-auto-get-install/)
@@ -549,7 +551,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/cygwin-auto-get-install
 - **Live Demo**: https://cat2151.github.io/cygwin-auto-get-install/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2022-03-20
 
 ## [OPM-tone-easy-editor](https://cat2151.github.io/OPM-tone-easy-editor/)
@@ -613,7 +615,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/tyranoscript5_for_iPad_browser_test_20210321
 - **Live Demo**: https://cat2151.github.io/tyranoscript5_for_iPad_browser_test_20210321/
-- **Overview**: 説明なし
+- **Overview**: No description available
 - 📅 2021-03-24
 
 ## [from-wonderfl](https://cat2151.github.io/from-wonderfl/)
@@ -637,7 +639,7 @@ Last Updated: 2025-11-09
 
 ## 📦 Archived Projects
 
-アーカイブされているリポジトリはありません。
+No archived repositories available.
 
 ---
 
@@ -649,8 +651,8 @@ Forked from upstream repository
 ![Fork](https://img.shields.io/badge/Fork-orange)
 
 - **Repository**: https://github.com/cat2151/Zenn
-- **Live Demo**: なし
-- **Overview**: 説明なし
+- **Live Demo**: None
+- **Overview**: No description available
 - 📅 2025-05-01
 
 ## [sionicjs](https://cat2151.github.io/sionicjs/)
@@ -665,7 +667,7 @@ Forked from upstream repository
 ![Fork](https://img.shields.io/badge/Fork-orange) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/crisp-game-lib
-- **Live Demo**: なし
+- **Live Demo**: None
 - **Overview**: Minimal JavaScript library for creating classic arcade-like mini-games running in the browser
 - 📅 2022-01-03
 
@@ -673,15 +675,15 @@ Forked from upstream repository
 ![Fork](https://img.shields.io/badge/Fork-orange)
 
 - **Repository**: https://github.com/cat2151/hidescript
-- **Live Demo**: なし
-- **Overview**: 説明なし
+- **Live Demo**: None
+- **Overview**: No description available
 - 📅 2021-10-07
 
 ## [TypewriterNoises-VSCode](https://github.com/cat2151/TypewriterNoises-VSCode)
 ![Fork](https://img.shields.io/badge/Fork-orange)
 
 - **Repository**: https://github.com/cat2151/TypewriterNoises-VSCode
-- **Live Demo**: なし
+- **Live Demo**: None
 - **Overview**: Typewriter Noises for Visual Studio Code :musical_keyboard:
 - 📅 2021-05-22
 
@@ -689,7 +691,7 @@ Forked from upstream repository
 ![Fork](https://img.shields.io/badge/Fork-orange) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=github)
 
 - **Repository**: https://github.com/cat2151/WebMSX
-- **Live Demo**: なし
+- **Live Demo**: None
 - **Overview**: WebMSX - Online MSX Emulator
 - 📅 2016-07-08
 

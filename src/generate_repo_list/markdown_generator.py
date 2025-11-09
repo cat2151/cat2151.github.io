@@ -222,12 +222,11 @@ class MarkdownGenerator:
                 yaml_output = yaml.dump(value, default_flow_style=True, allow_unicode=True).strip()
                 frontmatter_lines.append(f"{key}: {yaml_output}")
             else:
-                # その他の型はYAML標準形式で出力
-                yaml_output = yaml.dump(value, allow_unicode=True).strip()
-                frontmatter_lines.append(f"{key}: {yaml_output}")
+                # その他の型（bool、int、floatなど）は直接文字列化
+                frontmatter_lines.append(f"{key}: {value}")
 
         # JSON-LDを追加
-        frontmatter_lines.extend(["", "# JSON-LD Structured Data", "json_ld: |"])
+        frontmatter_lines.append("json_ld: |")
 
         # JSON-LDの各行にインデントを追加
         for line in json_ld_str.split("\n"):
