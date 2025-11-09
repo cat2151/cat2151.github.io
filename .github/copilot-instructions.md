@@ -96,5 +96,5 @@ GitHub Actions環境 → `GITHUB_TOKEN` 環境変数使用
 ## userからの指示
 - もしPythonコードの変更を行ったら、userにコントロールを返す前に、以下の手順を実行してください:
   - ruff format
-  - ruff check --fix
+  - ruff check --fix --unsafe-fixes
   - pytest

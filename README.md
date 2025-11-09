@@ -32,6 +32,7 @@ GitHubのユーザーページ（`https://github.com/<username>`）は、検索�
 - SEO最適化された Markdown 生成
 - バッジ付きリポジトリ表示
 - アクティブ・アーカイブ・フォークによる分類
+- **プロジェクト概要自動取得**: 各リポジトリの `generated-docs/project-overview.md` から3行の魅力的な説明を自動取得・表示
 - Jekyll/GitHub Pages 対応
 
 ### 💡 開発者向けのヒント
@@ -53,6 +54,8 @@ pytest
 - `ruff.toml`: コードスタイル設定
 - `requirements.txt`: 本番依存関係
 - `requirements-dev.txt`: 開発・テスト依存関係
+- `src/generate_repo_list/config.yml`: プロジェクト概要取得機能などの技術的パラメータ
+- `src/generate_repo_list/strings.yml`: 表示メッセージ・文言管理
 
 ## � 実際の生成コマンド
 
@@ -86,3 +89,31 @@ python src/generate_repo_list/generate_repo_list.py --username cat2151 --output 
 ## 📄 ライセンス
 
 このプロジェクトは MIT ライセンスの下で公開されています。
+
+## 🎯 プロジェクト概要機能
+
+### 概要
+各リポジトリの `generated-docs/project-overview.md` ファイルから「プロジェクト概要」セクションの3行説明を自動取得し、リポジトリ一覧に表示する機能です。
+
+### 対象フォーマット
+
+```markdown
+## プロジェクト概要
+- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽に
+- 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOK
+- ✅ メンテは一括、プロジェクト開発に集中できます
+```
+
+### 設定
+
+config.ymlでの制御:
+
+```yaml
+project_overview:
+  enabled: true  # 機能のON/OFF
+  target_file: "generated-docs/project-overview.md"  # 対象ファイル
+  section_title: "プロジェクト概要"  # 抽出対象セクション
+  max_retries: 1  # API失敗時のリトライ回数
+  timeout_seconds: 10  # タイムアウト時間
+  enable_cache: true  # 同一実行内でのキャッシュ
+```

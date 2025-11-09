@@ -7,20 +7,29 @@ from typing import Any, Dict, List, Tuple
 
 from github import Github
 from github.GithubException import GithubException
+from project_overview_fetcher import ProjectOverviewFetcher
 
 
 class RepositoryProcessor:
     """リポジトリ処理クラス"""
 
-    def __init__(self, config: Dict[str, Any], strings: Dict[str, Any]):
+    def __init__(self, config: Dict[str, Any], strings: Dict[str, Any], github_api: Github = None):
         """初期化
 
         Args:
             config: 設定辞書
             strings: 文字列リソース辞書
+            github_api: GitHub APIクライアント（プロジェクト概要取得用）
         """
         self.config = config
         self.strings = strings
+        self.github_api = github_api
+
+        # プロジェクト概要取得機能の初期化
+        if self.github_api is not None:
+            self.project_overview_fetcher = ProjectOverviewFetcher(self.github_api, self.config)
+        else:
+            self.project_overview_fetcher = None
 
     def fetch_repositories(self, github_user: Github, username: str, limit: int = None) -> List[Dict[str, Any]]:
         """指定ユーザーのリポジトリを取得してフィルタリングする
@@ -128,7 +137,7 @@ class RepositoryProcessor:
 
     def _create_repo_data(self, repo, username: str) -> Dict[str, Any]:
         """リポジトリデータを作成する"""
-        return {
+        repo_data = {
             "name": repo.name,
             "url": repo.html_url,
             "pages_url": f"https://{username}.github.io/{repo.name}/",
@@ -141,3 +150,11 @@ class RepositoryProcessor:
             "language": repo.language or "",
             "topics": repo.get_topics(),
         }
+
+        # プロジェクト概要を取得（ProjectOverviewFetcherが利用可能な場合のみ）
+        if self.project_overview_fetcher is not None:
+            project_overview = self.project_overview_fetcher.fetch_overview(repo.name, username)
+            if project_overview:
+                repo_data["project_overview"] = project_overview
+
+        return repo_data

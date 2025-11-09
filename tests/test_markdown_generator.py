@@ -75,6 +75,7 @@ class TestMarkdownGenerator:
                     "github_label": "GitHub",
                     "pages_label": "GitHub Pages",
                     "description_label": "説明",
+                    "project_highlights": "Project Highlights",
                 },
                 "section_messages": {
                     "archived_empty": "アーカイブされたリポジトリはありません。",
@@ -292,6 +293,69 @@ class TestMarkdownGenerator:
         assert "active-repo" in result
         assert "archived-repo" in result
         assert "forked-repo" in result
+
+    def test_generate_repo_item_with_project_overview(self, generator):
+        """プロジェクト概要付きリポジトリアイテム生成テスト"""
+        repo = {
+            "name": "test-repo",
+            "url": "https://github.com/testuser/test-repo",
+            "pages_url": "https://testuser.github.io/test-repo/",
+            "description": "テストリポジトリ",
+            "has_pages": True,
+            "archived": False,
+            "fork": False,
+            "updated_at": datetime(2024, 1, 15),
+            "stargazers_count": 5,
+            "language": "Python",
+            "topics": ["test", "python"],
+            "project_overview": [
+                "🚀 テストリポジトリの1番目の説明",
+                "🔗 テストリポジトリの2番目の説明",
+                "✅ テストリポジトリの3番目の説明",
+            ],
+        }
+
+        result = generator._generate_repo_item(repo, username="testuser")
+
+        # 基本情報の確認
+        assert "## [test-repo]" in result
+        assert "https://github.com/testuser/test-repo" in result
+        assert "**GitHub**: " in result
+        assert "**GitHub Pages**: " in result
+        assert "**説明**: テストリポジトリ" in result
+
+        # プロジェクト概要セクションの確認
+        assert "### Project Highlights" in result
+        assert "🚀 テストリポジトリの1番目の説明" in result
+        assert "🔗 テストリポジトリの2番目の説明" in result
+        assert "✅ テストリポジトリの3番目の説明" in result
+
+    def test_generate_repo_item_without_project_overview(self, generator):
+        """プロジェクト概要なしリポジトリアイテム生成テスト"""
+        repo = {
+            "name": "test-repo",
+            "url": "https://github.com/testuser/test-repo",
+            "pages_url": "https://testuser.github.io/test-repo/",
+            "description": "テストリポジトリ",
+            "has_pages": True,
+            "archived": False,
+            "fork": False,
+            "updated_at": datetime(2024, 1, 15),
+            "stargazers_count": 5,
+            "language": "Python",
+            "topics": ["test", "python"],
+            # project_overviewフィールドなし
+        }
+
+        result = generator._generate_repo_item(repo, username="testuser")
+
+        # 基本情報の確認
+        assert "## [test-repo]" in result
+        assert "**説明**: テストリポジトリ" in result
+
+        # プロジェクト概要セクションがないことの確認
+        assert "### Project Highlights" not in result
+        assert "🚀" not in result
 
 
 # レガシー互換のためのメイン関数

@@ -41,6 +41,7 @@ markdown:
     github_label: "Repository"
     pages_label: "Live Demo"
     description_label: "Overview"
+    project_highlights: "Project Highlights"
     fork_description: "Forked from upstream repository"
 
   # Processing Status Messages

@@ -67,7 +67,7 @@ class GitHubRepositoryListGenerator:
         self.config = self.config_manager.load_config()
         self.strings = self.config_manager.load_strings()
         self.jekyll_config = self.config_manager.load_jekyll_config()
-        self.repo_processor = RepositoryProcessor(self.config, self.strings)
+        self.repo_processor = RepositoryProcessor(self.config, self.strings, None)  # GitHub APIは後で設定
         self.markdown_generator = MarkdownGenerator(self.config, self.strings, self.jekyll_config)
         self.file_handler = FileHandler()
 
@@ -82,9 +82,12 @@ class GitHubRepositoryListGenerator:
         self._print_header()
 
         # GitHub API初期化
-        github_user = self._initialize_github_api(username)
+        github_user, github_client = self._initialize_github_api(username)
         if not github_user:
             return False
+
+        # RepositoryProcessorをGitHub APIクライアント付きで再初期化
+        self.repo_processor = RepositoryProcessor(self.config, self.strings, github_client)
 
         # リポジトリ処理
         repos = self.repo_processor.fetch_repositories(github_user, username, limit)
@@ -143,10 +146,10 @@ class GitHubRepositoryListGenerator:
             g = Github(auth=auth)
             user = g.get_user(username)
             print(self.strings["console"]["authenticated_as"].format(login=user.login))
-            return user
+            return user, g
         except Exception as e:
             print(self.strings["errors"]["auth_failed"].format(error=e))
-            return None
+            return None, None
 
     def _generate_markdown(self, username: str, active: list, archived: list, forks: list) -> str:
         """Markdownを生成する"""

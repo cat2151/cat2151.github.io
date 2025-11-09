@@ -195,9 +195,20 @@ class MarkdownGenerator:
                 f"- **{self.strings['markdown']['repo_details']['github_label']}**: {github_link}",
                 f"- **{self.strings['markdown']['repo_details']['pages_label']}**: {pages_link}",
                 f"- **{self.strings['markdown']['repo_details']['description_label']}**: {repo['description']}",
-                f"- {info_line}",
-                "",
             ]
         )
+
+        # プロジェクト概要セクションを追加（存在する場合）
+        if "project_overview" in repo and repo["project_overview"]:
+            lines.extend(
+                [
+                    "",
+                    f"### {self.strings['markdown']['repo_details']['project_highlights']}",
+                ]
+            )
+            for highlight in repo["project_overview"]:
+                lines.append(highlight)
+
+        lines.extend([f"- {info_line}", ""])
 
         return "\n".join(lines)

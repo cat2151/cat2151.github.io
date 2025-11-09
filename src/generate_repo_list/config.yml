@@ -7,6 +7,17 @@ statistics:
   # 主要言語の表示数
   top_languages_count: 3
 
+# プロジェクト概要取得設定
+project_overview:
+  enabled: true
+  target_file: "generated-docs/project-overview.md"
+  section_title: "プロジェクト概要"
+  max_retries: 1
+  timeout_seconds: 10
+  # パフォーマンス設定
+  enable_cache: true
+  parallel_fetch: false  # 将来の拡張用
+
 # 言語バッジ設定
 language_badge:
   # 言語名のURL安全変換ルール
