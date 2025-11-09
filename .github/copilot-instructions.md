@@ -26,6 +26,12 @@
 python src/generate_repo_list/generate_repo_list.py --username cat2151 --output index.md
 ```
 
+### スクリプト再実行（短縮コマンド）
+```bash
+# ローカルでスクリプトを再実行する場合は1行で実行
+python src/generate_repo_list/generate_repo_list.py --username cat2151 --output index.md --limit 1
+```
+
 ### ローカル開発時のトークン管理
 ```toml
 # secrets/secrets.toml (gitignore済み)

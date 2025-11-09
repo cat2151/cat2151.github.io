@@ -46,6 +46,9 @@ pytest
 ```powershell
 # リポジトリ一覧を生成してindex.mdに出力
 python src/generate_repo_list/generate_repo_list.py --username cat2151 --output index.md
+
+# 開発時（最初の1件のみ処理で高速テスト）
+python src/generate_repo_list/generate_repo_list.py --username cat2151 --output index.md --limit 1
 ```
 
 ### 利用可能なオプション
@@ -54,6 +57,7 @@ python src/generate_repo_list/generate_repo_list.py --username cat2151 --output 
 |------------|------|-----|
 | `--username` | GitHub ユーザー名（必須） | `cat2151` |
 | `--output` | 出力ファイル名（必須） | `index.md` |
+| `--limit` | 処理するリポジトリ数の上限（開発用） | `1` |
 
 ### 実行前の準備
 
