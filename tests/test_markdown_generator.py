@@ -79,6 +79,7 @@ class TestMarkdownGenerator:
                 },
                 "section_messages": {
                     "archived_empty": "アーカイブされたリポジトリはありません。",
+                    "ai_disclaimer": "*注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*",
                 },
                 "processing": {
                     "no_pages": "Pages無し",

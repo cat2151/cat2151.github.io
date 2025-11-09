@@ -88,6 +88,7 @@ markdown:
     fork_description: "フォーク"
   section_messages:
     archived_empty: "アーカイブなし"
+    ai_disclaimer: "*注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*"
 seo:
   og_description_template: "総計{total}個のリポジトリ"
 """
@@ -139,6 +140,7 @@ markdown:
     description_label: "説明"
   section_messages:
     archived_empty: "アーカイブなし"
+    ai_disclaimer: "*注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*"
 seo:
   og_description_template: "総計{total}個のリポジトリ"
 """

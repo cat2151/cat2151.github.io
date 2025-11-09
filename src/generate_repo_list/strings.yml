@@ -39,7 +39,7 @@ markdown:
   # Repository Details
   repo_details:
     github_label: "Repository"
-    pages_label: "Live Demo"
+    pages_label: "GitHub Pages"
     description_label: "Overview"
     project_highlights: "Project Highlights"
     fork_description: "Forked from upstream repository"
@@ -55,6 +55,7 @@ markdown:
   # Section Related Messages
   section_messages:
     archived_empty: "No archived repositories available."
+    ai_disclaimer: "*注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*"
 
 # SEO Template
 seo:

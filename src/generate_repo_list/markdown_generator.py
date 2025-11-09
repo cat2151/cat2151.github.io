@@ -105,6 +105,8 @@ class MarkdownGenerator:
 
 ## {self.strings["markdown"]["sections"]["active"]}
 
+{self.strings["markdown"]["section_messages"]["ai_disclaimer"]}
+
 {active_section}
 
 ---
