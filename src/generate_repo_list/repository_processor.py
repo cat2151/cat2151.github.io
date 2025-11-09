@@ -135,6 +135,21 @@ class RepositoryProcessor:
 
         return "Unknown reason"
 
+    def _check_readme_ja_exists(self, repo) -> bool:
+        """README.ja.md が存在するかチェックする
+
+        Args:
+            repo: GitHubリポジトリオブジェクト
+
+        Returns:
+            README.ja.md が存在する場合 True
+        """
+        try:
+            repo.get_contents("README.ja.md")
+            return True
+        except GithubException:
+            return False
+
     def _create_repo_data(self, repo, username: str) -> Dict[str, Any]:
         """リポジトリデータを作成する"""
         repo_data = {
@@ -149,6 +164,7 @@ class RepositoryProcessor:
             "stargazers_count": repo.stargazers_count,
             "language": repo.language or "",
             "topics": repo.get_topics(),
+            "has_readme_ja": self._check_readme_ja_exists(repo),
         }
 
         # プロジェクト概要を取得（ProjectOverviewFetcherが利用可能な場合のみ）
