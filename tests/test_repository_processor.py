@@ -49,9 +49,18 @@ class TestRepositoryProcessor:
                 "sorting": "リポジトリをソート中...",
             },
             "classification": {
-                "active": "アクティブ: {count}件",
-                "archived": "アーカイブ: {count}件",
-                "forks": "フォーク: {count}件",
+                "active": "アクティブ: {count}",
+                "archived": "アーカイブ: {count}",
+                "forks": "フォーク: {count}",
+            },
+            "markdown": {
+                "processing": {
+                    "included": "✓ 含める",
+                    "private_repo": "✗ プライベート",
+                    "no_readme": "✗ README無し",
+                    "no_description": "説明なし",
+                    "no_pages": "Pages無し",
+                },
             },
         }
 
@@ -220,9 +229,10 @@ class TestRepositoryProcessor:
         # 出力の検証
         captured = capsys.readouterr()
         assert "リポジトリを分類中..." in captured.out
-        assert "アクティブ: 1件" in captured.out
-        assert "アーカイブ: 1件" in captured.out
-        assert "フォーク: 1件" in captured.out
+        # 出力メッセージをテスト
+        assert "アクティブ: 1" in captured.out
+        assert "アーカイブ: 1" in captured.out
+        assert "フォーク: 1" in captured.out
 
     def test_classify_repositories_sorting(self, processor):
         """リポジトリソートテスト"""
@@ -253,9 +263,9 @@ class TestRepositoryProcessor:
 
         # 出力の検証
         captured = capsys.readouterr()
-        assert "アクティブ: 0件" in captured.out
-        assert "アーカイブ: 0件" in captured.out
-        assert "フォーク: 0件" in captured.out
+        assert "アクティブ: 0" in captured.out
+        assert "アーカイブ: 0" in captured.out
+        assert "フォーク: 0" in captured.out
 
 
 # レガシー互換のためのメイン関数

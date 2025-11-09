@@ -44,7 +44,7 @@ class RepositoryProcessor:
             if self._should_process_repo(repo):
                 repo_data = self._create_repo_data(repo, username)
                 repos.append(repo_data)
-                print(self.config["messages"]["included"])
+                print(self.strings["markdown"]["processing"]["included"])
             else:
                 reason = self._get_exclusion_reason(repo)
                 print(reason)
@@ -102,12 +102,12 @@ class RepositoryProcessor:
     def _get_exclusion_reason(self, repo) -> str:
         """除外理由を取得する"""
         if repo.private:
-            return self.config["messages"]["private_repo"]
+            return self.strings["markdown"]["processing"]["private_repo"]
 
         try:
             repo.get_readme()
         except GithubException:
-            return self.config["messages"]["no_readme"]
+            return self.strings["markdown"]["processing"]["no_readme"]
 
         return "Unknown reason"
 
@@ -117,7 +117,7 @@ class RepositoryProcessor:
             "name": repo.name,
             "url": repo.html_url,
             "pages_url": f"https://{username}.github.io/{repo.name}/",
-            "description": repo.description or self.config["messages"]["no_description"],
+            "description": repo.description or self.strings["markdown"]["processing"]["no_description"],
             "archived": repo.archived,
             "has_pages": repo.has_pages,
             "fork": repo.fork,

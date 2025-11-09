@@ -28,6 +28,13 @@ markdown:
   stats:
     main_languages_title: "Core Technologies"
     no_language_info: "Language data unavailable"
+    # バッジラベル
+    badges:
+      repositories: "リポジトリ総数"
+      active: "アクティブ"
+      archived: "アーカイブ"
+      forks: "フォーク"
+      stars: "総スター数"
 
   # リポジトリ詳細
   repo_details:
@@ -35,6 +42,22 @@ markdown:
     pages_label: "Live Demo"
     description_label: "Overview"
     fork_description: "Forked from upstream repository"
+
+  # 処理状態メッセージ
+  processing:
+    no_readme: "✗ (no README)"
+    private_repo: "✗ (private)"
+    included: "✓ (included)"
+    no_description: "説明なし"
+    no_pages: "なし"
+
+  # セクション関連メッセージ
+  section_messages:
+    archived_empty: "アーカイブされているリポジトリはありません。"
+
+# SEOテンプレート
+seo:
+  og_description_template: "{total}個のプロジェクトを掲載（⭐{total_stars}個）。{lang_list}など多様な技術を使用したオープンソースプロジェクト集。"
 
 # ============================================================
 # コンソールメッセージ等（開発者向け・ターミナル表示のみ）

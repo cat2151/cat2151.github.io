@@ -30,38 +30,66 @@ class TestIntegration:
 repository_filter:
   exclude_private: true
   require_readme: true
-messages:
-  included: "✓"
-  private_repo: "プライベート"
-  no_readme: "README無し"
-  no_description: "説明なし"
-  no_pages: "Pages無し"
 date_format: "%Y年%m月%d日"
-og_description_template: "総計{total}個のリポジトリ"
 statistics:
-  badges:
-    repositories: "リポジトリ"
-    active: "アクティブ"
-    archived: "アーカイブ"
-    forks: "フォーク"
-    stars: "スター"
   top_languages_count: 3
 language_badge:
   replacements:
     " ": "_"
-    "-": "--"
-  colors:
-    "JavaScript": "f7df1e"
-    "Python": "3776ab"
-    "Rust": "000000"
-    "default": "blue"
 topic_badge:
   replacements:
     " ": "_"
-    "-": "--"
-sections:
-  archived:
-    empty_message: "アーカイブされたリポジトリはありません。"
+console:
+  separator_length: 60
+  separator_char: "="
+"""
+
+            strings_content = """
+console:
+  app_title: "GitHub リポジトリ一覧生成ツール"
+  fetching_repos: "リポジトリ取得中: {username}"
+  found_repos: "発見: {total}件"
+  processing_repo: "処理中 ({current}/{total}): {name}"
+  classifying: "分類中"
+  sorting: "ソート中"
+  filtering_repos: "フィルタリング中"
+  generating_markdown: "Markdown生成中"
+  saving_to: "保存中: {path}"
+  saved_success: "保存完了"
+  completed: "完了"
+  file_size: "ファイルサイズ: {size}"
+classification:
+  active: "アクティブ: {count}"
+  archived: "アーカイブ: {count}"
+  forks: "フォーク: {count}"
+markdown:
+  main_title: "{username}のGitHubリポジトリ"
+  last_updated: "更新日: {date}"
+  sections:
+    stats: "統計"
+    active: "アクティブ"
+    archived: "アーカイブ"
+    forks: "フォーク"
+  stats:
+    main_languages_title: "主要言語"
+    badges:
+      repositories: "リポジトリ"
+      active: "アクティブ"
+      archived: "アーカイブ"
+      forks: "フォーク"
+      stars: "スター"
+  processing:
+    included: "✓"
+    private_repo: "プライベート"
+    no_readme: "README無し"
+    no_description: "説明なし"
+    no_pages: "Pages無し"
+  repo_details:
+    fork_description: "フォーク"
+  section_messages:
+    archived_empty: "アーカイブなし"
+seo:
+  og_description_template: "総計{total}個のリポジトリ"
 """
 
             strings_content = """
@@ -92,11 +120,27 @@ markdown:
   stats:
     main_languages_title: "主要言語"
     no_language_info: "言語情報なし"
+    badges:
+      repositories: "リポジトリ"
+      active: "アクティブ"
+      archived: "アーカイブ"
+      forks: "フォーク"
+      stars: "スター"
+  processing:
+    included: "✓"
+    private_repo: "プライベート"
+    no_readme: "README無し"
+    no_description: "説明なし"
+    no_pages: "Pages無し"
   repo_details:
     fork_description: "以下は他のリポジトリをフォークしたものです。"
     github_label: "GitHub"
     pages_label: "GitHub Pages"
     description_label: "説明"
+  section_messages:
+    archived_empty: "アーカイブなし"
+seo:
+  og_description_template: "総計{total}個のリポジトリ"
 """
 
             seo_content = """

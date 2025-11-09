@@ -6,10 +6,10 @@
     "name": "{username}",
     "url": "https://{username}.github.io/",
     "sameAs": "https://github.com/{username}",
-    "description": "プログラマー・開発者。{total}個のオープンソースプロジェクトを公開中。",
+    "description": "Programmer and developer. Publishing {total} open source projects.",
     "image": "https://{username}.github.io/assets/favicon-512x512.png"
   },
   "description": "{og_description}",
   "url": "https://{username}.github.io/",
-  "name": "{username}のGitHubリポジトリ一覧"
+  "name": "{username}'s GitHub Repository List"
 }

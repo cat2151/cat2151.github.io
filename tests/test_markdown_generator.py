@@ -27,15 +27,7 @@ class TestMarkdownGenerator:
         """設定のフィクスチャ"""
         return {
             "date_format": "%Y年%m月%d日",
-            "og_description_template": "総計{total}個のリポジトリ、{total_stars}スター、主要言語: {lang_list}",
             "statistics": {
-                "badges": {
-                    "repositories": "リポジトリ",
-                    "active": "アクティブ",
-                    "archived": "アーカイブ",
-                    "forks": "フォーク",
-                    "stars": "スター",
-                },
                 "top_languages_count": 3,
             },
             "language_badge": {
@@ -49,8 +41,6 @@ class TestMarkdownGenerator:
                 },
             },
             "topic_badge": {"replacements": {" ": "_", "-": "--"}},
-            "sections": {"archived": {"empty_message": "アーカイブされたリポジトリはありません。"}},
-            "messages": {"no_pages": "Pages無し"},
         }
 
     @pytest.fixture
@@ -69,13 +59,32 @@ class TestMarkdownGenerator:
                     "forks": "フォークしたリポジトリ",
                 },
                 "toc_items": ["[統計情報](#統計情報)", "[アクティブなリポジトリ](#アクティブなリポジトリ)"],
-                "stats": {"main_languages_title": "主要言語", "no_language_info": "言語情報なし"},
+                "stats": {
+                    "main_languages_title": "主要言語",
+                    "no_language_info": "言語情報なし",
+                    "badges": {
+                        "repositories": "リポジトリ",
+                        "active": "アクティブ",
+                        "archived": "アーカイブ",
+                        "forks": "フォーク",
+                        "stars": "スター",
+                    },
+                },
                 "repo_details": {
                     "fork_description": "以下は他のリポジトリをフォークしたものです。",
                     "github_label": "GitHub",
                     "pages_label": "GitHub Pages",
                     "description_label": "説明",
                 },
+                "section_messages": {
+                    "archived_empty": "アーカイブされたリポジトリはありません。",
+                },
+                "processing": {
+                    "no_pages": "Pages無し",
+                },
+            },
+            "seo": {
+                "og_description_template": "総計{total}個のリポジトリ、{total_stars}スター、主要言語: {lang_list}",
             },
         }
 

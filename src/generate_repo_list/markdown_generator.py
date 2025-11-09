@@ -121,7 +121,7 @@ class MarkdownGenerator:
         lang_list = self._get_top_languages(active + archived + forks)
 
         # 動的なOGP説明文を生成
-        og_description = self.config["og_description_template"].format(
+        og_description = self.strings["seo"]["og_description_template"].format(
             total=total, total_stars=total_stars, lang_list=lang_list
         )
 
@@ -180,13 +180,21 @@ class MarkdownGenerator:
         lang_list: str,
     ) -> str:
         """フロントマターを生成する"""
-        # JSON-LDテンプレートの値を置換
-        json_ld_formatted = {}
-        for key, value in json_ld_template.items():
-            if isinstance(value, str):
-                json_ld_formatted[key] = value.format(username=username, total=total, og_description=og_description)
+
+        # JSON-LDテンプレートの値を置換（再帰的に処理）
+        def format_template_recursively(obj, **kwargs):
+            if isinstance(obj, str):
+                return obj.format(**kwargs)
+            elif isinstance(obj, dict):
+                return {key: format_template_recursively(value, **kwargs) for key, value in obj.items()}
+            elif isinstance(obj, list):
+                return [format_template_recursively(item, **kwargs) for item in obj]
             else:
-                json_ld_formatted[key] = value
+                return obj
+
+        json_ld_formatted = format_template_recursively(
+            json_ld_template, username=username, total=total, og_description=og_description
+        )
 
         # JSON-LDを生成
         json_ld_str = json.dumps(json_ld_formatted, ensure_ascii=False, indent=2)
@@ -204,7 +212,7 @@ class MarkdownGenerator:
 
         # JSON-LDを追加
         frontmatter_lines.extend(
-            ["", "# JSON-LD構造化データ", "json_ld: |", *[f"  {line}" for line in json_ld_str.split("\n")], "---"]
+            ["", "# JSON-LD Structured Data", "json_ld: |", *[f"  {line}" for line in json_ld_str.split("\n")], "---"]
         )
 
         return "\n".join(frontmatter_lines)
@@ -225,11 +233,11 @@ class MarkdownGenerator:
 
         # 統計情報バッジを生成
         stat_badges = [
-            f"![Repositories](https://img.shields.io/badge/{self.config['statistics']['badges']['repositories']}-{total}-blue)",
-            f"![Active](https://img.shields.io/badge/{self.config['statistics']['badges']['active']}-{len(active)}-green)",
-            f"![Archived](https://img.shields.io/badge/{self.config['statistics']['badges']['archived']}-{len(archived)}-yellow)",
-            f"![Forks](https://img.shields.io/badge/{self.config['statistics']['badges']['forks']}-{len(forks)}-purple)",
-            f"![Stars](https://img.shields.io/badge/{self.config['statistics']['badges']['stars']}-{total_stars}-gold)",
+            f"![Repositories](https://img.shields.io/badge/{self.strings['markdown']['stats']['badges']['repositories']}-{total}-blue)",
+            f"![Active](https://img.shields.io/badge/{self.strings['markdown']['stats']['badges']['active']}-{len(active)}-green)",
+            f"![Archived](https://img.shields.io/badge/{self.strings['markdown']['stats']['badges']['archived']}-{len(archived)}-yellow)",
+            f"![Forks](https://img.shields.io/badge/{self.strings['markdown']['stats']['badges']['forks']}-{len(forks)}-purple)",
+            f"![Stars](https://img.shields.io/badge/{self.strings['markdown']['stats']['badges']['stars']}-{total_stars}-gold)",
         ]
         stat_badges_line = " ".join(stat_badges)
 
@@ -286,7 +294,7 @@ class MarkdownGenerator:
         """リポジトリセクションを生成する"""
         if not repos:
             if section_type == "archived":
-                return self.config["sections"]["archived"]["empty_message"]
+                return self.strings["markdown"]["section_messages"]["archived_empty"]
             return ""
 
         return "\n".join(self._generate_repo_item(repo, username=username) for repo in repos)
@@ -334,7 +342,7 @@ class MarkdownGenerator:
         lines.extend(
             [
                 f"- **{self.strings['markdown']['repo_details']['github_label']}**: {repo['url']}",
-                f"- **{self.strings['markdown']['repo_details']['pages_label']}**: {repo['pages_url'] if repo['has_pages'] else self.config['messages']['no_pages']}",
+                f"- **{self.strings['markdown']['repo_details']['pages_label']}**: {repo['pages_url'] if repo['has_pages'] else self.strings['markdown']['processing']['no_pages']}",
                 f"- **{self.strings['markdown']['repo_details']['description_label']}**: {repo['description']}",
                 f"- {info_line}",
                 "",

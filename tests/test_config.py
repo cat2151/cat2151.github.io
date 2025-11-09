@@ -36,10 +36,18 @@ class TestConfigManager:
         """モック設定ファイルのフィクスチャ"""
         config_data = {
             "repository_filter": {"exclude_private": True, "require_readme": True},
-            "messages": {"included": "✓", "private_repo": "プライベート", "no_readme": "README無し"},
         }
 
-        strings_data = {"console": {"fetching_repos": "取得中: {username}", "found_repos": "発見: {total}件"}}
+        strings_data = {
+            "console": {"fetching_repos": "取得中: {username}", "found_repos": "発見: {total}件"},
+            "markdown": {
+                "processing": {
+                    "included": "✓",
+                    "private_repo": "プライベート",
+                    "no_readme": "README無し",
+                },
+            },
+        }
 
         seo_data = {"title": "Test Title", "description": "Test Description"}
 

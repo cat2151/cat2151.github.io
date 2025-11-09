@@ -1,17 +1,11 @@
-# 全体設定ファイル
-# このファイルはPythonスクリプトによって読み込まれ、各種設定に使用されます
+# 技術設定ファイル
+# このファイルは技術的なパラメータ・バッジ設定・フィルタリング設定のみを管理します
+# 文言・メッセージは strings.yml で管理されています
 
 # 統計情報設定
 statistics:
   # 主要言語の表示数
   top_languages_count: 3
-  # バッジ設定
-  badges:
-    repositories: "リポジトリ総数"
-    active: "アクティブ"
-    archived: "アーカイブ"
-    forks: "フォーク"
-    stars: "総スター数"
 
 # 言語バッジ設定
 language_badge:
@@ -35,26 +29,10 @@ repository_filter:
   exclude_private: true
   require_readme: true
 
-# 出力メッセージ設定
-messages:
-  no_readme: "✗ (no README)"
-  private_repo: "✗ (private)"
-  included: "✓ (included)"
-  no_description: "説明なし"
-  no_pages: "なし"
-
-# セクション設定
-sections:
-  archived:
-    empty_message: "アーカイブされているリポジトリはありません。"
-
 # 日付フォーマット
 date_format: "%Y-%m-%d"
 
-# OGP説明文テンプレート
-og_description_template: "{total}個のプロジェクトを掲載（⭐{total_stars}個）。{lang_list}など多様な技術を使用したオープンソースプロジェクト集。"
-
-# コンソール出力設定
+# コンソール出力設定（技術的パラメータ）
 console:
   separator_length: 60
   separator_char: "="

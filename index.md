@@ -35,22 +35,22 @@ robots: "index, follow"
 revisit_after: "1 days"
 rating: "general"
 
-# JSON-LD構造化データ
+# JSON-LD Structured Data
 json_ld: |
   {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
     "mainEntity": {
       "@type": "Person",
-      "name": "{username}",
-      "url": "https://{username}.github.io/",
-      "sameAs": "https://github.com/{username}",
-      "description": "プログラマー・開発者。{total}個のオープンソースプロジェクトを公開中。",
-      "image": "https://{username}.github.io/assets/favicon-512x512.png"
+      "name": "cat2151",
+      "url": "https://cat2151.github.io/",
+      "sameAs": "https://github.com/cat2151",
+      "description": "Programmer and developer. Publishing 75 open source projects.",
+      "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
     "description": "75個のプロジェクトを掲載（⭐49個）。JavaScript、Python、Rustなど多様な技術を使用したオープンソースプロジェクト集。",
     "url": "https://cat2151.github.io/",
-    "name": "cat2151のGitHubリポジトリ一覧"
+    "name": "cat2151's GitHub Repository List"
   }
 ---
 
@@ -73,12 +73,20 @@ Last Updated: 2025-11-09
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-21個_(28.0%)-f1e05a?style=flat&logo=github) ![Python](https://img.shields.io/badge/Python-11個_(14.7%)-3572A5?style=flat&logo=github) ![Rust](https://img.shields.io/badge/Rust-8個_(10.7%)-dea584?style=flat&logo=github) ![HTML](https://img.shields.io/badge/HTML-8個_(10.7%)-e34c26?style=flat&logo=github) ![C](https://img.shields.io/badge/C-7個_(9.3%)-555555?style=flat&logo=github)
+![JavaScript](https://img.shields.io/badge/JavaScript-21個_(28.0%)-f1e05a?style=flat&logo=github) ![Python](https://img.shields.io/badge/Python-12個_(16.0%)-3572A5?style=flat&logo=github) ![Rust](https://img.shields.io/badge/Rust-8個_(10.7%)-dea584?style=flat&logo=github) ![C](https://img.shields.io/badge/C-7個_(9.3%)-555555?style=flat&logo=github) ![HTML](https://img.shields.io/badge/HTML-7個_(9.3%)-e34c26?style=flat&logo=github)
 
 
 ---
 
 ## 🚀 Active Development
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github)
+
+- **Repository**: https://github.com/cat2151/cat2151.github.io
+- **Live Demo**: https://cat2151.github.io/cat2151.github.io/
+- **Overview**: https://cat2151.github.io/
+- 📅 2025-11-09
 
 ## [MML-chord-generator](https://cat2151.github.io/MML-chord-generator/)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen)
@@ -615,14 +623,6 @@ Last Updated: 2025-11-09
 - **Live Demo**: https://cat2151.github.io/from-wonderfl/
 - **Overview**: 過去にwonderflに置いていたもの　（例：ランダムFM音色生成装置 https://cat2151.github.io/from-wonderfl/ ）
 - 📅 2017-07-15
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=github)
-
-- **Repository**: https://github.com/cat2151/cat2151.github.io
-- **Live Demo**: https://cat2151.github.io/cat2151.github.io/
-- **Overview**: https://cat2151.github.io/
-- 📅 2016-06-04
 
 ## [js2dstg](https://cat2151.github.io/js2dstg/)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=github)

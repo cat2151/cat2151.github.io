@@ -53,8 +53,8 @@ pytest
 ### 設定ファイル構造
 - `config.yml`: バッジ設定、フィルタリングルール、メッセージテンプレート
 - `strings.yml`: 多言語対応文字列（現在は日本語のみ）
-- `seo_template.yml`: OGP、JSON-LD 構造化データ
-- `json_ld_template.json`: schema.org 形式のメタデータ
+- `seo_template.yml`: OGP、JSON-LD structured data
+- `json_ld_template.json`: schema.org format metadata
 
 ## 開発時の注意点
 
