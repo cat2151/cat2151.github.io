@@ -172,7 +172,11 @@ class TestConfigManager:
         """secretsファイルが存在しない場合のテスト"""
         # 新しい独立したテンポラリディレクトリを作成
         with tempfile.TemporaryDirectory() as isolated_temp_dir:
-            config_manager = ConfigManager(script_dir=isolated_temp_dir)
+            # プロジェクト構造を模擬: generate_repo_list ディレクトリを作成
+            script_dir = Path(isolated_temp_dir) / "src" / "generate_repo_list"
+            script_dir.mkdir(parents=True, exist_ok=True)
+
+            config_manager = ConfigManager(script_dir=str(script_dir))
             secrets = config_manager.load_secrets()
             assert secrets == {}
 
@@ -198,7 +202,11 @@ class TestConfigManager:
     def test_get_username_from_env(self):
         """環境変数からusernameを取得するテスト"""
         with tempfile.TemporaryDirectory() as temp_dir:
-            config_manager = ConfigManager(script_dir=temp_dir)
+            # プロジェクト構造を模擬: generate_repo_list ディレクトリを作成
+            script_dir = Path(temp_dir) / "src" / "generate_repo_list"
+            script_dir.mkdir(parents=True, exist_ok=True)
+
+            config_manager = ConfigManager(script_dir=str(script_dir))
             username = config_manager.get_username()
             assert username == "env_user"
 
@@ -206,7 +214,11 @@ class TestConfigManager:
     def test_get_username_no_username(self):
         """usernameが見つからない場合のテスト"""
         with tempfile.TemporaryDirectory() as temp_dir:
-            config_manager = ConfigManager(script_dir=temp_dir)
+            # プロジェクト構造を模擬: generate_repo_list ディレクトリを作成
+            script_dir = Path(temp_dir) / "src" / "generate_repo_list"
+            script_dir.mkdir(parents=True, exist_ok=True)
+
+            config_manager = ConfigManager(script_dir=str(script_dir))
             username = config_manager.get_username()
             assert username == ""
 
