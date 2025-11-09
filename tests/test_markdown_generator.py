@@ -365,8 +365,8 @@ class TestMarkdownGenerator:
             seo_config=mock_seo_config,
             json_ld_template=mock_json_ld_template,
             total=3,
-            total_stars=15,
-            lang_list="Python、JavaScript",
+            _total_stars=15,
+            _lang_list="Python、JavaScript",
         )
 
         assert "---" in result

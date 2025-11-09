@@ -94,6 +94,7 @@ GitHub Actions環境 → `GITHUB_TOKEN` 環境変数使用
 新機能追加時は、この自動化チェーンを破らないよう注意してください。
 
 ## userからの指示
-- ruff format を実行してコードスタイルを整えてください。
-- ruff check --fix を実行してコードの問題を修正してください。
-- pytest を実行し、全てのテストがパスすることを確認してください。
+- もしPythonコードの変更を行ったら、userにコントロールを返す前に、以下の手順を実行してください:
+  - ruff format
+  - ruff check --fix
+  - pytest
