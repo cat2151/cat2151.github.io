@@ -83,6 +83,7 @@ class TestMarkdownGenerator:
                 },
                 "processing": {
                     "no_pages": "Pages無し",
+                    "no_description": "No description available",
                 },
             },
             "seo": {
@@ -453,6 +454,36 @@ class TestMarkdownGenerator:
         # Japaneseバッジがないことの確認
         assert "🇯🇵" not in result
         assert "README.ja" not in result
+
+    def test_generate_repo_item_with_no_description(self, generator):
+        """概要情報なしリポジトリの項目生成テスト（箇条書きに表示されることを確認）"""
+        repo = {
+            "name": "test-repo",
+            "url": "https://github.com/testuser/test-repo",
+            "pages_url": "https://testuser.github.io/test-repo/",
+            "description": "No description available",  # 概要情報なし
+            "has_pages": True,
+            "archived": False,
+            "fork": False,
+            "updated_at": datetime(2024, 1, 15),
+            "stargazers_count": 5,
+            "language": "Python",
+            "topics": ["test"],
+        }
+
+        result = generator._generate_repo_item(repo, username="testuser")
+
+        # 基本情報の確認
+        assert "## [test-repo]" in result
+
+        # 概要情報がない場合は箇条書きに「Overview: No description available」が表示される
+        assert "**説明**: No description available" in result
+
+        # リポジトリ名の次の行には表示されない（空行のみ）
+        lines = result.split("\n")
+        repo_name_index = next(i for i, line in enumerate(lines) if "## [test-repo]" in line)
+        # リポジトリ名の次の行は空行であるべき
+        assert lines[repo_name_index + 1] == ""
 
 
 # レガシー互換のためのメイン関数
