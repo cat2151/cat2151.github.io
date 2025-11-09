@@ -82,8 +82,10 @@ class BadgeGenerator:
             # 言語固有のカラフルな色とロゴを使用
             color = self.language_info.get_color(lang)
             logo = self.language_info.get_logo(lang)
+            # パーセンテージの%記号をURLエンコード
+            percentage_text = f"{count}_({percentage:.1f}%25)"
             language_badges.append(
-                f"![{lang}](https://img.shields.io/badge/{lang_safe}-{count}_({percentage:.1f}%)-{color}?style=flat&logo={logo})"
+                f"![{lang}](https://img.shields.io/badge/{lang_safe}-{percentage_text}-{color}?style=flat&logo={logo})"
             )
 
         return " ".join(language_badges)
