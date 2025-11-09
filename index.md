@@ -85,7 +85,7 @@ Last Updated: 2025-11-09
 
 - **Repository**: https://github.com/cat2151/cat2151.github.io
 - **Live Demo**: https://cat2151.github.io/cat2151.github.io/
-- **Overview**: https://cat2151.github.io/
+- **Overview**: GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - 📅 2025-11-09
 
 ## [MML-chord-generator](https://cat2151.github.io/MML-chord-generator/)

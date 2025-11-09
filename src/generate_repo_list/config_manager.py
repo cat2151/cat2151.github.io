@@ -61,6 +61,20 @@ class ConfigManager:
                 self._cache["strings"] = yaml.safe_load(f)
         return self._cache["strings"]
 
+    def load_jekyll_config(self) -> Dict[str, Any]:
+        """Jekyll設定ファイル（_config.yml）を読み込む"""
+        if "jekyll_config" not in self._cache:
+            # _config.ymlはプロジェクトルート（スクリプトディレクトリの2つ上）にある
+            project_root = os.path.dirname(os.path.dirname(self.script_dir))
+            path = os.path.join(project_root, "_config.yml")
+            if os.path.exists(path):
+                with open(path, "r", encoding="utf-8") as f:
+                    self._cache["jekyll_config"] = yaml.safe_load(f)
+            else:
+                # _config.ymlが見つからない場合は空の辞書を返す
+                self._cache["jekyll_config"] = {}
+        return self._cache["jekyll_config"]
+
     def load_secrets(self) -> Dict[str, Any]:
         """secretsファイル（TOML）を読み込む"""
         if "secrets" not in self._cache:

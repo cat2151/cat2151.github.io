@@ -14,15 +14,20 @@ import yaml
 class MarkdownGenerator:
     """Markdown生成クラス"""
 
-    def __init__(self, config: Dict[str, Any], strings: Dict[str, Any]):
+    def __init__(self, config: Dict[str, Any], strings: Dict[str, Any], jekyll_config: Dict[str, Any] = None):
         """初期化
 
         Args:
             config: 設定辞書
             strings: 文字列リソース辞書
+            jekyll_config: Jekyll設定辞書（オプション）
         """
         self.config = config
         self.strings = strings
+        self.jekyll_config = jekyll_config or {}
+
+        # GitHub URLベースを設定（Jekyll設定優先、フォールバックでデフォルト値）
+        self.github_base_url = self.jekyll_config.get("github", {}).get("repository_url_base", "https://github.com")
 
     def _get_language_color(self, language: str) -> str:
         """言語名から一意のカラフルな色を生成する
@@ -341,7 +346,7 @@ class MarkdownGenerator:
 
         lines.extend(
             [
-                f"- **{self.strings['markdown']['repo_details']['github_label']}**: {repo['url']}",
+                f"- **{self.strings['markdown']['repo_details']['github_label']}**: {self._get_github_repo_url(repo['name'], username)}",
                 f"- **{self.strings['markdown']['repo_details']['pages_label']}**: {repo['pages_url'] if repo['has_pages'] else self.strings['markdown']['processing']['no_pages']}",
                 f"- **{self.strings['markdown']['repo_details']['description_label']}**: {repo['description']}",
                 f"- {info_line}",
@@ -356,3 +361,27 @@ class MarkdownGenerator:
         for old, new in replacements.items():
             text = text.replace(old, new)
         return text
+
+    def _get_github_repo_url(self, repo_name: str, username: str = None) -> str:
+        """GitHub リポジトリURLを生成する
+
+        Jekyll設定のrepository_url_baseを使用し、フォールバックでデフォルトを使用する
+
+        Args:
+            repo_name: リポジトリ名
+            username: GitHubユーザー名（オプション）
+
+        Returns:
+            GitHub リポジトリURL
+        """
+        # Jekyll設定からユーザー名を取得（引数優先）
+        if username is None:
+            username = self.jekyll_config.get("github", {}).get("username", "")
+
+        # URLベースからユーザー名部分を構築
+        if self.github_base_url.endswith(f"/{username}"):
+            # 既にユーザー名が含まれている場合
+            return f"{self.github_base_url}/{repo_name}"
+        else:
+            # ユーザー名を追加する必要がある場合
+            return f"{self.github_base_url}/{username}/{repo_name}"

@@ -230,6 +230,45 @@ class TestConfigManager:
             username = config_manager.get_username()
             assert username == ""
 
+    def test_load_jekyll_config(self, temp_dir):
+        """Jekyll設定ファイルの読み込みテスト"""
+        # プロジェクト構造を模擬: generate_repo_list ディレクトリを作成
+        script_dir = Path(temp_dir) / "src" / "generate_repo_list"
+        script_dir.mkdir(parents=True, exist_ok=True)
+
+        # Jekyll設定ファイルを作成
+        jekyll_config_data = {
+            "title": "test_site",
+            "description": "Test site description",
+            "github": {
+                "username": "test_user",
+                "repository_url_base": "https://github.com/test_user",
+                "profile_url": "https://github.com/test_user",
+            },
+        }
+
+        jekyll_config_path = Path(temp_dir) / "_config.yml"
+        with open(jekyll_config_path, "w", encoding="utf-8") as f:
+            yaml.dump(jekyll_config_data, f)
+
+        config_manager = ConfigManager(script_dir=str(script_dir))
+        jekyll_config = config_manager.load_jekyll_config()
+
+        assert jekyll_config["title"] == "test_site"
+        assert jekyll_config["github"]["username"] == "test_user"
+        assert jekyll_config["github"]["repository_url_base"] == "https://github.com/test_user"
+
+    def test_load_jekyll_config_file_not_exists(self, temp_dir):
+        """Jekyll設定ファイルが存在しない場合のテスト"""
+        # プロジェクト構造を模擬: generate_repo_list ディレクトリを作成
+        script_dir = Path(temp_dir) / "src" / "generate_repo_list"
+        script_dir.mkdir(parents=True, exist_ok=True)
+
+        config_manager = ConfigManager(script_dir=str(script_dir))
+        jekyll_config = config_manager.load_jekyll_config()
+
+        assert jekyll_config == {}
+
 
 # レガシー互換のためのメイン関数
 def main():

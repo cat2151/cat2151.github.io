@@ -169,6 +169,52 @@ class TestMarkdownGenerator:
         assert generator.config == mock_config
         assert generator.strings == mock_strings
 
+    def test_init_with_jekyll_config(self, mock_config, mock_strings):
+        """Jekyll設定ありの初期化テスト"""
+        jekyll_config = {
+            "github": {
+                "username": "test_user",
+                "repository_url_base": "https://github.com/test_user",
+            }
+        }
+        generator = MarkdownGenerator(mock_config, mock_strings, jekyll_config)
+        assert generator.config == mock_config
+        assert generator.strings == mock_strings
+        assert generator.jekyll_config == jekyll_config
+        assert generator.github_base_url == "https://github.com/test_user"
+
+    def test_init_without_jekyll_config(self, mock_config, mock_strings):
+        """Jekyll設定なしの初期化テスト"""
+        generator = MarkdownGenerator(mock_config, mock_strings)
+        assert generator.jekyll_config == {}
+        assert generator.github_base_url == "https://github.com"
+
+    def test_get_github_repo_url(self, mock_config, mock_strings):
+        """GitHub リポジトリURL生成テスト"""
+        jekyll_config = {
+            "github": {
+                "username": "test_user",
+                "repository_url_base": "https://github.com/test_user",
+            }
+        }
+        generator = MarkdownGenerator(mock_config, mock_strings, jekyll_config)
+
+        # Jekyll設定のユーザー名を使用
+        url = generator._get_github_repo_url("test_repo")
+        assert url == "https://github.com/test_user/test_repo"
+
+        # 引数のユーザー名を優先（ただしベースURLは Jekyll設定のもの）
+        url = generator._get_github_repo_url("test_repo", "other_user")
+        assert url == "https://github.com/test_user/other_user/test_repo"
+
+    def test_get_github_repo_url_fallback(self, mock_config, mock_strings):
+        """GitHub リポジトリURL生成テスト（フォールバック）"""
+        generator = MarkdownGenerator(mock_config, mock_strings)
+
+        # Jekyll設定なしでデフォルトベースURL使用
+        url = generator._get_github_repo_url("test_repo", "test_user")
+        assert url == "https://github.com/test_user/test_repo"
+
     def test_make_url_safe(self, generator):
         """URL安全化テスト"""
         result = generator._make_url_safe("C++ Test", {"++": "plus", " ": "_"})

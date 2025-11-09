@@ -66,8 +66,9 @@ class GitHubRepositoryListGenerator:
         self.config_manager = ConfigManager()
         self.config = self.config_manager.load_config()
         self.strings = self.config_manager.load_strings()
+        self.jekyll_config = self.config_manager.load_jekyll_config()
         self.repo_processor = RepositoryProcessor(self.config, self.strings)
-        self.markdown_generator = MarkdownGenerator(self.config, self.strings)
+        self.markdown_generator = MarkdownGenerator(self.config, self.strings, self.jekyll_config)
         self.file_handler = FileHandler()
 
     def run(self, username: str, output_path: str) -> bool:

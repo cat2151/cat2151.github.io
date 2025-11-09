@@ -13,6 +13,12 @@ url: "https://cat2151.github.io"
 author: "cat2151"
 lang: "ja"
 
+# GitHub settings for repository management
+github:
+  username: "cat2151"
+  repository_url_base: "https://github.com/cat2151"
+  profile_url: "https://github.com/cat2151"
+
 # favicon (using your actual icon)
 favicon: "/assets/favicon-32x32.png"
 favicon_16: "/assets/favicon-16x16.png"
