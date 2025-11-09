@@ -209,16 +209,32 @@ class MarkdownGenerator:
         for key, value in seo_config.items():
             if isinstance(value, str):
                 formatted_value = value.format(username=username, og_description=og_description)
-                frontmatter_lines.append(f'{key}: "{formatted_value}"')
+                # YAML安全性のためクォートを適切に処理
+                if '"' in formatted_value or "'" in formatted_value or "\n" in formatted_value:
+                    # 複雑な文字列はYAMLリテラルで表現
+                    frontmatter_lines.append(f"{key}: |")
+                    for line in formatted_value.split("\n"):
+                        frontmatter_lines.append(f"  {line}")
+                else:
+                    frontmatter_lines.append(f'{key}: "{formatted_value}"')
             elif isinstance(value, list):
-                frontmatter_lines.append(f"{key}: {yaml.dump(value, default_flow_style=True).strip()}")
+                # リストはYAMLの流れスタイルで出力
+                yaml_output = yaml.dump(value, default_flow_style=True, allow_unicode=True).strip()
+                frontmatter_lines.append(f"{key}: {yaml_output}")
             else:
-                frontmatter_lines.append(f"{key}: {yaml.dump(value).strip()}")
+                # その他の型はYAML標準形式で出力
+                yaml_output = yaml.dump(value, allow_unicode=True).strip()
+                frontmatter_lines.append(f"{key}: {yaml_output}")
 
         # JSON-LDを追加
-        frontmatter_lines.extend(
-            ["", "# JSON-LD Structured Data", "json_ld: |", *[f"  {line}" for line in json_ld_str.split("\n")], "---"]
-        )
+        frontmatter_lines.extend(["", "# JSON-LD Structured Data", "json_ld: |"])
+
+        # JSON-LDの各行にインデントを追加
+        for line in json_ld_str.split("\n"):
+            frontmatter_lines.append(f"  {line}")
+
+        # フロントマターを閉じる
+        frontmatter_lines.append("---")
 
         return "\n".join(frontmatter_lines)
 

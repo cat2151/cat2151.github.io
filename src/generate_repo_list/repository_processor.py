@@ -22,12 +22,13 @@ class RepositoryProcessor:
         self.config = config
         self.strings = strings
 
-    def fetch_repositories(self, github_user: Github, username: str) -> List[Dict[str, Any]]:
+    def fetch_repositories(self, github_user: Github, username: str, limit: int = None) -> List[Dict[str, Any]]:
         """指定ユーザーのリポジトリを取得してフィルタリングする
 
         Args:
             github_user: GitHubユーザーオブジェクト
             username: ユーザー名
+            limit: 処理するリポジトリ数の上限（開発用、有効なリポジトリN件を取得）
 
         Returns:
             フィルタリングされたリポジトリ情報のリスト
@@ -36,15 +37,31 @@ class RepositoryProcessor:
         repos = []
         all_repos = list(github_user.get_repos())
         total = len(all_repos)
+
+        if limit is not None:
+            print(f"🔧 開発モード: 有効なリポジトリを {limit} 件取得します（全体: {total} 件）")
+
         print(self.strings["console"]["found_repos"].format(total=total))
 
-        for i, repo in enumerate(all_repos, 1):
-            print(self.strings["console"]["processing_repo"].format(current=i, total=total, name=repo.name), end=" ")
+        processed_count = 0
+        for repo in all_repos:
+            processed_count += 1
+            print(
+                self.strings["console"]["processing_repo"].format(
+                    current=processed_count, total=total, name=repo.name
+                ),
+                end=" ",
+            )
 
             if self._should_process_repo(repo):
                 repo_data = self._create_repo_data(repo, username)
                 repos.append(repo_data)
                 print(self.strings["markdown"]["processing"]["included"])
+
+                # limitが指定されていて、その件数に達したら終了
+                if limit is not None and len(repos) >= limit:
+                    print(f"🎯 目標件数 {limit} 件に達したため処理を終了")
+                    break
             else:
                 reason = self._get_exclusion_reason(repo)
                 print(reason)

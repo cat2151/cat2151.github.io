@@ -71,8 +71,14 @@ class GitHubRepositoryListGenerator:
         self.markdown_generator = MarkdownGenerator(self.config, self.strings, self.jekyll_config)
         self.file_handler = FileHandler()
 
-    def run(self, username: str, output_path: str) -> bool:
-        """メイン処理を実行する"""
+    def run(self, username: str, output_path: str, limit: int = None) -> bool:
+        """メイン処理を実行する
+
+        Args:
+            username: GitHubユーザー名
+            output_path: 出力ファイルパス
+            limit: 処理するリポジトリ数の上限（開発用）
+        """
         self._print_header()
 
         # GitHub API初期化
@@ -81,7 +87,7 @@ class GitHubRepositoryListGenerator:
             return False
 
         # リポジトリ処理
-        repos = self.repo_processor.fetch_repositories(github_user, username)
+        repos = self.repo_processor.fetch_repositories(github_user, username, limit)
         active, archived, forks = self.repo_processor.classify_repositories(repos)
 
         # Markdown生成
@@ -162,17 +168,21 @@ def main():
   # 基本的な使用方法
   python src/generate_repo_list/generate_repo_list.py --username <your_username> --output index.md
 
+  # 開発時（最初の1件のみ処理）
+  python src/generate_repo_list/generate_repo_list.py --username <your_username> --output index.md --limit 1
+
   # GitHub Actionsでの使用例
   python src/generate_repo_list/generate_repo_list.py --username ${{ github.repository_owner }} --output index.md
         """,
     )
     parser.add_argument("--username", required=True, help="GitHubのユーザー名")
     parser.add_argument("--output", required=True, help="出力ファイルのパス (例: index.md)")
+    parser.add_argument("--limit", type=int, help="処理するリポジトリ数の上限（開発用、例: --limit 1）")
 
     args = parser.parse_args()
 
     generator = GitHubRepositoryListGenerator()
-    success = generator.run(username=args.username, output_path=args.output)
+    success = generator.run(username=args.username, output_path=args.output, limit=args.limit)
 
     sys.exit(0 if success else 1)
 
