@@ -75,7 +75,7 @@ Last Updated: 2025-11-09
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-21個_(28.0%)-f1e05a?style=flat&logo=github) ![Python](https://img.shields.io/badge/Python-12個_(16.0%)-3572A5?style=flat&logo=github) ![Rust](https://img.shields.io/badge/Rust-8個_(10.7%)-dea584?style=flat&logo=github) ![C](https://img.shields.io/badge/C-7個_(9.3%)-555555?style=flat&logo=github) ![HTML](https://img.shields.io/badge/HTML-7個_(9.3%)-e34c26?style=flat&logo=github)
+![JavaScript](https://img.shields.io/badge/JavaScript-21個_(28.0%)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12個_(16.0%)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-8個_(10.7%)-dea584?style=flat&logo=rust) ![C](https://img.shields.io/badge/C-7個_(9.3%)-555555?style=flat&logo=c) ![HTML](https://img.shields.io/badge/HTML-7個_(9.3%)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -83,7 +83,7 @@ Last Updated: 2025-11-09
 ## 🚀 Active Development
 
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
 - **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
 - **Live Demo**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
@@ -107,7 +107,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-09
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
 - **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
 - **Live Demo**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
@@ -115,7 +115,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-09
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
 - **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
 - **Live Demo**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
@@ -123,7 +123,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-09
 
 ## [cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
-![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
+![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
 - **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
 - **Live Demo**: None
@@ -131,7 +131,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-08
 
 ## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
 - **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
 - **Live Demo**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
@@ -139,7 +139,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-08
 
 ## [cat-clipboard-launcher](https://cat2151.github.io/cat-clipboard-launcher/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
 - **Repository**: [https://github.com/cat2151/cat-clipboard-launcher](https://github.com/cat2151/cat-clipboard-launcher)
 - **Live Demo**: [https://cat2151.github.io/cat-clipboard-launcher/](https://cat2151.github.io/cat-clipboard-launcher/)
@@ -147,7 +147,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-08
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
 
 - **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
 - **Live Demo**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
@@ -155,7 +155,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-07
 
 ## [ym2151-log-player-c](https://cat2151.github.io/ym2151-log-player-c/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
 
 - **Repository**: [https://github.com/cat2151/ym2151-log-player-c](https://github.com/cat2151/ym2151-log-player-c)
 - **Live Demo**: [https://cat2151.github.io/ym2151-log-player-c/](https://cat2151.github.io/ym2151-log-player-c/)
@@ -163,7 +163,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-07
 
 ## [super-easy-vim](https://github.com/cat2151/super-easy-vim)
-![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
+![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
 - **Repository**: [https://github.com/cat2151/super-easy-vim](https://github.com/cat2151/super-easy-vim)
 - **Live Demo**: None
@@ -171,7 +171,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-06
 
 ## [ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
+![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
 - **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
 - **Live Demo**: None
@@ -179,7 +179,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-05
 
 ## [smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
-![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
+![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
 - **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
 - **Live Demo**: None
@@ -187,7 +187,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-04
 
 ## [ym2151-log-player-rust](https://cat2151.github.io/ym2151-log-player-rust/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
 - **Repository**: [https://github.com/cat2151/ym2151-log-player-rust](https://github.com/cat2151/ym2151-log-player-rust)
 - **Live Demo**: [https://cat2151.github.io/ym2151-log-player-rust/](https://cat2151.github.io/ym2151-log-player-rust/)
@@ -195,7 +195,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-03
 
 ## [ym2151-zig-cc](https://cat2151.github.io/ym2151-zig-cc/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=github) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue)
 
 - **Repository**: [https://github.com/cat2151/ym2151-zig-cc](https://github.com/cat2151/ym2151-zig-cc)
 - **Live Demo**: [https://cat2151.github.io/ym2151-zig-cc/](https://cat2151.github.io/ym2151-zig-cc/)
@@ -203,7 +203,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-02
 
 ## [mmlabc-to-smf](https://cat2151.github.io/mmlabc-to-smf/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
 - **Repository**: [https://github.com/cat2151/mmlabc-to-smf](https://github.com/cat2151/mmlabc-to-smf)
 - **Live Demo**: [https://cat2151.github.io/mmlabc-to-smf/](https://cat2151.github.io/mmlabc-to-smf/)
@@ -211,7 +211,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-02
 
 ## [smf-to-ym2151log](https://cat2151.github.io/smf-to-ym2151log/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
 - **Repository**: [https://github.com/cat2151/smf-to-ym2151log](https://github.com/cat2151/smf-to-ym2151log)
 - **Live Demo**: [https://cat2151.github.io/smf-to-ym2151log/](https://cat2151.github.io/smf-to-ym2151log/)
@@ -219,7 +219,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-02
 
 ## [ym2151-typescipt-cli-zig-cc](https://github.com/cat2151/ym2151-typescipt-cli-zig-cc)
-![C](https://img.shields.io/badge/C-555555?style=flat&logo=github)
+![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
 
 - **Repository**: [https://github.com/cat2151/ym2151-typescipt-cli-zig-cc](https://github.com/cat2151/ym2151-typescipt-cli-zig-cc)
 - **Live Demo**: None
@@ -227,7 +227,7 @@ Last Updated: 2025-11-09
 - 📅 2025-11-01
 
 ## [ym2151-golang-zig-cc](https://github.com/cat2151/ym2151-golang-zig-cc)
-![C](https://img.shields.io/badge/C-555555?style=flat&logo=github)
+![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
 
 - **Repository**: [https://github.com/cat2151/ym2151-golang-zig-cc](https://github.com/cat2151/ym2151-golang-zig-cc)
 - **Live Demo**: None
@@ -235,7 +235,7 @@ Last Updated: 2025-11-09
 - 📅 2025-10-31
 
 ## [ym2151-python-zig-cc](https://github.com/cat2151/ym2151-python-zig-cc)
-![C](https://img.shields.io/badge/C-555555?style=flat&logo=github)
+![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
 
 - **Repository**: [https://github.com/cat2151/ym2151-python-zig-cc](https://github.com/cat2151/ym2151-python-zig-cc)
 - **Live Demo**: None
@@ -243,7 +243,7 @@ Last Updated: 2025-11-09
 - 📅 2025-10-31
 
 ## [ym2151-typescript-webaudio](https://github.com/cat2151/ym2151-typescript-webaudio)
-![C](https://img.shields.io/badge/C-555555?style=flat&logo=github)
+![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
 
 - **Repository**: [https://github.com/cat2151/ym2151-typescript-webaudio](https://github.com/cat2151/ym2151-typescript-webaudio)
 - **Live Demo**: None
@@ -251,7 +251,7 @@ Last Updated: 2025-11-09
 - 📅 2025-10-31
 
 ## [ym2151-rust-zig-cc](https://github.com/cat2151/ym2151-rust-zig-cc)
-![C](https://img.shields.io/badge/C-555555?style=flat&logo=github)
+![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
 
 - **Repository**: [https://github.com/cat2151/ym2151-rust-zig-cc](https://github.com/cat2151/ym2151-rust-zig-cc)
 - **Live Demo**: None
@@ -259,7 +259,7 @@ Last Updated: 2025-11-09
 - 📅 2025-10-31
 
 ## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
 - **Repository**: [https://github.com/cat2151/cat-oscillator-sync](https://github.com/cat2151/cat-oscillator-sync)
 - **Live Demo**: [https://cat2151.github.io/cat-oscillator-sync/](https://cat2151.github.io/cat-oscillator-sync/)
@@ -267,7 +267,7 @@ Last Updated: 2025-11-09
 - 📅 2025-10-29
 
 ## [cat-incremental-search-filter](https://cat2151.github.io/cat-incremental-search-filter/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
 - **Repository**: [https://github.com/cat2151/cat-incremental-search-filter](https://github.com/cat2151/cat-incremental-search-filter)
 - **Live Demo**: [https://cat2151.github.io/cat-incremental-search-filter/](https://cat2151.github.io/cat-incremental-search-filter/)
@@ -275,7 +275,7 @@ Last Updated: 2025-11-09
 - 📅 2025-10-28
 
 ## [cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
-![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github)
+![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
 - **Repository**: [https://github.com/cat2151/cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
 - **Live Demo**: None
@@ -283,7 +283,7 @@ Last Updated: 2025-11-09
 - 📅 2025-10-28
 
 ## [cat-jekyll-config-generator](https://cat2151.github.io/cat-jekyll-config-generator/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github) ![Topic: config-yml](https://img.shields.io/badge/Topic-config--yml-lightblue) ![Topic: github-pages](https://img.shields.io/badge/Topic-github--pages-lightblue) ![Topic: jekyll](https://img.shields.io/badge/Topic-jekyll-lightblue) ![Topic: python](https://img.shields.io/badge/Topic-python-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: config-yml](https://img.shields.io/badge/Topic-config--yml-lightblue) ![Topic: github-pages](https://img.shields.io/badge/Topic-github--pages-lightblue) ![Topic: jekyll](https://img.shields.io/badge/Topic-jekyll-lightblue) ![Topic: python](https://img.shields.io/badge/Topic-python-lightblue)
 
 - **Repository**: [https://github.com/cat2151/cat-jekyll-config-generator](https://github.com/cat2151/cat-jekyll-config-generator)
 - **Live Demo**: [https://cat2151.github.io/cat-jekyll-config-generator/](https://cat2151.github.io/cat-jekyll-config-generator/)
@@ -291,7 +291,7 @@ Last Updated: 2025-11-09
 - 📅 2025-10-18
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: github-actions](https://img.shields.io/badge/Topic-github--actions-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: github-actions](https://img.shields.io/badge/Topic-github--actions-lightblue)
 
 - **Repository**: [https://github.com/cat2151/github-actions](https://github.com/cat2151/github-actions)
 - **Live Demo**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
@@ -299,7 +299,7 @@ Last Updated: 2025-11-09
 - 📅 2025-10-14
 
 ## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=github) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=html5) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
 
 - **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
 - **Live Demo**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
@@ -307,7 +307,7 @@ Last Updated: 2025-11-09
 - 📅 2025-10-07
 
 ## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-6-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: obsidian-plugin](https://img.shields.io/badge/Topic-obsidian--plugin-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-6-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: obsidian-plugin](https://img.shields.io/badge/Topic-obsidian--plugin-lightblue)
 
 - **Repository**: [https://github.com/cat2151/obsidian-plugin-mmlabc](https://github.com/cat2151/obsidian-plugin-mmlabc)
 - **Live Demo**: [https://cat2151.github.io/obsidian-plugin-mmlabc/](https://cat2151.github.io/obsidian-plugin-mmlabc/)
@@ -315,7 +315,7 @@ Last Updated: 2025-11-09
 - 📅 2025-10-04
 
 ## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
 
 - **Repository**: [https://github.com/cat2151/tonejs-json-sequencer](https://github.com/cat2151/tonejs-json-sequencer)
 - **Live Demo**: [https://cat2151.github.io/tonejs-json-sequencer/](https://cat2151.github.io/tonejs-json-sequencer/)
@@ -323,7 +323,7 @@ Last Updated: 2025-11-09
 - 📅 2025-09-28
 
 ## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue)
 
 - **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
 - **Live Demo**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
@@ -331,7 +331,7 @@ Last Updated: 2025-11-09
 - 📅 2025-09-19
 
 ## [postmate-midi-experimental](https://cat2151.github.io/postmate-midi-experimental/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: audio](https://img.shields.io/badge/Topic-audio-lightblue) ![Topic: midi](https://img.shields.io/badge/Topic-midi-lightblue) ![Topic: postmessage](https://img.shields.io/badge/Topic-postmessage-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: audio](https://img.shields.io/badge/Topic-audio-lightblue) ![Topic: midi](https://img.shields.io/badge/Topic-midi-lightblue) ![Topic: postmessage](https://img.shields.io/badge/Topic-postmessage-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
 
 - **Repository**: [https://github.com/cat2151/postmate-midi-experimental](https://github.com/cat2151/postmate-midi-experimental)
 - **Live Demo**: [https://cat2151.github.io/postmate-midi-experimental/](https://cat2151.github.io/postmate-midi-experimental/)
@@ -339,7 +339,7 @@ Last Updated: 2025-11-09
 - 📅 2025-07-04
 
 ## [easyabcjs6](https://cat2151.github.io/easyabcjs6/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue)
 
 - **Repository**: [https://github.com/cat2151/easyabcjs6](https://github.com/cat2151/easyabcjs6)
 - **Live Demo**: [https://cat2151.github.io/easyabcjs6/](https://cat2151.github.io/easyabcjs6/)
@@ -347,7 +347,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-22
 
 ## [test-postmessage-libs](https://cat2151.github.io/test-postmessage-libs/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: postmate](https://img.shields.io/badge/Topic-postmate-lightblue) ![Topic: postmessage-library](https://img.shields.io/badge/Topic-postmessage--library-lightblue) ![Topic: test-project](https://img.shields.io/badge/Topic-test--project-lightblue) ![Topic: web-midi-api](https://img.shields.io/badge/Topic-web--midi--api-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: postmate](https://img.shields.io/badge/Topic-postmate-lightblue) ![Topic: postmessage-library](https://img.shields.io/badge/Topic-postmessage--library-lightblue) ![Topic: test-project](https://img.shields.io/badge/Topic-test--project-lightblue) ![Topic: web-midi-api](https://img.shields.io/badge/Topic-web--midi--api-lightblue)
 
 - **Repository**: [https://github.com/cat2151/test-postmessage-libs](https://github.com/cat2151/test-postmessage-libs)
 - **Live Demo**: [https://cat2151.github.io/test-postmessage-libs/](https://cat2151.github.io/test-postmessage-libs/)
@@ -355,7 +355,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-22
 
 ## [easy-web-midi-synth-template](https://cat2151.github.io/easy-web-midi-synth-template/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) ![Topic: web-midi-api](https://img.shields.io/badge/Topic-web--midi--api-lightblue) ![Topic: web-midi-synths](https://img.shields.io/badge/Topic-web--midi--synths-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) ![Topic: web-midi-api](https://img.shields.io/badge/Topic-web--midi--api-lightblue) ![Topic: web-midi-synths](https://img.shields.io/badge/Topic-web--midi--synths-lightblue)
 
 - **Repository**: [https://github.com/cat2151/easy-web-midi-synth-template](https://github.com/cat2151/easy-web-midi-synth-template)
 - **Live Demo**: [https://cat2151.github.io/easy-web-midi-synth-template/](https://cat2151.github.io/easy-web-midi-synth-template/)
@@ -363,7 +363,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-22
 
 ## [easy-web-midi-sequencer-template](https://cat2151.github.io/easy-web-midi-sequencer-template/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: sequencer-midi](https://img.shields.io/badge/Topic-sequencer--midi-lightblue) ![Topic: template-project](https://img.shields.io/badge/Topic-template--project-lightblue) ![Topic: web-midi-api](https://img.shields.io/badge/Topic-web--midi--api-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: sequencer-midi](https://img.shields.io/badge/Topic-sequencer--midi-lightblue) ![Topic: template-project](https://img.shields.io/badge/Topic-template--project-lightblue) ![Topic: web-midi-api](https://img.shields.io/badge/Topic-web--midi--api-lightblue)
 
 - **Repository**: [https://github.com/cat2151/easy-web-midi-sequencer-template](https://github.com/cat2151/easy-web-midi-sequencer-template)
 - **Live Demo**: [https://cat2151.github.io/easy-web-midi-sequencer-template/](https://cat2151.github.io/easy-web-midi-sequencer-template/)
@@ -387,7 +387,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-22
 
 ## [recursive-folding](https://cat2151.github.io/recursive-folding/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
 
 - **Repository**: [https://github.com/cat2151/recursive-folding](https://github.com/cat2151/recursive-folding)
 - **Live Demo**: [https://cat2151.github.io/recursive-folding/](https://cat2151.github.io/recursive-folding/)
@@ -395,7 +395,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-22
 
 ## [easymmlabc](https://cat2151.github.io/easymmlabc/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
 
 - **Repository**: [https://github.com/cat2151/easymmlabc](https://github.com/cat2151/easymmlabc)
 - **Live Demo**: [https://cat2151.github.io/easymmlabc/](https://cat2151.github.io/easymmlabc/)
@@ -403,7 +403,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-22
 
 ## [mml2abc](https://cat2151.github.io/mml2abc/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![PEG.js](https://img.shields.io/badge/PEG.js-40be89?style=flat&logo=github) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![PEG.js](https://img.shields.io/badge/PEG.js-40be89?style=flat&logo=javascript) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
 
 - **Repository**: [https://github.com/cat2151/mml2abc](https://github.com/cat2151/mml2abc)
 - **Live Demo**: [https://cat2151.github.io/mml2abc/](https://cat2151.github.io/mml2abc/)
@@ -411,7 +411,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-22
 
 ## [cat-obsidian-templater-scripts](https://cat2151.github.io/cat-obsidian-templater-scripts/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
 
 - **Repository**: [https://github.com/cat2151/cat-obsidian-templater-scripts](https://github.com/cat2151/cat-obsidian-templater-scripts)
 - **Live Demo**: [https://cat2151.github.io/cat-obsidian-templater-scripts/](https://cat2151.github.io/cat-obsidian-templater-scripts/)
@@ -419,7 +419,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-22
 
 ## [command-challenge](https://github.com/cat2151/command-challenge)
-![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github)
+![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
 - **Repository**: [https://github.com/cat2151/command-challenge](https://github.com/cat2151/command-challenge)
 - **Live Demo**: None
@@ -427,7 +427,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-22
 
 ## [chord2mml](https://cat2151.github.io/chord2mml/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: chord-parsing](https://img.shields.io/badge/Topic-chord--parsing-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: chord-parsing](https://img.shields.io/badge/Topic-chord--parsing-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
 
 - **Repository**: [https://github.com/cat2151/chord2mml](https://github.com/cat2151/chord2mml)
 - **Live Demo**: [https://cat2151.github.io/chord2mml/](https://cat2151.github.io/chord2mml/)
@@ -435,7 +435,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-22
 
 ## [easychord2mml](https://cat2151.github.io/easychord2mml/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
 
 - **Repository**: [https://github.com/cat2151/easychord2mml](https://github.com/cat2151/easychord2mml)
 - **Live Demo**: [https://cat2151.github.io/easychord2mml/](https://cat2151.github.io/easychord2mml/)
@@ -443,7 +443,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-22
 
 ## [STed2.07m](https://github.com/cat2151/STed2.07m)
-![Stars](https://img.shields.io/badge/Stars-5-yellow) ![C++](https://img.shields.io/badge/C++-f34b7d?style=flat&logo=github)
+![Stars](https://img.shields.io/badge/Stars-5-yellow) ![C++](https://img.shields.io/badge/C++-f34b7d?style=flat&logo=cplusplus)
 
 - **Repository**: [https://github.com/cat2151/STed2.07m](https://github.com/cat2151/STed2.07m)
 - **Live Demo**: None
@@ -451,7 +451,7 @@ Last Updated: 2025-11-09
 - 📅 2025-06-02
 
 ## [mini-incremental-search-filter](https://cat2151.github.io/mini-incremental-search-filter/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=github) ![Topic: incremental-search-dialogs](https://img.shields.io/badge/Topic-incremental--search--dialogs-lightblue) ![Topic: gui](https://img.shields.io/badge/Topic-gui-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: incremental-search-dialogs](https://img.shields.io/badge/Topic-incremental--search--dialogs-lightblue) ![Topic: gui](https://img.shields.io/badge/Topic-gui-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
 
 - **Repository**: [https://github.com/cat2151/mini-incremental-search-filter](https://github.com/cat2151/mini-incremental-search-filter)
 - **Live Demo**: [https://cat2151.github.io/mini-incremental-search-filter/](https://cat2151.github.io/mini-incremental-search-filter/)
@@ -459,7 +459,7 @@ Last Updated: 2025-11-09
 - 📅 2025-05-31
 
 ## [mml-template-generator](https://cat2151.github.io/mml-template-generator/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
 
 - **Repository**: [https://github.com/cat2151/mml-template-generator](https://github.com/cat2151/mml-template-generator)
 - **Live Demo**: [https://cat2151.github.io/mml-template-generator/](https://cat2151.github.io/mml-template-generator/)
@@ -467,7 +467,7 @@ Last Updated: 2025-11-09
 - 📅 2025-05-31
 
 ## [Web-MIDI-API-play](https://cat2151.github.io/Web-MIDI-API-play/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=html5)
 
 - **Repository**: [https://github.com/cat2151/Web-MIDI-API-play](https://github.com/cat2151/Web-MIDI-API-play)
 - **Live Demo**: [https://cat2151.github.io/Web-MIDI-API-play/](https://cat2151.github.io/Web-MIDI-API-play/)
@@ -475,7 +475,7 @@ Last Updated: 2025-11-09
 - 📅 2024-01-23
 
 ## [msys2-auto-install](https://cat2151.github.io/msys2-auto-install/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Batchfile](https://img.shields.io/badge/Batchfile-8b407a?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Batchfile](https://img.shields.io/badge/Batchfile-8b407a?style=flat&logo=windowsterminal)
 
 - **Repository**: [https://github.com/cat2151/msys2-auto-install](https://github.com/cat2151/msys2-auto-install)
 - **Live Demo**: [https://cat2151.github.io/msys2-auto-install/](https://cat2151.github.io/msys2-auto-install/)
@@ -483,7 +483,7 @@ Last Updated: 2025-11-09
 - 📅 2023-12-17
 
 ## [mml-repl-like](https://cat2151.github.io/mml-repl-like/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=html5)
 
 - **Repository**: [https://github.com/cat2151/mml-repl-like](https://github.com/cat2151/mml-repl-like)
 - **Live Demo**: [https://cat2151.github.io/mml-repl-like/](https://cat2151.github.io/mml-repl-like/)
@@ -491,7 +491,7 @@ Last Updated: 2025-11-09
 - 📅 2023-08-03
 
 ## [wsl2-docker-mingw-hello](https://github.com/cat2151/wsl2-docker-mingw-hello)
-![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Batchfile](https://img.shields.io/badge/Batchfile-8b407a?style=flat&logo=github)
+![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Batchfile](https://img.shields.io/badge/Batchfile-8b407a?style=flat&logo=windowsterminal)
 
 - **Repository**: [https://github.com/cat2151/wsl2-docker-mingw-hello](https://github.com/cat2151/wsl2-docker-mingw-hello)
 - **Live Demo**: None
@@ -507,7 +507,7 @@ Last Updated: 2025-11-09
 - 📅 2022-09-24
 
 ## [mini-command-palette-hidemaru](https://cat2151.github.io/mini-command-palette-hidemaru/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Haskell](https://img.shields.io/badge/Haskell-a59b78?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Haskell](https://img.shields.io/badge/Haskell-a59b78?style=flat&logo=haskell)
 
 - **Repository**: [https://github.com/cat2151/mini-command-palette-hidemaru](https://github.com/cat2151/mini-command-palette-hidemaru)
 - **Live Demo**: [https://cat2151.github.io/mini-command-palette-hidemaru/](https://cat2151.github.io/mini-command-palette-hidemaru/)
@@ -515,7 +515,7 @@ Last Updated: 2025-11-09
 - 📅 2022-04-13
 
 ## [mini-command-palette-mery](https://cat2151.github.io/mini-command-palette-mery/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
 
 - **Repository**: [https://github.com/cat2151/mini-command-palette-mery](https://github.com/cat2151/mini-command-palette-mery)
 - **Live Demo**: [https://cat2151.github.io/mini-command-palette-mery/](https://cat2151.github.io/mini-command-palette-mery/)
@@ -523,7 +523,7 @@ Last Updated: 2025-11-09
 - 📅 2022-04-11
 
 ## [mini-command-palette-sakura-editor](https://cat2151.github.io/mini-command-palette-sakura-editor/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
 
 - **Repository**: [https://github.com/cat2151/mini-command-palette-sakura-editor](https://github.com/cat2151/mini-command-palette-sakura-editor)
 - **Live Demo**: [https://cat2151.github.io/mini-command-palette-sakura-editor/](https://cat2151.github.io/mini-command-palette-sakura-editor/)
@@ -531,7 +531,7 @@ Last Updated: 2025-11-09
 - 📅 2022-04-11
 
 ## [migemo-auto-install-for-windows](https://cat2151.github.io/migemo-auto-install-for-windows/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Batchfile](https://img.shields.io/badge/Batchfile-8b407a?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Batchfile](https://img.shields.io/badge/Batchfile-8b407a?style=flat&logo=windowsterminal)
 
 - **Repository**: [https://github.com/cat2151/migemo-auto-install-for-windows](https://github.com/cat2151/migemo-auto-install-for-windows)
 - **Live Demo**: [https://cat2151.github.io/migemo-auto-install-for-windows/](https://cat2151.github.io/migemo-auto-install-for-windows/)
@@ -539,7 +539,7 @@ Last Updated: 2025-11-09
 - 📅 2022-04-09
 
 ## [migemo-auto-install-for-windows-and-python](https://cat2151.github.io/migemo-auto-install-for-windows-and-python/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Batchfile](https://img.shields.io/badge/Batchfile-8b407a?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Batchfile](https://img.shields.io/badge/Batchfile-8b407a?style=flat&logo=windowsterminal)
 
 - **Repository**: [https://github.com/cat2151/migemo-auto-install-for-windows-and-python](https://github.com/cat2151/migemo-auto-install-for-windows-and-python)
 - **Live Demo**: [https://cat2151.github.io/migemo-auto-install-for-windows-and-python/](https://cat2151.github.io/migemo-auto-install-for-windows-and-python/)
@@ -547,7 +547,7 @@ Last Updated: 2025-11-09
 - 📅 2022-04-09
 
 ## [cygwin-auto-get-install](https://cat2151.github.io/cygwin-auto-get-install/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Shell](https://img.shields.io/badge/Shell-89e051?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Shell](https://img.shields.io/badge/Shell-89e051?style=flat&logo=gnubash)
 
 - **Repository**: [https://github.com/cat2151/cygwin-auto-get-install](https://github.com/cat2151/cygwin-auto-get-install)
 - **Live Demo**: [https://cat2151.github.io/cygwin-auto-get-install/](https://cat2151.github.io/cygwin-auto-get-install/)
@@ -555,7 +555,7 @@ Last Updated: 2025-11-09
 - 📅 2022-03-20
 
 ## [OPM-tone-easy-editor](https://cat2151.github.io/OPM-tone-easy-editor/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=html5)
 
 - **Repository**: [https://github.com/cat2151/OPM-tone-easy-editor](https://github.com/cat2151/OPM-tone-easy-editor)
 - **Live Demo**: [https://cat2151.github.io/OPM-tone-easy-editor/](https://cat2151.github.io/OPM-tone-easy-editor/)
@@ -563,7 +563,7 @@ Last Updated: 2025-11-09
 - 📅 2022-02-17
 
 ## [games-crisp-game-lib](https://cat2151.github.io/games-crisp-game-lib/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
 
 - **Repository**: [https://github.com/cat2151/games-crisp-game-lib](https://github.com/cat2151/games-crisp-game-lib)
 - **Live Demo**: [https://cat2151.github.io/games-crisp-game-lib/](https://cat2151.github.io/games-crisp-game-lib/)
@@ -571,7 +571,7 @@ Last Updated: 2025-11-09
 - 📅 2021-12-19
 
 ## [try-tonejs-sequence](https://cat2151.github.io/try-tonejs-sequence/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
 
 - **Repository**: [https://github.com/cat2151/try-tonejs-sequence](https://github.com/cat2151/try-tonejs-sequence)
 - **Live Demo**: [https://cat2151.github.io/try-tonejs-sequence/](https://cat2151.github.io/try-tonejs-sequence/)
@@ -579,7 +579,7 @@ Last Updated: 2025-11-09
 - 📅 2021-05-30
 
 ## [try-tonejs-ios-npm-webpack](https://cat2151.github.io/try-tonejs-ios-npm-webpack/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
 
 - **Repository**: [https://github.com/cat2151/try-tonejs-ios-npm-webpack](https://github.com/cat2151/try-tonejs-ios-npm-webpack)
 - **Live Demo**: [https://cat2151.github.io/try-tonejs-ios-npm-webpack/](https://cat2151.github.io/try-tonejs-ios-npm-webpack/)
@@ -587,7 +587,7 @@ Last Updated: 2025-11-09
 - 📅 2021-05-30
 
 ## [try-tonejs-ios](https://cat2151.github.io/try-tonejs-ios/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=html5)
 
 - **Repository**: [https://github.com/cat2151/try-tonejs-ios](https://github.com/cat2151/try-tonejs-ios)
 - **Live Demo**: [https://cat2151.github.io/try-tonejs-ios/](https://cat2151.github.io/try-tonejs-ios/)
@@ -595,7 +595,7 @@ Last Updated: 2025-11-09
 - 📅 2021-05-30
 
 ## [try-tonejs](https://cat2151.github.io/try-tonejs/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
 
 - **Repository**: [https://github.com/cat2151/try-tonejs](https://github.com/cat2151/try-tonejs)
 - **Live Demo**: [https://cat2151.github.io/try-tonejs/](https://cat2151.github.io/try-tonejs/)
@@ -603,7 +603,7 @@ Last Updated: 2025-11-09
 - 📅 2021-05-30
 
 ## [try-tonejs-polyphonic](https://cat2151.github.io/try-tonejs-polyphonic/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
 
 - **Repository**: [https://github.com/cat2151/try-tonejs-polyphonic](https://github.com/cat2151/try-tonejs-polyphonic)
 - **Live Demo**: [https://cat2151.github.io/try-tonejs-polyphonic/](https://cat2151.github.io/try-tonejs-polyphonic/)
@@ -611,7 +611,7 @@ Last Updated: 2025-11-09
 - 📅 2021-05-29
 
 ## [tyranoscript5_for_iPad_browser_test_20210321](https://cat2151.github.io/tyranoscript5_for_iPad_browser_test_20210321/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
 
 - **Repository**: [https://github.com/cat2151/tyranoscript5_for_iPad_browser_test_20210321](https://github.com/cat2151/tyranoscript5_for_iPad_browser_test_20210321)
 - **Live Demo**: [https://cat2151.github.io/tyranoscript5_for_iPad_browser_test_20210321/](https://cat2151.github.io/tyranoscript5_for_iPad_browser_test_20210321/)
@@ -627,7 +627,7 @@ Last Updated: 2025-11-09
 - 📅 2017-07-15
 
 ## [js2dstg](https://cat2151.github.io/js2dstg/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=github)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=html5)
 
 - **Repository**: [https://github.com/cat2151/js2dstg](https://github.com/cat2151/js2dstg)
 - **Live Demo**: [https://cat2151.github.io/js2dstg/](https://cat2151.github.io/js2dstg/)
@@ -656,7 +656,7 @@ Forked from upstream repository
 - 📅 2025-05-01
 
 ## [sionicjs](https://cat2151.github.io/sionicjs/)
-![Fork](https://img.shields.io/badge/Fork-orange) ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=github)
+![Fork](https://img.shields.io/badge/Fork-orange) ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
 
 - **Repository**: [https://github.com/cat2151/sionicjs](https://github.com/cat2151/sionicjs)
 - **Live Demo**: [https://cat2151.github.io/sionicjs/](https://cat2151.github.io/sionicjs/)
@@ -664,7 +664,7 @@ Forked from upstream repository
 - 📅 2023-11-19
 
 ## [crisp-game-lib](https://github.com/cat2151/crisp-game-lib)
-![Fork](https://img.shields.io/badge/Fork-orange) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=github)
+![Fork](https://img.shields.io/badge/Fork-orange) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
 
 - **Repository**: [https://github.com/cat2151/crisp-game-lib](https://github.com/cat2151/crisp-game-lib)
 - **Live Demo**: None
@@ -688,7 +688,7 @@ Forked from upstream repository
 - 📅 2021-05-22
 
 ## [WebMSX](https://github.com/cat2151/WebMSX)
-![Fork](https://img.shields.io/badge/Fork-orange) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=github)
+![Fork](https://img.shields.io/badge/Fork-orange) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=html5)
 
 - **Repository**: [https://github.com/cat2151/WebMSX](https://github.com/cat2151/WebMSX)
 - **Live Demo**: None
