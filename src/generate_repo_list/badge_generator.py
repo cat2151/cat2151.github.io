@@ -103,6 +103,16 @@ class BadgeGenerator:
         """
         badges = []
 
+        # README.ja.md が存在する場合、Japaneseバッジを左端に追加
+        if repo.get("has_readme_ja", False):
+            readme_ja_url = (
+                f"{repo['pages_url']}README.ja.html" if repo["has_pages"] else f"{repo['url']}/blob/main/README.ja.md"
+            )
+            japanese_badge = (
+                f'<a href="{readme_ja_url}"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a>'
+            )
+            badges.append(japanese_badge)
+
         if is_fork:
             badges.append("![Fork](https://img.shields.io/badge/Fork-orange)")
 
