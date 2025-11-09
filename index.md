@@ -71,11 +71,11 @@ Last Updated: 2025-11-09
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-75-blue) ![Active](https://img.shields.io/badge/Active-69-green) ![Archived](https://img.shields.io/badge/Archived-0-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-49-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-75-blue) ![Active](https://img.shields.io/badge/Active-65-green) ![Archived](https://img.shields.io/badge/Archived-4-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-49-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-21個_(28.0%)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12個_(16.0%)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-8個_(10.7%)-dea584?style=flat&logo=rust) ![HTML](https://img.shields.io/badge/HTML-7個_(9.3%)-e34c26?style=flat&logo=html5) ![C](https://img.shields.io/badge/C-7個_(9.3%)-555555?style=flat&logo=c)
+![JavaScript](https://img.shields.io/badge/JavaScript-21個_(28.0%)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12個_(16.0%)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-8個_(10.7%)-dea584?style=flat&logo=rust) ![C](https://img.shields.io/badge/C-7個_(9.3%)-555555?style=flat&logo=c) ![HTML](https://img.shields.io/badge/HTML-7個_(9.3%)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -84,20 +84,118 @@ Last Updated: 2025-11-09
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [ym2151-log-player-c](https://cat2151.github.io/ym2151-log-player-c/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
+
+- **Repository**: [https://github.com/cat2151/ym2151-log-player-c](https://github.com/cat2151/ym2151-log-player-c)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-player-c/](https://cat2151.github.io/ym2151-log-player-c/)
+- **Overview**: YM2151レジスタイベントログをJSONファイルから読み込んで、リアルタイム再生とWAVファイル出力を行う
+- 📅 2025-11-09
+
+## [ym2151-typescript-webaudio](https://cat2151.github.io/ym2151-typescript-webaudio/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
+
+- **Repository**: [https://github.com/cat2151/ym2151-typescript-webaudio](https://github.com/cat2151/ym2151-typescript-webaudio)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-typescript-webaudio/](https://cat2151.github.io/ym2151-typescript-webaudio/)
+- **Overview**: WIP
+- 📅 2025-11-09
+
+## [ym2151-golang-zig-cc](https://cat2151.github.io/ym2151-golang-zig-cc/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
+
+- **Repository**: [https://github.com/cat2151/ym2151-golang-zig-cc](https://github.com/cat2151/ym2151-golang-zig-cc)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-golang-zig-cc/](https://cat2151.github.io/ym2151-golang-zig-cc/)
+- **Overview**: WIP
+- 📅 2025-11-09
+
+## [ym2151-typescipt-cli-zig-cc](https://cat2151.github.io/ym2151-typescipt-cli-zig-cc/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
+
+- **Repository**: [https://github.com/cat2151/ym2151-typescipt-cli-zig-cc](https://github.com/cat2151/ym2151-typescipt-cli-zig-cc)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-typescipt-cli-zig-cc/](https://cat2151.github.io/ym2151-typescipt-cli-zig-cc/)
+- **Overview**: WIP
+- 📅 2025-11-09
+
+## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
+- **Overview**: Music Macro Language (MML) Parser and Player and Server and Client
+
+### Project Highlights
+- Music Macro Language (MML) 形式の音楽データを解析し、再生します。
+- コマンドラインインターフェース (CLI) から手軽にMML音楽を再生できるツールです。
+- Web Audio APIとTone.jsを活用し、高品質な音声再生を実現します。
+- 📅 2025-11-09
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+- **Overview**: WIP
+- 📅 2025-11-09
+
+## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
+- **Overview**: Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
+
+### Project Highlights
+- YM2151 (OPM) 音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
+- スタンドアロンでのWAVファイル出力に加え、サーバー・クライアント構成で音楽データ演奏をバックグラウンドで実行します。
+- Windowsプラットフォーム向けに特化しており、名前付きパイプによる効率的な制御を実現しています。
+- 📅 2025-11-09
+
+## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
+- **Overview**: WIP
+- 📅 2025-11-09
+
+## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat-oscillator-sync](https://github.com/cat2151/cat-oscillator-sync)
+- **GitHub Pages**: [https://cat2151.github.io/cat-oscillator-sync/](https://cat2151.github.io/cat-oscillator-sync/)
+- **Overview**: マウスで鳴らせるオシレータ・ハードシンク・シンセサイザー
+- 📅 2025-11-09
+
+## [cat-incremental-search-filter](https://cat2151.github.io/cat-incremental-search-filter/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat-incremental-search-filter](https://github.com/cat2151/cat-incremental-search-filter)
+- **GitHub Pages**: [https://cat2151.github.io/cat-incremental-search-filter/](https://cat2151.github.io/cat-incremental-search-filter/)
+- **Overview**: WIP
+- 📅 2025-11-09
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+- **Overview**: GitHub Pages サイト用のリポジトリ一覧自動生成システム
+- 📅 2025-11-09
+
+## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
+- **Overview**: MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ
+- 📅 2025-11-09
+
 ## [cat-clipboard-launcher](https://cat2151.github.io/cat-clipboard-launcher/)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
 - **Repository**: [https://github.com/cat2151/cat-clipboard-launcher](https://github.com/cat2151/cat-clipboard-launcher)
 - **GitHub Pages**: [https://cat2151.github.io/cat-clipboard-launcher/](https://cat2151.github.io/cat-clipboard-launcher/)
-- **Overview**: No description available
-- 📅 2025-11-09
-
-## [cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
-![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
-- **GitHub Pages**: None
-- **Overview**: No description available
+- **Overview**: 軽量なクリップボードランチャ。素早い手動操作用
 - 📅 2025-11-09
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
@@ -111,14 +209,6 @@ Last Updated: 2025-11-09
 - ファイルの変更をリアルタイムで検知し、設定されたコマンドを自動実行するツールです。
 - 開発ワークフローの自動化やシステム運用の効率化を支援します。
 - 「猫が見守る」というコンセプトで、親しみやすくファイルを監視します。
-- 📅 2025-11-09
-
-## [cat-incremental-search-filter](https://cat2151.github.io/cat-incremental-search-filter/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat-incremental-search-filter](https://github.com/cat2151/cat-incremental-search-filter)
-- **GitHub Pages**: [https://cat2151.github.io/cat-incremental-search-filter/](https://cat2151.github.io/cat-incremental-search-filter/)
-- **Overview**: No description available
 - 📅 2025-11-09
 
 ## [cat-jekyll-config-generator](https://cat2151.github.io/cat-jekyll-config-generator/)
@@ -135,22 +225,6 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/cat-obsidian-templater-scripts](https://github.com/cat2151/cat-obsidian-templater-scripts)
 - **GitHub Pages**: [https://cat2151.github.io/cat-obsidian-templater-scripts/](https://cat2151.github.io/cat-obsidian-templater-scripts/)
 - **Overview**: Simple user scripts for the Obsidian Templater plugin.
-- 📅 2025-11-09
-
-## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat-oscillator-sync](https://github.com/cat2151/cat-oscillator-sync)
-- **GitHub Pages**: [https://cat2151.github.io/cat-oscillator-sync/](https://cat2151.github.io/cat-oscillator-sync/)
-- **Overview**: No description available
-- 📅 2025-11-09
-
-## [cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
-![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
-- **GitHub Pages**: None
-- **Overview**: No description available
 - 📅 2025-11-09
 
 ## [chord2mml](https://cat2151.github.io/chord2mml/)
@@ -214,19 +288,6 @@ Last Updated: 2025-11-09
 - **Overview**: A library transpiles Music Macro Language into ABC music notation.
 - 📅 2025-11-09
 
-## [mmlabc-to-smf](https://cat2151.github.io/mmlabc-to-smf/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/mmlabc-to-smf](https://github.com/cat2151/mmlabc-to-smf)
-- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf/](https://cat2151.github.io/mmlabc-to-smf/)
-- **Overview**: No description available
-
-### Project Highlights
-- Music Macro Language (MML) 形式の音楽データをStandard MIDI File (SMF) へ変換するツールです。
-- 包括的なデバッグ出力を備えた4パスアーキテクチャを採用し、正確かつ信頼性の高い変換を実現します。
-- 音楽制作やデータ変換のワークフローをサポートし、MML利用者の利便性を高めることを目的としています。
-- 📅 2025-11-09
-
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
@@ -241,14 +302,6 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/obsidian-plugin-mmlabc](https://github.com/cat2151/obsidian-plugin-mmlabc)
 - **GitHub Pages**: [https://cat2151.github.io/obsidian-plugin-mmlabc/](https://cat2151.github.io/obsidian-plugin-mmlabc/)
 - **Overview**: Obsidian plugin. Playing Music Macro Language and Chord notation.
-- 📅 2025-11-09
-
-## [smf-to-ym2151log](https://cat2151.github.io/smf-to-ym2151log/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/smf-to-ym2151log](https://github.com/cat2151/smf-to-ym2151log)
-- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log/](https://cat2151.github.io/smf-to-ym2151log/)
-- **Overview**: No description available
 - 📅 2025-11-09
 
 ## [smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
@@ -288,62 +341,12 @@ Last Updated: 2025-11-09
 - 開発支援として、関数呼び出し階層の自動可視化やGitHub Actionsによる自動翻訳、AI要約などの自動化ツールも備えています。
 - 📅 2025-11-09
 
-## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
-- **Overview**: No description available
-
-### Project Highlights
-- YM2151 (OPM) 音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
-- スタンドアロンでのWAVファイル出力に加え、サーバー・クライアント構成で音楽データ演奏をバックグラウンドで実行します。
-- Windowsプラットフォーム向けに特化しており、名前付きパイプによる効率的な制御を実現しています。
-- 📅 2025-11-09
-
-## [ym2151-log-player-c](https://cat2151.github.io/ym2151-log-player-c/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
-
-- **Repository**: [https://github.com/cat2151/ym2151-log-player-c](https://github.com/cat2151/ym2151-log-player-c)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-player-c/](https://cat2151.github.io/ym2151-log-player-c/)
-- **Overview**: 実験用
-- 📅 2025-11-09
-
 ## [ym2151-log-player-rust](https://cat2151.github.io/ym2151-log-player-rust/)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
 - **Repository**: [https://github.com/cat2151/ym2151-log-player-rust](https://github.com/cat2151/ym2151-log-player-rust)
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-log-player-rust/](https://cat2151.github.io/ym2151-log-player-rust/)
 - **Overview**: ym2151-log-player のRust版
-- 📅 2025-11-09
-
-## [ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2025-11-09
-
-## [ym2151-zig-cc](https://cat2151.github.io/ym2151-zig-cc/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue)
-
-- **Repository**: [https://github.com/cat2151/ym2151-zig-cc](https://github.com/cat2151/ym2151-zig-cc)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-zig-cc/](https://cat2151.github.io/ym2151-zig-cc/)
-- **Overview**: Simple sequencer utilizing Nuked-OPM with zig cc
-
-### Project Highlights
-- Yamaha YM2151エミュレータ「Nuked-OPM」を使用した簡易シーケンサプロジェクトです。
-- C言語で実装されており、Zigコンパイラの`zig cc`コマンドを用いてビルドされます。
-- シンプルな音の生成、リアルタイム再生、およびWAVファイル出力の実験目的で開発されています。
-- 📅 2025-11-09
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-- **Overview**: GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - 📅 2025-11-09
 
 ## [MML-chord-generator](https://cat2151.github.io/MML-chord-generator/)
@@ -362,57 +365,12 @@ Last Updated: 2025-11-09
 - **Overview**: No description available
 - 📅 2025-11-09
 
-## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
-- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
-- **Overview**: No description available
-
-### Project Highlights
-- Music Macro Language (MML) 形式の音楽データを解析し、再生します。
-- コマンドラインインターフェース (CLI) から手軽にMML音楽を再生できるツールです。
-- Web Audio APIとTone.jsを活用し、高品質な音声再生を実現します。
-- 📅 2025-11-08
-
-## [ym2151-typescipt-cli-zig-cc](https://github.com/cat2151/ym2151-typescipt-cli-zig-cc)
-![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
-
-- **Repository**: [https://github.com/cat2151/ym2151-typescipt-cli-zig-cc](https://github.com/cat2151/ym2151-typescipt-cli-zig-cc)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2025-11-01
-
-## [ym2151-golang-zig-cc](https://github.com/cat2151/ym2151-golang-zig-cc)
-![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
-
-- **Repository**: [https://github.com/cat2151/ym2151-golang-zig-cc](https://github.com/cat2151/ym2151-golang-zig-cc)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2025-10-31
-
 ## [ym2151-python-zig-cc](https://github.com/cat2151/ym2151-python-zig-cc)
 ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
 
 - **Repository**: [https://github.com/cat2151/ym2151-python-zig-cc](https://github.com/cat2151/ym2151-python-zig-cc)
 - **GitHub Pages**: None
 - **Overview**: Nuked-OPMを使った最低限の音を出すexampleを、Windowsで、Pythonで、Cコンパイラにzig ccを使って実装を検証する用
-- 📅 2025-10-31
-
-## [ym2151-typescript-webaudio](https://github.com/cat2151/ym2151-typescript-webaudio)
-![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
-
-- **Repository**: [https://github.com/cat2151/ym2151-typescript-webaudio](https://github.com/cat2151/ym2151-typescript-webaudio)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2025-10-31
-
-## [ym2151-rust-zig-cc](https://github.com/cat2151/ym2151-rust-zig-cc)
-![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
-
-- **Repository**: [https://github.com/cat2151/ym2151-rust-zig-cc](https://github.com/cat2151/ym2151-rust-zig-cc)
-- **GitHub Pages**: None
-- **Overview**: No description available
 - 📅 2025-10-31
 
 ## [postmate-midi-experimental](https://cat2151.github.io/postmate-midi-experimental/)
@@ -676,7 +634,48 @@ Last Updated: 2025-11-09
 
 ## 📦 Archived Projects
 
-No archived repositories available.
+## [ym2151-rust-zig-cc](https://cat2151.github.io/ym2151-rust-zig-cc/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
+
+- **Repository**: [https://github.com/cat2151/ym2151-rust-zig-cc](https://github.com/cat2151/ym2151-rust-zig-cc)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-rust-zig-cc/](https://cat2151.github.io/ym2151-rust-zig-cc/)
+- **Overview**: Rust + Zig CC + Nuked-OPM でWAVファイル生成
+- 📅 2025-11-09
+
+## [ym2151-zig-cc](https://cat2151.github.io/ym2151-zig-cc/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue)
+
+- **Repository**: [https://github.com/cat2151/ym2151-zig-cc](https://github.com/cat2151/ym2151-zig-cc)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-zig-cc/](https://cat2151.github.io/ym2151-zig-cc/)
+- **Overview**: Simple sequencer utilizing Nuked-OPM with zig cc
+
+### Project Highlights
+- Yamaha YM2151エミュレータ「Nuked-OPM」を使用した簡易シーケンサプロジェクトです。
+- C言語で実装されており、Zigコンパイラの`zig cc`コマンドを用いてビルドされます。
+- シンプルな音の生成、リアルタイム再生、およびWAVファイル出力の実験目的で開発されています。
+- 📅 2025-11-09
+
+## [smf-to-ym2151log](https://cat2151.github.io/smf-to-ym2151log/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/smf-to-ym2151log](https://github.com/cat2151/smf-to-ym2151log)
+- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log/](https://cat2151.github.io/smf-to-ym2151log/)
+- **Overview**: Convert Standard MIDI Files (SMF) to YM2151 register write log in JSON format.
+- 📅 2025-11-09
+
+## [mmlabc-to-smf](https://cat2151.github.io/mmlabc-to-smf/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/mmlabc-to-smf](https://github.com/cat2151/mmlabc-to-smf)
+- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf/](https://cat2151.github.io/mmlabc-to-smf/)
+- **Overview**: A conversion tool from Music Macro Language (MML) to Standard MIDI File (SMF)
+
+### Project Highlights
+- Music Macro Language (MML) 形式の音楽データをStandard MIDI File (SMF) へ変換するツールです。
+- 包括的なデバッグ出力を備えた4パスアーキテクチャを採用し、正確かつ信頼性の高い変換を実現します。
+- 音楽制作やデータ変換のワークフローをサポートし、MML利用者の利便性を高めることを目的としています。
+- 📅 2025-11-09
+
 
 ---
 
