@@ -112,6 +112,11 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
 - **Live Demo**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
 - **Overview**: No description available
+
+### Project Highlights
+- YM2151 (OPM) 音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
+- スタンドアロンでのWAVファイル出力に加え、サーバー・クライアント構成で音楽データ演奏をバックグラウンドで実行します。
+- Windowsプラットフォーム向けに特化しており、名前付きパイプによる効率的な制御を実現しています。
 - 📅 2025-11-09
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
@@ -136,6 +141,11 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
 - **Live Demo**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
 - **Overview**: No description available
+
+### Project Highlights
+- Music Macro Language (MML) 形式の音楽データを解析し、再生します。
+- コマンドラインインターフェース (CLI) から手軽にMML音楽を再生できるツールです。
+- Web Audio APIとTone.jsを活用し、高品質な音声再生を実現します。
 - 📅 2025-11-08
 
 ## [cat-clipboard-launcher](https://cat2151.github.io/cat-clipboard-launcher/)
@@ -152,6 +162,11 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
 - **Live Demo**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
 - **Overview**: File Change Monitoring Tool - Detects file changes and executes commands
+
+### Project Highlights
+- ファイルの変更をリアルタイムで検知し、設定されたコマンドを自動実行するツールです。
+- 開発ワークフローの自動化やシステム運用の効率化を支援します。
+- 「猫が見守る」というコンセプトで、親しみやすくファイルを監視します。
 - 📅 2025-11-07
 
 ## [ym2151-log-player-c](https://cat2151.github.io/ym2151-log-player-c/)
@@ -200,6 +215,11 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/ym2151-zig-cc](https://github.com/cat2151/ym2151-zig-cc)
 - **Live Demo**: [https://cat2151.github.io/ym2151-zig-cc/](https://cat2151.github.io/ym2151-zig-cc/)
 - **Overview**: Simple sequencer utilizing Nuked-OPM with zig cc
+
+### Project Highlights
+- Yamaha YM2151エミュレータ「Nuked-OPM」を使用した簡易シーケンサプロジェクトです。
+- C言語で実装されており、Zigコンパイラの`zig cc`コマンドを用いてビルドされます。
+- シンプルな音の生成、リアルタイム再生、およびWAVファイル出力の実験目的で開発されています。
 - 📅 2025-11-02
 
 ## [mmlabc-to-smf](https://cat2151.github.io/mmlabc-to-smf/)
@@ -208,6 +228,11 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/mmlabc-to-smf](https://github.com/cat2151/mmlabc-to-smf)
 - **Live Demo**: [https://cat2151.github.io/mmlabc-to-smf/](https://cat2151.github.io/mmlabc-to-smf/)
 - **Overview**: No description available
+
+### Project Highlights
+- Music Macro Language (MML) 形式の音楽データをStandard MIDI File (SMF) へ変換するツールです。
+- 包括的なデバッグ出力を備えた4パスアーキテクチャを採用し、正確かつ信頼性の高い変換を実現します。
+- 音楽制作やデータ変換のワークフローをサポートし、MML利用者の利便性を高めることを目的としています。
 - 📅 2025-11-02
 
 ## [smf-to-ym2151log](https://cat2151.github.io/smf-to-ym2151log/)
@@ -296,6 +321,11 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/github-actions](https://github.com/cat2151/github-actions)
 - **Live Demo**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
 - **Overview**: collection of reusable GitHub Actions workflows for multiple projects
+
+### Project Highlights
+- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽に
+- 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOK
+- ✅ メンテは一括、プロジェクト開発に集中できます
 - 📅 2025-10-14
 
 ## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
@@ -304,6 +334,11 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
 - **Live Demo**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
 - **Overview**: MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
+
+### Project Highlights
+- MML (Music Macro Language) 形式の音楽データを解析し、Tone.jsのJSONシーケンサーフォーマットに変換します。
+- 変換されたJSONデータは、Web Audio APIライブラリTone.jsを介してブラウザ上で音楽再生が可能です。
+- 開発支援として、関数呼び出し階層の自動可視化やGitHub Actionsによる自動翻訳、AI要約などの自動化ツールも備えています。
 - 📅 2025-10-07
 
 ## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
