@@ -83,7 +83,7 @@ class BadgeGenerator:
             color = self.language_info.get_color(lang)
             logo = self.language_info.get_logo(lang)
             language_badges.append(
-                f"![{lang}](https://img.shields.io/badge/{lang_safe}-{count}個_({percentage:.1f}%)-{color}?style=flat&logo={logo})"
+                f"![{lang}](https://img.shields.io/badge/{lang_safe}-{count}_({percentage:.1f}%)-{color}?style=flat&logo={logo})"
             )
 
         return " ".join(language_badges)

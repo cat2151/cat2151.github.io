@@ -75,7 +75,7 @@ Last Updated: 2025-11-09
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-21個_(28.0%)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12個_(16.0%)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-8個_(10.7%)-dea584?style=flat&logo=rust) ![C](https://img.shields.io/badge/C-7個_(9.3%)-555555?style=flat&logo=c) ![HTML](https://img.shields.io/badge/HTML-7個_(9.3%)-e34c26?style=flat&logo=html5)
+![JavaScript](https://img.shields.io/badge/JavaScript-21_(28.0%)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12_(16.0%)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-8_(10.7%)-dea584?style=flat&logo=rust) ![C](https://img.shields.io/badge/C-7_(9.3%)-555555?style=flat&logo=c) ![HTML](https://img.shields.io/badge/HTML-7_(9.3%)-e34c26?style=flat&logo=html5)
 
 
 ---
