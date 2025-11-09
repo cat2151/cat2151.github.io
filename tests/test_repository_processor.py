@@ -72,6 +72,8 @@ class TestRepositoryProcessor:
     @pytest.fixture
     def mock_repo(self):
         """モックリポジトリのフィクスチャ"""
+        from github.GithubException import GithubException
+
         repo = Mock()
         repo.name = "test-repo"
         repo.html_url = "https://github.com/test/test-repo"
@@ -85,6 +87,8 @@ class TestRepositoryProcessor:
         repo.private = False
         repo.get_readme.return_value = Mock()
         repo.get_topics.return_value = ["test", "example"]
+        # デフォルトではREADME.ja.mdは存在しない
+        repo.get_contents.side_effect = GithubException(status=404, data={})
         return repo
 
     def test_init(self, mock_config, mock_strings):
@@ -149,6 +153,7 @@ class TestRepositoryProcessor:
             "stargazers_count": 5,
             "language": "Python",
             "topics": ["test", "example"],
+            "has_readme_ja": False,
         }
 
         assert data == expected
@@ -166,6 +171,31 @@ class TestRepositoryProcessor:
         username = "testuser"
         data = processor._create_repo_data(mock_repo, username)
         assert data["language"] == ""
+
+    def test_check_readme_ja_exists_true(self, processor, mock_repo):
+        """README.ja.md が存在する場合のテスト"""
+        # デフォルトのside_effectをリセットしてreturn_valueを設定
+        mock_repo.get_contents = Mock(return_value=Mock())
+        result = processor._check_readme_ja_exists(mock_repo)
+        assert result is True
+        mock_repo.get_contents.assert_called_once_with("README.ja.md")
+
+    def test_check_readme_ja_exists_false(self, processor, mock_repo):
+        """README.ja.md が存在しない場合のテスト"""
+        from github.GithubException import GithubException
+
+        mock_repo.get_contents.side_effect = GithubException(status=404, data={})
+        result = processor._check_readme_ja_exists(mock_repo)
+        assert result is False
+        mock_repo.get_contents.assert_called_once_with("README.ja.md")
+
+    def test_create_repo_data_with_readme_ja(self, processor, mock_repo):
+        """README.ja.md が存在するリポジトリのデータ作成テスト"""
+        # デフォルトのside_effectをリセットしてreturn_valueを設定
+        mock_repo.get_contents = Mock(return_value=Mock())
+        username = "testuser"
+        data = processor._create_repo_data(mock_repo, username)
+        assert data["has_readme_ja"] is True
 
     def test_fetch_repositories(self, processor, mock_repo, capsys):
         """リポジトリ取得テスト"""
