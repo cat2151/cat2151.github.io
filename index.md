@@ -84,6 +84,40 @@ Last Updated: 2025-11-09
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [github-actions](https://cat2151.github.io/github-actions/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: github-actions](https://img.shields.io/badge/Topic-github--actions-lightblue)
+
+- **Repository**: [https://github.com/cat2151/github-actions](https://github.com/cat2151/github-actions)
+- **GitHub Pages**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
+- **Overview**: collection of reusable GitHub Actions workflows for multiple projects
+
+### Project Highlights
+- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽に
+- 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOK
+- ✅ メンテは一括、プロジェクト開発に集中できます
+- 📅 2025-11-09
+
+## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
+- **Overview**: Music Macro Language (MML) Parser and Player and Server and Client
+
+### Project Highlights
+- Music Macro Language (MML) を解析し、音楽を再生するCLIツールです。
+- 文字列`cde`を入力するだけで、Windows上でリアルタイムに「ドレミ」を演奏します。
+- シンプルな操作で低レイテンシの演奏を実現し、バックグラウンドでの再生も可能です。
+- 📅 2025-11-09
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+- **Overview**: GitHub Pages サイト用のリポジトリ一覧自動生成システム
+- 📅 2025-11-09
+
 ## [ym2151-log-player-c](https://cat2151.github.io/ym2151-log-player-c/)
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
 
@@ -114,19 +148,6 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/ym2151-typescipt-cli-zig-cc](https://github.com/cat2151/ym2151-typescipt-cli-zig-cc)
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-typescipt-cli-zig-cc/](https://cat2151.github.io/ym2151-typescipt-cli-zig-cc/)
 - **Overview**: WIP
-- 📅 2025-11-09
-
-## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
-- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
-- **Overview**: Music Macro Language (MML) Parser and Player and Server and Client
-
-### Project Highlights
-- Music Macro Language (MML) 形式の音楽データを解析し、再生します。
-- コマンドラインインターフェース (CLI) から手軽にMML音楽を再生できるツールです。
-- Web Audio APIとTone.jsを活用し、高品質な音声再生を実現します。
 - 📅 2025-11-09
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
@@ -172,14 +193,6 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/cat-incremental-search-filter](https://github.com/cat2151/cat-incremental-search-filter)
 - **GitHub Pages**: [https://cat2151.github.io/cat-incremental-search-filter/](https://cat2151.github.io/cat-incremental-search-filter/)
 - **Overview**: WIP
-- 📅 2025-11-09
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-- **Overview**: GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - 📅 2025-11-09
 
 ## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
@@ -265,19 +278,6 @@ Last Updated: 2025-11-09
 - **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
 - **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
 - **Overview**: A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
-- 📅 2025-11-09
-
-## [github-actions](https://cat2151.github.io/github-actions/)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: github-actions](https://img.shields.io/badge/Topic-github--actions-lightblue)
-
-- **Repository**: [https://github.com/cat2151/github-actions](https://github.com/cat2151/github-actions)
-- **GitHub Pages**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
-- **Overview**: collection of reusable GitHub Actions workflows for multiple projects
-
-### Project Highlights
-- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽に
-- 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOK
-- ✅ メンテは一括、プロジェクト開発に集中できます
 - 📅 2025-11-09
 
 ## [mml2abc](https://cat2151.github.io/mml2abc/)
