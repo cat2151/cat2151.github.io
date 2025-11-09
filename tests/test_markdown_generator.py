@@ -323,7 +323,9 @@ class TestMarkdownGenerator:
         assert "https://github.com/testuser/test-repo" in result
         assert "**GitHub**: " in result
         assert "**GitHub Pages**: " in result
-        assert "**説明**: テストリポジトリ" in result
+        assert "テストリポジトリ" in result
+        # Overview ラベルがないことを確認
+        assert "**説明**:" not in result
 
         # プロジェクト概要セクションの確認
         assert "### Project Highlights" in result
@@ -352,7 +354,9 @@ class TestMarkdownGenerator:
 
         # 基本情報の確認
         assert "## [test-repo]" in result
-        assert "**説明**: テストリポジトリ" in result
+        assert "テストリポジトリ" in result
+        # Overview ラベルがないことを確認
+        assert "**説明**:" not in result
 
         # プロジェクト概要セクションがないことの確認
         assert "### Project Highlights" not in result
@@ -379,7 +383,9 @@ class TestMarkdownGenerator:
 
         # 基本情報の確認
         assert "## [test-repo]" in result
-        assert "**説明**: テストリポジトリ" in result
+        assert "テストリポジトリ" in result
+        # Overview ラベルがないことを確認
+        assert "**説明**:" not in result
 
         # Japaneseバッジの確認
         assert "🇯🇵" in result
@@ -409,7 +415,9 @@ class TestMarkdownGenerator:
 
         # 基本情報の確認
         assert "## [test-repo]" in result
-        assert "**説明**: テストリポジトリ" in result
+        assert "テストリポジトリ" in result
+        # Overview ラベルがないことを確認
+        assert "**説明**:" not in result
 
         # Japaneseバッジの確認 (GitHub URLにリンク)
         assert "🇯🇵" in result
@@ -438,7 +446,9 @@ class TestMarkdownGenerator:
 
         # 基本情報の確認
         assert "## [test-repo]" in result
-        assert "**説明**: テストリポジトリ" in result
+        assert "テストリポジトリ" in result
+        # Overview ラベルがないことを確認
+        assert "**説明**:" not in result
 
         # Japaneseバッジがないことの確認
         assert "🇯🇵" not in result

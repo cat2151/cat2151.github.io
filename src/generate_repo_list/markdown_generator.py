@@ -179,6 +179,14 @@ class MarkdownGenerator:
 
         # 結果を組み立て
         lines = [f"## [{repo['name']}]({main_url})"]
+
+        # Overviewをリポジトリ名の次の行に表示（ラベルなし）
+        if repo["description"]:
+            lines.append(repo["description"])
+
+        lines.append("")
+
+        # バッジを表示
         if badge_line:
             lines.extend([badge_line, ""])
 
@@ -196,7 +204,6 @@ class MarkdownGenerator:
             [
                 f"- **{self.strings['markdown']['repo_details']['github_label']}**: {github_link}",
                 f"- **{self.strings['markdown']['repo_details']['pages_label']}**: {pages_link}",
-                f"- **{self.strings['markdown']['repo_details']['description_label']}**: {repo['description']}",
             ]
         )
 
