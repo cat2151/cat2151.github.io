@@ -1,0 +1,55 @@
+# SEO Configuration Template
+# このファイルはPythonスクリプトによって読み込まれ、index.mdのフロントマターに挿入されます
+
+layout: default
+title: "{username}のGitHubリポジトリ一覧"
+description: "{username}のGitHubリポジトリとプロジェクトの一覧です。最新のプログラミングプロジェクト、ツール、ライブラリを掲載しています。"
+keywords: "GitHub, リポジトリ, プログラミング, オープンソース, {username}, プロジェクト一覧"
+author: "{username}"
+canonical_url: "https://{username}.github.io/"
+
+# OGP (Open Graph) tags
+og_title: "{username}のGitHubリポジトリ一覧"
+og_description: "{og_description}"
+og_image: "https://{username}.github.io/assets/favicon-512x512.png"
+og_type: "website"
+og_locale: "ja_JP"
+og_site_name: "{username}のGitHub Portfolio"
+
+# Twitter Card tags
+twitter_card: "summary_large_image"
+twitter_title: "{username}のGitHubリポジトリ一覧"
+twitter_description: "{og_description}"
+twitter_image: "https://{username}.github.io/assets/favicon-512x512.png"
+
+# Performance optimization tags
+dns_prefetch: ["//github.com", "//avatars.githubusercontent.com", "//img.shields.io"]
+preconnect: ["//fonts.googleapis.com", "//fonts.gstatic.com"]
+
+# Enhanced language/region settings
+hreflang: "ja-JP"
+geo_region: "JP"
+geo_placename: "Japan"
+
+# Accessibility & PWA
+viewport: "width=device-width, initial-scale=1.0"
+theme_color: "#24292e"
+manifest: "/manifest.json"
+apple_touch_icon: "/assets/favicon-192x192.png"
+
+# Site categorization
+category: "technology"
+tags: ["programming", "opensource", "portfolio", "github", "developer", "projects"]
+
+# Sitemap optimization
+changefreq: "daily"
+priority: "1.0"
+
+# Breadcrumb & organization
+breadcrumb: true
+organization: "{username} Open Source Projects"
+
+# Additional meta tags
+robots: "index, follow"
+revisit_after: "1 days"
+rating: "general"

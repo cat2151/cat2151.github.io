@@ -1,0 +1,54 @@
+title: "cat2151"
+description: "cat2151のGitHubリポジトリ一覧とプロジェクト情報"
+theme: jekyll-theme-slate
+
+# SEO plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+# SEO settings
+url: "https://cat2151.github.io"
+author: "cat2151"
+lang: "ja"
+
+# favicon (using your actual icon)
+favicon: "/assets/favicon-32x32.png"
+favicon_16: "/assets/favicon-16x16.png"
+favicon_32: "/assets/favicon-32x32.png"
+favicon_192: "/assets/favicon-192x192.png"
+
+# PWA settings
+manifest: "/manifest.json"
+apple_touch_icon: "/assets/favicon-192x192.png"
+theme_color: "#24292e"
+background_color: "#ffffff"
+
+# Performance optimization
+dns_prefetch:
+  - "//github.com"
+  - "//avatars.githubusercontent.com"
+  - "//img.shields.io"
+preconnect:
+  - "//fonts.googleapis.com"
+  - "//fonts.gstatic.com"
+
+# Enhanced language/region settings
+hreflang: "ja-JP"
+geo_region: "JP"
+geo_placename: "Japan"
+locale: "ja_JP"
+
+# Site categorization
+category: "technology"
+site_tags: ["programming", "opensource", "portfolio", "github", "developer"]
+
+# SEO optimization
+changefreq: "daily"
+priority: "1.0"
+breadcrumb: true
+organization: "cat2151 Open Source Projects"
+
+# Accessibility
+viewport: "width=device-width, initial-scale=1.0"

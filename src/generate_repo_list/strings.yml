@@ -1,0 +1,84 @@
+# 文字列リソース設定
+
+# ================================
+# GitHub Pages 表示用
+# ================================
+
+# マークダウンコンテンツ
+markdown:
+  main_title: "{username}'s Open Source Projects"
+  last_updated: "Last Updated: {date}"
+
+  # セクションタイトル
+  sections:
+    toc: "📋 Table of Contents"
+    stats: "📊 Project Statistics"
+    active: "🚀 Active Development"
+    archived: "📦 Archived Projects"
+    forks: "🍴 Forked Repositories"
+
+  # 目次項目
+  toc_items:
+    - "[Project Statistics](#-project-statistics)"
+    - "[Active Development](#-active-development)"
+    - "[Archived Projects](#-archived-projects)"
+    - "[Forked Repositories](#-forked-repositories)"
+
+  # 統計情報
+  stats:
+    main_languages_title: "Core Technologies"
+    no_language_info: "Language data unavailable"
+
+  # リポジトリ詳細
+  repo_details:
+    github_label: "Repository"
+    pages_label: "Live Demo"
+    description_label: "Overview"
+    fork_description: "Forked from upstream repository"
+
+# ============================================================
+# コンソールメッセージ等（開発者向け・ターミナル表示のみ）
+# ============================================================
+
+# コンソールメッセージ（開発者向け・ターミナル表示のみ）
+console:
+  app_title: "GitHub リポジトリ一覧生成ツール"
+  initializing_api: "GitHub API を初期化中..."
+  authenticated_as: "✓ 認証成功: {login}"
+  fetching_repos: "{username} のリポジトリを取得中..."
+  found_repos: "合計 {total} 個のリポジトリを発見"
+  processing_repo: "処理中 [{current}/{total}] {name}..."
+  filtered_repos: "README付きリポジトリ {count} 個に絞り込み"
+  classifying: "リポジトリを分類中..."
+  sorting: "更新日時順（降順）でソート中..."
+  generating_markdown: "Markdown を生成中..."
+  saving_to: "{path} に保存中..."
+  saved_success: "✓ 保存完了！"
+  file_size: "ファイルサイズ: {size} 文字"
+  completed: "✓ 処理が正常に完了しました"
+
+# 分類統計メッセージ（開発者向け・ターミナル表示のみ）
+classification:
+  active: "アクティブ: {count}"
+  archived: "アーカイブ: {count}"
+  forks: "フォーク: {count}"
+
+# エラーメッセージ（開発者向け・ターミナル表示のみ）
+errors:
+  no_github_token: |
+    ❌ エラー: GITHUB_TOKEN 環境変数が設定されていません。
+    GitHub Personal Access Token を設定してください:
+
+    PowerShell の場合:
+      $env:GITHUB_TOKEN="your_token_here"
+
+    Command Prompt の場合:
+      set GITHUB_TOKEN=your_token_here
+
+    Linux/Mac の場合:
+      export GITHUB_TOKEN=your_token_here
+
+    または secrets/secrets.toml ファイルに以下の内容を記述してください:
+      [github]
+      token = "your_token_here"
+  auth_failed: "❌ エラー: GitHub API での認証に失敗しました: {error}"

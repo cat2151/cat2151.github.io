@@ -1,0 +1,38 @@
+name: Generate Repository List
+
+on:
+  schedule:
+    - cron: "0 22 * * *"  # UTC 22時 = 日本時間7時
+  workflow_dispatch:  # 手動実行を可能にする
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # リポジトリへの書き込み権限
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Install dependencies
+        run: pip install PyGithub PyYAML
+      - name: Generate index.md
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python src/generate_repo_list/generate_repo_list.py --username ${{ github.repository_owner }} --output index.md
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --exit-code index.md || echo "changes=true" >> $GITHUB_OUTPUT
+      - name: Commit & Push
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add index.md
+          git commit -m "Auto-update repository list - $(date '+%Y-%m-%d')"
+          git push

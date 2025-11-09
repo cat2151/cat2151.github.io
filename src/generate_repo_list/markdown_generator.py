@@ -1,0 +1,350 @@
+"""Markdown生成モジュール
+
+このモジュールはMarkdownコンテンツの生成を担当します。
+"""
+
+import hashlib
+import json
+from datetime import datetime
+from typing import Any, Dict, List
+
+import yaml
+
+
+class MarkdownGenerator:
+    """Markdown生成クラス"""
+
+    def __init__(self, config: Dict[str, Any], strings: Dict[str, Any]):
+        """初期化
+
+        Args:
+            config: 設定辞書
+            strings: 文字列リソース辞書
+        """
+        self.config = config
+        self.strings = strings
+
+    def _get_language_color(self, language: str) -> str:
+        """言語名から一意のカラフルな色を生成する
+
+        Args:
+            language: プログラミング言語名
+
+        Returns:
+            16進数カラーコード（例: "f1e05a"）
+        """
+        # よく使われる言語の公式色（GitHub Linguist準拠）
+        language_colors = {
+            "JavaScript": "f1e05a",
+            "Python": "3572A5",
+            "Rust": "dea584",
+            "HTML": "e34c26",
+            "CSS": "563d7c",
+            "C": "555555",
+            "C++": "f34b7d",
+            "Java": "b07219",
+            "Go": "00ADD8",
+            "TypeScript": "3178c6",
+            "PHP": "4F5D95",
+            "Ruby": "701516",
+            "Swift": "fa7343",
+            "Kotlin": "A97BFF",
+            "Shell": "89e051",
+            "Dockerfile": "384d54",
+            "YAML": "cb171e",
+            "JSON": "292929",
+            "Markdown": "083fa1",
+            "Vue": "41b883",
+            "Svelte": "ff3e00",
+        }
+
+        # 既知の言語の場合は公式色を使用
+        if language in language_colors:
+            return language_colors[language]
+
+        # 未知の言語の場合はハッシュベースで一意の色を生成
+        # 言語名をハッシュ化して安定した色を生成
+        hash_object = hashlib.md5(language.encode())
+        hex_dig = hash_object.hexdigest()
+
+        # ハッシュから6桁の16進数カラーコードを生成
+        # 最初の6文字を使って、適度に明るい色になるよう調整
+        r = int(hex_dig[0:2], 16)
+        g = int(hex_dig[2:4], 16)
+        b = int(hex_dig[4:6], 16)
+
+        # 暗すぎる色を避けるため、最低値を設定
+        r = max(r, 64)
+        g = max(g, 64)
+        b = max(b, 64)
+
+        # 明るすぎる色も避ける
+        r = min(r, 220)
+        g = min(g, 220)
+        b = min(b, 220)
+
+        return f"{r:02x}{g:02x}{b:02x}"
+
+    def generate_markdown(
+        self,
+        username: str,
+        active: List[Dict],
+        archived: List[Dict],
+        forks: List[Dict],
+        seo_config: Dict,
+        json_ld_template: Dict,
+    ) -> str:
+        """完全なMarkdownドキュメントを生成する
+
+        Args:
+            username: GitHubユーザー名
+            active: アクティブなリポジトリ
+            archived: アーカイブされたリポジトリ
+            forks: フォークされたリポジトリ
+            seo_config: SEO設定
+            json_ld_template: JSON-LDテンプレート
+
+        Returns:
+            生成されたMarkdown文字列
+        """
+        print(f"\n{self.strings['console']['generating_markdown']}")
+
+        today = datetime.now().strftime(self.config["date_format"])
+        stats_section = self._generate_statistics_section(active, archived, forks)
+        toc = self._generate_toc()
+
+        # 統計情報を計算
+        total = len(active) + len(archived) + len(forks)
+        total_stars = sum(repo["stargazers_count"] for repo in active + archived + forks)
+
+        # 主要言語を取得
+        lang_list = self._get_top_languages(active + archived + forks)
+
+        # 動的なOGP説明文を生成
+        og_description = self.config["og_description_template"].format(
+            total=total, total_stars=total_stars, lang_list=lang_list
+        )
+
+        # フロントマター生成
+        frontmatter = self._generate_frontmatter(
+            username, og_description, seo_config, json_ld_template, total, total_stars, lang_list
+        )
+
+        # メインコンテンツ生成
+        main_title = self.strings["markdown"]["main_title"].format(username=username)
+        last_updated = self.strings["markdown"]["last_updated"].format(date=today)
+
+        active_section = self._generate_section(active, username=username)
+        archived_section = self._generate_section(archived, "archived", username=username)
+        forks_section = self._generate_fork_section(forks, username=username)
+
+        return f"""{frontmatter}
+
+# {main_title}
+
+{last_updated}
+
+{toc}
+
+{stats_section}
+
+---
+
+## {self.strings["markdown"]["sections"]["active"]}
+
+{active_section}
+
+---
+
+## {self.strings["markdown"]["sections"]["archived"]}
+
+{archived_section}
+
+---
+
+## {self.strings["markdown"]["sections"]["forks"]}
+
+{self.strings["markdown"]["repo_details"]["fork_description"]}
+
+{forks_section}
+"""
+
+    def _generate_frontmatter(
+        self,
+        username: str,
+        og_description: str,
+        seo_config: Dict,
+        json_ld_template: Dict,
+        total: int,
+        total_stars: int,
+        lang_list: str,
+    ) -> str:
+        """フロントマターを生成する"""
+        # JSON-LDテンプレートの値を置換
+        json_ld_formatted = {}
+        for key, value in json_ld_template.items():
+            if isinstance(value, str):
+                json_ld_formatted[key] = value.format(username=username, total=total, og_description=og_description)
+            else:
+                json_ld_formatted[key] = value
+
+        # JSON-LDを生成
+        json_ld_str = json.dumps(json_ld_formatted, ensure_ascii=False, indent=2)
+
+        # フロントマターを生成
+        frontmatter_lines = ["---"]
+        for key, value in seo_config.items():
+            if isinstance(value, str):
+                formatted_value = value.format(username=username, og_description=og_description)
+                frontmatter_lines.append(f'{key}: "{formatted_value}"')
+            elif isinstance(value, list):
+                frontmatter_lines.append(f"{key}: {yaml.dump(value, default_flow_style=True).strip()}")
+            else:
+                frontmatter_lines.append(f"{key}: {yaml.dump(value).strip()}")
+
+        # JSON-LDを追加
+        frontmatter_lines.extend(
+            ["", "# JSON-LD構造化データ", "json_ld: |", *[f"  {line}" for line in json_ld_str.split("\n")], "---"]
+        )
+
+        return "\n".join(frontmatter_lines)
+
+    def _generate_toc(self) -> str:
+        """目次を生成する"""
+        toc_items = "\n".join(f"- {item}" for item in self.strings["markdown"]["toc_items"])
+        return f"""## {self.strings["markdown"]["sections"]["toc"]}
+
+{toc_items}
+
+"""
+
+    def _generate_statistics_section(self, active: List[Dict], archived: List[Dict], forks: List[Dict]) -> str:
+        """統計情報セクションを生成する"""
+        total = len(active) + len(archived) + len(forks)
+        total_stars = sum(repo["stargazers_count"] for repo in active + archived + forks)
+
+        # 統計情報バッジを生成
+        stat_badges = [
+            f"![Repositories](https://img.shields.io/badge/{self.config['statistics']['badges']['repositories']}-{total}-blue)",
+            f"![Active](https://img.shields.io/badge/{self.config['statistics']['badges']['active']}-{len(active)}-green)",
+            f"![Archived](https://img.shields.io/badge/{self.config['statistics']['badges']['archived']}-{len(archived)}-yellow)",
+            f"![Forks](https://img.shields.io/badge/{self.config['statistics']['badges']['forks']}-{len(forks)}-purple)",
+            f"![Stars](https://img.shields.io/badge/{self.config['statistics']['badges']['stars']}-{total_stars}-gold)",
+        ]
+        stat_badges_line = " ".join(stat_badges)
+
+        # 言語統計を生成
+        language_badges_line = self._generate_language_badges(active + archived + forks, total)
+
+        return f"""## {self.strings["markdown"]["sections"]["stats"]}
+
+{stat_badges_line}
+
+### {self.strings["markdown"]["stats"]["main_languages_title"]}
+
+{language_badges_line}
+"""
+
+    def _get_top_languages(self, repos: List[Dict]) -> str:
+        """上位言語リストを取得する"""
+        languages = {}
+        for repo in repos:
+            if repo["language"]:
+                languages[repo["language"]] = languages.get(repo["language"], 0) + 1
+
+        top_languages = sorted(languages.items(), key=lambda x: x[1], reverse=True)[
+            : self.config["statistics"]["top_languages_count"]
+        ]
+        return "、".join([lang for lang, _ in top_languages])
+
+    def _generate_language_badges(self, repos: List[Dict], total: int) -> str:
+        """言語バッジを生成する"""
+        languages = {}
+        for repo in repos:
+            if repo["language"]:
+                languages[repo["language"]] = languages.get(repo["language"], 0) + 1
+
+        top_languages = sorted(languages.items(), key=lambda x: x[1], reverse=True)[:5]
+
+        if not top_languages:
+            return self.strings["markdown"]["stats"]["no_language_info"]
+
+        language_badges = []
+        for lang, count in top_languages:
+            percentage = (count / total) * 100
+            lang_safe = self._make_url_safe(lang, self.config["language_badge"]["replacements"])
+
+            # 言語固有のカラフルな色を使用
+            color = self._get_language_color(lang)
+            language_badges.append(
+                f"![{lang}](https://img.shields.io/badge/{lang_safe}-{count}個_({percentage:.1f}%)-{color}?style=flat&logo=github)"
+            )
+
+        return " ".join(language_badges)
+
+    def _generate_section(self, repos: List[Dict], section_type: str = "default", username: str = None) -> str:
+        """リポジトリセクションを生成する"""
+        if not repos:
+            if section_type == "archived":
+                return self.config["sections"]["archived"]["empty_message"]
+            return ""
+
+        return "\n".join(self._generate_repo_item(repo, username=username) for repo in repos)
+
+    def _generate_fork_section(self, repos: List[Dict], username: str = None) -> str:
+        """フォークセクションを生成する"""
+        return "\n".join(self._generate_repo_item(repo, is_fork=True, username=username) for repo in repos)
+
+    def _generate_repo_item(self, repo: Dict, is_fork: bool = False, username: str = None) -> str:
+        """個別リポジトリ項目を生成する"""
+        main_url = repo["pages_url"] if repo["has_pages"] else repo["url"]
+        updated_date = repo["updated_at"].strftime(self.config["date_format"])
+
+        # 情報行を組み立て
+        info_parts = [f"📅 {updated_date}"]
+        info_line = " | ".join(info_parts)
+
+        # バッジを生成
+        badges = []
+        if is_fork:
+            badges.append("![Fork](https://img.shields.io/badge/Fork-orange)")
+        if repo["has_pages"]:
+            badges.append("![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen)")
+        if repo["stargazers_count"] > 0:
+            badges.append(f"![Stars](https://img.shields.io/badge/Stars-{repo['stargazers_count']}-yellow)")
+        if repo["language"] and username:
+            # 言語固有のカラフルな色を使用
+            color = self._get_language_color(repo["language"])
+            badges.append(
+                f"![{repo['language']}](https://img.shields.io/badge/{repo['language']}-{color}?style=flat&logo=github)"
+            )
+
+        # トピックバッジ
+        for topic in repo.get("topics", []):
+            topic_safe = self._make_url_safe(topic, self.config["topic_badge"]["replacements"])
+            badges.append(f"![Topic: {topic}](https://img.shields.io/badge/Topic-{topic_safe}-lightblue)")
+
+        badge_line = " ".join(badges) if badges else ""
+
+        # 結果を組み立て
+        lines = [f"## [{repo['name']}]({main_url})"]
+        if badge_line:
+            lines.extend([badge_line, ""])
+
+        lines.extend(
+            [
+                f"- **{self.strings['markdown']['repo_details']['github_label']}**: {repo['url']}",
+                f"- **{self.strings['markdown']['repo_details']['pages_label']}**: {repo['pages_url'] if repo['has_pages'] else self.config['messages']['no_pages']}",
+                f"- **{self.strings['markdown']['repo_details']['description_label']}**: {repo['description']}",
+                f"- {info_line}",
+                "",
+            ]
+        )
+
+        return "\n".join(lines)
+
+    def _make_url_safe(self, text: str, replacements: Dict[str, str]) -> str:
+        """文字列をURL安全な形式に変換する"""
+        for old, new in replacements.items():
+            text = text.replace(old, new)
+        return text
