@@ -359,10 +359,20 @@ class MarkdownGenerator:
         if badge_line:
             lines.extend([badge_line, ""])
 
+        # GitHub URL を明示的なリンクとして生成
+        github_url = self._get_github_repo_url(repo["name"], username)
+        github_link = f"[{github_url}]({github_url})"
+
+        # Pages URL も明示的なリンクとして生成（利用可能な場合）
+        if repo["has_pages"]:
+            pages_link = f"[{repo['pages_url']}]({repo['pages_url']})"
+        else:
+            pages_link = self.strings["markdown"]["processing"]["no_pages"]
+
         lines.extend(
             [
-                f"- **{self.strings['markdown']['repo_details']['github_label']}**: {self._get_github_repo_url(repo['name'], username)}",
-                f"- **{self.strings['markdown']['repo_details']['pages_label']}**: {repo['pages_url'] if repo['has_pages'] else self.strings['markdown']['processing']['no_pages']}",
+                f"- **{self.strings['markdown']['repo_details']['github_label']}**: {github_link}",
+                f"- **{self.strings['markdown']['repo_details']['pages_label']}**: {pages_link}",
                 f"- **{self.strings['markdown']['repo_details']['description_label']}**: {repo['description']}",
                 f"- {info_line}",
                 "",

@@ -47,9 +47,7 @@ class RepositoryProcessor:
         for repo in all_repos:
             processed_count += 1
             print(
-                self.strings["console"]["processing_repo"].format(
-                    current=processed_count, total=total, name=repo.name
-                ),
+                self.strings["console"]["processing_repo"].format(current=processed_count, total=total, name=repo.name),
                 end=" ",
             )
 
