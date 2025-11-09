@@ -1,15 +1,15 @@
-# 文字列リソース設定
+# String Resource Configuration
 
 # ================================
-# GitHub Pages 表示用
+# For GitHub Pages Display
 # ================================
 
-# マークダウンコンテンツ
+# Markdown Content
 markdown:
   main_title: "{username}'s Open Source Projects"
   last_updated: "Last Updated: {date}"
 
-  # セクションタイトル
+  # Section Titles
   sections:
     toc: "📋 Table of Contents"
     stats: "📊 Project Statistics"
@@ -17,47 +17,47 @@ markdown:
     archived: "📦 Archived Projects"
     forks: "🍴 Forked Repositories"
 
-  # 目次項目
+  # Table of Contents Items
   toc_items:
     - "[Project Statistics](#-project-statistics)"
     - "[Active Development](#-active-development)"
     - "[Archived Projects](#-archived-projects)"
     - "[Forked Repositories](#-forked-repositories)"
 
-  # 統計情報
+  # Statistics Information
   stats:
     main_languages_title: "Core Technologies"
     no_language_info: "Language data unavailable"
-    # バッジラベル
+    # Badge Labels
     badges:
-      repositories: "リポジトリ総数"
-      active: "アクティブ"
-      archived: "アーカイブ"
-      forks: "フォーク"
-      stars: "総スター数"
+      repositories: "Total Repositories"
+      active: "Active"
+      archived: "Archived"
+      forks: "Forks"
+      stars: "Total Stars"
 
-  # リポジトリ詳細
+  # Repository Details
   repo_details:
     github_label: "Repository"
     pages_label: "Live Demo"
     description_label: "Overview"
     fork_description: "Forked from upstream repository"
 
-  # 処理状態メッセージ
+  # Processing Status Messages
   processing:
     no_readme: "✗ (no README)"
     private_repo: "✗ (private)"
     included: "✓ (included)"
-    no_description: "説明なし"
-    no_pages: "なし"
+    no_description: "No description available"
+    no_pages: "None"
 
-  # セクション関連メッセージ
+  # Section Related Messages
   section_messages:
-    archived_empty: "アーカイブされているリポジトリはありません。"
+    archived_empty: "No archived repositories available."
 
-# SEOテンプレート
+# SEO Template
 seo:
-  og_description_template: "{total}個のプロジェクトを掲載（⭐{total_stars}個）。{lang_list}など多様な技術を使用したオープンソースプロジェクト集。"
+  og_description_template: "Featuring {total} projects (⭐{total_stars} stars). Open source project collection using diverse technologies including {lang_list}."
 
 # ============================================================
 # コンソールメッセージ等（開発者向け・ターミナル表示のみ）
