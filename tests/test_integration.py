@@ -289,7 +289,7 @@ description: "Test Description"
 
         replacements = config["language_badge"]["replacements"]
         for input_str, expected in test_cases:
-            result = generator._make_url_safe(input_str, replacements)
+            result = generator.url_utils.make_url_safe(input_str, replacements)
             assert result == expected
 
 

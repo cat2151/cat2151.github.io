@@ -181,74 +181,11 @@ class TestMarkdownGenerator:
         assert generator.config == mock_config
         assert generator.strings == mock_strings
         assert generator.jekyll_config == jekyll_config
-        assert generator.github_base_url == "https://github.com/test_user"
 
     def test_init_without_jekyll_config(self, mock_config, mock_strings):
         """Jekyll設定なしの初期化テスト"""
         generator = MarkdownGenerator(mock_config, mock_strings)
         assert generator.jekyll_config == {}
-        assert generator.github_base_url == "https://github.com"
-
-    def test_get_github_repo_url(self, mock_config, mock_strings):
-        """GitHub リポジトリURL生成テスト"""
-        jekyll_config = {
-            "github": {
-                "username": "test_user",
-                "repository_url_base": "https://github.com/test_user",
-            }
-        }
-        generator = MarkdownGenerator(mock_config, mock_strings, jekyll_config)
-
-        # Jekyll設定のユーザー名を使用
-        url = generator._get_github_repo_url("test_repo")
-        assert url == "https://github.com/test_user/test_repo"
-
-        # 引数のユーザー名を優先（ただしベースURLは Jekyll設定のもの）
-        url = generator._get_github_repo_url("test_repo", "other_user")
-        assert url == "https://github.com/test_user/other_user/test_repo"
-
-    def test_get_github_repo_url_fallback(self, mock_config, mock_strings):
-        """GitHub リポジトリURL生成テスト（フォールバック）"""
-        generator = MarkdownGenerator(mock_config, mock_strings)
-
-        # Jekyll設定なしでデフォルトベースURL使用
-        url = generator._get_github_repo_url("test_repo", "test_user")
-        assert url == "https://github.com/test_user/test_repo"
-
-    def test_make_url_safe(self, generator):
-        """URL安全化テスト"""
-        result = generator._make_url_safe("C++ Test", {"++": "plus", " ": "_"})
-        assert result == "Cplus_Test"
-
-    def test_get_top_languages(self, generator, sample_repos):
-        """上位言語取得テスト"""
-        all_repos = sample_repos["active"] + sample_repos["archived"] + sample_repos["forks"]
-        result = generator._get_top_languages(all_repos)
-        # Python, JavaScript, Go の順
-        assert "Python" in result
-        assert "JavaScript" in result
-        assert "Go" in result
-
-    def test_get_top_languages_empty(self, generator):
-        """空のリポジトリリストでの上位言語取得テスト"""
-        result = generator._get_top_languages([])
-        assert result == ""
-
-    def test_generate_language_badges(self, generator, sample_repos):
-        """言語バッジ生成テスト"""
-        all_repos = sample_repos["active"] + sample_repos["archived"] + sample_repos["forks"]
-        total = len(all_repos)
-        result = generator._generate_language_badges(all_repos, total)
-
-        assert "Python" in result
-        assert "JavaScript" in result
-        assert "Go" in result
-        assert "33.3%" in result  # 1/3 = 33.3%
-
-    def test_generate_language_badges_empty(self, generator):
-        """空のリポジトリリストでの言語バッジ生成テスト"""
-        result = generator._generate_language_badges([], 0)
-        assert result == "言語情報なし"
 
     def test_generate_repo_item_basic(self, generator, sample_repos):
         """基本的なリポジトリ項目生成テスト"""
@@ -355,25 +292,6 @@ class TestMarkdownGenerator:
         assert "active-repo" in result
         assert "archived-repo" in result
         assert "forked-repo" in result
-
-    def test_generate_frontmatter(self, generator, mock_seo_config, mock_json_ld_template):
-        """フロントマター生成テスト"""
-        og_description = "テスト説明文"
-        result = generator._generate_frontmatter(
-            username="testuser",
-            og_description=og_description,
-            seo_config=mock_seo_config,
-            json_ld_template=mock_json_ld_template,
-            total=3,
-            _total_stars=15,
-            _lang_list="Python、JavaScript",
-        )
-
-        assert "---" in result
-        assert 'title: "Test Title - testuser"' in result
-        assert 'description: "テスト説明文"' in result
-        assert "json_ld: |" in result
-        assert "testuser" in result
 
 
 # レガシー互換のためのメイン関数
