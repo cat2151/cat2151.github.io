@@ -1,16 +1,30 @@
-# cat2151.github.io
+# generate repo list in cat2151.github.io
 
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
-## 運用上の注意
-
-このREADME.mdはこのリポジトリに限っては、GitHub Pages表示がされません
-
-かわりに、生成された index.md がGitHub Pagesで表示されます
+と、生成された cat2151.github.io 用 repo list
 
 ## �📝 プロジェクト概要
 
 このプロジェクトは、GitHub API を使用してリポジトリ情報を取得し、Jekyll ベースの GitHub Pages サイト用にマークダウンファイルを自動生成するシステムです。
+
+### これまでの課題と対策
+
+#### 背景
+
+GitHubのユーザーページ（`https://github.com/<username>`）は、検索エンジンのクロール対象になりづらい傾向があります。
+そのため、そこに紐づくリポジトリ一覧や各リポジトリのページも、検索結果に表示されにくい場合があります。
+さらに、その結果、ClaudeなどのLLMが検索エンジン依存の参照をするとき、リポジトリを参照できず、開発効率に影響が出ることもあります。
+
+#### 対策
+
+この問題を回避するため、GitHub Pages `<username>.github.io` 側に以下を自動生成する仕組みを作成しました。
+
+- GitHubリポジトリ一覧ページ
+- 各リポジトリに対応する GitHub Pages (`<username>.github.io/<repo>`) へのリンク
+
+これにより、GitHub Pages 側（`github.io`ドメイン）が検索エンジンにクロールされやすくなり、
+各リポジトリの内容やリンクもインデックスされやすくなり、LLMがリポジトリ参照に失敗することがある問題の緩和が期待されます。
 
 ### 主な機能
 
@@ -22,6 +36,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
 ### 💡 開発者向けのヒント
 
+- このREADMEはあまり整備されていません。「で、なんのために、まず何をやれば動かせるの？」がわかりづらそうです。今後の課題です
 - テスト実行前に `ruff check . --fix` でコードスタイルを自動修正
 - 新機能追加時は対応するテストも追加してください
 - CI/CD不要のローカル開発重視の構成
@@ -61,18 +76,12 @@ python src/generate_repo_list/generate_repo_list.py --username cat2151 --output 
 
 ### 実行前の準備
 
-2. **GitHub トークンの設定**（ローカル実行時）
+1. **GitHub トークンの設定**（ローカル実行時）
    ```toml
    # secrets/secrets.toml に作成
    [github]
    token = "your_github_token_here"
    ```
-
-### 注意事項
-
-- **`index.md`は自動生成されるため、直接編集しないでください**
-- 設定変更は `src/generate_repo_list/config.yml` で行ってください
-- GitHub Actions環境では自動的にトークンが設定されます
 
 ## 📄 ライセンス
 
