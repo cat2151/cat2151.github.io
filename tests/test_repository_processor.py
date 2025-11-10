@@ -154,6 +154,7 @@ class TestRepositoryProcessor:
             "language": "Python",
             "topics": ["test", "example"],
             "has_readme_ja": False,
+            "has_readme_en": False,
         }
 
         assert data == expected
@@ -196,6 +197,40 @@ class TestRepositoryProcessor:
         username = "testuser"
         data = processor._create_repo_data(mock_repo, username)
         assert data["has_readme_ja"] is True
+
+    def test_check_readme_en_exists_true(self, processor, mock_repo):
+        """README.html が存在する場合のテスト"""
+        # デフォルトのside_effectをリセットしてreturn_valueを設定
+        mock_repo.get_contents = Mock(return_value=Mock())
+        result = processor._check_readme_en_exists(mock_repo)
+        assert result is True
+        mock_repo.get_contents.assert_called_once_with("README.html")
+
+    def test_check_readme_en_exists_false(self, processor, mock_repo):
+        """README.html が存在しない場合のテスト"""
+        from github.GithubException import GithubException
+
+        mock_repo.get_contents.side_effect = GithubException(status=404, data={})
+        result = processor._check_readme_en_exists(mock_repo)
+        assert result is False
+        mock_repo.get_contents.assert_called_once_with("README.html")
+
+    def test_create_repo_data_with_readme_en(self, processor, mock_repo):
+        """README.html が存在するリポジトリのデータ作成テスト"""
+
+        def mock_get_contents(filename):
+            """README.mdとREADME.htmlのみ存在するとする"""
+            if filename in ["README.md", "README.html"]:
+                return Mock()
+            from github.GithubException import GithubException
+
+            raise GithubException(status=404, data={})
+
+        mock_repo.get_contents = Mock(side_effect=mock_get_contents)
+        username = "testuser"
+        data = processor._create_repo_data(mock_repo, username)
+        assert data["has_readme_en"] is True
+        assert data["has_readme_ja"] is False
 
     def test_fetch_repositories(self, processor, mock_repo, capsys):
         """リポジトリ取得テスト"""
