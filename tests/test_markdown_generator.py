@@ -510,11 +510,10 @@ class TestMarkdownGenerator:
         assert "## [test-repo]" in result
         assert "テストリポジトリ" in result
 
-        # Englishバッジの確認 (GitHub URLにリンク)
-        assert "🇺🇸" in result
-        assert "English" in result
-        assert "https://github.com/testuser/test-repo/blob/main/README.html" in result
-        assert '<a href="https://github.com/testuser/test-repo/blob/main/README.html">' in result
+        # Englishバッジが表示されないことを確認 (GitHub Pagesが無い場合は空欄)
+        assert "🇺🇸" not in result
+        assert "English" not in result
+        assert "README.html" not in result
 
     def test_generate_repo_item_with_both_readme_ja_and_en(self, generator):
         """README.ja.mdとREADME.htmlの両方が存在する場合のバッジ順序テスト"""

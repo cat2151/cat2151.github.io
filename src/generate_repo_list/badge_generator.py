@@ -113,11 +113,9 @@ class BadgeGenerator:
             )
             badges.append(japanese_badge)
 
-        # README.html が存在する場合、Englishバッジを追加
-        if repo.get("has_readme_en", False):
-            readme_en_url = (
-                f"{repo['pages_url']}README.html" if repo["has_pages"] else f"{repo['url']}/blob/main/README.html"
-            )
+        # README.html が存在し、かつGitHub Pagesが有効な場合のみ、Englishバッジを追加
+        if repo.get("has_readme_en", False) and repo["has_pages"]:
+            readme_en_url = f"{repo['pages_url']}README.html"
             english_badge = (
                 f'<a href="{readme_en_url}"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg"></a>'
             )
