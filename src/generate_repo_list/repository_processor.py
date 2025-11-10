@@ -150,6 +150,21 @@ class RepositoryProcessor:
         except GithubException:
             return False
 
+    def _check_readme_en_exists(self, repo) -> bool:
+        """README.html が存在するかチェックする
+
+        Args:
+            repo: GitHubリポジトリオブジェクト
+
+        Returns:
+            README.html が存在する場合 True
+        """
+        try:
+            repo.get_contents("README.html")
+            return True
+        except GithubException:
+            return False
+
     def _create_repo_data(self, repo, username: str) -> Dict[str, Any]:
         """リポジトリデータを作成する"""
         repo_data = {
@@ -165,6 +180,7 @@ class RepositoryProcessor:
             "language": repo.language or "",
             "topics": repo.get_topics(),
             "has_readme_ja": self._check_readme_ja_exists(repo),
+            "has_readme_en": self._check_readme_en_exists(repo),
         }
 
         # プロジェクト概要を取得（ProjectOverviewFetcherが利用可能な場合のみ）

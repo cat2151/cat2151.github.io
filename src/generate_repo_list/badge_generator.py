@@ -113,11 +113,19 @@ class BadgeGenerator:
             )
             badges.append(japanese_badge)
 
-        if is_fork:
-            badges.append("![Fork](https://img.shields.io/badge/Fork-orange)")
+        # README.html が存在し、かつGitHub Pagesが有効な場合のみ、Englishバッジを追加
+        if repo.get("has_readme_en", False) and repo["has_pages"]:
+            readme_en_url = f"{repo['pages_url']}README.html"
+            english_badge = (
+                f'<a href="{readme_en_url}"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg"></a>'
+            )
+            badges.append(english_badge)
 
         if repo["has_pages"]:
             badges.append("![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen)")
+
+        if is_fork:
+            badges.append("![Fork](https://img.shields.io/badge/Fork-orange)")
 
         if repo["stargazers_count"] > 0:
             badges.append(f"![Stars](https://img.shields.io/badge/Stars-{repo['stargazers_count']}-yellow)")

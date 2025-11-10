@@ -455,6 +455,100 @@ class TestMarkdownGenerator:
         assert "🇯🇵" not in result
         assert "README.ja" not in result
 
+    def test_generate_repo_item_with_readme_en_and_pages(self, generator):
+        """README.html が存在しGitHub Pagesを持つリポジトリの項目生成テスト"""
+        repo = {
+            "name": "test-repo",
+            "url": "https://github.com/testuser/test-repo",
+            "pages_url": "https://testuser.github.io/test-repo/",
+            "description": "テストリポジトリ",
+            "has_pages": True,
+            "archived": False,
+            "fork": False,
+            "updated_at": datetime(2024, 1, 15),
+            "stargazers_count": 5,
+            "language": "Python",
+            "topics": ["test", "python"],
+            "has_readme_ja": False,
+            "has_readme_en": True,
+        }
+
+        result = generator._generate_repo_item(repo, username="testuser")
+
+        # 基本情報の確認
+        assert "## [test-repo]" in result
+        assert "テストリポジトリ" in result
+
+        # Englishバッジの確認
+        assert "🇺🇸" in result
+        assert "English" in result
+        assert "https://testuser.github.io/test-repo/README.html" in result
+        assert '<a href="https://testuser.github.io/test-repo/README.html">' in result
+        assert '<img src="https://img.shields.io/badge/🇺🇸-English-blue.svg">' in result
+
+    def test_generate_repo_item_with_readme_en_no_pages(self, generator):
+        """README.html が存在しGitHub Pagesを持たないリポジトリの項目生成テスト"""
+        repo = {
+            "name": "test-repo",
+            "url": "https://github.com/testuser/test-repo",
+            "pages_url": "https://testuser.github.io/test-repo/",
+            "description": "テストリポジトリ",
+            "has_pages": False,
+            "archived": False,
+            "fork": False,
+            "updated_at": datetime(2024, 1, 15),
+            "stargazers_count": 5,
+            "language": "Python",
+            "topics": ["test", "python"],
+            "has_readme_ja": False,
+            "has_readme_en": True,
+        }
+
+        result = generator._generate_repo_item(repo, username="testuser")
+
+        # 基本情報の確認
+        assert "## [test-repo]" in result
+        assert "テストリポジトリ" in result
+
+        # Englishバッジが表示されないことを確認 (GitHub Pagesが無い場合は空欄)
+        assert "🇺🇸" not in result
+        assert "English" not in result
+        assert "README.html" not in result
+
+    def test_generate_repo_item_with_both_readme_ja_and_en(self, generator):
+        """README.ja.mdとREADME.htmlの両方が存在する場合のバッジ順序テスト"""
+        repo = {
+            "name": "test-repo",
+            "url": "https://github.com/testuser/test-repo",
+            "pages_url": "https://testuser.github.io/test-repo/",
+            "description": "テストリポジトリ",
+            "has_pages": True,
+            "archived": False,
+            "fork": False,
+            "updated_at": datetime(2024, 1, 15),
+            "stargazers_count": 5,
+            "language": "Python",
+            "topics": ["test", "python"],
+            "has_readme_ja": True,
+            "has_readme_en": True,
+        }
+
+        result = generator._generate_repo_item(repo, username="testuser")
+
+        # 両方のバッジが存在することを確認
+        assert "🇯🇵" in result
+        assert "Japanese" in result
+        assert "🇺🇸" in result
+        assert "English" in result
+
+        # バッジの順序を確認: Japanese -> English -> GitHub Pages
+        ja_badge_pos = result.find("🇯🇵")
+        en_badge_pos = result.find("🇺🇸")
+        pages_badge_pos = result.find("GitHub_Pages")
+
+        assert ja_badge_pos < en_badge_pos, "Japaneseバッジが左端にあること"
+        assert en_badge_pos < pages_badge_pos, "EnglishバッジがGitHub Pagesバッジの前にあること"
+
     def test_generate_repo_item_with_no_description(self, generator):
         """概要情報なしリポジトリの項目生成テスト（箇条書きに表示されることを確認）"""
         repo = {
