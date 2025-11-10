@@ -1,4 +1,4 @@
-Last updated: 2025-11-10
+Last updated: 2025-11-11
 
 
 # プロジェクト概要生成プロンプト（来訪者向け）
@@ -200,9 +200,11 @@ project_overview:
 📁 generated-docs/
 📖 index.md
 📁 issue-notes/
+  📖 10.md
   📖 2.md
   📖 4.md
   📖 6.md
+  📖 8.md
 📊 manifest.json
 📄 pytest.ini
 📄 requirements-dev.txt
@@ -245,9 +247,11 @@ project_overview:
 ## プロジェクト構造（ファイル一覧）
 README.md
 index.md
+issue-notes/10.md
 issue-notes/2.md
 issue-notes/4.md
 issue-notes/6.md
+issue-notes/8.md
 manifest.json
 src/generate_repo_list/json_ld_template.json
 
@@ -261,4 +265,4 @@ src/generate_repo_list/json_ld_template.json
 
 
 ---
-Generated at: 2025-11-10 07:05:22 JST
+Generated at: 2025-11-11 07:06:23 JST

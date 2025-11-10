@@ -1,4 +1,4 @@
-Last updated: 2025-11-10
+Last updated: 2025-11-11
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -159,6 +159,7 @@ Last updated: 2025-11-10
 - .github/actions-tmp/generated-docs/callgraph.js
 - .github/actions-tmp/generated-docs/development-status-generated-prompt.md
 - .github/actions-tmp/generated-docs/development-status.md
+- .github/actions-tmp/generated-docs/project-overview-generated-prompt.md
 - .github/actions-tmp/generated-docs/project-overview.md
 - .github/actions-tmp/generated-docs/style.css
 - .github/actions-tmp/issue-notes/10.md
@@ -183,6 +184,7 @@ Last updated: 2025-11-10
 - .github/actions-tmp/issue-notes/28.md
 - .github/actions-tmp/issue-notes/29.md
 - .github/actions-tmp/issue-notes/3.md
+- .github/actions-tmp/issue-notes/30.md
 - .github/actions-tmp/issue-notes/4.md
 - .github/actions-tmp/issue-notes/7.md
 - .github/actions-tmp/issue-notes/8.md
@@ -206,9 +208,11 @@ Last updated: 2025-11-10
 - debug_project_overview.py
 - generated-docs/project-overview-generated-prompt.md
 - index.md
+- issue-notes/10.md
 - issue-notes/2.md
 - issue-notes/4.md
 - issue-notes/6.md
+- issue-notes/8.md
 - manifest.json
 - pytest.ini
 - requirements-dev.txt
@@ -247,26 +251,31 @@ Last updated: 2025-11-10
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
-1caf432 Merge pull request #7 from cat2151/copilot/move-github-pages-badge
-231dcd9 Move Japanese badge to left edge of badge line
-fc9ee8f Initial plan
-564c810 Add issue note for #6 [auto]
-7d53459 Auto-update repository list - 2025-11-09
-7f45b0f Merge pull request #5 from cat2151/copilot/add-japanese-badge-to-readme
-5f0809c #2 表示崩れ対策
-ece7f93 Implement Japanese README badge feature
-5c48438 Initial plan
-8ad8091 Add issue note for #4 [auto]
+eac2f39 Merge pull request #11 from cat2151/copilot/add-english-badge-display
+712e75a Show English badge only when GitHub Pages is available
+f2887ed Add English badge support for README.html files
+2ba1797 Initial plan
+e048c27 Add issue note for #10 [auto]
+483bad5 Auto-update repository list - 2025-11-10
+ba986c4 Merge pull request #9 from cat2151/copilot/update-repository-layout
+29da354 Add support for displaying missing descriptions in bullet list with label
+c3c9060 Implement layout change: move overview after repo name without label
+f520e29 Initial plan
 
 ### 変更されたファイル:
+generated-docs/development-status-generated-prompt.md
+generated-docs/development-status.md
+generated-docs/project-overview-generated-prompt.md
+generated-docs/project-overview.md
 index.md
-issue-notes/4.md
-issue-notes/6.md
+issue-notes/10.md
+issue-notes/8.md
 src/generate_repo_list/badge_generator.py
+src/generate_repo_list/markdown_generator.py
 src/generate_repo_list/repository_processor.py
 tests/test_markdown_generator.py
 tests/test_repository_processor.py
 
 
 ---
-Generated at: 2025-11-10 07:05:22 JST
+Generated at: 2025-11-11 07:06:23 JST
