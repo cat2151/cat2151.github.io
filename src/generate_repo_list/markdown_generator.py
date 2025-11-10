@@ -179,6 +179,19 @@ class MarkdownGenerator:
 
         # 結果を組み立て
         lines = [f"## [{repo['name']}]({main_url})"]
+
+        # 概要情報の有無を判定
+        no_description_text = self.strings["markdown"]["processing"]["no_description"]
+        has_real_description = repo["description"] and repo["description"] != no_description_text
+
+        # Overviewをリポジトリ名の次の行に表示（ラベルなし）
+        # ただし、概要情報が取得できなかった場合は後で箇条書きに表示
+        if has_real_description:
+            lines.append(repo["description"])
+
+        lines.append("")
+
+        # バッジを表示
         if badge_line:
             lines.extend([badge_line, ""])
 
@@ -196,9 +209,14 @@ class MarkdownGenerator:
             [
                 f"- **{self.strings['markdown']['repo_details']['github_label']}**: {github_link}",
                 f"- **{self.strings['markdown']['repo_details']['pages_label']}**: {pages_link}",
-                f"- **{self.strings['markdown']['repo_details']['description_label']}**: {repo['description']}",
             ]
         )
+
+        # 概要情報が取得できなかった場合は箇条書きに表示
+        if not has_real_description:
+            lines.append(
+                f"- **{self.strings['markdown']['repo_details']['description_label']}**: {repo['description']}"
+            )
 
         # プロジェクト概要セクションを追加（存在する場合）
         if "project_overview" in repo and repo["project_overview"]:
