@@ -1,50 +1,52 @@
-Last updated: 2025-11-11
+Last updated: 2025-11-12
 
 # Development Status
 
 ## 現在のIssues
-- 現在、オープン中のIssueはありません。
-- そのため、このプロジェクトには未解決の課題やバグが存在しない状態です。
-- 次の一手候補は、直近の機能追加や改善点の更なるテスト、最適化、リファクタリングに焦点を当てます。
+現在、オープン中のIssueはありません。
+
+- 新規機能開発や既存機能の改善に向けた次のタスクを検討するフェーズです。
+- 最近のコミットは、[Issue #10](../issue-notes/10.md)で議論された英語バッジ表示機能追加とリポジトリレイアウトの更新に集中しています。
+- 自動生成されるプロジェクト概要と開発状況レポートの精度向上が継続的な目標です。
 
 ## 次の一手候補
-1. 新しい英語バッジ表示ロジックのテスト強化
-   - 最初の小さな一歩: `src/generate_repo_list/badge_generator.py`と`src/generate_repo_list/markdown_generator.py`における英語バッジ表示の条件分岐に関するテストケースを洗い出す。
+1. 英語バッジ表示ロジックのさらなる洗練とロバスト性向上 ([Issue #10](../issue-notes/10.md))
+   - 最初の小さな一歩: `src/generate_repo_list/badge_generator.py`と`src/generate_repo_list/markdown_generator.py`を分析し、GitHub Pagesの有無に応じた英語バッジ表示の条件分岐ロジックを確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/badge_generator.py, src/generate_repo_list/markdown_generator.py, tests/test_markdown_generator.py, tests/test_repository_processor.py
+     対象ファイル: `src/generate_repo_list/badge_generator.py`, `src/generate_repo_list/markdown_generator.py`, `tests/test_markdown_generator.py`, `tests/test_repository_processor.py`
 
-     実行内容: 新しい英語バッジの表示ロジック（GitHub Pagesの有無、README.htmlの存在）が正しく機能することを確認するため、既存のテスト構造を分析し、追加すべきテストケースの概要をmarkdown形式で出力してください。
+     実行内容: [Issue #10](../issue-notes/10.md)で実装された英語バッジ表示ロジックについて、特にGitHub Pagesの有無による条件分岐が意図通りに機能しているか、および他のリポジトリ情報（`README.html`の存在など）との連携が適切かを確認するために分析してください。分析には、現在の実装が想定外のシナリオ（例: GitHub Pages設定が途中で変更された場合など）にどう対応するかを含めてください。
 
-     確認事項: 既存のテストがどのようにモックやデータを使用しているかを確認し、テスト対象の変更点との整合性を考慮してください。
+     確認事項: `src/generate_repo_list/repository_processor.py`でのリポジトリ情報取得ロジックとの整合性、および`src/generate_repo_list/markdown_generator.py`でのバッジ挿入箇所とその前後のHTML構造への影響を確認してください。既存のテストケースがこのロジックを十分にカバーしているかも確認してください。
 
-     期待する出力: 英語バッジの表示ロジックを検証するための新たなテストシナリオと、それを実装するためのコードのスケルトンをmarkdown形式で提供してください。
+     期待する出力: 分析結果として、現在の英語バッジ表示ロジックの概要、潜在的な改善点やエッジケースへの対応不足、およびテストの不足箇所をmarkdown形式でリストアップしてください。
      ```
 
-2. リポジトリリスト自動更新プロセスの性能と堅牢性レビュー
-   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py`内の外部API呼び出しやファイルI/Oに関連する処理箇所を特定し、潜在的なボトルネックやエラーハンドリングの改善点をリストアップする。
+2. プロジェクトサマリー自動生成プロンプトのレビューと改善
+   - 最初の小さな一歩: `development-status-prompt.md`と`project-overview-prompt.md`の内容を、現在のプロジェクトの目標と要件に照らしてレビューし、出力品質向上につながる具体的な改善点を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, .github/workflows/generate_repo_list.yml
+     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`, `generated-docs/development-status.md`, `generated-docs/project-overview.md`
 
-     実行内容: 自動リポジトリリスト生成プロセスにおいて、特にAPI呼び出しや大量データ処理に関連する部分の性能とエラーハンドリングの観点からコードを分析し、改善提案をmarkdown形式で出力してください。
+     実行内容: `development-status.md`と`project-overview.md`の自動生成に使用されているプロンプト (`development-status-prompt.md`, `project-overview-prompt.md`) の内容を分析し、より質の高い、かつハルシネーションの少ない出力が得られるように改善点を提案してください。具体的には、プロンプトの明確さ、指示の具体性、生成されるレポートが現在のプロジェクトの状況を正確に反映しているかを評価してください。
 
-     確認事項: GitHub APIのレートリミットや、外部依存関係（config.ymlなど）が処理に与える影響を確認してください。
+     確認事項: プロンプトが本開発状況生成プロンプトのガイドラインと矛盾しないかを確認してください。また、既存の出力例（`generated-docs`内のファイル）と比較して、提案された改善点がどのような影響を与えるかを想定してください。
 
-     期待する出力: 性能改善（キャッシュ利用、並行処理の可能性など）やエラー処理（リトライロジック、詳細なロギングなど）に関する具体的な提案を、関連コード箇所を引用しつつmarkdown形式で提供してください。
+     期待する出力: 各プロンプトに対する改善提案をmarkdown形式で記述してください。各提案には、現在のプロンプトの問題点、提案する変更内容、およびそれが期待する出力品質（具体性、正確性、ハルシネーションの抑制）にどのように寄与するかを具体的に含めてください。
      ```
 
-3. `markdown_generator.py`のリファクタリングによる可読性向上
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py`ファイル全体を読み込み、特に最近変更されたセクション（レイアウト変更、バッジ追加）で機能が密結合している、または複雑化している関数を特定する。
+3. `generate_repo_list`主要コンポーネントのテストカバレッジ強化
+   - 最初の小さな一歩: `src/generate_repo_list/badge_generator.py`、`src/generate_repo_list/markdown_generator.py`、`src/generate_repo_list/repository_processor.py`に関連する既存のテストファイル（`tests/test_markdown_generator.py`、`tests/test_repository_processor.py`など）を特定し、カバレッジの現状を把握する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/markdown_generator.py
+     対象ファイル: `src/generate_repo_list/badge_generator.py`, `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/repository_processor.py`, `tests/test_markdown_generator.py`, `tests/test_repository_processor.py`
 
-     実行内容: 最近の機能追加（リポジトリレイアウト変更、英語バッジ表示）により複雑化した`markdown_generator.py`内の関数やメソッドを特定し、単一責任の原則に基づいたリファクタリングの機会を分析してください。改善点を具体的に記述し、markdown形式で出力してください。
+     実行内容: 最近変更された`badge_generator.py`, `markdown_generator.py`, `repository_processor.py`などの主要コンポーネントについて、現在のテストカバレッジを分析し、特にGitHub Pagesの有無による英語バッジ表示ロジックなど、条件分岐が多い箇所や最近追加された機能に対するテストの網羅性を評価してください。
 
-     確認事項: リファクタリングによって既存の機能が損なわれないよう、関連するテストケース（tests/test_markdown_generator.py）との整合性を考慮してください。
+     確認事項: `pytest.ini`や`requirements-dev.txt`などのテスト環境設定を確認し、テスト実行に必要な依存関係が満たされていることを確認してください。また、`src`ディレクトリ内の関連ファイルの機能と`tests`ディレクトリ内のテストメソッドとの対応関係をレビューし、機能とテストの間にギャップがないかを検証してください。
 
-     期待する出力: リファクタリングを推奨する関数またはコードブロック、その理由、および改善後のコード構造のアイデア（例: 新しいヘルパー関数の提案）をmarkdown形式で提供してください。
+     期待する出力: テストカバレッジの現状評価と、カバレッジを向上させるための具体的なテストケース（例: 特定の入力に対する期待される出力）またはテストファイルの追加・修正案をmarkdown形式でリストアップしてください。この際、単体テストでカバーすべき領域と、必要に応じて統合テストでカバーすべき領域を区別し、優先順位を付けてください。
 
 ---
-Generated at: 2025-11-11 07:06:47 JST
+Generated at: 2025-11-12 07:06:25 JST

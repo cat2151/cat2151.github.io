@@ -1,4 +1,4 @@
-Last updated: 2025-11-11
+Last updated: 2025-11-12
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -251,6 +251,9 @@ Last updated: 2025-11-11
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+5822c4d Auto-update repository list - 2025-11-11
+ff4d7f7 Auto-update repository list - 2025-11-10
+3579d52 Update project summaries (overview & development status) [auto]
 eac2f39 Merge pull request #11 from cat2151/copilot/add-english-badge-display
 712e75a Show English badge only when GitHub Pages is available
 f2887ed Add English badge support for README.html files
@@ -258,9 +261,6 @@ f2887ed Add English badge support for README.html files
 e048c27 Add issue note for #10 [auto]
 483bad5 Auto-update repository list - 2025-11-10
 ba986c4 Merge pull request #9 from cat2151/copilot/update-repository-layout
-29da354 Add support for displaying missing descriptions in bullet list with label
-c3c9060 Implement layout change: move overview after repo name without label
-f520e29 Initial plan
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -269,7 +269,6 @@ generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
 index.md
 issue-notes/10.md
-issue-notes/8.md
 src/generate_repo_list/badge_generator.py
 src/generate_repo_list/markdown_generator.py
 src/generate_repo_list/repository_processor.py
@@ -278,4 +277,4 @@ tests/test_repository_processor.py
 
 
 ---
-Generated at: 2025-11-11 07:06:23 JST
+Generated at: 2025-11-12 07:06:05 JST
