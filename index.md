@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-11
+Last Updated: 2025-11-12
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,76 @@ Last Updated: 2025-11-11
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
+[WIP] smf-to-ym2151log のRust版
+
+<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
+- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
+
+### Project Highlights
+- Standard MIDI Files (SMF) をヤマハYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製ツールです。
+- 高性能な2パス処理アーキテクチャを採用し、Rustの型安全性とネイティブコンパイルによる高速な変換処理を実現します。
+- SMF Format 0および1に対応し、他のRustプロジェクトから利用可能な堅牢なライブラリAPIも提供します。
+- 📅 2025-11-12
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを活用し、ユーザーのリポジトリ情報を自動で取得するシステムです。
+- 取得したデータから、SEOに最適化されたGitHub Pages向けのMarkdownファイルを生成します。
+- これにより、リポジトリ一覧の検索エンジンへの露出とLLMによる参照性を向上させます。
+- 📅 2025-11-12
+
+## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
+[WIP] mmlabc-to-smfのrust版
+
+<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
+- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
+
+### Project Highlights
+- Music Macro Language (MML) 形式の文字列をStandard MIDI File (SMF) へ変換するRust製のコマンドラインツールです。
+- MMLのトークン化からMIDIファイル作成までを4つの処理パスで段階的に実行します。
+- 基本的な音符変換、多チャンネル対応、そしてデバッグ用のJSON中間出力機能を備えています。
+- 📅 2025-11-11
+
+## [chord2mml](https://cat2151.github.io/chord2mml/)
+A library transpiles Chord notation into Music Macro Language.
+
+<a href="https://cat2151.github.io/chord2mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: chord-parsing](https://img.shields.io/badge/Topic-chord--parsing-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+
+- **Repository**: [https://github.com/cat2151/chord2mml](https://github.com/cat2151/chord2mml)
+- **GitHub Pages**: [https://cat2151.github.io/chord2mml/](https://cat2151.github.io/chord2mml/)
+
+### Project Highlights
+-   コード進行表記（Chord notation）をMML（Music Macro Language）に変換するシンプルなJavaScriptライブラリです。
+-   入力されたコード進行からMML文字列を生成し、ブラウザや対応するアプリケーションで音楽を再生できるようにします。
+-   作曲のアイデアスケッチや、既存のコード進行を音で確認する用途などに手軽に活用できます。
+- 📅 2025-11-11
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+WIP
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151 FMシンセサイザーの音色パラメータを編集するためのWindows対応Rust TUIエディタです。
+- カーソル操作とキーボード入力により、デチューンやエンベロープなどの主要パラメータを直感的に調整できます。
+- 編集した音色データをJSON形式で保存・読み込み、`cat-mml-play`連携によるリアルタイム試聴機能を提供します。
+- 📅 2025-11-11
+
 ## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
 MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
 
@@ -98,20 +168,6 @@ MML(Music Macro Language)用のTUI(テキストユーザーインターフェー
 - コマンドラインからシンプルかつ素早くMMLを編集し、その場で音を鳴らす体験を提供することを目指しています。
 - 📅 2025-11-11
 
-## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
-smf-to-ym2151log のRust版
-
-<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
-- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
-
-### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製ツールです。
-- 2パス処理アーキテクチャを採用し、MIDI解析から中間イベント生成、最終的なYM2151ログ変換までを堅牢かつ高速に実行します。
-- コマンドラインツールとして、また他のRustプロジェクトからライブラリとして利用可能で、広範なMIDIフォーマットと互換性に対応しています。
-- 📅 2025-11-11
-
 ## [ym2151-log-player-rust](https://cat2151.github.io/ym2151-log-player-rust/)
 ym2151-log-player のRust版
 
@@ -124,34 +180,6 @@ ym2151-log-player のRust版
 - YM2151レジスタイベントログをJSONファイルから読み込み、高精度なYM2151エミュレーション音源を生成します。
 - 生成された音源は、起動後すぐにリアルタイムでオーディオデバイスから再生されます。
 - リアルタイム再生と同時に、出力音源をWAVファイルとしてキャプチャ保存する機能を提供します。
-- 📅 2025-11-11
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを活用し、ユーザーのリポジトリ情報を自動的に取得します。
-- 取得した情報から、GitHub Pages向けにSEO最適化されたリポジトリ一覧Markdownを生成します。
-- 検索エンジンやLLMからの参照性を高め、プロジェクトの可視性と開発効率向上に貢献します。
-- 📅 2025-11-11
-
-## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
-[WIP] mmlabc-to-smfのrust版
-
-<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
-- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
-
-### Project Highlights
-- Music Macro Language (MML) 形式の文字列をStandard MIDI File (SMF) へ変換するRust製のコマンドラインツールです。
-- MMLのトークン化からMIDIファイル作成までを4つの処理パスで段階的に実行します。
-- 基本的な音符変換、多チャンネル対応、そしてデバッグ用のJSON中間出力機能を備えています。
 - 📅 2025-11-11
 
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
@@ -210,20 +238,6 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - JSON形式の音楽データ再生、WAVファイル出力、名前付きパイプによるプロセス間通信に対応しています。
 - 📅 2025-11-11
 
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-WIP
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FMシンセサイザーの音色パラメータを編集するためのWindows対応Rust TUIエディタです。
-- カーソル操作とキーボード入力により、デチューンやエンベロープなどの主要パラメータを直感的に調整できます。
-- 編集した音色データをJSON形式で保存・読み込み、`cat-mml-play`連携によるリアルタイム試聴機能を提供します。
-- 📅 2025-11-11
-
 ## [super-easy-vim](https://cat2151.github.io/super-easy-vim/)
 [WIP] vim初心者に成功体験を与える用のジョークアプリ。vimのサブセット。極端に機能を削減し、モードとキーバインドを過剰に派手に表示する
 
@@ -250,20 +264,6 @@ cdefgabを入力するごとにその音が鳴るMMLエディタ（実験用）
 - MML（Music Macro Language）をリアルタイムで編集・試聴できるREPL（Read-Eval-Print Loop）ライクなWebアプリケーションです。
 - MMLの作成、フレーズやコード進行の試作において、即座に音を確認しフィードバックサイクルを高速化することを目的としています。
 - 入力文字ごとやカーソル移動時に音が鳴る機能、選択範囲や現在行の即時演奏、トランスポーズ機能などを提供します。
-- 📅 2025-11-11
-
-## [chord2mml](https://cat2151.github.io/chord2mml/)
-A library transpiles Chord notation into Music Macro Language.
-
-<a href="https://cat2151.github.io/chord2mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: chord-parsing](https://img.shields.io/badge/Topic-chord--parsing-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
-
-- **Repository**: [https://github.com/cat2151/chord2mml](https://github.com/cat2151/chord2mml)
-- **GitHub Pages**: [https://cat2151.github.io/chord2mml/](https://cat2151.github.io/chord2mml/)
-
-### Project Highlights
-- コード表記（Chord notation）を音楽マクロ言語（MML）に変換するシンプルなJavaScriptライブラリです。
-- ブラウザやObsidianプラグインに組み込むことで、コード進行を手軽に音として確認できます。
-- 作曲のアイデアスケッチや音楽的な表現の試行を支援することを目的としています。
 - 📅 2025-11-11
 
 ## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
