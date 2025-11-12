@@ -284,7 +284,10 @@ class TestMarkdownGenerator:
 
         # メインコンテンツの確認
         assert "# testuserのGitHubリポジトリ一覧" in result
-        assert "最終更新: 2024年01月15日" in result
+        # 日付はUTC/JST両表記になっている
+        assert "(UTC)" in result
+        assert "(JST)" in result
+        assert "最終更新:" in result
         assert "## 目次" in result
         assert "## 統計情報" in result
         assert "## アクティブなリポジトリ" in result
