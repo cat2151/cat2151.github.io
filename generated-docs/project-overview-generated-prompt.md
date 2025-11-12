@@ -1,4 +1,4 @@
-Last updated: 2025-11-12
+Last updated: 2025-11-13
 
 
 # プロジェクト概要生成プロンプト（来訪者向け）
@@ -201,6 +201,8 @@ project_overview:
 📖 index.md
 📁 issue-notes/
   📖 10.md
+  📖 12.md
+  📖 14.md
   📖 2.md
   📖 4.md
   📖 6.md
@@ -248,6 +250,8 @@ project_overview:
 README.md
 index.md
 issue-notes/10.md
+issue-notes/12.md
+issue-notes/14.md
 issue-notes/2.md
 issue-notes/4.md
 issue-notes/6.md
@@ -265,4 +269,4 @@ src/generate_repo_list/json_ld_template.json
 
 
 ---
-Generated at: 2025-11-12 07:06:04 JST
+Generated at: 2025-11-13 07:06:04 JST
