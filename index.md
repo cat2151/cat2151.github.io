@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-12
+Last Updated: 2025-11-13
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,48 @@ Last Updated: 2025-11-12
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
+WIP
+
+<a href="https://cat2151.github.io/cat-window-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
+
+### Project Highlights
+- アクティブなウィンドウを監視し、生産性に基づいてスコアを調整するシンプルなツールです。
+- GitHubでの作業中にスコアを上げ、SNS閲覧時にスコアを下げるなど、カスタマイズ可能です。
+- 「猫が見守る」というコンセプトで、現在の活動を視覚的に表示します。
+- 📅 2025-11-13
+
+## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
+[WIP] mmlabc-to-smfのrust版
+
+<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
+- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
+
+### Project Highlights
+- Music Macro Language (MML) をStandard MIDI File (SMF) に変換するRust製CLIツールです。
+- 4パスアーキテクチャを用いてMMLを効率的に解析し、MIDIイベントを生成します。
+- 基本音符変換、多チャンネル対応、デバッグ出力、外部プレイヤーによる自動再生機能を備えています。
+- 📅 2025-11-13
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub Pagesサイト向けに、GitHubリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを活用し、SEOに最適化されたコンテンツを効率的に作成します。
+- 生成されたリポジトリ一覧を通じて、検索エンジンやAIからの情報発見を促進します。
+- 📅 2025-11-13
+
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
 
@@ -97,34 +139,6 @@ Last Updated: 2025-11-12
 - 高性能な2パス処理アーキテクチャを採用し、Rustの型安全性とネイティブコンパイルによる高速な変換処理を実現します。
 - SMF Format 0および1に対応し、他のRustプロジェクトから利用可能な堅牢なライブラリAPIも提供します。
 - 📅 2025-11-12
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを活用し、ユーザーのリポジトリ情報を自動で取得するシステムです。
-- 取得したデータから、SEOに最適化されたGitHub Pages向けのMarkdownファイルを生成します。
-- これにより、リポジトリ一覧の検索エンジンへの露出とLLMによる参照性を向上させます。
-- 📅 2025-11-12
-
-## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
-[WIP] mmlabc-to-smfのrust版
-
-<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
-- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
-
-### Project Highlights
-- Music Macro Language (MML) 形式の文字列をStandard MIDI File (SMF) へ変換するRust製のコマンドラインツールです。
-- MMLのトークン化からMIDIファイル作成までを4つの処理パスで段階的に実行します。
-- 基本的な音符変換、多チャンネル対応、そしてデバッグ用のJSON中間出力機能を備えています。
-- 📅 2025-11-11
 
 ## [chord2mml](https://cat2151.github.io/chord2mml/)
 A library transpiles Chord notation into Music Macro Language.
@@ -180,20 +194,6 @@ ym2151-log-player のRust版
 - YM2151レジスタイベントログをJSONファイルから読み込み、高精度なYM2151エミュレーション音源を生成します。
 - 生成された音源は、起動後すぐにリアルタイムでオーディオデバイスから再生されます。
 - リアルタイム再生と同時に、出力音源をWAVファイルとしてキャプチャ保存する機能を提供します。
-- 📅 2025-11-11
-
-## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
-WIP
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
-
-### Project Highlights
-- 「Cat Window Watcher」は、アクティブなウィンドウを監視し、ユーザーの生産性をスコア化するシンプルなツールです。
-- GitHubでの作業はスコアを増加させ、SNSなどの活動は減少させるなど、設定可能な正規表現パターンに基づきスコアを調整します。
-- Tkinterを用いた直感的なGUIで現在のスコアと活動状況を表示し、Windows、macOS、Linuxで動作するクロスプラットフォーム対応です。
 - 📅 2025-11-11
 
 ## [cat-obsidian-templater-scripts](https://cat2151.github.io/cat-obsidian-templater-scripts/)
