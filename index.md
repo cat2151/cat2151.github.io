@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-13
+Last Updated: 2025-11-14
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,20 @@ Last Updated: 2025-11-13
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを利用し、リポジトリ情報を自動取得してGitHub Pages向けに最適化されたマークダウンを生成します。
+- 生成されたリポジトリ一覧は検索エンジンからの参照性を高め、LLMがリポジトリ情報を取得しやすくします。
+- 各リポジトリの「プロジェクト概要」を自動取得・表示することで、一覧性を向上させ開発効率に貢献します。
+- 📅 2025-11-14
+
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
 WIP
 
@@ -96,7 +110,7 @@ WIP
 - アクティブなウィンドウを監視し、生産性に基づいてスコアを調整するシンプルなツールです。
 - GitHubでの作業中にスコアを上げ、SNS閲覧時にスコアを下げるなど、カスタマイズ可能です。
 - 「猫が見守る」というコンセプトで、現在の活動を視覚的に表示します。
-- 📅 2025-11-13
+- 📅 2025-11-14
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 [WIP] mmlabc-to-smfのrust版
@@ -110,21 +124,21 @@ WIP
 - Music Macro Language (MML) をStandard MIDI File (SMF) に変換するRust製CLIツールです。
 - 4パスアーキテクチャを用いてMMLを効率的に解析し、MIDIイベントを生成します。
 - 基本音符変換、多チャンネル対応、デバッグ出力、外部プレイヤーによる自動再生機能を備えています。
-- 📅 2025-11-13
+- 📅 2025-11-14
 
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
+## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
+MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
 
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けに、GitHubリポジトリ一覧を自動生成するシステムです。
-- GitHub APIを活用し、SEOに最適化されたコンテンツを効率的に作成します。
-- 生成されたリポジトリ一覧を通じて、検索エンジンやAIからの情報発見を促進します。
-- 📅 2025-11-13
+- Rustで構築された、MML（Music Macro Language）用のテキストベースのユーザーインターフェース（TUI）エディタです。
+- MMLノート入力時の自動再生機能と、便利なMMLテンプレート切り替え機能を備えています。
+- コマンドラインからシンプルかつ素早くMMLを編集し、その場で音を鳴らす体験を提供することを目指しています。
+- 📅 2025-11-14
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
@@ -166,20 +180,6 @@ WIP
 - YM2151 FMシンセサイザーの音色パラメータを編集するためのWindows対応Rust TUIエディタです。
 - カーソル操作とキーボード入力により、デチューンやエンベロープなどの主要パラメータを直感的に調整できます。
 - 編集した音色データをJSON形式で保存・読み込み、`cat-mml-play`連携によるリアルタイム試聴機能を提供します。
-- 📅 2025-11-11
-
-## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
-MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
-- **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
-
-### Project Highlights
-- Rustで構築された、MML（Music Macro Language）用のテキストベースのユーザーインターフェース（TUI）エディタです。
-- MMLノート入力時の自動再生機能と、便利なMMLテンプレート切り替え機能を備えています。
-- コマンドラインからシンプルかつ素早くMMLを編集し、その場で音を鳴らす体験を提供することを目指しています。
 - 📅 2025-11-11
 
 ## [ym2151-log-player-rust](https://cat2151.github.io/ym2151-log-player-rust/)
