@@ -3,18 +3,19 @@
 このモジュールはMarkdownコンテンツの生成を担当します。
 """
 
-from datetime import datetime
 from typing import Any, Dict, List
 
 try:
     # 通常のパッケージインポート（本番環境用）
     from .badge_generator import BadgeGenerator
+    from .date_formatter import DateFormatter
     from .statistics_calculator import StatisticsCalculator
     from .template_processor import TemplateProcessor
     from .url_utils import URLUtils
 except ImportError:
     # 絶対インポート（テスト環境用）
     from badge_generator import BadgeGenerator
+    from date_formatter import DateFormatter
     from statistics_calculator import StatisticsCalculator
     from template_processor import TemplateProcessor
     from url_utils import URLUtils
@@ -40,6 +41,7 @@ class MarkdownGenerator:
         self.badge_generator = BadgeGenerator(config, strings, self.url_utils)
         self.stats_calculator = StatisticsCalculator(config)
         self.template_processor = TemplateProcessor()
+        self.date_formatter = DateFormatter(config)
 
     def generate_markdown(
         self,
@@ -65,7 +67,7 @@ class MarkdownGenerator:
         """
         print(f"\n{self.strings['console']['generating_markdown']}")
 
-        today = datetime.now().strftime(self.config["date_format"])
+        today = self.date_formatter.format_current_date_dual_timezone()
 
         # 統計情報を計算
         stats = self.stats_calculator.calculate_basic_stats(active, archived, forks)
@@ -168,7 +170,7 @@ class MarkdownGenerator:
     def _generate_repo_item(self, repo: Dict, is_fork: bool = False, username: str = None) -> str:
         """個別リポジトリ項目を生成する"""
         main_url = repo["pages_url"] if repo["has_pages"] else repo["url"]
-        updated_date = repo["updated_at"].strftime(self.config["date_format"])
+        updated_date = self.date_formatter.format_dual_timezone(repo["updated_at"])
 
         # 情報行を組み立て
         info_parts = [f"📅 {updated_date}"]
