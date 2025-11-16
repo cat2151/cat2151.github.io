@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-15
+Last Updated: 2025-11-16
 
 ## 📋 Table of Contents
 
@@ -71,7 +71,7 @@ Last Updated: 2025-11-15
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-75-blue) ![Active](https://img.shields.io/badge/Active-48-green) ![Archived](https://img.shields.io/badge/Archived-21-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-49-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-75-blue) ![Active](https://img.shields.io/badge/Active-47-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-49-gold)
 
 ### Core Technologies
 
@@ -83,6 +83,76 @@ Last Updated: 2025-11-15
 ## 🚀 Active Development
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
+
+## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
+MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
+
+### Project Highlights
+- Rustで開発された、MML（Music Macro Language）用のTUI（テキストユーザーインターフェース）エディタです。
+- MMLの記述と同時に、入力した音符を自動再生し、即座に確認できるミニマムな作曲体験を提供します。
+- 複数行テキスト編集、MMLテンプレート、再生モード切り替えなど、MML作成をサポートする機能が充実しています。
+- 📅 2025-11-16
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを利用し、ユーザーのGitHub Pages向けにリポジトリ一覧Markdownを自動生成するシステムです。
+- SEOを考慮し、各リポジトリの概要も取得表示することで、検索エンジンでの発見性を高めます。
+- Jekyll/GitHub Pagesに対応しており、LLMがリポジトリ参照に失敗する課題の緩和を目指します。
+- 📅 2025-11-16
+
+## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
+Music Macro Language (MML) Parser and Player and Server and Client
+
+<a href="https://cat2151.github.io/cat-play-mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
+
+### Project Highlights
+- Music Macro Language (MML) をテキスト入力で再生するWindows用CLIツールです。
+- 文字列 "cde" のようなMMLをコマンドライン引数として渡すだけで、ドレミの音をリアルタイムで演奏します。
+- 低レイテンシでの音楽再生と、バックグラウンドでの演奏が可能なサーバーモードを特徴としています。
+- 📅 2025-11-16
+
+## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
+Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
+
+<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
+
+### Project Highlights
+- YM2151（OPM）レジスタイベントログを受け取り、リアルタイムで音楽を再生するWindows専用のアプリケーションです。
+- スタンドアロンで利用できるほか、サーバーとして常駐し、クライアントから再生制御やWAVファイル出力が可能です。
+- 他の音楽作成・編集ツールにライブラリとして組み込み、よりインタラクティブな演奏体験を提供することを目指しています。
+- 📅 2025-11-16
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+WIP
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151 FM音源の音色パラメータを直感的に編集できるターミナルUIエディタです。
+- カーソル移動やキー操作でパラメータを調整し、リアルタイムで音色変化を確認できます。
+- Windows環境で動作し、音色作成の効率化とYM2151音源の探求を支援します。
+- 📅 2025-11-16
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
@@ -96,20 +166,6 @@ Last Updated: 2025-11-15
 - Standard MIDI Files (SMF) をヤマハYM2151 FM音源チップ向けのレジスタ書き込みログ（JSON形式）へ変換するRust製ツールです。
 - 型安全性、高パフォーマンス、2パス処理アーキテクチャ、プログラムチェンジ対応を特徴とし、開発者向けのライブラリとしても利用可能です。
 - 和音数に基づく静的なYM2151チャンネル割り当てとドラムチャンネル優先戦略を採用し、効率的な音源制御を実現します。
-- 📅 2025-11-15
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub Pagesサイト (`.github.io`ドメイン) 向けに、ユーザーのリポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、SEOに最適化されたMarkdown形式で出力します。
-- 生成された一覧は、検索エンジンやLLMによるリポジトリ参照性を向上させることを目的としています。
 - 📅 2025-11-15
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
@@ -140,20 +196,6 @@ WIP
 - シンプルなGUIで現在のスコアと活動状況を表示し、Linux、macOS、Windowsのクロスプラットフォームで動作します。
 - 📅 2025-11-15
 
-## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
-Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
-
-<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
-
-### Project Highlights
-- YM2151音源チップのレジスタログを、リアルタイムで再生するWindows専用アプリケーションです。
-- スタンドアロンまたはサーバー・クライアントモードで、JSON音楽データを演奏し、WAV出力も可能です。
-- クライアントからは、再生開始・停止・サーバーシャットダウンといった操作を柔軟に行えます。
-- 📅 2025-11-15
-
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
 File Change Monitoring Tool - Detects file changes and executes commands
 
@@ -168,34 +210,6 @@ File Change Monitoring Tool - Detects file changes and executes commands
 - 軽量で使いやすく、特定のプロセス実行中のコマンド抑制や、時間帯による監視の有効化など豊富な機能を備えています。
 - 📅 2025-11-15
 
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-WIP
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FM音源の音色パラメータを編集するためのRust製TUI (Text User Interface) エディタです。
-- カーソル操作やキー入力によりパラメータを調整し、リアルタイムに音色を試奏できます。
-- Windows環境での利用を想定しており、音色データをJSON形式で保存・読み込みが可能です。
-- 📅 2025-11-15
-
-## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
-MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
-- **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
-
-### Project Highlights
-- Rustで構築された、MML（Music Macro Language）用のテキストベースのユーザーインターフェース（TUI）エディタです。
-- MMLノート入力時の自動再生機能と、便利なMMLテンプレート切り替え機能を備えています。
-- コマンドラインからシンプルかつ素早くMMLを編集し、その場で音を鳴らす体験を提供することを目指しています。
-- 📅 2025-11-14
-
 ## [chord2mml](https://cat2151.github.io/chord2mml/)
 A library transpiles Chord notation into Music Macro Language.
 
@@ -208,20 +222,6 @@ A library transpiles Chord notation into Music Macro Language.
 -   コード進行表記（Chord notation）をMML（Music Macro Language）に変換するシンプルなJavaScriptライブラリです。
 -   入力されたコード進行からMML文字列を生成し、ブラウザや対応するアプリケーションで音楽を再生できるようにします。
 -   作曲のアイデアスケッチや、既存のコード進行を音で確認する用途などに手軽に活用できます。
-- 📅 2025-11-11
-
-## [ym2151-log-player-rust](https://cat2151.github.io/ym2151-log-player-rust/)
-ym2151-log-player のRust版
-
-<a href="https://cat2151.github.io/ym2151-log-player-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/ym2151-log-player-rust](https://github.com/cat2151/ym2151-log-player-rust)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-player-rust/](https://cat2151.github.io/ym2151-log-player-rust/)
-
-### Project Highlights
-- YM2151レジスタイベントログをJSONファイルから読み込み、高精度なYM2151エミュレーション音源を生成します。
-- 生成された音源は、起動後すぐにリアルタイムでオーディオデバイスから再生されます。
-- リアルタイム再生と同時に、出力音源をWAVファイルとしてキャプチャ保存する機能を提供します。
 - 📅 2025-11-11
 
 ## [cat-obsidian-templater-scripts](https://cat2151.github.io/cat-obsidian-templater-scripts/)
@@ -434,20 +434,6 @@ MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
 - Python, Rust, Go, TypeScriptなど、複数の言語での実装を通じてマルチプラットフォーム対応を試みています。
 - 📅 2025-11-09
 
-## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
-Music Macro Language (MML) Parser and Player and Server and Client
-
-<a href="https://cat2151.github.io/cat-play-mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
-- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
-
-### Project Highlights
-- Music Macro Language (MML) で記述された音楽を再生する、Windows向けのコマンドラインツールです。
-- シンプルな操作でMML文字列をリアルタイムに音楽として出力し、低レイテンシな演奏を実現します。
-- 自動サーバー起動によるバックグラウンド演奏機能も備えており、音楽を再生しながら他の作業を行うことも可能です。
-- 📅 2025-11-09
-
 ## [ym2151-typescript-webaudio](https://cat2151.github.io/ym2151-typescript-webaudio/)
 WIP
 
@@ -650,6 +636,20 @@ crisp-game-libを使って作ったゲーム
 ---
 
 ## 📦 Archived Projects
+
+## [ym2151-log-player-rust](https://cat2151.github.io/ym2151-log-player-rust/)
+ym2151-log-player のRust版
+
+<a href="https://cat2151.github.io/ym2151-log-player-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/ym2151-log-player-rust](https://github.com/cat2151/ym2151-log-player-rust)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-player-rust/](https://cat2151.github.io/ym2151-log-player-rust/)
+
+### Project Highlights
+- YM2151レジスタイベントログをJSONファイルから読み込み、高精度なYM2151エミュレーション音源を生成します。
+- 生成された音源は、起動後すぐにリアルタイムでオーディオデバイスから再生されます。
+- リアルタイム再生と同時に、出力音源をWAVファイルとしてキャプチャ保存する機能を提供します。
+- 📅 2025-11-16
 
 ## [command-challenge](https://cat2151.github.io/command-challenge/)
 WIP
