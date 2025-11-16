@@ -1,4 +1,4 @@
-Last updated: 2025-11-16
+Last updated: 2025-11-17
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -597,6 +597,8 @@ jobs:
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+b5a5122 Auto-update repository list - 2025-11-15
+2b959c9 Update project summaries (overview & development status) [auto]
 f90ac8c Auto-update repository list - 2025-11-14
 3ceba19 Update project summaries (overview & development status) [auto]
 b784819 Auto-update repository list - 2025-11-13
@@ -605,8 +607,6 @@ b1cee12 Update project summaries (overview & development status) [auto]
 df51366 Update project summaries (overview & development status) [auto]
 6c64ae4 Add issue note for #14 [auto]
 5e05052 Merge pull request #13 from cat2151/copilot/fix-last-updated-date
-6968f41 Initial plan
-5ea950b Add issue note for #12 [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -614,8 +614,7 @@ generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
 index.md
-issue-notes/14.md
 
 
 ---
-Generated at: 2025-11-16 07:04:46 JST
+Generated at: 2025-11-17 07:05:15 JST
