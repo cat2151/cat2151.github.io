@@ -1,50 +1,56 @@
-Last updated: 2025-11-17
+Last updated: 2025-11-19
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #14](../issue-notes/14.md)と[Issue #15](../issue-notes/15.md)は、サイト全体の日付表示をUTCとJST（UTC+9）のデュアルタイムゾーンで併記することを目的としている。
-- 具体的には、検索エンジン最適化のためにUTC、運用者向けにJSTでの表示が求められており、`YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)`形式での出力を目指す。
-- 現在、`DateFormatter`クラスの導入が検討されており、datetimeオブジェクトをこの形式に変換する処理の実装が進められている。
+- [Issue #14](../issue-notes/14.md) と [Issue #15](../issue-notes/15.md) は、プロジェクト内で表示されるすべての日付について、UTCとJST（運用オーナー向け）の併記表示の実装を進めています。
+- この機能は、検索エンジン最適化のためのUTC表示と、人間が読みやすいJST表示の両立を目指しています。
+- 日付フォーマット処理を担う `DateFormatter` クラスの導入により、このデュアルタイムゾーン表示を実現しようとしています。
 
 ## 次の一手候補
-1. [Issue #15](../issue-notes/15.md) `DateFormatter`クラスの完全な実装と単体テスト
-   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py`に`DateFormatter`クラスを実装し、`datetime`オブジェクトをUTCとJSTの両方に変換し、指定されたフォーマット`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`で出力するメソッドの単体テストを作成・実行する。
+1. [Issue #14](../issue-notes/14.md) / [Issue #15](../issue-notes/15.md) 日付表示箇所への `DateFormatter` の組み込みと適用
+   - 最初の小さな一歩: プロジェクトのPythonスクリプト全体を検索し、日付文字列を直接生成またはフォーマットしている箇所（特に`markdown_generator.py`や`repository_processor.py`）をリストアップする。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/date_formatter.py` (新規または既存ファイルの更新)
+     対象ファイル: `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/repository_processor.py`, および日付を扱う可能性のある他のファイル
 
-     実行内容: `src/generate_repo_list/date_formatter.py` ファイルに `DateFormatter` クラスを完成させてください。このクラスは、タイムゾーン情報を含む`datetime`オブジェクト、および含まない`datetime`オブジェクトを正確に処理し、UTCとJST（UTC+9）の両方の時刻を`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式で返す`format_dual_timezone`メソッドを持つようにします。また、このメソッドの機能を確認するためのpytestによる単体テストを追加してください。
+     実行内容: プロジェクトのPythonスクリプト全体で日付を生成またはフォーマットしている箇所を特定し、そのファイルパスと該当するコードスニペットをMarkdown形式で出力してください。特に、最終的なMarkdownやJSON-LDに日付を出力している箇所に焦点を当ててください。
 
-     確認事項: Pythonの`datetime`モジュールと`zoneinfo`（または`pytz`）を使用して、タイムゾーン変換が正確に行われることを確認してください。夏時間への対応は現時点では不要です。
+     確認事項: 対象ファイルの変更が既存の日付関連処理に与える影響、および出力フォーマット（Markdown/JSON-LD）への影響を確認してください。
 
-     期待する出力: `src/generate_repo_list/date_formatter.py` ファイルの最終的なコードと、追加されたテストコードのmarkdown形式での出力。
+     期待する出力: 検出された日付処理箇所をリストアップしたMarkdown形式のドキュメント。各項目にはファイルパスとコードスニペットを含め、`DateFormatter` クラスを適用する候補として識別できるようにしてください。
      ```
 
-2. [Issue #14](../issue-notes/14.md) 生成されるMarkdownコンテンツへのデュアルタイムゾーン日付の適用
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` 内で、リポジトリの最終更新日など、現在日付を表示している箇所を特定し、候補1で実装された`DateFormatter`クラスをインポートして利用するよう修正する。
+2. [Issue #14](../issue-notes/14.md) / [Issue #15](../issue-notes/15.md) `DateFormatter` の堅牢性テストとタイムゾーン変換の検証
+   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py` (仮定) に、様々なタイムゾーンと日付を持つdatetimeオブジェクトを入力とし、期待されるUTC/JST出力が得られるかを検証する単体テストを追加する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/repository_processor.py`
+     対象ファイル: `src/generate_repo_list/date_formatter.py` (存在しない場合は新規作成を検討), `tests/test_date_formatter.py` (新規作成)
 
-     実行内容: `src/generate_repo_list/markdown_generator.py` と `src/generate_repo_list/repository_processor.py` を分析し、Markdownコンテンツ（例: `index.md`）に日付を出力している箇所を特定してください。候補1で実装される`DateFormatter`クラスの`format_dual_timezone`メソッドを使用して、これらの日付を`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式で表示するよう修正してください。
+     実行内容: 日付フォーマットを担う`DateFormatter`クラス（`src/generate_repo_list/date_formatter.py`として仮定）に対して、以下の観点から検証するための単体テストファイル（`tests/test_date_formatter.py`）を作成してください。
+     1. UTC、JST、およびタイムゾーン情報を持たない日付入力に対して、正しく "YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)" 形式で出力されるか。
+     2. 閏年や月末日など、特定の日付パターンで正しく動作するか。
+     3. 異なるdatetimeオブジェクト（例: `datetime.now()`, `datetime.utcnow()`, 任意のタイムゾーン指定）での挙動。
 
-     確認事項: 既存の日付フォーマットが新しいデュアルタイムゾーン表示に置き換わることを確認してください。日付データが`datetime`オブジェクトとして渡されていることを前提とします。
+     確認事項: テストファイルの命名規則と配置場所が既存のテスト構造に適合していること。`date_formatter.py`がまだ存在しない場合は、テスト駆動開発のアプローチとして基本的なクラス定義を含め、テストを記述してください。
 
-     期待する出力: `src/generate_repo_list/markdown_generator.py` と `src/generate_repo_list/repository_processor.py` の変更内容を示す差分または修正後のコードスニペットをmarkdown形式で出力。
+     期待する出力: 新規作成された`tests/test_date_formatter.py`の内容をMarkdown形式で出力してください。
      ```
 
-3. [Issue #14](../issue-notes/14.md) JSON-LDおよびSEO関連ファイルへのデュアルタイムゾーン日付の適用
-   - 最初の小さな一歩: `src/generate_repo_list/json_ld_template.json` や `src/generate_repo_list/seo_template.yml` を確認し、日付フィールドが存在する場合は、それらのフィールドがUTC形式で保持されるようにしつつ、必要であれば追加情報としてJSTを併記する計画を立てる。
+3. [Issue #14](../issue-notes/14.md) / [Issue #15](../issue-notes/15.md) 生成ドキュメントにおけるデュアルタイムゾーン表示の視覚的確認とSEO要素の評価
+   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` を実行し、日付表示が変更された `index.md` や `generated-docs/project-overview.md` などの出力結果をプレビューしてレビューする。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/json_ld_template.json`, `src/generate_repo_list/seo_template.yml`, `src/generate_repo_list/template_processor.py`
+     対象ファイル: `index.md`, `generated-docs/project-overview.md`, `generated-docs/development-status.md` (これらのファイルが生成された後)
 
-     実行内容: `src/generate_repo_list/json_ld_template.json` と `src/generate_repo_list/seo_template.yml` を分析し、日付情報が含まれている箇所を特定してください。検索エンジン向けにUTC形式が必須であるため、これらのフィールドは引き続きUTC形式を維持します。しかし、[Issue #14](../issue-notes/14.md)で求められている「UTCとJSTを併記」の要件に基づき、もしJSON-LDスキーマやSEOテンプレートが追加情報としてJSTを許容する場合、`DateFormatter`クラスを利用してJST情報を追加する方法を検討し、変更点を提案してください。追加が難しい場合は、その理由も明記してください。
+     実行内容: `src/generate_repo_list/generate_repo_list.py` を実行して最新のプロジェクトドキュメントを生成した後、`index.md`、`generated-docs/project-overview.md`、`generated-docs/development-status.md` 内の日付表示箇所を特定し、以下の観点から評価してください。
+     1. UTCとJSTのデュアル表示が正しく、かつ運用者にとって視覚的に読みやすい形式であるか。
+     2. 検索エンジンがUTCの日付を適切に解釈できるよう、Markdownから生成されるHTMLのメタデータやJSON-LDにおける日付の記述が最適化されているか。
 
-     確認事項: JSON-LDスキーマやSEOのベストプラクティスに従い、検索エンジンのクロールに悪影響を与えないことを確認してください。
+     確認事項: ドキュメント生成プロセスが完了していること。また、Markdown出力が最終的な表示形式にどのように影響するかを考慮してください。
 
-     期待する出力: `json_ld_template.json`と`seo_template.yml`の分析結果、および`template_processor.py`における変更提案をmarkdown形式で出力。変更が不要または推奨されない場合はその根拠を記述してください。
+     期待する出力: 日付表示の評価結果をMarkdown形式で報告してください。具体的には、各ファイルの日付表示サンプルと、SEO観点からの改善点があれば提案を含めてください。
+     ```
 
 ---
-Generated at: 2025-11-17 07:05:43 JST
+Generated at: 2025-11-19 07:06:15 JST
