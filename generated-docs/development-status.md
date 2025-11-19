@@ -1,56 +1,50 @@
-Last updated: 2025-11-19
+Last updated: 2025-11-20
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #14](../issue-notes/14.md) と [Issue #15](../issue-notes/15.md) は、プロジェクト内で表示されるすべての日付について、UTCとJST（運用オーナー向け）の併記表示の実装を進めています。
-- この機能は、検索エンジン最適化のためのUTC表示と、人間が読みやすいJST表示の両立を目指しています。
-- 日付フォーマット処理を担う `DateFormatter` クラスの導入により、このデュアルタイムゾーン表示を実現しようとしています。
+- [Issue #14](../issue-notes/14.md)と[Issue #15](../issue-notes/15.md)は、すべての表示日付にUTCとJSTのデュアルタイムゾーン表示を導入する作業を進めています。
+- これは検索エンジン向けにはUTC、プロジェクトオーナー向けにはJST（UTC+9）を提供し、UXとSEOの両方を向上させる目的です。
+- 現在、新しい`DateFormatter`クラスの導入と実装が進行しており、日付フォーマットの共通化とタイムゾーン変換の基盤が整備されつつあります。
 
 ## 次の一手候補
-1. [Issue #14](../issue-notes/14.md) / [Issue #15](../issue-notes/15.md) 日付表示箇所への `DateFormatter` の組み込みと適用
-   - 最初の小さな一歩: プロジェクトのPythonスクリプト全体を検索し、日付文字列を直接生成またはフォーマットしている箇所（特に`markdown_generator.py`や`repository_processor.py`）をリストアップする。
-   - Agent実行プロンプト:
+1. `DateFormatter` クラスの完成とユニットテストの実装 ([Issue #15](../issue-notes/15.md))
+   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py` に、`datetime`オブジェクトをUTCおよびJSTの日付文字列に変換するロジックを実装し、その機能を検証するユニットテストを`tests/test_date_formatter.py`に作成する。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/repository_processor.py`, および日付を扱う可能性のある他のファイル
+     対象ファイル: `src/generate_repo_list/date_formatter.py`, `tests/test_date_formatter.py`
 
-     実行内容: プロジェクトのPythonスクリプト全体で日付を生成またはフォーマットしている箇所を特定し、そのファイルパスと該当するコードスニペットをMarkdown形式で出力してください。特に、最終的なMarkdownやJSON-LDに日付を出力している箇所に焦点を当ててください。
+     実行内容: `src/generate_repo_list/date_formatter.py` 内に、`datetime`オブジェクトを受け取り、"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"形式の文字列を返す`format_dual_timezone`メソッドを持つ`DateFormatter`クラスを実装してください。また、そのクラスのメソッドが正しく動作するかを確認するユニットテストを`tests/test_date_formatter.py`に作成してください。テストケースには、UTC、JST、およびタイムゾーン情報を持たないdatetimeオブジェクトを含めて、期待される出力を検証してください。
 
-     確認事項: 対象ファイルの変更が既存の日付関連処理に与える影響、および出力フォーマット（Markdown/JSON-LD）への影響を確認してください。
+     確認事項: `pytz`や`zoneinfo`などのタイムゾーンライブラリが利用可能か、またはPythonの標準ライブラリ（`datetime`モジュール）のみで対応可能かを確認し、最も適切な方法を選択してください。既存のPythonコードベースのコーディング規約（`ruff.toml`など）に準拠してください。
 
-     期待する出力: 検出された日付処理箇所をリストアップしたMarkdown形式のドキュメント。各項目にはファイルパスとコードスニペットを含め、`DateFormatter` クラスを適用する候補として識別できるようにしてください。
-     ```
-
-2. [Issue #14](../issue-notes/14.md) / [Issue #15](../issue-notes/15.md) `DateFormatter` の堅牢性テストとタイムゾーン変換の検証
-   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py` (仮定) に、様々なタイムゾーンと日付を持つdatetimeオブジェクトを入力とし、期待されるUTC/JST出力が得られるかを検証する単体テストを追加する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `src/generate_repo_list/date_formatter.py` (存在しない場合は新規作成を検討), `tests/test_date_formatter.py` (新規作成)
-
-     実行内容: 日付フォーマットを担う`DateFormatter`クラス（`src/generate_repo_list/date_formatter.py`として仮定）に対して、以下の観点から検証するための単体テストファイル（`tests/test_date_formatter.py`）を作成してください。
-     1. UTC、JST、およびタイムゾーン情報を持たない日付入力に対して、正しく "YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)" 形式で出力されるか。
-     2. 閏年や月末日など、特定の日付パターンで正しく動作するか。
-     3. 異なるdatetimeオブジェクト（例: `datetime.now()`, `datetime.utcnow()`, 任意のタイムゾーン指定）での挙動。
-
-     確認事項: テストファイルの命名規則と配置場所が既存のテスト構造に適合していること。`date_formatter.py`がまだ存在しない場合は、テスト駆動開発のアプローチとして基本的なクラス定義を含め、テストを記述してください。
-
-     期待する出力: 新規作成された`tests/test_date_formatter.py`の内容をMarkdown形式で出力してください。
+     期待する出力: `src/generate_repo_list/date_formatter.py`と`tests/test_date_formatter.py`の更新されたファイル内容。
      ```
 
-3. [Issue #14](../issue-notes/14.md) / [Issue #15](../issue-notes/15.md) 生成ドキュメントにおけるデュアルタイムゾーン表示の視覚的確認とSEO要素の評価
-   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` を実行し、日付表示が変更された `index.md` や `generated-docs/project-overview.md` などの出力結果をプレビューしてレビューする。
-   - Agent実行プロンプト:
+2. プロジェクト全体の日付表示箇所を`DateFormatter`に移行 ([Issue #14](../issue-notes/14.md))
+   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` 内で日付を直接フォーマットしている箇所を特定し、`DateFormatter`クラスの`format_dual_timezone`メソッドを利用するように修正する。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: `index.md`, `generated-docs/project-overview.md`, `generated-docs/development-status.md` (これらのファイルが生成された後)
+     対象ファイル: `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/date_formatter.py`
 
-     実行内容: `src/generate_repo_list/generate_repo_list.py` を実行して最新のプロジェクトドキュメントを生成した後、`index.md`、`generated-docs/project-overview.md`、`generated-docs/development-status.md` 内の日付表示箇所を特定し、以下の観点から評価してください。
-     1. UTCとJSTのデュアル表示が正しく、かつ運用者にとって視覚的に読みやすい形式であるか。
-     2. 検索エンジンがUTCの日付を適切に解釈できるよう、Markdownから生成されるHTMLのメタデータやJSON-LDにおける日付の記述が最適化されているか。
+     実行内容: `src/generate_repo_list/markdown_generator.py` 内の日付を文字列として出力している箇所を特定し、[Issue #15](../issue-notes/15.md)で導入された`DateFormatter`クラスの`format_dual_timezone`メソッドを利用するように修正してください。`DateFormatter`クラスがまだ存在しない場合は、仮の実装としてダミーのクラスとメソッドを定義して利用し、コードがビルドできる状態を維持してください。
 
-     確認事項: ドキュメント生成プロセスが完了していること。また、Markdown出力が最終的な表示形式にどのように影響するかを考慮してください。
+     確認事項: `DateFormatter`クラスが適切にインポートされ、依存関係が解決されていることを確認してください。この変更が既存のMarkdown生成ロジックに予期せぬ影響を与えないことを、既存のテスト（もしあれば）や手動確認で検証できるか検討してください。
 
-     期待する出力: 日付表示の評価結果をMarkdown形式で報告してください。具体的には、各ファイルの日付表示サンプルと、SEO観点からの改善点があれば提案を含めてください。
+     期待する出力: 変更された`src/generate_repo_list/markdown_generator.py`のファイル内容。
      ```
+
+3. `DateFormatter` 導入による影響範囲の調査 ([Issue #14](../issue-notes/14.md), [Issue #15](../issue-notes/15.md))
+   - 最初の小さな一歩: `src/generate_repo_list/`ディレクトリ内のPythonファイルをスキャンし、`datetime`モジュールや`strftime`メソッドを使用している箇所を抽出し、影響を受ける可能性のあるファイルをリストアップする。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: `src/generate_repo_list/**/*.py`
+
+     実行内容: `src/generate_repo_list/`ディレクトリ内のすべてのPythonファイルをスキャンし、`datetime`モジュールや`strftime`メソッドを使用している箇所、または日付に関連する文字列操作を行っている箇所を特定してください。これらの箇所が`DateFormatter`クラスの導入によって影響を受ける可能性があるかどうかを分析し、変更が必要なファイルのリストと、それぞれのファイルにおける具体的な修正点の概要をMarkdown形式でまとめてください。
+
+     確認事項: スキャン対象がPythonファイルに限定されているか、また関連性の低いファイルが誤って含まれていないかを確認してください。既存の日付処理の意図を理解し、誤った解釈に基づいた提案を避けてください。
+
+     期待する出力: `date-formatting-impact-analysis.md`というファイル名で、影響を受けるファイルとその変更概要をまとめたMarkdown形式のレポート。
 
 ---
-Generated at: 2025-11-19 07:06:15 JST
+Generated at: 2025-11-20 07:06:05 JST
