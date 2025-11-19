@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 75 projects (⭐49 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 75 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 75 projects (⭐49 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 75 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -50,7 +50,7 @@ json_ld: |
       "description": "Programmer and developer. Publishing 75 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 75 projects (⭐49 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 75 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-18
+Last Updated: 2025-11-19
 
 ## 📋 Table of Contents
 
@@ -71,7 +71,7 @@ Last Updated: 2025-11-18
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-75-blue) ![Active](https://img.shields.io/badge/Active-47-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-49-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-75-blue) ![Active](https://img.shields.io/badge/Active-47-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-50-gold)
 
 ### Core Technologies
 
@@ -93,38 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を自動取得してJekyll向けMarkdownファイルを生成します。
-- GitHub Pagesサイトの検索エンジン最適化（SEO）を促進し、Web上の可視性を高めます。
-- リポジトリの概要、バッジ、分類を表示し、ユーザーやLLMからの情報参照を容易にします。
-- 📅 2025-11-18
-
-## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
-Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
-
-<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
-
-### Project Highlights
-- YM2151 (OPM) 音源チップのレジスタイベントログをリアルタイムで再生するサーバー・クライアントシステムです。
-- JSON音楽データ再生やインタラクティブなレジスタ操作、WAVファイル出力に対応しています。
-- 外部プログラムからライブラリとして簡単にサーバーを制御・利用でき、スムーズな音楽再生体験を提供します。
-- 📅 2025-11-18
-
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-WIP
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FM音源チップの音色を、テキストベースのユーザーインターフェース（TUI）で直感的に編集できるエディタです。
-- Rust言語で開発されており、Windows環境向けにリアルタイムでの音声フィードバック機能を提供します。
-- 編集した音色データを即座に確認し、効率的な音色作成をサポートすることを目指しています。
-- 📅 2025-11-18
+- GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
+- GitHubユーザーページの検索エンジンでの見つけにくさという課題を解決します。
+- GitHub APIから情報を取得し、SEOに最適化されたMarkdownファイルを自動で作成します。
+- 📅 2025-11-19
 
 ## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
 Music Macro Language (MML) Parser and Player and Server and Client
@@ -135,10 +107,52 @@ Music Macro Language (MML) Parser and Player and Server and Client
 - **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
 
 ### Project Highlights
-- Music Macro Language (MML) を使って音楽を再生するWindows用のCLIツールです。
-- 簡単なMML文字列を入力するだけで、すぐに音楽を演奏することができます。
-- リアルタイムでの低レイテンシ再生と、バックグラウンドでの演奏が可能です。
-- 📅 2025-11-17
+- `cat-play-mml`は、Music Macro Language (MML) をテキストで入力し、音楽をリアルタイムで再生するWindows用CLIツールです。
+- 簡単なMML文字列を引数に渡すだけで、すぐにドレミなどの音楽を鳴らすことができ、低レイテンシでバックグラウンド演奏も可能です。
+- MMLパーサー、オーディオ生成、再生機能を通じて、音楽記述から演奏までを一貫して提供します。
+- 📅 2025-11-19
+
+## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
+Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
+
+<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
+
+### Project Highlights
+- YM2151 (OPM) 音源チップのレジスタイベントログを高精度でリアルタイム再生するシステムです。
+- サーバーとクライアントで構成されており、Windows環境でのスムーズな音楽演奏と制御を実現します。
+- 外部アプリケーションからの統合を容易にするライブラリ機能と、低遅延なインタラクティブ演奏モードを提供します。
+- 📅 2025-11-19
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+WIP
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151 FM音源の音色を編集するための、Windows向けのテキストユーザーインターフェース（TUI）エディタです。
+- 直感的な操作とリアルタイムの音声フィードバックを通じて、手軽に音色パラメータの調整を試すことができます。
+- シンプルな設計で素早い起動と応答性を重視し、作成した音色はファイルとして保存・管理されます。
+- 📅 2025-11-19
+
+## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
+Obsidian plugin. Playing Music Macro Language and Chord notation.
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-7-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: obsidian-plugin](https://img.shields.io/badge/Topic-obsidian--plugin-lightblue)
+
+- **Repository**: [https://github.com/cat2151/obsidian-plugin-mmlabc](https://github.com/cat2151/obsidian-plugin-mmlabc)
+- **GitHub Pages**: [https://cat2151.github.io/obsidian-plugin-mmlabc/](https://cat2151.github.io/obsidian-plugin-mmlabc/)
+
+### Project Highlights
+- ObsidianノートでMML（Music Macro Language）とコード進行を五線譜表示し、演奏できます。
+- 作曲のアイデアスケッチや音楽理論学習を支援し、直感的な音楽表現を可能にします。
+- 既存の「Obsidian ABC.JS plugin」を基盤に、MMLとコード進行の入力を拡張しています。
+- 📅 2025-11-19
 
 ## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
 MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
@@ -278,20 +292,6 @@ cdefgabを入力するごとにその音が鳴るMMLエディタ（実験用）
 - MML（Music Macro Language）をリアルタイムで編集・試聴できるREPL（Read-Eval-Print Loop）ライクなWebアプリケーションです。
 - MMLの作成、フレーズやコード進行の試作において、即座に音を確認しフィードバックサイクルを高速化することを目的としています。
 - 入力文字ごとやカーソル移動時に音が鳴る機能、選択範囲や現在行の即時演奏、トランスポーズ機能などを提供します。
-- 📅 2025-11-11
-
-## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
-Obsidian plugin. Playing Music Macro Language and Chord notation.
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-6-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: obsidian-plugin](https://img.shields.io/badge/Topic-obsidian--plugin-lightblue)
-
-- **Repository**: [https://github.com/cat2151/obsidian-plugin-mmlabc](https://github.com/cat2151/obsidian-plugin-mmlabc)
-- **GitHub Pages**: [https://cat2151.github.io/obsidian-plugin-mmlabc/](https://cat2151.github.io/obsidian-plugin-mmlabc/)
-
-### Project Highlights
-- ObsidianノートでMML（Music Macro Language）とコード進行を五線譜表示し、演奏できます。
-- 作曲のアイデアスケッチや音楽理論学習を支援し、直感的な音楽表現を可能にします。
-- 既存の「Obsidian ABC.JS plugin」を基盤に、MMLとコード進行の入力を拡張しています。
 - 📅 2025-11-11
 
 ## [postmate-midi-experimental](https://cat2151.github.io/postmate-midi-experimental/)
