@@ -1,50 +1,50 @@
-Last updated: 2025-11-20
+Last updated: 2025-11-21
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #14](../issue-notes/14.md)と[Issue #15](../issue-notes/15.md)は、すべての表示日付にUTCとJSTのデュアルタイムゾーン表示を導入する作業を進めています。
-- これは検索エンジン向けにはUTC、プロジェクトオーナー向けにはJST（UTC+9）を提供し、UXとSEOの両方を向上させる目的です。
-- 現在、新しい`DateFormatter`クラスの導入と実装が進行しており、日付フォーマットの共通化とタイムゾーン変換の基盤が整備されつつあります。
+- [Issue #15](../issue-notes/15.md) および [Issue #14](../issue-notes/14.md) は、すべての日付表示をUTCとJSTのデュアルタイムゾーンで提供する機能実装を計画しています。
+- これにより、検索エンジン向けUTCと運用者向けJSTの両方が表示され、`date_formatter.py` で時刻変換ロジックを一元化する予定です。
+- さらに、[Issue #4](../issue-notes/4.md) では、`README.ja.md` のあるリポジトリにJapaneseバッジを追加し、`README.ja.html` へリンクさせる機能が求められています。
 
 ## 次の一手候補
-1. `DateFormatter` クラスの完成とユニットテストの実装 ([Issue #15](../issue-notes/15.md))
-   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py` に、`datetime`オブジェクトをUTCおよびJSTの日付文字列に変換するロジックを実装し、その機能を検証するユニットテストを`tests/test_date_formatter.py`に作成する。
-   - Agent実行プロンプ:
+1. [Issue #15](../issue-notes/15.md) `DateFormatter` クラスの実装
+   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py` ファイルを新規作成し、`datetime` オブジェクトをUTCおよびJSTで `"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"` 形式の文字列に変換する `format_datetime_dual_timezone` メソッドを持つ `DateFormatter` クラスを定義します。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/date_formatter.py`, `tests/test_date_formatter.py`
+     対象ファイル: `src/generate_repo_list/date_formatter.py`
 
-     実行内容: `src/generate_repo_list/date_formatter.py` 内に、`datetime`オブジェクトを受け取り、"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"形式の文字列を返す`format_dual_timezone`メソッドを持つ`DateFormatter`クラスを実装してください。また、そのクラスのメソッドが正しく動作するかを確認するユニットテストを`tests/test_date_formatter.py`に作成してください。テストケースには、UTC、JST、およびタイムゾーン情報を持たないdatetimeオブジェクトを含めて、期待される出力を検証してください。
+     実行内容: `src/generate_repo_list/date_formatter.py` を新規作成し、`DateFormatter` クラスを実装してください。このクラスは、与えられた `datetime` オブジェクトをUTCとJST（UTC+9）の二つのタイムゾーンで表示するメソッド `format_datetime_dual_timezone(dt: datetime) -> str` を持ちます。出力形式は `"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"` としてください。タイムゾーン処理には `datetime` モジュールの `timezone` クラスと `timedelta` を使用し、外部ライブラリの追加を最小限に抑えてください。
 
-     確認事項: `pytz`や`zoneinfo`などのタイムゾーンライブラリが利用可能か、またはPythonの標準ライブラリ（`datetime`モジュール）のみで対応可能かを確認し、最も適切な方法を選択してください。既存のPythonコードベースのコーディング規約（`ruff.toml`など）に準拠してください。
+     確認事項: 新規ファイル作成であるため既存ファイルとの依存関係はありませんが、`datetime` オブジェクトのタイムゾーン情報（`tzinfo`）の有無に関わらず適切に処理できることを確認してください。また、`src/generate_repo_list/` 以下の他のファイルからのimportが容易になるように設計してください。
 
-     期待する出力: `src/generate_repo_list/date_formatter.py`と`tests/test_date_formatter.py`の更新されたファイル内容。
-     ```
-
-2. プロジェクト全体の日付表示箇所を`DateFormatter`に移行 ([Issue #14](../issue-notes/14.md))
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` 内で日付を直接フォーマットしている箇所を特定し、`DateFormatter`クラスの`format_dual_timezone`メソッドを利用するように修正する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/date_formatter.py`
-
-     実行内容: `src/generate_repo_list/markdown_generator.py` 内の日付を文字列として出力している箇所を特定し、[Issue #15](../issue-notes/15.md)で導入された`DateFormatter`クラスの`format_dual_timezone`メソッドを利用するように修正してください。`DateFormatter`クラスがまだ存在しない場合は、仮の実装としてダミーのクラスとメソッドを定義して利用し、コードがビルドできる状態を維持してください。
-
-     確認事項: `DateFormatter`クラスが適切にインポートされ、依存関係が解決されていることを確認してください。この変更が既存のMarkdown生成ロジックに予期せぬ影響を与えないことを、既存のテスト（もしあれば）や手動確認で検証できるか検討してください。
-
-     期待する出力: 変更された`src/generate_repo_list/markdown_generator.py`のファイル内容。
+     期待する出力: `src/generate_repo_list/date_formatter.py` の内容を記述したmarkdown形式のコードブロック。
      ```
 
-3. `DateFormatter` 導入による影響範囲の調査 ([Issue #14](../issue-notes/14.md), [Issue #15](../issue-notes/15.md))
-   - 最初の小さな一歩: `src/generate_repo_list/`ディレクトリ内のPythonファイルをスキャンし、`datetime`モジュールや`strftime`メソッドを使用している箇所を抽出し、影響を受ける可能性のあるファイルをリストアップする。
-   - Agent実行プロンプ:
+2. [Issue #15](../issue-notes/15.md) `markdown_generator.py` で `DateFormatter` の利用箇所を特定
+   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` を分析し、リポジトリの最終更新日時や作成日時など、現在日付をMarkdownに出力している箇所を特定し、新しい `DateFormatter` を組み込むための準備として、それらの箇所のリストアップを行います。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/**/*.py`
+     対象ファイル: `src/generate_repo_list/markdown_generator.py`
 
-     実行内容: `src/generate_repo_list/`ディレクトリ内のすべてのPythonファイルをスキャンし、`datetime`モジュールや`strftime`メソッドを使用している箇所、または日付に関連する文字列操作を行っている箇所を特定してください。これらの箇所が`DateFormatter`クラスの導入によって影響を受ける可能性があるかどうかを分析し、変更が必要なファイルのリストと、それぞれのファイルにおける具体的な修正点の概要をMarkdown形式でまとめてください。
+     実行内容: `src/generate_repo_list/markdown_generator.py` ファイルを分析し、リポジトリの最終更新日時や作成日時など、現在日付情報をMarkdown文字列に変換して出力している全ての箇所を特定してください。各特定箇所について、関連する変数名やメソッド、現在の出力形式をMarkdownの箇条書きでリストアップしてください。
 
-     確認事項: スキャン対象がPythonファイルに限定されているか、また関連性の低いファイルが誤って含まれていないかを確認してください。既存の日付処理の意図を理解し、誤った解釈に基づいた提案を避けてください。
+     確認事項: `generate_repository_markdown` メソッドだけでなく、ファイル全体で日付情報がどのように扱われているかを包括的に確認してください。
 
-     期待する出力: `date-formatting-impact-analysis.md`というファイル名で、影響を受けるファイルとその変更概要をまとめたMarkdown形式のレポート。
+     期待する出力: 日付情報が出力されている箇所、関連コードスニペット、および現在の出力形式をまとめたmarkdown形式のレポート。
+     ```
+
+3. [Issue #4](../issue-notes/4.md) Japaneseバッジ生成機能の設計検討
+   - 最初の小さな一歩: `src/generate_repo_list/badge_generator.py` と `src/generate_repo_list/repository_processor.py` を分析し、`README.ja.md` の存在を検出するメカニズムをどのように組み込むか、またバッジ生成ロジックにどのように組み込むかの設計案を検討します。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `src/generate_repo_list/badge_generator.py`, `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/config.yml`
+
+     実行内容: [Issue #4] に対応するため、`src/generate_repo_list/badge_generator.py` を拡張し、`README.ja.md` がリポジトリに存在する場合に「Japanese」バッジ（リンク先は `README.ja.html`）を生成する機能を追加する設計案を作成してください。`repository_processor.py` がリポジトリのファイルリストを提供できるか、また`config.yml`でバッジの定義やリンクパスを設定できるか調査し、それらを考慮した実装計画をmarkdown形式で出力してください。
+
+     確認事項: 既存のバッジ生成ロジックや設定ファイル構造との整合性を保ち、将来的な拡張性を考慮した設計になっているかを確認してください。
+
+     期待する出力: Japaneseバッジ生成機能の設計案（`badge_generator.py`、`repository_processor.py`、`config.yml` の変更点を記述）、および具体的な実装手順をmarkdown形式で記述したもの。
 
 ---
-Generated at: 2025-11-20 07:06:05 JST
+Generated at: 2025-11-21 07:06:33 JST
