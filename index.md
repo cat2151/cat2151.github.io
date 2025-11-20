@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-19
+Last Updated: 2025-11-20
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,38 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
-- GitHubユーザーページの検索エンジンでの見つけにくさという課題を解決します。
-- GitHub APIから情報を取得し、SEOに最適化されたMarkdownファイルを自動で作成します。
-- 📅 2025-11-19
+- GitHub Pages用のリポジトリ一覧を自動生成し、WebサイトのSEOとLLMによる参照性を向上させるシステムです。
+- GitHub APIからリポジトリ情報を取得し、各リポジトリの魅力的な概要を含むMarkdownファイルを自動生成します。
+- プロジェクト概要の自動取得、バッジ表示、アクティブ・アーカイブ・フォーク分類など多彩な機能を備えています。
+- 📅 2025-11-20
+
+## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
+Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
+
+<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
+
+### Project Highlights
+- YM2151 (OPM) 音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
+- サーバー・クライアント方式を採用し、他のアプリケーションからの柔軟な音楽再生と制御を可能にします。
+- Windows専用として設計されており、インタラクティブな音楽制作やMMLプレイヤーへの組み込みを想定しています。
+- 📅 2025-11-20
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+WIP
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151 FM音源の音色を編集するための、Windows向けテキストユーザーインターフェース (TUI) エディタです。
+- リアルタイムでの音色パラメータ変更と音声フィードバックを提供し、直感的で素早い音作りを支援します。
+- 編集した音色は専用フォーマットで保存・管理でき、今後の開発でより効率的な音色ライブラリ構築を目指します。
+- 📅 2025-11-20
 
 ## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
 Music Macro Language (MML) Parser and Player and Server and Client
@@ -110,34 +138,6 @@ Music Macro Language (MML) Parser and Player and Server and Client
 - `cat-play-mml`は、Music Macro Language (MML) をテキストで入力し、音楽をリアルタイムで再生するWindows用CLIツールです。
 - 簡単なMML文字列を引数に渡すだけで、すぐにドレミなどの音楽を鳴らすことができ、低レイテンシでバックグラウンド演奏も可能です。
 - MMLパーサー、オーディオ生成、再生機能を通じて、音楽記述から演奏までを一貫して提供します。
-- 📅 2025-11-19
-
-## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
-Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
-
-<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
-
-### Project Highlights
-- YM2151 (OPM) 音源チップのレジスタイベントログを高精度でリアルタイム再生するシステムです。
-- サーバーとクライアントで構成されており、Windows環境でのスムーズな音楽演奏と制御を実現します。
-- 外部アプリケーションからの統合を容易にするライブラリ機能と、低遅延なインタラクティブ演奏モードを提供します。
-- 📅 2025-11-19
-
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-WIP
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FM音源の音色を編集するための、Windows向けのテキストユーザーインターフェース（TUI）エディタです。
-- 直感的な操作とリアルタイムの音声フィードバックを通じて、手軽に音色パラメータの調整を試すことができます。
-- シンプルな設計で素早い起動と応答性を重視し、作成した音色はファイルとして保存・管理されます。
 - 📅 2025-11-19
 
 ## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
