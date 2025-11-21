@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-20
+Last Updated: 2025-11-21
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,20 @@ Last Updated: 2025-11-20
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
+[WIP] smf-to-ym2151log のRust版
+
+<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
+- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
+
+### Project Highlights
+- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRustアプリケーションです。
+- 変換処理は2パスアーキテクチャを採用し、YM2151のカスタム音色定義にも対応しています。
+- 型安全性と高いパフォーマンスを特徴とし、他のRustプロジェクトからライブラリとしても利用可能です。
+- 📅 2025-11-21
+
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
@@ -93,10 +107,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pages用のリポジトリ一覧を自動生成し、WebサイトのSEOとLLMによる参照性を向上させるシステムです。
-- GitHub APIからリポジトリ情報を取得し、各リポジトリの魅力的な概要を含むMarkdownファイルを自動生成します。
-- プロジェクト概要の自動取得、バッジ表示、アクティブ・アーカイブ・フォーク分類など多彩な機能を備えています。
-- 📅 2025-11-20
+- GitHub APIを利用し、指定したユーザーのリポジトリ情報を取得します。
+- 取得した情報に基づき、JekyllベースのGitHub Pagesサイト向けにリポジトリ一覧のMarkdownファイルを自動生成します。
+- 生成されたページは検索エンジンやLLMによる参照を最適化し、リポジトリの可視性向上と情報アクセスを促進します。
+- 📅 2025-11-21
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
@@ -107,10 +121,10 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
 
 ### Project Highlights
-- YM2151 (OPM) 音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
-- サーバー・クライアント方式を採用し、他のアプリケーションからの柔軟な音楽再生と制御を可能にします。
-- Windows専用として設計されており、インタラクティブな音楽制作やMMLプレイヤーへの組み込みを想定しています。
-- 📅 2025-11-20
+- YM2151（OPM）音源チップのレジスタイベントログをリアルタイムで再生するWindows専用のサーバー・クライアントシステムです。
+- クライアントはサーバーの再生を柔軟に制御でき、インタラクティブモードでは無音ギャップなしで動的な音響制御が可能です。
+- 他の音楽ツール（音色エディタなど）にライブラリとして組み込まれることを想定し、スムーズな開発体験を提供します。
+- 📅 2025-11-21
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 WIP
@@ -121,10 +135,10 @@ WIP
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
 
 ### Project Highlights
-- YM2151 FM音源の音色を編集するための、Windows向けテキストユーザーインターフェース (TUI) エディタです。
-- リアルタイムでの音色パラメータ変更と音声フィードバックを提供し、直感的で素早い音作りを支援します。
-- 編集した音色は専用フォーマットで保存・管理でき、今後の開発でより効率的な音色ライブラリ構築を目指します。
-- 📅 2025-11-20
+- YM2151 FM音源の音色を直感的に編集するためのWindows向けテキストユーザーインターフェース（TUI）エディタです。
+- リアルタイム音声フィードバックと視覚的なパラメータ表示により、音色の調整と確認をスムーズに行えます。
+- シンプルな操作性とGitHubでの管理に適した音色データ形式を特徴とし、開発中の音作り体験向上を目指しています。
+- 📅 2025-11-21
 
 ## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
 Music Macro Language (MML) Parser and Player and Server and Client
@@ -167,20 +181,6 @@ MML(Music Macro Language)用のTUI(テキストユーザーインターフェー
 - MMLの記述と同時に、入力した音符を自動再生し、即座に確認できるミニマムな作曲体験を提供します。
 - 複数行テキスト編集、MMLテンプレート、再生モード切り替えなど、MML作成をサポートする機能が充実しています。
 - 📅 2025-11-16
-
-## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
-[WIP] smf-to-ym2151log のRust版
-
-<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
-- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
-
-### Project Highlights
-- Standard MIDI Files (SMF) をヤマハYM2151 FM音源チップ向けのレジスタ書き込みログ（JSON形式）へ変換するRust製ツールです。
-- 型安全性、高パフォーマンス、2パス処理アーキテクチャ、プログラムチェンジ対応を特徴とし、開発者向けのライブラリとしても利用可能です。
-- 和音数に基づく静的なYM2151チャンネル割り当てとドラムチャンネル優先戦略を採用し、効率的な音源制御を実現します。
-- 📅 2025-11-15
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 [WIP] mmlabc-to-smfのrust版
