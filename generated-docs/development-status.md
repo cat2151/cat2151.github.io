@@ -1,59 +1,56 @@
-Last updated: 2025-11-22
+Last updated: 2025-11-23
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #15](../issue-notes/15.md)は、`DateFormatter`クラスを導入し、`YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)`形式で日時を表示する要件を定義しています。
-- [Issue #14](../issue-notes/14.md)は、プロジェクト全体の日付表示について、運用者向けのJSTと検索エンジン向けのUTCを併記するよう求めています。
-- これら2つのIssueは、プロジェクトにおける日時表示の標準化と多言語/SEO対応を目的としており、`DateFormatter`の実装と既存の日付表示箇所への適用が主要なタスクです。
+- [Issue #15](../issue-notes/15.md)は、すべての表示日付にUTCとJSTのデュアルタイムゾーンを併記する機能追加を目的としています。
+- [Issue #14](../issue-notes/14.md)は、[PR 13]を参考に、日付表示のUTC/JST併記を要求しており、JSTは運用オーナー向け、UTCは検索エンジン向けです。
+- これらIssueは、日付の表示形式に関するもので、ユーザーへの情報提供の改善を目指しています。
 
 ## 次の一手候補
-1. [Issue #15](../issue-notes/15.md): `DateFormatter`クラスの実装と基本機能の確立
-   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリに `date_formatter.py` を作成し、Issue #15に記載されている変換ロジックを基に、基本的な`DateFormatter`クラス構造と日時変換メソッドを実装する。
+1. [Issue #15に関連](../issue-notes/15.md): GitHub Actionsスクリプトの設定管理を統一する
+   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/scripts/` ディレクトリ内のスクリプトが使用している設定値（ファイルパス、APIキー関連設定など）を洗い出し、共通の設定ファイル（例: `config.json` や `config.js`）に集約する方針を検討する。
    - Agent実行プロンプ:
      ```
-     対象ファイル: `src/generate_repo_list/date_formatter.py`
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/**/*.cjs
 
-     実行内容: [Issue #15](../issue-notes/15.md)の記述を参考に、`datetime`オブジェクトを`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式に変換する`DateFormatter`クラスを`src/generate_repo_list/date_formatter.py`に新規作成してください。クラスはUTCとJSTのタイムゾーン変換を適切に処理し、指定されたフォーマットで文字列を返すメソッドを持つ必要があります。
+     実行内容: 上記ディレクトリ内の `.cjs` ファイルを分析し、ハードコードされている可能性のある設定値（例: 出力ディレクトリパス、プロンプトファイルパス、API関連定数など）をリストアップしてください。また、これらの設定値を一元管理するための最適なファイル形式（例: `config.js` または `config.json`）と、各スクリプトからのアクセス方法について提案してください。
 
-     確認事項:
-     - Pythonの`datetime`および`zoneinfo`（または`pytz`）モジュールが適切にインポートされていることを確認してください。
-     - JSTがUTC+9として正確に計算され、夏時間がないことを前提としてください。
-     - クラスはコンストラクタで変換ロジックをカプセル化し、シンプルなインターフェースを提供してください。
+     確認事項: 各スクリプトが現在どのように設定値にアクセスしているか、設定値の変更が他の機能に与える影響、およびセキュリティ（特にシークレット管理）への影響を確認してください。
 
-     期待する出力: `src/generate_repo_list/date_formatter.py` の新規ファイル作成と、実装された`DateFormatter`クラスのコード。
+     期待する出力: markdown形式で、洗い出された設定値のリスト、一元管理のための推奨ファイル形式、およびその実装方針（コード例を含む）を生成してください。
      ```
 
-2. [Issue #14](../issue-notes/14.md): 既存の日付表示箇所の特定と影響分析
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` を中心に、現在の日付や時刻が文字列として生成されている箇所を特定し、リストアップする。
+2. [Issue #15に関連](../issue-notes/15.md): GitHub Actionsスクリプトのエラーハンドリングを標準化する
+   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/scripts/` ディレクトリ内のスクリプトにおける既存のエラーハンドリングパターンを特定し、標準化の方向性を検討する。一般的なエラーパターン（ファイルが見つからない、API呼び出し失敗など）に焦点を当てる。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/*.py` （特に `markdown_generator.py`, `repository_processor.py`, `project_overview_fetcher.py`）
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/**/*.cjs
 
-     実行内容: `src/generate_repo_list/` ディレクトリ内のPythonファイルを分析し、現在日付や時刻（例: `date`、`updated_at`、`created_at`、`timestamp`などの変数名やそれに関連する処理）を文字列として出力している箇所をすべて特定してください。特定した箇所について、ファイル名と行番号、およびどのような形式で出力されているかをMarkdown形式でリストアップしてください。
+     実行内容: 上記ディレクトリ内の `.cjs` ファイルを分析し、現在実装されているエラーハンドリングのパターンを特定し、リストアップしてください。特に、エラー発生時のロギング、終了コードの利用、ユーザーへの通知方法に注目してください。その後、これらのエラーハンドリングを一貫性のある形で標準化するための改善案を提案してください。
 
-     確認事項:
-     - `datetime`オブジェクトが文字列に変換されている箇所、特に`strftime`などのフォーマット関数が使われている箇所に注目してください。
-     - Markdown生成部分で特に注意して確認してください。
+     確認事項: 既存のエラーハンドリングがワークフロー全体に与える影響、およびGitHub Actionsの標準的なエラー処理メカニズムとの整合性を確認してください。
 
-     期待する出力: Markdown形式で、日付表示箇所をファイルパス、行番号、現在のフォーマットと共にリストアップした分析結果。
+     期待する出力: markdown形式で、特定されたエラーハンドリングパターンと、推奨される統一されたエラーハンドリングのガイドライン（例: `try-catch` の使用、カスタムエラークラスの導入、一貫したログ形式）を生成してください。
      ```
 
-3. [Issue #15](../issue-notes/15.md): `DateFormatter`のユニットテスト作成
-   - 最初の小さな一歩: `tests/test_date_formatter.py` ファイルを作成し、`DateFormatter`クラスの基本的なUTC/JST変換ロジックが正しく機能するかを検証するテストケースを一つ追加する。
+3. [Issue #14に関連](../issue-notes/14.md): Development Statusプロンプトの品質向上とテスト
+   - 最初の小さな一歩: `development-status-prompt.md` の内容を、現在のオープンIssueとプロジェクト状況をより正確に反映させ、ハルシネーションを最小限に抑えるよう、プロンプトの指示内容をレビューし改善点を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `tests/test_date_formatter.py` (新規作成)
+     対象ファイル:
+     - .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+     - .github/actions-tmp/generated-docs/development-status-generated-prompt.md
 
-     実行内容: `src/generate_repo_list/date_formatter.py` で作成される`DateFormatter`クラスのユニットテストファイル`tests/test_date_formatter.py`を新規作成してください。`pytest`フレームワークを使用し、基本的なdatetimeオブジェクトが正しくUTCとJSTのデュアルタイムゾーン形式に変換されることを確認するテストケースを少なくとも一つ含めてください。例えば、特定の日時を入力し、期待される出力文字列（`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`）と比較するテストです。
+     実行内容: `development-status-prompt.md` の内容を、より明確で具体的な指示になるよう分析・改善提案してください。特に、以下の点を考慮してください:
+     1) Issueの最新状況（オープン/クローズ）を正確に判断させるための指示強化。
+     2) ハルシネーションのリスクをさらに低減するための記述。
+     3) プロジェクトファイル一覧や過去の変更履歴の活用方法の明確化。
 
-     確認事項:
-     - テストファイルがPythonの標準的なテスト規約に従っていることを確認してください。
-     - テストで使われる入力日時がタイムゾーン情報を持っている（timezone-awareである）ことを確認してください。
-     - `DateFormatter`クラスがまだ存在しない場合でも、テストはクラスのインターフェースを仮定して記述してください（モックは不要）。
+     確認事項: 既存のプロンプトガイドライン（現在の開発状況生成プロンプト自身）との整合性を保ち、生成される`Development Status`の内容がユーザーの期待と一致するかを考慮してください。変更が全体のプロンプト実行フローに与える影響を確認してください。
 
-     期待する出力: `tests/test_date_formatter.py` の新規ファイル作成と、実装されたユニットテストコード。
+     期待する出力: markdown形式で、`development-status-prompt.md` の改善案（具体的なテキスト変更提案を含む）と、その変更によって期待される効果を生成してください。
      ```
 
 ---
-Generated at: 2025-11-22 07:05:54 JST
+Generated at: 2025-11-23 07:06:11 JST
