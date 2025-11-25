@@ -1,50 +1,66 @@
-Last updated: 2025-11-25
+Last updated: 2025-11-26
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #15](../issue-notes/15.md) と [Issue #14](../issue-notes/14.md) は、プロジェクト全体での日付表示をUTCとJSTのデュアルタイムゾーン形式で提供することを目的としています。
-- この機能は、検索エンジン向け（UTC）とプロジェクトオーナー向け（JST）の両方の要件を満たすものです。
-- 具体的には、`date_formatter.py` に `DateFormatter` クラスを実装し、日付の変換とフォーマットを行うことが次の主要なタスクとして挙げられています。
+- [Issue #15](../issue-notes/15.md) および [Issue #14](../issue-notes/14.md) は、プロジェクト内のすべての日付表示をUTCとJSTのデュアル形式で併記する機能追加を進めている。
+- 特に [Issue #15](../issue-notes/15.md) では、`DateFormatter` クラスを新規導入し、`YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)` の形式で日付を整形する実装が計画されている。
+- この機能は、検索エンジン向けにUTCを、運用者向けにJSTを提供することで、日付情報の利便性とSEO効果の向上を目指している。
 
 ## 次の一手候補
-1.  [Issue #15](../issue-notes/15.md): `date_formatter.py` に `DateFormatter` クラスを新規作成し、UTC/JST変換ロジックを実装する
-    -   最初の小さな一歩: `src/generate_repo_list/date_formatter.py` ファイルを新規作成し、日付オブジェクトをUTCとJSTでフォーマットする基本的な `DateFormatter` クラスのスケルトンとメソッドを定義する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `src/generate_repo_list/date_formatter.py` (新規作成)
+1. [Issue #15](../issue-notes/15.md) DateFormatter クラスの新規作成と基本機能の実装
+   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ配下に `date_formatter.py` を新規作成し、与えられた `datetime` オブジェクトをUTCとJSTで整形する `format_datetime_dual_timezone` メソッドを実装する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `src/generate_repo_list/date_formatter.py` (新規作成)
 
-        実行内容: `src/generate_repo_list/date_formatter.py` を新規作成し、`DateFormatter` クラスを定義してください。このクラスは、datetimeオブジェクトを受け取り、"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)" 形式の文字列を返す `format_dual_timezone` メソッドを持つようにしてください。初期実装では、簡単な日付フォーマットとタイムゾーン変換ロジックを含めます。標準ライブラリの `datetime` と `pytz` (または同様のタイムゾーンライブラリ) を使用することを検討してください。
+     実行内容: `src/generate_repo_list/date_formatter.py` を新規作成し、`DateFormatter` クラスを実装してください。このクラスは、Pythonの`datetime`オブジェクトを受け取り、"YYYY-MM-DD HH:MM (UTC) / YYYY-MM-DD HH:MM (JST)" の形式で文字列を返す`format_datetime_dual_timezone`というスタティックメソッドを持つものとします。タイムゾーン処理には`pytz`ライブラリを使用することを想定し、JSTはUTC+9としてください。初期実装として、UTCとJSTの時間を正しく計算し、指定されたフォーマットで文字列を返すことを目標とします。
 
-        確認事項: `src/generate_repo_list` ディレクトリ内の既存のファイル命名規則に従い、クラス名がその役割を明確に表していることを確認してください。また、タイムゾーン処理が正確であるか、特にUTCとJSTのオフセット（+9時間）が正しく適用されているかを確認してください。
+     確認事項:
+     - `pytz`ライブラリが利用可能であること。
+     - Pythonの`datetime`オブジェクトがタイムゾーン情報を持つ場合と持たない場合の両方で正しく動作すること。
+     - JSTがUTC+9として計算されていること。
 
-        期待する出力: 新規作成された `src/generate_repo_list/date_formatter.py` ファイルの内容。
-        ```
+     期待する出力: `src/generate_repo_list/date_formatter.py` のファイル内容（Pythonコード）を生成してください。また、生成されたコードの簡単な使用例をMarkdown形式で記述してください。
+     ```
 
-2.  [Issue #14](../issue-notes/14.md): 既存の日付生成箇所を特定し、`DateFormatter` の利用計画を立てる
-    -   最初の小さな一歩: `src/generate_repo_list/repository_processor.py` および `src/generate_repo_list/markdown_generator.py` を中心に、現在日付情報が生成・利用されている箇所を特定し、`DateFormatter` をどのように導入するかに関する分析結果をMarkdown形式でまとめる。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/json_ld_template.json`, `src/generate_repo_list/template_processor.py`
+2. [Issue #14](../issue-notes/14.md) `src/generate_repo_list/repository_processor.py` での日付処理箇所の特定と修正計画立案
+   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py` ファイル内の、リポジトリの作成日や更新日などの日付情報を処理している箇所を特定し、その処理フローと現在の日付フォーマットを分析する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `src/generate_repo_list/repository_processor.py`
 
-        実行内容: 対象ファイル内で、日付情報を生成または利用している箇所（例: `updated_at`, `published_at`, `date` など）を洗い出し、それぞれの箇所で `DateFormatter` クラスの `format_dual_timezone` メソッドをどのように適用するかを分析してください。分析結果は、各ファイルごとに、対象の日付フィールドと、`DateFormatter` を利用した具体的な適用方法の提案を含んだMarkdown形式で出力してください。
+     実行内容: `src/generate_repo_list/repository_processor.py` 内で、リポジトリの作成日 (`created_at`) や最終更新日 (`updated_at`) などの日付情報を取得し、整形しているコード箇所を特定してください。現在の日付情報の取得方法、データ型、および最終的に出力されるフォーマットについて詳細に分析し、Markdown形式でレポートしてください。
 
-        確認事項: 日付が生成される全ての出力（Markdown、JSON-LDなど）が網羅されているかを確認してください。既存の日付フォーマットに影響を与えないよう、段階的な導入計画を考慮してください。
+     確認事項:
+     - GitHub APIから取得される日付情報の形式（ISO 8601文字列など）を考慮すること。
+     - 日付情報が最終的にMarkdown出力にどのように渡されているかを確認すること。
 
-        期待する出力: `date_formatter_integration_plan.md` という名前のMarkdownファイルで、`DateFormatter` の導入計画が詳細に記述された内容。
-        ```
+     期待する出力: 以下の項目を含むMarkdown形式の分析レポート：
+       - 日付情報が取得されるメソッド名とその行番号
+       - 取得された日付情報の初期データ型
+       - 日付情報に対して行われている現在の処理（フォーマット変換など）
+       - 現在の出力フォーマットの例
+       - `DateFormatter` クラスを導入する際に、どの箇所をどのように変更すべきかについての初期計画（簡潔に）。
+     ```
 
-3.  [Issue #15](../issue-notes/15.md): `DateFormatter` クラスの基本的な単体テストを追加する
-    -   最初の小さな一歩: `tests/test_date_formatter.py` を新規作成し、`DateFormatter` の `format_dual_timezone` メソッドが、UTCおよびJSTの日付を正しくフォーマットすることを確認する基本的なテストケースを記述する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `tests/test_date_formatter.py` (新規作成), `src/generate_repo_list/date_formatter.py`
+3. [Issue #14](../issue-notes/14.md) `src/generate_repo_list/markdown_generator.py` における日付表示箇所の特定
+   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` 内で、リポジトリ一覧などのMarkdownを生成する際に、日付情報が表示されている箇所を特定する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `src/generate_repo_list/markdown_generator.py`
 
-        実行内容: `tests/test_date_formatter.py` を新規作成し、`src/generate_repo_list/date_formatter.py` 内の `DateFormatter` クラスの `format_dual_timezone` メソッドに対する単体テストを実装してください。テストケースは、異なるタイムゾーンの datetime オブジェクト（特にUTCとJSTに相当するもの）を入力とし、期待されるデュアルタイムゾーンフォーマット文字列が出力されることを検証するものとします。`pytest` を使用したテストを想定してください。
+     実行内容: `src/generate_repo_list/markdown_generator.py` ファイルを分析し、生成されるMarkdown内で日付情報（リポジトリの作成日、更新日など）が実際に埋め込まれている箇所を全て特定してください。特定した箇所について、現在の日付情報のプレースホルダーや変数の使われ方をMarkdown形式で記述してください。
 
-        確認事項: テストファイルが `tests` ディレクトリ内の既存のテスト規約に準拠していることを確認してください。また、`pytest` で実行可能な形式であることを確認してください。
+     確認事項:
+     - リポジトリデータがどのような構造で`markdown_generator.py`に渡されているかを考慮すること。
+     - Jinja2などのテンプレートエンジンが使用されている場合、そのテンプレート内の日付関連の記述も確認すること。
 
-        期待する出力: 新規作成された `tests/test_date_formatter.py` ファイルの内容。
+     期待する出力: 以下の項目を含むMarkdown形式の分析結果：
+       - 日付が表示されていると思われるコードの抜粋と行番号
+       - 使用されている変数名やプレースホルダー
+       - 日付情報が最終的にMarkdown文字列に変換されるプロセスについて簡潔な説明
+       - `DateFormatter` クラスからの出力形式を適用するために、どの箇所を修正する必要があるかについての提案（簡潔に）。
 
 ---
-Generated at: 2025-11-25 07:06:03 JST
+Generated at: 2025-11-26 07:06:03 JST
