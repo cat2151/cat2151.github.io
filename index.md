@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-24
+Last Updated: 2025-11-25
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,20 @@ Last Updated: 2025-11-24
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
+[WIP] smf-to-ym2151log のRust版
+
+<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
+- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
+
+### Project Highlights
+- Standard MIDI Files (SMF) を、YM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するツールです。
+- Rust言語で実装されており、高パフォーマンスと堅牢な型安全性、そして外部からのカスタム音色設定に対応しています。
+- MIDIデータを2パスで処理し、中間イベントを生成後、YM2151の特性に合わせた詳細なレジスタ操作ログを出力します。
+- 📅 2025-11-25
+
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
@@ -93,10 +107,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、GitHub Pages向けにリポジトリ一覧を自動生成するシステムです。
-- 生成された情報はSEOに最適化されており、検索エンジンやLLMによるリポジトリ発見性を高めます。
-- 各リポジトリの概要やステータス（アクティブ、アーカイブなど）を魅力的に表示し、サイト訪問者に提供します。
-- 📅 2025-11-24
+- GitHub Pagesサイト向けに、ユーザーのリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、SEOに最適化されたMarkdownファイルを生成します。
+- これにより、リポジトリの検索エンジンによるインデックス化を促進し、LLMからの参照性を向上させます。
+- 📅 2025-11-25
 
 ## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
 Music Macro Language (MML) Parser and Player and Server and Client
@@ -107,52 +121,38 @@ Music Macro Language (MML) Parser and Player and Server and Client
 - **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
 
 ### Project Highlights
-- Music Macro Language (MML) テキストをリアルタイムで音楽として再生するWindows向けCLIツールです。
-- シンプルなコマンドライン操作で、"cde"のようなMMLをドレミの音階として即座に出力します。
-- Rustで開発されており、低レイテンシなオーディオ再生とバックグラウンドでの演奏機能を提供します。
-- 📅 2025-11-24
+- Music Macro Language (MML) を用いて、テキストからリアルタイムに音楽を再生するWindows向けCLIツールです。
+- 文字列 "cde" のような簡単な入力で「ドレミ」といった音楽をすぐに演奏できる、シンプルかつ低レイテンシな体験を提供します。
+- バックグラウンドでの演奏やサーバーモードにも対応し、他の作業を妨げることなく音楽を楽しむことが可能です。
+- 📅 2025-11-25
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
 
-<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: client-server](https://img.shields.io/badge/Topic-client--server-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
 
 - **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
 
 ### Project Highlights
-- YM2151（OPM）音源チップのレジスタイベントログをリアルタイムで再生するサーバー・クライアントシステムです。
-- JSON形式の音楽データを扱い、Windowsプラットフォーム上で高精度なオーディオ再生とWAVファイル出力に対応します。
-- 名前付きパイプによるサーバー・クライアント通信で、外部アプリケーションからの動的な演奏制御や切り替えが可能です。
-- 📅 2025-11-24
+- YM2151（OPM）音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
+- Windows専用のサーバー・クライアントアーキテクチャを採用し、柔軟な音楽制御とWAVファイル出力機能を提供します。
+- リアルタイムでのインタラクティブな演奏切り替えや音源エディタとの連携を目指しています。
+- 📅 2025-11-25
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-WIP
+YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
 
 - **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
 
 ### Project Highlights
-- YM2151（OPM）FM音源の音色を編集するための、Windows向けターミナルユーザーインターフェースアプリケーションです。
-- 直感的なキーボード・マウス操作とリアルタイムの音声フィードバックを通じて、効率的な音色作成を支援します。
-- Rustで開発されており、起動速度と操作時の応答性を重視したシンプルかつ高機能な音色エディタを目指しています。
+- YM2151 FM音源の音色を、リアルタイム音声フィードバック付きで編集できるWindows用ターミナルエディタです。
+- 直感的なキーボード・マウス操作とシンプルなTUI (Text-based User Interface) により、音色作成を支援します。
+- Rust言語で開発されており、高速起動と即時演奏が可能な設計思想に基づいて構築されています。
 - 📅 2025-11-24
-
-## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
-[WIP] smf-to-ym2151log のRust版
-
-<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
-- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
-
-### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRustツールです。
-- 2パス処理アーキテクチャを採用し、MIDIファイルから中間イベントを生成し、それを最終的なYM2151ログに変換します。
-- プログラムチェンジイベントに対応し、外部JSONファイルからカスタムYM2151音色をロードして適用できます。
-- 📅 2025-11-23
 
 ## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
 Obsidian plugin. Playing Music Macro Language and Chord notation.
