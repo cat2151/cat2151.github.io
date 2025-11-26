@@ -1,66 +1,71 @@
-Last updated: 2025-11-26
+Last updated: 2025-11-27
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #15](../issue-notes/15.md) および [Issue #14](../issue-notes/14.md) は、プロジェクト内のすべての日付表示をUTCとJSTのデュアル形式で併記する機能追加を進めている。
-- 特に [Issue #15](../issue-notes/15.md) では、`DateFormatter` クラスを新規導入し、`YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)` の形式で日付を整形する実装が計画されている。
-- この機能は、検索エンジン向けにUTCを、運用者向けにJSTを提供することで、日付情報の利便性とSEO効果の向上を目指している。
+- [Issue #15](../issue-notes/15.md)と[Issue #14](../issue-notes/14.md)は、プロジェクト内で表示されるすべての日付についてUTCとJSTを併記する機能の導入を目指しています。
+- この機能により、検索エンジン向けにはUTC、プロジェクトオーナー向けにはJST (UTC+9) の形式で日付が提供され、情報の利便性が向上します。
+- 現在、この目的のために`DateFormatter`クラスの導入が構想されており、datetimeオブジェクトを指定されたデュアルタイムゾーン形式に変換する変更が進行中です。
 
 ## 次の一手候補
-1. [Issue #15](../issue-notes/15.md) DateFormatter クラスの新規作成と基本機能の実装
-   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ配下に `date_formatter.py` を新規作成し、与えられた `datetime` オブジェクトをUTCとJSTで整形する `format_datetime_dual_timezone` メソッドを実装する。
-   - Agent実行プロンプト:
+1. [Issue #15](../issue-notes/15.md), [Issue #14](../issue-notes/14.md): `DateFormatter`クラスの基本的な実装
+   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py`として新しいファイルを作成し、`datetime`オブジェクトを`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式に変換する`DateFormatter`クラスを実装する。
+   - Agent実行プロンプ:
      ```
      対象ファイル: `src/generate_repo_list/date_formatter.py` (新規作成)
 
-     実行内容: `src/generate_repo_list/date_formatter.py` を新規作成し、`DateFormatter` クラスを実装してください。このクラスは、Pythonの`datetime`オブジェクトを受け取り、"YYYY-MM-DD HH:MM (UTC) / YYYY-MM-DD HH:MM (JST)" の形式で文字列を返す`format_datetime_dual_timezone`というスタティックメソッドを持つものとします。タイムゾーン処理には`pytz`ライブラリを使用することを想定し、JSTはUTC+9としてください。初期実装として、UTCとJSTの時間を正しく計算し、指定されたフォーマットで文字列を返すことを目標とします。
+     実行内容: `src/generate_repo_list/date_formatter.py` ファイルを新規作成し、以下の機能を`DateFormatter`クラスとして実装してください:
+     1. `format_date(datetime_obj)` メソッド: Pythonの`datetime`オブジェクトを受け取り、`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式の文字列を返す。
+     2. UTCとJST (UTC+9) のタイムゾーンを適切に扱い、指定された形式で併記する。
+     3. 入力された`datetime_obj`がタイムゾーン情報を持たない場合は、UTCと仮定して処理する。
 
      確認事項:
-     - `pytz`ライブラリが利用可能であること。
-     - Pythonの`datetime`オブジェクトがタイムゾーン情報を持つ場合と持たない場合の両方で正しく動作すること。
-     - JSTがUTC+9として計算されていること。
+     - Python標準ライブラリの`datetime`と`zoneinfo`モジュール（Python 3.9以降）を適切に使用すること。
+     - 生成される形式文字列が`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`に厳密に合致すること。
+     - タイムゾーンの変換が正確に行われること。
 
-     期待する出力: `src/generate_repo_list/date_formatter.py` のファイル内容（Pythonコード）を生成してください。また、生成されたコードの簡単な使用例をMarkdown形式で記述してください。
+     期待する出力: `src/generate_repo_list/date_formatter.py`のファイル内容を生成し、上記要件を満たす`DateFormatter`クラスが実装されていること。
      ```
 
-2. [Issue #14](../issue-notes/14.md) `src/generate_repo_list/repository_processor.py` での日付処理箇所の特定と修正計画立案
-   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py` ファイル内の、リポジトリの作成日や更新日などの日付情報を処理している箇所を特定し、その処理フローと現在の日付フォーマットを分析する。
+2. [Issue #15](../issue-notes/15.md), [Issue #14](../issue-notes/14.md): 既存の日付表示箇所の特定
+   - 最初の小さな一歩: プロジェクト内の`src/generate_repo_list/`ディレクトリ以下のPythonファイルを分析し、現在日付や時刻データを表示している全ての箇所を特定し、その情報をまとめる。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/repository_processor.py`
+     対象ファイル: `src/generate_repo_list/*.py`
 
-     実行内容: `src/generate_repo_list/repository_processor.py` 内で、リポジトリの作成日 (`created_at`) や最終更新日 (`updated_at`) などの日付情報を取得し、整形しているコード箇所を特定してください。現在の日付情報の取得方法、データ型、および最終的に出力されるフォーマットについて詳細に分析し、Markdown形式でレポートしてください。
+     実行内容: `src/generate_repo_list/`ディレクトリ内の全てのPythonファイルを分析し、日付や時刻に関連するデータ（例: `updated_at`, `created_at`, `date`など）を処理し、表示形式に変換している箇所を特定してください。
+     特に、`repository_processor.py`, `markdown_generator.py`, `project_overview_fetcher.py`などのファイルに注目してください。
+     特定された各箇所について、以下の情報をMarkdown形式で出力してください:
+     - ファイルパス
+     - 関連する関数/メソッド名
+     - 日付データがどのように取得され、どのようにフォーマットされているか（コードスニペットを含む）
 
      確認事項:
-     - GitHub APIから取得される日付情報の形式（ISO 8601文字列など）を考慮すること。
-     - 日付情報が最終的にMarkdown出力にどのように渡されているかを確認すること。
+     - `datetime`オブジェクトの操作、`strftime`などの日付フォーマット関数、または日付を表す文字列リテラルを検索の対象とすること。
+     - 外部ライブラリ（例: `dateutil`）が使用されているかどうかも考慮し、その使用箇所も特定すること。
 
-     期待する出力: 以下の項目を含むMarkdown形式の分析レポート：
-       - 日付情報が取得されるメソッド名とその行番号
-       - 取得された日付情報の初期データ型
-       - 日付情報に対して行われている現在の処理（フォーマット変換など）
-       - 現在の出力フォーマットの例
-       - `DateFormatter` クラスを導入する際に、どの箇所をどのように変更すべきかについての初期計画（簡潔に）。
+     期待する出力: 日付表示箇所をリストアップし、それぞれの詳細（ファイルパス、関数/メソッド名、コードスニペット）を記述したMarkdownファイル。
      ```
 
-3. [Issue #14](../issue-notes/14.md) `src/generate_repo_list/markdown_generator.py` における日付表示箇所の特定
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` 内で、リポジトリ一覧などのMarkdownを生成する際に、日付情報が表示されている箇所を特定する。
+3. [Issue #15](../issue-notes/15.md), [Issue #14](../issue-notes/14.md): `DateFormatter`のテストケース作成
+   - 最初の小さな一歩: `tests/test_date_formatter.py`ファイルを新規作成し、候補1で実装される予定の`DateFormatter`クラスに対する基本的なpytestテストケースを記述する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py`
+     対象ファイル: `tests/test_date_formatter.py` (新規作成)
 
-     実行内容: `src/generate_repo_list/markdown_generator.py` ファイルを分析し、生成されるMarkdown内で日付情報（リポジトリの作成日、更新日など）が実際に埋め込まれている箇所を全て特定してください。特定した箇所について、現在の日付情報のプレースホルダーや変数の使われ方をMarkdown形式で記述してください。
+     実行内容: `tests/test_date_formatter.py` ファイルを新規作成し、`src/generate_repo_list/date_formatter.py`に実装される予定の`DateFormatter`クラスのテストコードを`pytest`フレームワークを使用して作成してください。
+     以下のテストケースを必ず含めてください:
+     1. UTCの`datetime`オブジェクトが正しく`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式でフォーマットされるか。
+     2. タイムゾーン情報を持たない`datetime`オブジェクトがUTCと仮定され、正しくフォーマットされるか。
+     3. JSTの`datetime`オブジェクトを内部的に処理し、出力が正しくUTC/JST併記形式となるか。
+     4. 異なる日付や時刻（例: 年末年始、うるう年）における境界値テスト。
 
      確認事項:
-     - リポジトリデータがどのような構造で`markdown_generator.py`に渡されているかを考慮すること。
-     - Jinja2などのテンプレートエンジンが使用されている場合、そのテンプレート内の日付関連の記述も確認すること。
+     - `pytest`のベストプラクティスに従い、テスト関数名やアサーションを明確に記述すること。
+     - テスト対象の`DateFormatter`クラスが正しくインポートできる前提で記述すること（ファイルが存在しない場合は、インポート部分をコメントアウトでプレースホルダーとして残しても良い）。
+     - タイムゾーン情報を扱うために、`datetime`と`zoneinfo`モジュールを適切に使用すること。
 
-     期待する出力: 以下の項目を含むMarkdown形式の分析結果：
-       - 日付が表示されていると思われるコードの抜粋と行番号
-       - 使用されている変数名やプレースホルダー
-       - 日付情報が最終的にMarkdown文字列に変換されるプロセスについて簡潔な説明
-       - `DateFormatter` クラスからの出力形式を適用するために、どの箇所を修正する必要があるかについての提案（簡潔に）。
+     期待する出力: `tests/test_date_formatter.py`のファイル内容を生成し、上記要件を満たす`pytest`テストスイートが実装されていること。
 
 ---
-Generated at: 2025-11-26 07:06:03 JST
+Generated at: 2025-11-27 07:06:04 JST
