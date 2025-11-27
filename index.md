@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 75 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 71 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 75 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 71 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 75 open source projects.",
+      "description": "Programmer and developer. Publishing 71 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 75 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 71 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-26
+Last Updated: 2025-11-27
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2025-11-26
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-75-blue) ![Active](https://img.shields.io/badge/Active-47-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-50-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-71-blue) ![Active](https://img.shields.io/badge/Active-43-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-50-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-21_(28.0%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12_(16.0%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-8_(10.7%25)-dea584?style=flat&logo=rust) ![HTML](https://img.shields.io/badge/HTML-7_(9.3%25)-e34c26?style=flat&logo=html5) ![C](https://img.shields.io/badge/C-7_(9.3%25)-555555?style=flat&logo=c)
+![JavaScript](https://img.shields.io/badge/JavaScript-21_(29.6%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12_(16.9%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-8_(11.3%25)-dea584?style=flat&logo=rust) ![HTML](https://img.shields.io/badge/HTML-7_(9.9%25)-e34c26?style=flat&logo=html5) ![Batchfile](https://img.shields.io/badge/Batchfile-4_(5.6%25)-8b407a?style=flat&logo=windowsterminal)
 
 
 ---
@@ -83,34 +83,6 @@ Last Updated: 2025-11-26
 ## 🚀 Active Development
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを利用し、ユーザーのリポジトリ情報を自動取得するシステムです。
-- JekyllベースのGitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧をMarkdownで自動生成します。
-- これにより、GitHub Pagesの検索エンジンクロールを促進し、LLMからのリポジトリ参照性向上も期待されます。
-- 📅 2025-11-26
-
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FM音源の音色を、リアルタイム音声フィードバック付きで編集できるWindows用ターミナルエディタです。
-- 直感的なキーボード・マウス操作とシンプルなTUI (Text-based User Interface) により、音色作成を支援します。
-- Rust言語で開発されており、高速起動と即時演奏が可能な設計思想に基づいて構築されています。
-- 📅 2025-11-25
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
@@ -121,10 +93,38 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
 
 ### Project Highlights
-- Standard MIDI Files (SMF) を、YM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するツールです。
-- Rust言語で実装されており、高パフォーマンスと堅牢な型安全性、そして外部からのカスタム音色設定に対応しています。
-- MIDIデータを2パスで処理し、中間イベントを生成後、YM2151の特性に合わせた詳細なレジスタ操作ログを出力します。
-- 📅 2025-11-25
+- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust実装です。
+- 2パス処理アーキテクチャとRustの堅牢性を活かし、効率的かつ高精度な変換を実現します。
+- カスタム音色対応やライブラリAPIも提供し、様々なオーディオプロジェクトでの利用をサポートします。
+- 📅 2025-11-27
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを活用し、自身のGitHubリポジトリ一覧を自動で取得・生成します。
+- 生成されたリポジトリ一覧はJekyllベースのGitHub Pagesサイト向けにSEO最適化されたMarkdown形式で出力されます。
+- 検索エンジンによるクロールを促進し、LLMがリポジトリ情報を参照しやすくなることで開発効率向上に貢献します。
+- 📅 2025-11-27
+
+## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
+[WIP] mmlabc-to-smfのrust版
+
+<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
+- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
+
+### Project Highlights
+- Music Macro Language（MML）形式の楽譜テキストを、Standard MIDI File（SMF）形式の音楽ファイルに変換するライブラリです。
+- Rust言語で開発されており、安全な設計とパフォーマンスを重視した4パスアーキテクチャを採用しています。
+- MMLの解析からMIDIイベント生成、最終的なSMF作成までを一貫して処理し、多チャンネル対応やデバッグ出力機能を備えています。
+- 📅 2025-11-27
 
 ## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
 Music Macro Language (MML) Parser and Player and Server and Client
@@ -135,10 +135,24 @@ Music Macro Language (MML) Parser and Player and Server and Client
 - **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
 
 ### Project Highlights
-- Music Macro Language (MML) を用いて、テキストからリアルタイムに音楽を再生するWindows向けCLIツールです。
-- 文字列 "cde" のような簡単な入力で「ドレミ」といった音楽をすぐに演奏できる、シンプルかつ低レイテンシな体験を提供します。
-- バックグラウンドでの演奏やサーバーモードにも対応し、他の作業を妨げることなく音楽を楽しむことが可能です。
-- 📅 2025-11-25
+- Music Macro Language (MML) を解析し、テキスト形式で記述された音楽を再生するCLIツールです。
+- Windows環境に特化しており、シンプルなコマンド入力でMMLをリアルタイムで演奏できます。
+- 低レイテンシな応答性と、バックグラウンドでの安定した音楽再生が特徴です。
+- 📅 2025-11-27
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151 FM音源の音色を編集するための、Windows向けのターミナルユーザーインターフェース (TUI) アプリケーションです。
+- マウスやキーボード操作で音色パラメータをリアルタイムに調整し、すぐに音声でフィードバックを確認できます。
+- 編集中の音色は自動的に保存され、次回起動時に前回の続きから編集可能な開発中のツールです。
+- 📅 2025-11-26
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
@@ -181,20 +195,6 @@ MML(Music Macro Language)用のTUI(テキストユーザーインターフェー
 - MMLの記述と同時に、入力した音符を自動再生し、即座に確認できるミニマムな作曲体験を提供します。
 - 複数行テキスト編集、MMLテンプレート、再生モード切り替えなど、MML作成をサポートする機能が充実しています。
 - 📅 2025-11-16
-
-## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
-[WIP] mmlabc-to-smfのrust版
-
-<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
-- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
-
-### Project Highlights
-- Music Macro Language (MML) をStandard MIDI File (SMF) に変換するRust製のコマンドラインツールです。
-- 4つのパス（トークン化、AST変換、MIDIイベント生成、SMF作成）に分かれた明確なアーキテクチャを採用しています。
-- 多チャンネル対応、デバッグ用JSON出力、豊富なテストを備え、MML開発の効率化と音楽表現の可能性を広げます。
-- 📅 2025-11-15
 
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
 WIP
@@ -434,33 +434,6 @@ MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
 - Python, Rust, Go, TypeScriptなど、複数の言語での実装を通じてマルチプラットフォーム対応を試みています。
 - 📅 2025-11-09
 
-## [ym2151-typescript-webaudio](https://cat2151.github.io/ym2151-typescript-webaudio/)
-WIP
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
-
-- **Repository**: [https://github.com/cat2151/ym2151-typescript-webaudio](https://github.com/cat2151/ym2151-typescript-webaudio)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-typescript-webaudio/](https://cat2151.github.io/ym2151-typescript-webaudio/)
-- 📅 2025-11-09
-
-## [ym2151-golang-zig-cc](https://cat2151.github.io/ym2151-golang-zig-cc/)
-WIP
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
-
-- **Repository**: [https://github.com/cat2151/ym2151-golang-zig-cc](https://github.com/cat2151/ym2151-golang-zig-cc)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-golang-zig-cc/](https://cat2151.github.io/ym2151-golang-zig-cc/)
-- 📅 2025-11-09
-
-## [ym2151-typescipt-cli-zig-cc](https://cat2151.github.io/ym2151-typescipt-cli-zig-cc/)
-WIP
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
-
-- **Repository**: [https://github.com/cat2151/ym2151-typescipt-cli-zig-cc](https://github.com/cat2151/ym2151-typescipt-cli-zig-cc)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-typescipt-cli-zig-cc/](https://cat2151.github.io/ym2151-typescipt-cli-zig-cc/)
-- 📅 2025-11-09
-
 ## [cat-incremental-search-filter](https://cat2151.github.io/cat-incremental-search-filter/)
 WIP
 
@@ -505,15 +478,6 @@ A library for using mml2abc and abcjs easily in the browser.
 - **GitHub Pages**: [https://cat2151.github.io/cat2151-zenn-contents/](https://cat2151.github.io/cat2151-zenn-contents/)
 - **Overview**: No description available
 - 📅 2025-11-09
-
-## [ym2151-python-zig-cc](https://github.com/cat2151/ym2151-python-zig-cc)
-Nuked-OPMを使った最低限の音を出すexampleを、Windowsで、Pythonで、Cコンパイラにzig ccを使って実装を検証する用
-
-![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
-
-- **Repository**: [https://github.com/cat2151/ym2151-python-zig-cc](https://github.com/cat2151/ym2151-python-zig-cc)
-- **GitHub Pages**: None
-- 📅 2025-10-31
 
 ## [easy-web-midi-synth-template](https://cat2151.github.io/easy-web-midi-synth-template/)
 webpageを開くだけでソフトシンセで音が鳴る、最小規模のソースコード、テンプレート用
