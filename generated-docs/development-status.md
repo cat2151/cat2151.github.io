@@ -1,71 +1,72 @@
-Last updated: 2025-11-27
+Last updated: 2025-11-28
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #15](../issue-notes/15.md)と[Issue #14](../issue-notes/14.md)は、プロジェクト内で表示されるすべての日付についてUTCとJSTを併記する機能の導入を目指しています。
-- この機能により、検索エンジン向けにはUTC、プロジェクトオーナー向けにはJST (UTC+9) の形式で日付が提供され、情報の利便性が向上します。
-- 現在、この目的のために`DateFormatter`クラスの導入が構想されており、datetimeオブジェクトを指定されたデュアルタイムゾーン形式に変換する変更が進行中です。
+- [Issue #14](../issue-notes/14.md)と[Issue #15](../issue-notes/15.md)は、プロジェクト内のすべての日付表示をUTCとJSTで併記する機能の実装を目指しています。
+- これは主に運用者向け（JST）と検索エンジン最適化（UTC）を目的としており、`DateFormatter`クラスの導入が計画されています。
+- 最終目標は、日付が「YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)」形式で出力されるようにすることです。
 
 ## 次の一手候補
-1. [Issue #15](../issue-notes/15.md), [Issue #14](../issue-notes/14.md): `DateFormatter`クラスの基本的な実装
-   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py`として新しいファイルを作成し、`datetime`オブジェクトを`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式に変換する`DateFormatter`クラスを実装する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: `src/generate_repo_list/date_formatter.py` (新規作成)
-
-     実行内容: `src/generate_repo_list/date_formatter.py` ファイルを新規作成し、以下の機能を`DateFormatter`クラスとして実装してください:
-     1. `format_date(datetime_obj)` メソッド: Pythonの`datetime`オブジェクトを受け取り、`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式の文字列を返す。
-     2. UTCとJST (UTC+9) のタイムゾーンを適切に扱い、指定された形式で併記する。
-     3. 入力された`datetime_obj`がタイムゾーン情報を持たない場合は、UTCと仮定して処理する。
-
-     確認事項:
-     - Python標準ライブラリの`datetime`と`zoneinfo`モジュール（Python 3.9以降）を適切に使用すること。
-     - 生成される形式文字列が`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`に厳密に合致すること。
-     - タイムゾーンの変換が正確に行われること。
-
-     期待する出力: `src/generate_repo_list/date_formatter.py`のファイル内容を生成し、上記要件を満たす`DateFormatter`クラスが実装されていること。
-     ```
-
-2. [Issue #15](../issue-notes/15.md), [Issue #14](../issue-notes/14.md): 既存の日付表示箇所の特定
-   - 最初の小さな一歩: プロジェクト内の`src/generate_repo_list/`ディレクトリ以下のPythonファイルを分析し、現在日付や時刻データを表示している全ての箇所を特定し、その情報をまとめる。
+1. [Issue #15](../issue-notes/15.md): `DateFormatter`クラスの新規作成と単体テストの実装
+   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py`ファイルを新規作成し、`DateFormatter`クラスのスケルトンと、指定されたフォーマット（"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"）で日付をフォーマットするメソッドを実装する。合わせて、簡単な単体テストも作成する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/*.py`
+     対象ファイル: `src/generate_repo_list/date_formatter.py` (新規作成), `tests/test_date_formatter.py` (新規作成)
 
-     実行内容: `src/generate_repo_list/`ディレクトリ内の全てのPythonファイルを分析し、日付や時刻に関連するデータ（例: `updated_at`, `created_at`, `date`など）を処理し、表示形式に変換している箇所を特定してください。
-     特に、`repository_processor.py`, `markdown_generator.py`, `project_overview_fetcher.py`などのファイルに注目してください。
-     特定された各箇所について、以下の情報をMarkdown形式で出力してください:
-     - ファイルパス
-     - 関連する関数/メソッド名
-     - 日付データがどのように取得され、どのようにフォーマットされているか（コードスニペットを含む）
+     実行内容:
+     1. `src/generate_repo_list/date_formatter.py`を新規作成し、`DateFormatter`クラスを実装してください。
+     2. `DateFormatter`クラスは、`format_datetime_dual_timezone(dt: datetime) -> str`というメソッドを持つこと。
+     3. このメソッドは、入力されたtimezone-awareな`datetime`オブジェクトを、`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`の形式の文字列に変換すること。JSTはUTC+9です。
+     4. `tests/test_date_formatter.py`を新規作成し、`DateFormatter`クラスの単体テストを実装してください。具体的には、UTC時刻とJST時刻の`datetime`オブジェクトを与えた場合に、期待通りのフォーマット文字列が返されることを確認するテストケースを含めてください。
 
      確認事項:
-     - `datetime`オブジェクトの操作、`strftime`などの日付フォーマット関数、または日付を表す文字列リテラルを検索の対象とすること。
-     - 外部ライブラリ（例: `dateutil`）が使用されているかどうかも考慮し、その使用箇所も特定すること。
+     - `datetime`オブジェクトのタイムゾーン処理が正しく行われているかを確認してください。`pytz`や`zoneinfo`ライブラリの使用を検討してください（プロジェクトの既存ライブラリを優先）。
+     - Pythonの標準ライブラリ（`datetime`, `zoneinfo`など）で実現可能か確認し、不必要に外部ライブラリを導入しないようにしてください。
 
-     期待する出力: 日付表示箇所をリストアップし、それぞれの詳細（ファイルパス、関数/メソッド名、コードスニペット）を記述したMarkdownファイル。
+     期待する出力:
+     - `src/generate_repo_list/date_formatter.py`のファイル内容。
+     - `tests/test_date_formatter.py`のファイル内容。
      ```
 
-3. [Issue #15](../issue-notes/15.md), [Issue #14](../issue-notes/14.md): `DateFormatter`のテストケース作成
-   - 最初の小さな一歩: `tests/test_date_formatter.py`ファイルを新規作成し、候補1で実装される予定の`DateFormatter`クラスに対する基本的なpytestテストケースを記述する。
+2. [Issue #15](../issue-notes/15.md): 生成されたリポジトリリスト内の日付表示箇所を特定しリストアップする
+   - 最初の小さな一歩: `src/generate_repo_list`ディレクトリ内のPythonファイル（特に`markdown_generator.py`, `repository_processor.py`, `generate_repo_list.py`）を分析し、リポジトリの最終更新日時やコミット日時など、ユーザーに表示される可能性のある日付情報が現在どのように扱われているかを特定し、リストアップする。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `tests/test_date_formatter.py` (新規作成)
+     対象ファイル: `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/generate_repo_list.py`
 
-     実行内容: `tests/test_date_formatter.py` ファイルを新規作成し、`src/generate_repo_list/date_formatter.py`に実装される予定の`DateFormatter`クラスのテストコードを`pytest`フレームワークを使用して作成してください。
-     以下のテストケースを必ず含めてください:
-     1. UTCの`datetime`オブジェクトが正しく`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式でフォーマットされるか。
-     2. タイムゾーン情報を持たない`datetime`オブジェクトがUTCと仮定され、正しくフォーマットされるか。
-     3. JSTの`datetime`オブジェクトを内部的に処理し、出力が正しくUTC/JST併記形式となるか。
-     4. 異なる日付や時刻（例: 年末年始、うるう年）における境界値テスト。
+     実行内容:
+     対象ファイル群を分析し、以下の観点からMarkdown形式で出力してください：
+     1. 現在、最終的なMarkdown出力に含まれる日付情報（例: リポジトリの最終更新日時、コミット日時など）がどのファイルで、どの変数名で、どのようなフォーマットで扱われているかを特定する。
+     2. 特定された日付情報が、`src/generate_repo_list/markdown_generator.py`で最終的にMarkdown文字列に変換される際、どのように出力されているかを確認する。
+     3. 今後`DateFormatter`を適用すべき箇所を具体的にリストアップする。
 
      確認事項:
-     - `pytest`のベストプラクティスに従い、テスト関数名やアサーションを明確に記述すること。
-     - テスト対象の`DateFormatter`クラスが正しくインポートできる前提で記述すること（ファイルが存在しない場合は、インポート部分をコメントアウトでプレースホルダーとして残しても良い）。
-     - タイムゾーン情報を扱うために、`datetime`と`zoneinfo`モジュールを適切に使用すること。
+     - `datetime`オブジェクトがどのように生成され、どこで文字列に変換されているかに特に注意してください。
+     - 依存関係として、`src/generate_repo_list/project_overview_fetcher.py`が日付情報を取得している可能性も考慮に入れてください。
 
-     期待する出力: `tests/test_date_formatter.py`のファイル内容を生成し、上記要件を満たす`pytest`テストスイートが実装されていること。
+     期待する出力:
+     Markdown形式で、特定された日付情報のソース、現在の処理フロー、および`DateFormatter`適用候補箇所の詳細なリスト。
+     ```
+
+3. [Issue #14](../issue-notes/14.md): 既存のREADME.mdやindex.mdの日付表示を特定・確認
+   - 最初の小さな一歩: プロジェクトルートの`index.md`および`README.md`を調査し、もし日付が表示されている箇所があれば、その表示形式とソースを特定する。特にJekyllのフロントマターやLiquidテンプレートで日付が使われている可能性を考慮に入れる。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `index.md`, `README.md`
+
+     実行内容:
+     対象ファイルを分析し、以下の観点からMarkdown形式で出力してください：
+     1. `index.md`と`README.md`内に日付が表示されている箇所があるかを特定してください。
+     2. もし日付表示があれば、それがどのような形式で、どこから来ている（例: フロントマター、Liquid変数、静的テキストなど）かを分析してください。
+     3. これらの日付表示が、今後のUTC/JSTデュアル表示要件にどのように影響するか、あるいは既存の`DateFormatter`を適用できるかを検討し、提案を記述してください。
+
+     確認事項:
+     - Jekyllのサイト生成プロセスにおいて、日付がどのように扱われるか（例: `page.date`, `site.time`など）を考慮に入れてください。
+     - 開発状況生成プロンプトの「生成しないもの」に「プロジェクト構造情報（来訪者向け情報のため、別ファイルで管理）」とあるため、その観点から分析結果を適切にまとめてください。
+
+     期待する出力:
+     Markdown形式で、`index.md`および`README.md`における日付表示の分析結果、および今後の対応に関する提案。
 
 ---
-Generated at: 2025-11-27 07:06:04 JST
+Generated at: 2025-11-28 07:06:00 JST
