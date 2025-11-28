@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-27
+Last Updated: 2025-11-28
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,34 @@ Last Updated: 2025-11-27
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub Pagesサイト向けにリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを活用し、SEOに最適化されたMarkdown形式でリポジトリ情報を出力します。
+- これにより、検索エンジンでの発見性を高め、LLMからの参照も容易にします。
+- 📅 2025-11-28
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151 FM音源の音色を編集するための、Windows向けのターミナルユーザーインターフェース (TUI) アプリケーションです。
+- マウスやキーボード操作で音色パラメータをリアルタイムに調整し、すぐに音声でフィードバックを確認できます。
+- 編集中の音色は自動的に保存され、次回起動時に前回の続きから編集可能な開発中のツールです。
+- 📅 2025-11-27
+
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
 
@@ -96,20 +124,6 @@ Last Updated: 2025-11-27
 - Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust実装です。
 - 2パス処理アーキテクチャとRustの堅牢性を活かし、効率的かつ高精度な変換を実現します。
 - カスタム音色対応やライブラリAPIも提供し、様々なオーディオプロジェクトでの利用をサポートします。
-- 📅 2025-11-27
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを活用し、自身のGitHubリポジトリ一覧を自動で取得・生成します。
-- 生成されたリポジトリ一覧はJekyllベースのGitHub Pagesサイト向けにSEO最適化されたMarkdown形式で出力されます。
-- 検索エンジンによるクロールを促進し、LLMがリポジトリ情報を参照しやすくなることで開発効率向上に貢献します。
 - 📅 2025-11-27
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
@@ -139,20 +153,6 @@ Music Macro Language (MML) Parser and Player and Server and Client
 - Windows環境に特化しており、シンプルなコマンド入力でMMLをリアルタイムで演奏できます。
 - 低レイテンシな応答性と、バックグラウンドでの安定した音楽再生が特徴です。
 - 📅 2025-11-27
-
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FM音源の音色を編集するための、Windows向けのターミナルユーザーインターフェース (TUI) アプリケーションです。
-- マウスやキーボード操作で音色パラメータをリアルタイムに調整し、すぐに音声でフィードバックを確認できます。
-- 編集中の音色は自動的に保存され、次回起動時に前回の続きから編集可能な開発中のツールです。
-- 📅 2025-11-26
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
