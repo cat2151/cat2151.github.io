@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 71 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 71 projects (⭐51 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 71 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 71 projects (⭐51 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -50,7 +50,7 @@ json_ld: |
       "description": "Programmer and developer. Publishing 71 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 71 projects (⭐50 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 71 projects (⭐51 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-28
+Last Updated: 2025-11-29
 
 ## 📋 Table of Contents
 
@@ -71,7 +71,7 @@ Last Updated: 2025-11-28
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-71-blue) ![Active](https://img.shields.io/badge/Active-43-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-50-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-71-blue) ![Active](https://img.shields.io/badge/Active-43-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-51-gold)
 
 ### Core Technologies
 
@@ -93,10 +93,24 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けにリポジトリ一覧を自動生成するシステムです。
-- GitHub APIを活用し、SEOに最適化されたMarkdown形式でリポジトリ情報を出力します。
-- これにより、検索エンジンでの発見性を高め、LLMからの参照も容易にします。
-- 📅 2025-11-28
+- GitHub APIを利用し、ユーザーのリポジトリ情報を自動で取得・処理します。
+- 取得した情報からGitHub Pages向けにSEO最適化されたリポジトリ一覧をMarkdownで生成します。
+- 検索エンジンからのクロールを促進し、リポジトリの可視性とLLMによる参照性を向上させます。
+- 📅 2025-11-29
+
+## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
+A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
+
+<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue)
+
+- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
+- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
+
+### Project Highlights
+- 格ゲーのボタン練習に特化したWindows用アプリケーションです。
+- ランダムに表示されるお題に合わせ、正しいボタン入力を素早く行うことでスコアを獲得します。
+- 常駐型で、ゲームプレイを邪魔せず、いつでも即座に練習を開始できる設計が特徴です。
+- 📅 2025-11-29
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
@@ -107,10 +121,10 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
 
 ### Project Highlights
-- YM2151 FM音源の音色を編集するための、Windows向けのターミナルユーザーインターフェース (TUI) アプリケーションです。
-- マウスやキーボード操作で音色パラメータをリアルタイムに調整し、すぐに音声でフィードバックを確認できます。
-- 編集中の音色は自動的に保存され、次回起動時に前回の続きから編集可能な開発中のツールです。
-- 📅 2025-11-27
+- YM2151 FM音源の音色を、リアルタイムでフィードバックを受けながら直感的に編集できるターミナルユーザーインターフェース（TUI）エディタです。
+- Windows環境に特化し、簡単なキー操作やマウス操作でパラメータを増減させ、音色をプレビューできます。
+- 編集した音色は自動的に保存され、再起動後も作業の続きから始められるよう設計されています。
+- 📅 2025-11-28
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
@@ -376,20 +390,6 @@ GitHub Pages用の_config.ymlファイルを複数のローカルリポジトリ
 - 常駐せず、明示的に起動して使うランチャ
 - A～Zキーでクリップボードの内容に応じて選べる
 - 選択肢はTOML設定ファイルで指定した正規表現にマッチしたものが表示され、クリップボード内容で自動判別される
-- 📅 2025-11-09
-
-## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
-A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
-
-<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue)
-
-- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
-- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
-
-### Project Highlights
-- 格ゲーのボタン練習に特化したWindows用アプリケーションです。
-- ランダムに表示されるお題に合わせ、正しいボタン入力を素早く行うことでスコアを獲得します。
-- 常駐型で、ゲームプレイを邪魔せず、いつでも即座に練習を開始できる設計が特徴です。
 - 📅 2025-11-09
 
 ## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
