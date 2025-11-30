@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-29
+Last Updated: 2025-11-30
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,38 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、ユーザーのリポジトリ情報を自動で取得・処理します。
-- 取得した情報からGitHub Pages向けにSEO最適化されたリポジトリ一覧をMarkdownで生成します。
-- 検索エンジンからのクロールを促進し、リポジトリの可視性とLLMによる参照性を向上させます。
-- 📅 2025-11-29
+- GitHub Pagesサイト向けに、GitHubリポジトリ一覧を自動生成するシステムです。
+- GitHub APIからリポジトリ情報を取得し、SEOに最適化されたMarkdown形式のページを生成します。
+- これにより、リポジトリの検索エンジンでの発見性を高め、LLMからの参照性改善に貢献します。
+- 📅 2025-11-30
+
+## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
+Music Macro Language (MML) Parser and Player and Server and Client
+
+<a href="https://cat2151.github.io/cat-play-mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
+
+### Project Highlights
+- Music Macro Language (MML) 形式のテキストから音楽を生成し、リアルタイムで再生するWindows用CLIツールです。
+- 簡単なコマンドライン入力（例: `cat-play-mml cde`）で、すぐに音楽（ドレミ）を演奏できます。
+- 低レイテンシでの演奏と、バックグラウンドでのサーバーモードによる柔軟な利用が特徴です。
+- 📅 2025-11-30
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151（OPM）FM音源の音色をターミナル上で編集するためのアプリケーションです。
+- Rustで開発されており、Windows環境でリアルタイムな音声フィードバックを提供します。
+- シンプルな操作性と迅速な音色プレビューを通じて、直感的な音作りを支援します。
+- 📅 2025-11-30
 
 ## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
 A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
@@ -111,20 +139,6 @@ A tool to practice button inputs for fighting games on Windows. Ideal for leverl
 - ランダムに表示されるお題に合わせ、正しいボタン入力を素早く行うことでスコアを獲得します。
 - 常駐型で、ゲームプレイを邪魔せず、いつでも即座に練習を開始できる設計が特徴です。
 - 📅 2025-11-29
-
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FM音源の音色を、リアルタイムでフィードバックを受けながら直感的に編集できるターミナルユーザーインターフェース（TUI）エディタです。
-- Windows環境に特化し、簡単なキー操作やマウス操作でパラメータを増減させ、音色をプレビューできます。
-- 編集した音色は自動的に保存され、再起動後も作業の続きから始められるよう設計されています。
-- 📅 2025-11-28
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
@@ -152,20 +166,6 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - Music Macro Language（MML）形式の楽譜テキストを、Standard MIDI File（SMF）形式の音楽ファイルに変換するライブラリです。
 - Rust言語で開発されており、安全な設計とパフォーマンスを重視した4パスアーキテクチャを採用しています。
 - MMLの解析からMIDIイベント生成、最終的なSMF作成までを一貫して処理し、多チャンネル対応やデバッグ出力機能を備えています。
-- 📅 2025-11-27
-
-## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
-Music Macro Language (MML) Parser and Player and Server and Client
-
-<a href="https://cat2151.github.io/cat-play-mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
-- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
-
-### Project Highlights
-- Music Macro Language (MML) を解析し、テキスト形式で記述された音楽を再生するCLIツールです。
-- Windows環境に特化しており、シンプルなコマンド入力でMMLをリアルタイムで演奏できます。
-- 低レイテンシな応答性と、バックグラウンドでの安定した音楽再生が特徴です。
 - 📅 2025-11-27
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
