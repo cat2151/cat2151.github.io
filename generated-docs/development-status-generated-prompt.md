@@ -1,4 +1,4 @@
-Last updated: 2025-12-01
+Last updated: 2025-12-02
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -162,6 +162,7 @@ Last updated: 2025-12-01
 - .github/actions-tmp/generated-docs/project-overview-generated-prompt.md
 - .github/actions-tmp/generated-docs/project-overview.md
 - .github/actions-tmp/generated-docs/style.css
+- .github/actions-tmp/googled947dc864c270e07.html
 - .github/actions-tmp/issue-notes/10.md
 - .github/actions-tmp/issue-notes/11.md
 - .github/actions-tmp/issue-notes/12.md
@@ -207,6 +208,7 @@ Last updated: 2025-12-01
 - assets/favicon-512x512.png
 - debug_project_overview.py
 - generated-docs/project-overview-generated-prompt.md
+- googled947dc864c270e07.html
 - index.md
 - issue-notes/10.md
 - issue-notes/12.md
@@ -597,6 +599,9 @@ jobs:
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+1a9cc97 googleにindexされる用
+b054810 Auto-update repository list - 2025-11-30
+4002f55 Update project summaries (overview & development status) [auto]
 73ecd30 Auto-update repository list - 2025-11-29
 d25a511 Update project summaries (overview & development status) [auto]
 e839af3 Auto-update repository list - 2025-11-28
@@ -604,17 +609,15 @@ d4d4897 Update project summaries (overview & development status) [auto]
 090a7dc Auto-update repository list - 2025-11-27
 ed6af2c Update project summaries (overview & development status) [auto]
 ef71464 Auto-update repository list - 2025-11-26
-5b77184 Update project summaries (overview & development status) [auto]
-9ad4d4c Auto-update repository list - 2025-11-25
-f80d579 Update project summaries (overview & development status) [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
 generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
+googled947dc864c270e07.html
 index.md
 
 
 ---
-Generated at: 2025-12-01 07:05:24 JST
+Generated at: 2025-12-02 07:05:34 JST

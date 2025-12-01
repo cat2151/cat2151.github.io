@@ -1,4 +1,4 @@
-Last updated: 2025-12-01
+Last updated: 2025-12-02
 
 
 # プロジェクト概要生成プロンプト（来訪者向け）
@@ -198,6 +198,7 @@ project_overview:
   📄 favicon-512x512.png
 📄 debug_project_overview.py
 📁 generated-docs/
+🌐 googled947dc864c270e07.html
 📖 index.md
 📁 issue-notes/
   📖 10.md
@@ -241,13 +242,16 @@ project_overview:
   📄 test_repository_processor.py
 
 ## ファイル詳細分析
-
+**googled947dc864c270e07.html** (1行, 53バイト)
+  - 関数: なし
+  - インポート: なし
 
 ## 関数呼び出し階層
 関数呼び出し階層を分析できませんでした
 
 ## プロジェクト構造（ファイル一覧）
 README.md
+googled947dc864c270e07.html
 index.md
 issue-notes/10.md
 issue-notes/12.md
@@ -269,4 +273,4 @@ src/generate_repo_list/json_ld_template.json
 
 
 ---
-Generated at: 2025-12-01 07:05:23 JST
+Generated at: 2025-12-02 07:05:34 JST
