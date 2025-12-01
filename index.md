@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-11-30
+Last Updated: 2025-12-01
 
 ## 📋 Table of Contents
 
@@ -84,62 +84,6 @@ Last Updated: 2025-11-30
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub Pagesサイト向けに、GitHubリポジトリ一覧を自動生成するシステムです。
-- GitHub APIからリポジトリ情報を取得し、SEOに最適化されたMarkdown形式のページを生成します。
-- これにより、リポジトリの検索エンジンでの発見性を高め、LLMからの参照性改善に貢献します。
-- 📅 2025-11-30
-
-## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
-Music Macro Language (MML) Parser and Player and Server and Client
-
-<a href="https://cat2151.github.io/cat-play-mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
-- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
-
-### Project Highlights
-- Music Macro Language (MML) 形式のテキストから音楽を生成し、リアルタイムで再生するWindows用CLIツールです。
-- 簡単なコマンドライン入力（例: `cat-play-mml cde`）で、すぐに音楽（ドレミ）を演奏できます。
-- 低レイテンシでの演奏と、バックグラウンドでのサーバーモードによる柔軟な利用が特徴です。
-- 📅 2025-11-30
-
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151（OPM）FM音源の音色をターミナル上で編集するためのアプリケーションです。
-- Rustで開発されており、Windows環境でリアルタイムな音声フィードバックを提供します。
-- シンプルな操作性と迅速な音色プレビューを通じて、直感的な音作りを支援します。
-- 📅 2025-11-30
-
-## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
-A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
-
-<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue)
-
-- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
-- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
-
-### Project Highlights
-- 格ゲーのボタン練習に特化したWindows用アプリケーションです。
-- ランダムに表示されるお題に合わせ、正しいボタン入力を素早く行うことでスコアを獲得します。
-- 常駐型で、ゲームプレイを邪魔せず、いつでも即座に練習を開始できる設計が特徴です。
-- 📅 2025-11-29
-
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
 
@@ -149,10 +93,66 @@ A tool to practice button inputs for fighting games on Windows. Ideal for leverl
 - **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
 
 ### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust実装です。
-- 2パス処理アーキテクチャとRustの堅牢性を活かし、効率的かつ高精度な変換を実現します。
-- カスタム音色対応やライブラリAPIも提供し、様々なオーディオプロジェクトでの利用をサポートします。
-- 📅 2025-11-27
+- Standard MIDI Files (SMF) をYM2151 FM音源チップ向けのレジスタ書き込みログ（JSON形式）に変換するRust製ツールおよびライブラリです。
+- 2パス処理アーキテクチャとプログラムチェンジ対応により、高精度かつ柔軟なMIDIデータ処理を実現します。
+- 型安全性と高パフォーマンスを特徴とし、他のRustプロジェクトへの組み込みやコマンドラインでの利用が可能です。
+- 📅 2025-12-01
+
+## [easymmlabc](https://cat2151.github.io/easymmlabc/)
+A library for using mml2abc and abcjs easily in the browser.
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+
+- **Repository**: [https://github.com/cat2151/easymmlabc](https://github.com/cat2151/easymmlabc)
+- **GitHub Pages**: [https://cat2151.github.io/easymmlabc/](https://cat2151.github.io/easymmlabc/)
+
+### Project Highlights
+- MML (Music Macro Language) をブラウザで手軽に扱えるようにするWrapperライブラリです。
+- `mml2abc`と`abcjs`を利用し、MMLから五線譜表示と音源再生を可能にします。
+- Web上でテキストベースの音楽データを視覚化・演奏する機会を広げることを目指します。
+- 📅 2025-12-01
+
+## [cat-clipboard-launcher](https://cat2151.github.io/cat-clipboard-launcher/)
+軽量なクリップボードランチャ。素早い手動操作用
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat-clipboard-launcher](https://github.com/cat2151/cat-clipboard-launcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-clipboard-launcher/](https://cat2151.github.io/cat-clipboard-launcher/)
+
+### Project Highlights
+- クリップボードの内容に応じて、あらかじめ設定されたアプリケーションやスクリプトを起動するランチャーです。
+- ユーザーが明示的に起動し、クリップボードの内容にマッチした候補からA～Zキーで実行アクションを選択します。
+- TOML形式の設定ファイルにより、クリップボードの内容と対応するコマンドを柔軟に定義・自動判別できます。
+- 📅 2025-12-01
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを利用し、リポジトリ情報を自動で取得・処理するシステムです。
+- JekyllベースのGitHub Pagesサイト向けに、SEOを考慮したMarkdown形式のリポジトリ一覧を生成します。
+- 検索エンジンやLLMからのリポジトリ参照性を向上させ、情報発見と開発効率の改善を目指します。
+- 📅 2025-12-01
+
+## [mml-repl-like](https://cat2151.github.io/mml-repl-like/)
+cdefgabを入力するごとにその音が鳴るMMLエディタ（実験用）
+
+<a href="https://cat2151.github.io/mml-repl-like/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=html5)
+
+- **Repository**: [https://github.com/cat2151/mml-repl-like](https://github.com/cat2151/mml-repl-like)
+- **GitHub Pages**: [https://cat2151.github.io/mml-repl-like/](https://cat2151.github.io/mml-repl-like/)
+
+### Project Highlights
+- MML（Music Macro Language）をリアルタイムで編集し、インタラクティブに音を再生できるウェブアプリケーションです。
+- キーボード入力やカーソル移動に連動して即座にMMLの音を鳴らし、音楽制作の試行錯誤サイクルを高速化します。
+- フレーズ作成、コード進行の試行、転調などのMMLベースの音楽制作を直感的に支援するツールです。
+- 📅 2025-12-01
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 [WIP] mmlabc-to-smfのrust版
@@ -163,10 +163,136 @@ A tool to practice button inputs for fighting games on Windows. Ideal for leverl
 - **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
 
 ### Project Highlights
-- Music Macro Language（MML）形式の楽譜テキストを、Standard MIDI File（SMF）形式の音楽ファイルに変換するライブラリです。
-- Rust言語で開発されており、安全な設計とパフォーマンスを重視した4パスアーキテクチャを採用しています。
-- MMLの解析からMIDIイベント生成、最終的なSMF作成までを一貫して処理し、多チャンネル対応やデバッグ出力機能を備えています。
-- 📅 2025-11-27
+- Music Macro Language (MML) 形式の文字列をStandard MIDI File (SMF) へ変換するRustライブラリです。
+- 4パスアーキテクチャを採用し、MMLの解析、抽象構文木の構築、MIDIイベント生成を経てSMFを作成します。
+- コマンドラインインターフェース (CLI) を提供し、MMLによる楽曲を簡単に作成・再生できます。
+- 📅 2025-12-01
+
+## [github-actions](https://cat2151.github.io/github-actions/)
+collection of reusable GitHub Actions workflows for multiple projects
+
+<a href="https://cat2151.github.io/github-actions/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: github-actions](https://img.shields.io/badge/Topic-github--actions-lightblue)
+
+- **Repository**: [https://github.com/cat2151/github-actions](https://github.com/cat2151/github-actions)
+- **GitHub Pages**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
+
+### Project Highlights
+- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽に
+- 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOK
+- ✅ メンテは一括、プロジェクト開発に集中できます
+- 📅 2025-12-01
+
+## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
+MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
+
+<a href="https://cat2151.github.io/tonejs-mml-to-json/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=html5) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
+
+- **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
+
+### Project Highlights
+- MML（Music Macro Language）で書いた音楽を、ブラウザで再生できるJSON形式に変換します
+- 簡単なテキストで音楽を作成し、ウェブサイトで演奏することができます
+- 音楽の変換部分に特化したツールで、実際の再生は別プロジェクト（`tonejs-json-sequencer`）が担当します
+- 📅 2025-12-01
+
+## [easyabcjs6](https://cat2151.github.io/easyabcjs6/)
+A library for using abcjs easily in the browser.
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue)
+
+- **Repository**: [https://github.com/cat2151/easyabcjs6](https://github.com/cat2151/easyabcjs6)
+- **GitHub Pages**: [https://cat2151.github.io/easyabcjs6/](https://cat2151.github.io/easyabcjs6/)
+
+### Project Highlights
+- easyabcjs6は、ウェブブラウザ上でABC音楽記譜法を簡単に表示し、再生するためのJavaScriptライブラリです。
+- 人気の`abcjs`ライブラリをラップし、シンプルなHTMLとJavaScriptコードで五線譜の描画とMIDI音源による演奏を可能にします。
+- 将来的にABC音楽記譜法以外のテキストベースの音楽フォーマットにも対応し、多様な音楽表示・演奏システム構築への基盤となることを目指しています。
+- 📅 2025-12-01
+
+## [cat-obsidian-templater-scripts](https://cat2151.github.io/cat-obsidian-templater-scripts/)
+Simple user scripts for the Obsidian Templater plugin.
+
+<a href="https://cat2151.github.io/cat-obsidian-templater-scripts/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+
+- **Repository**: [https://github.com/cat2151/cat-obsidian-templater-scripts](https://github.com/cat2151/cat-obsidian-templater-scripts)
+- **GitHub Pages**: [https://cat2151.github.io/cat-obsidian-templater-scripts/](https://cat2151.github.io/cat-obsidian-templater-scripts/)
+
+### Project Highlights
+- ObsidianのTemplaterプラグインの機能を拡張するJavaScriptスクリプトと活用ノウハウ集です。
+- テキストエディタのマクロのように、Obsidianに便利な機能を手軽に追加するためのサンプルを提供します。
+- 現在行のハイライト（ブックマーク）やファイルの挿入など、実用的な機能のスクリプトを含みます。
+- 📅 2025-12-01
+
+## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
+A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
+
+<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue)
+
+- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
+- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
+
+### Project Highlights
+- 格ゲーのボタン練習アプリです。
+- ランダムでお題が表示され、指定されたボタンを押すことでスコアが得られます。
+- Windowsで動作し、ストリートファイター6モダンをはじめ、様々な格闘ゲームの練習に活用できます。
+- 📅 2025-12-01
+
+## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
+マウスで鳴らせるオシレータ・ハードシンク・シンセサイザー
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat-oscillator-sync](https://github.com/cat2151/cat-oscillator-sync)
+- **GitHub Pages**: [https://cat2151.github.io/cat-oscillator-sync/](https://cat2151.github.io/cat-oscillator-sync/)
+
+### Project Highlights
+- マウスの位置に応じてリアルタイムに音響パラメータを制御するインタラクティブなシンセサイザーです。
+- ハードシンク技術により豊かで表現力のある音色を生成し、X/Y軸でマスター・スレーブ周波数を制御します。
+- Python, Rust, Go, TypeScriptなど多言語での実装検証と学習を目的としたクロスプラットフォームプロジェクトです。
+- 📅 2025-12-01
+
+## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
+Music Macro Language (MML) Parser and Player and Server and Client
+
+<a href="https://cat2151.github.io/cat-play-mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
+
+### Project Highlights
+- Music Macro Language (MML) を解釈し、音楽を再生するCLIツールです。
+- コマンドラインからMML文字列（例: "cde"）を入力するだけで、リアルタイムに音楽を演奏します。
+- Windows向けにRustで開発されており、シンプルで低レイテンシな音楽体験を提供します。
+- 📅 2025-12-01
+
+## [mml2abc](https://cat2151.github.io/mml2abc/)
+A library transpiles Music Macro Language into ABC music notation.
+
+<a href="https://cat2151.github.io/mml2abc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![PEG.js](https://img.shields.io/badge/PEG.js-40be89?style=flat&logo=javascript) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+
+- **Repository**: [https://github.com/cat2151/mml2abc](https://github.com/cat2151/mml2abc)
+- **GitHub Pages**: [https://cat2151.github.io/mml2abc/](https://cat2151.github.io/mml2abc/)
+
+### Project Highlights
+- Music Macro Language (MML) をABC記譜法に変換するJavaScriptライブラリです。
+- ブラウザやObsidianでMMLを使った音楽演奏を可能にし、シンプルなテキスト変換機能を提供します。
+- abcjsとの連携により、楽譜表示と音源再生を実現する概念実証プロジェクトです。
+- 📅 2025-12-01
+
+## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
+File Change Monitoring Tool - Detects file changes and executes commands
+
+<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
+
+### Project Highlights
+- ファイル変更を監視し、TOML設定に基づいて定義されたカスタムコマンドを自動実行するツールです。
+- 複数ファイルの同時監視、特定の時間帯での実行、プロセス実行中の抑制など、柔軟な自動化設定が可能です。
+- 開発者がテスト実行、ビルド、データ処理などのタスクを効率的に自動化し、生産性向上を支援します。
+- 📅 2025-12-01
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
@@ -178,9 +304,88 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 
 ### Project Highlights
 - YM2151（OPM）音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
-- Windows専用のサーバー・クライアントアーキテクチャを採用し、柔軟な音楽制御とWAVファイル出力機能を提供します。
-- リアルタイムでのインタラクティブな演奏切り替えや音源エディタとの連携を目指しています。
-- 📅 2025-11-25
+- 常駐型サーバーとクライアントで構成され、プログラムから柔軟に再生を制御できます。
+- Windowsプラットフォーム専用に設計されており、リアルタイムな音楽制御や音色エディタでの利用を想定しています。
+- 📅 2025-12-01
+
+## [cat-jekyll-config-generator](https://cat2151.github.io/cat-jekyll-config-generator/)
+GitHub Pages用の_config.ymlファイルを複数のローカルリポジトリに対して一括生成するPython CLIツール
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: config-yml](https://img.shields.io/badge/Topic-config--yml-lightblue) ![Topic: github-pages](https://img.shields.io/badge/Topic-github--pages-lightblue) ![Topic: jekyll](https://img.shields.io/badge/Topic-jekyll-lightblue) ![Topic: python](https://img.shields.io/badge/Topic-python-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-jekyll-config-generator](https://github.com/cat2151/cat-jekyll-config-generator)
+- **GitHub Pages**: [https://cat2151.github.io/cat-jekyll-config-generator/](https://cat2151.github.io/cat-jekyll-config-generator/)
+
+### Project Highlights
+- GitHub Pages用の`_config.yml`ファイルを効率的に生成するPython製CLIツールです。
+- TOML形式の設定テンプレートを用いて、複数のローカルリポジトリに対して`_config.yml`を一括で自動生成します。
+- リポジトリの自動検出、設定の検証、エラーハンドリング機能を備え、Jekyll環境の構築を効率化します。
+- 📅 2025-12-01
+
+## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
+Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
+
+<a href="https://cat2151.github.io/tonejs-json-sequencer/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
+
+- **Repository**: [https://github.com/cat2151/tonejs-json-sequencer](https://github.com/cat2151/tonejs-json-sequencer)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-json-sequencer/](https://cat2151.github.io/tonejs-json-sequencer/)
+
+### Project Highlights
+- Tone.jsの音色・エフェクト・演奏をJSONで記述できる軽量ライブラリ
+- コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
+- 時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
+- 📅 2025-12-01
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151 FM音源の音色を直感的に編集できるWindows向けターミナルUIエディタです。
+- マウスやキーボード操作で音色パラメータをリアルタイムに調整し、すぐに音色の変化を確認できます。
+- 編集した音色は自動で保存され、次回起動時に前回の状態から編集を再開できます。
+- 📅 2025-12-01
+
+## [mml-template-generator](https://cat2151.github.io/mml-template-generator/)
+A lightweight, browser-based generator for creating Music Macro Language (MML) templates.
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+
+- **Repository**: [https://github.com/cat2151/mml-template-generator](https://github.com/cat2151/mml-template-generator)
+- **GitHub Pages**: [https://cat2151.github.io/mml-template-generator/](https://cat2151.github.io/mml-template-generator/)
+
+### Project Highlights
+- 最小限の入力（例：cdefgab、ドレミ）から、各種MMLコンパイラ向けのMMLコードを生成するツールです。
+- MMLでの曲作りを始める際によくあるコンパイルエラーのハードルを低減し、すぐに音が出せるMMLを提供します。
+- シンプルなウェブインターフェースを通じて、入力された音階から利用目的に合わせたMMLテンプレートを手軽に生成できます。
+- 📅 2025-12-01
+
+## [chord2mml](https://cat2151.github.io/chord2mml/)
+A library transpiles Chord notation into Music Macro Language.
+
+<a href="https://cat2151.github.io/chord2mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: chord-parsing](https://img.shields.io/badge/Topic-chord--parsing-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+
+- **Repository**: [https://github.com/cat2151/chord2mml](https://github.com/cat2151/chord2mml)
+- **GitHub Pages**: [https://cat2151.github.io/chord2mml/](https://cat2151.github.io/chord2mml/)
+
+### Project Highlights
+-   コード進行表記（Chord notation）をMML（Music Macro Language）に変換するシンプルなJavaScriptライブラリです。
+-   入力されたコード進行からMML文字列を生成し、ブラウザや対応するアプリケーションで音楽を再生できるようにします。
+-   作曲のアイデアスケッチや、既存のコード進行を音で確認する用途などに手軽に活用できます。
+- 📅 2025-12-01
+
+## [easychord2mml](https://cat2151.github.io/easychord2mml/)
+A library for using chord2mml and abcjs easily in the browser.
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+
+- **Repository**: [https://github.com/cat2151/easychord2mml](https://github.com/cat2151/easychord2mml)
+- **GitHub Pages**: [https://cat2151.github.io/easychord2mml/](https://cat2151.github.io/easychord2mml/)
+- 📅 2025-12-01
 
 ## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
 Obsidian plugin. Playing Music Macro Language and Chord notation.
@@ -194,7 +399,21 @@ Obsidian plugin. Playing Music Macro Language and Chord notation.
 - ObsidianノートでMML（Music Macro Language）とコード進行を五線譜表示し、演奏できます。
 - 作曲のアイデアスケッチや音楽理論学習を支援し、直感的な音楽表現を可能にします。
 - 既存の「Obsidian ABC.JS plugin」を基盤に、MMLとコード進行の入力を拡張しています。
-- 📅 2025-11-19
+- 📅 2025-12-01
+
+## [postmate-midi-experimental](https://cat2151.github.io/postmate-midi-experimental/)
+An experimental project for MIDI connections and audio transmission between multiple webpages using only the browser and postMessage.
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: audio](https://img.shields.io/badge/Topic-audio-lightblue) ![Topic: midi](https://img.shields.io/badge/Topic-midi-lightblue) ![Topic: postmessage](https://img.shields.io/badge/Topic-postmessage-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
+
+- **Repository**: [https://github.com/cat2151/postmate-midi-experimental](https://github.com/cat2151/postmate-midi-experimental)
+- **GitHub Pages**: [https://cat2151.github.io/postmate-midi-experimental/](https://cat2151.github.io/postmate-midi-experimental/)
+
+### Project Highlights
+- このプロジェクトは、Web MIDI APIとPostmate.jsを用いて、複数のWebページ間でMIDIとオーディオを送受信する実験的なライブラリです。
+- Tone.jsを基盤に、仮想キーボード、シーケンサー、サンプラーなど多様な音楽アプリケーションのユースケースを検証しています。
+- 将来の安定版「postmate-midi」リリースに向け、広範な機能と仕様を網羅するための実験と実証を目的としています。
+- 📅 2025-12-01
 
 ## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
 MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
@@ -205,10 +424,10 @@ MML(Music Macro Language)用のTUI(テキストユーザーインターフェー
 - **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
 
 ### Project Highlights
-- Rustで開発された、MML（Music Macro Language）用のTUI（テキストユーザーインターフェース）エディタです。
-- MMLの記述と同時に、入力した音符を自動再生し、即座に確認できるミニマムな作曲体験を提供します。
-- 複数行テキスト編集、MMLテンプレート、再生モード切り替えなど、MML作成をサポートする機能が充実しています。
-- 📅 2025-11-16
+- Rustで構築された、MML（Music Macro Language）用のシンプルなTUIエディタです。
+- テキスト編集、カーソル移動、MMLノート入力時の自動再生、MMLテンプレート切り替えなどの機能を提供します。
+- コマンドラインから手軽にMMLの作曲と再生を試せる、ミニマムな体験を目指しています。
+- 📅 2025-12-01
 
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
 WIP
@@ -224,62 +443,6 @@ WIP
 - シンプルなGUIで現在のスコアと活動状況を表示し、Linux、macOS、Windowsのクロスプラットフォームで動作します。
 - 📅 2025-11-15
 
-## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
-File Change Monitoring Tool - Detects file changes and executes commands
-
-<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
-
-### Project Highlights
-- ファイルのタイムスタンプ変更を監視し、更新検知時に指定されたコマンドを自動実行するツールです。
-- TOML設定ファイルを通じて複数のファイルやディレクトリを同時に監視し、実行コマンドや監視間隔を柔軟に設定できます。
-- 軽量で使いやすく、特定のプロセス実行中のコマンド抑制や、時間帯による監視の有効化など豊富な機能を備えています。
-- 📅 2025-11-15
-
-## [chord2mml](https://cat2151.github.io/chord2mml/)
-A library transpiles Chord notation into Music Macro Language.
-
-<a href="https://cat2151.github.io/chord2mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: chord-parsing](https://img.shields.io/badge/Topic-chord--parsing-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
-
-- **Repository**: [https://github.com/cat2151/chord2mml](https://github.com/cat2151/chord2mml)
-- **GitHub Pages**: [https://cat2151.github.io/chord2mml/](https://cat2151.github.io/chord2mml/)
-
-### Project Highlights
--   コード進行表記（Chord notation）をMML（Music Macro Language）に変換するシンプルなJavaScriptライブラリです。
--   入力されたコード進行からMML文字列を生成し、ブラウザや対応するアプリケーションで音楽を再生できるようにします。
--   作曲のアイデアスケッチや、既存のコード進行を音で確認する用途などに手軽に活用できます。
-- 📅 2025-11-11
-
-## [cat-obsidian-templater-scripts](https://cat2151.github.io/cat-obsidian-templater-scripts/)
-Simple user scripts for the Obsidian Templater plugin.
-
-<a href="https://cat2151.github.io/cat-obsidian-templater-scripts/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
-
-- **Repository**: [https://github.com/cat2151/cat-obsidian-templater-scripts](https://github.com/cat2151/cat-obsidian-templater-scripts)
-- **GitHub Pages**: [https://cat2151.github.io/cat-obsidian-templater-scripts/](https://cat2151.github.io/cat-obsidian-templater-scripts/)
-
-### Project Highlights
-- ObsidianのTemplaterプラグイン向けに、便利な機能とJavaScript活用ノウハウを提供するスクリプト集です。
-- 行のハイライトやファイルの挿入、JavaScriptスニペットなど、テキストエディタのような機能拡張を可能にします。
-- ObsidianのAPIをJavaScriptから手軽に利用し、ワークフローをカスタマイズしたいユーザー向けに開発されました。
-- 📅 2025-11-11
-
-## [mml2abc](https://cat2151.github.io/mml2abc/)
-A library transpiles Music Macro Language into ABC music notation.
-
-<a href="https://cat2151.github.io/mml2abc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![PEG.js](https://img.shields.io/badge/PEG.js-40be89?style=flat&logo=javascript) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
-
-- **Repository**: [https://github.com/cat2151/mml2abc](https://github.com/cat2151/mml2abc)
-- **GitHub Pages**: [https://cat2151.github.io/mml2abc/](https://cat2151.github.io/mml2abc/)
-
-### Project Highlights
-- MML（Music Macro Language）をABC記譜法に変換するJavaScriptライブラリです。
-- ブラウザ上でMMLの楽譜を生成し、音楽再生を可能にすることを目的としています。
-- 特に、ObsidianのようなノートアプリでMMLを使った音楽表現を実現することを目指しています。
-- 📅 2025-11-11
-
 ## [super-easy-vim](https://cat2151.github.io/super-easy-vim/)
 [WIP] vim初心者に成功体験を与える用のジョークアプリ。vimのサブセット。極端に機能を削減し、モードとキーバインドを過剰に派手に表示する
 
@@ -293,62 +456,6 @@ A library transpiles Music Macro Language into ABC music notation.
 - 極端に機能を絞り込み、現在のモードや次に押すべきキーを過剰に表示することで、学習を支援します。
 - Rustとratatui/tui-textareaで構築され、Windowsでも動作するターミナルUIエディタとして開発中です。
 - 📅 2025-11-11
-
-## [mml-repl-like](https://cat2151.github.io/mml-repl-like/)
-cdefgabを入力するごとにその音が鳴るMMLエディタ（実験用）
-
-<a href="https://cat2151.github.io/mml-repl-like/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=html5)
-
-- **Repository**: [https://github.com/cat2151/mml-repl-like](https://github.com/cat2151/mml-repl-like)
-- **GitHub Pages**: [https://cat2151.github.io/mml-repl-like/](https://cat2151.github.io/mml-repl-like/)
-
-### Project Highlights
-- MML（Music Macro Language）をリアルタイムで編集・試聴できるREPL（Read-Eval-Print Loop）ライクなWebアプリケーションです。
-- MMLの作成、フレーズやコード進行の試作において、即座に音を確認しフィードバックサイクルを高速化することを目的としています。
-- 入力文字ごとやカーソル移動時に音が鳴る機能、選択範囲や現在行の即時演奏、トランスポーズ機能などを提供します。
-- 📅 2025-11-11
-
-## [postmate-midi-experimental](https://cat2151.github.io/postmate-midi-experimental/)
-An experimental project for MIDI connections and audio transmission between multiple webpages using only the browser and postMessage.
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: audio](https://img.shields.io/badge/Topic-audio-lightblue) ![Topic: midi](https://img.shields.io/badge/Topic-midi-lightblue) ![Topic: postmessage](https://img.shields.io/badge/Topic-postmessage-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
-
-- **Repository**: [https://github.com/cat2151/postmate-midi-experimental](https://github.com/cat2151/postmate-midi-experimental)
-- **GitHub Pages**: [https://cat2151.github.io/postmate-midi-experimental/](https://cat2151.github.io/postmate-midi-experimental/)
-
-### Project Highlights
-- ブラウザ上で複数のウェブページ間でのMIDIとオーディオの送受信を可能にする実験的ライブラリです。
-- PostmateとWeb Audio/MIDI APIを利用し、シンプルで軽量な実装を目指しています。
-- 将来の本格リリースに向け、多様な利用シナリオと技術仕様を網羅するためのデモと検証を行っています。
-- 📅 2025-11-10
-
-## [mml-template-generator](https://cat2151.github.io/mml-template-generator/)
-A lightweight, browser-based generator for creating Music Macro Language (MML) templates.
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
-
-- **Repository**: [https://github.com/cat2151/mml-template-generator](https://github.com/cat2151/mml-template-generator)
-- **GitHub Pages**: [https://cat2151.github.io/mml-template-generator/](https://cat2151.github.io/mml-template-generator/)
-
-### Project Highlights
-- 「mml-template-generator」は、ユーザーが簡単な音符（cdeなど）を入力すると、様々なMMLコンパイラで即座に演奏可能なMMLコードを生成するWebツールです。
-- このツールは、MML初心者がコンパイルエラーに直面することなく、手軽にMMLで音楽を試せるよう設計されています。
-- シンプルなインターフェースを通じて、最小限の入力からMMLテンプレートを効率的に作成し、MML学習の初期段階での障壁を低減します。
-- 📅 2025-11-10
-
-## [github-actions](https://cat2151.github.io/github-actions/)
-collection of reusable GitHub Actions workflows for multiple projects
-
-<a href="https://cat2151.github.io/github-actions/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: github-actions](https://img.shields.io/badge/Topic-github--actions-lightblue)
-
-- **Repository**: [https://github.com/cat2151/github-actions](https://github.com/cat2151/github-actions)
-- **GitHub Pages**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
-
-### Project Highlights
-- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽に
-- 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOK
-- ✅ メンテは一括、プロジェクト開発に集中できます
-- 📅 2025-11-10
 
 ## [recursive-folding](https://cat2151.github.io/recursive-folding/)
 Obsidian plugin. Recursively folds and unfolds the current hierarchy or selection.
@@ -364,76 +471,6 @@ Obsidian plugin. Recursively folds and unfolds the current hierarchy or selectio
 - 大規模なノートの管理を効率化し、視点の切り替えを容易にします。
 - 📅 2025-11-10
 
-## [cat-jekyll-config-generator](https://cat2151.github.io/cat-jekyll-config-generator/)
-GitHub Pages用の_config.ymlファイルを複数のローカルリポジトリに対して一括生成するPython CLIツール
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: config-yml](https://img.shields.io/badge/Topic-config--yml-lightblue) ![Topic: github-pages](https://img.shields.io/badge/Topic-github--pages-lightblue) ![Topic: jekyll](https://img.shields.io/badge/Topic-jekyll-lightblue) ![Topic: python](https://img.shields.io/badge/Topic-python-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cat-jekyll-config-generator](https://github.com/cat2151/cat-jekyll-config-generator)
-- **GitHub Pages**: [https://cat2151.github.io/cat-jekyll-config-generator/](https://cat2151.github.io/cat-jekyll-config-generator/)
-
-### Project Highlights
-- GitHub Pages用の`_config.yml`ファイルを複数のローカルリポジトリに対し一括生成するPython CLIツールです。
-- TOML形式の設定テンプレートを使用し、統一された設定ファイルを効率的に作成できます。
-- リポジトリの自動検出、設定検証、エラーハンドリング機能を備え、安全な運用をサポートします。
-- 📅 2025-11-10
-
-## [cat-clipboard-launcher](https://cat2151.github.io/cat-clipboard-launcher/)
-軽量なクリップボードランチャ。素早い手動操作用
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat-clipboard-launcher](https://github.com/cat2151/cat-clipboard-launcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-clipboard-launcher/](https://cat2151.github.io/cat-clipboard-launcher/)
-
-### Project Highlights
-- 常駐せず、明示的に起動して使うランチャ
-- A～Zキーでクリップボードの内容に応じて選べる
-- 選択肢はTOML設定ファイルで指定した正規表現にマッチしたものが表示され、クリップボード内容で自動判別される
-- 📅 2025-11-09
-
-## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
-Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
-
-<a href="https://cat2151.github.io/tonejs-json-sequencer/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
-
-- **Repository**: [https://github.com/cat2151/tonejs-json-sequencer](https://github.com/cat2151/tonejs-json-sequencer)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-json-sequencer/](https://cat2151.github.io/tonejs-json-sequencer/)
-
-### Project Highlights
-- Tone.jsの音色・エフェクト・演奏をJSONで記述できる軽量ライブラリ
-- コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
-- 時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
-- 📅 2025-11-09
-
-## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
-MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
-
-<a href="https://cat2151.github.io/tonejs-mml-to-json/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![HTML](https://img.shields.io/badge/HTML-e34c26?style=flat&logo=html5) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
-
-- **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
-
-### Project Highlights
-- MML（Music Macro Language）で書いた音楽を、ブラウザで再生できるJSON形式に変換します
-- 簡単なテキストで音楽を作成し、ウェブサイトで演奏することができます
-- 音楽の変換部分に特化したツールで、実際の再生は別プロジェクト（`tonejs-json-sequencer`）が担当します
-- 📅 2025-11-09
-
-## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
-マウスで鳴らせるオシレータ・ハードシンク・シンセサイザー
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat-oscillator-sync](https://github.com/cat2151/cat-oscillator-sync)
-- **GitHub Pages**: [https://cat2151.github.io/cat-oscillator-sync/](https://cat2151.github.io/cat-oscillator-sync/)
-
-### Project Highlights
-- マウス操作でリアルタイムに音を生成する、ハードシンク・シンセサイザーの実験的なプロジェクトです。
-- マウスのX軸でマスター周波数、Y軸でスレーブ周波数を制御し、独特の音色を奏でます。
-- Python, Rust, Go, TypeScriptなど、複数の言語での実装を通じてマルチプラットフォーム対応を試みています。
-- 📅 2025-11-09
-
 ## [cat-incremental-search-filter](https://cat2151.github.io/cat-incremental-search-filter/)
 WIP
 
@@ -441,33 +478,6 @@ WIP
 
 - **Repository**: [https://github.com/cat2151/cat-incremental-search-filter](https://github.com/cat2151/cat-incremental-search-filter)
 - **GitHub Pages**: [https://cat2151.github.io/cat-incremental-search-filter/](https://cat2151.github.io/cat-incremental-search-filter/)
-- 📅 2025-11-09
-
-## [easyabcjs6](https://cat2151.github.io/easyabcjs6/)
-A library for using abcjs easily in the browser.
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue)
-
-- **Repository**: [https://github.com/cat2151/easyabcjs6](https://github.com/cat2151/easyabcjs6)
-- **GitHub Pages**: [https://cat2151.github.io/easyabcjs6/](https://cat2151.github.io/easyabcjs6/)
-- 📅 2025-11-09
-
-## [easychord2mml](https://cat2151.github.io/easychord2mml/)
-A library for using chord2mml and abcjs easily in the browser.
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
-
-- **Repository**: [https://github.com/cat2151/easychord2mml](https://github.com/cat2151/easychord2mml)
-- **GitHub Pages**: [https://cat2151.github.io/easychord2mml/](https://cat2151.github.io/easychord2mml/)
-- 📅 2025-11-09
-
-## [easymmlabc](https://cat2151.github.io/easymmlabc/)
-A library for using mml2abc and abcjs easily in the browser.
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
-
-- **Repository**: [https://github.com/cat2151/easymmlabc](https://github.com/cat2151/easymmlabc)
-- **GitHub Pages**: [https://cat2151.github.io/easymmlabc/](https://cat2151.github.io/easymmlabc/)
 - 📅 2025-11-09
 
 ## [cat2151-zenn-contents](https://cat2151.github.io/cat2151-zenn-contents/)
