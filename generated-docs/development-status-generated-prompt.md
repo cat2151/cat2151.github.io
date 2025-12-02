@@ -1,4 +1,4 @@
-Last updated: 2025-12-02
+Last updated: 2025-12-03
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -281,6 +281,7 @@ Issue #14 requests displaying dates in both UTC and JST. UTC for search engine i
 ## ドキュメントで言及されているファイルの内容
 ### .github/actions-tmp/issue-notes/14.md
 ```md
+{% raw %}
 # issue Development Status のdocument生成において、最初の小さな一歩 を実現する用のプロンプト生成がされなくなっている #14
 [issues #14](https://github.com/cat2151/github-actions/issues/14)
 
@@ -301,19 +302,23 @@ Issue #14 requests displaying dates in both UTC and JST. UTC for search engine i
 
 ## closeとする
 
+{% endraw %}
 ```
 
 ### issue-notes/14.md
 ```md
+{% raw %}
 # issue PR 13 を参考に、すべての日付表示についてUTCとJSTを併記する。JSTは運用するowner向け。UTCは検索エンジン向けである #14
 [issues #14](https://github.com/cat2151/cat2151.github.io/issues/14)
 
 
 
+{% endraw %}
 ```
 
 ### .github/actions-tmp/issue-notes/15.md
 ```md
+{% raw %}
 # issue project_summary scripts cjs を分解し、できるだけ1ファイル200行未満にし、agentによるメンテをしやすくする #15
 [issues #15](https://github.com/cat2151/github-actions/issues/15)
 
@@ -442,10 +447,12 @@ Issue #14 requests displaying dates in both UTC and JST. UTC for search engine i
 - これでagentによるメンテは十分しやすくなった、と判断する
 - closeとする
 
+{% endraw %}
 ```
 
 ### .github/actions-tmp/issue-notes/4.md
 ```md
+{% raw %}
 # issue GitHub Actions「project概要生成」を共通ワークフロー化する #4
 [issues #4](https://github.com/cat2151/github-actions/issues/4)
 
@@ -586,19 +593,24 @@ jobs:
 
 # closeとする
 
+{% endraw %}
 ```
 
 ### issue-notes/4.md
 ```md
+{% raw %}
 # issue README.ja.md があるリポジトリは、Japaneseバッジを表示し、それは README.ja.html へのリンクとする #4
 [issues #4](https://github.com/cat2151/cat2151.github.io/issues/4)
 
 
 
+{% endraw %}
 ```
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+10114df Auto-update repository list - 2025-12-01
+976dc2e Update project summaries (overview & development status) [auto]
 1a9cc97 googleにindexされる用
 b054810 Auto-update repository list - 2025-11-30
 4002f55 Update project summaries (overview & development status) [auto]
@@ -607,8 +619,6 @@ d25a511 Update project summaries (overview & development status) [auto]
 e839af3 Auto-update repository list - 2025-11-28
 d4d4897 Update project summaries (overview & development status) [auto]
 090a7dc Auto-update repository list - 2025-11-27
-ed6af2c Update project summaries (overview & development status) [auto]
-ef71464 Auto-update repository list - 2025-11-26
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -620,4 +630,4 @@ index.md
 
 
 ---
-Generated at: 2025-12-02 07:05:34 JST
+Generated at: 2025-12-03 07:05:42 JST
