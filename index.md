@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-02
+Last Updated: 2025-12-03
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ Last Updated: 2025-12-02
 - **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
 
 ### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製のコマンドラインツールおよびライブラリです。
-- 2パス処理アーキテクチャを採用し、MIDIファイルのパースとYM2151ログへの変換を分離、プログラムチェンジによるカスタム音色読み込みにも対応しています。
-- 型安全性と高パフォーマンスを特徴とし、`cat-play-mml`などの他のRustプロジェクトからライブラリとして利用可能です。
-- 📅 2025-12-02
+- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust実装です。
+- 2パス処理アーキテクチャを採用し、プログラムチェンジによる音色切り替えと型安全性・高パフォーマンスを実現しています。
+- CLIツールとしてだけでなく、他のRustプロジェクトへのライブラリ提供も視野に入れた設計となっています。
+- 📅 2025-12-03
 
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
@@ -107,9 +107,37 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイトのために、GitHubリポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、SEOに最適化されたMarkdownファイルを生成します。
-- 各リポジトリの概要表示、バッジ付き分類、Jekyll/GitHub Pages対応などの機能を提供します。
+- GitHub Pagesサイト用のリポジトリ一覧を自動生成し、SEOとLLM参照性を向上させます。
+- GitHub APIを利用してリポジトリ情報を取得し、JekyllベースのMarkdownファイルを生成します。
+- アクティブ・アーカイブ・フォーク分類、バッジ表示、各リポジトリの概要自動取得など豊富な機能を提供します。
+- 📅 2025-12-03
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151（OPM）FM音源の音色を編集するための、Windows向けターミナルユーザーインターフェース（TUI）アプリケーションです。
+- Rust言語で開発されており、リアルタイムでの音声フィードバックを提供しながら、直感的な操作で音色パラメータを調整できます。
+- 編集した音色は自動で保存され、次回起動時にロードされるため、効率的な音色作成をサポートします。
+- 📅 2025-12-03
+
+## [chord2mml](https://cat2151.github.io/chord2mml/)
+A library transpiles Chord notation into Music Macro Language.
+
+<a href="https://cat2151.github.io/chord2mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: chord-parsing](https://img.shields.io/badge/Topic-chord--parsing-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+
+- **Repository**: [https://github.com/cat2151/chord2mml](https://github.com/cat2151/chord2mml)
+- **GitHub Pages**: [https://cat2151.github.io/chord2mml/](https://cat2151.github.io/chord2mml/)
+
+### Project Highlights
+- コード進行の表記（Chord notation）をMML（Music Macro Language）に変換するシンプルなJavaScriptライブラリです。
+- ブラウザやObsidianなどの環境で、コード進行を手軽に音として再生できるようにすることを目的としています。
+- 概念実証とシンプルさを優先し、作曲のアイデアスケッチに役立つツールを提供します。
 - 📅 2025-12-02
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
@@ -126,20 +154,6 @@ collection of reusable GitHub Actions workflows for multiple projects
 - ✅ メンテは一括、プロジェクト開発に集中できます
 - 📅 2025-12-02
 
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FM音源の音色パラメータをリアルタイムで編集できるターミナルUIエディタです。
-- 直感的なキーボード・マウス操作とリアルタイム音声フィードバックで、音作りを支援します。
-- Windows環境向けにRustで開発されており、シンプルかつ効率的な音色編集体験を提供します。
-- 📅 2025-12-02
-
 ## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
 Obsidian plugin. Playing Music Macro Language and Chord notation.
 
@@ -153,20 +167,6 @@ Obsidian plugin. Playing Music Macro Language and Chord notation.
 - 音楽のアイデアスケッチに最適で、複数ペインでのフレーズやコード進行の再生もサポート。
 - 外部のMML/コード進行トランスパイラとabcjsを利用し、楽譜描画と音源再生を実現。
 - 📅 2025-12-02
-
-## [chord2mml](https://cat2151.github.io/chord2mml/)
-A library transpiles Chord notation into Music Macro Language.
-
-<a href="https://cat2151.github.io/chord2mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: chord-parsing](https://img.shields.io/badge/Topic-chord--parsing-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: chord-progressions](https://img.shields.io/badge/Topic-chord--progressions-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
-
-- **Repository**: [https://github.com/cat2151/chord2mml](https://github.com/cat2151/chord2mml)
-- **GitHub Pages**: [https://cat2151.github.io/chord2mml/](https://cat2151.github.io/chord2mml/)
-
-### Project Highlights
-- コード進行（Chord notation）をMML（Music Macro Language）に変換するJavaScriptライブラリです。
-- テキスト形式のコード入力を解析し、音楽再生可能なMML出力を生成します。
-- ブラウザやObsidianプラグインに組み込むことで、手軽にコード進行を試聴できます。
-- 📅 2025-12-01
 
 ## [mml-template-generator](https://cat2151.github.io/mml-template-generator/)
 A lightweight, browser-based generator for creating Music Macro Language (MML) templates.
