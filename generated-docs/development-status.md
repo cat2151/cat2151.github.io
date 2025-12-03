@@ -1,71 +1,55 @@
-Last updated: 2025-12-03
+Last updated: 2025-12-04
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #14](../issue-notes/14.md) は、すべてのプロジェクト日付表示について、UTCとJST（日本標準時）を併記する機能の実装を目指しています。
-- この改善により、検索エンジンが効率的にインデックスできるようUTCを維持しつつ、プロジェクトオーナー向けにJSTで分かりやすい表示を提供します。
-- 特に `PR 13` で得られた知見を参考に、日付表示の一貫性と正確性を高めるための作業が進行中です。
+- [Issue #15](../issue-notes/15.md)と[Issue #14](../issue-notes/14.md)では、プロジェクト全体の日付表示をUTCとJSTで併記する機能の実装を進めており、`DateFormatter`クラスの導入が始まっている。
+- これにより、検索エンジン向けUTCと運用者向けJSTの両方のニーズに対応し、日付情報の正確性とユーザビリティを向上させる。
+- [Issue #4](../issue-notes/4.md)では、README.ja.mdが存在するリポジトリに対して、日本語バッジを生成し対応する日本語HTMLドキュメントへのリンクを提供する機能の実装が求められている。
 
 ## 次の一手候補
-1. [Issue #14] 日付表示の現状調査とUTC/JST併記要件の具体化
-   - 最初の小さな一歩: プロジェクト内で日付を生成・表示しているPythonファイルやMarkdownファイルを特定し、現在のフォーマットとUTC/JST併記の理想的な表示形式（例: `YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)`）を明確にする。
+1. [Issue #15](../issue-notes/15.md) & [Issue #14](../issue-notes/14.md)の日付表示の統合と実装の完了
+   - 最初の小さな一歩: 既存の日付出力箇所（例: `src/generate_repo_list/markdown_generator.py`）を特定し、導入済みの`DateFormatter`クラス（仮に`src/generate_repo_list/date_formatter.py`に存在すると仮定）がそれらの箇所で利用できるよう、現行の実装をレビューして具体的な適用ポイントを特定する。
    - Agent実行プロンプ:
      ```
-     対象ファイル: `src/generate_repo_list/` ディレクトリ内のPythonファイル群、および `index.md`
+     対象ファイル: src/generate_repo_list/markdown_generator.py, src/generate_repo_list/repository_processor.py, src/generate_repo_list/date_formatter.py
 
-     実行内容: プロジェクト内で日付を生成・表示している箇所（例: 最終更新日、公開日など）を洗い出し、以下の観点から分析してください：
-     1) 現在の日付フォーマットと表示方法
-     2) UTCとJSTを併記する場合の理想的な出力形式の提案（例: "YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"）
-     3) 変更が必要となりそうなファイルと関数
+     実行内容: `src/generate_repo_list/date_formatter.py`に定義されている`DateFormatter`クラスの機能が、既存のプロジェクト概要生成プロセス（特にリポジトリリストのMarkdown生成部分）で利用されるように、`markdown_generator.py`や`repository_processor.py`内の日付フォーマット処理を分析し、変更点を提案してください。
 
-     確認事項:
-     - 日付が動的に生成されている箇所と、静的な箇所（例: `index.md` に直接記述されている場合）の両方を考慮してください。
-     - タイムゾーン変換ライブラリ（例: `zoneinfo`）の利用可能性も視野に入れてください。
+     確認事項: 既存の日付フォーマット処理（例: `strftime`）が適切に`DateFormatter`に置き換えられるか、また、`DateFormatter`がPythonのdatetimeオブジェクトを正しく受け取れるかを確認してください。変更による影響範囲を最小限に抑えるよう注意してください。
 
-     期待する出力: 分析結果をmarkdown形式で出力してください。具体的には、対象ファイルと関数、現在の表示形式、提案する併記形式、および実装上の注意点を含めてください。
+     期待する出力: `DateFormatter`を既存の日付表示ロジックに統合するための具体的なコード変更案をmarkdown形式で出力してください。変更前後のコードスニペットと、変更の理由を含めてください。
      ```
 
-2. [Issue #14] 汎用的なUTC/JST併記日付フォーマッタのプロトタイプ実装
-   - 最初の小さな一歩: `src/generate_repo_list/` 内に新しいPythonファイル（例: `date_utils.py`）を作成し、`datetime` オブジェクトを受け取り `"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"` 形式の文字列を返す関数 `format_dual_timezone_date(dt_obj)` を実装する。簡単な単体テストも含む。
+2. [Issue #4](../issue-notes/4.md) 日本語バッジ表示とリンク機能の実装
+   - 最初の小さな一歩: リポジトリに`README.ja.md`が存在するかどうかを`src/generate_repo_list/repository_processor.py`で判定するロジックを設計し、その判定結果を`src/generate_repo_list/markdown_generator.py`に渡すための情報フローを設計する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/date_utils.py` (新規作成)
+     対象ファイル: src/generate_repo_list/repository_processor.py, src/generate_repo_list/markdown_generator.py, src/generate_repo_list/project_overview_fetcher.py
 
-     実行内容: `datetime` オブジェクトを受け取り、指定されたフォーマット `"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"` でUTCとJSTの日付文字列を生成するPython関数 `format_dual_timezone_date` を実装してください。
-     - UTCとJSTのタイムゾーンを適切に処理できること（Python 3.9+ の `zoneinfo` を使用）。
-     - 関数は、タイムゾーン情報を持たない `datetime` オブジェクト（naive datetime）も安全に扱えるように、デフォルトのタイムゾーン（例: UTC）を仮定して処理を開始してください。
-     - この関数をテストするためのシンプルな単体テストコードも記述してください。
+     実行内容: `src/generate_repo_list/repository_processor.py`がリポジトリ情報を処理する際に、そのリポジトリに`README.ja.md`が存在するかどうかを判断し、その結果を`src/generate_repo_list/markdown_generator.py`でバッジ生成に利用できるよう、データフローと必要なメソッドの追加・変更点を分析・提案してください。具体的な実装は不要で、情報取得から利用までのパスを明確にすることに焦点を当ててください。
 
-     確認事項:
-     - タイムゾーンライブラリのインポートが適切に行われているか。
-     - エッジケース（例: タイムゾーン情報が既に付与されている `datetime` オブジェクト）の考慮。
-     - Pythonの標準ライブラリ `datetime` と `zoneinfo` (Python 3.9+) を優先的に使用してください。
+     確認事項: GitHub APIを通じてファイル存在チェックが可能か、またはローカルでのファイル構造解析が必要かを確認してください。`repository_processor`から`markdown_generator`へのデータ受け渡しの既存の仕組みと整合性を取ってください。
 
-     期待する出力: `src/generate_repo_list/date_utils.py` ファイルの完全な内容（関数定義とテストコードを含む）をPythonコードブロックで出力してください。
+     期待する出力: `README.ja.md`の存在チェックとその結果をMarkdown生成ロジックに伝えるための、`repository_processor.py`と`markdown_generator.py`のメソッドシグネチャ、データ構造、およびその連携に関する設計案をmarkdown形式で出力してください。
      ```
 
-3. [Issue #14] `markdown_generator.py`への日付フォーマッタ統合の検討と計画
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` 内で日付を生成している箇所を特定し、`date_utils.py` の `format_dual_timezone_date` 関数をどのようにインポートし、どの変数に適用するかを検討し、変更箇所の具体的なコード修正イメージを箇条書きで記述する。
+3. 本プロンプトの自己レビューと改善
+   - 最初の小さな一歩: 本プロンプト（`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`）の記載内容と、それが実際に生成する出力（`generated-docs/development-status.md`）を比較し、ガイドラインに沿っているか、ハルシネーションが発生していないかを確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py` および `src/generate_repo_list/date_utils.py` (仮定)
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, generated-docs/development-status.md
 
-     実行内容:
-     1. `src/generate_repo_list/markdown_generator.py` の中で、日付文字列を生成している既存の箇所を特定してください。
-     2. 特定した箇所で、`src/generate_repo_list/date_utils.py` から `format_dual_timezone_date` 関数をインポートし、既存の日付生成ロジックをこの関数に置き換えるための具体的な修正計画を立案してください。
-     3. 変更が他の機能に与える影響（特に日付の型やフォーマットに関する既存の期待値）を分析し、潜在的な問題点と対策を提案してください。
+     実行内容: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` に記載されている「開発状況生成プロンプト」の要件と、現在出力されている `generated-docs/development-status.md` の内容を比較し、以下の観点から評価してください。
+     1. 「生成するもの」の全ての要素が満たされているか。
+     2. 「生成しないもの」が守られているか。
+     3. 「Agent実行プロンプト」の「必須要素」が全て含まれているか。
+     4. 出力フォーマットが正しく守られているか。
+     5. ハルシネーションや無価値な提案がないか。
 
-     確認事項:
-     - `markdown_generator.py` が `date_utils.py` の関数を正しく呼び出せるように、インポートパスが適切であるか確認してください。
-     - 既存のテストコードがある場合は、そのテストが新しい日付フォーマットに対応できるか、または修正が必要かについても言及してください。
+     確認事項: 評価はプロンプトの指示と出力フォーマットに厳密に従ってください。特にハルシネーションの有無は慎重に判断してください。
 
-     期待する出力:
-     markdown形式で以下の内容を出力してください：
-     - `markdown_generator.py` 内の修正対象となるコードブロックとその変更案。
-     - `date_utils.py` からのインポート文の追加箇所。
-     - 潜在的な影響と対策。
-     - 関連するテストの修正が必要かどうか。
+     期待する出力: 上記の評価結果をmarkdown形式で詳細に記述し、もし改善点があれば、その具体的な提案を記述してください。
 
 ---
-Generated at: 2025-12-03 07:06:08 JST
+Generated at: 2025-12-04 07:06:34 JST
