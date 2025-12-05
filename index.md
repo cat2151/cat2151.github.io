@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-04
+Last Updated: 2025-12-05
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,24 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、ユーザーのリポジトリ情報を自動で取得・整理します。
-- JekyllベースのGitHub Pagesサイト向けに、SEOに最適化されたリポジトリ一覧を生成します。
-- リポジトリの発見性を高め、検索エンジンやLLMからの参照性を向上させることを目的としています。
-- 📅 2025-12-04
+- GitHub APIを利用し、リポジトリ情報を自動取得してGitHub Pagesサイト用のMarkdownファイルを生成します。
+- 生成されたリポジトリ一覧ページはSEO最適化され、検索エンジンによるクロールを促進します。
+- LLMがリポジトリ参照に失敗する課題を緩和し、開発効率向上に貢献することを目指します。
+- 📅 2025-12-05
+
+## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
+File Change Monitoring Tool - Detects file changes and executes commands
+
+<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
+
+### Project Highlights
+- ファイル変更を監視し、指定されたコマンドを自動実行する汎用ツールです。
+- TOML形式の設定ファイルを使用し、複数のファイルやディレクトリと実行コマンドを柔軟に定義できます。
+- 軽量で使いやすく、特にWindows環境でコマンド実行時にフォーカスを奪わない機能も提供します。
+- 📅 2025-12-05
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
@@ -107,10 +121,10 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
 
 ### Project Highlights
-- YM2151（OPM）FM音源の音色を編集するための、Windows向けのターミナルユーザーインターフェース（TUI）エディタです。
-- 音色パラメータの直感的な編集、マウスやキーボードによる操作、リアルタイムの音声フィードバック、および音色の自動セーブ/ロード機能を提供します。
-- Rust言語で開発されており、シンプルで高速な起動と操作性を目指し、将来的な音色管理機能の拡充も計画されています。
-- 📅 2025-12-04
+- YM2151 FM音源の音色パラメータを直感的に編集できるWindows向けターミナルユーザーインターフェース (TUI) アプリケーションです。
+- Rustで開発されており、リアルタイムな音声フィードバックを通じて、編集した音色の変化を即座に確認できます。
+- マウスやキーボード操作で手軽に音色調整を行い、音作りを楽しむためのシンプルなツールとして設計されています。
+- 📅 2025-12-05
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
@@ -376,20 +390,6 @@ A library transpiles Music Macro Language into ABC music notation.
 - Music Macro Language (MML) をABC記譜法に変換するJavaScriptライブラリです。
 - ブラウザやObsidianでMMLを使った音楽演奏を可能にし、シンプルなテキスト変換機能を提供します。
 - abcjsとの連携により、楽譜表示と音源再生を実現する概念実証プロジェクトです。
-- 📅 2025-12-01
-
-## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
-File Change Monitoring Tool - Detects file changes and executes commands
-
-<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
-
-### Project Highlights
-- ファイル変更を監視し、TOML設定に基づいて定義されたカスタムコマンドを自動実行するツールです。
-- 複数ファイルの同時監視、特定の時間帯での実行、プロセス実行中の抑制など、柔軟な自動化設定が可能です。
-- 開発者がテスト実行、ビルド、データ処理などのタスクを効率的に自動化し、生産性向上を支援します。
 - 📅 2025-12-01
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
