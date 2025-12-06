@@ -1,50 +1,51 @@
-Last updated: 2025-12-06
+Last updated: 2025-12-07
 
 # Development Status
 
 ## 現在のIssues
-- `[Issue #14](../issue-notes/14.md)` は、生成されるすべてのドキュメントにおいて日付表示をUTCとJSTで併記することを求めています。
-- JSTはプロジェクトオーナー向け、UTCは検索エンジン最適化（SEO）向けという目的が明確にされています。
-- PR 13での実装を参考に、日付フォーマットの標準化と一貫した適用が主要なタスクとなります。
+- [Issue #15](../issue-notes/15.md)では、すべてのプロジェクト日付表示をUTC/JSTのデュアルタイムゾーン形式にする`DateFormatter`クラスの導入が進められている。
+- [Issue #14](../issue-notes/14.md)では、PR 13を参考に、全日付表示にUTCとJSTを併記し、運用者と検索エンジン双方のニーズに応えることが求められている。
+- これらの対応は、生成されるドキュメントの日付情報の国際化と利便性向上を目的としている。
 
 ## 次の一手候補
-1. `[Issue #14](../issue-notes/14.md)`: 既存コード内の日付処理箇所を特定し、新しいDateFormatter導入の準備をする
-   - 最初の小さな一歩: `src/generate_repo_list` ディレクトリ内のPythonファイルを走査し、日付を文字列として扱う、またはフォーマットしている箇所を特定する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: `src/generate_repo_list/*.py`
+1.  [Issue #15](../issue-notes/15.md) `DateFormatter`クラスを組み込み、日付表示のUTC/JST併記を実装
+    -   最初の小さな一歩: `src/generate_repo_list`内のMarkdown生成関連ファイルで、`DateFormatter`クラスを実際に使用し、日付フォーマットをUTC/JST併記にする箇所を特定する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: src/generate_repo_list/markdown_generator.py, src/generate_repo_list/repository_processor.py
 
-     実行内容: `src/generate_repo_list` ディレクトリ内のすべてのPythonファイルについて、日付や時刻に関連する処理（例: `datetime`モジュールの使用、`strftime`、`isoformat`、`date`、`time`といったキーワードの出現、あるいは日付文字列の直接的な操作）を特定し、そのファイル名、行番号、該当コードスニペット、および現在の日付表示形式（もしあれば）をmarkdown形式でリストアップしてください。
+        実行内容: [Issue #15](../issue-notes/15.md)で言及されている`DateFormatter`クラス（仮に`src/generate_repo_list/date_formatter.py`に存在すると仮定）を利用し、リポジトリリストやプロジェクト概要を生成する際に表示されるすべての日付情報について、UTCとJSTを併記するフォーマットを適用するように変更点を分析してください。具体的には、既存の日付取得・整形ロジックを特定し、`DateFormatter`をどのように組み込むかを提案してください。
 
-     確認事項: 既存のコードのロジックを変更することなく、純粋な分析に徹してください。Python標準ライブラリ以外に日付処理を行うライブラリが使用されていないか（例: `arrow`, `pendulum`など）も確認してください。
+        確認事項: `datetime`オブジェクトがUTCまたはJSTのどちらのタイムゾーンで取得されているかを確認し、`DateFormatter`が期待通りに動作するための入力形式の整合性を確認してください。既存のテストファイルとの関連も確認してください。
 
-     期待する出力: `src/generate_repo_list` 内の日付処理箇所をまとめたmarkdownリスト。各エントリーは「ファイル名:行番号 - コードスニペット - 推定される日付形式」の形式で記述。
-     ```
+        期待する出力: `markdown_generator.py`と`repository_processor.py`における変更提案をmarkdown形式で出力してください。変更点には、`DateFormatter`クラスのインポート方法、インスタンス化、および既存の日付フォーマット処理を置き換える具体的なコードスニペットを含めてください。
+        ```
 
-2. `[Issue #14](../issue-notes/14.md)`: UTC/JST併記に対応する日付ヘルパー関数のスケルトンを定義する
-   - 最初の小さな一歩: `src/generate_repo_list/date_utils.py` ファイルを新規作成し、UTCとJSTの時刻変換および指定フォーマットでの文字列化を行うためのスケルトン関数（またはクラスメソッド）を定義する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `src/generate_repo_list/date_utils.py` (新規作成)
+2.  [Issue #4](../issue-notes/4.md) `README.ja.md`の有無に基づきJapaneseバッジとリンクを生成
+    -   最初の小さな一歩: `src/generate_repo_list/repository_processor.py`がリポジトリのファイル情報を取得する際に`README.ja.md`の存在を検知できるか調査し、その情報を`markdown_generator.py`に渡す方法を検討する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: src/generate_repo_list/markdown_generator.py, src/generate_repo_list/repository_processor.py
 
-     実行内容: `[Issue #14](../issue-notes/14.md)` で要求されているUTCとJSTの日付併記フォーマット（例: `YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)`）を実現するためのPythonヘルパー関数のスケルトンを `src/generate_repo_list/date_utils.py` に作成してください。関数は `datetime` オブジェクトを受け取り、指定されたフォーマットで文字列を返すように設計してください。必要に応じてタイムゾーン情報を扱うための `pytz` や `zoneinfo` (Python 3.9+) の使用を検討し、コメントで示唆してください。ただし、このステップでは実装の詳細よりも関数シグネチャと簡単なコメントのみを記述し、実際に動くコードは書かないでください。
+        実行内容: [Issue #4](../issue-notes/4.md)の要件に基づき、リポジトリが`README.ja.md`を持つ場合に、生成されるリポジトリリストに「Japanese」バッジ（例: `![Japanese](https://img.shields.io/badge/Language-Japanese-blue)`）と`README.ja.html`へのリンクを追加するロジックを組み込むための変更点を分析してください。具体的には、`repository_processor.py`で`README.ja.md`の有無を検知し、その情報を`markdown_generator.py`で利用してバッジとリンクを生成するフローを提案してください。
 
-     確認事項: `datetime` オブジェクトがタイムゾーン情報を持っている場合と持っていない場合の両方に対応できるインターフェースを検討してください。JSTはUTC+9です。ファイルシステムには影響を与えず、新しいファイルを作成する内容で記述してください。
+        確認事項: `repository_processor.py`がGitHub APIを通じてファイル情報を正確に取得できるか、`markdown_generator.py`がバッジとリンクを生成する際に適切なURL構造を構築できるかを確認してください。
 
-     期待する出力: `src/generate_repo_list/date_utils.py` の内容を記述したmarkdown形式のコードブロック。
-     ```
+        期待する出力: `markdown_generator.py`と`repository_processor.py`における変更提案をmarkdown形式で出力してください。変更点には、`README.ja.md`の有無を判定するロジック、バッジとリンクのMarkdown生成コードスニペットを含めてください。
+        ```
 
-3. `[Issue #14](../issue-notes/14.md)`: 既存の日付表示箇所を新しいヘルパー関数に置き換える計画を策定する
-   - 最初の小さな一歩: `[Issue #14](../issue-notes/14.md)` を解決するために、候補1で洗い出した日付処理箇所と候補2で提案した `date_utils.py` をどのように統合するかをmarkdown形式で計画する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/repository_processor.py` (および候補1で特定された他のファイル), `src/generate_repo_list/date_utils.py`
+3.  [Issue #14](../issue-notes/14.md) 生成ドキュメント全体での日付表示要件の最終確認と適用範囲の明確化
+    -   最初の小さな一歩: `index.md`や`generated-docs/project-overview.md`など、日付が表示される可能性のある生成ドキュメントを洗い出し、現在の日付フォーマットと`[Issue #14](../issue-notes/14.md)`の要求とのギャップを特定する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: index.md, generated-docs/project-overview.md, src/generate_repo_list/markdown_generator.py, src/generate_repo_list/project_overview_fetcher.py
 
-     実行内容: `[Issue #14](../issue-notes/14.md)` の要求を満たすため、`src/generate_repo_list` ディレクトリ内の既存の日付処理箇所を、新しく作成する `src/generate_repo_list/date_utils.py` のヘルパー関数で置き換えるための詳細な計画を立案してください。計画には、変更が必要なファイル、具体的な変更内容の概要（例: `既存のdate_format呼び出しをdate_utils.format_dual_timezoneに置換`）、および変更に伴う潜在的なリスクや考慮事項（例: 既存のテストの更新）を含めてください。
+        実行内容: 生成されるリポジトリリスト（index.md）およびプロジェクト概要（project-overview.md）内のすべての日付表示箇所を特定し、[Issue #14](../issue-notes/14.md)の要件（UTCとJSTの併記、運用者向け/検索エンジン向け）がどのように適用されているか、または適用されるべきかを分析してください。具体的には、現在の日付表示がどのファイルで生成されているかを特定し、一貫性のあるUTC/JST併記フォーマットを導入するために必要な修正箇所とロジックを提案してください。
 
-     確認事項: 変更が他の機能に影響を与えないように注意し、段階的な導入が可能であるかを考慮してください。現在の日付表示がどのフィールドで利用されているか（例: `updated_at`, `created_at`など）を明確にしてください。
+        確認事項: `project_overview_fetcher.py`が取得する日付データがタイムゾーン情報を含んでいるか、または`markdown_generator.py`が日付を整形する際にタイムゾーンを考慮しているかを確認してください。既存のシステムで日付がどのように管理・表示されているかの全体像を把握してください。
 
-     期待する出力: 日付表示の置き換え計画をmarkdown形式で記述。各ファイルに対して必要な変更内容を具体的に記述し、変更後の想定されるコードパターンを簡潔に示す。
+        期待する出力: 生成ドキュメントにおける日付表示の現状と、[Issue #14](../issue-notes/14.md)の要件を満たすための一貫した日付フォーマット適用戦略をmarkdown形式で出力してください。具体的な変更箇所として`markdown_generator.py`や`project_overview_fetcher.py`のどの部分に手を入れるべきかを明記し、潜在的な影響についても言及してください。
+        ```
 
 ---
-Generated at: 2025-12-06 07:05:57 JST
+Generated at: 2025-12-07 07:05:48 JST

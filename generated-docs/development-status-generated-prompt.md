@@ -1,4 +1,4 @@
-Last updated: 2025-12-06
+Last updated: 2025-12-07
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -107,11 +107,13 @@ Last updated: 2025-12-06
 - .github/actions-tmp/.github/workflows/call-callgraph.yml
 - .github/actions-tmp/.github/workflows/call-daily-project-summary.yml
 - .github/actions-tmp/.github/workflows/call-issue-note.yml
+- .github/actions-tmp/.github/workflows/call-rust-windows-check.yml
 - .github/actions-tmp/.github/workflows/call-translate-readme.yml
 - .github/actions-tmp/.github/workflows/callgraph.yml
 - .github/actions-tmp/.github/workflows/check-recent-human-commit.yml
 - .github/actions-tmp/.github/workflows/daily-project-summary.yml
 - .github/actions-tmp/.github/workflows/issue-note.yml
+- .github/actions-tmp/.github/workflows/rust-windows-check.yml
 - .github/actions-tmp/.github/workflows/translate-readme.yml
 - .github/actions-tmp/.github_automation/callgraph/codeql-queries/callgraph.ql
 - .github/actions-tmp/.github_automation/callgraph/codeql-queries/codeql-pack.lock.yml
@@ -609,6 +611,8 @@ jobs:
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+1abb30b Auto-update repository list - 2025-12-05
+c73dacb Update project summaries (overview & development status) [auto]
 19cbaff Auto-update repository list - 2025-12-04
 4e5aba6 Update project summaries (overview & development status) [auto]
 48a8c3e Auto-update repository list - 2025-12-03
@@ -617,8 +621,6 @@ aab2bc4 Update project summaries (overview & development status) [auto]
 e540831 Update project summaries (overview & development status) [auto]
 10114df Auto-update repository list - 2025-12-01
 976dc2e Update project summaries (overview & development status) [auto]
-1a9cc97 googleにindexされる用
-b054810 Auto-update repository list - 2025-11-30
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -629,4 +631,4 @@ index.md
 
 
 ---
-Generated at: 2025-12-06 07:05:36 JST
+Generated at: 2025-12-07 07:05:26 JST
