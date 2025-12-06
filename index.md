@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-05
+Last Updated: 2025-12-06
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,52 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を自動取得してGitHub Pagesサイト用のMarkdownファイルを生成します。
-- 生成されたリポジトリ一覧ページはSEO最適化され、検索エンジンによるクロールを促進します。
-- LLMがリポジトリ参照に失敗する課題を緩和し、開発効率向上に貢献することを目指します。
-- 📅 2025-12-05
+- GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを利用し、リポジトリ情報からSEO最適化されたMarkdownファイルを自動生成します。
+- これにより、GitHub Pagesを通じてリポジトリの検索エンジンからの発見性とLLMによる参照性を向上させます。
+- 📅 2025-12-06
+
+## [github-actions](https://cat2151.github.io/github-actions/)
+collection of reusable GitHub Actions workflows for multiple projects
+
+<a href="https://cat2151.github.io/github-actions/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: github-actions](https://img.shields.io/badge/Topic-github--actions-lightblue)
+
+- **Repository**: [https://github.com/cat2151/github-actions](https://github.com/cat2151/github-actions)
+- **GitHub Pages**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
+
+### Project Highlights
+- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽に
+- 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOK
+- ✅ メンテは一括、プロジェクト開発に集中できます
+- 📅 2025-12-06
+
+## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
+Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
+
+<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: client-server](https://img.shields.io/badge/Topic-client--server-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
+
+- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
+
+### Project Highlights
+- YM2151 (OPM) 音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
+- サーバー・クライアントアーキテクチャを採用し、柔軟な音楽データ再生と制御を可能にします。
+- 演奏中に次の操作を受け付けるインタラクティブな音楽体験を提供し、音色エディタなどとの連携も容易です。
+- 📅 2025-12-06
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151（OPM）FM音源の音色を編集するための、Windows向けターミナルユーザーインターフェース（TUI）アプリケーションです。
+- Rustで実装されており、音色パラメータのリアルタイム調整と音声フィードバックを提供します。
+- 直感的な操作と自動セーブ・ロード機能を備え、シンプルな音色作成・編集体験を目指しています。
+- 📅 2025-12-06
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
 File Change Monitoring Tool - Detects file changes and executes commands
@@ -110,20 +152,6 @@ File Change Monitoring Tool - Detects file changes and executes commands
 - ファイル変更を監視し、指定されたコマンドを自動実行する汎用ツールです。
 - TOML形式の設定ファイルを使用し、複数のファイルやディレクトリと実行コマンドを柔軟に定義できます。
 - 軽量で使いやすく、特にWindows環境でコマンド実行時にフォーカスを奪わない機能も提供します。
-- 📅 2025-12-05
-
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FM音源の音色パラメータを直感的に編集できるWindows向けターミナルユーザーインターフェース (TUI) アプリケーションです。
-- Rustで開発されており、リアルタイムな音声フィードバックを通じて、編集した音色の変化を即座に確認できます。
-- マウスやキーボード操作で手軽に音色調整を行い、音作りを楽しむためのシンプルなツールとして設計されています。
 - 📅 2025-12-05
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
@@ -152,20 +180,6 @@ A library transpiles Chord notation into Music Macro Language.
 - コード進行の表記（Chord notation）をMML（Music Macro Language）に変換するシンプルなJavaScriptライブラリです。
 - ブラウザやObsidianなどの環境で、コード進行を手軽に音として再生できるようにすることを目的としています。
 - 概念実証とシンプルさを優先し、作曲のアイデアスケッチに役立つツールを提供します。
-- 📅 2025-12-02
-
-## [github-actions](https://cat2151.github.io/github-actions/)
-collection of reusable GitHub Actions workflows for multiple projects
-
-<a href="https://cat2151.github.io/github-actions/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: github-actions](https://img.shields.io/badge/Topic-github--actions-lightblue)
-
-- **Repository**: [https://github.com/cat2151/github-actions](https://github.com/cat2151/github-actions)
-- **GitHub Pages**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
-
-### Project Highlights
-- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽に
-- 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOK
-- ✅ メンテは一括、プロジェクト開発に集中できます
 - 📅 2025-12-02
 
 ## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
@@ -390,20 +404,6 @@ A library transpiles Music Macro Language into ABC music notation.
 - Music Macro Language (MML) をABC記譜法に変換するJavaScriptライブラリです。
 - ブラウザやObsidianでMMLを使った音楽演奏を可能にし、シンプルなテキスト変換機能を提供します。
 - abcjsとの連携により、楽譜表示と音源再生を実現する概念実証プロジェクトです。
-- 📅 2025-12-01
-
-## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
-Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
-
-<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: client-server](https://img.shields.io/badge/Topic-client--server-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
-
-- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
-
-### Project Highlights
-- YM2151（OPM）音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
-- 常駐型サーバーとクライアントで構成され、プログラムから柔軟に再生を制御できます。
-- Windowsプラットフォーム専用に設計されており、リアルタイムな音楽制御や音色エディタでの利用を想定しています。
 - 📅 2025-12-01
 
 ## [cat-jekyll-config-generator](https://cat2151.github.io/cat-jekyll-config-generator/)
