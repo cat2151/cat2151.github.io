@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 71 projects (⭐51 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 71 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 71 projects (⭐51 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 71 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -50,7 +50,7 @@ json_ld: |
       "description": "Programmer and developer. Publishing 71 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 71 projects (⭐51 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 71 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-06
+Last Updated: 2025-12-07
 
 ## 📋 Table of Contents
 
@@ -71,7 +71,7 @@ Last Updated: 2025-12-06
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-71-blue) ![Active](https://img.shields.io/badge/Active-43-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-51-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-71-blue) ![Active](https://img.shields.io/badge/Active-43-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-52-gold)
 
 ### Core Technologies
 
@@ -93,10 +93,24 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用し、リポジトリ情報からSEO最適化されたMarkdownファイルを自動生成します。
-- これにより、GitHub Pagesを通じてリポジトリの検索エンジンからの発見性とLLMによる参照性を向上させます。
-- 📅 2025-12-06
+- GitHub APIを利用してGitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
+- SEOに最適化されたMarkdown形式でリポジトリ情報（概要、バッジ、分類）を出力します。
+- 検索エンジンからのクロールを促進し、LLMによるリポジトリ参照の精度向上を目指します。
+- 📅 2025-12-07
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151 FM音源の音色を、Windows上で直感的に編集できるターミナルベースのエディタです。
+- マウスやキーボード操作で音色パラメータをリアルタイムに変更し、即座にそのサウンドをプレビューできます。
+- 変更は自動で保存され、次回起動時に前回の状態から編集を再開できるため、スムーズな音色作成が可能です。
+- 📅 2025-12-07
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
 collection of reusable GitHub Actions workflows for multiple projects
@@ -124,20 +138,6 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - YM2151 (OPM) 音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
 - サーバー・クライアントアーキテクチャを採用し、柔軟な音楽データ再生と制御を可能にします。
 - 演奏中に次の操作を受け付けるインタラクティブな音楽体験を提供し、音色エディタなどとの連携も容易です。
-- 📅 2025-12-06
-
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue)
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151（OPM）FM音源の音色を編集するための、Windows向けターミナルユーザーインターフェース（TUI）アプリケーションです。
-- Rustで実装されており、音色パラメータのリアルタイム調整と音声フィードバックを提供します。
-- 直感的な操作と自動セーブ・ロード機能を備え、シンプルな音色作成・編集体験を目指しています。
 - 📅 2025-12-06
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
@@ -611,6 +611,15 @@ crisp-game-libを使って作ったゲーム
 
 ## 📦 Archived Projects
 
+## [STed2.07m](https://github.com/cat2151/STed2.07m)
+STed2 from STED_ALL.LZH
+
+![Stars](https://img.shields.io/badge/Stars-6-yellow) ![C++](https://img.shields.io/badge/C++-f34b7d?style=flat&logo=cplusplus)
+
+- **Repository**: [https://github.com/cat2151/STed2.07m](https://github.com/cat2151/STed2.07m)
+- **GitHub Pages**: None
+- 📅 2025-12-07
+
 ## [ym2151-log-player-rust](https://cat2151.github.io/ym2151-log-player-rust/)
 ym2151-log-player のRust版
 
@@ -641,15 +650,6 @@ WIP
 
 - **Repository**: [https://github.com/cat2151/MML-chord-generator](https://github.com/cat2151/MML-chord-generator)
 - **GitHub Pages**: [https://cat2151.github.io/MML-chord-generator/](https://cat2151.github.io/MML-chord-generator/)
-- 📅 2025-11-10
-
-## [STed2.07m](https://github.com/cat2151/STed2.07m)
-STed2 from STED_ALL.LZH
-
-![Stars](https://img.shields.io/badge/Stars-5-yellow) ![C++](https://img.shields.io/badge/C++-f34b7d?style=flat&logo=cplusplus)
-
-- **Repository**: [https://github.com/cat2151/STed2.07m](https://github.com/cat2151/STed2.07m)
-- **GitHub Pages**: None
 - 📅 2025-11-10
 
 ## [mini-incremental-search-filter](https://cat2151.github.io/mini-incremental-search-filter/)
