@@ -1,51 +1,50 @@
-Last updated: 2025-12-07
+Last updated: 2025-12-08
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #15](../issue-notes/15.md)では、すべてのプロジェクト日付表示をUTC/JSTのデュアルタイムゾーン形式にする`DateFormatter`クラスの導入が進められている。
-- [Issue #14](../issue-notes/14.md)では、PR 13を参考に、全日付表示にUTCとJSTを併記し、運用者と検索エンジン双方のニーズに応えることが求められている。
-- これらの対応は、生成されるドキュメントの日付情報の国際化と利便性向上を目的としている。
+- [Issue #15](../issue-notes/15.md) と [Issue #14](../issue-notes/14.md) は、プロジェクト内のすべての日付表示をUTCとJSTのデュアルタイムゾーン形式にする課題を扱っています。
+- これは、検索エンジン向けのUTCと、運用者向けのJST (UTC+9) の両方を提供することを目的としています。
+- この対応には、日付変換を担う新しい`DateFormatter`クラスの導入が含まれています。
 
 ## 次の一手候補
-1.  [Issue #15](../issue-notes/15.md) `DateFormatter`クラスを組み込み、日付表示のUTC/JST併記を実装
-    -   最初の小さな一歩: `src/generate_repo_list`内のMarkdown生成関連ファイルで、`DateFormatter`クラスを実際に使用し、日付フォーマットをUTC/JST併記にする箇所を特定する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: src/generate_repo_list/markdown_generator.py, src/generate_repo_list/repository_processor.py
+1. [Issue #15](../issue-notes/15.md) DateFormatterクラスの新規作成と基本的な実装
+   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py` を新規作成し、`DateFormatter`クラスの基本的な構造と、UTC/JST変換ロジックを実装し、シンプルな単体テストを追加する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: src/generate_repo_list/date_formatter.py (新規作成)
 
-        実行内容: [Issue #15](../issue-notes/15.md)で言及されている`DateFormatter`クラス（仮に`src/generate_repo_list/date_formatter.py`に存在すると仮定）を利用し、リポジトリリストやプロジェクト概要を生成する際に表示されるすべての日付情報について、UTCとJSTを併記するフォーマットを適用するように変更点を分析してください。具体的には、既存の日付取得・整形ロジックを特定し、`DateFormatter`をどのように組み込むかを提案してください。
+     実行内容: 新規ファイル`src/generate_repo_list/date_formatter.py`を作成し、`DateFormatter`クラスを実装してください。このクラスはdatetimeオブジェクトを受け取り、"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"形式の文字列を返す`format_datetime_dual_timezone`メソッドを持つものとします。タイムゾーン変換には`pytz`ライブラリの使用を検討してください。また、クラスの基本的な機能を確認するための簡単なテストコードを同ファイル内に含めてください。
 
-        確認事項: `datetime`オブジェクトがUTCまたはJSTのどちらのタイムゾーンで取得されているかを確認し、`DateFormatter`が期待通りに動作するための入力形式の整合性を確認してください。既存のテストファイルとの関連も確認してください。
+     確認事項: Pythonのdatetimeオブジェクトとタイムゾーン変換（特に`pytz`ライブラリの利用方法）に関する既存の知識と制約を確認してください。
 
-        期待する出力: `markdown_generator.py`と`repository_processor.py`における変更提案をmarkdown形式で出力してください。変更点には、`DateFormatter`クラスのインポート方法、インスタンス化、および既存の日付フォーマット処理を置き換える具体的なコードスニペットを含めてください。
-        ```
+     期待する出力: 新規作成された`src/generate_repo_list/date_formatter.py`ファイル。
+     ```
 
-2.  [Issue #4](../issue-notes/4.md) `README.ja.md`の有無に基づきJapaneseバッジとリンクを生成
-    -   最初の小さな一歩: `src/generate_repo_list/repository_processor.py`がリポジトリのファイル情報を取得する際に`README.ja.md`の存在を検知できるか調査し、その情報を`markdown_generator.py`に渡す方法を検討する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: src/generate_repo_list/markdown_generator.py, src/generate_repo_list/repository_processor.py
+2. [Issue #14](../issue-notes/14.md) Markdown生成ロジックへのDateFormatterの適用
+   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` を分析し、日付を文字列として出力している箇所を特定する。その後、候補1で実装される`DateFormatter`クラスをインポートし、日付表示をUTCとJSTを併記する形式に更新する準備をする。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: src/generate_repo_list/markdown_generator.py
 
-        実行内容: [Issue #4](../issue-notes/4.md)の要件に基づき、リポジトリが`README.ja.md`を持つ場合に、生成されるリポジトリリストに「Japanese」バッジ（例: `![Japanese](https://img.shields.io/badge/Language-Japanese-blue)`）と`README.ja.html`へのリンクを追加するロジックを組み込むための変更点を分析してください。具体的には、`repository_processor.py`で`README.ja.md`の有無を検知し、その情報を`markdown_generator.py`で利用してバッジとリンクを生成するフローを提案してください。
+     実行内容: `src/generate_repo_list/markdown_generator.py`ファイル内で、日付を文字列として出力している箇所を特定し、その行番号と現在の出力形式をMarkdown形式で列挙してください。また、`DateFormatter`クラスをインポートする場合の適切な位置と、そのクラスの`format_datetime_dual_timezone`メソッドを利用して日付をフォーマットするための仮のコードスニペット（コメントアウトされた状態）を、特定した各箇所の直下に追記してください。
 
-        確認事項: `repository_processor.py`がGitHub APIを通じてファイル情報を正確に取得できるか、`markdown_generator.py`がバッジとリンクを生成する際に適切なURL構造を構築できるかを確認してください。
+     確認事項: `markdown_generator.py`内で日付がどのように扱われているか（例: datetimeオブジェクトか文字列か）、およびPythonのインポートパスの解決規則を確認してください。
 
-        期待する出力: `markdown_generator.py`と`repository_processor.py`における変更提案をmarkdown形式で出力してください。変更点には、`README.ja.md`の有無を判定するロジック、バッジとリンクのMarkdown生成コードスニペットを含めてください。
-        ```
+     期待する出力: 分析結果と仮のコードスニペットが追記された`src/generate_repo_list/markdown_generator.py`ファイルの修正差分をMarkdown形式で出力。
+     ```
 
-3.  [Issue #14](../issue-notes/14.md) 生成ドキュメント全体での日付表示要件の最終確認と適用範囲の明確化
-    -   最初の小さな一歩: `index.md`や`generated-docs/project-overview.md`など、日付が表示される可能性のある生成ドキュメントを洗い出し、現在の日付フォーマットと`[Issue #14](../issue-notes/14.md)`の要求とのギャップを特定する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: index.md, generated-docs/project-overview.md, src/generate_repo_list/markdown_generator.py, src/generate_repo_list/project_overview_fetcher.py
+3. [Issue #14](../issue-notes/14.md) / [Issue #15](../issue-notes/15.md) 日付取得ロジックの調査とDateFormatterとの連携評価
+   - 最初の小さな一歩: `src/generate_repo_list/project_overview_fetcher.py` と `src/generate_repo_list/repository_processor.py` を調査し、GitHub APIなどから日付情報を取得している箇所と、そのデータ形式（datetimeオブジェクトか文字列か、タイムゾーン情報含むか）を特定する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: src/generate_repo_list/project_overview_fetcher.py, src/generate_repo_list/repository_processor.py
 
-        実行内容: 生成されるリポジトリリスト（index.md）およびプロジェクト概要（project-overview.md）内のすべての日付表示箇所を特定し、[Issue #14](../issue-notes/14.md)の要件（UTCとJSTの併記、運用者向け/検索エンジン向け）がどのように適用されているか、または適用されるべきかを分析してください。具体的には、現在の日付表示がどのファイルで生成されているかを特定し、一貫性のあるUTC/JST併記フォーマットを導入するために必要な修正箇所とロジックを提案してください。
+     実行内容: `src/generate_repo_list/project_overview_fetcher.py`と`src/generate_repo_list/repository_processor.py`を分析し、GitHub APIなどから日付情報を取得しているすべての箇所とそのデータ形式を特定してください。特に、取得される日付のタイムゾーン情報（UTCか、タイムゾーンなしのローカルタイムかなど）に焦点を当てて調査し、各日付情報が`DateFormatter`クラスの`format_datetime_dual_timezone`メソッドに適切に渡されるために必要な前処理（例: タイムゾーン情報の付与や変換）について考察し、具体的な提案を含めてMarkdown形式でレポートしてください。
 
-        確認事項: `project_overview_fetcher.py`が取得する日付データがタイムゾーン情報を含んでいるか、または`markdown_generator.py`が日付を整形する際にタイムゾーンを考慮しているかを確認してください。既存のシステムで日付がどのように管理・表示されているかの全体像を把握してください。
+     確認事項: これらのファイルが依存している外部ライブラリ（例: `github.Github`）の日付関連メソッドの戻り値の型とタイムゾーン情報に関する公式ドキュメントを確認してください。
 
-        期待する出力: 生成ドキュメントにおける日付表示の現状と、[Issue #14](../issue-notes/14.md)の要件を満たすための一貫した日付フォーマット適用戦略をmarkdown形式で出力してください。具体的な変更箇所として`markdown_generator.py`や`project_overview_fetcher.py`のどの部分に手を入れるべきかを明記し、潜在的な影響についても言及してください。
-        ```
+     期待する出力: 分析結果をまとめたMarkdown形式のレポート。レポートには、日付取得元のメソッド、取得される日付の形式（datetimeオブジェクトか文字列か、タイムゾーンの有無）、`DateFormatter`クラスへの連携に必要な前処理に関する具体的な提案を含めてください。
 
 ---
-Generated at: 2025-12-07 07:05:48 JST
+Generated at: 2025-12-08 07:05:48 JST
