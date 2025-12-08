@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-07
+Last Updated: 2025-12-08
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用してGitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
-- SEOに最適化されたMarkdown形式でリポジトリ情報（概要、バッジ、分類）を出力します。
-- 検索エンジンからのクロールを促進し、LLMによるリポジトリ参照の精度向上を目指します。
-- 📅 2025-12-07
+- GitHub APIを活用し、リポジトリ情報を自動で取得・整理するシステムです。
+- ユーザーのGitHub Pagesサイト向けに、検索エンジン最適化されたリポジトリ一覧Markdownファイルを生成します。
+- これにより、プロジェクトの公開性とLLMからの参照性を向上させ、開発効率を高めることを目指します。
+- 📅 2025-12-08
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
@@ -110,7 +110,7 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - YM2151 FM音源の音色を、Windows上で直感的に編集できるターミナルベースのエディタです。
 - マウスやキーボード操作で音色パラメータをリアルタイムに変更し、即座にそのサウンドをプレビューできます。
 - 変更は自動で保存され、次回起動時に前回の状態から編集を再開できるため、スムーズな音色作成が可能です。
-- 📅 2025-12-07
+- 📅 2025-12-08
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
 collection of reusable GitHub Actions workflows for multiple projects
