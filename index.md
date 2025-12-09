@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-08
+Last Updated: 2025-12-09
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、リポジトリ情報を自動で取得・整理するシステムです。
-- ユーザーのGitHub Pagesサイト向けに、検索エンジン最適化されたリポジトリ一覧Markdownファイルを生成します。
-- これにより、プロジェクトの公開性とLLMからの参照性を向上させ、開発効率を高めることを目指します。
-- 📅 2025-12-08
+- GitHub APIを利用し、ユーザーのリポジトリ情報を取得するシステムです。
+- 取得した情報から、GitHub Pages向けのSEO最適化されたリポジトリ一覧を自動生成します。
+- 検索エンジンからのクロールを促進し、LLMによるリポジトリ参照失敗の課題を緩和することを目的としています。
+- 📅 2025-12-09
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
@@ -107,9 +107,9 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
 
 ### Project Highlights
-- YM2151 FM音源の音色を、Windows上で直感的に編集できるターミナルベースのエディタです。
-- マウスやキーボード操作で音色パラメータをリアルタイムに変更し、即座にそのサウンドをプレビューできます。
-- 変更は自動で保存され、次回起動時に前回の状態から編集を再開できるため、スムーズな音色作成が可能です。
+- YM2151 FM音源の音色をWindows上で直感的に編集できるTUI（ターミナルユーザーインターフェース）エディタです。
+- Rustで開発され、リアルタイム音声フィードバックと自動保存機能を備えています。
+- シンプルで応答性の高い操作性により、YM2151の音作りを手軽に楽しむことができます。
 - 📅 2025-12-08
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
