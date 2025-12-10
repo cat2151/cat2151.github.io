@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-09
+Last Updated: 2025-12-10
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,24 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、ユーザーのリポジトリ情報を取得するシステムです。
-- 取得した情報から、GitHub Pages向けのSEO最適化されたリポジトリ一覧を自動生成します。
-- 検索エンジンからのクロールを促進し、LLMによるリポジトリ参照失敗の課題を緩和することを目的としています。
-- 📅 2025-12-09
+- GitHub APIを活用し、指定されたユーザーのリポジトリ情報を自動で取得します。
+- GitHub Pagesサイト向けに、SEOを意識したリポジトリ一覧をMarkdown形式で生成します。
+- サイトの検索エンジンからの発見性を高め、LLMによるリポジトリ参照の精度向上に貢献します。
+- 📅 2025-12-10
+
+## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
+File Change Monitoring Tool - Detects file changes and executes commands
+
+<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
+
+### Project Highlights
+- ファイルの変更をリアルタイムで監視し、変更が検知された際に指定されたコマンドを自動実行するツールです。
+- TOML形式の設定ファイルを通じて、監視対象ファイル、実行コマンド、監視間隔、特定の条件での実行抑制など、柔軟な監視ルールを定義できます。
+- 軽量で使いやすく、開発や自動化のワークフローを効率化するために設計されており、Windows環境でのフォーカス奪取防止機能も備えています。
+- 📅 2025-12-10
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
@@ -107,10 +121,10 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
 
 ### Project Highlights
-- YM2151 FM音源の音色をWindows上で直感的に編集できるTUI（ターミナルユーザーインターフェース）エディタです。
-- Rustで開発され、リアルタイム音声フィードバックと自動保存機能を備えています。
-- シンプルで応答性の高い操作性により、YM2151の音作りを手軽に楽しむことができます。
-- 📅 2025-12-08
+- YM2151（OPM）FM音源の音色パラメータを編集するための、Windows向けターミナルユーザーインターフェース (TUI) アプリケーションです。
+- Rustで開発されており、マウスやキーボード操作で音色をリアルタイムに調整し、音声フィードバックと自動セーブ機能を提供します。
+- シンプルな操作性と視覚的なフィードバックを通じて、FM音源の音色作成・調整プロセスを支援します。
+- 📅 2025-12-10
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
 collection of reusable GitHub Actions workflows for multiple projects
@@ -139,20 +153,6 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - サーバー・クライアントアーキテクチャを採用し、柔軟な音楽データ再生と制御を可能にします。
 - 演奏中に次の操作を受け付けるインタラクティブな音楽体験を提供し、音色エディタなどとの連携も容易です。
 - 📅 2025-12-06
-
-## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
-File Change Monitoring Tool - Detects file changes and executes commands
-
-<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
-
-### Project Highlights
-- ファイル変更を監視し、指定されたコマンドを自動実行する汎用ツールです。
-- TOML形式の設定ファイルを使用し、複数のファイルやディレクトリと実行コマンドを柔軟に定義できます。
-- 軽量で使いやすく、特にWindows環境でコマンド実行時にフォーカスを奪わない機能も提供します。
-- 📅 2025-12-05
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
