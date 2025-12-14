@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-13
+Last Updated: 2025-12-14
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、個人のリポジトリ情報を自動で取得・整理するシステムです。
-- GitHub Pagesサイト向けにSEO最適化されたリポジトリ一覧をMarkdown形式で自動生成します。
-- 各リポジトリの概要文も自動抽出し、視覚的で網羅的なポートフォリオページを実現します。
-- 📅 2025-12-13
+- GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
+- GitHub APIとMarkdownを活用し、SEO最適化されたページを効率的に作成します。
+- 各リポジトリの概要を自動取得し、情報アクセスとLLM参照の改善を目指します。
+- 📅 2025-12-14
 
 ## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
 
@@ -105,7 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/ym2151-log-editor](https://github.com/cat2151/ym2151-log-editor)
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-log-editor/](https://cat2151.github.io/ym2151-log-editor/)
 - **Overview**: No description available
-- 📅 2025-12-13
+- 📅 2025-12-14
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
