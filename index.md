@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-14
+Last Updated: 2025-12-15
 
 ## 📋 Table of Contents
 
@@ -94,9 +94,9 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
 ### Project Highlights
 - GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
-- GitHub APIとMarkdownを活用し、SEO最適化されたページを効率的に作成します。
-- 各リポジトリの概要を自動取得し、情報アクセスとLLM参照の改善を目指します。
-- 📅 2025-12-14
+- GitHub APIからリポジトリ情報を取得し、SEOに最適化されたMarkdown形式で出力します。
+- 検索エンジンや大規模言語モデル (LLM) によるリポジトリの発見性を向上させることを目的としています。
+- 📅 2025-12-15
 
 ## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
 
@@ -105,7 +105,12 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/ym2151-log-editor](https://github.com/cat2151/ym2151-log-editor)
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-log-editor/](https://cat2151.github.io/ym2151-log-editor/)
 - **Overview**: No description available
-- 📅 2025-12-14
+
+### Project Highlights
+- YM2151シンセサイザーのイベントログを編集するためのターミナルユーザーインターフェース (TUI) エディタです。
+- JSON形式のイベントデータを読み込み、可視化、編集、保存する機能を提供します。
+- イベントのタイミング調整、KeyON表示、時刻表示モードの切り替えにより、効率的なYM2151イベントデータ操作を支援します。
+- 📅 2025-12-15
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
