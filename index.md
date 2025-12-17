@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-16
+Last Updated: 2025-12-17
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,24 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、GitHub Pagesサイト用のリポジトリ一覧Markdownファイルを自動生成するシステムです。
-- 生成されたページはSEOが最適化され、検索エンジンやLLMによるリポジトリ参照の改善に貢献します。
-- 各リポジトリの概要を自動取得・表示することで、訪問者にプロジェクトの魅力的な情報を提供します。
-- 📅 2025-12-16
+- GitHub Pagesサイト向けにリポジトリ一覧を自動生成するPythonシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、SEOに最適化されたMarkdownファイルを生成します。
+- 検索エンジンからのクロールを促進し、LLMによるリポジトリ参照の精度向上を目指します。
+- 📅 2025-12-17
+
+## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
+A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
+
+<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue)
+
+- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
+- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
+
+### Project Highlights
+- 格闘ゲームのボタン練習を目的としたWindows用アプリケーションです。
+- ランダムに表示されるお題に対し、対応するボタンを入力してスコアを競います。
+- 常駐型で、ゲーム起動時や練習の合間に素早く利用できるよう設計されています。
+- 📅 2025-12-17
 
 ## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
 YM2151 event log editor with TUI interface. Written in Rust
@@ -362,20 +376,6 @@ Simple user scripts for the Obsidian Templater plugin.
 - ObsidianのTemplaterプラグインの機能を拡張するJavaScriptスクリプトと活用ノウハウ集です。
 - テキストエディタのマクロのように、Obsidianに便利な機能を手軽に追加するためのサンプルを提供します。
 - 現在行のハイライト（ブックマーク）やファイルの挿入など、実用的な機能のスクリプトを含みます。
-- 📅 2025-12-01
-
-## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
-A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
-
-<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue)
-
-- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
-- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
-
-### Project Highlights
-- 格ゲーのボタン練習アプリです。
-- ランダムでお題が表示され、指定されたボタンを押すことでスコアが得られます。
-- Windowsで動作し、ストリートファイター6モダンをはじめ、様々な格闘ゲームの練習に活用できます。
 - 📅 2025-12-01
 
 ## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
