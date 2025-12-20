@@ -1,51 +1,50 @@
-Last updated: 2025-12-20
+Last updated: 2025-12-21
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #15](../issue-notes/15.md) と [Issue #14](../issue-notes/14.md) は、プロジェクト内のすべての日付表示をUTCとJSTのデュアルタイムゾーン形式で併記することを求めています。
-- これは、検索エンジン最適化のためのUTCと、運用者にとっての視認性向上のためのJSTの両方を満たすことを目的としています。
-- 現在、`date_formatter.py`に新しい`DateFormatter`クラスが導入され、`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式への変換が進行中です。
+- [Issue #14](../issue-notes/14.md) は、生成されるすべてのドキュメントの日付表示をUTCとJSTの両方で併記し、運用者と検索エンジンの双方に配慮する要件です。
+- [Issue #15](../issue-notes/15.md) も同様に、日付表示をUTC/JSTの二重タイムゾーン形式で追加することを求めています。
+- これらのIssueは、プロジェクト全体の日付フォーマットを一貫して改善することを目指しており、特にMarkdown生成部分への影響が想定されます。
 
 ## 次の一手候補
-1. [Issue #15](../issue-notes/15.md) DateFormatterクラスの実装完了とテストの追加
-   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py`に`DateFormatter`クラスを実装し、日付をUTCとJSTの両形式で出力するメソッドを完成させる。また、このクラスの機能を確認するための単体テストを`tests/test_date_formatter.py`に新規作成または追加する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: `src/generate_repo_list/date_formatter.py`, `tests/test_date_formatter.py`
+1.  [Issue #14](../issue-notes/14.md): 日付表示のための共通ユーティリティ関数の実装
+    -   最初の小さな一歩: `src/generate_repo_list/url_utils.py` または新規ファイルに、`datetime` オブジェクトを受け取りUTCとJSTの二重形式でフォーマットするPython関数を作成する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `src/generate_repo_list/url_utils.py`
 
-     実行内容: `src/generate_repo_list/date_formatter.py`に、`datetime`オブジェクトを受け取り、`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式の文字列を返す`DateFormatter`クラスを実装してください。具体的には、UTC時刻とJST（UTC+9）時刻への変換処理を含めます。さらに、このクラスの基本的な日付変換、タイムゾーン処理、およびエッジケース（例: タイムゾーン情報を持たない`datetime`オブジェクト）を検証するための単体テストを`tests/test_date_formatter.py`に作成または追記してください。
+        実行内容: `datetime` オブジェクト（タイムゾーン情報を持つ）を受け取り、"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)" の形式で日付文字列を返す `format_dual_timezone_date` 関数を `src/generate_repo_list/url_utils.py` に追加してください。JSTはUTC+9としてください。
 
-     確認事項: タイムゾーン変換（UTCとJST+9）が正確に行われるか、異なる日付や時刻での変換が正しいか、そして既存のテストフレームワークと整合性が取れているかを確認してください。
+        確認事項: Pythonの `datetime` モジュールと `zoneinfo` (または `pytz` がインストールされている場合) を使用し、既存のユーティリティ関数との整合性を保ちながら実装してください。`zoneinfo` が利用できない環境の場合は `datetime.timezone.utc` を用いたオフセット計算を検討してください。
 
-     期待する出力: `src/generate_repo_list/date_formatter.py`の`DateFormatter`クラスの実装コードと、`tests/test_date_formatter.py`のテストコードを提示してください。
-     ```
+        期待する出力: `format_dual_timezone_date` 関数が追加された `src/generate_repo_list/url_utils.py` の更新された内容をmarkdown形式で出力してください。
+        ```
 
-2. [Issue #14](../issue-notes/14.md) 生成されるMarkdownファイルへの日付表示組み込み
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py`を修正し、生成するMarkdownファイル内の日付表示（例: 最終更新日、作成日など）を、新しく実装した`DateFormatter`クラスを利用してUTC/JST併記形式に置き換える。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/date_formatter.py`
+2.  [Issue #14](../issue-notes/14.md): 生成されるMarkdown/HTMLへの日付表示の適用
+    -   最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` 内で日付を扱う箇所を特定し、ステップ1で作成した共通関数を呼び出してUTC/JST併記形式に更新する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `src/generate_repo_list/markdown_generator.py`
 
-     実行内容: `src/generate_repo_list/markdown_generator.py`を分析し、現在日付を生成または整形している箇所を特定してください。その後、それらの箇所を`src/generate_repo_list/date_formatter.py`で定義されている`DateFormatter`クラスをインポートし、使用するように修正してください。日付は`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式で出力されるようにしてください。
+        実行内容: `src/generate_repo_list/markdown_generator.py` 内の `_generate_repository_markdown` 関数やその他の日付をMarkdownまたはHTMLに埋め込む部分を分析し、ステップ1で実装した `format_dual_timezone_date` 関数（`src/generate_repo_list/url_utils.py` に追加されたもの）を使用して、日付表示をUTCとJSTで併記する形式に変更してください。
 
-     確認事項: `markdown_generator.py`が`DateFormatter`クラスを正しくインポートし、利用しているか確認してください。生成されるMarkdownファイルにおいて、すべての日付が期待されるUTC/JST併記形式で表示されているか、また、既存のMarkdown生成ロジックが壊れていないかを確認してください。
+        確認事項: 変更が `index.md` やその他の生成されるドキュメントに正しく反映されることを確認し、既存のMarkdown生成ロジックを壊さないようにしてください。また、`src/generate_repo_list/url_utils.py` から `format_dual_timezone_date` 関数を適切にインポートしてください。
 
-     期待する出力: `src/generate_repo_list/markdown_generator.py`の変更差分を提示してください。
-     ```
+        期待する出力: 日付表示ロジックが更新された `src/generate_repo_list/markdown_generator.py` の更新された内容をmarkdown形式で出力してください。
+        ```
 
-3. [Issue #14](../issue-notes/14.md) プロジェクト概要データ収集における日付フォーマットの適用
-   - 最初の小さな一歩: `src/generate_repo_list/project_overview_fetcher.py`または`src/generate_repo_list/repository_processor.py`を修正し、リポジトリから日付情報（例: `pushed_at`, `created_at`）を収集した直後に`DateFormatter`を適用して、統一されたUTC/JST併記形式でデータを保持するように変更する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `src/generate_repo_list/project_overview_fetcher.py`, `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/date_formatter.py`
+3.  [Issue #14](../issue-notes/14.md): 日付表示機能のテストと検証
+    -   最初の小さな一歩: `tests/test_markdown_generator.py` に、生成されたMarkdownの日付表示が期待通りのUTC/JST併記形式になっていることを確認するテストケースを追加する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `tests/test_markdown_generator.py`
 
-     実行内容: `src/generate_repo_list/project_overview_fetcher.py`がGitHub APIから日付（例: `pushed_at`, `created_at`）を取得した後、または`src/generate_repo_list/repository_processor.py`がこれらの日付を処理する際に、`src/generate_repo_list/date_formatter.py`の`DateFormatter`クラスを導入し、それらの日付を直ちにUTC/JST併記形式の文字列として整形し、以降の処理で利用できるように変更してください。
+        実行内容: `src/generate_repo_list/markdown_generator.py` の日付表示変更を検証するため、`tests/test_markdown_generator.py` に新しいテスト関数を追加してください。このテストは、モックデータを使用してリポジトリ情報を生成し、`markdown_generator.py` が出力するMarkdown内の日付文字列が「YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)」の形式で正しく含まれていることをアサートします。
 
-     確認事項: GitHub APIから取得した生の日付データが`DateFormatter`によって正しく変換されているか、変換後の日付データがプロジェクトのデータ構造内で一貫して利用可能か、そして他のデータ処理フローに予期せぬ影響がないかを確認してください。
+        確認事項: 既存のテストスイートに影響を与えず、新しいテストが機能することを確認してください。Pythonの `unittest.mock` または `pytest` の `mocker` フィクスチャを利用して、必要に応じて日付関連の関数や外部依存を適切にモックしてください。
 
-     期待する出力: `src/generate_repo_list/project_overview_fetcher.py`または`src/generate_repo_list/repository_processor.py`の変更差分を提示してください。
-     ```
+        期待する出力: 新しいテストケースが追加された `tests/test_markdown_generator.py` の更新された内容をmarkdown形式で出力してください。
 
 ---
-Generated at: 2025-12-20 07:07:44 JST
+Generated at: 2025-12-21 07:05:45 JST
