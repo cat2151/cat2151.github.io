@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-19
+Last Updated: 2025-12-20
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,24 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
-- JekyllベースのGitHub Pages向けに、SEO最適化されたMarkdownファイルを自動的に出力します。
-- ユーザーページのリポジトリ検索エンジン発見性を高め、LLMによるリポジトリ参照精度の改善を目的としています。
-- 📅 2025-12-19
+- GitHub Pages サイト向けに、リポジトリ一覧を自動生成するシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、SEO最適化されたMarkdownファイルを生成します。
+- これにより、プロジェクトの公開情報が検索エンジンやLLMに認識されやすくなることを目指します。
+- 📅 2025-12-20
+
+## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
+YM2151 event log editor with TUI interface. Written in Rust
+
+<a href="https://cat2151.github.io/ym2151-log-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue)
+
+- **Repository**: [https://github.com/cat2151/ym2151-log-editor](https://github.com/cat2151/ym2151-log-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-editor/](https://cat2151.github.io/ym2151-log-editor/)
+
+### Project Highlights
+- YM2151シンセサイザーのイベントログを編集するためのターミナルベースのJSONエディタです。
+- イベントデータの可視化とタイミング調整、イベント検査に焦点を当てた機能を提供します。
+- ユーザーはイベントの挿入、削除、待機時間設定といった基本的な編集と表示モード切り替えが可能です。
+- 📅 2025-12-20
 
 ## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
 A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
@@ -110,20 +124,6 @@ A tool to practice button inputs for fighting games on Windows. Ideal for leverl
 - 格闘ゲームのボタン練習を目的としたWindows用アプリケーションです。
 - ランダムに表示されるお題に対し、対応するボタンを入力してスコアを競います。
 - 常駐型で、ゲーム起動時や練習の合間に素早く利用できるよう設計されています。
-- 📅 2025-12-18
-
-## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
-YM2151 event log editor with TUI interface. Written in Rust
-
-<a href="https://cat2151.github.io/ym2151-log-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue)
-
-- **Repository**: [https://github.com/cat2151/ym2151-log-editor](https://github.com/cat2151/ym2151-log-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-editor/](https://cat2151.github.io/ym2151-log-editor/)
-
-### Project Highlights
-- YM2151シンセサイザーのイベントログを、ターミナル上で直感的に編集できるRust製TUIエディタです。
-- イベントデータの可視化、KeyON表示、時刻表示モード切り替えなどの機能を提供し、タイミング調整やイベント検査を支援します。
-- JSON形式のイベントログファイルの読み込みと保存に対応し、YM2151のイベントシーケンスを効率的に管理できます。
 - 📅 2025-12-18
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
