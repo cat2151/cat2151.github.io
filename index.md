@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-20
+Last Updated: 2025-12-21
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pages サイト向けに、リポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、SEO最適化されたMarkdownファイルを生成します。
-- これにより、プロジェクトの公開情報が検索エンジンやLLMに認識されやすくなることを目指します。
-- 📅 2025-12-20
+- GitHub APIを利用してリポジトリ情報を取得し、GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
+- 検索エンジン最適化（SEO）とLLMによる参照性を向上させ、リポジトリの可視性を高めることを目的としています。
+- 各リポジトリから3行のプロジェクト概要を自動取得・表示する機能も持ち、魅力的な一覧を提供します。
+- 📅 2025-12-21
 
 ## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
 YM2151 event log editor with TUI interface. Written in Rust
@@ -107,10 +107,24 @@ YM2151 event log editor with TUI interface. Written in Rust
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-log-editor/](https://cat2151.github.io/ym2151-log-editor/)
 
 ### Project Highlights
-- YM2151シンセサイザーのイベントログを編集するためのターミナルベースのJSONエディタです。
-- イベントデータの可視化とタイミング調整、イベント検査に焦点を当てた機能を提供します。
-- ユーザーはイベントの挿入、削除、待機時間設定といった基本的な編集と表示モード切り替えが可能です。
-- 📅 2025-12-20
+- YM2151シンセサイザーのイベントログを編集・可視化するターミナルユーザーインターフェース (TUI) アプリケーションです。
+- イベントのタイミング調整や検査に焦点を当て、JSON形式のYM2151イベントデータを直感的に操作できます。
+- Rustで開発されており、安定したパフォーマンスとターミナル環境での快適な操作性を提供します。
+- 📅 2025-12-21
+
+## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
+Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
+
+<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: client-server](https://img.shields.io/badge/Topic-client--server-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
+
+- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
+
+### Project Highlights
+- YM2151音源のレジスタ操作ログをリアルタイムで再生するサーバー/クライアントアプリケーションです。
+- クライアントからの指示で演奏の開始、停止、モード切り替えをシームレスに行えます。
+- リアルタイム性の高いインタラクティブな音楽制御や音色エディタでの利用を想定しています。
+- 📅 2025-12-21
 
 ## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
 A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
@@ -125,20 +139,6 @@ A tool to practice button inputs for fighting games on Windows. Ideal for leverl
 - ランダムに表示されるお題に対し、対応するボタンを入力してスコアを競います。
 - 常駐型で、ゲーム起動時や練習の合間に素早く利用できるよう設計されています。
 - 📅 2025-12-18
-
-## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
-Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
-
-<a href="https://cat2151.github.io/ym2151-log-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: client-server](https://img.shields.io/badge/Topic-client--server-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
-
-- **Repository**: [https://github.com/cat2151/ym2151-log-play-server](https://github.com/cat2151/ym2151-log-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
-
-### Project Highlights
-- YM2151 (OPM) レジスタログをリアルタイムで再生するRust製サーバー・クライアントシステムです。
-- JSON形式の音楽データを受け取り、高精度なオーディオ再生とWAVファイル出力が可能です。
-- プログラマティックなAPIやコマンドラインツールを提供し、多様な外部アプリケーションとの連携を目的としています。
-- 📅 2025-12-16
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
