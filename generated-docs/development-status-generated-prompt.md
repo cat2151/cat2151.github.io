@@ -1,4 +1,4 @@
-Last updated: 2025-12-22
+Last updated: 2025-12-23
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -611,6 +611,8 @@ jobs:
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+538d268 Auto-update repository list - 2025-12-21
+97e10f2 Update project summaries (overview & development status) [auto]
 974fc8b Auto-update repository list - 2025-12-20
 3a11d2c Update project summaries (overview & development status) [auto]
 4840a20 Auto-update repository list - 2025-12-19
@@ -619,8 +621,6 @@ d57378e Auto-update repository list - 2025-12-18
 af513f8 Update project summaries (overview & development status) [auto]
 1623578 Auto-update repository list - 2025-12-17
 9041eed Update project summaries (overview & development status) [auto]
-edf5f39 Auto-update repository list - 2025-12-16
-7050b6d Update project summaries (overview & development status) [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -631,4 +631,4 @@ index.md
 
 
 ---
-Generated at: 2025-12-22 07:05:46 JST
+Generated at: 2025-12-23 07:06:30 JST
