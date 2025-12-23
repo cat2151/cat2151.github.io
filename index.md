@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 72 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 73 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 72 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 73 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 72 open source projects.",
+      "description": "Programmer and developer. Publishing 73 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 72 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 73 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-22
+Last Updated: 2025-12-23
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2025-12-22
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-72-blue) ![Active](https://img.shields.io/badge/Active-44-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-52-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-73-blue) ![Active](https://img.shields.io/badge/Active-45-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-52-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-21_(29.2%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12_(16.7%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-9_(12.5%25)-dea584?style=flat&logo=rust) ![HTML](https://img.shields.io/badge/HTML-7_(9.7%25)-e34c26?style=flat&logo=html5) ![Batchfile](https://img.shields.io/badge/Batchfile-4_(5.6%25)-8b407a?style=flat&logo=windowsterminal)
+![JavaScript](https://img.shields.io/badge/JavaScript-21_(28.8%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12_(16.4%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-9_(12.3%25)-dea584?style=flat&logo=rust) ![HTML](https://img.shields.io/badge/HTML-7_(9.6%25)-e34c26?style=flat&logo=html5) ![TypeScript](https://img.shields.io/badge/TypeScript-4_(5.5%25)-3178c6?style=flat&logo=typescript)
 
 
 ---
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けに、リポジトリ情報を自動生成するシステムです。
-- GitHub APIからリポジトリデータを取得し、SEO最適化されたMarkdown形式で出力します。
-- 検索エンジンやLLMからの参照性を向上させ、プロジェクトの認知度と開発効率を高めます。
-- 📅 2025-12-22
+- GitHub Pagesサイト向けに、ユーザーのリポジトリ一覧を自動生成するシステムです。
+- GitHub APIからリポジトリ情報を取得し、SEO最適化されたJekyll対応Markdownを作成します。
+- これにより、リポジトリの検索エンジンでの可視性と、LLMによる参照性を向上させます。
+- 📅 2025-12-23
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
@@ -107,10 +107,19 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
 
 ### Project Highlights
-- YM2151 (OPM) チップのレジスタイベントログをリアルタイムで再生するシステムです。
-- Rustで実装されたサーバー・クライアントアーキテクチャを持ち、Windows環境で動作します。
-- 他のアプリケーションから音楽データを送信し、素早く演奏を切り替えられるリアルタイム音源サービスを提供します。
-- 📅 2025-12-22
+- YM2151音源チップのレジスタイベントログをリアルタイムで再生するサーバー・クライアントシステムです。
+- サーバーはバックグラウンドで常駐し、クライアントからの命令で演奏の開始・停止・切り替えを柔軟に制御します。
+- 音色エディタやMMLプレイヤーなど、他のアプリケーションとの連携を目的としたWindows専用の基盤を提供します。
+- 📅 2025-12-23
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2025-12-23
 
 ## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
 YM2151 event log editor with TUI interface. Written in Rust
