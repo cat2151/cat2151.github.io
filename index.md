@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-23
+Last Updated: 2025-12-24
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けに、ユーザーのリポジトリ一覧を自動生成するシステムです。
-- GitHub APIからリポジトリ情報を取得し、SEO最適化されたJekyll対応Markdownを作成します。
-- これにより、リポジトリの検索エンジンでの可視性と、LLMによる参照性を向上させます。
-- 📅 2025-12-23
+- GitHub APIを活用し、ユーザーのリポジトリ情報を自動的に取得します。
+- 取得した情報から、JekyllベースのGitHub Pages向けにSEO最適化されたリポジトリ一覧を生成します。
+- 各リポジトリのプロジェクト概要や分類表示で、ウェブサイトの情報アクセス性と検索エンジンからの可視性を向上させます。
+- 📅 2025-12-24
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
@@ -107,10 +107,10 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
 
 ### Project Highlights
-- YM2151音源チップのレジスタイベントログをリアルタイムで再生するサーバー・クライアントシステムです。
-- サーバーはバックグラウンドで常駐し、クライアントからの命令で演奏の開始・停止・切り替えを柔軟に制御します。
-- 音色エディタやMMLプレイヤーなど、他のアプリケーションとの連携を目的としたWindows専用の基盤を提供します。
-- 📅 2025-12-23
+- YM2151音源チップのレジスタイベントログをリアルタイムで再生するWindows専用のサーバー・クライアントシステムです。
+- サーバーはバックグラウンドで常駐し、クライアントからの命令で演奏の開始、停止、切り替えを動的に行います。
+- JSON形式の音楽データを扱い、WAVファイル出力やインタラクティブな音響制御機能も提供します。
+- 📅 2025-12-24
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -119,7 +119,7 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2025-12-23
+- 📅 2025-12-24
 
 ## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
 YM2151 event log editor with TUI interface. Written in Rust
