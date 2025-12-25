@@ -1,54 +1,60 @@
-Last updated: 2025-12-25
+Last updated: 2025-12-26
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #14](../issue-notes/14.md) では、プロジェクト全体の日付表示をUTCとJSTのデュアルタイムゾーンで併記する要件が提起されており、JSTは運用者向け、UTCは検索エンジン向けとされています。
-- この要件に対応するため、新しい`DateFormatter`クラスを導入し、日付を「YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)」形式に変換する変更が[Issue #15](../issue-notes/15.md)で計画されています。
-- これらのタスクは、プロジェクトの公開情報における日付情報の正確性とユーザーフレンドリーさを向上させることを目指しています。
+- [Issue #15](../issue-notes/15.md)と[Issue #14](../issue-notes/14.md)は、すべての表示される日付にUTCとJSTの両方を併記することを目的としています。
+- これは、検索エンジン向けにUTCを、運用者向けにJST（UTC+9）を提供し、国際化と可読性を両立させます。
+- 具体的には、新しい`DateFormatter`クラスを導入し、`YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)`形式で日付を変換・表示します。
 
 ## 次の一手候補
-1. [Issue #14](../issue-notes/14.md) および [Issue #15](../issue-notes/15.md) に基づくUTC/JSTデュアルタイムゾーン日付表示機能の統合
-   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py`を作成し、`datetime`オブジェクトを受け取り、指定された形式の文字列（例: "2023-01-01 (UTC) / 2023-01-01 (JST)"）を返す`format_datetime_dual_timezone`関数を実装する。
-   - Agent実行プロンプト:
+1. `DateFormatter`クラスの初期実装と基本的な変換機能のテスト [Issue #15](../issue-notes/15.md)
+   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py`ファイルを作成し、`DateFormatter`クラスのスケルトンと、与えられた`datetime`オブジェクトをUTCとJSTの両方でフォーマットするメソッドを実装します。
+   - Agent実行プロンプ:
      ```
      対象ファイル: `src/generate_repo_list/date_formatter.py`
 
-     実行内容: `src/generate_repo_list/date_formatter.py` を新規作成し、`format_datetime_dual_timezone(dt_obj: datetime) -> str` 関数を実装してください。この関数はUTCとJST（UTC+9）の両方で`YYYY-MM-DD`形式の日付文字列を生成し、「YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)」の形式で返します。タイムゾーン処理には`pytz`ライブラリを使用してください。
+     実行内容: 新規ファイル`src/generate_repo_list/date_formatter.py`を作成し、`DateFormatter`クラスを実装してください。このクラスは、`format_datetime_utc_jst(dt: datetime) -> str`という静的メソッドを持ち、入力された`datetime`オブジェクトを`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式の文字列に変換する機能を持つ必要があります。`datetime`オブジェクトがタイムゾーン情報を持たない場合はUTCと仮定して処理してください。
 
-     確認事項: `datetime`オブジェクトがタイムゾーン情報を持っている場合と持たない場合のどちらにも対応できるようにしてください。また、`pytz`ライブラリのインポートが必要です。
+     確認事項:
+     - Pythonの標準ライブラリ（datetime）のみを使用し、外部ライブラリの追加は避けてください。
+     - `format_datetime_utc_jst`メソッドは、タイムゾーン情報を適切に処理し、夏時間の影響を考慮する必要はありません（単純なUTC+9でJSTを表現）。
+     - クラスやメソッドには適切なdocstringを追加してください。
 
-     期待する出力: 新規作成された`src/generate_repo_list/date_formatter.py`の内容をmarkdown形式で出力してください。
+     期待する出力: `src/generate_repo_list/date_formatter.py`の完全なコード。
      ```
 
-2. `project_summary`関連スクリプトにおける設定管理の一元化と適用
-   - 最初の小さな一歩: `src/generate_repo_list/config_manager.py` を分析し、既存の`.github/actions-tmp/.github_automation/project_summary/scripts/` 内のCJSスクリプトに共通する設定値（例: GitHub APIトークン、出力ディレクトリパスなど）を特定します。これらの設定をPython側の`config_manager`または専用のJavaScript設定ファイルで管理するための基本方針を検討する。
-   - Agent実行プロンプト:
+2. `DateFormatter`クラスを既存のプロジェクトファイルに適用し、日付表示を更新する [Issue #14](../issue-notes/14.md)
+   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py`を特定し、日付を生成している箇所を`DateFormatter`クラスを利用するように修正します。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: `src/generate_repo_list/config_manager.py`、`.github/actions-tmp/.github_automation/project_summary/scripts/` ディレクトリ内の主要CJSファイル（例: `generate-project-summary.cjs`, `ProjectSummaryCoordinator.cjs`）
+     対象ファイル: `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/date_formatter.py`
 
-     実行内容: `src/generate_repo_list/config_manager.py` の現在の機能と、`project_summary`関連のCJSスクリプトが利用している設定（環境変数やハードコードされたパスなど）を分析してください。これらの設定項目を将来的にPython側で一元管理し、CJSスクリプトに渡す、またはCJSスクリプト側で共通の設定ファイルを読み込むための、最初の実現可能なステップとして、どのような情報が必要か、どのようなデータ構造が最適かをMarkdown形式で提案してください。
+     実行内容: `src/generate_repo_list/markdown_generator.py`を修正し、`src/generate_repo_list/date_formatter.py`で定義された`DateFormatter`クラスを使用して、生成されるMarkdownファイル内のすべての日付表示をUTC/JSTデュアルタイムゾーン形式に変換してください。具体的には、`index.md`でリポジトリの最終更新日時などが表示される箇所を対象とします。
 
-     確認事項: 既存のGitHub Actionsワークフロー（特に環境変数の渡し方）との互換性を考慮してください。また、機密情報（APIキーなど）の扱いは現在の`secrets`メカニズムを維持することを前提としてください。
+     確認事項:
+     - `markdown_generator.py`内で`DateFormatter`クラスを正しくインポートしているか確認してください。
+     - 既存のMarkdown生成ロジックが壊れないことを確認してください。
+     - デュアルタイムゾーン形式が`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`になっていることを確認してください。
 
-     期待する出力: `project_summary`スクリプトのための設定管理の一元化に関する分析結果と、具体的な実装方針の提案をMarkdown形式で出力してください。
+     期待する出力: `src/generate_repo_list/markdown_generator.py`の修正されたコード。
      ```
 
-3. `src/generate_repo_list/markdown_generator.py` の単体テスト拡充
-   - 最初の小さな一歩: `tests/test_markdown_generator.py` に、`src/generate_repo_list/markdown_generator.py` 内の`generate_repository_list_markdown`関数に対するテストケースを追加し、基本的な引数（空リスト、単一リポジトリ、複数リポジトリ）で期待されるMarkdown出力が生成されることを確認する。
-   - Agent実行プロンプト:
+3. `project-overview.md`および`development-status.md`内の日付表示の確認と修正 [Issue #14](../issue-notes/14.md)
+   - 最初の小さな一歩: `project-overview.md`と`development-status.md`が生成されるプロセスを分析し、日付がどこでどのようにフォーマットされているかを特定します。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py`、`tests/test_markdown_generator.py`
+     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/generate-project-summary.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs`
 
-     実行内容: `tests/test_markdown_generator.py`に`src/generate_repo_list/markdown_generator.py`の`generate_repository_list_markdown`関数に対する新たなテストケースを追加してください。以下のシナリオをカバーするテストを実装してください：
-     1. 空のリポジトリリストが渡された場合、空のMarkdown文字列が返されること。
-     2. 単一のリポジトリ情報が渡された場合、期待される正しい形式のMarkdownが生成されること。
-     3. 複数のリポジトリ情報が渡された場合、それぞれの情報が正しく整形され、連結されたMarkdownが生成されること。
+     実行内容: 上記のファイル群を分析し、`project-overview.md`および`development-status.md`内で日付がどのように取得され、フォーマットされているかを特定してください。特に、日付文字列が生成される箇所と、UTC/JSTデュアル表示を導入するための変更点（例えば、JavaScriptのDateオブジェクトの扱い方や、既存のフォーマット関数への影響）について詳細に記述してください。
 
-     確認事項: 既存のテスト構造を尊重し、`pytest`で実行可能な形式で記述してください。テストデータは必要に応じてモックやスタブを使用せず、具体的なデータ構造を定義して利用してください。
+     確認事項:
+     - 関連するCJSスクリプト全体を網羅的に調査し、日付フォーマットに関わる関数やメソッドを特定してください。
+     - JavaScriptにおけるタイムゾーン変換の一般的なプラクティスを考慮してください。
+     - 最終的な出力形式が`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`となるような修正方針を提案してください。
 
-     期待する出力: 更新された`tests/test_markdown_generator.py`のファイル内容をmarkdown形式で出力してください。
+     期待する出力: 日付フォーマットの現状分析と、UTC/JSTデュアル表示導入のための具体的な修正方針をmarkdown形式で出力してください。
      ```
 
 ---
-Generated at: 2025-12-25 07:06:19 JST
+Generated at: 2025-12-26 07:06:03 JST
