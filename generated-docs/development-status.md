@@ -1,60 +1,53 @@
-Last updated: 2025-12-26
+Last updated: 2025-12-27
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #15](../issue-notes/15.md)と[Issue #14](../issue-notes/14.md)は、すべての表示される日付にUTCとJSTの両方を併記することを目的としています。
-- これは、検索エンジン向けにUTCを、運用者向けにJST（UTC+9）を提供し、国際化と可読性を両立させます。
-- 具体的には、新しい`DateFormatter`クラスを導入し、`YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)`形式で日付を変換・表示します。
+- [Issue #15](../issue-notes/15.md) は、`project_summary`スクリプトのモジュール分割とディレクトリ整理を目的としたリファクタリングが完了し、Agentによるメンテのしやすさが向上しました。
+- [Issue #14](../issue-notes/14.md) では、GitHub Pagesサイトの日付表示をUTCとJSTのデュアルタイムゾーン形式にするため、`DateFormatter`クラスの導入が進められています。
+- この日付表示の改善により、運用者向けJSTと検索エンジン向けUTCの併記が実現され、可読性とSEOの向上を目指しています。
 
 ## 次の一手候補
-1. `DateFormatter`クラスの初期実装と基本的な変換機能のテスト [Issue #15](../issue-notes/15.md)
-   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py`ファイルを作成し、`DateFormatter`クラスのスケルトンと、与えられた`datetime`オブジェクトをUTCとJSTの両方でフォーマットするメソッドを実装します。
-   - Agent実行プロンプ:
+1. [Issue #14](../issue-notes/14.md) 日付表示のデュアルタイムゾーン対応の実装とテスト
+   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py`や`src/generate_repo_list/repository_processor.py`など、日付を扱う可能性のある既存ファイルを確認し、新設された`DateFormatter`クラスを適用するためのコード変更箇所を特定する。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/date_formatter.py`
+     対象ファイル: src/generate_repo_list/markdown_generator.py, src/generate_repo_list/repository_processor.py, および src/generate_repo_list/ 以下で日付を文字列として生成している可能性のある全てのPythonファイル
 
-     実行内容: 新規ファイル`src/generate_repo_list/date_formatter.py`を作成し、`DateFormatter`クラスを実装してください。このクラスは、`format_datetime_utc_jst(dt: datetime) -> str`という静的メソッドを持ち、入力された`datetime`オブジェクトを`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式の文字列に変換する機能を持つ必要があります。`datetime`オブジェクトがタイムゾーン情報を持たない場合はUTCと仮定して処理してください。
+     実行内容: GitHub Pagesサイトの日付表示をUTCとJSTのデュアルタイムゾーン形式にするため、既存のコードで日付をフォーマットしている箇所を特定してください。特に、`DateFormatter`クラス（もし既に存在すればその利用方法、なければ新規作成を想定）を導入し、すべてのTimestampやDateオブジェクトが"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"形式で出力されるように変更するplanを提案してください。
 
-     確認事項:
-     - Pythonの標準ライブラリ（datetime）のみを使用し、外部ライブラリの追加は避けてください。
-     - `format_datetime_utc_jst`メソッドは、タイムゾーン情報を適切に処理し、夏時間の影響を考慮する必要はありません（単純なUTC+9でJSTを表現）。
-     - クラスやメソッドには適切なdocstringを追加してください。
+     確認事項: 既存の日付処理ロジックの依存関係、Pythonのdatetimeオブジェクトとtimezoneモジュールの使用方法、および`src/generate_repo_list`以下の他のファイルへの影響を確認してください。
 
-     期待する出力: `src/generate_repo_list/date_formatter.py`の完全なコード。
+     期待する出力: 変更が必要なファイルとその具体的な変更内容（コードスニペットを含む）をmarkdown形式でリストアップし、`DateFormatter`クラスの適用計画を詳細に記述してください。また、変更後のテスト方法についても言及してください。
      ```
 
-2. `DateFormatter`クラスを既存のプロジェクトファイルに適用し、日付表示を更新する [Issue #14](../issue-notes/14.md)
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py`を特定し、日付を生成している箇所を`DateFormatter`クラスを利用するように修正します。
-   - Agent実行プロンプ:
+2. [Issue #15](../issue-notes/15.md) `project_summary`スクリプト群の設定管理とエラーハンドリング統一の初期調査
+   - 最初の小さな一歩: `project_summary`関連のCJSスクリプト群（`.github/actions-tmp/.github_automation/project_summary/scripts/`以下）を横断的に分析し、現在設定がどのように扱われているか、またエラー処理がどのように行われているかを把握する。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/date_formatter.py`
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/**/*.cjs
 
-     実行内容: `src/generate_repo_list/markdown_generator.py`を修正し、`src/generate_repo_list/date_formatter.py`で定義された`DateFormatter`クラスを使用して、生成されるMarkdownファイル内のすべての日付表示をUTC/JSTデュアルタイムゾーン形式に変換してください。具体的には、`index.md`でリポジトリの最終更新日時などが表示される箇所を対象とします。
+     実行内容: `project_summary`に関連する全てのCJSスクリプトについて、現在の設定管理方法（ハードコードされた値、環境変数、引数など）とエラーハンドリング（try-catch、Promiseのcatch、ログ出力など）の実装状況を詳細に分析してください。特に、設定値の重複、一貫性のないエラー処理パターン、および改善の余地がある箇所を特定してください。
 
-     確認事項:
-     - `markdown_generator.py`内で`DateFormatter`クラスを正しくインポートしているか確認してください。
-     - 既存のMarkdown生成ロジックが壊れないことを確認してください。
-     - デュアルタイムゾーン形式が`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`になっていることを確認してください。
+     確認事項: 各スクリプトの実行パス、依存関係、および共通ユーティリティ（例: BaseGenerator.cjs, FileSystemUtils.cjs）での共有ロジックを確認し、全体として設定とエラー処理がどのように連携しているかを把握してください。
 
-     期待する出力: `src/generate_repo_list/markdown_generator.py`の修正されたコード。
+     期待する出力: 分析結果をmarkdown形式でまとめ、以下の項目を含めてください：
+     1) 現在の設定値の取得・利用パターンの一覧
+     2) 現在のエラーハンドリングパターンの一覧と問題点
+     3) 設定管理とエラーハンドリングを統一するための初期提案（例: 共通設定ファイル、中央エラーハンドラーの導入など）
      ```
 
-3. `project-overview.md`および`development-status.md`内の日付表示の確認と修正 [Issue #14](../issue-notes/14.md)
-   - 最初の小さな一歩: `project-overview.md`と`development-status.md`が生成されるプロセスを分析し、日付がどこでどのようにフォーマットされているかを特定します。
-   - Agent実行プロンプ:
+3. リファクタリングされた`project_summary`ワークフローの動作確認とパス修正
+   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml`と`.github/actions-tmp/.github/workflows/daily-project-summary.yml`における`generate-project-summary.cjs`の呼び出しパスが、[Issue #15](../issue-notes/15.md)で変更された新しいディレクトリ構造 (`.github/actions-tmp/.github_automation/project_summary/scripts/`) に対応しているかを確認する。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/generate-project-summary.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs`
+     対象ファイル: .github/workflows/call-daily-project-summary.yml, .github/actions-tmp/.github/workflows/daily-project-summary.yml, .github/actions-tmp/.github_automation/project_summary/scripts/generate-project-summary.cjs
 
-     実行内容: 上記のファイル群を分析し、`project-overview.md`および`development-status.md`内で日付がどのように取得され、フォーマットされているかを特定してください。特に、日付文字列が生成される箇所と、UTC/JSTデュアル表示を導入するための変更点（例えば、JavaScriptのDateオブジェクトの扱い方や、既存のフォーマット関数への影響）について詳細に記述してください。
+     実行内容: [Issue #15](../issue-notes/15.md)での`project_summary`スクリプト群のリファクタリングにより、`generate-project-summary.cjs`の配置パスが変更された可能性があります。この変更が、現在稼働中の`.github/workflows/call-daily-project-summary.yml`および`.github/actions-tmp/.github/workflows/daily-project-summary.yml`のワークフロー定義に正しく反映されているかを確認してください。特に、`run:`ステップで指定されているCJSスクリプトのパスが、新しいディレクトリ構造（例: `.github/actions-tmp/.github_automation/project_summary/scripts/`）と一致しているかを検証し、不一致があれば修正案を提案してください。
 
-     確認事項:
-     - 関連するCJSスクリプト全体を網羅的に調査し、日付フォーマットに関わる関数やメソッドを特定してください。
-     - JavaScriptにおけるタイムゾーン変換の一般的なプラクティスを考慮してください。
-     - 最終的な出力形式が`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`となるような修正方針を提案してください。
+     確認事項: `actions/checkout`ステップで取得されるリポジトリのルートパス、およびNode.jsスクリプトが実行される際のワーキングディレクトリを確認してください。また、`NODE_PATH`環境変数の設定が、新しいスクリプトの依存関係解決に影響しないかも確認してください。
 
-     期待する出力: 日付フォーマットの現状分析と、UTC/JSTデュアル表示導入のための具体的な修正方針をmarkdown形式で出力してください。
-     ```
+     期待する出力: ワークフローファイルにおけるCJSスクリプトの呼び出しパスが正しいかどうかの評価と、もし修正が必要な場合は、具体的なYAMLの変更スニペットをmarkdown形式で提示してください。
 
 ---
-Generated at: 2025-12-26 07:06:03 JST
+Generated at: 2025-12-27 07:06:09 JST
