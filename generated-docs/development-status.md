@@ -1,53 +1,51 @@
-Last updated: 2025-12-27
+Last updated: 2025-12-28
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #15](../issue-notes/15.md) は、`project_summary`スクリプトのモジュール分割とディレクトリ整理を目的としたリファクタリングが完了し、Agentによるメンテのしやすさが向上しました。
-- [Issue #14](../issue-notes/14.md) では、GitHub Pagesサイトの日付表示をUTCとJSTのデュアルタイムゾーン形式にするため、`DateFormatter`クラスの導入が進められています。
-- この日付表示の改善により、運用者向けJSTと検索エンジン向けUTCの併記が実現され、可読性とSEOの向上を目指しています。
+- [Issue #14](../issue-notes/14.md) は、日付表示においてUTCとJSTの併記を求め、検索エンジン向けUTCと運用オーナー向けJSTの重要性を強調しています。
+- [Issue #15](../issue-notes/15.md) は、このデュアルタイムゾーン表示を実現するための具体的な実装タスクであり、`DateFormatter` クラスの導入を通じて対応を進めることを示唆しています。
+- これらの課題は、プロジェクト内の日付情報の国際化とユーザーエクスペリエンスの向上を目的としています。
 
 ## 次の一手候補
-1. [Issue #14](../issue-notes/14.md) 日付表示のデュアルタイムゾーン対応の実装とテスト
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py`や`src/generate_repo_list/repository_processor.py`など、日付を扱う可能性のある既存ファイルを確認し、新設された`DateFormatter`クラスを適用するためのコード変更箇所を特定する。
-   - Agent実行プロンプト:
+1. [Issue #15](../issue-notes/15.md): `DateFormatter` クラスの実装
+   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内に `date_formatter.py` を新規作成し、`datetime` オブジェクトを "YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)" 形式の文字列に変換する `DateFormatter` クラスのスケルトンと基本的な変換ロジックを実装します。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: src/generate_repo_list/markdown_generator.py, src/generate_repo_list/repository_processor.py, および src/generate_repo_list/ 以下で日付を文字列として生成している可能性のある全てのPythonファイル
+     対象ファイル: `src/generate_repo_list/date_formatter.py` (新規作成)
 
-     実行内容: GitHub Pagesサイトの日付表示をUTCとJSTのデュアルタイムゾーン形式にするため、既存のコードで日付をフォーマットしている箇所を特定してください。特に、`DateFormatter`クラス（もし既に存在すればその利用方法、なければ新規作成を想定）を導入し、すべてのTimestampやDateオブジェクトが"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"形式で出力されるように変更するplanを提案してください。
+     実行内容: `src/generate_repo_list/date_formatter.py` を新規作成し、`DateFormatter` クラスを実装してください。このクラスは、`datetime` オブジェクトを受け取り、"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)" の形式で日付文字列を返す `format_date` メソッドを持つべきです。UTCとJST（UTC+9）の両方のタイムゾーンに対応し、タイムゾーン情報を持たない `datetime` オブジェクトも適切に扱えるようにしてください。必要に応じて `pytz` などのライブラリを検討してください。
 
-     確認事項: 既存の日付処理ロジックの依存関係、Pythonのdatetimeオブジェクトとtimezoneモジュールの使用方法、および`src/generate_repo_list`以下の他のファイルへの影響を確認してください。
+     確認事項: 新規ファイル作成であるため、既存ファイルとの依存関係は少ないですが、`datetime` モジュールの利用方法、およびタイムゾーン処理の正確性を確認してください。将来的に他のクラスから利用されることを考慮し、単体テストが容易な設計になっているか確認してください。
 
-     期待する出力: 変更が必要なファイルとその具体的な変更内容（コードスニペットを含む）をmarkdown形式でリストアップし、`DateFormatter`クラスの適用計画を詳細に記述してください。また、変更後のテスト方法についても言及してください。
-     ```
-
-2. [Issue #15](../issue-notes/15.md) `project_summary`スクリプト群の設定管理とエラーハンドリング統一の初期調査
-   - 最初の小さな一歩: `project_summary`関連のCJSスクリプト群（`.github/actions-tmp/.github_automation/project_summary/scripts/`以下）を横断的に分析し、現在設定がどのように扱われているか、またエラー処理がどのように行われているかを把握する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/**/*.cjs
-
-     実行内容: `project_summary`に関連する全てのCJSスクリプトについて、現在の設定管理方法（ハードコードされた値、環境変数、引数など）とエラーハンドリング（try-catch、Promiseのcatch、ログ出力など）の実装状況を詳細に分析してください。特に、設定値の重複、一貫性のないエラー処理パターン、および改善の余地がある箇所を特定してください。
-
-     確認事項: 各スクリプトの実行パス、依存関係、および共通ユーティリティ（例: BaseGenerator.cjs, FileSystemUtils.cjs）での共有ロジックを確認し、全体として設定とエラー処理がどのように連携しているかを把握してください。
-
-     期待する出力: 分析結果をmarkdown形式でまとめ、以下の項目を含めてください：
-     1) 現在の設定値の取得・利用パターンの一覧
-     2) 現在のエラーハンドリングパターンの一覧と問題点
-     3) 設定管理とエラーハンドリングを統一するための初期提案（例: 共通設定ファイル、中央エラーハンドラーの導入など）
+     期待する出力: `src/generate_repo_list/date_formatter.py` ファイルの内容。
      ```
 
-3. リファクタリングされた`project_summary`ワークフローの動作確認とパス修正
-   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml`と`.github/actions-tmp/.github/workflows/daily-project-summary.yml`における`generate-project-summary.cjs`の呼び出しパスが、[Issue #15](../issue-notes/15.md)で変更された新しいディレクトリ構造 (`.github/actions-tmp/.github_automation/project_summary/scripts/`) に対応しているかを確認する。
-   - Agent実行プロンプト:
+2. [Issue #14](../issue-notes/14.md): 既存の日付表示箇所をUTC/JST併記に更新
+   - 最初の小さな一歩: プロジェクト内で日付表示を行っている箇所（例: `markdown_generator.py` 内の最終更新日など）を特定し、そのうちの一つをピックアップして、候補1で実装した `DateFormatter` クラスを利用して日付フォーマットを変更します。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: .github/workflows/call-daily-project-summary.yml, .github/actions-tmp/.github/workflows/daily-project-summary.yml, .github/actions-tmp/.github_automation/project_summary/scripts/generate-project-summary.cjs
+     対象ファイル: `src/generate_repo_list/markdown_generator.py`、および日付を表示している可能性のある関連ファイル
 
-     実行内容: [Issue #15](../issue-notes/15.md)での`project_summary`スクリプト群のリファクタリングにより、`generate-project-summary.cjs`の配置パスが変更された可能性があります。この変更が、現在稼働中の`.github/workflows/call-daily-project-summary.yml`および`.github/actions-tmp/.github/workflows/daily-project-summary.yml`のワークフロー定義に正しく反映されているかを確認してください。特に、`run:`ステップで指定されているCJSスクリプトのパスが、新しいディレクトリ構造（例: `.github/actions-tmp/.github_automation/project_summary/scripts/`）と一致しているかを検証し、不一致があれば修正案を提案してください。
+     実行内容: プロジェクト内の既存の日付表示箇所を特定し、[Issue #15](../issue-notes/15.md) で実装された `DateFormatter` クラスの `format_date` メソッドを使用して、日付をUTCとJST併記形式に更新してください。まずは `src/generate_repo_list/markdown_generator.py` 内の、リポジトリの最終更新日などの日付表示箇所を対象とし、具体的な変更を適用してください。
 
-     確認事項: `actions/checkout`ステップで取得されるリポジトリのルートパス、およびNode.jsスクリプトが実行される際のワーキングディレクトリを確認してください。また、`NODE_PATH`環境変数の設定が、新しいスクリプトの依存関係解決に影響しないかも確認してください。
+     確認事項: 変更対象の日付が `datetime` オブジェクトとして正しく渡されているか確認してください。`DateFormatter` クラスが正しくインポートされ、利用されているか確認してください。他の日付関連の処理に予期せぬ影響がないことを確認してください。
 
-     期待する出力: ワークフローファイルにおけるCJSスクリプトの呼び出しパスが正しいかどうかの評価と、もし修正が必要な場合は、具体的なYAMLの変更スニペットをmarkdown形式で提示してください。
+     期待する出力: `src/generate_repo_list/markdown_generator.py` および変更が適用されたその他のファイルの更新内容。
+     ```
+
+3. 日付フォーマット変更のテストケース追加・修正
+   - 最初の小さな一歩: `DateFormatter` クラスの動作を検証するための単体テストを `tests/` ディレクトリ配下（例えば `tests/test_date_formatter.py`）に新規作成し、異なるタイムゾーンや日付に対する変換の正確性を確認する基本的なテストケースを記述します。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: `tests/test_date_formatter.py` (新規作成)、`requirements-dev.txt` (必要に応じて)
+
+     実行内容: `tests/test_date_formatter.py` を新規作成し、`src/generate_repo_list/date_formatter.py` で実装された `DateFormatter` クラスの単体テストを記述してください。特に、UTCとJSTの正確な変換、タイムゾーン情報を持つ/持たない `datetime` オブジェクトの処理、異なる日付（例: 年末年始、うるう年）での動作を確認するテストケースを含めてください。また、テストに必要なライブラリがあれば `requirements-dev.txt` に追記してください。
+
+     確認事項: テスト環境に `pytz` などのタイムゾーンライブラリが必要な場合は、`requirements-dev.txt` に追記が必要か確認してください。テストが独立しており、他のテストに影響を与えず、かつ `pytest` で実行可能であることを確認してください。
+
+     期待する出力: `tests/test_date_formatter.py` ファイルの内容、および必要に応じて `requirements-dev.txt` の更新内容。
+     ```
 
 ---
-Generated at: 2025-12-27 07:06:09 JST
+Generated at: 2025-12-28 07:05:43 JST
