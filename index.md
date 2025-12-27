@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-26
+Last Updated: 2025-12-27
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、ユーザーのリポジトリ情報を自動取得します。
-- GitHub Pages向けにSEO最適化されたリポジトリ一覧Markdownを生成するシステムです。
-- 検索エンジンとLLMからのリポジトリ参照の可視性向上を目的としています。
-- 📅 2025-12-26
+- GitHub APIを用いてリポジトリ情報を取得し、GitHub Pages用のMarkdownファイルを自動生成するシステムです。
+- 検索エンジンからのクロール対象となりづらいGitHubユーザーページの問題を緩和し、リポジトリのSEOを向上させます。
+- 自動生成されるリポジトリ一覧ページは、バッジ表示、分類、各リポジトリ概要の自動取得などの機能を持ちます。
+- 📅 2025-12-27
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
@@ -107,10 +107,10 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-log-play-server/](https://cat2151.github.io/ym2151-log-play-server/)
 
 ### Project Highlights
-- YM2151音源チップのレジスタイベントログをリアルタイムで再生するサーバー・クライアントシステムです。
-- クライアントはJSONデータをサーバーに送信し、演奏の開始、停止、切り替え、WAV出力などを制御します。
-- リアルタイム音楽制御、音色エディタ、ライブパフォーマンスなど、連続した音声ストリームが必要な用途に最適です。
-- 📅 2025-12-26
+- YM2151（OPM）音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
+- サーバー・クライアント方式で動作し、JSON形式の音楽データを受け付けて演奏を制御します。
+- 他のアプリケーションへの組み込みを容易にするライブラリとして、リアルタイム音楽制御とWAVファイル出力を提供します。
+- 📅 2025-12-27
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
