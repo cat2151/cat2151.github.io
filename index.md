@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-27
+Last Updated: 2025-12-28
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,38 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを用いてリポジトリ情報を取得し、GitHub Pages用のMarkdownファイルを自動生成するシステムです。
-- 検索エンジンからのクロール対象となりづらいGitHubユーザーページの問題を緩和し、リポジトリのSEOを向上させます。
-- 自動生成されるリポジトリ一覧ページは、バッジ表示、分類、各リポジトリ概要の自動取得などの機能を持ちます。
-- 📅 2025-12-27
+- GitHub Pagesサイト（`<username>.github.io`）用に、リポジトリ一覧ページを自動生成するシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、SEO最適化されたMarkdownファイルを自動出力します。
+- 検索エンジンによるクロールを促進し、LLMがリポジトリを参照しやすくなることを目指します。
+- 📅 2025-12-28
+
+## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
+WIP
+
+<a href="https://cat2151.github.io/cat-window-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
+
+### Project Highlights
+- アクティブなウィンドウを監視し、作業内容に基づいて生産性スコアを調整するシンプルなツールです。
+- ウィンドウタイトルに合わせた正規表現ベースのマッチングとスコア設定が可能で、クロスプラットフォームで動作します。
+- 「猫があなたを見ている」というコンセプトのもと、軽量で分かりやすいGUIで作業状況を可視化します。
+- 📅 2025-12-28
+
+## [super-easy-vim](https://cat2151.github.io/super-easy-vim/)
+[WIP] vim初心者に成功体験を与える用のジョークアプリ。vimのサブセット。極端に機能を削減し、モードとキーバインドを過剰に派手に表示する
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/super-easy-vim](https://github.com/cat2151/super-easy-vim)
+- **GitHub Pages**: [https://cat2151.github.io/super-easy-vim/](https://cat2151.github.io/super-easy-vim/)
+
+### Project Highlights
+- Vim初心者向けに、機能を限定しモードやキーバインドを派手に表示するジョークアプリです。
+- Rust製のTUI（Terminal User Interface）エディタとして開発されており、成功体験を提供することを目指します。
+- ratatui, tui-textarea, crosstermといったライブラリを活用し、Vimライクな基本操作を実現します。
+- 📅 2025-12-28
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
@@ -108,9 +136,9 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 
 ### Project Highlights
 - YM2151（OPM）音源チップのレジスタイベントログをリアルタイムで再生するシステムです。
-- サーバー・クライアント方式で動作し、JSON形式の音楽データを受け付けて演奏を制御します。
-- 他のアプリケーションへの組み込みを容易にするライブラリとして、リアルタイム音楽制御とWAVファイル出力を提供します。
-- 📅 2025-12-27
+- サーバー・クライアントアーキテクチャを採用し、柔軟な音楽再生制御とWAVファイル出力に対応します。
+- Rustで実装され、Windowsプラットフォーム上で高い応答性と安定した動作を提供します。
+- 📅 2025-12-28
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -451,34 +479,6 @@ A library for using chord2mml and abcjs easily in the browser.
 - **Repository**: [https://github.com/cat2151/easychord2mml](https://github.com/cat2151/easychord2mml)
 - **GitHub Pages**: [https://cat2151.github.io/easychord2mml/](https://cat2151.github.io/easychord2mml/)
 - 📅 2025-12-01
-
-## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
-WIP
-
-<a href="https://cat2151.github.io/cat-window-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
-
-### Project Highlights
-- アクティブなウィンドウを監視し、設定されたルールに基づいて生産性スコアを調整するツールです。
-- 正規表現で定義されたパターンにより、GitHub作業時にスコアが上がり、SNS閲覧時にスコアが下がるなど、作業内容に応じたスコア変動を実現します。
-- シンプルなGUIで現在のスコアと活動状況を表示し、Linux、macOS、Windowsのクロスプラットフォームで動作します。
-- 📅 2025-11-15
-
-## [super-easy-vim](https://cat2151.github.io/super-easy-vim/)
-[WIP] vim初心者に成功体験を与える用のジョークアプリ。vimのサブセット。極端に機能を削減し、モードとキーバインドを過剰に派手に表示する
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/super-easy-vim](https://github.com/cat2151/super-easy-vim)
-- **GitHub Pages**: [https://cat2151.github.io/super-easy-vim/](https://cat2151.github.io/super-easy-vim/)
-
-### Project Highlights
-- Vim初心者がモーダル編集の概念と操作に成功体験を得るためのジョークアプリです。
-- 極端に機能を絞り込み、現在のモードや次に押すべきキーを過剰に表示することで、学習を支援します。
-- Rustとratatui/tui-textareaで構築され、Windowsでも動作するターミナルUIエディタとして開発中です。
-- 📅 2025-11-11
 
 ## [recursive-folding](https://cat2151.github.io/recursive-folding/)
 Obsidian plugin. Recursively folds and unfolds the current hierarchy or selection.
