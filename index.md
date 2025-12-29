@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-28
+Last Updated: 2025-12-29
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト（`<username>.github.io`）用に、リポジトリ一覧ページを自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、SEO最適化されたMarkdownファイルを自動出力します。
-- 検索エンジンによるクロールを促進し、LLMがリポジトリを参照しやすくなることを目指します。
-- 📅 2025-12-28
+- GitHub PagesサイトにGitHubリポジトリ一覧を自動生成し、Web上での可視性を高めるシステムです。
+- GitHub APIからリポジトリ情報を取得し、SEO最適化されたJekyll対応のマークダウンファイルを出力します。
+- 検索エンジンやLLMからの参照性を向上させ、プロジェクト内容の発見を容易にすることを目的としています。
+- 📅 2025-12-29
 
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
 WIP
@@ -107,10 +107,19 @@ WIP
 - **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
 
 ### Project Highlights
-- アクティブなウィンドウを監視し、作業内容に基づいて生産性スコアを調整するシンプルなツールです。
-- ウィンドウタイトルに合わせた正規表現ベースのマッチングとスコア設定が可能で、クロスプラットフォームで動作します。
-- 「猫があなたを見ている」というコンセプトのもと、軽量で分かりやすいGUIで作業状況を可視化します。
-- 📅 2025-12-28
+- アクティブなウィンドウを監視し、作業内容に応じてスコアをリアルタイムに表示するツールです。
+- 定義したルールに基づいて生産性や集中度をスコア化し、自己管理をサポートします。
+- シンプルなGUIとクロスプラットフォーム対応で、猫があなたを見守るコンセプトで動機付けを促します。
+- 📅 2025-12-29
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2025-12-29
 
 ## [super-easy-vim](https://cat2151.github.io/super-easy-vim/)
 [WIP] vim初心者に成功体験を与える用のジョークアプリ。vimのサブセット。極端に機能を削減し、モードとキーバインドを過剰に派手に表示する
@@ -139,15 +148,6 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - サーバー・クライアントアーキテクチャを採用し、柔軟な音楽再生制御とWAVファイル出力に対応します。
 - Rustで実装され、Windowsプラットフォーム上で高い応答性と安定した動作を提供します。
 - 📅 2025-12-28
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2025-12-25
 
 ## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
 YM2151 event log editor with TUI interface. Written in Rust
