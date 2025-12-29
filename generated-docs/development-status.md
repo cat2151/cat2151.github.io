@@ -1,51 +1,56 @@
-Last updated: 2025-12-29
+Last updated: 2025-12-30
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #15](../issue-notes/15.md)と[Issue #14](../issue-notes/14.md)は、リポジトリの日付表示をUTCとJSTの両方で併記する機能の追加を求めています。
-- 特に[Issue #15](../issue-notes/15.md)では`DateFormatter`クラスを導入し、日付フォーマットの標準化を図ることが言及されています。
-- [Issue #4](../issue-notes/4.md)は、`README.ja.md`があるリポジトリに対してJapaneseバッジを表示し、`README.ja.html`へのリンクを設定する機能拡張です。
+- [Issue #15](../issue-notes/15.md) は、すべてのPJT日付表示をUTCとJST両方で表示するための `DateFormatter` クラス導入が計画されており、これは検索エンジン最適化と運用者利便性の向上を目的としています。
+- [Issue #14](../issue-notes/14.md) は、[Issue #15](../issue-notes/15.md) と同様に、全日付表示をUTCとJSTで併記し、運用者向けJSTと検索エンジン向けUTCに対応する要望を提起しています。
+- これら2つのIssueは密接に関連しており、プロジェクト全体で日付表示の一貫性を保ち、タイムゾーン情報を適切に処理することを目標としています。
 
 ## 次の一手候補
-1. [Issue #15](../issue-notes/15.md) [Issue #14](../issue-notes/14.md) 日付表示のUTC/JST併記のための`DateFormatter`クラスの実装
-   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py`ファイルを作成し、`datetime`オブジェクトをUTC/JST併記文字列に変換する`DateFormatter`クラスの基本的な骨格を実装する。
-   - Agent実行プロンプ:
+1. [Issue #15](../issue-notes/15.md): `DateFormatter` クラスのスケルトン実装
+   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py` ファイルを新規作成し、`datetime` オブジェクトを受け取り、指定されたフォーマット（例: "YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"）でUTCとJST両方のタイムゾーンで日付文字列を返す `format_datetime` メソッドを持つ `DateFormatter` クラスのスケルトンを実装する。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/date_formatter.py`
+     対象ファイル: `src/generate_repo_list/date_formatter.py` (新規作成)
 
-     実行内容: 新規ファイル`src/generate_repo_list/date_formatter.py`を作成し、`DateFormatter`クラスを実装してください。このクラスは`format_date(datetime_obj)`メソッドを持ち、入力された`datetime`オブジェクトを`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"`形式の文字列に変換する機能を実装します。タイムゾーン変換には`pytz`ライブラリの使用を検討し、JSTはUTC+9とします。
+     実行内容: `DateFormatter` クラスを実装してください。このクラスは、`format_datetime(dt: datetime)` メソッドを持ち、`dt` をUTCおよびJST（UTC+9）のタイムゾーンで `"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"` 形式の文字列にフォーマットして返します。`dt` がタイムゾーン情報を持たない場合はUTCと仮定して処理します。必要なライブラリとして `pytz` または `zoneinfo` をインポートし、使用してください。
 
-     確認事項: Pythonの`datetime`オブジェクトと`pytz`ライブラリの正しい使用法を確認してください。また、`src/generate_repo_list`内の既存のファイル命名規則やクラス構造との整合性を考慮してください。
+     確認事項: Pythonの `datetime` モジュールと `pytz` (または `zoneinfo`) を使用してタイムゾーン処理が適切に行われることを確認してください。また、既存のプロジェクトで同様の日付処理が行われていないか (`src/generate_repo_list/` ディレクトリ内) を軽く確認し、重複がないことを確認してください。
 
-     期待する出力: `src/generate_repo_list/date_formatter.py`ファイルの内容をPythonコードブロックで出力してください。
-     ```
-
-2. [Issue #4](../issue-notes/4.md) `README.ja.md`が存在する場合のJapaneseバッジ表示機能の実装
-   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py`または`src/generate_repo_list/markdown_generator.py`において、リポジトリの言語情報（`README.ja.md`の有無）を検出するロジックを特定し、その情報に基づいてバッジを生成するためのプレースホルダを追加する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/markdown_generator.py`
-
-     実行内容: `src/generate_repo_list/repository_processor.py`を分析し、リポジトリに`README.ja.md`が存在するかどうかを検出するための情報がどこで取得可能かを確認してください。次に、`src/generate_repo_list/markdown_generator.py`において、この情報を利用してMarkdown形式のJapaneseバッジ（例: `![Japanese](https://img.shields.io/badge/Language-Japanese-blue?style=flat-square)`）を生成し、`README.ja.html`へのリンク（例: `[README.ja.html](README.ja.html)`）を付与するための基本的な関数またはメソッドの追加を検討し、その変更点をPythonコードブロックで提案してください。
-
-     確認事項: `repository_processor.py`がファイルリストをどのように取得・処理しているか、また`markdown_generator.py`がリポジトリ情報をどのように利用してMarkdownを生成しているかを確認してください。既存のバッジ生成ロジックがあれば、それに倣う形で拡張してください。
-
-     期待する出力: 提案されるコード変更のPythonコードブロックと、変更内容の説明をMarkdown形式で出力してください。
+     期待する出力: `src/generate_repo_list/date_formatter.py` ファイルの新規作成と、上記仕様を満たすPythonコード。
      ```
 
-3. [Issue #15](../issue-notes/15.md) [Issue #14](../issue-notes/14.md) 生成Markdown内の日付項目への`DateFormatter`適用
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py`を特定し、現在日付を出力している箇所を洗い出し、将来的に`DateFormatter`クラスを利用できるよう変更点の候補を特定する。
-   - Agent実行プロンプ:
+2. [Issue #15](../issue-notes/15.md): `DateFormatter` クラスの単体テスト追加
+   - 最初の小さな一歩: `tests/test_date_formatter.py` を新規作成し、`DateFormatter` クラスの `format_datetime` メソッドについて、タイムゾーン情報あり/なしの `datetime` オブジェクトが正確にUTCとJSTでフォーマットされることを検証するテストケースを追加する。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py`
+     対象ファイル: `tests/test_date_formatter.py` (新規作成), `src/generate_repo_list/date_formatter.py`
 
-     実行内容: `src/generate_repo_list/markdown_generator.py`を分析し、リポジトリ情報から取得した日付（例: `created_at`, `updated_at`など）をMarkdown文字列として出力している全ての箇所を特定してください。そして、これらの箇所が新たに作成される`DateFormatter`クラス（候補1で作成予定）の`format_date`メソッドを使ってUTC/JST併記形式で出力できるよう、どのような変更が必要になるか、Pythonコードブロックで具体的な変更提案を記述してください。
+     実行内容: `src/generate_repo_list/date_formatter.py` に実装された `DateFormatter` クラスの単体テストを `tests/test_date_formatter.py` として作成してください。`pytest` フレームワークを使用し、以下のテストケースを網羅してください:
+     - タイムゾーン情報を持つ `datetime` オブジェクトが正しくフォーマットされるか。
+     - タイムゾーン情報を持たない `datetime` オブジェクトがUTCと仮定されて正しくフォーマットされるか。
+     - 異なる日付（例: 年末年始）でのフォーマットが正しいか。
 
-     確認事項: `markdown_generator.py`が日付情報をどのように受け取り、どのようにフォーマットして出力しているかを詳細に確認してください。`DateFormatter`クラスのインスタンスをどこで生成し、どのメソッドから呼び出すのが適切かを検討してください。
+     確認事項: `pytest` が正しく実行できる環境であることを確認してください。また、`src/generate_repo_list/date_formatter.py` が存在し、テスト対象のクラスとメソッドがアクセス可能であることを確認してください。テストはモジュール間の依存関係を最小限に抑え、純粋に `DateFormatter` の機能のみを検証するように設計してください。
 
-     期待する出力: `markdown_generator.py`に対する変更提案のPythonコードブロックと、変更の理由・設計に関する説明をMarkdown形式で出力してください。
+     期待する出力: `tests/test_date_formatter.py` ファイルの新規作成と、`DateFormatter` の機能を検証するPythonテストコード。
      ```
+
+3. [Issue #14](../issue-notes/14.md): 既存の日付表示箇所の特定と適用計画
+   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の全Pythonファイル(`*.py`)を対象に、日付や時刻に関連する文字列が出力されている箇所（例: `strftime` の使用、直接的な日付文字列結合など）を特定し、それらを `DateFormatter` クラスで置き換えるための影響範囲と具体的な修正箇所をまとめる。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `src/generate_repo_list/*.py` (全Pythonファイル)
+
+     実行内容: `src/generate_repo_list/` ディレクトリ内のすべてのPythonファイルを分析し、日付や時刻を文字列として出力している箇所を特定してください。特に、`datetime` オブジェクトのフォーマット (`strftime` など) や、日付関連の情報を文字列として結合している箇所に注目してください。特定された箇所について、以下の情報をMarkdown形式でリストアップしてください:
+     1. ファイルパスと行番号
+     2. 現在のコードスニペット
+     3. `DateFormatter` クラス (`src/generate_repo_list/date_formatter.py` に存在すると仮定) を使用して、UTC/JST併記形式に置き換えるための具体的な修正案（擬似コードでも可）
+
+     確認事項: `datetime` オブジェクトがどのように取得され、どのコンテキストで利用されているかを理解し、`DateFormatter` を適用する際のデータ型の一貫性を確保してください。出力は `index.md` や `README.md` などの最終的な出力に影響を与える可能性のある箇所に焦点を当ててください。
+
+     期待する出力: `current_date_usages.md` のようなMarkdownファイルとして、分析結果と修正案を生成してください。
 
 ---
-Generated at: 2025-12-29 07:06:06 JST
+Generated at: 2025-12-30 07:06:12 JST
