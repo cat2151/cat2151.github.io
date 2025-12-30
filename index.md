@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-29
+Last Updated: 2025-12-30
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub PagesサイトにGitHubリポジトリ一覧を自動生成し、Web上での可視性を高めるシステムです。
-- GitHub APIからリポジトリ情報を取得し、SEO最適化されたJekyll対応のマークダウンファイルを出力します。
-- 検索エンジンやLLMからの参照性を向上させ、プロジェクト内容の発見を容易にすることを目的としています。
-- 📅 2025-12-29
+- GitHub APIを利用し、ユーザーのリポジトリ情報を自動で収集・整理します。
+- 収集した情報からGitHub Pages用のSEO最適化されたリポジトリ一覧を自動生成します。
+- これにより、リポジトリの検索エンジン可視性を高め、LLMによる参照の改善を目指します。
+- 📅 2025-12-30
 
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
 WIP
@@ -107,10 +107,24 @@ WIP
 - **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
 
 ### Project Highlights
-- アクティブなウィンドウを監視し、作業内容に応じてスコアをリアルタイムに表示するツールです。
-- 定義したルールに基づいて生産性や集中度をスコア化し、自己管理をサポートします。
-- シンプルなGUIとクロスプラットフォーム対応で、猫があなたを見守るコンセプトで動機付けを促します。
-- 📅 2025-12-29
+- アクティブなウィンドウを監視し、生産性を可視化するシンプルなデスクトップツールです。
+- 設定可能な正規表現パターンに基づき、作業内容に応じてスコアがリアルタイムで増減します。
+- 集中力を促し、猫が見守るようにユーザーのモチベーションをサポートします。
+- 📅 2025-12-30
+
+## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
+File Change Monitoring Tool - Detects file changes and executes commands
+
+<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
+
+### Project Highlights
+- ファイルの変更をリアルタイムで監視し、変更が検知された際に指定されたコマンドを自動実行するツールです。
+- TOML形式の設定ファイルを通じて、監視対象ファイル、実行コマンド、監視間隔、特定の条件での実行抑制など、柔軟な監視ルールを定義できます。
+- 軽量で使いやすく、開発や自動化のワークフローを効率化するために設計されており、Windows環境でのフォーカス奪取防止機能も備えています。
+- 📅 2025-12-30
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -204,20 +218,6 @@ collection of reusable GitHub Actions workflows for multiple projects
 - 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOK
 - ✅ メンテは一括、プロジェクト開発に集中できます
 - 📅 2025-12-11
-
-## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
-File Change Monitoring Tool - Detects file changes and executes commands
-
-<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
-
-### Project Highlights
-- ファイルの変更をリアルタイムで監視し、変更が検知された際に指定されたコマンドを自動実行するツールです。
-- TOML形式の設定ファイルを通じて、監視対象ファイル、実行コマンド、監視間隔、特定の条件での実行抑制など、柔軟な監視ルールを定義できます。
-- 軽量で使いやすく、開発や自動化のワークフローを効率化するために設計されており、Windows環境でのフォーカス奪取防止機能も備えています。
-- 📅 2025-12-10
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
