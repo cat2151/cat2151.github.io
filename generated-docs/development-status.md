@@ -1,56 +1,54 @@
-Last updated: 2025-12-30
+Last updated: 2025-12-31
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #15](../issue-notes/15.md) は、すべてのPJT日付表示をUTCとJST両方で表示するための `DateFormatter` クラス導入が計画されており、これは検索エンジン最適化と運用者利便性の向上を目的としています。
-- [Issue #14](../issue-notes/14.md) は、[Issue #15](../issue-notes/15.md) と同様に、全日付表示をUTCとJSTで併記し、運用者向けJSTと検索エンジン向けUTCに対応する要望を提起しています。
-- これら2つのIssueは密接に関連しており、プロジェクト全体で日付表示の一貫性を保ち、タイムゾーン情報を適切に処理することを目標としています。
+- [Issue #14](../issue-notes/14.md) は、生成ドキュメントの日付表示をUTCとJSTで併記し、運用者と検索エンジン双方に適切に対応することを目指しています。
+- [Issue #15](../issue-notes/15.md) は、`project_summary` スクリプトのCJSファイルを200行未満に分解するリファクタリングが完了し、Agentによるメンテナンス性が向上しました。
+- 現在、主要なスクリプトのリファクタリングは一区切りつき、次の機能改善や日付表示の統一化に焦点が移っています。
 
 ## 次の一手候補
-1. [Issue #15](../issue-notes/15.md): `DateFormatter` クラスのスケルトン実装
-   - 最初の小さな一歩: `src/generate_repo_list/date_formatter.py` ファイルを新規作成し、`datetime` オブジェクトを受け取り、指定されたフォーマット（例: "YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"）でUTCとJST両方のタイムゾーンで日付文字列を返す `format_datetime` メソッドを持つ `DateFormatter` クラスのスケルトンを実装する。
+1. [Issue #14](../issue-notes/14.md) 生成ドキュメントの日付表示をUTC/JST併記形式にする
+   - 最初の小さな一歩: 現在のプロジェクト概要や開発状況レポート (`generated-docs/project-overview.md`, `generated-docs/development-status.md`) の中で、日付情報がどのように扱われているかを調査する。特に、`DevelopmentStatusGenerator.cjs` や `ProjectOverviewGenerator.cjs` が日付を生成しているか、または他のスクリプトが生成した日付を受け取っているかを確認する。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/generate-project-summary.cjs
+
+     実行内容: 上記ファイル群において、日付（例: 最新コミット日、レポート生成日など）を扱う箇所を特定し、現在の表示形式を分析してください。特に、日付オブジェクトがどこで生成され、どのような形式で文字列化されているかを詳細に調査してください。
+
+     確認事項: DevelopmentStatusGenerator.cjs と ProjectOverviewGenerator.cjs 間での日付情報の受け渡し方法、および generate-project-summary.cjs からそれらへのデータの流れを確認してください。また、既存の日付ライブラリやユーティリティ関数が利用されている場合は、その情報も収集してください。
+
+     期待する出力: markdown形式で、日付を扱う全ての箇所（ファイルパス、行番号、現在のコードスニペット、現在の出力形式）をリストアップし、それぞれの箇所でUTC/JST併記形式を導入するために必要な変更の概要を記述してください。
+     ```
+
+2. 生成ドキュメント（`project-overview.md`, `development-status.md`）の出力品質の確認と改善計画
+   - 最初の小さな一歩: 最新のコミットによって生成された `generated-docs/project-overview.md` と `generated-docs/development-status.md` の内容をレビューし、情報の正確性、読みやすさ、ハルシネーションの有無を包括的に評価する。特に、`development-status.md` がこのプロンプトから期待される形式で出力されているかを確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/date_formatter.py` (新規作成)
+     対象ファイル: generated-docs/project-overview.md, generated-docs/development-status.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
 
-     実行内容: `DateFormatter` クラスを実装してください。このクラスは、`format_datetime(dt: datetime)` メソッドを持ち、`dt` をUTCおよびJST（UTC+9）のタイムゾーンで `"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"` 形式の文字列にフォーマットして返します。`dt` がタイムゾーン情報を持たない場合はUTCと仮定して処理します。必要なライブラリとして `pytz` または `zoneinfo` をインポートし、使用してください。
+     実行内容: 最新の自動生成された `project-overview.md` と `development-status.md` を詳細にレビューし、以下の観点から改善点を特定してください。
+       1. 情報の正確性: プロジェクトの実際の状況と乖離がないか。
+       2. 表現の明確さ: 曖昧な記述や誤解を招く表現がないか。
+       3. ハルシネーションの有無: 事実に基づかない情報が含まれていないか。
+       4. フォーマットの遵守: 期待されるMarkdownフォーマット（例: `development-status-prompt.md` で定義された形式）が適切に適用されているか。
 
-     確認事項: Pythonの `datetime` モジュールと `pytz` (または `zoneinfo`) を使用してタイムゾーン処理が適切に行われることを確認してください。また、既存のプロジェクトで同様の日付処理が行われていないか (`src/generate_repo_list/` ディレクトリ内) を軽く確認し、重複がないことを確認してください。
+     確認事項: レビューは、これらのドキュメントを生成するために使用されたプロンプトファイル (`project-overview-prompt.md`, `development-status-prompt.md`) と照らし合わせて行うこと。特に、プロンプトの指示が正しく反映されているかを確認する。
 
-     期待する出力: `src/generate_repo_list/date_formatter.py` ファイルの新規作成と、上記仕様を満たすPythonコード。
+     期待する出力: markdown形式で、各ドキュメントで見つかった具体的な改善点（例: 「project-overview.mdのXXセクションにYYというハルシネーションがある」、または「development-status.mdのIssue要約がZ行になっていない」）をリストアップし、それぞれの改善に対する簡潔な提案を記述してください。
      ```
 
-2. [Issue #15](../issue-notes/15.md): `DateFormatter` クラスの単体テスト追加
-   - 最初の小さな一歩: `tests/test_date_formatter.py` を新規作成し、`DateFormatter` クラスの `format_datetime` メソッドについて、タイムゾーン情報あり/なしの `datetime` オブジェクトが正確にUTCとJSTでフォーマットされることを検証するテストケースを追加する。
+3. 共通ユーティリティ関数のさらなる集約とモジュール化
+   - 最初の小さな一歩: `development/`、`overview/`、`shared/` ディレクトリ内の既存のCJSスクリプトを走査し、ファイルシステム操作 (`FileSystemUtils.cjs` の既存機能以外)、Git操作 (`GitUtils.cjs` の既存機能以外)、日付処理など、複数のスクリプトで重複して使用されている可能性のある関数やロジックを特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `tests/test_date_formatter.py` (新規作成), `src/generate_repo_list/date_formatter.py`
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/development/*.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/overview/*.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/shared/*.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/generate-project-summary.cjs
 
-     実行内容: `src/generate_repo_list/date_formatter.py` に実装された `DateFormatter` クラスの単体テストを `tests/test_date_formatter.py` として作成してください。`pytest` フレームワークを使用し、以下のテストケースを網羅してください:
-     - タイムゾーン情報を持つ `datetime` オブジェクトが正しくフォーマットされるか。
-     - タイムゾーン情報を持たない `datetime` オブジェクトがUTCと仮定されて正しくフォーマットされるか。
-     - 異なる日付（例: 年末年始）でのフォーマットが正しいか。
+     実行内容: 上記のCJSスクリプト全体を分析し、`FileSystemUtils.cjs` や `GitUtils.cjs` などの既存の共有ユーティリティに属さない、かつ複数のファイルで共通して利用されているロジックや関数を洗い出してください。特に、ファイルI/O、文字列処理、API呼び出しの共通パターンなどに注目してください。
 
-     確認事項: `pytest` が正しく実行できる環境であることを確認してください。また、`src/generate_repo_list/date_formatter.py` が存在し、テスト対象のクラスとメソッドがアクセス可能であることを確認してください。テストはモジュール間の依存関係を最小限に抑え、純粋に `DateFormatter` の機能のみを検証するように設計してください。
+     確認事項: 既に `shared` ディレクトリ内に存在するユーティリティ (`BaseGenerator.cjs`, `FileSystemUtils.cjs`, `ProjectFileUtils.cjs`) との重複や、それらに統合できる可能性がないかを慎重に確認してください。また、各関数の責務が単一であるか、モジュールとして適切に分離されているかも考慮してください。
 
-     期待する出力: `tests/test_date_formatter.py` ファイルの新規作成と、`DateFormatter` の機能を検証するPythonテストコード。
-     ```
-
-3. [Issue #14](../issue-notes/14.md): 既存の日付表示箇所の特定と適用計画
-   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の全Pythonファイル(`*.py`)を対象に、日付や時刻に関連する文字列が出力されている箇所（例: `strftime` の使用、直接的な日付文字列結合など）を特定し、それらを `DateFormatter` クラスで置き換えるための影響範囲と具体的な修正箇所をまとめる。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `src/generate_repo_list/*.py` (全Pythonファイル)
-
-     実行内容: `src/generate_repo_list/` ディレクトリ内のすべてのPythonファイルを分析し、日付や時刻を文字列として出力している箇所を特定してください。特に、`datetime` オブジェクトのフォーマット (`strftime` など) や、日付関連の情報を文字列として結合している箇所に注目してください。特定された箇所について、以下の情報をMarkdown形式でリストアップしてください:
-     1. ファイルパスと行番号
-     2. 現在のコードスニペット
-     3. `DateFormatter` クラス (`src/generate_repo_list/date_formatter.py` に存在すると仮定) を使用して、UTC/JST併記形式に置き換えるための具体的な修正案（擬似コードでも可）
-
-     確認事項: `datetime` オブジェクトがどのように取得され、どのコンテキストで利用されているかを理解し、`DateFormatter` を適用する際のデータ型の一貫性を確保してください。出力は `index.md` や `README.md` などの最終的な出力に影響を与える可能性のある箇所に焦点を当ててください。
-
-     期待する出力: `current_date_usages.md` のようなMarkdownファイルとして、分析結果と修正案を生成してください。
+     期待する出力: markdown形式で、特定された共通ロジックのリスト（ファイルパス、関数名、簡潔な説明）と、それらを新しい共有ユーティリティモジュールとして切り出すための提案（例: `shared/CommonUtils.cjs` のようなファイルへの移動）を記述してください。
 
 ---
-Generated at: 2025-12-30 07:06:12 JST
+Generated at: 2025-12-31 07:06:20 JST
