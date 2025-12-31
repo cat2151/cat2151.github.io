@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 73 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 75 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 73 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 75 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 73 open source projects.",
+      "description": "Programmer and developer. Publishing 75 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 73 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 75 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-30
+Last Updated: 2025-12-31
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2025-12-30
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-73-blue) ![Active](https://img.shields.io/badge/Active-45-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-52-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-75-blue) ![Active](https://img.shields.io/badge/Active-47-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-52-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-21_(28.8%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12_(16.4%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-9_(12.3%25)-dea584?style=flat&logo=rust) ![HTML](https://img.shields.io/badge/HTML-7_(9.6%25)-e34c26?style=flat&logo=html5) ![TypeScript](https://img.shields.io/badge/TypeScript-4_(5.5%25)-3178c6?style=flat&logo=typescript)
+![JavaScript](https://img.shields.io/badge/JavaScript-21_(28.0%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12_(16.0%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-9_(12.0%25)-dea584?style=flat&logo=rust) ![HTML](https://img.shields.io/badge/HTML-7_(9.3%25)-e34c26?style=flat&logo=html5) ![TypeScript](https://img.shields.io/badge/TypeScript-6_(8.0%25)-3178c6?style=flat&logo=typescript)
 
 
 ---
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、ユーザーのリポジトリ情報を自動で収集・整理します。
-- 収集した情報からGitHub Pages用のSEO最適化されたリポジトリ一覧を自動生成します。
-- これにより、リポジトリの検索エンジン可視性を高め、LLMによる参照の改善を目指します。
-- 📅 2025-12-30
+- GitHub Pagesサイト向けに、GitHubリポジトリ一覧のMarkdownファイルを自動生成するシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、SEO最適化されたコンテンツを生成します。
+- 検索エンジンによるクロールとLLMによる参照性を向上させ、プロジェクト情報を効果的に公開します。
+- 📅 2025-12-31
 
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
 WIP
@@ -107,10 +107,10 @@ WIP
 - **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
 
 ### Project Highlights
-- アクティブなウィンドウを監視し、生産性を可視化するシンプルなデスクトップツールです。
-- 設定可能な正規表現パターンに基づき、作業内容に応じてスコアがリアルタイムで増減します。
-- 集中力を促し、猫が見守るようにユーザーのモチベーションをサポートします。
-- 📅 2025-12-30
+- アクティブなウィンドウを監視し、あなたの作業内容に基づいてスコアを調整するシンプルでスタンドアロンなツールです。
+- GitHubでの作業でスコアが上昇し、SNS閲覧でスコアが減少するなど、生産性を可視化します。
+- 猫が見守るように、あなたのデジタルな集中度をサポートし、作業効率向上を促します。
+- 📅 2025-12-31
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
 File Change Monitoring Tool - Detects file changes and executes commands
@@ -121,10 +121,10 @@ File Change Monitoring Tool - Detects file changes and executes commands
 - **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
 
 ### Project Highlights
-- ファイルの変更をリアルタイムで監視し、変更が検知された際に指定されたコマンドを自動実行するツールです。
-- TOML形式の設定ファイルを通じて、監視対象ファイル、実行コマンド、監視間隔、特定の条件での実行抑制など、柔軟な監視ルールを定義できます。
-- 軽量で使いやすく、開発や自動化のワークフローを効率化するために設計されており、Windows環境でのフォーカス奪取防止機能も備えています。
-- 📅 2025-12-30
+- ファイルの変更を継続的に監視し、指定されたファイルが更新された際に自動的にコマンドを実行します。
+- 軽量でカスタマイズ可能なTOML設定ファイルを使用し、開発ワークフローや自動化タスクを効率化します。
+- Windows環境でのフォーカス奪取防止機能など、使いやすさを考慮した多様な設定オプションを提供します。
+- 📅 2025-12-31
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -133,7 +133,25 @@ File Change Monitoring Tool - Detects file changes and executes commands
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2025-12-29
+- 📅 2025-12-31
+
+## [quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2025-12-31
+
+## [wavlpf](https://cat2151.github.io/wavlpf/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/wavlpf](https://github.com/cat2151/wavlpf)
+- **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
+- **Overview**: No description available
+- 📅 2025-12-31
 
 ## [super-easy-vim](https://cat2151.github.io/super-easy-vim/)
 [WIP] vim初心者に成功体験を与える用のジョークアプリ。vimのサブセット。極端に機能を削減し、モードとキーバインドを過剰に派手に表示する
