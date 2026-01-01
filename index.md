@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2025-12-31
+Last Updated: 2026-01-01
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けに、GitHubリポジトリ一覧のMarkdownファイルを自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、SEO最適化されたコンテンツを生成します。
-- 検索エンジンによるクロールとLLMによる参照性を向上させ、プロジェクト情報を効果的に公開します。
-- 📅 2025-12-31
+- GitHub APIを利用し、個人のGitHubリポジトリ情報を自動で取得します。
+- 取得した情報から、JekyllベースのGitHub Pagesサイト向けにリポジトリ一覧のMarkdownファイルを生成します。
+- これにより、SEO最適化されたリポジトリ一覧ページを提供し、検索エンジンやLLMからの参照性を向上させます。
+- 📅 2026-01-01
 
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
 WIP
@@ -107,10 +107,37 @@ WIP
 - **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
 
 ### Project Highlights
-- アクティブなウィンドウを監視し、あなたの作業内容に基づいてスコアを調整するシンプルでスタンドアロンなツールです。
-- GitHubでの作業でスコアが上昇し、SNS閲覧でスコアが減少するなど、生産性を可視化します。
-- 猫が見守るように、あなたのデジタルな集中度をサポートし、作業効率向上を促します。
-- 📅 2025-12-31
+- アクティブなウィンドウを監視し、生産性向上と集中力維持を支援するスタンドアロンのツールです。
+- ウィンドウタイトルに基づきスコアをリアルタイムで調整し、GitHub作業でスコアアップ、SNS閲覧でスコアダウンといったルールを設定できます。
+- シンプルなGUIで現在のスコアと活動を表示し、クロスプラットフォームで軽量に動作するよう設計されています。
+- 📅 2026-01-01
+
+## [wavlpf](https://cat2151.github.io/wavlpf/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/wavlpf](https://github.com/cat2151/wavlpf)
+- **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
+- **Overview**: No description available
+- 📅 2026-01-01
+
+## [quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
+A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
+
+<a href="https://github.com/cat2151/quartz-transformer-mmlabc/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
+- **GitHub Pages**: None
+- 📅 2026-01-01
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-01-01
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
 File Change Monitoring Tool - Detects file changes and executes commands
@@ -124,33 +151,6 @@ File Change Monitoring Tool - Detects file changes and executes commands
 - ファイルの変更を継続的に監視し、指定されたファイルが更新された際に自動的にコマンドを実行します。
 - 軽量でカスタマイズ可能なTOML設定ファイルを使用し、開発ワークフローや自動化タスクを効率化します。
 - Windows環境でのフォーカス奪取防止機能など、使いやすさを考慮した多様な設定オプションを提供します。
-- 📅 2025-12-31
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2025-12-31
-
-## [quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
-
-![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2025-12-31
-
-## [wavlpf](https://cat2151.github.io/wavlpf/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/wavlpf](https://github.com/cat2151/wavlpf)
-- **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
-- **Overview**: No description available
 - 📅 2025-12-31
 
 ## [super-easy-vim](https://cat2151.github.io/super-easy-vim/)
