@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 75 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 76 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 75 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 76 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 75 open source projects.",
+      "description": "Programmer and developer. Publishing 76 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 75 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 76 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-01
+Last Updated: 2026-01-02
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2026-01-01
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-75-blue) ![Active](https://img.shields.io/badge/Active-47-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-52-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-76-blue) ![Active](https://img.shields.io/badge/Active-48-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-52-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-21_(28.0%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12_(16.0%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-9_(12.0%25)-dea584?style=flat&logo=rust) ![HTML](https://img.shields.io/badge/HTML-7_(9.3%25)-e34c26?style=flat&logo=html5) ![TypeScript](https://img.shields.io/badge/TypeScript-6_(8.0%25)-3178c6?style=flat&logo=typescript)
+![JavaScript](https://img.shields.io/badge/JavaScript-21_(27.6%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-12_(15.8%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-9_(11.8%25)-dea584?style=flat&logo=rust) ![TypeScript](https://img.shields.io/badge/TypeScript-7_(9.2%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-7_(9.2%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、個人のGitHubリポジトリ情報を自動で取得します。
-- 取得した情報から、JekyllベースのGitHub Pagesサイト向けにリポジトリ一覧のMarkdownファイルを生成します。
-- これにより、SEO最適化されたリポジトリ一覧ページを提供し、検索エンジンやLLMからの参照性を向上させます。
-- 📅 2026-01-01
+- GitHub Pages向けにリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、各リポジトリの概要を抽出します。
+- SEOに最適化されたMarkdownファイルを生成し、検索エンジンやLLMからの参照性を高めます。
+- 📅 2026-01-02
 
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
 WIP
@@ -107,28 +107,47 @@ WIP
 - **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
 
 ### Project Highlights
-- アクティブなウィンドウを監視し、生産性向上と集中力維持を支援するスタンドアロンのツールです。
-- ウィンドウタイトルに基づきスコアをリアルタイムで調整し、GitHub作業でスコアアップ、SNS閲覧でスコアダウンといったルールを設定できます。
-- シンプルなGUIで現在のスコアと活動を表示し、クロスプラットフォームで軽量に動作するよう設計されています。
-- 📅 2026-01-01
+- アクティブなウィンドウを監視し、ユーザーの作業内容に応じてスコアを調整するツールです。
+- 設定可能な正規表現パターンに基づき、生産的な作業にはスコアを加算し、非生産的な活動には減点します。
+- シンプルなTkinter GUIで現在のスコアと活動を表示し、集中力の維持をサポートします。
+- 📅 2026-01-02
 
 ## [wavlpf](https://cat2151.github.io/wavlpf/)
+Software synthesizer. Simple. Non-realtime rendering
 
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+<a href="https://cat2151.github.io/wavlpf/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
 
 - **Repository**: [https://github.com/cat2151/wavlpf](https://github.com/cat2151/wavlpf)
 - **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
-- **Overview**: No description available
-- 📅 2026-01-01
 
-## [quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
+### Project Highlights
+- TypeScriptで実装された、ローパスフィルター（LPF）を搭載したシンプルなソフトウェアシンセサイザーです。
+- 純粋な信号処理により220Hzのノコギリ波を生成し、マウス操作でカットオフ周波数とQ値を調整できるLPFを提供します。
+- 生成されたオーディオは250msごとにバッファリングされ、WAV形式での出力やTone.jsによる再生が可能です。
+- 📅 2026-01-02
+
+## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
 A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
 
-<a href="https://github.com/cat2151/quartz-transformer-mmlabc/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+<a href="https://cat2151.github.io/quartz-transformer-mmlabc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
 
 - **Repository**: [https://github.com/cat2151/quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
-- **GitHub Pages**: None
-- 📅 2026-01-01
+- **GitHub Pages**: [https://cat2151.github.io/quartz-transformer-mmlabc/](https://cat2151.github.io/quartz-transformer-mmlabc/)
+
+### Project Highlights
+- MML（Music Macro Language）とコード進行記法を、Web上でインタラクティブな楽譜として表示・再生するQuartzプラグインです。
+- Markdownファイル内のコードブロックを検出・変換し、abcjsライブラリを用いて五線譜を自動レンダリングします。
+- これにより、音楽コンテンツを視覚的かつ聴覚的に楽しめる形で静的サイトに埋め込むことが可能になります。
+- 📅 2026-01-02
+
+## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
+This oscilloscope visualizes audio from your microphone or wav-file with zero-cross detection for stable waveform display.
+
+<a href="https://cat2151.github.io/cat-oscilloscope/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: audio-analysis](https://img.shields.io/badge/Topic-audio--analysis-lightblue) ![Topic: audio-visualizer](https://img.shields.io/badge/Topic-audio--visualizer-lightblue) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: oscilloscope](https://img.shields.io/badge/Topic-oscilloscope-lightblue) ![Topic: typescript](https://img.shields.io/badge/Topic-typescript-lightblue) ![Topic: wav](https://img.shields.io/badge/Topic-wav-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-oscilloscope](https://github.com/cat2151/cat-oscilloscope)
+- **GitHub Pages**: [https://cat2151.github.io/cat-oscilloscope/](https://cat2151.github.io/cat-oscilloscope/)
+- 📅 2026-01-02
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -137,7 +156,7 @@ A Quartz transformer plugin that converts MML (Music Macro Language) and chord n
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2026-01-01
+- 📅 2026-01-02
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
 File Change Monitoring Tool - Detects file changes and executes commands
