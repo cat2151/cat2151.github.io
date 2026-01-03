@@ -259,13 +259,15 @@ class TestMarkdownGenerator:
         assert "フォーク-1-purple" in result  # フォーク1
         assert "スター-15-gold" in result  # 合計スター15
 
-    @patch("markdown_generator.datetime")
+    @patch("date_formatter.datetime")
     def test_generate_markdown_complete(
         self, mock_datetime, generator, sample_repos, mock_seo_config, mock_json_ld_template
     ):
         """完全なMarkdown生成テスト"""
-        # 現在時刻をモック
-        mock_now = datetime(2024, 1, 15, 12, 0, 0)
+        # 現在時刻をモック (timezone.utc を渡すため、aware datetime を返す)
+        from datetime import timezone
+
+        mock_now = datetime(2024, 1, 15, 12, 0, 0, tzinfo=timezone.utc)
         mock_datetime.now.return_value = mock_now
 
         result = generator.generate_markdown(
@@ -284,7 +286,10 @@ class TestMarkdownGenerator:
 
         # メインコンテンツの確認
         assert "# testuserのGitHubリポジトリ一覧" in result
-        assert "最終更新: 2024年01月15日" in result
+        # 日付はUTC/JST両表記になっている
+        assert "(UTC)" in result
+        assert "(JST)" in result
+        assert "最終更新:" in result
         assert "## 目次" in result
         assert "## 統計情報" in result
         assert "## アクティブなリポジトリ" in result
