@@ -148,8 +148,11 @@ class BadgeGenerator:
             deepwiki_url = repo["deepwiki_url"]
             # リポジトリ名を取得してバッジテキストに使用
             repo_name = repo.get("name", "docs")
-            # URLエンコードされたリポジトリ名を作成（ハイフンは--にエスケープ）
-            repo_name_safe = repo_name.replace("-", "--")
+            # URLエンコードされたリポジトリ名を作成（トピックバッジと同じルールを適用）
+            repo_name_safe = self.url_utils.make_url_safe(
+                repo_name,
+                self.config["topic_badge"]["replacements"],
+            )
             deepwiki_badge = (
                 f"[![DeepWiki](https://img.shields.io/badge/DeepWiki-{repo_name_safe}-blue)]({deepwiki_url})"
             )

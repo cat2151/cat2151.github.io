@@ -179,32 +179,43 @@ class RepositoryProcessor:
             readme = repo.get_readme()
             content = readme.decoded_content.decode("utf-8")
 
-            # DeepWikiバッジのパターンを検索
+            # DeepWikiバッジの明示的なパターンのみを検索（誤検出を防ぐため）
             # パターン1: [![DeepWiki](https://img.shields.io/badge/DeepWiki-...)](https://deepwiki.com/...)
-            # パターン2: [deepwiki-link]: https://img.shields.io/badge/DeepWiki-...
-            # パターン3: ![DeepWiki](https://img.shields.io/badge/DeepWiki-...)
+            # パターン2: [deepwiki-link]: https://deepwiki.com/...
 
             # Markdownリンク形式のDeepWikiバッジを検索
             pattern = r"\[!\[DeepWiki\].*?\]\((https://deepwiki\.com/[^\)]+)\)"
             match = re.search(pattern, content)
             if match:
-                return match.group(1)
+                url = match.group(1)
+                return self._validate_deepwiki_url(url)
 
             # 参照スタイルのリンクを検索
             pattern_ref = r"\[deepwiki-link\]:\s*(https://deepwiki\.com/[^\s]+)"
             match_ref = re.search(pattern_ref, content, re.IGNORECASE)
             if match_ref:
-                return match_ref.group(1)
-
-            # 画像のみの形式でDeepWiki URLを含むコメントや他の箇所を検索
-            pattern_url = r"https://deepwiki\.com/[^\s\)>]+"
-            match_url = re.search(pattern_url, content)
-            if match_url:
-                return match_url.group(0)
+                url = match_ref.group(1)
+                return self._validate_deepwiki_url(url)
 
             return ""
         except (GithubException, UnicodeDecodeError):
             return ""
+
+    def _validate_deepwiki_url(self, url: str) -> str:
+        """DeepWiki URLを検証する
+
+        Args:
+            url: 検証するURL
+
+        Returns:
+            有効なURLの場合はそのURL、無効な場合は空文字列
+        """
+        # 基本的なURL形式の検証
+        # https://deepwiki.com/owner/repo 形式であることを確認
+        pattern = r"^https://deepwiki\.com/[\w\-\.]+/[\w\-\.]+/?$"
+        if re.match(pattern, url):
+            return url
+        return ""
 
     def _create_repo_data(self, repo, username: str) -> Dict[str, Any]:
         """リポジトリデータを作成する"""

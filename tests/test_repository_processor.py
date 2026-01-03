@@ -358,16 +358,6 @@ class TestRepositoryProcessor:
         result = processor._check_deepwiki_badge(mock_repo)
         assert result == "https://deepwiki.com/testuser/test-repo"
 
-    def test_check_deepwiki_badge_with_url_only(self, processor, mock_repo):
-        """DeepWikiバッジ（URL のみ）の検出テスト"""
-        # URLのみが含まれている場合
-        mock_readme = Mock()
-        mock_readme.decoded_content = b"Documentation: https://deepwiki.com/testuser/test-repo"
-        mock_repo.get_readme.return_value = mock_readme
-
-        result = processor._check_deepwiki_badge(mock_repo)
-        assert result == "https://deepwiki.com/testuser/test-repo"
-
     def test_check_deepwiki_badge_not_found(self, processor, mock_repo):
         """DeepWikiバッジが存在しない場合のテスト"""
         # DeepWikiバッジが含まれていない場合
@@ -377,6 +367,35 @@ class TestRepositoryProcessor:
 
         result = processor._check_deepwiki_badge(mock_repo)
         assert result == ""
+
+    def test_check_deepwiki_badge_url_only_not_detected(self, processor, mock_repo):
+        """単純なDeepWiki URLのみの場合は検出しない（誤検出防止）"""
+        # URLのみが含まれている場合は検出しない
+        mock_readme = Mock()
+        mock_readme.decoded_content = b"Documentation: https://deepwiki.com/testuser/test-repo"
+        mock_repo.get_readme.return_value = mock_readme
+
+        result = processor._check_deepwiki_badge(mock_repo)
+        assert result == ""
+
+    def test_check_deepwiki_badge_invalid_url_format(self, processor, mock_repo):
+        """不正な形式のDeepWiki URLは検出しない"""
+        # 不正な形式のURL（パスが不足）
+        mock_readme = Mock()
+        mock_readme.decoded_content = b"[![DeepWiki](badge)](https://deepwiki.com/testuser)"
+        mock_repo.get_readme.return_value = mock_readme
+
+        result = processor._check_deepwiki_badge(mock_repo)
+        assert result == ""
+
+    def test_check_deepwiki_badge_with_trailing_slash(self, processor, mock_repo):
+        """末尾にスラッシュがあるDeepWiki URLを検出"""
+        mock_readme = Mock()
+        mock_readme.decoded_content = b"[![DeepWiki](badge)](https://deepwiki.com/testuser/test-repo/)"
+        mock_repo.get_readme.return_value = mock_readme
+
+        result = processor._check_deepwiki_badge(mock_repo)
+        assert result == "https://deepwiki.com/testuser/test-repo/"
 
     def test_check_deepwiki_badge_no_readme(self, processor, mock_repo):
         """READMEが存在しない場合のDeepWikiバッジチェック"""
