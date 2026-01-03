@@ -3,8 +3,8 @@
 このモジュールはUTCとJSTの両方で日付を表示する機能を提供します。
 """
 
-from datetime import datetime, timezone
-from typing import Dict
+from datetime import datetime, timedelta, timezone
+from typing import Any, Dict
 
 
 class DateFormatter:
@@ -13,7 +13,7 @@ class DateFormatter:
     # JST = UTC+9時間
     JST_OFFSET_HOURS = 9
 
-    def __init__(self, config: Dict[str, str]):
+    def __init__(self, config: Dict[str, Any]):
         """初期化
 
         Args:
@@ -40,8 +40,6 @@ class DateFormatter:
         utc_str = dt_utc.strftime(self.date_format)
 
         # JST に変換（UTC+9時間）
-        from datetime import timedelta
-
         dt_jst = dt_utc + timedelta(hours=self.JST_OFFSET_HOURS)
         jst_str = dt_jst.strftime(self.date_format)
 
