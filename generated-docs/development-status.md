@@ -1,51 +1,50 @@
-Last updated: 2026-01-03
+Last updated: 2026-01-04
 
 # Development Status
 
 ## 現在のIssues
-- [Issue #14](../issue-notes/14.md) は、プロジェクト内で表示されるすべての日付について、UTCとJSTの両方を併記する対応を求めています。
-- この変更はPR #13での日付表示の改善に基づき、運用者向けのJSTと検索エンジン向けのUTCという二つの目的を達成します。
-- 目標は、日付情報の正確性と多様な利用シーンにおける可読性を向上させることです。
+- 現在、プロジェクトにはオープン中の重要な課題やバグは存在しません。
+- すべての既知の潜在的問題は解決されており、プロジェクトは安定した状態を維持しています。
+- 今後は、新機能の導入、既存機能の改善、またはコード品質の向上に注力する段階です。
 
 ## 次の一手候補
-1. [Issue #14](../issue-notes/14.md) プロジェクト内の日付表示箇所を特定し、フォーマット要件を整理する
-   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内のファイルを分析し、日付や時刻を扱う箇所（特にMarkdown出力に関連する部分）を洗い出し、現在の日付フォーマットを調査する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/project_overview_fetcher.py`, `src/generate_repo_list/generate_repo_list.py`
-
-     実行内容: 上記ファイルについて、日付または時刻を処理し、特に最終的にMarkdownやJSON-LD、SEO情報として出力される箇所を特定してください。それぞれの箇所で現在どのような日付フォーマットが使用されているか、またタイムゾーンの扱われ方を分析してください。
-
-     確認事項: Pythonの`datetime`モジュールや、日付/時刻関連のライブラリ（もしあれば）の利用状況を確認してください。また、日付が直接文字列としてハードコードされているか、変数を通じて渡されているかも確認してください。
-
-     期待する出力: 各ファイルで日付がどのように取得、処理、フォーマットされているかをMarkdown形式でリストアップしてください。特定した日付表示箇所について、そのコードスニペットと、現在どのような出力形式になるか例を記述してください。
-     ```
-
-2. [Issue #14](../issue-notes/14.md) UTC/JSTデュアルタイムゾーン表示に対応する共通日付ユーティリティの作成
-   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内に`date_utils.py`ファイルを新規作成し、UTCとJSTの両方で日付をフォーマットする基盤関数を実装する。
+1. 自動生成される開発状況レポートの精度向上
+   - 最初の小さな一歩: 現在の開発状況レポート（`generated-docs/development-status.md`）と、それを生成するプロンプト（`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`）の内容を比較し、オープンIssueがない場合の要約や次の一手候補の提示方法について改善点を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/date_utils.py` (新規作成)
+     対象ファイル: generated-docs/development-status.md, .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
 
-     実行内容: `src/generate_repo_list/` ディレクトリに `date_utils.py` を新規作成し、`datetime`オブジェクトを受け取り、`"YYYY-MM-DD (UTC) / YYYY-MM-DD (JST)"` 形式の文字列を返す`format_datetime_dual_timezone(dt_obj)`関数を実装してください。この関数は、入力`dt_obj`がタイムゾーン情報を持たない場合はUTCと仮定し、JST (UTC+9) への変換を含めて表示する必要があります。
+     実行内容: 現在生成されている `development-status.md` の内容が、元のプロンプトの意図をどの程度正確に反映しているか分析してください。特に、オープン中のIssueがない場合の要約と次の一手候補の生成ロジックについて、改善の余地があるか検討し、より的確な情報を生成するための修正案を提案してください。
 
-     確認事項: Pythonの`datetime`モジュールと、タイムゾーン操作のための`pytz`ライブラリ（または標準ライブラリの`zoneinfo`）の適切な使用方法を確認してください。UTCとJST間のタイムゾーン変換ロジックが正確であることを確認してください。
+     確認事項: 生成プロンプトのガイドライン（特にハルシネーション回避）と、開発者のニーズを満たす出力のバランスを考慮してください。`DevelopmentStatusGenerator.cjs` の実装も確認し、変更の影響範囲を把握してください。
 
-     期待する出力: 新規作成する `date_utils.py` の完全なコード内容と、`format_datetime_dual_timezone` 関数の簡単な使用例（異なるタイムゾーンの`datetime`オブジェクトを引数に与えた場合の出力例）をMarkdown形式で記述してください。
+     期待する出力: `development-status.md` の生成品質を向上させるための具体的な提案をmarkdown形式で出力してください。提案には、プロンプトの修正案、または生成スクリプトのロジック改善案を含め、オープンIssueがない場合の次の一手候補の提示方法についても言及してください。
      ```
 
-3. [Issue #14](../issue-notes/14.md) 生成ドキュメントへのデュアルタイムゾーン日付フォーマットの適用
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` に、候補2で作成した`date_utils.py`から日付フォーマット関数をインポートし、特定された日付表示箇所に適用する。
+2. リポジトリリスト生成ワークフローの堅牢性強化
+   - 最初の小さな一歩: `generate_repo_list.yml` ワークフローの実行履歴を確認し、過去に発生したエラーがないか、またどのような種類のエラーが発生する可能性があるかを調査する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/markdown_generator.py`
+     対象ファイル: .github/workflows/generate_repo_list.yml, src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py
 
-     実行内容: `src/generate_repo_list/markdown_generator.py` を編集し、候補2で作成した `src/generate_repo_list/date_utils.py` から `format_datetime_dual_timezone` 関数をインポートしてください。その後、`markdown_generator.py` 内でリポジトリの最終更新日や生成日など、現在日付を文字列として出力している箇所を特定し、`format_datetime_dual_timezone` 関数を使って新しいUTC/JST併記フォーマットに置き換えてください。
+     実行内容: `generate_repo_list.yml` ワークフロー内で呼び出されているPythonスクリプト（`generate_repo_list.py` およびその依存モジュール）のエラーハンドリング機構を分析してください。特に、API呼び出し失敗、ネットワークエラー、予期せぬデータ形式などの外部要因によるエラーに対して、再試行メカニズムや適切なエラーログ記録、通知機能を追加する改善点を洗い出してください。
 
-     確認事項: `markdown_generator.py` 内のどのメソッドが日付を扱っているか、特に`generate_markdown_table`や`generate_project_list_markdown`などの出力関連メソッドを確認してください。既存のMarkdown構造や他の要素に影響を与えないよう、日付フォーマット部分のみを正確に変更してください。
+     確認事項: 既存のワークフロー設定との整合性、GitHub APIのレートリミット考慮、最小限の権限での実行可能性を考慮してください。エラー通知方法（例: Slack, Issue作成）についても検討してください。
 
-     期待する出力: 変更後の `src/generate_repo_list/markdown_generator.py` の関連コードスニペット（インポート文、関数呼び出し箇所）と、この変更によって生成されるMarkdownドキュメントにおける日付表示のサンプル出力（変更前と変更後の比較）をMarkdown形式で提示してください。
+     期待する出力: `generate_repo_list.yml` ワークフローおよび関連Pythonスクリプトのエラー耐性を向上させるための具体的な変更提案をmarkdown形式で出力してください。提案には、再試行ロジック、エラーロギングの強化、潜在的なエラーケースとそれらへの対処法を含めてください。
      ```
+
+3. DeepWikiバッジ機能の汎用性と検出精度の向上
+   - 最初の小さな一歩: 現在のDeepWikiバッジ検出ロジック (`src/generate_repo_list/badge_generator.py`) がどのようなURLパターンに対応しているか、またどのような形式のREADMEからバッジを抽出しているかを確認する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: src/generate_repo_list/badge_generator.py, src/generate_repo_list/markdown_generator.py, tests/test_badge_generator.py
+
+     実行内容: `badge_generator.py` 内のDeepWikiバッジ検出ロジックを分析し、より多様なDeepWikiのURL形式や埋め込みパターンに対応できるよう改善案を検討してください。また、`markdown_generator.py` でのバッジ表示が、より柔軟なスタイル（例：SVG、画像サイズ指定）で表示できるよう拡張する可能性についても分析してください。既存のDeepWikiバッジ検出に関するテスト（`tests/test_badge_generator.py`）もレビューし、カバレッジを向上させるための新しいテストケースを提案してください。
+
+     確認事項: DeepWiki以外のバッジ検出ロジックへの影響がないこと。パフォーマンスへの影響が最小限であること。外部プロジェクトのREADMEに存在する可能性のある様々なDeepWikiバッジの表現形式を考慮してください。
+
+     期待する出力: DeepWikiバッジの検出ロジックと表示機能の改善提案をmarkdown形式で出力してください。これには、正規表現の改善案、新たな表示オプションの検討、および既存のテストを補完する新規テストケースの提案を含めてください。
 
 ---
-Generated at: 2026-01-03 07:06:29 JST
+Generated at: 2026-01-04 07:06:27 JST
