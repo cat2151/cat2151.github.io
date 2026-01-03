@@ -201,7 +201,11 @@ description: "Test Description"
         mock_repo = Mock()
         mock_repo.name = "test-repo"
         mock_repo.private = False
-        mock_repo.get_readme.return_value = Mock()
+
+        # README取得用のモック（DeepWikiバッジなし）
+        mock_readme = Mock()
+        mock_readme.decoded_content = b"# Test Repository"
+        mock_repo.get_readme.return_value = mock_readme
 
         # モックGitHubユーザー
         mock_github_user = Mock()

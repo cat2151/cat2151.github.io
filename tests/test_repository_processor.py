@@ -85,7 +85,12 @@ class TestRepositoryProcessor:
         repo.stargazers_count = 5
         repo.language = "Python"
         repo.private = False
-        repo.get_readme.return_value = Mock()
+
+        # README取得用のモック（デフォルトでDeepWikiバッジなし）
+        mock_readme = Mock()
+        mock_readme.decoded_content = b"# Test Repository"
+        repo.get_readme.return_value = mock_readme
+
         repo.get_topics.return_value = ["test", "example"]
         # デフォルトではREADME.ja.mdは存在しない
         repo.get_contents.side_effect = GithubException(status=404, data={})
@@ -155,6 +160,7 @@ class TestRepositoryProcessor:
             "topics": ["test", "example"],
             "has_readme_ja": False,
             "has_readme_en": False,
+            "deepwiki_url": "",
         }
 
         assert data == expected
@@ -331,6 +337,79 @@ class TestRepositoryProcessor:
         assert "アクティブ: 0" in captured.out
         assert "アーカイブ: 0" in captured.out
         assert "フォーク: 0" in captured.out
+
+    def test_check_deepwiki_badge_with_markdown_link(self, processor, mock_repo):
+        """DeepWikiバッジ（Markdownリンク形式）の検出テスト"""
+        # README.mdにDeepWikiバッジが含まれている場合
+        mock_readme = Mock()
+        mock_readme.decoded_content = b"[![DeepWiki](https://img.shields.io/badge/DeepWiki-test--repo-blue)](https://deepwiki.com/testuser/test-repo)"
+        mock_repo.get_readme.return_value = mock_readme
+
+        result = processor._check_deepwiki_badge(mock_repo)
+        assert result == "https://deepwiki.com/testuser/test-repo"
+
+    def test_check_deepwiki_badge_with_reference_style(self, processor, mock_repo):
+        """DeepWikiバッジ（参照スタイル）の検出テスト"""
+        # 参照スタイルのリンク
+        mock_readme = Mock()
+        mock_readme.decoded_content = b"[deepwiki-link]: https://deepwiki.com/testuser/test-repo"
+        mock_repo.get_readme.return_value = mock_readme
+
+        result = processor._check_deepwiki_badge(mock_repo)
+        assert result == "https://deepwiki.com/testuser/test-repo"
+
+    def test_check_deepwiki_badge_with_url_only(self, processor, mock_repo):
+        """DeepWikiバッジ（URL のみ）の検出テスト"""
+        # URLのみが含まれている場合
+        mock_readme = Mock()
+        mock_readme.decoded_content = b"Documentation: https://deepwiki.com/testuser/test-repo"
+        mock_repo.get_readme.return_value = mock_readme
+
+        result = processor._check_deepwiki_badge(mock_repo)
+        assert result == "https://deepwiki.com/testuser/test-repo"
+
+    def test_check_deepwiki_badge_not_found(self, processor, mock_repo):
+        """DeepWikiバッジが存在しない場合のテスト"""
+        # DeepWikiバッジが含まれていない場合
+        mock_readme = Mock()
+        mock_readme.decoded_content = b"# Test Repository\nThis is a test."
+        mock_repo.get_readme.return_value = mock_readme
+
+        result = processor._check_deepwiki_badge(mock_repo)
+        assert result == ""
+
+    def test_check_deepwiki_badge_no_readme(self, processor, mock_repo):
+        """READMEが存在しない場合のDeepWikiバッジチェック"""
+        from github.GithubException import GithubException
+
+        mock_repo.get_readme.side_effect = GithubException(status=404, data={})
+
+        result = processor._check_deepwiki_badge(mock_repo)
+        assert result == ""
+
+    def test_create_repo_data_with_deepwiki(self, processor, mock_repo):
+        """DeepWikiバッジを持つリポジトリのデータ作成テスト"""
+        # DeepWikiバッジを持つREADME.mdを設定
+        mock_readme = Mock()
+        mock_readme.decoded_content = b"[![DeepWiki](https://img.shields.io/badge/DeepWiki-test--repo-blue)](https://deepwiki.com/testuser/test-repo)"
+        mock_repo.get_readme.return_value = mock_readme
+
+        username = "testuser"
+        data = processor._create_repo_data(mock_repo, username)
+
+        assert data["deepwiki_url"] == "https://deepwiki.com/testuser/test-repo"
+
+    def test_create_repo_data_without_deepwiki(self, processor, mock_repo):
+        """DeepWikiバッジを持たないリポジトリのデータ作成テスト"""
+        # DeepWikiバッジを持たないREADME.mdを設定
+        mock_readme = Mock()
+        mock_readme.decoded_content = b"# Test Repository"
+        mock_repo.get_readme.return_value = mock_readme
+
+        username = "testuser"
+        data = processor._create_repo_data(mock_repo, username)
+
+        assert data["deepwiki_url"] == ""
 
 
 # レガシー互換のためのメイン関数

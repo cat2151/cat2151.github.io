@@ -3,6 +3,7 @@
 このモジュールはGitHubリポジトリの取得、フィルタリング、分類を担当します。
 """
 
+import re
 from typing import Any, Dict, List, Tuple
 
 from github import Github
@@ -165,6 +166,46 @@ class RepositoryProcessor:
         except GithubException:
             return False
 
+    def _check_deepwiki_badge(self, repo) -> str:
+        """README.mdにDeepWikiバッジが存在するかチェックし、URLを返す
+
+        Args:
+            repo: GitHubリポジトリオブジェクト
+
+        Returns:
+            DeepWikiバッジのURLが存在する場合はそのURL、存在しない場合は空文字列
+        """
+        try:
+            readme = repo.get_readme()
+            content = readme.decoded_content.decode("utf-8")
+
+            # DeepWikiバッジのパターンを検索
+            # パターン1: [![DeepWiki](https://img.shields.io/badge/DeepWiki-...)](https://deepwiki.com/...)
+            # パターン2: [deepwiki-link]: https://img.shields.io/badge/DeepWiki-...
+            # パターン3: ![DeepWiki](https://img.shields.io/badge/DeepWiki-...)
+
+            # Markdownリンク形式のDeepWikiバッジを検索
+            pattern = r"\[!\[DeepWiki\].*?\]\((https://deepwiki\.com/[^\)]+)\)"
+            match = re.search(pattern, content)
+            if match:
+                return match.group(1)
+
+            # 参照スタイルのリンクを検索
+            pattern_ref = r"\[deepwiki-link\]:\s*(https://deepwiki\.com/[^\s]+)"
+            match_ref = re.search(pattern_ref, content, re.IGNORECASE)
+            if match_ref:
+                return match_ref.group(1)
+
+            # 画像のみの形式でDeepWiki URLを含むコメントや他の箇所を検索
+            pattern_url = r"https://deepwiki\.com/[^\s\)>]+"
+            match_url = re.search(pattern_url, content)
+            if match_url:
+                return match_url.group(0)
+
+            return ""
+        except (GithubException, UnicodeDecodeError):
+            return ""
+
     def _create_repo_data(self, repo, username: str) -> Dict[str, Any]:
         """リポジトリデータを作成する"""
         repo_data = {
@@ -181,6 +222,7 @@ class RepositoryProcessor:
             "topics": repo.get_topics(),
             "has_readme_ja": self._check_readme_ja_exists(repo),
             "has_readme_en": self._check_readme_en_exists(repo),
+            "deepwiki_url": self._check_deepwiki_badge(repo),
         }
 
         # プロジェクト概要を取得（ProjectOverviewFetcherが利用可能な場合のみ）
