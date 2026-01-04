@@ -1,4 +1,4 @@
-Last updated: 2026-01-04
+Last updated: 2026-01-05
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -260,6 +260,8 @@ Last updated: 2026-01-04
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+f238aed Auto-update repository list - 2026-01-03
+6ee368c Update project summaries (overview & development status) [auto]
 3607cd7 Merge pull request #17 from cat2151/copilot/add-deepwiki-badge-to-readme
 9d2b241 Address PR review comments: stricter URL detection, consistent encoding, validation
 9498d64 Add DeepWiki badge detection and display functionality
@@ -268,8 +270,6 @@ d65d964 Add issue note for #16 [auto]
 45d6968 Merge pull request #15 from cat2151/copilot/add-utc-and-jst-date-display
 1b96fdd Fix code review feedback: move timedelta import to top and fix type hint
 07bdbde Auto-update repository list - 2026-01-02
-1233aee Update project summaries (overview & development status) [auto]
-e1b73d4 Auto-update repository list - 2026-01-01
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -289,4 +289,4 @@ tests/test_repository_processor.py
 
 
 ---
-Generated at: 2026-01-04 07:05:41 JST
+Generated at: 2026-01-05 07:05:46 JST

@@ -1,50 +1,51 @@
-Last updated: 2026-01-04
+Last updated: 2026-01-05
 
 # Development Status
 
 ## 現在のIssues
-- 現在、プロジェクトにはオープン中の重要な課題やバグは存在しません。
-- すべての既知の潜在的問題は解決されており、プロジェクトは安定した状態を維持しています。
-- 今後は、新機能の導入、既存機能の改善、またはコード品質の向上に注力する段階です。
+- 現在、プロジェクトにはオープン中の重要なIssueは検出されていません。
+- これまでの開発は順調に進捗しており、特定の課題は未解決ではありません。
+- したがって、今後の開発は主に機能改善、パフォーマンス最適化、およびプロジェクトの健全性維持に焦点を当てます。
 
 ## 次の一手候補
-1. 自動生成される開発状況レポートの精度向上
-   - 最初の小さな一歩: 現在の開発状況レポート（`generated-docs/development-status.md`）と、それを生成するプロンプト（`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`）の内容を比較し、オープンIssueがない場合の要約や次の一手候補の提示方法について改善点を特定する。
+1. リポジトリリスト生成ロジックのパフォーマンス改善とエラーハンドリング強化 [Issue #なし]
+   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py`内の主要な関数について、既存のテストケースでパフォーマンスボトルネックや潜在的なエラーパターンがないかレビューする。
    - Agent実行プロンプト:
      ```
-     対象ファイル: generated-docs/development-status.md, .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
+     対象ファイル: src/generate_repo_list/repository_processor.py, src/generate_repo_list/generate_repo_list.py
 
-     実行内容: 現在生成されている `development-status.md` の内容が、元のプロンプトの意図をどの程度正確に反映しているか分析してください。特に、オープン中のIssueがない場合の要約と次の一手候補の生成ロジックについて、改善の余地があるか検討し、より的確な情報を生成するための修正案を提案してください。
+     実行内容: これらのファイル内の主要なデータ処理およびAPI呼び出し部分について、既存のテストケースと照らし合わせながら、潜在的なパフォーマンスボトルネックやエラー発生箇所を特定してください。特に、大規模なリポジトリリストを処理する際の効率性に着目してください。
 
-     確認事項: 生成プロンプトのガイドライン（特にハルシネーション回避）と、開発者のニーズを満たす出力のバランスを考慮してください。`DevelopmentStatusGenerator.cjs` の実装も確認し、変更の影響範囲を把握してください。
+     確認事項: tests/test_repository_processor.py および tests/test_integration.py の既存のテストスイートが正常に動作することを確認してください。また、src/generate_repo_list/config.yml に定義されている設定や外部API（GitHub APIなど）の利用状況を考慮してください。
 
-     期待する出力: `development-status.md` の生成品質を向上させるための具体的な提案をmarkdown形式で出力してください。提案には、プロンプトの修正案、または生成スクリプトのロジック改善案を含め、オープンIssueがない場合の次の一手候補の提示方法についても言及してください。
+     期待する出力: パフォーマンス上の課題がある関数や、エラーハンドリングを強化すべき箇所を特定し、改善案をmarkdown形式でリストアップしてください。各項目について、具体的なコード例を挙げてください。
      ```
 
-2. リポジトリリスト生成ワークフローの堅牢性強化
-   - 最初の小さな一歩: `generate_repo_list.yml` ワークフローの実行履歴を確認し、過去に発生したエラーがないか、またどのような種類のエラーが発生する可能性があるかを調査する。
+2. 自動生成される開発状況レポートの精度向上 [Issue #なし]
+   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` の内容をレビューし、現状の「現在のIssues」の記述が Issue がない場合に適切に機能しているか確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/workflows/generate_repo_list.yml, src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
 
-     実行内容: `generate_repo_list.yml` ワークフロー内で呼び出されているPythonスクリプト（`generate_repo_list.py` およびその依存モジュール）のエラーハンドリング機構を分析してください。特に、API呼び出し失敗、ネットワークエラー、予期せぬデータ形式などの外部要因によるエラーに対して、再試行メカニズムや適切なエラーログ記録、通知機能を追加する改善点を洗い出してください。
+     実行内容: development-status-prompt.md のプロンプト内容を分析し、Issueが存在しない場合に現在の出力（例：generated-docs/development-status.md）が情報不足にならないように改善点を洗い出してください。また、DevelopmentStatusGenerator.cjs がプロンプトとどのように連携しているかを調査してください。
 
-     確認事項: 既存のワークフロー設定との整合性、GitHub APIのレートリミット考慮、最小限の権限での実行可能性を考慮してください。エラー通知方法（例: Slack, Issue作成）についても検討してください。
+     確認事項: プロンプトの変更が、ハルシネーションを引き起こさないか、また不要な情報を生成しないか慎重に検討してください。既存の出力フォーマット generated-docs/development-status.md との整合性を維持すること。
 
-     期待する出力: `generate_repo_list.yml` ワークフローおよび関連Pythonスクリプトのエラー耐性を向上させるための具体的な変更提案をmarkdown形式で出力してください。提案には、再試行ロジック、エラーロギングの強化、潜在的なエラーケースとそれらへの対処法を含めてください。
+     期待する出力: 改善された development-status-prompt.md の提案内容をmarkdown形式で提示してください。特に、オープンIssueがない場合のレポート内容の充実に関する具体的な変更案を記述してください。
      ```
 
-3. DeepWikiバッジ機能の汎用性と検出精度の向上
-   - 最初の小さな一歩: 現在のDeepWikiバッジ検出ロジック (`src/generate_repo_list/badge_generator.py`) がどのようなURLパターンに対応しているか、またどのような形式のREADMEからバッジを抽出しているかを確認する。
+3. 新機能追加時のテストカバレッジ自動チェックの導入 [Issue #なし]
+   - 最初の小さな一歩: `pytest.ini` や `requirements-dev.txt` を確認し、既存のテスト環境でカバレッジレポートを生成するためのツール（例: `pytest-cov`）が利用可能か、または導入の必要があるか調査する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/badge_generator.py, src/generate_repo_list/markdown_generator.py, tests/test_badge_generator.py
+     対象ファイル: pytest.ini, requirements-dev.txt, .github/workflows/generate_repo_list.yml
 
-     実行内容: `badge_generator.py` 内のDeepWikiバッジ検出ロジックを分析し、より多様なDeepWikiのURL形式や埋め込みパターンに対応できるよう改善案を検討してください。また、`markdown_generator.py` でのバッジ表示が、より柔軟なスタイル（例：SVG、画像サイズ指定）で表示できるよう拡張する可能性についても分析してください。既存のDeepWikiバッジ検出に関するテスト（`tests/test_badge_generator.py`）もレビューし、カバレッジを向上させるための新しいテストケースを提案してください。
+     実行内容: src/generate_repo_list/ 以下の主要なPythonモジュール（例: repository_processor.py, markdown_generator.py）に対するテストカバレッジを測定し、そのレポートを自動生成する仕組みを検討してください。また、プルリクエスト時にカバレッジが特定の閾値（例: 80%）を下回らないようにするためのGitHub Actionsワークフローの導入可能性を評価してください。
 
-     確認事項: DeepWiki以外のバッジ検出ロジックへの影響がないこと。パフォーマンスへの影響が最小限であること。外部プロジェクトのREADMEに存在する可能性のある様々なDeepWikiバッジの表現形式を考慮してください。
+     確認事項: 既存のテストスイートが破壊されないこと。カバレッジレポートの生成がビルド時間に大きな影響を与えないこと。GitHub Actionsの利用料金やCI/CDパイプラインへの統合のしやすさを考慮してください。
 
-     期待する出力: DeepWikiバッジの検出ロジックと表示機能の改善提案をmarkdown形式で出力してください。これには、正規表現の改善案、新たな表示オプションの検討、および既存のテストを補完する新規テストケースの提案を含めてください。
+     期待する出力: テストカバレッジ測定と閾値チェックを導入するための詳細な手順書をmarkdown形式で提供してください。これには、必要なツールのインストール方法、pytest.ini の設定例、およびGitHub ActionsワークフローのYAML定義を含めてください。
+     ```
 
 ---
-Generated at: 2026-01-04 07:06:27 JST
+Generated at: 2026-01-05 07:06:07 JST
