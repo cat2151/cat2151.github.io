@@ -1,51 +1,53 @@
-Last updated: 2026-01-05
+Last updated: 2026-01-06
 
 # Development Status
 
 ## 現在のIssues
-- 現在、プロジェクトにはオープン中の重要なIssueは検出されていません。
-- これまでの開発は順調に進捗しており、特定の課題は未解決ではありません。
-- したがって、今後の開発は主に機能改善、パフォーマンス最適化、およびプロジェクトの健全性維持に焦点を当てます。
+- 現在、オープンされているIssueはありません。
+- 全ての報告された課題は解決済み、または進行中の作業に組み込まれています。
+- プロジェクトは安定しており、次の機能改善や品質向上に取り組む準備ができています。
 
 ## 次の一手候補
-1. リポジトリリスト生成ロジックのパフォーマンス改善とエラーハンドリング強化 [Issue #なし]
-   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py`内の主要な関数について、既存のテストケースでパフォーマンスボトルネックや潜在的なエラーパターンがないかレビューする。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/repository_processor.py, src/generate_repo_list/generate_repo_list.py
+1.  [Issue #29](../issue-notes/29.md) 開発状況生成プロンプトの精度向上と拡張
+    -   最初の小さな一歩: このプロンプト自体 (`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`) の内容をレビューし、指示の明確性やハルシネーション対策が十分に機能しているか確認する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
 
-     実行内容: これらのファイル内の主要なデータ処理およびAPI呼び出し部分について、既存のテストケースと照らし合わせながら、潜在的なパフォーマンスボトルネックやエラー発生箇所を特定してください。特に、大規模なリポジトリリストを処理する際の効率性に着目してください。
+        実行内容: 対象ファイルの内容を分析し、以下の観点から改善点を提案してください：
+        1) 現在の「生成するもの」「生成しないもの」のルールが、今回の出力でどのように適用されたか。
+        2) 「Issue番号を必ず書く」と「オープンIssueがない」という矛盾点に対するより良い指示の追加（例: 新規提案の場合のIssue番号の扱い）。
+        3) ハルシネーションの防止と、具体的で価値のある次の一手提案のバランスをどのように取るか。
 
-     確認事項: tests/test_repository_processor.py および tests/test_integration.py の既存のテストスイートが正常に動作することを確認してください。また、src/generate_repo_list/config.yml に定義されている設定や外部API（GitHub APIなど）の利用状況を考慮してください。
+        確認事項: このプロンプトが利用される`DevelopmentStatusGenerator.cjs`との関連性、および出力される`development-status.md`の最終的な利用目的（開発者向けの情報提供）を考慮してください。
 
-     期待する出力: パフォーマンス上の課題がある関数や、エラーハンドリングを強化すべき箇所を特定し、改善案をmarkdown形式でリストアップしてください。各項目について、具体的なコード例を挙げてください。
-     ```
+        期待する出力: 提案された改善点と、それに基づいた`development-status-prompt.md`の修正案をmarkdown形式で出力してください。
+        ```
 
-2. 自動生成される開発状況レポートの精度向上 [Issue #なし]
-   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` の内容をレビューし、現状の「現在のIssues」の記述が Issue がない場合に適切に機能しているか確認する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
+2.  [Issue #30](../issue-notes/30.md) リポジトリリスト生成機能におけるSEOメタデータ出力の強化
+    -   最初の小さな一歩: `src/generate_repo_list/seo_template.yml` の現在の構造と、`src/generate_repo_list/markdown_generator.py` や `src/generate_repo_list/template_processor.py` でどのように利用されているかを調査し、不足しているSEO要素（例: `og:image`、`twitter:card`など）を特定する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: src/generate_repo_list/seo_template.yml, src/generate_repo_list/markdown_generator.py, src/generate_repo_list/template_processor.py
 
-     実行内容: development-status-prompt.md のプロンプト内容を分析し、Issueが存在しない場合に現在の出力（例：generated-docs/development-status.md）が情報不足にならないように改善点を洗い出してください。また、DevelopmentStatusGenerator.cjs がプロンプトとどのように連携しているかを調査してください。
+        実行内容: 対象ファイルを分析し、生成されるリポジトリリストのMarkdownファイルに、よりリッチなSEOメタデータを組み込むための改善点を提案してください。具体的には、`seo_template.yml`の拡張と、それを反映するためのPythonスクリプトの変更箇所を特定します。
 
-     確認事項: プロンプトの変更が、ハルシネーションを引き起こさないか、また不要な情報を生成しないか慎重に検討してください。既存の出力フォーマット generated-docs/development-status.md との整合性を維持すること。
+        確認事項: 既存のSEOメタデータ出力ロジックとの整合性、およびMkDocsなどの静的サイトジェネレータでの表示互換性を確認してください。新しいメタデータが既存のページレイアウトや表示に悪影響を与えないことを保証します。
 
-     期待する出力: 改善された development-status-prompt.md の提案内容をmarkdown形式で提示してください。特に、オープンIssueがない場合のレポート内容の充実に関する具体的な変更案を記述してください。
-     ```
+        期待する出力: `seo_template.yml`の改善案（追加すべきメタデータフィールドとその目的）、およびそれを処理するために`markdown_generator.py`と`template_processor.py`で必要となるコード変更の概要をmarkdown形式で出力してください。
+        ```
 
-3. 新機能追加時のテストカバレッジ自動チェックの導入 [Issue #なし]
-   - 最初の小さな一歩: `pytest.ini` や `requirements-dev.txt` を確認し、既存のテスト環境でカバレッジレポートを生成するためのツール（例: `pytest-cov`）が利用可能か、または導入の必要があるか調査する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: pytest.ini, requirements-dev.txt, .github/workflows/generate_repo_list.yml
+3.  [Issue #2](../issue-notes/2.md) 主要ワークフローの安定性と効率性の定期的な見直し
+    -   最初の小さな一歩: プロジェクト内の`.github/workflows`ディレクトリにある主要なワークフロー（例: `call-daily-project-summary.yml`, `call-issue-note.yml`, `call-translate-readme.yml`など）をリストアップし、それぞれの最終実行日時とステータスを把握する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: .github/workflows/*.yml および .github/actions-tmp/.github/workflows/*.yml
 
-     実行内容: src/generate_repo_list/ 以下の主要なPythonモジュール（例: repository_processor.py, markdown_generator.py）に対するテストカバレッジを測定し、そのレポートを自動生成する仕組みを検討してください。また、プルリクエスト時にカバレッジが特定の閾値（例: 80%）を下回らないようにするためのGitHub Actionsワークフローの導入可能性を評価してください。
+        実行内容: プロジェクト内の主要なGitHub Actionsワークフローを特定し、それらの実行頻度、成功率、実行時間などのメトリクスを収集・分析するための初期ステップを提案してください。特に、定期的な自動実行されるワークフローに焦点を当てます。
 
-     確認事項: 既存のテストスイートが破壊されないこと。カバレッジレポートの生成がビルド時間に大きな影響を与えないこと。GitHub Actionsの利用料金やCI/CDパイプラインへの統合のしやすさを考慮してください。
+        確認事項: ワークフローの実行履歴データへのアクセス方法（GitHub APIの利用など）と、そのデータ収集に必要な権限、およびプライバシーに関する制約を確認してください。
 
-     期待する出力: テストカバレッジ測定と閾値チェックを導入するための詳細な手順書をmarkdown形式で提供してください。これには、必要なツールのインストール方法、pytest.ini の設定例、およびGitHub ActionsワークフローのYAML定義を含めてください。
-     ```
+        期待する出力: 主要ワークフローのリスト、およびそれらの健全性をモニタリングするための実現可能なアプローチ（例: GitHub APIを使ったスクリプト、既存ツールの利用など）をmarkdown形式で提案してください。
 
 ---
-Generated at: 2026-01-05 07:06:07 JST
+Generated at: 2026-01-06 07:06:49 JST
