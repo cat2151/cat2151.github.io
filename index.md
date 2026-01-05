@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-04 (UTC) / 2026-01-05 (JST)
+Last Updated: 2026-01-05 (UTC) / 2026-01-06 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,24 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、自身のGitHubリポジトリ情報を自動で取得・整形するシステムです。
-- 取得した情報からJekyllベースのGitHub Pagesサイト向けに最適化されたMarkdownファイルを自動生成します。
-- 検索エンジンからのクロール性向上とLLMの参照失敗緩和を目指し、リポジトリ一覧と各リポジトリ概要を公開します。
-- 📅 2026-01-04 (UTC) / 2026-01-05 (JST)
+- GitHub APIを利用し、指定されたユーザーのリポジトリ情報を自動で取得します。
+- 取得した情報から、JekyllベースのGitHub Pages向けにSEO最適化されたリポジトリ一覧をMarkdown形式で自動生成します。
+- これにより、プロジェクトの発見性を高め、検索エンジンやLLMによる参照失敗の緩和を目指します。
+- 📅 2026-01-05 (UTC) / 2026-01-06 (JST)
+
+## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
+WIP
+
+<a href="https://cat2151.github.io/cat-window-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
+
+### Project Highlights
+- アクティブなウィンドウを監視し、生産的な作業を促すシンプルでスタンドアロンなツールです。
+- ウィンドウタイトルに設定されたパターンに基づいてスコアをリアルタイムで調整・表示します。
+- カスタマイズ可能な設定と軽量なクロスプラットフォーム対応GUIを提供し、集中力向上を支援します。
+- 📅 2026-01-05 (UTC) / 2026-01-06 (JST)
 
 ## [wavlpf](https://cat2151.github.io/wavlpf/)
 Software synthesizer. Simple. Non-realtime rendering
@@ -107,10 +121,61 @@ Software synthesizer. Simple. Non-realtime rendering
 - **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
 
 ### Project Highlights
-- wavlpfはTypeScriptで開発された、ローパスフィルター機能を備えたシンプルなソフトウェアシンセサイザーです。
-- 純粋な信号処理実装によりノコギリ波を生成し、マウス操作でカットオフ周波数とQ値を調整できるBiquad LPFを提供します。
-- 非リアルタイムでのオーディオレンダリング、WAVファイル出力、そしてTone.jsによるクリーンな再生を特徴としています。
-- 📅 2026-01-04 (UTC) / 2026-01-05 (JST)
+- TypeScriptとRust WASMで実装された、ローパスフィルター（LPF）搭載のシンプルなソフトウェアシンセサイザーです。
+- デュアル信号プロセッサにより、TypeScriptとWASMの実装で波形生成とBiquad LPF処理のパフォーマンスを比較できます。
+- マウスによるインタラクティブなフィルター制御、WAVファイル出力、設定保存・読み込みなどの機能を備えています。
+- 📅 2026-01-05 (UTC) / 2026-01-06 (JST)
+
+## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
+
+<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
+- **Overview**: No description available
+
+### Project Highlights
+- GitHub Copilotが関わるPRのフェーズを自動監視し、適切なタイミングで通知やアクションを実行するPythonツールです。
+- 認証済みGitHubユーザーの個人リポジトリを対象に、GraphQL APIを用いて効率的にPRの状態を検出します。
+- Dry-runモードやモバイル通知、自動コメント投稿など豊富な機能を備え、AI主導開発のワークフローを支援します。
+- 📅 2026-01-05 (UTC) / 2026-01-06 (JST)
+
+## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
+A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
+
+<a href="https://cat2151.github.io/quartz-transformer-mmlabc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
+- **GitHub Pages**: [https://cat2151.github.io/quartz-transformer-mmlabc/](https://cat2151.github.io/quartz-transformer-mmlabc/)
+
+### Project Highlights
+- Quartz静的サイトジェネレーター向けに、MMLやコード進行をMarkdown内で五線譜として表示・再生可能にするプラグインです。
+- コードブロックにMMLやコード進行を記述するだけで、音楽記法（ABC記法）に変換し、インタラクティブな楽譜を生成します。
+- ユーザーはWebページ上で楽譜をクリックして音楽を再生でき、Quartzのテーマ（ダーク/ライトモード）にも対応しています。
+- 📅 2026-01-05 (UTC) / 2026-01-06 (JST)
+
+## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
+This oscilloscope visualizes audio from your microphone or wav-file with zero-cross detection for stable waveform display.
+
+<a href="https://cat2151.github.io/cat-oscilloscope/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: audio-analysis](https://img.shields.io/badge/Topic-audio--analysis-lightblue) ![Topic: audio-visualizer](https://img.shields.io/badge/Topic-audio--visualizer-lightblue) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: oscilloscope](https://img.shields.io/badge/Topic-oscilloscope-lightblue) ![Topic: typescript](https://img.shields.io/badge/Topic-typescript-lightblue) ![Topic: wav](https://img.shields.io/badge/Topic-wav-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-oscilloscope](https://github.com/cat2151/cat-oscilloscope)
+- **GitHub Pages**: [https://cat2151.github.io/cat-oscilloscope/](https://cat2151.github.io/cat-oscilloscope/)
+
+### Project Highlights
+- ブラウザ上で動作する、リアルタイム音声波形を視覚化するオシロスコープ風のWebアプリケーションです。
+- マイク入力やWAVファイルから音声をキャプチャし、ゼロクロス検出とオートゲイン機能により安定した波形表示を提供します。
+- TypeScript、Web Audio API、HTML Canvasを主要技術として使用し、高精度な音声分析と描画を実現しています。
+- 📅 2026-01-05 (UTC) / 2026-01-06 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-01-05 (UTC) / 2026-01-06 (JST)
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
@@ -125,57 +190,6 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - Rustで開発されており、JSON音楽データを効率的に処理し、低遅延での演奏やWAVファイル出力に対応しています。
 - 名前付きパイプによるプロセス間通信を利用し、プログラムからのシームレスな制御やインタラクティブな演奏切り替えを可能にします。
 - 📅 2026-01-04 (UTC) / 2026-01-05 (JST)
-
-## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
-A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
-
-<a href="https://cat2151.github.io/quartz-transformer-mmlabc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
-- **GitHub Pages**: [https://cat2151.github.io/quartz-transformer-mmlabc/](https://cat2151.github.io/quartz-transformer-mmlabc/)
-
-### Project Highlights
-- Quartzの静的サイトでMMLやコード進行記法をインタラクティブな楽譜として表示するプラグインです。
-- Markdown内の専用コードブロックを検出し、abcjsを用いて五線譜と再生機能をブラウザ上で提供します。
-- MML、コード進行、ABC記譜法に対応し、音楽コンテンツをWebサイトに手軽に埋め込むことを可能にします。
-- 📅 2026-01-04 (UTC) / 2026-01-05 (JST)
-
-## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
-
-<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
-- **Overview**: No description available
-
-### Project Highlights
-- GitHub Copilotによる自動実装フェーズのプルリクエスト(PR)の進捗を監視し、適切なアクションを自動実行するPythonツールです。
-- PRのフェーズ（ドラフト、レビュー指摘対応中、レビュー待ち、コーディング中）を自動判定し、ドラフトPRのReady化、自動コメント投稿、モバイル通知などを行います。
-- 認証済みGitHubユーザーが所有するリポジトリを対象とし、GraphQL APIを活用して効率的な監視と管理を実現します。
-- 📅 2026-01-04 (UTC) / 2026-01-05 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-01-04 (UTC) / 2026-01-04 (JST)
-
-## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
-This oscilloscope visualizes audio from your microphone or wav-file with zero-cross detection for stable waveform display.
-
-<a href="https://cat2151.github.io/cat-oscilloscope/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: audio-analysis](https://img.shields.io/badge/Topic-audio--analysis-lightblue) ![Topic: audio-visualizer](https://img.shields.io/badge/Topic-audio--visualizer-lightblue) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: oscilloscope](https://img.shields.io/badge/Topic-oscilloscope-lightblue) ![Topic: typescript](https://img.shields.io/badge/Topic-typescript-lightblue) ![Topic: wav](https://img.shields.io/badge/Topic-wav-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cat-oscilloscope](https://github.com/cat2151/cat-oscilloscope)
-- **GitHub Pages**: [https://cat2151.github.io/cat-oscilloscope/](https://cat2151.github.io/cat-oscilloscope/)
-
-### Project Highlights
-- ブラウザ上でマイク入力をリアルタイムに波形として視覚化する、オシロスコープ風アプリケーションです。
-- 音声のゼロクロス検出とオートゲイン機能により、安定したクリアな波形表示を実現します。
-- 直感的でクラシックなデザインで、音の波形を簡単に観察・分析できるツールです。
-- 📅 2026-01-04 (UTC) / 2026-01-04 (JST)
 
 ## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
 A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
@@ -204,20 +218,6 @@ File Change Monitoring Tool - Detects file changes and executes commands
 - 複数のファイルやディレクトリを同時に監視でき、TOML形式の設定ファイルにより柔軟なコマンド実行条件を定義可能です。
 - 軽量で使いやすく、特定の時間帯や実行中プロセスに応じたコマンド抑制など、高度な自動化要件に対応します。
 - 📅 2026-01-03 (UTC) / 2026-01-04 (JST)
-
-## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
-WIP
-
-<a href="https://cat2151.github.io/cat-window-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat-window-watcher](https://github.com/cat2151/cat-window-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
-
-### Project Highlights
-- アクティブなウィンドウを監視し、ユーザーの作業内容に応じてスコアを調整するツールです。
-- 設定可能な正規表現パターンに基づき、生産的な作業にはスコアを加算し、非生産的な活動には減点します。
-- シンプルなTkinter GUIで現在のスコアと活動を表示し、集中力の維持をサポートします。
-- 📅 2026-01-02 (UTC) / 2026-01-03 (JST)
 
 ## [super-easy-vim](https://cat2151.github.io/super-easy-vim/)
 [WIP] vim初心者に成功体験を与える用のジョークアプリ。vimのサブセット。極端に機能を削減し、モードとキーバインドを過剰に派手に表示する
