@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-06 (UTC) / 2026-01-07 (JST)
+Last Updated: 2026-01-07 (UTC) / 2026-01-08 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,20 @@ Last Updated: 2026-01-06 (UTC) / 2026-01-07 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを利用し、指定ユーザーのリポジトリ情報を自動で取得・処理するシステムです。
+- 取得した情報から、JekyllベースのGitHub Pages向けにSEO最適化されたリポジトリ一覧のMarkdownファイルを生成します。
+- これにより、GitHub Pagesサイトの検索エンジン可視性を高め、リポジトリ情報を効果的に公開することを目的としています。
+- 📅 2026-01-07 (UTC) / 2026-01-08 (JST)
+
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
 WIP
 
@@ -93,10 +107,24 @@ WIP
 - **GitHub Pages**: [https://cat2151.github.io/cat-window-watcher/](https://cat2151.github.io/cat-window-watcher/)
 
 ### Project Highlights
-- アクティブなウィンドウを監視し、あなたの作業内容に基づいてスコアを調整する、シンプルでスタンドアロンなツールです。
-- 「猫」があなたの作業状況を監視しているというコンセプトで、生産的な活動でスコアが上がり、非生産的な活動でスコアが下がります。
-- カスタマイズ可能な正規表現ベースのウィンドウマッチング、tkinterによるGUI表示、クロスプラットフォーム対応が特徴です。
-- 📅 2026-01-06 (UTC) / 2026-01-07 (JST)
+- アクティブなウィンドウを監視し、生産性を可視化するスタンドアロンツールです。
+- ウィンドウタイトルに基づきスコアを増減させ、ユーザーの集中度合いをフィードバックします。
+- tkinterによるシンプルなGUI、正規表現による柔軟な設定、クロスプラットフォーム対応が特徴です。
+- 📅 2026-01-07 (UTC) / 2026-01-08 (JST)
+
+## [cat-obsidian-templater-scripts](https://cat2151.github.io/cat-obsidian-templater-scripts/)
+Simple user scripts for the Obsidian Templater plugin.
+
+<a href="https://cat2151.github.io/cat-obsidian-templater-scripts/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+
+- **Repository**: [https://github.com/cat2151/cat-obsidian-templater-scripts](https://github.com/cat2151/cat-obsidian-templater-scripts)
+- **GitHub Pages**: [https://cat2151.github.io/cat-obsidian-templater-scripts/](https://cat2151.github.io/cat-obsidian-templater-scripts/)
+
+### Project Highlights
+- ObsidianのTemplaterコミュニティプラグイン向けに、便利なJavaScriptスクリプトとテンプレートを提供します。
+- サクラエディタのような「現在行のハイライト（ブックマーク）」や「指定ファイル挿入」などのマクロ機能を実現し、ノート編集の効率を高めます。
+- Templater API活用の具体的なサンプルを通じて、ユーザーが独自のスクリプト開発を行うためのノウハウを共有することを目的としています。
+- 📅 2026-01-07 (UTC) / 2026-01-08 (JST)
 
 ## [wavlpf](https://cat2151.github.io/wavlpf/)
 Software synthesizer. Simple. Non-realtime rendering
@@ -107,24 +135,10 @@ Software synthesizer. Simple. Non-realtime rendering
 - **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
 
 ### Project Highlights
-- RustとWebAssembly (WASM) を活用し、高性能な信号処理を実現したシンプルソフトウェアシンセサイザーです。
-- ノコギリ波やパルス波の生成、およびマウスクリックでインタラクティブに操作できるBiquadローパスフィルターを搭載しています。
-- WebAudio APIに依存しない非リアルタイムレンダリング、生成されたオーディオのWAVファイル出力、設定の永続化などの機能を備えています。
-- 📅 2026-01-06 (UTC) / 2026-01-07 (JST)
-
-## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
-
-<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
-- **Overview**: No description available
-
-### Project Highlights
-- GitHub Copilotによる自動実装フェーズのプルリクエストを監視するPythonツールです。
-- 認証済みGitHubユーザーの所有リポジトリを対象に、PRのフェーズ（ドラフト、レビュー中など）を自動判定します。
-- GraphQL APIを活用し、フェーズに応じた自動コメント投稿、PRのReady化、モバイル通知、自動マージなどのアクションを実行します。
-- 📅 2026-01-06 (UTC) / 2026-01-07 (JST)
+- Rust WASMで実装された、ローパスフィルターを搭載したシンプルなソフトウェアシンセサイザーです。
+- 高速なDSP処理とインタラクティブなフィルター制御、WAV生成機能をウェブ上で提供します。
+- マウス操作でリアルタイムにサウンドを変化させ、設定の永続化や外部連携も可能です。
+- 📅 2026-01-07 (UTC) / 2026-01-08 (JST)
 
 ## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
 A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
@@ -135,19 +149,38 @@ A Quartz transformer plugin that converts MML (Music Macro Language) and chord n
 - **GitHub Pages**: [https://cat2151.github.io/quartz-transformer-mmlabc/](https://cat2151.github.io/quartz-transformer-mmlabc/)
 
 ### Project Highlights
-- Obsidianでコード進行をコードブロックに書くと、五線譜を表示し、クリック演奏も可能にするQuartzトランスフォーマープラグインです。
-- Quartz4に対応するため、Obsidian版の機能を移植・拡張した新しいトランスフォーマープラグインとして開発されました。
-- MML（Music Macro Language）とABC Notationにも対応しており、幅広い音楽記法をウェブサイトで手軽に利用できます。
-- 📅 2026-01-06 (UTC) / 2026-01-07 (JST)
+- 静的サイトジェネレーターQuartzで、Markdown内に音楽コードブロックを記述可能にするプラグインです。
+- コード進行やMML、ABC記法で書かれた音楽情報を、五線譜として表示し、クリックで再生もできます。
+- ユーザーは複雑な設定なしに、ウェブサイト上でインタラクティブな音楽コンテンツを楽しめます。
+- 📅 2026-01-07 (UTC) / 2026-01-08 (JST)
 
-## [digital-garden](https://cat2151.github.io/digital-garden/)
+## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
 
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
 - **Overview**: No description available
-- 📅 2026-01-06 (UTC) / 2026-01-07 (JST)
+
+### Project Highlights
+- GitHub Copilotが関与するPull Requestの自動実装フェーズを監視し、進行状況を可視化するツールです。
+- PRのフェーズ（Draft、レビュー指摘対応中、レビュー待ちなど）を自動判定し、状況に応じた通知やアクションを実行します。
+- 認証済みGitHubユーザーの全リポジトリを対象にGraphQL APIで効率的に監視を行い、開発ワークフローを支援します。
+- 📅 2026-01-07 (UTC) / 2026-01-08 (JST)
+
+## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
+Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
+
+<a href="https://cat2151.github.io/tonejs-json-sequencer/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
+
+- **Repository**: [https://github.com/cat2151/tonejs-json-sequencer](https://github.com/cat2151/tonejs-json-sequencer)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-json-sequencer/](https://cat2151.github.io/tonejs-json-sequencer/)
+
+### Project Highlights
+- Tone.jsの音色・エフェクト・演奏をJSONで記述できる軽量ライブラリ
+- コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
+- 時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
+- 📅 2026-01-07 (UTC) / 2026-01-08 (JST)
 
 ## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
 This oscilloscope visualizes audio from your microphone or wav-file with zero-cross detection for stable waveform display.
@@ -161,7 +194,30 @@ This oscilloscope visualizes audio from your microphone or wav-file with zero-cr
 - ブラウザ上で動作する、リアルタイム音声波形ビジュアライザー「cat-oscilloscope」です。
 - マイク入力やWAVファイルから音源を取得し、安定したオシロスコープ風の表示を提供します。
 - ゼロクロス検出やオートゲインなどの機能で、直感的で視覚的に魅力的な体験を実現します。
-- 📅 2026-01-06 (UTC) / 2026-01-06 (JST)
+- 📅 2026-01-07 (UTC) / 2026-01-08 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-01-07 (UTC) / 2026-01-08 (JST)
+
+## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
+File Change Monitoring Tool - Detects file changes and executes commands
+
+<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
+
+### Project Highlights
+- このツールは、ファイルのタイムスタンプ変更を監視し、更新を検知すると設定されたコマンドを自動で実行します。
+- 複数のファイルやディレクトリを同時に監視でき、TOML形式の設定ファイルにより柔軟なコマンド実行条件を定義可能です。
+- 軽量で使いやすく、特定の時間帯や実行中プロセスに応じたコマンド抑制など、高度な自動化要件に対応します。
+- 📅 2026-01-07 (UTC) / 2026-01-07 (JST)
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
@@ -176,20 +232,6 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - Windows環境で動作し、リアルタイムで音色の変化を音声で確認できます。
 - 直感的なTUI（Terminal User Interface）とキーボード・マウス操作で音色作成を楽しめます。
 - 📅 2026-01-06 (UTC) / 2026-01-06 (JST)
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを利用し、指定されたユーザーのリポジトリ情報を自動で取得します。
-- 取得した情報から、JekyllベースのGitHub Pages向けにSEO最適化されたリポジトリ一覧をMarkdown形式で自動生成します。
-- これにより、プロジェクトの発見性を高め、検索エンジンやLLMによる参照失敗の緩和を目指します。
-- 📅 2026-01-05 (UTC) / 2026-01-06 (JST)
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
@@ -217,20 +259,6 @@ A tool to practice button inputs for fighting games on Windows. Ideal for leverl
 - 格ゲーのボタン練習に特化したWindows用アプリケーションです。
 - ランダムに表示されるお題に対し、正しいボタン入力でスコアを獲得します。
 - 常駐型でゲームの邪魔にならず、素早い反応と正確な入力の反復練習をサポートします。
-- 📅 2026-01-03 (UTC) / 2026-01-04 (JST)
-
-## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
-File Change Monitoring Tool - Detects file changes and executes commands
-
-<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
-
-### Project Highlights
-- このツールは、ファイルのタイムスタンプ変更を監視し、更新を検知すると設定されたコマンドを自動で実行します。
-- 複数のファイルやディレクトリを同時に監視でき、TOML形式の設定ファイルにより柔軟なコマンド実行条件を定義可能です。
-- 軽量で使いやすく、特定の時間帯や実行中プロセスに応じたコマンド抑制など、高度な自動化要件に対応します。
 - 📅 2026-01-03 (UTC) / 2026-01-04 (JST)
 
 ## [super-easy-vim](https://cat2151.github.io/super-easy-vim/)
@@ -329,20 +357,6 @@ A lightweight, browser-based generator for creating Music Macro Language (MML) t
 - 最小限の入力（例：cdefgab、ドレミ）から、各種MMLコンパイラ向けのMMLコードを生成するツールです。
 - MMLでの曲作りを始める際によくあるコンパイルエラーのハードルを低減し、すぐに音が出せるMMLを提供します。
 - シンプルなウェブインターフェースを通じて、入力された音階から利用目的に合わせたMMLテンプレートを手軽に生成できます。
-- 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
-
-## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
-Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
-
-<a href="https://cat2151.github.io/tonejs-json-sequencer/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue)
-
-- **Repository**: [https://github.com/cat2151/tonejs-json-sequencer](https://github.com/cat2151/tonejs-json-sequencer)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-json-sequencer/](https://cat2151.github.io/tonejs-json-sequencer/)
-
-### Project Highlights
-- Tone.jsの音色・エフェクト・演奏をJSONで記述できる軽量ライブラリ
-- コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
-- 時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
 - 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
 
 ## [postmate-midi-experimental](https://cat2151.github.io/postmate-midi-experimental/)
@@ -455,20 +469,6 @@ A library for using abcjs easily in the browser.
 - easyabcjs6は、ウェブブラウザ上でABC音楽記譜法を簡単に表示し、再生するためのJavaScriptライブラリです。
 - 人気の`abcjs`ライブラリをラップし、シンプルなHTMLとJavaScriptコードで五線譜の描画とMIDI音源による演奏を可能にします。
 - 将来的にABC音楽記譜法以外のテキストベースの音楽フォーマットにも対応し、多様な音楽表示・演奏システム構築への基盤となることを目指しています。
-- 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
-
-## [cat-obsidian-templater-scripts](https://cat2151.github.io/cat-obsidian-templater-scripts/)
-Simple user scripts for the Obsidian Templater plugin.
-
-<a href="https://cat2151.github.io/cat-obsidian-templater-scripts/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
-
-- **Repository**: [https://github.com/cat2151/cat-obsidian-templater-scripts](https://github.com/cat2151/cat-obsidian-templater-scripts)
-- **GitHub Pages**: [https://cat2151.github.io/cat-obsidian-templater-scripts/](https://cat2151.github.io/cat-obsidian-templater-scripts/)
-
-### Project Highlights
-- ObsidianのTemplaterプラグインの機能を拡張するJavaScriptスクリプトと活用ノウハウ集です。
-- テキストエディタのマクロのように、Obsidianに便利な機能を手軽に追加するためのサンプルを提供します。
-- 現在行のハイライト（ブックマーク）やファイルの挿入など、実用的な機能のスクリプトを含みます。
 - 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
 
 ## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
