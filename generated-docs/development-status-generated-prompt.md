@@ -1,4 +1,4 @@
-Last updated: 2026-01-06
+Last updated: 2026-01-08
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -260,6 +260,9 @@ Last updated: 2026-01-06
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+d84d409 Auto-update repository list - 2026-01-06
+8e8fc83 Auto-update repository list - 2026-01-05
+0c17bfe Update project summaries (overview & development status) [auto]
 561c956 Auto-update repository list - 2026-01-04
 04096db Update project summaries (overview & development status) [auto]
 f238aed Auto-update repository list - 2026-01-03
@@ -267,9 +270,6 @@ f238aed Auto-update repository list - 2026-01-03
 3607cd7 Merge pull request #17 from cat2151/copilot/add-deepwiki-badge-to-readme
 9d2b241 Address PR review comments: stricter URL detection, consistent encoding, validation
 9498d64 Add DeepWiki badge detection and display functionality
-a338268 Initial plan
-d65d964 Add issue note for #16 [auto]
-45d6968 Merge pull request #15 from cat2151/copilot/add-utc-and-jst-date-display
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -277,16 +277,7 @@ generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
 index.md
-issue-notes/16.md
-src/generate_repo_list/badge_generator.py
-src/generate_repo_list/date_formatter.py
-src/generate_repo_list/markdown_generator.py
-src/generate_repo_list/repository_processor.py
-tests/test_date_formatter.py
-tests/test_integration.py
-tests/test_markdown_generator.py
-tests/test_repository_processor.py
 
 
 ---
-Generated at: 2026-01-06 07:06:03 JST
+Generated at: 2026-01-08 07:06:07 JST
