@@ -1,4 +1,4 @@
-Last updated: 2026-01-08
+Last updated: 2026-01-09
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -260,6 +260,8 @@ Last updated: 2026-01-08
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+a5a41aa Auto-update repository list - 2026-01-07
+62f9a6e Update project summaries (overview & development status) [auto]
 d84d409 Auto-update repository list - 2026-01-06
 8e8fc83 Auto-update repository list - 2026-01-05
 0c17bfe Update project summaries (overview & development status) [auto]
@@ -268,8 +270,6 @@ d84d409 Auto-update repository list - 2026-01-06
 f238aed Auto-update repository list - 2026-01-03
 6ee368c Update project summaries (overview & development status) [auto]
 3607cd7 Merge pull request #17 from cat2151/copilot/add-deepwiki-badge-to-readme
-9d2b241 Address PR review comments: stricter URL detection, consistent encoding, validation
-9498d64 Add DeepWiki badge detection and display functionality
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -280,4 +280,4 @@ index.md
 
 
 ---
-Generated at: 2026-01-08 07:06:07 JST
+Generated at: 2026-01-09 07:06:16 JST
