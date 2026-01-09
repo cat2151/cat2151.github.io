@@ -1,4 +1,4 @@
-Last updated: 2026-01-09
+Last updated: 2026-01-10
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -260,6 +260,8 @@ Last updated: 2026-01-09
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+a504955 Auto-update repository list - 2026-01-08
+6e10cc3 Update project summaries (overview & development status) [auto]
 a5a41aa Auto-update repository list - 2026-01-07
 62f9a6e Update project summaries (overview & development status) [auto]
 d84d409 Auto-update repository list - 2026-01-06
@@ -268,8 +270,6 @@ d84d409 Auto-update repository list - 2026-01-06
 561c956 Auto-update repository list - 2026-01-04
 04096db Update project summaries (overview & development status) [auto]
 f238aed Auto-update repository list - 2026-01-03
-6ee368c Update project summaries (overview & development status) [auto]
-3607cd7 Merge pull request #17 from cat2151/copilot/add-deepwiki-badge-to-readme
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -280,4 +280,4 @@ index.md
 
 
 ---
-Generated at: 2026-01-09 07:06:16 JST
+Generated at: 2026-01-10 07:06:32 JST
