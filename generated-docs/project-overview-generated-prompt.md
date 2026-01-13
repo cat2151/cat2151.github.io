@@ -1,4 +1,4 @@
-Last updated: 2026-01-12
+Last updated: 2026-01-14
 
 
 # プロジェクト概要生成プロンプト（来訪者向け）
@@ -205,6 +205,7 @@ project_overview:
   📖 12.md
   📖 14.md
   📖 16.md
+  📖 18.md
   📖 2.md
   📖 4.md
   📖 6.md
@@ -228,6 +229,7 @@ project_overview:
     📄 language_info.py
     📄 markdown_generator.py
     📄 project_overview_fetcher.py
+    📄 readme_badge_extractor.py
     📄 repository_processor.py
     📄 seo_template.yml
     📄 statistics_calculator.py
@@ -236,12 +238,14 @@ project_overview:
     📄 url_utils.py
 📄 test_project_overview.py
 📁 tests/
+  📄 test_badge_generator_integration.py
   📄 test_config.py
   📄 test_date_formatter.py
   📄 test_environment.py
   📄 test_integration.py
   📄 test_markdown_generator.py
   📄 test_project_overview_fetcher.py
+  📄 test_readme_badge_extractor.py
   📄 test_repository_processor.py
 
 ## ファイル詳細分析
@@ -260,6 +264,7 @@ issue-notes/10.md
 issue-notes/12.md
 issue-notes/14.md
 issue-notes/16.md
+issue-notes/18.md
 issue-notes/2.md
 issue-notes/4.md
 issue-notes/6.md
@@ -277,4 +282,4 @@ src/generate_repo_list/json_ld_template.json
 
 
 ---
-Generated at: 2026-01-12 07:05:40 JST
+Generated at: 2026-01-14 07:06:13 JST

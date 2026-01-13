@@ -1,4 +1,4 @@
-Last updated: 2026-01-12
+Last updated: 2026-01-14
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -216,6 +216,7 @@ Last updated: 2026-01-12
 - issue-notes/12.md
 - issue-notes/14.md
 - issue-notes/16.md
+- issue-notes/18.md
 - issue-notes/2.md
 - issue-notes/4.md
 - issue-notes/6.md
@@ -237,6 +238,7 @@ Last updated: 2026-01-12
 - src/generate_repo_list/language_info.py
 - src/generate_repo_list/markdown_generator.py
 - src/generate_repo_list/project_overview_fetcher.py
+- src/generate_repo_list/readme_badge_extractor.py
 - src/generate_repo_list/repository_processor.py
 - src/generate_repo_list/seo_template.yml
 - src/generate_repo_list/statistics_calculator.py
@@ -244,12 +246,14 @@ Last updated: 2026-01-12
 - src/generate_repo_list/template_processor.py
 - src/generate_repo_list/url_utils.py
 - test_project_overview.py
+- tests/test_badge_generator_integration.py
 - tests/test_config.py
 - tests/test_date_formatter.py
 - tests/test_environment.py
 - tests/test_integration.py
 - tests/test_markdown_generator.py
 - tests/test_project_overview_fetcher.py
+- tests/test_readme_badge_extractor.py
 - tests/test_repository_processor.py
 
 ## 現在のオープンIssues
@@ -260,16 +264,16 @@ Last updated: 2026-01-12
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
-bf7924c Auto-update repository list - 2026-01-10
-727f037 Update project summaries (overview & development status) [auto]
-e1b0c0a Auto-update repository list - 2026-01-09
-83c5a4e Update project summaries (overview & development status) [auto]
-a504955 Auto-update repository list - 2026-01-08
-6e10cc3 Update project summaries (overview & development status) [auto]
-a5a41aa Auto-update repository list - 2026-01-07
-62f9a6e Update project summaries (overview & development status) [auto]
-d84d409 Auto-update repository list - 2026-01-06
-8e8fc83 Auto-update repository list - 2026-01-05
+009a528 Merge pull request #19 from cat2151/copilot/add-badge-display-for-readme
+13d1b87 Address PR review feedback - improve badge detection and add comprehensive tests
+26ef502 Add security comments for CodeQL URL substring checks
+096ca69 Address code review feedback - improve code quality
+a3080a1 Implement README badge extraction feature with tests
+a5c4f14 Initial plan
+8acd0c6 Add issue note for #18 [auto]
+b42bf99 Auto-update repository list - 2026-01-12
+71850c0 Auto-update repository list - 2026-01-11
+4a2de16 Update project summaries (overview & development status) [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -277,7 +281,14 @@ generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
 index.md
+issue-notes/18.md
+src/generate_repo_list/badge_generator.py
+src/generate_repo_list/readme_badge_extractor.py
+src/generate_repo_list/repository_processor.py
+tests/test_badge_generator_integration.py
+tests/test_readme_badge_extractor.py
+tests/test_repository_processor.py
 
 
 ---
-Generated at: 2026-01-12 07:05:40 JST
+Generated at: 2026-01-14 07:06:14 JST
