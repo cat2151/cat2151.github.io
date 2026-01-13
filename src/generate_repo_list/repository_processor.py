@@ -9,6 +9,7 @@ from typing import Any, Dict, List, Tuple
 from github import Github
 from github.GithubException import GithubException
 from project_overview_fetcher import ProjectOverviewFetcher
+from readme_badge_extractor import ReadmeBadgeExtractor
 
 
 class RepositoryProcessor:
@@ -31,6 +32,9 @@ class RepositoryProcessor:
             self.project_overview_fetcher = ProjectOverviewFetcher(self.github_api, self.config)
         else:
             self.project_overview_fetcher = None
+
+        # README.mdバッジ抽出機能の初期化
+        self.badge_extractor = ReadmeBadgeExtractor()
 
     def fetch_repositories(self, github_user: Github, username: str, limit: int = None) -> List[Dict[str, Any]]:
         """指定ユーザーのリポジトリを取得してフィルタリングする
@@ -234,6 +238,7 @@ class RepositoryProcessor:
             "has_readme_ja": self._check_readme_ja_exists(repo),
             "has_readme_en": self._check_readme_en_exists(repo),
             "deepwiki_url": self._check_deepwiki_badge(repo),
+            "readme_badges": self.badge_extractor.extract_badges_from_readme(repo),
         }
 
         # プロジェクト概要を取得（ProjectOverviewFetcherが利用可能な場合のみ）

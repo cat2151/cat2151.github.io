@@ -1,0 +1,285 @@
+"""README.mdからバッジを抽出するモジュール
+
+このモジュールはREADME.mdファイルからバッジを抽出し、解析します。
+"""
+
+import re
+from typing import Dict, List
+
+from github.GithubException import GithubException
+
+
+class ReadmeBadgeExtractor:
+    """README.mdからバッジを抽出するクラス"""
+
+    def __init__(self):
+        """初期化"""
+        # 既知のバッジタイプ（優先順位順）
+        self.known_badge_types = [
+            "japanese",  # 🇯🇵 Japanese
+            "english",  # 🇺🇸 English
+            "github_pages",  # GitHub Pages
+            "fork",  # Fork
+            "stars",  # Stars
+            "language",  # Language badges
+            "topic",  # Topic badges
+            "deepwiki",  # DeepWiki
+        ]
+
+    def extract_badges_from_readme(self, repo) -> List[Dict[str, str]]:
+        """README.mdからバッジを抽出する
+
+        Args:
+            repo: GitHubリポジトリオブジェクト
+
+        Returns:
+            バッジ情報のリスト。各要素は{"markdown": "...", "type": "...", "priority": int}の辞書
+        """
+        try:
+            readme = repo.get_readme()
+            content = readme.decoded_content.decode("utf-8")
+            return self._parse_badges_from_content(content)
+        except (GithubException, UnicodeDecodeError):
+            return []
+
+    def _parse_badges_from_content(self, content: str) -> List[Dict[str, str]]:
+        """README.mdの内容からバッジを抽出する
+
+        Args:
+            content: README.mdの内容
+
+        Returns:
+            バッジ情報のリスト
+        """
+        badges = []
+
+        # READMEの先頭部分のみを対象とする（最初の見出しまで、または最初の100行）
+        lines = content.split("\n")
+        header_section = []
+        line_count = 0
+
+        for line in lines:
+            line_count += 1
+            # 最初の## 見出し（## で始まる行）が見つかったら終了
+            # ただし、#（単一の#）は含めない（これはタイトルなのでスキップ）
+            if line.strip().startswith("##") and not line.strip().startswith("###"):
+                break
+            # 最大100行まで
+            if line_count > 100:
+                break
+            header_section.append(line)
+
+        header_content = "\n".join(header_section)
+
+        # マッチした位置を追跡（重複を防ぐため）
+        matched_positions = set()
+
+        # バッジのパターンを検索
+        # パターン1: [![...](...)](...) 形式（クリック可能なバッジ）
+        pattern1 = r"\[!\[([^\]]*)\]\(([^\)]+)\)\]\(([^\)]+)\)"
+        for match in re.finditer(pattern1, header_content):
+            alt_text = match.group(1)
+            image_url = match.group(2)
+            link_url = match.group(3)
+            badge_markdown = match.group(0)
+
+            badge_type = self._identify_badge_type(badge_markdown, alt_text, image_url, link_url)
+            priority = self._get_badge_priority(badge_type)
+
+            badges.append(
+                {
+                    "markdown": badge_markdown,
+                    "type": badge_type,
+                    "priority": priority,
+                    "alt_text": alt_text,
+                    "image_url": image_url,
+                    "link_url": link_url,
+                }
+            )
+            # マッチした範囲を記録
+            for pos in range(match.start(), match.end()):
+                matched_positions.add(pos)
+
+        # パターン2: ![...](...) 形式（クリック不可能なバッジ）
+        pattern2 = r"!\[([^\]]*)\]\(([^\)]+)\)"
+        for match in re.finditer(pattern2, header_content):
+            # パターン1で既にマッチしている位置はスキップ
+            if match.start() in matched_positions:
+                continue
+
+            alt_text = match.group(1)
+            image_url = match.group(2)
+            badge_markdown = match.group(0)
+
+            badge_type = self._identify_badge_type(badge_markdown, alt_text, image_url, None)
+            priority = self._get_badge_priority(badge_type)
+
+            badges.append(
+                {
+                    "markdown": badge_markdown,
+                    "type": badge_type,
+                    "priority": priority,
+                    "alt_text": alt_text,
+                    "image_url": image_url,
+                    "link_url": None,
+                }
+            )
+            # マッチした範囲を記録
+            for pos in range(match.start(), match.end()):
+                matched_positions.add(pos)
+
+        # パターン3: <a href="..."><img src="..." ...></a> 形式（HTMLバッジ）
+        pattern3 = r'<a\s+href="([^"]+)">\s*<img\s+src="([^"]+)"[^>]*>\s*</a>'
+        for match in re.finditer(pattern3, header_content, re.IGNORECASE):
+            # パターン1,2で既にマッチしている位置はスキップ
+            if match.start() in matched_positions:
+                continue
+
+            link_url = match.group(1)
+            image_url = match.group(2)
+            badge_html = match.group(0)
+
+            # alt属性を取得
+            alt_match = re.search(r'alt="([^"]*)"', badge_html)
+            alt_text = alt_match.group(1) if alt_match else ""
+
+            badge_type = self._identify_badge_type(badge_html, alt_text, image_url, link_url)
+            priority = self._get_badge_priority(badge_type)
+
+            badges.append(
+                {
+                    "markdown": badge_html,
+                    "type": badge_type,
+                    "priority": priority,
+                    "alt_text": alt_text,
+                    "image_url": image_url,
+                    "link_url": link_url,
+                }
+            )
+
+        return badges
+
+    def _identify_badge_type(self, badge_markdown: str, alt_text: str, image_url: str, link_url: str) -> str:
+        """バッジのタイプを識別する
+
+        Args:
+            badge_markdown: バッジのMarkdown/HTML
+            alt_text: バッジのalt属性テキスト
+            image_url: バッジの画像URL
+            link_url: バッジのリンクURL（存在する場合）
+
+        Returns:
+            バッジタイプ（"deepwiki", "language", "topic", "custom"など）
+        """
+        # DeepWiki バッジ
+        if link_url and "deepwiki.com" in link_url.lower():
+            return "deepwiki"
+        if "deepwiki" in alt_text.lower() or "deepwiki" in badge_markdown.lower():
+            return "deepwiki"
+
+        # DeepSeek Wiki バッジ
+        if link_url and "deepseek" in link_url.lower():
+            return "deepseek_wiki"
+        if "deepseek" in alt_text.lower():
+            return "deepseek_wiki"
+
+        # LiveDemo バッジ
+        if "livedemo" in alt_text.lower() or "live-demo" in alt_text.lower() or "live demo" in alt_text.lower():
+            return "livedemo"
+        if link_url and ("demo" in link_url.lower() or "livedemo" in link_url.lower()):
+            # shields.ioのdemoバッジかチェック
+            if "img.shields.io" in image_url and ("demo" in image_url.lower() or "live" in image_url.lower()):
+                return "livedemo"
+
+        # Japanese バッジ
+        if "🇯🇵" in badge_markdown or "japanese" in alt_text.lower():
+            return "japanese"
+
+        # English バッジ
+        if "🇺🇸" in badge_markdown or "english" in alt_text.lower():
+            return "english"
+
+        # GitHub Pages バッジ
+        if "github" in alt_text.lower() and "pages" in alt_text.lower():
+            return "github_pages"
+        if "github_pages" in image_url.lower():
+            return "github_pages"
+
+        # Fork バッジ
+        if "fork" in alt_text.lower() and "img.shields.io" in image_url:
+            return "fork"
+
+        # Stars バッジ
+        if "stars" in alt_text.lower() and "img.shields.io" in image_url:
+            return "stars"
+
+        # Language バッジ（プログラミング言語）
+        if "img.shields.io" in image_url and any(
+            lang.lower() in image_url.lower()
+            for lang in [
+                "python",
+                "javascript",
+                "typescript",
+                "rust",
+                "go",
+                "java",
+                "csharp",
+                "cpp",
+                "ruby",
+                "php",
+            ]
+        ):
+            return "language"
+
+        # Topic バッジ
+        if "topic" in alt_text.lower() and "img.shields.io" in image_url:
+            return "topic"
+
+        # Coverage バッジ（CI/CDより先にチェック）
+        if "coverage" in alt_text.lower() or "codecov" in image_url.lower():
+            return "coverage"
+
+        # CI/CD バッジ
+        if any(
+            ci in image_url.lower()
+            for ci in ["github/workflow", "workflows", "travis-ci", "circleci", "gitlab", "actions", "/badge.svg"]
+        ) or any(ci in alt_text.lower() for ci in ["ci", "build", "test"]):
+            return "ci_cd"
+
+        # License バッジ
+        if "license" in alt_text.lower():
+            return "license"
+
+        # Version/Release バッジ
+        if any(keyword in alt_text.lower() for keyword in ["version", "release", "npm", "pypi", "crates"]):
+            return "version"
+
+        # その他のカスタムバッジ
+        return "custom"
+
+    def _get_badge_priority(self, badge_type: str) -> int:
+        """バッジタイプの優先順位を取得する
+
+        Args:
+            badge_type: バッジタイプ
+
+        Returns:
+            優先順位（小さいほど優先度が高い）
+        """
+        # 既知のバッジタイプの優先順位
+        if badge_type in self.known_badge_types:
+            return self.known_badge_types.index(badge_type)
+
+        # 新しく発見されたバッジタイプの優先順位
+        # CI/CD, Coverage, License, Version は既知バッジの後
+        priority_map = {
+            "deepseek_wiki": 8,  # DeepWikiの直後
+            "livedemo": 9,
+            "ci_cd": 10,
+            "coverage": 11,
+            "license": 12,
+            "version": 13,
+            "custom": 999,  # カスタムバッジは最後
+        }
+
+        return priority_map.get(badge_type, 999)

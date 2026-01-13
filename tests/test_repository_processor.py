@@ -161,6 +161,7 @@ class TestRepositoryProcessor:
             "has_readme_ja": False,
             "has_readme_en": False,
             "deepwiki_url": "",
+            "readme_badges": [],
         }
 
         assert data == expected
