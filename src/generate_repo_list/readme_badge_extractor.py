@@ -195,8 +195,12 @@ class ReadmeBadgeExtractor:
         Returns:
             バッジタイプ（"deepwiki", "language", "topic", "custom"など）
         """
+        # Note: URL substring checks below are for badge type identification only,
+        # not for security sanitization. URLs come from GitHub API (README content)
+        # and are used for display categorization purposes.
+
         # DeepWiki バッジ
-        if link_url and "deepwiki.com" in link_url.lower():
+        if link_url and "deepwiki.com" in link_url.lower():  # noqa: S105 (identification, not security)
             return "deepwiki"
         if "deepwiki" in alt_text.lower() or "deepwiki" in badge_markdown.lower():
             return "deepwiki"
@@ -212,7 +216,7 @@ class ReadmeBadgeExtractor:
             return "livedemo"
         if link_url and ("demo" in link_url.lower() or "livedemo" in link_url.lower()):
             # shields.ioのdemoバッジかチェック
-            if "img.shields.io" in image_url and ("demo" in image_url.lower() or "live" in image_url.lower()):
+            if "img.shields.io" in image_url and ("demo" in image_url.lower() or "live" in image_url.lower()):  # noqa: S105
                 return "livedemo"
 
         # Japanese バッジ
@@ -230,15 +234,15 @@ class ReadmeBadgeExtractor:
             return "github_pages"
 
         # Fork バッジ
-        if "fork" in alt_text.lower() and "img.shields.io" in image_url:
+        if "fork" in alt_text.lower() and "img.shields.io" in image_url:  # noqa: S105
             return "fork"
 
         # Stars バッジ
-        if "stars" in alt_text.lower() and "img.shields.io" in image_url:
+        if "stars" in alt_text.lower() and "img.shields.io" in image_url:  # noqa: S105
             return "stars"
 
         # Language バッジ（プログラミング言語）
-        if "img.shields.io" in image_url and any(
+        if "img.shields.io" in image_url and any(  # noqa: S105
             lang.lower() in image_url.lower()
             for lang in [
                 "python",
@@ -256,7 +260,7 @@ class ReadmeBadgeExtractor:
             return "language"
 
         # Topic バッジ
-        if "topic" in alt_text.lower() and "img.shields.io" in image_url:
+        if "topic" in alt_text.lower() and "img.shields.io" in image_url:  # noqa: S105
             return "topic"
 
         # Coverage バッジ（CI/CDより先にチェック）

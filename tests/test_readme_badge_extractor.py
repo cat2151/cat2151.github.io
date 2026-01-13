@@ -89,7 +89,7 @@ This is a test repository without badges.
         # DeepWikiバッジが含まれていることを確認
         deepwiki_badges = [b for b in badges if b["type"] == "deepwiki"]
         assert len(deepwiki_badges) == 1
-        assert "deepwiki.com" in deepwiki_badges[0]["link_url"]
+        assert "deepwiki.com" in deepwiki_badges[0]["link_url"]  # noqa: S105 (test assertion)
 
         # CI/CDバッジが含まれていることを確認
         ci_badges = [b for b in badges if b["type"] == "ci_cd"]
