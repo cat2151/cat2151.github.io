@@ -20,6 +20,10 @@ except ImportError:
 class BadgeGenerator:
     """バッジ生成クラス"""
 
+    # 既存バッジと新規バッジの優先順位オフセット
+    # README.mdから抽出されたバッジは、既存バッジの後に表示される
+    README_BADGE_PRIORITY_OFFSET = 100
+
     def __init__(self, config: Dict, strings: Dict, url_utils: URLUtils = None):
         """初期化
 
@@ -101,7 +105,11 @@ class BadgeGenerator:
         Returns:
             リポジトリバッジの文字列
         """
-        badges = []
+        # 優先順位付きでバッジを収集する
+        # 形式: (priority, badge_markdown, badge_type)
+        badge_list = []
+
+        # === 既存の生成バッジ（優先度高） ===
 
         # README.ja.md が存在する場合、Japaneseバッジを左端に追加
         if repo.get("has_readme_ja", False):
@@ -111,7 +119,7 @@ class BadgeGenerator:
             japanese_badge = (
                 f'<a href="{readme_ja_url}"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a>'
             )
-            badges.append(japanese_badge)
+            badge_list.append((0, japanese_badge, "japanese"))
 
         # README.html が存在し、かつGitHub Pagesが有効な場合のみ、Englishバッジを追加
         if repo.get("has_readme_en", False) and repo["has_pages"]:
@@ -119,36 +127,44 @@ class BadgeGenerator:
             english_badge = (
                 f'<a href="{readme_en_url}"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg"></a>'
             )
-            badges.append(english_badge)
+            badge_list.append((1, english_badge, "english"))
 
         if repo["has_pages"]:
-            badges.append("![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen)")
+            badge_list.append(
+                (2, "![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen)", "github_pages")
+            )
 
         if is_fork:
-            badges.append("![Fork](https://img.shields.io/badge/Fork-orange)")
+            badge_list.append((3, "![Fork](https://img.shields.io/badge/Fork-orange)", "fork"))
 
         if repo["stargazers_count"] > 0:
-            badges.append(f"![Stars](https://img.shields.io/badge/Stars-{repo['stargazers_count']}-yellow)")
+            badge_list.append(
+                (4, f"![Stars](https://img.shields.io/badge/Stars-{repo['stargazers_count']}-yellow)", "stars")
+            )
 
         if repo["language"] and username:
             # 言語固有のカラフルな色とロゴを使用
             color = self.language_info.get_color(repo["language"])
             logo = self.language_info.get_logo(repo["language"])
-            badges.append(
-                f"![{repo['language']}](https://img.shields.io/badge/{repo['language']}-{color}?style=flat&logo={logo})"
+            badge_list.append(
+                (
+                    5,
+                    f"![{repo['language']}](https://img.shields.io/badge/{repo['language']}-{color}?style=flat&logo={logo})",
+                    "language",
+                )
             )
 
         # トピックバッジ
         for topic in repo.get("topics", []):
             topic_safe = self.url_utils.make_url_safe(topic, self.config["topic_badge"]["replacements"])
-            badges.append(f"![Topic: {topic}](https://img.shields.io/badge/Topic-{topic_safe}-lightblue)")
+            badge_list.append(
+                (6, f"![Topic: {topic}](https://img.shields.io/badge/Topic-{topic_safe}-lightblue)", "topic")
+            )
 
-        # DeepWikiバッジ（README.mdに存在する場合、右端に追加）
+        # DeepWikiバッジ（README.mdに存在する場合）
         if repo.get("deepwiki_url"):
             deepwiki_url = repo["deepwiki_url"]
-            # リポジトリ名を取得してバッジテキストに使用
             repo_name = repo.get("name", "docs")
-            # URLエンコードされたリポジトリ名を作成（トピックバッジと同じルールを適用）
             repo_name_safe = self.url_utils.make_url_safe(
                 repo_name,
                 self.config["topic_badge"]["replacements"],
@@ -156,6 +172,24 @@ class BadgeGenerator:
             deepwiki_badge = (
                 f"[![DeepWiki](https://img.shields.io/badge/DeepWiki-{repo_name_safe}-blue)]({deepwiki_url})"
             )
-            badges.append(deepwiki_badge)
+            badge_list.append((7, deepwiki_badge, "deepwiki"))
+
+        # === README.mdから抽出された新しいバッジ ===
+        # 既存のバッジタイプと重複しないものを追加
+        existing_types = {badge_type for _, _, badge_type in badge_list}
+        readme_badges = repo.get("readme_badges", [])
+
+        for readme_badge in readme_badges:
+            badge_type = readme_badge["type"]
+            # 既存のバッジタイプと重複していない場合のみ追加
+            if badge_type not in existing_types:
+                priority = readme_badge["priority"] + self.README_BADGE_PRIORITY_OFFSET
+                badge_markdown = readme_badge["markdown"]
+                badge_list.append((priority, badge_markdown, badge_type))
+                existing_types.add(badge_type)
+
+        # 優先順位でソートしてバッジ文字列を生成
+        badge_list.sort(key=lambda x: x[0])
+        badges = [badge for _, badge, _ in badge_list]
 
         return " ".join(badges) if badges else ""
