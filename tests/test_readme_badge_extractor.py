@@ -254,3 +254,48 @@ This badge should not be extracted.
         # ## より前のバッジのみが抽出される
         assert len(badges) == 1
         assert "before-heading" in badges[0]["image_url"]
+
+    def test_duplicate_badge_html_and_markdown(self, extractor):
+        """HTMLとMarkdown形式の同じバッジが両方抽出されるか（重複排除はbadge_generatorで行われる）"""
+        content = """# Test Repository
+
+[![Build](https://img.shields.io/badge/build-passing-green)](https://example.com/build)
+<a href="https://example.com/build"><img src="https://img.shields.io/badge/build-passing-green" alt="Build"></a>
+
+## Content
+"""
+        badges = extractor._parse_badges_from_content(content)
+
+        # 両方のフォーマットが抽出される（重複排除はbadge_generatorで行われる）
+        assert len(badges) == 2
+        assert any("[![Build]" in b["markdown"] for b in badges)
+        assert any("<a href=" in b["markdown"] for b in badges)
+        # 両方とも同じタイプと判定される
+        assert all(b["type"] == "ci_cd" for b in badges)
+
+    def test_stops_at_level_two_heading_only(self, extractor):
+        """### や #### などの深い見出しでは停止しないか"""
+        content = """# Test Repository
+
+![Badge1](https://img.shields.io/badge/badge1-blue)
+
+### Level 3 Heading
+
+![Badge2](https://img.shields.io/badge/badge2-green)
+
+#### Level 4 Heading
+
+![Badge3](https://img.shields.io/badge/badge3-red)
+
+## Level 2 Heading
+
+![Badge4](https://img.shields.io/badge/badge4-yellow)
+"""
+        badges = extractor._parse_badges_from_content(content)
+
+        # ## より前のバッジ（Badge1, Badge2, Badge3）のみが抽出される
+        assert len(badges) == 3
+        assert any("badge1" in b["image_url"] for b in badges)
+        assert any("badge2" in b["image_url"] for b in badges)
+        assert any("badge3" in b["image_url"] for b in badges)
+        assert not any("badge4" in b["image_url"] for b in badges)

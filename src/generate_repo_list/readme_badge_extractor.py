@@ -46,7 +46,13 @@ class ReadmeBadgeExtractor:
             repo: GitHubリポジトリオブジェクト
 
         Returns:
-            バッジ情報のリスト。各要素は{"markdown": "...", "type": "...", "priority": int}の辞書
+            バッジ情報のリスト。各要素は以下のキーを持つ辞書:
+                - "markdown": バッジのMarkdown/HTML文字列
+                - "type": 判定されたバッジタイプ
+                - "priority": バッジタイプに対応する優先順位（int）
+                - "alt_text": 画像のaltテキスト
+                - "image_url": バッジ画像のURL
+                - "link_url": バッジ全体のリンク先URL（存在する場合、ない場合はNone）
         """
         try:
             readme = repo.get_readme()
@@ -73,9 +79,10 @@ class ReadmeBadgeExtractor:
 
         for line in lines:
             line_count += 1
-            # 最初の## 見出し（## で始まる行）が見つかったら終了
-            # ただし、#（単一の#）は含めない（これはタイトルなのでスキップ）
-            if line.strip().startswith("##") and not line.strip().startswith("###"):
+            # 最初の## 見出し（レベル2見出しのみ）が見つかったら終了
+            # ただし、#（単一の#）やより深いレベル（###以降）は含めない
+            stripped_line = line.lstrip()
+            if re.match(r"^##(?!#)(\s|$)", stripped_line):
                 break
             # 最大100行まで
             if line_count > 100:
@@ -180,6 +187,8 @@ class ReadmeBadgeExtractor:
                     "link_url": link_url,
                 }
             )
+            # マッチした範囲を記録
+            matched_ranges.append((match.start(), match.end()))
 
         return badges
 
@@ -214,10 +223,12 @@ class ReadmeBadgeExtractor:
         # LiveDemo バッジ
         if "livedemo" in alt_text.lower() or "live-demo" in alt_text.lower() or "live demo" in alt_text.lower():
             return "livedemo"
+        # リンクURLにdemo関連の文字列が含まれている場合（バッジプロバイダに依存しない）
         if link_url and ("demo" in link_url.lower() or "livedemo" in link_url.lower()):
-            # shields.ioのdemoバッジかチェック
-            if "img.shields.io" in image_url and ("demo" in image_url.lower() or "live" in image_url.lower()):  # noqa: S105
-                return "livedemo"
+            return "livedemo"
+        # shields.ioのdemo/liveバッジ（リンクURLにdemoが含まれないケースも検出）
+        if "img.shields.io" in image_url and ("demo" in image_url.lower() or "live" in image_url.lower()):  # noqa: S105
+            return "livedemo"
 
         # Japanese バッジ
         if "🇯🇵" in badge_markdown or "japanese" in alt_text.lower():
@@ -268,10 +279,16 @@ class ReadmeBadgeExtractor:
             return "coverage"
 
         # CI/CD バッジ
-        if any(
-            ci in image_url.lower()
-            for ci in ["github/workflow", "workflows", "travis-ci", "circleci", "gitlab", "actions", "/badge.svg"]
-        ) or any(ci in alt_text.lower() for ci in ["ci", "build", "test"]):
+        image_url_lower = image_url.lower()
+        alt_text_lower = alt_text.lower()
+        if (
+            any(
+                ci in image_url_lower
+                for ci in ["github/workflow", "workflows", "travis-ci", "circleci", "gitlab", "actions"]
+            )
+            or re.search(r"/workflows/[^/]+/badge\.svg", image_url_lower)
+            or any(ci in alt_text_lower for ci in ["ci", "build", "test"])
+        ):
             return "ci_cd"
 
         # License バッジ
