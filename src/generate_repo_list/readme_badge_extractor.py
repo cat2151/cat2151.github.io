@@ -12,19 +12,32 @@ from github.GithubException import GithubException
 class ReadmeBadgeExtractor:
     """README.mdからバッジを抽出するクラス"""
 
+    # バッジタイプとその優先順位の定義（単一の情報源）
+    BADGE_PRIORITIES = {
+        "japanese": 0,
+        "english": 1,
+        "github_pages": 2,
+        "fork": 3,
+        "stars": 4,
+        "language": 5,
+        "topic": 6,
+        "deepwiki": 7,
+        "deepseek_wiki": 8,
+        "livedemo": 9,
+        "ci_cd": 10,
+        "coverage": 11,
+        "license": 12,
+        "version": 13,
+        "custom": 999,
+    }
+
     def __init__(self):
         """初期化"""
-        # 既知のバッジタイプ（優先順位順）
-        self.known_badge_types = [
-            "japanese",  # 🇯🇵 Japanese
-            "english",  # 🇺🇸 English
-            "github_pages",  # GitHub Pages
-            "fork",  # Fork
-            "stars",  # Stars
-            "language",  # Language badges
-            "topic",  # Topic badges
-            "deepwiki",  # DeepWiki
-        ]
+        # 既知のバッジタイプ（優先順位順）- BADGE_PRIORITIESから自動生成
+        self.known_badge_types = sorted(
+            [k for k in self.BADGE_PRIORITIES.keys() if self.BADGE_PRIORITIES[k] < 100],
+            key=lambda k: self.BADGE_PRIORITIES[k],
+        )
 
     def extract_badges_from_readme(self, repo) -> List[Dict[str, str]]:
         """README.mdからバッジを抽出する
@@ -72,7 +85,15 @@ class ReadmeBadgeExtractor:
         header_content = "\n".join(header_section)
 
         # マッチした位置を追跡（重複を防ぐため）
-        matched_positions = set()
+        # メモリ効率のため、(start, end)のタプルで管理
+        matched_ranges = []
+
+        def is_overlapping(start, end):
+            """新しい範囲が既存の範囲と重複するかチェック"""
+            for existing_start, existing_end in matched_ranges:
+                if start < existing_end and end > existing_start:
+                    return True
+            return False
 
         # バッジのパターンを検索
         # パターン1: [![...](...)](...) 形式（クリック可能なバッジ）
@@ -97,14 +118,13 @@ class ReadmeBadgeExtractor:
                 }
             )
             # マッチした範囲を記録
-            for pos in range(match.start(), match.end()):
-                matched_positions.add(pos)
+            matched_ranges.append((match.start(), match.end()))
 
         # パターン2: ![...](...) 形式（クリック不可能なバッジ）
         pattern2 = r"!\[([^\]]*)\]\(([^\)]+)\)"
         for match in re.finditer(pattern2, header_content):
             # パターン1で既にマッチしている位置はスキップ
-            if match.start() in matched_positions:
+            if is_overlapping(match.start(), match.end()):
                 continue
 
             alt_text = match.group(1)
@@ -125,14 +145,18 @@ class ReadmeBadgeExtractor:
                 }
             )
             # マッチした範囲を記録
-            for pos in range(match.start(), match.end()):
-                matched_positions.add(pos)
+            matched_ranges.append((match.start(), match.end()))
 
         # パターン3: <a href="..."><img src="..." ...></a> 形式（HTMLバッジ）
+        # パターン詳細:
+        # - <a\s+href="([^"]+)">: <a> タグとhref属性（リンクURL）
+        # - \s*<img\s+src="([^"]+)": <img> タグとsrc属性（画像URL）
+        # - [^>]*>: その他の属性
+        # - \s*</a>: 閉じタグ
         pattern3 = r'<a\s+href="([^"]+)">\s*<img\s+src="([^"]+)"[^>]*>\s*</a>'
         for match in re.finditer(pattern3, header_content, re.IGNORECASE):
             # パターン1,2で既にマッチしている位置はスキップ
-            if match.start() in matched_positions:
+            if is_overlapping(match.start(), match.end()):
                 continue
 
             link_url = match.group(1)
@@ -266,20 +290,4 @@ class ReadmeBadgeExtractor:
         Returns:
             優先順位（小さいほど優先度が高い）
         """
-        # 既知のバッジタイプの優先順位
-        if badge_type in self.known_badge_types:
-            return self.known_badge_types.index(badge_type)
-
-        # 新しく発見されたバッジタイプの優先順位
-        # CI/CD, Coverage, License, Version は既知バッジの後
-        priority_map = {
-            "deepseek_wiki": 8,  # DeepWikiの直後
-            "livedemo": 9,
-            "ci_cd": 10,
-            "coverage": 11,
-            "license": 12,
-            "version": 13,
-            "custom": 999,  # カスタムバッジは最後
-        }
-
-        return priority_map.get(badge_type, 999)
+        return self.BADGE_PRIORITIES.get(badge_type, self.BADGE_PRIORITIES["custom"])

@@ -20,6 +20,10 @@ except ImportError:
 class BadgeGenerator:
     """バッジ生成クラス"""
 
+    # 既存バッジと新規バッジの優先順位オフセット
+    # README.mdから抽出されたバッジは、既存バッジの後に表示される
+    README_BADGE_PRIORITY_OFFSET = 100
+
     def __init__(self, config: Dict, strings: Dict, url_utils: URLUtils = None):
         """初期化
 
@@ -179,7 +183,7 @@ class BadgeGenerator:
             badge_type = readme_badge["type"]
             # 既存のバッジタイプと重複していない場合のみ追加
             if badge_type not in existing_types:
-                priority = readme_badge["priority"] + 100  # 既存バッジより後に表示
+                priority = readme_badge["priority"] + self.README_BADGE_PRIORITY_OFFSET
                 badge_markdown = readme_badge["markdown"]
                 badge_list.append((priority, badge_markdown, badge_type))
                 existing_types.add(badge_type)

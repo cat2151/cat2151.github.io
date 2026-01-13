@@ -9,6 +9,7 @@ import sys
 from unittest.mock import Mock
 
 import pytest
+from github.GithubException import GithubException
 
 # プロジェクトルートのsrcディレクトリをパスに追加
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -72,8 +73,6 @@ This is a test repository without badges.
     @pytest.fixture
     def mock_repo_no_readme(self):
         """README.mdを持たないモックリポジトリ"""
-        from github.GithubException import GithubException
-
         repo = Mock()
         repo.name = "test-repo"
         repo.get_readme.side_effect = GithubException(status=404, data={})
