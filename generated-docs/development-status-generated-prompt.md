@@ -1,4 +1,4 @@
-Last updated: 2026-01-15
+Last updated: 2026-01-16
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -264,6 +264,8 @@ Last updated: 2026-01-15
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+e5ae03c Auto-update repository list - 2026-01-14
+2dc3e0d Update project summaries (overview & development status) [auto]
 2e4fe3f Auto-update repository list - 2026-01-13
 a067204 Update project summaries (overview & development status) [auto]
 009a528 Merge pull request #19 from cat2151/copilot/add-badge-display-for-readme
@@ -272,8 +274,6 @@ a067204 Update project summaries (overview & development status) [auto]
 096ca69 Address code review feedback - improve code quality
 a3080a1 Implement README badge extraction feature with tests
 a5c4f14 Initial plan
-8acd0c6 Add issue note for #18 [auto]
-b42bf99 Auto-update repository list - 2026-01-12
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -291,4 +291,4 @@ tests/test_repository_processor.py
 
 
 ---
-Generated at: 2026-01-15 07:06:50 JST
+Generated at: 2026-01-16 07:06:14 JST

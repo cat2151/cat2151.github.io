@@ -1,54 +1,49 @@
-Last updated: 2026-01-15
+Last updated: 2026-01-16
 
 # Development Status
 
 ## 現在のIssues
-現在オープン中のIssueはありません。
-直近では、READMEからのバッジ抽出機能の追加 ([Issue #19](../issue-notes/19.md)) と、
-それに伴うリポジトリ処理ロジックの改善、そしてコミット履歴の整理 ([Issue #18](../issue-notes/18.md)) が完了しました。
+オープン中のIssueはありません。
 
 ## 次の一手候補
-1. READMEバッジ抽出機能の強化と対応バッジ種類の拡張 ([Issue #19](../issue-notes/19.md) 関連改善)
-   - 最初の小さな一歩: `src/generate_repo_list/readme_badge_extractor.py` の現在のバッジ検出ロジックをレビューし、広く使われているが未対応のバッジ形式（例: Shields.ioの特定のスタイル、カスタムSVGバッジなど）のパターンを特定する。
+1. READMEバッジ抽出機能の強化と表示改善
+   - 最初の小さな一歩: 現在の `src/generate_repo_list/readme_badge_extractor.py` が対応しているバッジの種類を洗い出し、典型的なGitHubリポジトリのREADMEに含まれるバッジ形式（例: Shields.io、GitHub Actionsステータスバッジ）とのカバレッジを評価する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/readme_badge_extractor.py`, `tests/test_readme_badge_extractor.py`
+     対象ファイル: `src/generate_repo_list/readme_badge_extractor.py`, `src/generate_repo_list/badge_generator.py`, `src/generate_repo_list/markdown_generator.py`, `tests/test_readme_badge_extractor.py`
 
-     実行内容: `readme_badge_extractor.py` のロジックを分析し、特に以下の観点から改善点を提案してください：
-     1) 現在サポートしているバッジ形式と、不足している可能性のある一般的なバッジ形式。
-     2) 正規表現や解析ロジックの堅牢性向上のための具体的なコード変更案。
-     3) 追加で必要なテストケース（特にエッジケースや新規バッジ形式に対するもの）。
+     実行内容: `readme_badge_extractor.py`が現在抽出可能なバッジのパターン（URL、画像altテキスト、Markdownリンク形式など）を詳細に分析し、一般的なバッジ（例: Shields.ioの様々な形式、GitHub Actionsのステータスバッジ）がどの程度カバーされているか評価してください。また、`badge_generator.py`と`markdown_generator.py`がそれらの抽出されたバッジ情報をどのようにMarkdownとして表現し、最終的に表示しているかを調査し、視覚的な改善点があれば提案してください。
 
-     確認事項: 既存のテストケースが新しいロジックと衝突しないか、またパフォーマンスへの影響がないかを確認してください。
+     確認事項: 既存の抽出ロジックを変更する際は、既存のテストがパスすること、および新たなバッジ形式の追加が既存の機能に影響を与えないことを確認してください。Markdownのレンダリング結果がGitHub上で期待通りに表示されるか。
 
-     期待する出力: `readme_badge_extractor.py` の改善提案と、それに対応する `test_readme_badge_extractor.py` への追加テストケースの概要をMarkdown形式で出力してください。
+     期待する出力: 現在のバッジ抽出機能の対応状況と、未対応のバッジ形式（または改善が必要な表示形式）のリストをMarkdown形式で出力してください。また、対応範囲を広げるための具体的なコード変更案と、`markdown_generator.py`における表示改善案を含めてください。
      ```
 
-2. プロジェクト自動生成ワークフローの依存関係マッピングと最適化 (新規提案: #今後のIssue-01)
-   - 最初の小さな一歩: `.github/workflows/` ディレクトリ内の `call-*.yml` ファイルと、それらが呼び出すメインのワークフローファイル（例: `daily-project-summary.yml`, `issue-note.yml` など）をリストアップし、呼び出し階層をシンプルなテキスト形式でマッピングする。
+2. プロジェクト概要生成の品質向上
+   - 最初の小さな一歩: 現在生成されている `generated-docs/project-overview.md` の内容をレビューし、特に「プロジェクトの目的」「主要技術」「最新の活動」といったセクションが、プロジェクトの現状を正確かつ魅力的に伝えているか評価する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `.github/workflows/*.yml` および `.github/actions-tmp/.github/workflows/*.yml`
+     対象ファイル: `generated-docs/project-overview.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`, `src/generate_repo_list/project_overview_fetcher.py`, `src/generate_repo_list/markdown_generator.py`
 
-     実行内容: 対象ファイルについて、`workflow_call` トリガーを使用しているワークフローと、それを呼び出しているワークフローのペアをすべて抽出し、呼び出し元と呼び出し先の関係をリストアップしてください。特に、どのワークフローがどの入力（`inputs`）とシークレット（`secrets`）を渡しているかを分析してください。
+     実行内容: `generated-docs/project-overview.md`の内容が、現在のプロジェクトの状態を正確に、かつ理解しやすく記述しているかを分析してください。特に、情報の鮮度、重要性の高い情報の強調、冗長な表現の有無に焦点を当てます。`.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`の内容と照らし合わせ、プロンプトの改善によってより高品質な概要を生成するための具体的な提案をしてください。
 
-     確認事項: 循環参照がないか、未使用の入力やシークレットがないかを確認してください。また、`actions-tmp` 以下のファイルが実際に利用されているかどうかについても考慮してください。
+     確認事項: 提案される改善が、情報収集の複雑性を大幅に増加させないか。生成される概要が長くなりすぎず、主要な情報を簡潔に伝えられるか。
 
-     期待する出力: ワークフロー間の依存関係と、各呼び出しにおける入力・シークレットの一覧をMarkdown形式で出力してください。可能であれば、簡潔なグラフ形式（PlantUMLやMermaid記法など）での可視化も検討してください。
+     期待する出力: `project-overview.md`の内容改善に関する具体的な提案をMarkdown形式で出力してください。これには、追加すべき情報カテゴリ、削除すべき冗長な情報、特定の情報の強調方法、および`project-overview-prompt.md`の修正案を含みます。
      ```
 
-3. `project_summary` スクリプトのテストカバレッジ分析と拡充 (新規提案: #今後のIssue-02)
-   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/scripts/` ディレクトリ内の主要なJavaScriptファイル（例: `ProjectSummaryCoordinator.cjs`, `DevelopmentStatusGenerator.cjs`, `IssueTracker.cjs` など）を特定し、既存のテストファイル（もしあれば）を確認する。
+3. 開発状況生成プロンプトの更なる改善
+   - 最初の小さな一歩: 現在のプロンプト定義ファイル `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` を読み込み、この開発状況生成レポート（現在の出力）と比較し、指示事項と生成結果との間に乖離がないか、特に「生成しないもの」のルールが遵守されているかを確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/**/*.cjs`
+     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` と、このレポート（生成された開発状況）
 
-     実行内容: 対象ファイルの中から、特に `ProjectSummaryCoordinator.cjs`、`DevelopmentStatusGenerator.cjs`、`IssueTracker.cjs`、`GitUtils.cjs` の4つのファイルを分析し、それぞれのファイルが担当する主要な機能やクラスメソッドを列挙してください。また、これらの機能に対してどのようなテスト（単体テスト、結合テスト）が考えられるかを提案してください。現在のテストカバレッジ情報がないため、まずは理想的なテストシナリオを考案してください。
+     実行内容: 提供された`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`の指示内容と、この開発状況レポートの実際の出力を詳細に比較分析してください。特に、「生成しないもの」として指定されたハルシネーションの抑制が効果的か、そして「Agent実行プロンプト」の必須要素が常に満たされているかを確認します。より具体的で、開発者にとって実用的な「次の一手候補」と「Agent実行プロンプト」を導き出すための、プロンプトの改善点と具体的な修正案を検討してください。
 
-     確認事項: 各スクリプト間の依存関係を考慮し、モック化が必要なケースがないかを確認してください。
+     確認事項: プロンプトの修正が、より多くのハルシネーションを引き起こしたり、出力を冗長にしたりしないか。新しいプロンプトが現在の要件を満たしつつ、将来的な拡張性も考慮しているか。
 
-     期待する出力: 各対象ファイルの主要機能と、それに対するテストシナリオの提案をMarkdown形式で出力してください。将来的にテストカバレッジツールを導入した場合に、どの部分を重点的にテストすべきかの指針となる情報を含めてください。
+     期待する出力: `development-status-prompt.md`の改善提案をMarkdown形式で出力してください。具体的には、プロンプトのどの部分を修正、追加、または削除すべきか、その理由、および修正後のプロンプトの例を含む改善案を提示してください。
      ```
 
 ---
-Generated at: 2026-01-15 07:07:22 JST
+Generated at: 2026-01-16 07:06:31 JST
