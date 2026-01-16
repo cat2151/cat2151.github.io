@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-15 (UTC) / 2026-01-16 (JST)
+Last Updated: 2026-01-16 (UTC) / 2026-01-17 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,47 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、個人のGitHub Pagesサイト向けにリポジトリ一覧を自動生成するシステムです。
-- 生成されたリポジトリ一覧はSEOに最適化されたMarkdown形式で出力され、検索エンジンでの視認性を高めます。
-- これにより、プロジェクトの発見可能性が向上し、LLMによるリポジトリ参照の精度向上も期待されます。
-- 📅 2026-01-15 (UTC) / 2026-01-16 (JST)
+- GitHub Pagesサイト（`cat2151.github.io`）用のリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、Jekyllに対応したSEO最適化済みMarkdownファイルを生成します。
+- これにより、リポジトリの検索エンジンからの参照性を高め、LLMによる情報参照の精度向上に貢献します。
+- 📅 2026-01-16 (UTC) / 2026-01-17 (JST)
+
+## [wavlpf](https://cat2151.github.io/wavlpf/)
+Software synthesizer. Simple. Non-realtime rendering
+
+<a href="https://cat2151.github.io/wavlpf/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/wavlpf](https://github.com/cat2151/wavlpf)
+- **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
+
+### Project Highlights
+- Rust WASMで実装された、高性能なローパスフィルター付きシンプルソフトウェアシンセサイザーです。
+- 220Hzの波形ジェネレーターとマウスで制御可能なBiquad LPFフィルターを搭載しています。
+- WebAudio非依存の信号処理、WAV生成、設定の永続化機能を備え、Webブラウザ上で動作します。
+- 📅 2026-01-16 (UTC) / 2026-01-17 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-01-16 (UTC) / 2026-01-17 (JST)
+
+## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
+This oscilloscope visualizes audio from your microphone or wav-file with zero-cross detection for stable waveform display.
+
+<a href="https://cat2151.github.io/cat-oscilloscope/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: audio-analysis](https://img.shields.io/badge/Topic-audio--analysis-lightblue) ![Topic: audio-visualizer](https://img.shields.io/badge/Topic-audio--visualizer-lightblue) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: oscilloscope](https://img.shields.io/badge/Topic-oscilloscope-lightblue) ![Topic: typescript](https://img.shields.io/badge/Topic-typescript-lightblue) ![Topic: wav](https://img.shields.io/badge/Topic-wav-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-oscilloscope"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a> <a href="https://cat2151.github.io/cat-oscilloscope/"><img src="https://img.shields.io/badge/🌐-Live_Demo-green.svg" alt="Live Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-oscilloscope](https://github.com/cat2151/cat-oscilloscope)
+- **GitHub Pages**: [https://cat2151.github.io/cat-oscilloscope/](https://cat2151.github.io/cat-oscilloscope/)
+
+### Project Highlights
+- ブラウザ上で動作する高機能なオシロスコープ風波形ビジュアライザーです。
+- マイク入力や音声ファイルからリアルタイムで音声を解析し、多様な周波数推定と安定した波形表示を提供します。
+- 主要なデータ処理は高速・型安全なRust/WASMで実装され、npmライブラリとしても利用可能です。
+- 📅 2026-01-16 (UTC) / 2026-01-16 (JST)
 
 ## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
 MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
@@ -110,21 +147,21 @@ MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
 - MML（Music Macro Language）で書かれた音楽データを、ウェブブラウザで再生可能なTone.js互換JSON形式に変換するライブラリです。
 - ユーザーは簡単なテキスト形式で音楽を作成し、それをウェブサイトで演奏できるようになります。
 - JavaScriptとRust (WASM) で実装されており、npmパッケージまたはCDNを通じて簡単にプロジェクトに統合し利用できます。
-- 📅 2026-01-15 (UTC) / 2026-01-16 (JST)
+- 📅 2026-01-16 (UTC) / 2026-01-16 (JST)
 
-## [wavlpf](https://cat2151.github.io/wavlpf/)
-Software synthesizer. Simple. Non-realtime rendering
+## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
+Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
 
-<a href="https://cat2151.github.io/wavlpf/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+<a href="https://cat2151.github.io/tonejs-json-sequencer/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
 
-- **Repository**: [https://github.com/cat2151/wavlpf](https://github.com/cat2151/wavlpf)
-- **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
+- **Repository**: [https://github.com/cat2151/tonejs-json-sequencer](https://github.com/cat2151/tonejs-json-sequencer)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-json-sequencer/](https://cat2151.github.io/tonejs-json-sequencer/)
 
 ### Project Highlights
-- RustとWebAssemblyで実装された、高性能なローパスフィルター（LPF）を搭載したシンプルソフトウェアシンセサイザーです。
-- 波形生成、Biquad LPFによる音響処理、WAV形式での出力までを一貫して提供します。
-- Webブラウザ上でリアルタイムでのフィルター操作、パフォーマンス監視、設定の永続化が可能です。
-- 📅 2026-01-15 (UTC) / 2026-01-16 (JST)
+-   Tone.jsの音色・エフェクト・演奏をJSONで記述できる軽量ライブラリ
+-   コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
+-   時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
+- 📅 2026-01-16 (UTC) / 2026-01-16 (JST)
 
 ## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
 
@@ -154,20 +191,6 @@ Software synthesizer. Simple. Non-realtime rendering
 - 必要に応じて通知、コメント投稿、PRのReady化、自動マージ、Issue割り当てといった処理を安全なドライランモードと実行モードで提供します。
 - 📅 2026-01-15 (UTC) / 2026-01-16 (JST)
 
-## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
-Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
-
-<a href="https://cat2151.github.io/tonejs-json-sequencer/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
-
-- **Repository**: [https://github.com/cat2151/tonejs-json-sequencer](https://github.com/cat2151/tonejs-json-sequencer)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-json-sequencer/](https://cat2151.github.io/tonejs-json-sequencer/)
-
-### Project Highlights
-- Tone.jsの音色・エフェクト・演奏をJSONで記述できる軽量ライブラリ
-- コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
-- 時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
-- 📅 2026-01-15 (UTC) / 2026-01-16 (JST)
-
 ## [tree-sitter-wasm-rust-example](https://github.com/cat2151/tree-sitter-wasm-rust-example)
 
 ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
@@ -183,15 +206,6 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 
 - **Repository**: [https://github.com/cat2151/tree-sitter-wasm-c-generate-example](https://github.com/cat2151/tree-sitter-wasm-c-generate-example)
 - **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-01-15 (UTC) / 2026-01-16 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
 - 📅 2026-01-15 (UTC) / 2026-01-16 (JST)
 
@@ -216,20 +230,6 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 - **Repository**: [https://github.com/cat2151/tree-sitter-wasm-c-use-example](https://github.com/cat2151/tree-sitter-wasm-c-use-example)
 - **GitHub Pages**: None
 - **Overview**: No description available
-- 📅 2026-01-15 (UTC) / 2026-01-15 (JST)
-
-## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
-This oscilloscope visualizes audio from your microphone or wav-file with zero-cross detection for stable waveform display.
-
-<a href="https://cat2151.github.io/cat-oscilloscope/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: audio-analysis](https://img.shields.io/badge/Topic-audio--analysis-lightblue) ![Topic: audio-visualizer](https://img.shields.io/badge/Topic-audio--visualizer-lightblue) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: oscilloscope](https://img.shields.io/badge/Topic-oscilloscope-lightblue) ![Topic: typescript](https://img.shields.io/badge/Topic-typescript-lightblue) ![Topic: wav](https://img.shields.io/badge/Topic-wav-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-oscilloscope"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a> <a href="https://cat2151.github.io/cat-oscilloscope/"><img src="https://img.shields.io/badge/🌐-Live_Demo-green.svg" alt="Live Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-oscilloscope](https://github.com/cat2151/cat-oscilloscope)
-- **GitHub Pages**: [https://cat2151.github.io/cat-oscilloscope/](https://cat2151.github.io/cat-oscilloscope/)
-
-### Project Highlights
--   ブラウザ上で動作する高機能なオシロスコープ風波形ビジュアライザーです。
--   Rust/WASMにより高速なデータ処理を実現し、マイク入力やWAVファイルから音声をリアルタイムで可視化します。
--   多様な周波数推定アルゴリズムやアライメントモード、ピアノ鍵盤表示などの豊富な機能を備え、オーディオ分析を支援します。
 - 📅 2026-01-15 (UTC) / 2026-01-15 (JST)
 
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
