@@ -1,4 +1,4 @@
-Last updated: 2026-01-16
+Last updated: 2026-01-17
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -264,6 +264,8 @@ Last updated: 2026-01-16
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+33cc3bf Auto-update repository list - 2026-01-15
+56a5222 Update project summaries (overview & development status) [auto]
 e5ae03c Auto-update repository list - 2026-01-14
 2dc3e0d Update project summaries (overview & development status) [auto]
 2e4fe3f Auto-update repository list - 2026-01-13
@@ -272,8 +274,6 @@ a067204 Update project summaries (overview & development status) [auto]
 13d1b87 Address PR review feedback - improve badge detection and add comprehensive tests
 26ef502 Add security comments for CodeQL URL substring checks
 096ca69 Address code review feedback - improve code quality
-a3080a1 Implement README badge extraction feature with tests
-a5c4f14 Initial plan
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -281,7 +281,6 @@ generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
 index.md
-issue-notes/18.md
 src/generate_repo_list/badge_generator.py
 src/generate_repo_list/readme_badge_extractor.py
 src/generate_repo_list/repository_processor.py
@@ -291,4 +290,4 @@ tests/test_repository_processor.py
 
 
 ---
-Generated at: 2026-01-16 07:06:14 JST
+Generated at: 2026-01-17 07:06:29 JST
