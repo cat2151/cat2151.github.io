@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-16 (UTC) / 2026-01-17 (JST)
+Last Updated: 2026-01-17 (UTC) / 2026-01-18 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト（`cat2151.github.io`）用のリポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、Jekyllに対応したSEO最適化済みMarkdownファイルを生成します。
-- これにより、リポジトリの検索エンジンからの参照性を高め、LLMによる情報参照の精度向上に貢献します。
-- 📅 2026-01-16 (UTC) / 2026-01-17 (JST)
+- GitHub APIを利用し、指定されたユーザーの全リポジトリ情報を自動で取得します。
+- 取得した情報に基づき、GitHub Pages向けのSEO最適化されたリポジトリ一覧Markdownファイルを生成します。
+- これにより、リポジトリの検索エンジンへの露出を高め、LLMなどからの参照成功率を向上させることを目指します。
+- 📅 2026-01-17 (UTC) / 2026-01-18 (JST)
 
 ## [wavlpf](https://cat2151.github.io/wavlpf/)
 Software synthesizer. Simple. Non-realtime rendering
@@ -107,19 +107,38 @@ Software synthesizer. Simple. Non-realtime rendering
 - **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
 
 ### Project Highlights
-- Rust WASMで実装された、高性能なローパスフィルター付きシンプルソフトウェアシンセサイザーです。
-- 220Hzの波形ジェネレーターとマウスで制御可能なBiquad LPFフィルターを搭載しています。
-- WebAudio非依存の信号処理、WAV生成、設定の永続化機能を備え、Webブラウザ上で動作します。
-- 📅 2026-01-16 (UTC) / 2026-01-17 (JST)
+- RustとWebAssemblyで実装された、ローパスフィルター付きのシンプルなソフトウェアシンセサイザーです。
+- 高速なDSP処理、多様な波形生成、リアルタイムフィルター制御、波形視覚化機能をWeb上で提供します。
+- WAVエクスポートや設定の永続化にも対応し、インタラクティブな音楽生成体験を実現します。
+- 📅 2026-01-17 (UTC) / 2026-01-18 (JST)
 
-## [digital-garden](https://cat2151.github.io/digital-garden/)
+## [mml2abc](https://cat2151.github.io/mml2abc/)
+A library transpiles Music Macro Language into ABC music notation.
 
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+<a href="https://cat2151.github.io/mml2abc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![PEG.js](https://img.shields.io/badge/PEG.js-40be89?style=flat&logo=javascript) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mml2abc"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a> <a href="https://cat2151.github.io/mml2abc/dist/"><img src="https://img.shields.io/badge/🌐-Live%20Demo-green.svg" alt="Live Demo"></a>
 
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Repository**: [https://github.com/cat2151/mml2abc](https://github.com/cat2151/mml2abc)
+- **GitHub Pages**: [https://cat2151.github.io/mml2abc/](https://cat2151.github.io/mml2abc/)
+
+### Project Highlights
+- Music Macro Language（MML）をABC音楽記譜法へ変換するシンプルなJavaScriptライブラリです。
+- 生成されたABC記譜法は、ブラウザ上で五線譜表示とSoundFont GM音源による音源再生が可能です。
+- 本プロジェクトは、MMLでの音楽作成と再生を可能にする概念実証として、特にObsidianとの連携を目指しています。
+- 📅 2026-01-17 (UTC) / 2026-01-18 (JST)
+
+## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
+
+<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
 - **Overview**: No description available
-- 📅 2026-01-16 (UTC) / 2026-01-17 (JST)
+
+### Project Highlights
+- GitHub Copilotによる自動実装フェーズのプルリクエスト(PR)を効率的に監視するツールです。
+- 認証済みGitHubユーザーが所有するリポジトリを対象に、PRの状態変化を自動で検知します。
+- PRのフェーズに応じた通知、コメント投稿、PRのReady化、自動マージなどのアクションを実行します。
+- 📅 2026-01-17 (UTC) / 2026-01-18 (JST)
 
 ## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
 This oscilloscope visualizes audio from your microphone or wav-file with zero-cross detection for stable waveform display.
@@ -128,12 +147,7 @@ This oscilloscope visualizes audio from your microphone or wav-file with zero-cr
 
 - **Repository**: [https://github.com/cat2151/cat-oscilloscope](https://github.com/cat2151/cat-oscilloscope)
 - **GitHub Pages**: [https://cat2151.github.io/cat-oscilloscope/](https://cat2151.github.io/cat-oscilloscope/)
-
-### Project Highlights
-- ブラウザ上で動作する高機能なオシロスコープ風波形ビジュアライザーです。
-- マイク入力や音声ファイルからリアルタイムで音声を解析し、多様な周波数推定と安定した波形表示を提供します。
-- 主要なデータ処理は高速・型安全なRust/WASMで実装され、npmライブラリとしても利用可能です。
-- 📅 2026-01-16 (UTC) / 2026-01-16 (JST)
+- 📅 2026-01-17 (UTC) / 2026-01-18 (JST)
 
 ## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
 MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
@@ -147,7 +161,16 @@ MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
 - MML（Music Macro Language）で書かれた音楽データを、ウェブブラウザで再生可能なTone.js互換JSON形式に変換するライブラリです。
 - ユーザーは簡単なテキスト形式で音楽を作成し、それをウェブサイトで演奏できるようになります。
 - JavaScriptとRust (WASM) で実装されており、npmパッケージまたはCDNを通じて簡単にプロジェクトに統合し利用できます。
-- 📅 2026-01-16 (UTC) / 2026-01-16 (JST)
+- 📅 2026-01-17 (UTC) / 2026-01-18 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-01-17 (UTC) / 2026-01-18 (JST)
 
 ## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
 Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
@@ -161,7 +184,7 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 -   Tone.jsの音色・エフェクト・演奏をJSONで記述できる軽量ライブラリ
 -   コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
 -   時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
-- 📅 2026-01-16 (UTC) / 2026-01-16 (JST)
+- 📅 2026-01-16 (UTC) / 2026-01-17 (JST)
 
 ## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
 
@@ -175,20 +198,6 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 - コード進行テキストをMML（Music Macro Language）へ変換するライブラリ・アプリケーションです。
 - RustとTree-sitterを活用し、堅牢な構文解析と高速な変換を実現しています。
 - コマンドラインツールとして、またRustライブラリとしても利用可能な純粋なネイティブアプリケーションです。
-- 📅 2026-01-15 (UTC) / 2026-01-16 (JST)
-
-## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
-
-<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
-- **Overview**: No description available
-
-### Project Highlights
-- GitHub Copilotが自動生成するPull Requestのフェーズを監視し、その状態に応じたアクションを自動化するPythonツールです。
-- 認証済みGitHubユーザーのリポジトリを対象に、GraphQL APIを用いて効率的にPRのドラフト、レビュー待ち、作業中などのフェーズを判定します。
-- 必要に応じて通知、コメント投稿、PRのReady化、自動マージ、Issue割り当てといった処理を安全なドライランモードと実行モードで提供します。
 - 📅 2026-01-15 (UTC) / 2026-01-16 (JST)
 
 ## [tree-sitter-wasm-rust-example](https://github.com/cat2151/tree-sitter-wasm-rust-example)
@@ -552,20 +561,6 @@ Music Macro Language (MML) Parser and Player and Server and Client
 - Music Macro Language (MML) を解釈し、音楽を再生するCLIツールです。
 - コマンドラインからMML文字列（例: "cde"）を入力するだけで、リアルタイムに音楽を演奏します。
 - Windows向けにRustで開発されており、シンプルで低レイテンシな音楽体験を提供します。
-- 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
-
-## [mml2abc](https://cat2151.github.io/mml2abc/)
-A library transpiles Music Macro Language into ABC music notation.
-
-<a href="https://cat2151.github.io/mml2abc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![PEG.js](https://img.shields.io/badge/PEG.js-40be89?style=flat&logo=javascript) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
-
-- **Repository**: [https://github.com/cat2151/mml2abc](https://github.com/cat2151/mml2abc)
-- **GitHub Pages**: [https://cat2151.github.io/mml2abc/](https://cat2151.github.io/mml2abc/)
-
-### Project Highlights
-- Music Macro Language (MML) をABC記譜法に変換するJavaScriptライブラリです。
-- ブラウザやObsidianでMMLを使った音楽演奏を可能にし、シンプルなテキスト変換機能を提供します。
-- abcjsとの連携により、楽譜表示と音源再生を実現する概念実証プロジェクトです。
 - 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
 
 ## [cat-jekyll-config-generator](https://cat2151.github.io/cat-jekyll-config-generator/)
