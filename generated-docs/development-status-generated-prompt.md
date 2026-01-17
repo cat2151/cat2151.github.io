@@ -1,4 +1,4 @@
-Last updated: 2026-01-17
+Last updated: 2026-01-18
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -264,6 +264,8 @@ Last updated: 2026-01-17
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+0a51e04 Auto-update repository list - 2026-01-16
+5aa0086 Update project summaries (overview & development status) [auto]
 33cc3bf Auto-update repository list - 2026-01-15
 56a5222 Update project summaries (overview & development status) [auto]
 e5ae03c Auto-update repository list - 2026-01-14
@@ -272,8 +274,6 @@ e5ae03c Auto-update repository list - 2026-01-14
 a067204 Update project summaries (overview & development status) [auto]
 009a528 Merge pull request #19 from cat2151/copilot/add-badge-display-for-readme
 13d1b87 Address PR review feedback - improve badge detection and add comprehensive tests
-26ef502 Add security comments for CodeQL URL substring checks
-096ca69 Address code review feedback - improve code quality
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -281,13 +281,7 @@ generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
 index.md
-src/generate_repo_list/badge_generator.py
-src/generate_repo_list/readme_badge_extractor.py
-src/generate_repo_list/repository_processor.py
-tests/test_badge_generator_integration.py
-tests/test_readme_badge_extractor.py
-tests/test_repository_processor.py
 
 
 ---
-Generated at: 2026-01-17 07:06:29 JST
+Generated at: 2026-01-18 07:05:48 JST
