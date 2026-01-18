@@ -1,4 +1,4 @@
-Last updated: 2026-01-18
+Last updated: 2026-01-19
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -264,6 +264,8 @@ Last updated: 2026-01-18
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+750639c Auto-update repository list - 2026-01-17
+0b5683b Update project summaries (overview & development status) [auto]
 0a51e04 Auto-update repository list - 2026-01-16
 5aa0086 Update project summaries (overview & development status) [auto]
 33cc3bf Auto-update repository list - 2026-01-15
@@ -272,8 +274,6 @@ e5ae03c Auto-update repository list - 2026-01-14
 2dc3e0d Update project summaries (overview & development status) [auto]
 2e4fe3f Auto-update repository list - 2026-01-13
 a067204 Update project summaries (overview & development status) [auto]
-009a528 Merge pull request #19 from cat2151/copilot/add-badge-display-for-readme
-13d1b87 Address PR review feedback - improve badge detection and add comprehensive tests
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -284,4 +284,4 @@ index.md
 
 
 ---
-Generated at: 2026-01-18 07:05:48 JST
+Generated at: 2026-01-19 07:05:47 JST
