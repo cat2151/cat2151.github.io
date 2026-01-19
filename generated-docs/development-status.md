@@ -1,71 +1,58 @@
-Last updated: 2026-01-19
+Last updated: 2026-01-20
 
 # Development Status
 
 ## 現在のIssues
-- 現在、プロジェクトにはオープンなGitHub Issueがありません。
-- これは、既存のタスクが完了しているか、Issueトラッカーが最新の状態であることを示します。
-- 今後の開発は、新規の改善点や提案から検討を開始できます。
+- 現在オープン中のIssueはありません。
+- プロジェクトは安定した状態にあり、定期的な自動更新が正常に機能しています。
+- 今後の改善や機能追加のための新しいタスクを検討する段階です。
 
 ## 次の一手候補
-1. 不要な一時アクションの削除と整理 [新規検討]
-   - 最初の小さな一歩: `.github/actions-tmp/` ディレクトリ内の各ワークフローファイル（例: `call-callgraph.yml`, `daily-project-summary.yml` など）と、ルート直下の `.github/workflows/` 内の対応するファイル（例: `call-daily-project-summary.yml`）を比較し、その役割と最新性を把握する。特に、`.github/actions-tmp/` が単なる一時的なコピーであるか、独自のロジックを持っているかを確認する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: `.github/actions-tmp/` ディレクトリ内の全YAMLファイルとCJSファイル、および`.github/workflows/` ディレクトリ内の全YAMLファイル
-
-     実行内容:
-     1. `.github/actions-tmp/` と `.github/workflows/` ディレクトリ内のワークフローファイルをリストアップし、それぞれのファイルパスと簡単な説明を抽出してください。
-     2. 特に、両方のディレクトリに同じような名前のワークフローや関連スクリプトが存在する場合（例: `daily-project-summary.yml` と `call-daily-project-summary.yml`）、それらの役割、呼び出し関係、および最新性の観点から分析し、重複または不要と思われるファイルを特定してください。
-     3. `.github/actions-tmp/` 内のファイルが一時的なものなのか、独立した機能を持つものなのか、現在のプロジェクトで本当に使用されているのかを推測してください。
-
-     確認事項: ファイルの内容だけでなく、ファイル名やパス構造から推測される役割の違いにも注目してください。
-
-     期待する出力:
-     - `.github/actions-tmp/` および `.github/workflows/` 内の主要なワークフローファイルの機能と役割の要約。
-     - 重複、陳腐化、または不要と判断される可能性のあるファイルのリストとその根拠をmarkdown形式で出力してください。
-     ```
-
-2. `src/generate_repo_list` Pythonスクリプトのモジュール依存性分析とリファクタリング計画 [新規検討]
-   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` を中心に、このファイルが他のどのモジュール（例: `repository_processor.py`, `markdown_generator.py` など）に依存しているか、また、それぞれのモジュールがどのような主要な関数やクラスを提供しているかを洗い出す。
+1. `src/generate_repo_list` 機能の異常系処理とテストの強化 [Issue #31](../issue-notes/31.md)
+   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` における外部API呼び出しやファイルI/O処理について、エラーハンドリングが適切に行われているかレビューする。特に、ネットワークエラーや不正なデータが入力された場合の挙動を確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/` ディレクトリ内の全てのPythonファイル
+     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, tests/test_repository_processor.py
 
-     実行内容:
-     1. `src/generate_repo_list/generate_repo_list.py` を起点として、他のPythonモジュールへのインポート関係を分析し、モジュール間の依存ツリーを生成してください。
-     2. 各モジュール（例: `badge_generator.py`, `markdown_generator.py`, `repository_processor.py` など）が持つ主要な関数やクラスを抽出し、それぞれの役割を簡潔に説明してください。
-     3. 分析結果に基づき、モジュール間の依存が複雑になっている箇所や、単一責務の原則に反している可能性のある箇所を指摘し、改善の方向性（例: 新しいモジュールの提案、既存モジュールの分割、インターフェースの明確化など）について提案してください。
+     実行内容: `src/generate_repo_list/generate_repo_list.py` および `repository_processor.py` を中心に、外部リポジトリ情報取得時のネットワークエラー、不正なJSONレスポンス、ファイル読み書きエラーなどの異常系ケースに対するエラーハンドリングの現状を分析し、改善点を提案してください。また、それらの異常系をカバーするテストケースの追加に関する提案も行い、markdown形式で出力してください。
 
-     確認事項: 既存のテストファイル（`tests/` ディレクトリ）が、分析対象のモジュール群のどの部分をカバーしているかについても、可能であれば言及してください。
+     確認事項: 既存の`tests/`ディレクトリ内のテストファイル（特に`test_project_overview_fetcher.py`, `test_repository_processor.py`など）を参照し、現在のテストカバレッジと不足している異常系テストシナリオを確認してください。
 
-     期待する出力:
-     - `src/generate_repo_list/` 内の主要Pythonモジュール間の依存関係グラフ（テキストまたは擬似コード形式）。
-     - 各モジュールの役割と主要機能のサマリー。
-     - リファクタリングの潜在的な候補箇所と、その具体的な改善提案をmarkdown形式で出力してください。
+     期待する出力: `generate_repo_list`関連スクリプトにおけるエラーハンドリングの改善提案リストと、各改善点に対応する推奨テストケース（擬似コードまたは説明）をmarkdown形式で出力してください。
      ```
 
-3. プロジェクトサマリー生成ワークフローのログ強化とエラーハンドリング [新規検討]
-   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml` と `.github/actions-tmp/.github/workflows/daily-project-summary.yml` および `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs` の連携を分析し、現在どの程度のログが出力されているか、またエラーが発生した場合の挙動を確認する。
+2. プロジェクト概要ドキュメント (`project-overview.md`) の情報充実化と明確化 [Issue #32](../issue-notes/32.md)
+   - 最初の小さな一歩: `generated-docs/project-overview.md` を読み込み、現在提供されている情報がユーザーにとって十分に価値があるか、また、不足している情報はないかを評価する。特に、プロジェクトの目的、主要機能、セットアップ手順などの項目に注目する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: generated-docs/project-overview.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs
+
+     実行内容: `generated-docs/project-overview.md` の内容を分析し、ユーザーにとってより有益で理解しやすいプロジェクト概要を生成するために、以下の観点から改善点を提案してください：
+     1. 現状で不足していると考えられる主要な情報。
+     2. 情報の構成や表現の改善案。
+     3. 上記改善を実現するために、`project-overview-prompt.md` または `ProjectOverviewGenerator.cjs` に加えるべき変更内容の概要。
+
+     確認事項: プロジェクトの目的（README.mdや他のドキュメントから推測されるもの）、ターゲットユーザー（開発者、新規参入者など）を考慮し、最も効果的な情報提供方法を検討してください。既存の自動生成プロセスがどのようなデータを利用しているか（`ProjectDataCollector.cjs`など）も考慮に入れる。
+
+     期待する出力: `project-overview.md` の改善提案、具体的な情報追加・構成変更のアイデア、およびそれらを実現するための生成プロンプトやスクリプトへの変更点に関する概要をmarkdown形式で出力してください。
+     ```
+
+3. 内部ワークフローディレクトリの整理と標準化 [Issue #33](../issue-notes/33.md)
+   - 最初の小さな一歩: プロジェクトのファイル一覧から、`.github/actions-tmp/` と `.github/workflows/` ディレクトリ内の全ワークフローファイル（`.yml`）のリストを作成し、それぞれのワークフローが何を実行しているかを簡単にまとめる。
    - Agent実行プロンプト:
      ```
      対象ファイル:
-     - `.github/workflows/call-daily-project-summary.yml`
-     - `.github/actions-tmp/.github/workflows/daily-project-summary.yml`
-     - `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs`
-     - `.github/actions-tmp/.github_automation/project_summary/scripts/generate-project-summary.cjs`
+     - .github/actions-tmp/.github/workflows/*.yml
+     - .github/workflows/*.yml
 
-     実行内容:
-     1. `call-daily-project-summary.yml` を起点とし、そこから呼び出される `daily-project-summary.yml`、さらにその中で実行される `ProjectSummaryCoordinator.cjs` および `generate-project-summary.cjs` までの実行フローを詳細に分析してください。
-     2. 各スクリプトがどのような情報をログとして出力しているか、またエラーが発生した場合にどのような挙動を示すか（例: 終了コード、エラーメッセージ）を特定してください。
-     3. 現在のログ出力レベルとエラーハンドリングの仕組みを評価し、より詳細なデバッグ情報（例: 中間結果、実行ステップの進行状況）や、特定のエラーケース（例: API呼び出し失敗、ファイル読み書きエラー）に対するロバストなエラーハンドリングを追加するための具体的な改善策を提案してください。
+     実行内容: 上記対象ファイルのワークフローを比較分析し、以下の観点から整理・標準化の提案をしてください：
+     1. `.github/actions-tmp/` に置かれているワークフローが、なぜそのディレクトリにあるのか（一時的、モジュール化、古い残骸など）を推測し、その妥当性を評価。
+     2. 役割が重複しているワークフローや、類似の機能を持つワークフローを特定。
+     3. 全てのワークフローが標準的な `.github/workflows/` ディレクトリに統合可能か、または明確な理由があれば`.github/actions-tmp/`のようなサブディレクトリを維持するべきかを検討し、その指針を提案。
 
-     確認事項: 既存のワークフローで設定されている環境変数や入力パラメータが、ログ出力やエラーハンドリングにどのように影響するか考慮してください。
+     確認事項: 各ワークフローが依存している他のアクション、スクリプト、およびプロジェクト全体のCI/CD戦略を考慮してください。特に、`call-` プレフィックスを持つワークフローが他のワークフローを呼び出している構造を理解し、整理による影響がないか確認してください。
 
-     期待する出力:
-     - プロジェクトサマリー生成ワークフローの実行フロー図（テキスト形式）。
-     - 各段階での既存のログ出力とエラーハンドリングの現状評価。
-     - ログの詳細化、エラーハンドリングの強化、および失敗時の通知メカニズム（オプション）に関する具体的なコード変更提案をmarkdown形式で出力してください。
+     期待する出力: ワークフローの整理・標準化に関する提案をmarkdown形式で出力してください。具体的には、どのワークフローをどこに移動すべきか、統合すべきか、削除すべきか、といった具体的なアクションと、その理由を記述してください。
 
 ---
-Generated at: 2026-01-19 07:06:09 JST
+Generated at: 2026-01-20 07:06:43 JST
