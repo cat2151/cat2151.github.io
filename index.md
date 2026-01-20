@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 84 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 87 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 84 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 87 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 84 open source projects.",
+      "description": "Programmer and developer. Publishing 87 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 84 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 87 projects (⭐52 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-19 (UTC) / 2026-01-20 (JST)
+Last Updated: 2026-01-20 (UTC) / 2026-01-21 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2026-01-19 (UTC) / 2026-01-20 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-84-blue) ![Active](https://img.shields.io/badge/Active-56-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-52-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-87-blue) ![Active](https://img.shields.io/badge/Active-59-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-52-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-22_(26.2%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-13_(15.5%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-11_(13.1%25)-dea584?style=flat&logo=rust) ![TypeScript](https://img.shields.io/badge/TypeScript-8_(9.5%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(7.1%25)-e34c26?style=flat&logo=html5)
+![JavaScript](https://img.shields.io/badge/JavaScript-22_(25.3%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-13_(14.9%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-11_(12.6%25)-dea584?style=flat&logo=rust) ![TypeScript](https://img.shields.io/badge/TypeScript-8_(9.2%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(6.9%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -93,10 +93,77 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages用のMarkdownファイルを自動生成するシステムです。
-- 生成されたコンテンツは`github.io`ドメインで公開され、検索エンジン最適化（SEO）とLLMからの参照性向上を目指します。
-- リポジトリの分類表示、バッジ、各プロジェクト概要の自動取得など、豊富な表示機能を提供します。
-- 📅 2026-01-19 (UTC) / 2026-01-20 (JST)
+- GitHub Pagesサイト向けにGitHub APIを使用してリポジトリ一覧を自動生成します。
+- リポジトリ情報を元に、SEOに最適化されたMarkdownファイルを動的に作成します。
+- 各リポジトリの概要や分類機能を付与し、検索エンジンからのサイトの可視性を向上させます。
+- 📅 2026-01-20 (UTC) / 2026-01-21 (JST)
+
+## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
+[WIP] mmlabc-to-smfのrust版
+
+<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mmlabc-to-smf-rust"><img src="https://img.shields.io/badge/📖-DeepWiki-blue.svg" alt="DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
+- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
+
+### Project Highlights
+- Music Macro Language (MML) 形式の楽譜をStandard MIDI File (SMF) に変換するRust製ライブラリです。
+- 独自の4パスアーキテクチャを採用し、構文解析、抽象構文木(AST)構築、MIDIイベント生成、SMF作成の一連の処理を行います。
+- コマンドラインツールとしても機能し、MML入力からMIDIファイル生成、さらには外部プレイヤーによる自動再生までをサポートします。
+- 📅 2026-01-20 (UTC) / 2026-01-21 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-01-20 (UTC) / 2026-01-21 (JST)
+
+## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
+[WIP] smf-to-ym2151log のRust版
+
+<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
+
+- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
+- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
+
+### Project Highlights
+- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログに変換するRustツールです。
+- 複雑なチャンネル割り当て戦略と2パス処理アーキテクチャで、高品質なYM2151出力を生成します。
+- カスタムYM2151音色に対応し、他のRustプロジェクトからライブラリとしても利用可能です。
+- 📅 2026-01-20 (UTC) / 2026-01-20 (JST)
+
+## [web-ym2151](https://cat2151.github.io/web-ym2151/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
+
+- **Repository**: [https://github.com/cat2151/web-ym2151](https://github.com/cat2151/web-ym2151)
+- **GitHub Pages**: [https://cat2151.github.io/web-ym2151/](https://cat2151.github.io/web-ym2151/)
+- **Overview**: No description available
+- 📅 2026-01-20 (UTC) / 2026-01-20 (JST)
+
+## [lib-installation-examples](https://github.com/cat2151/lib-installation-examples)
+
+- **Repository**: [https://github.com/cat2151/lib-installation-examples](https://github.com/cat2151/lib-installation-examples)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-01-20 (UTC) / 2026-01-20 (JST)
+
+## [tonejs-tone-editor](https://github.com/cat2151/tonejs-tone-editor)
+
+- **Repository**: [https://github.com/cat2151/tonejs-tone-editor](https://github.com/cat2151/tonejs-tone-editor)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-01-20 (UTC) / 2026-01-20 (JST)
+
+## [tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
+
+- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-01-20 (UTC) / 2026-01-20 (JST)
 
 ## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
 A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
@@ -110,24 +177,6 @@ A Quartz transformer plugin that converts MML (Music Macro Language) and chord n
 - Obsidianで、コード進行をコードブロックに書くと、五線譜を表示して鳴らすことができます。
 - Quartz4でもそれを実現するため、新たにトランスフォーマープラグインを作りました。
 - Obsidian版と同じく、MML（Music Macro Language）とABC Notationも利用できます。
-- 📅 2026-01-19 (UTC) / 2026-01-20 (JST)
-
-## [web-ym2151](https://cat2151.github.io/web-ym2151/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
-
-- **Repository**: [https://github.com/cat2151/web-ym2151](https://github.com/cat2151/web-ym2151)
-- **GitHub Pages**: [https://cat2151.github.io/web-ym2151/](https://cat2151.github.io/web-ym2151/)
-- **Overview**: No description available
-- 📅 2026-01-19 (UTC) / 2026-01-20 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
 - 📅 2026-01-19 (UTC) / 2026-01-20 (JST)
 
 ## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
@@ -283,20 +332,6 @@ WIP
 - シンプルなGUI、軽量なリソース使用、クロスプラットフォーム対応で、集中力向上をサポートするツールです。
 - 📅 2026-01-14 (UTC) / 2026-01-15 (JST)
 
-## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
-[WIP] mmlabc-to-smfのrust版
-
-<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mmlabc-to-smf-rust"><img src="https://img.shields.io/badge/📖-DeepWiki-blue.svg" alt="DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
-- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
-
-### Project Highlights
-- Music Macro Language (MML) 形式の文字列をStandard MIDI File (SMF) へ変換するRustライブラリです。
-- 4パスアーキテクチャを採用し、MMLの解析、抽象構文木の構築、MIDIイベント生成を経てSMFを作成します。
-- コマンドラインインターフェース (CLI) を提供し、MMLによる楽曲を簡単に作成・再生できます。
-- 📅 2026-01-12 (UTC) / 2026-01-12 (JST)
-
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
 File Change Monitoring Tool - Detects file changes and executes commands
 
@@ -408,20 +443,6 @@ collection of reusable GitHub Actions workflows for multiple projects
 - 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOK
 - ✅ メンテは一括、プロジェクト開発に集中できます
 - 📅 2025-12-11 (UTC) / 2025-12-12 (JST)
-
-## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
-[WIP] smf-to-ym2151log のRust版
-
-<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
-
-- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
-- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
-
-### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust実装です。
-- 2パス処理アーキテクチャを採用し、プログラムチェンジによる音色切り替えと型安全性・高パフォーマンスを実現しています。
-- CLIツールとしてだけでなく、他のRustプロジェクトへのライブラリ提供も視野に入れた設計となっています。
-- 📅 2025-12-03 (UTC) / 2025-12-04 (JST)
 
 ## [chord2mml](https://cat2151.github.io/chord2mml/)
 A library transpiles Chord notation into Music Macro Language.
