@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-20 (UTC) / 2026-01-21 (JST)
+Last Updated: 2026-01-21 (UTC) / 2026-01-22 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,9 +93,32 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けにGitHub APIを使用してリポジトリ一覧を自動生成します。
-- リポジトリ情報を元に、SEOに最適化されたMarkdownファイルを動的に作成します。
-- 各リポジトリの概要や分類機能を付与し、検索エンジンからのサイトの可視性を向上させます。
+- GitHub APIを利用し、ユーザーのリポジトリ情報を自動で取得します。
+- 取得した情報からGitHub Pages向けにSEO最適化されたリポジトリ一覧を自動生成します。
+- これにより、GitHub Pagesの検索エンジンクロールとLLM参照性を向上させます。
+- 📅 2026-01-21 (UTC) / 2026-01-22 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-01-21 (UTC) / 2026-01-21 (JST)
+
+## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
+[WIP] smf-to-ym2151log のRust版
+
+<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
+
+- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
+- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
+
+### Project Highlights
+- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログに変換するRustツールです。
+- 複雑なチャンネル割り当て戦略と2パス処理アーキテクチャで、高品質なYM2151出力を生成します。
+- カスタムYM2151音色に対応し、他のRustプロジェクトからライブラリとしても利用可能です。
 - 📅 2026-01-20 (UTC) / 2026-01-21 (JST)
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
@@ -111,29 +134,6 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - 独自の4パスアーキテクチャを採用し、構文解析、抽象構文木(AST)構築、MIDIイベント生成、SMF作成の一連の処理を行います。
 - コマンドラインツールとしても機能し、MML入力からMIDIファイル生成、さらには外部プレイヤーによる自動再生までをサポートします。
 - 📅 2026-01-20 (UTC) / 2026-01-21 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-01-20 (UTC) / 2026-01-21 (JST)
-
-## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
-[WIP] smf-to-ym2151log のRust版
-
-<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
-
-- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
-- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
-
-### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログに変換するRustツールです。
-- 複雑なチャンネル割り当て戦略と2パス処理アーキテクチャで、高品質なYM2151出力を生成します。
-- カスタムYM2151音色に対応し、他のRustプロジェクトからライブラリとしても利用可能です。
-- 📅 2026-01-20 (UTC) / 2026-01-20 (JST)
 
 ## [web-ym2151](https://cat2151.github.io/web-ym2151/)
 
