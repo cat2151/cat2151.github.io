@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-22 (UTC) / 2026-01-23 (JST)
+Last Updated: 2026-01-23 (UTC) / 2026-01-24 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,19 +93,33 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、ユーザーのリポジトリ情報を自動取得します。
-- GitHub Pages向けにSEO最適化されたリポジトリ一覧Markdownを生成します。
-- 検索エンジンからの発見性を高め、LLM連携の効率化に貢献します。
-- 📅 2026-01-22 (UTC) / 2026-01-23 (JST)
+- GitHub Pagesサイト（`<username>.github.io`）用に、自身のGitHubリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを利用し、リポジトリ情報を取得してSEOに最適化されたMarkdownファイルを自動作成します。
+- これにより、検索エンジンからの発見性を高め、リポジトリ情報をより多くの人やAIに届けます。
+- 📅 2026-01-23 (UTC) / 2026-01-24 (JST)
 
 ## [obsidian-cat-jump](https://github.com/cat2151/obsidian-cat-jump)
+Quickly jump to lines using a-z labels.
 
-<a href="https://github.com/cat2151/obsidian-cat-jump/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+<a href="https://github.com/cat2151/obsidian-cat-jump/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: obsidian-plugin](https://img.shields.io/badge/Topic-obsidian--plugin-lightblue)
 
 - **Repository**: [https://github.com/cat2151/obsidian-cat-jump](https://github.com/cat2151/obsidian-cat-jump)
 - **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-01-22 (UTC) / 2026-01-22 (JST)
+- 📅 2026-01-23 (UTC) / 2026-01-23 (JST)
+
+## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
+A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
+
+<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/fighting-game-button-challenge"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
+- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
+
+### Project Highlights
+- 格ゲーのボタン練習に特化したWindows用アプリケーションです。
+- ランダムに表示されるお題に対し、正しいボタン入力でスコアを獲得します。
+- 常駐型でゲームの邪魔にならず、素早い反応と正確な入力の反復練習をサポートします。
+- 📅 2026-01-23 (UTC) / 2026-01-23 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -114,7 +128,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2026-01-21 (UTC) / 2026-01-21 (JST)
+- 📅 2026-01-22 (UTC) / 2026-01-23 (JST)
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
@@ -396,20 +410,6 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - Rustで開発されており、JSON音楽データを効率的に処理し、低遅延での演奏やWAVファイル出力に対応しています。
 - 名前付きパイプによるプロセス間通信を利用し、プログラムからのシームレスな制御やインタラクティブな演奏切り替えを可能にします。
 - 📅 2026-01-04 (UTC) / 2026-01-05 (JST)
-
-## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
-A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
-
-<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/fighting-game-button-challenge"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
-- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
-
-### Project Highlights
-- 格ゲーのボタン練習に特化したWindows用アプリケーションです。
-- ランダムに表示されるお題に対し、正しいボタン入力でスコアを獲得します。
-- 常駐型でゲームの邪魔にならず、素早い反応と正確な入力の反復練習をサポートします。
-- 📅 2026-01-03 (UTC) / 2026-01-04 (JST)
 
 ## [super-easy-vim](https://cat2151.github.io/super-easy-vim/)
 [WIP] vim初心者に成功体験を与える用のジョークアプリ。vimのサブセット。極端に機能を削減し、モードとキーバインドを過剰に派手に表示する
