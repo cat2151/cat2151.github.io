@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-23 (UTC) / 2026-01-24 (JST)
+Last Updated: 2026-01-24 (UTC) / 2026-01-25 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト（`<username>.github.io`）用に、自身のGitHubリポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用し、リポジトリ情報を取得してSEOに最適化されたMarkdownファイルを自動作成します。
-- これにより、検索エンジンからの発見性を高め、リポジトリ情報をより多くの人やAIに届けます。
-- 📅 2026-01-23 (UTC) / 2026-01-24 (JST)
+- GitHub Pagesサイト向けに、リポジトリ一覧を自動生成するシステムです。
+- GitHub APIを利用し、Jekyllに対応したSEO最適化済みのMarkdownファイルを生成します。
+- 検索エンジンからのクロールを促進し、LLMによるリポジトリ参照成功率の向上を目指します。
+- 📅 2026-01-24 (UTC) / 2026-01-25 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-01-24 (UTC) / 2026-01-24 (JST)
 
 ## [obsidian-cat-jump](https://github.com/cat2151/obsidian-cat-jump)
 Quickly jump to lines using a-z labels.
@@ -120,15 +129,6 @@ A tool to practice button inputs for fighting games on Windows. Ideal for leverl
 - ランダムに表示されるお題に対し、正しいボタン入力でスコアを獲得します。
 - 常駐型でゲームの邪魔にならず、素早い反応と正確な入力の反復練習をサポートします。
 - 📅 2026-01-23 (UTC) / 2026-01-23 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-01-22 (UTC) / 2026-01-23 (JST)
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
