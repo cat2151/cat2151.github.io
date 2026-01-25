@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-24 (UTC) / 2026-01-25 (JST)
+Last Updated: 2026-01-25 (UTC) / 2026-01-26 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けに、リポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用し、Jekyllに対応したSEO最適化済みのMarkdownファイルを生成します。
-- 検索エンジンからのクロールを促進し、LLMによるリポジトリ参照成功率の向上を目指します。
-- 📅 2026-01-24 (UTC) / 2026-01-25 (JST)
+- GitHub APIを活用し、リポジトリ情報を自動取得するPythonシステムです。
+- JekyllベースのGitHub Pages向けに、SEO最適化されたリポジトリ一覧Markdownを生成します。
+- 検索エンジンでの発見性を高め、LLMによるリポジトリ参照の改善を支援します。
+- 📅 2026-01-25 (UTC) / 2026-01-26 (JST)
+
+## [obsidian-cat-jump](https://cat2151.github.io/obsidian-cat-jump/)
+Quickly jump to lines using a-z labels.
+
+<a href="https://cat2151.github.io/obsidian-cat-jump/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: obsidian-plugin](https://img.shields.io/badge/Topic-obsidian--plugin-lightblue)
+
+- **Repository**: [https://github.com/cat2151/obsidian-cat-jump](https://github.com/cat2151/obsidian-cat-jump)
+- **GitHub Pages**: [https://cat2151.github.io/obsidian-cat-jump/](https://cat2151.github.io/obsidian-cat-jump/)
+- 📅 2026-01-25 (UTC) / 2026-01-25 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -105,16 +114,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2026-01-24 (UTC) / 2026-01-24 (JST)
-
-## [obsidian-cat-jump](https://github.com/cat2151/obsidian-cat-jump)
-Quickly jump to lines using a-z labels.
-
-<a href="https://github.com/cat2151/obsidian-cat-jump/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: obsidian-plugin](https://img.shields.io/badge/Topic-obsidian--plugin-lightblue)
-
-- **Repository**: [https://github.com/cat2151/obsidian-cat-jump](https://github.com/cat2151/obsidian-cat-jump)
-- **GitHub Pages**: None
-- 📅 2026-01-23 (UTC) / 2026-01-23 (JST)
+- 📅 2026-01-25 (UTC) / 2026-01-25 (JST)
 
 ## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
 A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
