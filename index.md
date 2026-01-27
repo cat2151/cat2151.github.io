@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-26 (UTC) / 2026-01-27 (JST)
+Last Updated: 2026-01-27 (UTC) / 2026-01-28 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,9 +93,32 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、ユーザーのリポジトリ情報を自動で取得します。
-- 取得した情報から、GitHub Pages向けにSEO最適化されたリポジトリ一覧Markdownを生成します。
-- 検索エンジンやLLMからの参照性を高め、開発効率向上に貢献します。
+- GitHub APIを利用し、ユーザーのリポジトリ情報を自動で取得・処理するシステムです。
+- 取得した情報から、GitHub Pages向けにSEO最適化されたリポジトリ一覧のMarkdownファイルを生成します。
+- これにより、検索エンジンへのインデックスを促進し、LLMによるリポジトリ参照の精度向上に貢献します。
+- 📅 2026-01-27 (UTC) / 2026-01-28 (JST)
+
+## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
+マウスで鳴らせるオシレータ・ハードシンク・シンセサイザー
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat-oscillator-sync](https://github.com/cat2151/cat-oscillator-sync)
+- **GitHub Pages**: [https://cat2151.github.io/cat-oscillator-sync/](https://cat2151.github.io/cat-oscillator-sync/)
+
+### Project Highlights
+- マウス操作でリアルタイムに音響合成パラメータを制御するインタラクティブなシンセサイザーです。
+- ハードシンク技術と指数平滑化により、豊かで滑らかな音色を生成します。
+- Python, Rust, Go, TypeScriptなど複数の言語で実装され、それぞれの環境で動作検証されています。
+- 📅 2026-01-27 (UTC) / 2026-01-28 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
 - 📅 2026-01-26 (UTC) / 2026-01-27 (JST)
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
@@ -111,15 +134,6 @@ File Change Monitoring Tool - Detects file changes and executes commands
 - TOML形式の設定ファイルにより、監視対象や実行コマンド、監視間隔などを柔軟にカスタマイズ可能です。
 - 軽量設計で、特にWindows環境ではフォーカスを奪わないコマンド実行にも対応しており、開発や自動化タスクを効率化します。
 - 📅 2026-01-26 (UTC) / 2026-01-27 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-01-25 (UTC) / 2026-01-26 (JST)
 
 ## [obsidian-cat-jump](https://cat2151.github.io/obsidian-cat-jump/)
 Quickly jump to lines using a-z labels.
@@ -577,20 +591,6 @@ A library for using abcjs easily in the browser.
 - easyabcjs6は、ウェブブラウザ上でABC音楽記譜法を簡単に表示し、再生するためのJavaScriptライブラリです。
 - 人気の`abcjs`ライブラリをラップし、シンプルなHTMLとJavaScriptコードで五線譜の描画とMIDI音源による演奏を可能にします。
 - 将来的にABC音楽記譜法以外のテキストベースの音楽フォーマットにも対応し、多様な音楽表示・演奏システム構築への基盤となることを目指しています。
-- 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
-
-## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
-マウスで鳴らせるオシレータ・ハードシンク・シンセサイザー
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat-oscillator-sync](https://github.com/cat2151/cat-oscillator-sync)
-- **GitHub Pages**: [https://cat2151.github.io/cat-oscillator-sync/](https://cat2151.github.io/cat-oscillator-sync/)
-
-### Project Highlights
-- マウスの位置に応じてリアルタイムに音響パラメータを制御するインタラクティブなシンセサイザーです。
-- ハードシンク技術により豊かで表現力のある音色を生成し、X/Y軸でマスター・スレーブ周波数を制御します。
-- Python, Rust, Go, TypeScriptなど多言語での実装検証と学習を目的としたクロスプラットフォームプロジェクトです。
 - 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
 
 ## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
