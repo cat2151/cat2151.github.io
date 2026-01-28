@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-27 (UTC) / 2026-01-28 (JST)
+Last Updated: 2026-01-28 (UTC) / 2026-01-29 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、ユーザーのリポジトリ情報を自動で取得・処理するシステムです。
-- 取得した情報から、GitHub Pages向けにSEO最適化されたリポジトリ一覧のMarkdownファイルを生成します。
-- これにより、検索エンジンへのインデックスを促進し、LLMによるリポジトリ参照の精度向上に貢献します。
-- 📅 2026-01-27 (UTC) / 2026-01-28 (JST)
+- GitHub APIを利用し、ユーザーのリポジトリ情報を自動で取得・整理するシステムです。
+- 取得した情報から、JekyllベースのGitHub Pagesサイト向けにSEO最適化されたリポジトリ一覧を自動生成します。
+- これにより、プロジェクトの公開情報が検索エンジンにクロールされやすくなり、LLMなどからの参照性も向上します。
+- 📅 2026-01-28 (UTC) / 2026-01-29 (JST)
 
 ## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
 マウスで鳴らせるオシレータ・ハードシンク・シンセサイザー
@@ -107,10 +107,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat-oscillator-sync/](https://cat2151.github.io/cat-oscillator-sync/)
 
 ### Project Highlights
-- マウス操作でリアルタイムに音響合成パラメータを制御するインタラクティブなシンセサイザーです。
-- ハードシンク技術と指数平滑化により、豊かで滑らかな音色を生成します。
-- Python, Rust, Go, TypeScriptなど複数の言語で実装され、それぞれの環境で動作検証されています。
-- 📅 2026-01-27 (UTC) / 2026-01-28 (JST)
+- マウス操作でリアルタイムに音色を制御できる、インタラクティブなシンセサイザーです。
+- ハードシンク（オシレータ同期）技術を活用し、豊かで表現力豊かなサウンドを生成します。
+- Python, Rust, Go, TypeScriptといった多様な言語で実装された音響合成の実験プロジェクトです。
+- 📅 2026-01-28 (UTC) / 2026-01-29 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -119,7 +119,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2026-01-26 (UTC) / 2026-01-27 (JST)
+- 📅 2026-01-28 (UTC) / 2026-01-29 (JST)
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
 File Change Monitoring Tool - Detects file changes and executes commands
