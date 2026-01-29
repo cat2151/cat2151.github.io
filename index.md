@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-28 (UTC) / 2026-01-29 (JST)
+Last Updated: 2026-01-29 (UTC) / 2026-01-30 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,9 +93,18 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、ユーザーのリポジトリ情報を自動で取得・整理するシステムです。
-- 取得した情報から、JekyllベースのGitHub Pagesサイト向けにSEO最適化されたリポジトリ一覧を自動生成します。
-- これにより、プロジェクトの公開情報が検索エンジンにクロールされやすくなり、LLMなどからの参照性も向上します。
+- GitHub Pagesサイト向けにリポジトリ一覧を自動生成し、WebサイトのSEO（検索エンジン最適化）を強化します。
+- GitHub APIを活用してリポジトリ情報を取得し、Jekyllに対応したマークダウンファイルを出力します。
+- 各リポジトリの概要を自動取得し表示することで、検索エンジンやLLMからの参照性向上を目指します。
+- 📅 2026-01-29 (UTC) / 2026-01-30 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
 - 📅 2026-01-28 (UTC) / 2026-01-29 (JST)
 
 ## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
@@ -110,15 +119,6 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - マウス操作でリアルタイムに音色を制御できる、インタラクティブなシンセサイザーです。
 - ハードシンク（オシレータ同期）技術を活用し、豊かで表現力豊かなサウンドを生成します。
 - Python, Rust, Go, TypeScriptといった多様な言語で実装された音響合成の実験プロジェクトです。
-- 📅 2026-01-28 (UTC) / 2026-01-29 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
 - 📅 2026-01-28 (UTC) / 2026-01-29 (JST)
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
