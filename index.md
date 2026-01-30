@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 88 projects (⭐53 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 89 projects (⭐53 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 88 projects (⭐53 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 89 projects (⭐53 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 88 open source projects.",
+      "description": "Programmer and developer. Publishing 89 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 88 projects (⭐53 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 89 projects (⭐53 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-29 (UTC) / 2026-01-30 (JST)
+Last Updated: 2026-01-30 (UTC) / 2026-01-31 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2026-01-29 (UTC) / 2026-01-30 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-88-blue) ![Active](https://img.shields.io/badge/Active-60-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-53-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-89-blue) ![Active](https://img.shields.io/badge/Active-61-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-53-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-22_(25.0%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-13_(14.8%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-11_(12.5%25)-dea584?style=flat&logo=rust) ![TypeScript](https://img.shields.io/badge/TypeScript-9_(10.2%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(6.8%25)-e34c26?style=flat&logo=html5)
+![JavaScript](https://img.shields.io/badge/JavaScript-22_(24.7%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-13_(14.6%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-11_(12.4%25)-dea584?style=flat&logo=rust) ![TypeScript](https://img.shields.io/badge/TypeScript-9_(10.1%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(6.7%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けにリポジトリ一覧を自動生成し、WebサイトのSEO（検索エンジン最適化）を強化します。
-- GitHub APIを活用してリポジトリ情報を取得し、Jekyllに対応したマークダウンファイルを出力します。
-- 各リポジトリの概要を自動取得し表示することで、検索エンジンやLLMからの参照性向上を目指します。
-- 📅 2026-01-29 (UTC) / 2026-01-30 (JST)
+- GitHub APIを利用し、リポジトリ情報を自動的に取得・整理するシステムです。
+- 取得した情報からJekyllベースのGitHub Pagesサイト向けにMarkdownファイル群を生成します。
+- GitHub Pagesを通じてリポジトリ一覧や個別のリポジトリページを公開し、SEOとLLMの参照性を向上させることを目指します。
+- 📅 2026-01-30 (UTC) / 2026-01-31 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -105,7 +105,14 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2026-01-28 (UTC) / 2026-01-29 (JST)
+- 📅 2026-01-30 (UTC) / 2026-01-31 (JST)
+
+## [postmate-midi](https://github.com/cat2151/postmate-midi)
+
+- **Repository**: [https://github.com/cat2151/postmate-midi](https://github.com/cat2151/postmate-midi)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-01-30 (UTC) / 2026-01-30 (JST)
 
 ## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
 マウスで鳴らせるオシレータ・ハードシンク・シンセサイザー
