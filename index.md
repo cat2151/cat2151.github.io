@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 89 projects (⭐53 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 89 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 89 projects (⭐53 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 89 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -50,7 +50,7 @@ json_ld: |
       "description": "Programmer and developer. Publishing 89 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 89 projects (⭐53 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 89 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-01-30 (UTC) / 2026-01-31 (JST)
+Last Updated: 2026-01-31 (UTC) / 2026-02-01 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,7 +71,7 @@ Last Updated: 2026-01-30 (UTC) / 2026-01-31 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-89-blue) ![Active](https://img.shields.io/badge/Active-61-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-53-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-89-blue) ![Active](https://img.shields.io/badge/Active-61-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-56-gold)
 
 ### Core Technologies
 
@@ -93,10 +93,56 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を自動的に取得・整理するシステムです。
-- 取得した情報からJekyllベースのGitHub Pagesサイト向けにMarkdownファイル群を生成します。
-- GitHub Pagesを通じてリポジトリ一覧や個別のリポジトリページを公開し、SEOとLLMの参照性を向上させることを目指します。
-- 📅 2026-01-30 (UTC) / 2026-01-31 (JST)
+- GitHub APIを利用し、リポジトリ情報を自動で取得するシステムです。
+- JekyllベースのGitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧のMarkdownファイルを生成します。
+- 検索エンジンの視認性を高め、LLMによるリポジトリ参照の精度向上を目的としています。
+- 📅 2026-01-31 (UTC) / 2026-02-01 (JST)
+
+## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
+A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
+
+<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/fighting-game-button-challenge"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
+- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
+
+### Project Highlights
+- 格ゲーのボタン練習アプリ
+- ランダムでお題が表示されます
+- お題に合ったボタンを押すとスコアが入って次のお題が表示されます
+- 📅 2026-01-31 (UTC) / 2026-02-01 (JST)
+
+## [web-ym2151](https://cat2151.github.io/web-ym2151/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
+
+- **Repository**: [https://github.com/cat2151/web-ym2151](https://github.com/cat2151/web-ym2151)
+- **GitHub Pages**: [https://cat2151.github.io/web-ym2151/](https://cat2151.github.io/web-ym2151/)
+- **Overview**: No description available
+- 📅 2026-01-31 (UTC) / 2026-02-01 (JST)
+
+## [mml-template-generator](https://cat2151.github.io/mml-template-generator/)
+A lightweight, browser-based generator for creating Music Macro Language (MML) templates.
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+
+- **Repository**: [https://github.com/cat2151/mml-template-generator](https://github.com/cat2151/mml-template-generator)
+- **GitHub Pages**: [https://cat2151.github.io/mml-template-generator/](https://cat2151.github.io/mml-template-generator/)
+
+### Project Highlights
+- 最小限の入力（例：cdefgab、ドレミ）から、各種MMLコンパイラ向けのMMLコードを生成するツールです。
+- MMLでの曲作りを始める際によくあるコンパイルエラーのハードルを低減し、すぐに音が出せるMMLを提供します。
+- シンプルなウェブインターフェースを通じて、入力された音階から利用目的に合わせたMMLテンプレートを手軽に生成できます。
+- 📅 2026-01-31 (UTC) / 2026-02-01 (JST)
+
+## [easy-web-midi-sequencer-template](https://cat2151.github.io/easy-web-midi-sequencer-template/)
+webpageを開くだけでMIDI楽器を鳴らせる、最小規模のソースコード、テンプレート用
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: sequencer-midi](https://img.shields.io/badge/Topic-sequencer--midi-lightblue) ![Topic: template-project](https://img.shields.io/badge/Topic-template--project-lightblue) ![Topic: web-midi-api](https://img.shields.io/badge/Topic-web--midi--api-lightblue)
+
+- **Repository**: [https://github.com/cat2151/easy-web-midi-sequencer-template](https://github.com/cat2151/easy-web-midi-sequencer-template)
+- **GitHub Pages**: [https://cat2151.github.io/easy-web-midi-sequencer-template/](https://cat2151.github.io/easy-web-midi-sequencer-template/)
+- 📅 2026-01-31 (UTC) / 2026-02-01 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -105,7 +151,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2026-01-30 (UTC) / 2026-01-31 (JST)
+- 📅 2026-01-31 (UTC) / 2026-01-31 (JST)
 
 ## [postmate-midi](https://github.com/cat2151/postmate-midi)
 
@@ -151,20 +197,6 @@ Quickly jump to lines using a-z labels.
 - **GitHub Pages**: [https://cat2151.github.io/obsidian-cat-jump/](https://cat2151.github.io/obsidian-cat-jump/)
 - 📅 2026-01-25 (UTC) / 2026-01-25 (JST)
 
-## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
-A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
-
-<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/fighting-game-button-challenge"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
-- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
-
-### Project Highlights
-- 格ゲーのボタン練習に特化したWindows用アプリケーションです。
-- ランダムに表示されるお題に対し、正しいボタン入力でスコアを獲得します。
-- 常駐型でゲームの邪魔にならず、素早い反応と正確な入力の反復練習をサポートします。
-- 📅 2026-01-23 (UTC) / 2026-01-23 (JST)
-
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
 
@@ -192,15 +224,6 @@ A tool to practice button inputs for fighting games on Windows. Ideal for leverl
 - 独自の4パスアーキテクチャを採用し、構文解析、抽象構文木(AST)構築、MIDIイベント生成、SMF作成の一連の処理を行います。
 - コマンドラインツールとしても機能し、MML入力からMIDIファイル生成、さらには外部プレイヤーによる自動再生までをサポートします。
 - 📅 2026-01-20 (UTC) / 2026-01-21 (JST)
-
-## [web-ym2151](https://cat2151.github.io/web-ym2151/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
-
-- **Repository**: [https://github.com/cat2151/web-ym2151](https://github.com/cat2151/web-ym2151)
-- **GitHub Pages**: [https://cat2151.github.io/web-ym2151/](https://cat2151.github.io/web-ym2151/)
-- **Overview**: No description available
-- 📅 2026-01-20 (UTC) / 2026-01-20 (JST)
 
 ## [lib-installation-examples](https://github.com/cat2151/lib-installation-examples)
 
@@ -502,20 +525,6 @@ Obsidian plugin. Playing Music Macro Language and Chord notation.
 - 外部のMML/コード進行トランスパイラとabcjsを利用し、楽譜描画と音源再生を実現。
 - 📅 2025-12-02 (UTC) / 2025-12-02 (JST)
 
-## [mml-template-generator](https://cat2151.github.io/mml-template-generator/)
-A lightweight, browser-based generator for creating Music Macro Language (MML) templates.
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
-
-- **Repository**: [https://github.com/cat2151/mml-template-generator](https://github.com/cat2151/mml-template-generator)
-- **GitHub Pages**: [https://cat2151.github.io/mml-template-generator/](https://cat2151.github.io/mml-template-generator/)
-
-### Project Highlights
-- 最小限の入力（例：cdefgab、ドレミ）から、各種MMLコンパイラ向けのMMLコードを生成するツールです。
-- MMLでの曲作りを始める際によくあるコンパイルエラーのハードルを低減し、すぐに音が出せるMMLを提供します。
-- シンプルなウェブインターフェースを通じて、入力された音階から利用目的に合わせたMMLテンプレートを手軽に生成できます。
-- 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
-
 ## [postmate-midi-experimental](https://cat2151.github.io/postmate-midi-experimental/)
 An experimental project for MIDI connections and audio transmission between multiple webpages using only the browser and postMessage.
 
@@ -676,15 +685,6 @@ webpageを開くだけでソフトシンセで音が鳴る、最小規模のソ�
 
 - **Repository**: [https://github.com/cat2151/easy-web-midi-synth-template](https://github.com/cat2151/easy-web-midi-synth-template)
 - **GitHub Pages**: [https://cat2151.github.io/easy-web-midi-synth-template/](https://cat2151.github.io/easy-web-midi-synth-template/)
-- 📅 2025-06-22 (UTC) / 2025-06-22 (JST)
-
-## [easy-web-midi-sequencer-template](https://cat2151.github.io/easy-web-midi-sequencer-template/)
-webpageを開くだけでMIDI楽器を鳴らせる、最小規模のソースコード、テンプレート用
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: sequencer-midi](https://img.shields.io/badge/Topic-sequencer--midi-lightblue) ![Topic: template-project](https://img.shields.io/badge/Topic-template--project-lightblue) ![Topic: web-midi-api](https://img.shields.io/badge/Topic-web--midi--api-lightblue)
-
-- **Repository**: [https://github.com/cat2151/easy-web-midi-sequencer-template](https://github.com/cat2151/easy-web-midi-sequencer-template)
-- **GitHub Pages**: [https://cat2151.github.io/easy-web-midi-sequencer-template/](https://cat2151.github.io/easy-web-midi-sequencer-template/)
 - 📅 2025-06-22 (UTC) / 2025-06-22 (JST)
 
 ## [MML-editor](https://cat2151.github.io/MML-editor/)
