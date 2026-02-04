@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-02-03 (UTC) / 2026-02-04 (JST)
+Last Updated: 2026-02-04 (UTC) / 2026-02-05 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,24 +93,47 @@ Last Updated: 2026-02-03 (UTC) / 2026-02-04 (JST)
 - **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
 
 ### Project Highlights
-- Standard MIDI Files (SMF) を、ヤマハYM2151 FM音源チップ用のレジスタ書き込みログ（JSON形式）に変換するツールです。
-- Rustで実装されており、高いパフォーマンスと型安全性を実現し、Webブラウザ (WebAssembly) でも利用できます。
-- MIDIのプログラムチェンジに対応し、カスタム音色を外部JSONファイルから読み込んで適用することが可能です。
-- 📅 2026-02-03 (UTC) / 2026-02-04 (JST)
+- Standard MIDIファイル（SMF）をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製ツールおよびライブラリです。
+- MIDIチャンネルの和音数に基づくYM2151チャンネル割り当てやドラムチャンネル優先処理などの高度なボイス管理機能を持ちます。
+- WebAssembly対応によるブラウザ実行、カスタム音色ファイルによるプログラムチェンジ対応、そしてライブラリAPI提供により多様な用途で利用可能です。
+- 📅 2026-02-04 (UTC) / 2026-02-05 (JST)
+
+## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
+MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
+
+<a href="https://cat2151.github.io/tonejs-mml-to-json/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/tonejs-mml-to-json"><img src="https://img.shields.io/badge/DeepWiki-Documentation-blue?logo=book" alt="DeepWiki"></a> <a href="https://cat2151.github.io/tonejs-mml-to-json/index.html"><img src="https://img.shields.io/badge/🚀-Live%20Demo-brightgreen.svg" alt="Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
+- 📅 2026-02-04 (UTC) / 2026-02-05 (JST)
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを活用し、自身のGitHubリポジトリ情報を自動で収集・整理するシステムです。
+- 収集した情報に基づき、SEOに最適化されたJekyll/GitHub Pages用のMarkdownファイルを自動生成します。
+- これにより、公開リポジトリ一覧や各リポジトリの概要が検索エンジンに適切にインデックスされ、参照性を高めます。
+- 📅 2026-02-04 (UTC) / 2026-02-05 (JST)
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
-[WIP] mmlabc-to-smfのrust版
+A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 
-<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mmlabc-to-smf-rust"><img src="https://img.shields.io/badge/📖-DeepWiki-blue.svg" alt="DeepWiki"></a>
+<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: mml-compiler](https://img.shields.io/badge/Topic-mml--compiler-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mmlabc-to-smf-rust"><img src="https://img.shields.io/badge/📖-DeepWiki-blue.svg" alt="DeepWiki"></a>
 
 - **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
 - **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
 
 ### Project Highlights
-- Music Macro Language (MML) 形式の文字列を、Standard MIDI File (SMF) へ変換するRust製のライブラリです。
-- 構文解析からSMF生成までを4段階の明確なパスで処理し、高い拡張性と保守性を実現しています。
-- コマンドラインツールとしてMMLの入力・再生・MIDIファイル出力機能を提供し、WebAssembly版のデモも用意されています。
-- 📅 2026-02-03 (UTC) / 2026-02-04 (JST)
+- Music Macro Language (MML) 形式の文字列を、Standard MIDI File (SMF) へ変換するRustライブラリです。
+- MML入力は4つの主要パス（トークン化、AST変換、MIDIイベント生成、SMF作成）を経て、多チャンネルのMIDIファイルとして出力されます。
+- ネイティブアプリケーションだけでなく、WebAssemblyを通じてブラウザアプリケーションからも利用可能な音楽生成の基盤を提供します。
+- 📅 2026-02-04 (UTC) / 2026-02-05 (JST)
 
 ## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
 A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
@@ -121,24 +144,29 @@ A tool to practice button inputs for fighting games on Windows. Ideal for leverl
 - **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
 
 ### Project Highlights
-- 格闘ゲームのボタン操作練習に特化したWindows用アプリです。
-- ランダムに表示されるお題に合わせてボタンを入力し、反射神経と正確性を鍛えます。
-- 常駐型で、ゲーム起動中でも邪魔にならず、素早いウォームアップや反復練習を支援します。
-- 📅 2026-02-03 (UTC) / 2026-02-04 (JST)
+- 格闘ゲームのボタン練習に特化したWindows用アプリケーションです。
+- ランダムに表示されるお題に合わせボタンを入力し、スコアを競いながら反応速度と正確性を鍛えます。
+- 常駐型で、ゲームプレイ中でも邪魔にならないよう設計されており、プレイヤーのスキルアップをサポートします。
+- 📅 2026-02-04 (UTC) / 2026-02-05 (JST)
 
-## [web-ym2151](https://cat2151.github.io/web-ym2151/)
+## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
 
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c)
+<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 
-- **Repository**: [https://github.com/cat2151/web-ym2151](https://github.com/cat2151/web-ym2151)
-- **GitHub Pages**: [https://cat2151.github.io/web-ym2151/](https://cat2151.github.io/web-ym2151/)
+- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
 - **Overview**: No description available
-- 📅 2026-02-03 (UTC) / 2026-02-04 (JST)
+
+### Project Highlights
+- GitHub Copilotが自動実装を行うPull Requestのフェーズを監視するPythonツールです。
+- 認証済みGitHubユーザーの全所有リポジトリを対象に、PRの状態変化に応じた通知や自動アクションを実行します。
+- GraphQL APIとブラウザ自動化を活用し、PRのDraft/レビュー中/レビュー待ちなどを効率的に検知・制御します。
+- 📅 2026-02-04 (UTC) / 2026-02-05 (JST)
 
 ## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
 Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
 
-<a href="https://cat2151.github.io/tonejs-json-sequencer/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/tonejs-json-sequencer"><img src="https://img.shields.io/badge/DeepWiki-Documentation-blue?logo=book" alt="DeepWiki"></a> <a href="https://cat2151.github.io/tonejs-json-sequencer/demo/index.html"><img src="https://img.shields.io/badge/🚀-Live%20Demo-brightgreen.svg" alt="Demo"></a>
+<a href="https://cat2151.github.io/tonejs-json-sequencer/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/tonejs-json-sequencer"><img src="https://img.shields.io/badge/DeepWiki-Documentation-blue?logo=book" alt="DeepWiki"></a> <a href="https://cat2151.github.io/tonejs-json-sequencer/index.html"><img src="https://img.shields.io/badge/🚀-Live%20Demo-brightgreen.svg" alt="Demo"></a>
 
 - **Repository**: [https://github.com/cat2151/tonejs-json-sequencer](https://github.com/cat2151/tonejs-json-sequencer)
 - **GitHub Pages**: [https://cat2151.github.io/tonejs-json-sequencer/](https://cat2151.github.io/tonejs-json-sequencer/)
@@ -147,7 +175,16 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 - Tone.jsの音色・エフェクト・演奏をJSONで記述できる軽量ライブラリ
 - コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
 - 時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
-- 📅 2026-02-03 (UTC) / 2026-02-04 (JST)
+- 📅 2026-02-04 (UTC) / 2026-02-05 (JST)
+
+## [web-ym2151](https://cat2151.github.io/web-ym2151/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue)
+
+- **Repository**: [https://github.com/cat2151/web-ym2151](https://github.com/cat2151/web-ym2151)
+- **GitHub Pages**: [https://cat2151.github.io/web-ym2151/](https://cat2151.github.io/web-ym2151/)
+- **Overview**: No description available
+- 📅 2026-02-04 (UTC) / 2026-02-05 (JST)
 
 ## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
 This oscilloscope visualizes audio from your microphone or wav-file with zero-cross detection for stable waveform display.
@@ -158,10 +195,10 @@ This oscilloscope visualizes audio from your microphone or wav-file with zero-cr
 - **GitHub Pages**: [https://cat2151.github.io/cat-oscilloscope/](https://cat2151.github.io/cat-oscilloscope/)
 
 ### Project Highlights
-- ブラウザ上で動作するオシロスコープ風の波形ビジュアライザーです。
-- Rust/WebAssemblyで高速なオーディオデータ処理を行い、5種類の周波数推定方式をサポートします。
-- マイク入力やオーディオファイルからのリアルタイム波形解析・可視化、およびnpmライブラリとしての利用が可能です。
-- 📅 2026-02-03 (UTC) / 2026-02-04 (JST)
+- ブラウザ上で動作する、高機能なオシロスコープ風の波形ビジュアライザーです。
+- Rust/WebAssemblyによる高速なデータ処理と、5つの周波数推定方式を提供します。
+- マイク入力やWAVファイル再生に対応し、npmライブラリとしても利用可能です。
+- 📅 2026-02-04 (UTC) / 2026-02-05 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -170,16 +207,7 @@ This oscilloscope visualizes audio from your microphone or wav-file with zero-cr
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2026-02-03 (UTC) / 2026-02-03 (JST)
-
-## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
-MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
-
-<a href="https://cat2151.github.io/tonejs-mml-to-json/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/tonejs-mml-to-json"><img src="https://img.shields.io/badge/DeepWiki-Documentation-blue?logo=book" alt="DeepWiki"></a> <a href="https://cat2151.github.io/tonejs-mml-to-json/index.html"><img src="https://img.shields.io/badge/🚀-Live%20Demo-brightgreen.svg" alt="Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
-- 📅 2026-02-03 (UTC) / 2026-02-03 (JST)
+- 📅 2026-02-04 (UTC) / 2026-02-05 (JST)
 
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
 WIP
@@ -218,20 +246,6 @@ A Quartz transformer plugin that converts MML (Music Macro Language) and chord n
 - 音楽教育、作曲支援、または単に音楽コンテンツを共有したいユーザーが、手軽に楽譜をウェブページに埋め込むことを可能にします。
 - 📅 2026-02-02 (UTC) / 2026-02-02 (JST)
 
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を自動で取得するシステムです。
-- JekyllベースのGitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧のMarkdownファイルを生成します。
-- 検索エンジンの視認性を高め、LLMによるリポジトリ参照の精度向上を目的としています。
-- 📅 2026-02-01 (UTC) / 2026-02-02 (JST)
-
 ## [wavlpf](https://cat2151.github.io/wavlpf/)
 Software synthesizer. Simple. Non-realtime rendering
 
@@ -244,20 +258,6 @@ Software synthesizer. Simple. Non-realtime rendering
 - RustとWebAssemblyで実装された、ローパスフィルター（LPF）を搭載したシンプルなソフトウェアシンセサイザーです。
 - 高速な信号処理とリアルタイムの波形ビジュアライゼーションを提供し、インタラクティブなフィルター制御が可能です。
 - 生成したオーディオのWAVエクスポート、設定の永続化、およびWebブラウザでのデモ利用をサポートしています。
-- 📅 2026-02-01 (UTC) / 2026-02-02 (JST)
-
-## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
-
-<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
-- **Overview**: No description available
-
-### Project Highlights
-- GitHub Copilotによる自動実装フェーズのプルリクエスト(PR)を効率的に監視するツールです。
-- 認証済みGitHubユーザーが所有するリポジトリを対象に、PRのフェーズを自動判定します。
-- フェーズに応じた自動通知、コメント投稿、PRのReady化、自動マージ、Issue割り当てなどのアクションを実行します。
 - 📅 2026-02-01 (UTC) / 2026-02-02 (JST)
 
 ## [postmate-midi](https://github.com/cat2151/postmate-midi)
