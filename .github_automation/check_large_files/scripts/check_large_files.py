@@ -79,7 +79,7 @@ def should_exclude(file_path: str, exclude_patterns: List[str], exclude_files: L
         # Also check if pattern matches the full path (for root-level files)
         # Remove leading **/ to match files at any level including root
         if pattern.startswith("**/"):
-            simple_pattern = pattern[3:]  # Remove '**/
+            simple_pattern = pattern[3:]  # Remove '**/'
             if path_obj.match(simple_pattern):
                 return True
         # For patterns like "dist/**", check if file is under that directory
@@ -199,7 +199,11 @@ def create_output_files(large_files: List[Dict[str, Any]], config: Dict[str, Any
     title_pattern_file = os.path.join(output_dir, "issue_title_pattern.txt")
     with open(title_pattern_file, "w", encoding="utf-8") as f:
         # Extract first meaningful part before colon as search pattern
-        pattern = title.split(":")[0] if ":" in title else title[:TITLE_PATTERN_FALLBACK_LENGTH]
+        if ":" in title:
+            pattern = title.split(":")[0]
+        else:
+            # Use the full title if it's shorter than the fallback length
+            pattern = title if len(title) < TITLE_PATTERN_FALLBACK_LENGTH else title[:TITLE_PATTERN_FALLBACK_LENGTH]
         f.write(pattern)
 
     # Write labels
