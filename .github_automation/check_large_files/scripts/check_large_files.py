@@ -11,7 +11,10 @@ import sys
 from pathlib import Path
 from typing import Any, Dict, List
 
-import tomllib
+try:
+    import tomllib
+except ModuleNotFoundError:
+    import tomli as tomllib
 
 # Constants
 TITLE_PATTERN_FALLBACK_LENGTH = 20  # Length to use when extracting title pattern if no separator found
@@ -55,7 +58,7 @@ def count_lines(file_path: str) -> int:
             if last_byte is None:
                 # Empty file
                 return 0
-            if last_byte != b"\n"[0]:
+            if last_byte != ord("\n"):
                 # File doesn't end with newline, add 1
                 count += 1
             return count
@@ -228,7 +231,18 @@ def main():
     """Main function"""
     # Get paths
     repo_root = os.getenv("GITHUB_WORKSPACE", os.getcwd())
-    config_path = os.path.join(repo_root, ".github_automation", "check_large_files", "check-large-files.toml")
+
+    # Config path can be provided as environment variable or command-line argument
+    config_path = os.getenv("CONFIG_PATH")
+    if not config_path and len(sys.argv) > 1:
+        config_path = sys.argv[1]
+    if not config_path:
+        config_path = os.path.join(repo_root, ".github_automation", "check_large_files", "check-large-files.toml")
+
+    # Make config path absolute if it's relative
+    if not os.path.isabs(config_path):
+        config_path = os.path.join(repo_root, config_path)
+
     output_dir = os.getenv("OUTPUT_DIR", "/tmp/check-large-files-output")
 
     # Load config

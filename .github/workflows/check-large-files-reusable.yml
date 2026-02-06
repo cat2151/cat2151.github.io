@@ -35,6 +35,7 @@ jobs:
         id: check
         env:
           OUTPUT_DIR: ${{ runner.temp }}/check-large-files-output
+          CONFIG_PATH: ${{ inputs.config_path }}
         run: |
           python .github_automation/check_large_files/scripts/check_large_files.py
           
@@ -76,14 +77,17 @@ jobs:
             // Check if similar issue already exists
             // We search all open issues and then filter by title to avoid
             // missing matches when a label does not exist yet.
-            const issues = await github.rest.issues.listForRepo({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              state: 'open',
-              per_page: 30
-            });
+            const issues = await github.paginate(
+              github.rest.issues.listForRepo,
+              {
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                state: 'open',
+                per_page: 100,
+              }
+            );
             
-            const existingIssue = issues.data.find(issue => 
+            const existingIssue = issues.find(issue => 
               issue.title.includes(titlePattern)
             );
             

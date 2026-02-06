@@ -87,7 +87,7 @@ jobs:
 
 ## 要件
 
-- Python 3.11 以降
+- Python 3.11 推奨（`tomli` により 3.11 未満の Python もサポートされます）
 - GitHub Actions 実行環境
 
 ## ライセンス

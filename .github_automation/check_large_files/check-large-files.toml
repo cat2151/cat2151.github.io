@@ -23,7 +23,6 @@ exclude_patterns = [
     # ビルド成果物・依存関係
     "**/node_modules/**",
     "**/dist/**",
-    "dist/**",
     "**/build/**",
     "**/pkg/**",
     "**/public/wasm/**",
