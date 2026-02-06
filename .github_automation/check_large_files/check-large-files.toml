@@ -28,6 +28,7 @@ exclude_patterns = [
     "**/public/wasm/**",
     "**/.git/**",
     "**/target/**",
+    "**/__pycache__/**",
     
     # テストファイル
     "**/*.test.ts",
