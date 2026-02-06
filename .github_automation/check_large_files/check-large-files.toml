@@ -41,6 +41,8 @@ exclude_patterns = [
     "**/*.spec.jsx",
     "**/*.test.py",
     "**/*_test.py",
+    "**/test_*.py",
+    "**/tests/**",
     
     # ドキュメント・設定ファイル（拡張子で除外）
     "**/*.md",
