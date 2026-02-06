@@ -1,4 +1,4 @@
-Last updated: 2026-02-06
+Last updated: 2026-02-07
 
 
 # プロジェクト概要生成プロンプト（来訪者向け）
@@ -187,6 +187,12 @@ project_overview:
 
 ## ファイル階層ツリー
 📄 .editorconfig
+📁 .github_automation/
+  📁 check_large_files/
+    📖 README.md
+    📄 check-large-files.toml
+    📁 scripts/
+      📄 check_large_files.py
 📄 .gitignore
 📄 LICENSE
 📖 README.md
@@ -207,6 +213,7 @@ project_overview:
   📖 16.md
   📖 18.md
   📖 2.md
+  📖 20.md
   📖 4.md
   📖 6.md
   📖 8.md
@@ -239,6 +246,7 @@ project_overview:
 📄 test_project_overview.py
 📁 tests/
   📄 test_badge_generator_integration.py
+  📄 test_check_large_files.py
   📄 test_config.py
   📄 test_date_formatter.py
   📄 test_environment.py
@@ -257,6 +265,7 @@ project_overview:
 関数呼び出し階層を分析できませんでした
 
 ## プロジェクト構造（ファイル一覧）
+.github_automation/check_large_files/README.md
 README.md
 googled947dc864c270e07.html
 index.md
@@ -266,6 +275,7 @@ issue-notes/14.md
 issue-notes/16.md
 issue-notes/18.md
 issue-notes/2.md
+issue-notes/20.md
 issue-notes/4.md
 issue-notes/6.md
 issue-notes/8.md
@@ -282,4 +292,4 @@ src/generate_repo_list/json_ld_template.json
 
 
 ---
-Generated at: 2026-02-06 07:08:58 JST
+Generated at: 2026-02-07 07:06:15 JST

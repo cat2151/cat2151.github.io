@@ -1,4 +1,4 @@
-Last updated: 2026-02-06
+Last updated: 2026-02-07
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -196,10 +196,15 @@ Last updated: 2026-02-06
 - .github/actions-tmp/package.json
 - .github/actions-tmp/src/main.js
 - .github/copilot-instructions.md
+- .github/workflows/call-check-large-files.yml
 - .github/workflows/call-daily-project-summary.yml
 - .github/workflows/call-issue-note.yml
 - .github/workflows/call-translate-readme.yml
+- .github/workflows/check-large-files-reusable.yml
 - .github/workflows/generate_repo_list.yml
+- .github_automation/check_large_files/README.md
+- .github_automation/check_large_files/check-large-files.toml
+- .github_automation/check_large_files/scripts/check_large_files.py
 - .gitignore
 - LICENSE
 - README.md
@@ -218,6 +223,7 @@ Last updated: 2026-02-06
 - issue-notes/16.md
 - issue-notes/18.md
 - issue-notes/2.md
+- issue-notes/20.md
 - issue-notes/4.md
 - issue-notes/6.md
 - issue-notes/8.md
@@ -247,6 +253,7 @@ Last updated: 2026-02-06
 - src/generate_repo_list/url_utils.py
 - test_project_overview.py
 - tests/test_badge_generator_integration.py
+- tests/test_check_large_files.py
 - tests/test_config.py
 - tests/test_date_formatter.py
 - tests/test_environment.py
@@ -264,24 +271,31 @@ Last updated: 2026-02-06
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
-9dbe10e Auto-update repository list - 2026-02-04
-c42f7f2 Update project summaries (overview & development status) [auto]
-4736dea Auto-update repository list - 2026-02-03
-59b283b Auto-update repository list - 2026-02-01
-afea9ed Auto-update repository list - 2026-01-31
-274a661 Update project summaries (overview & development status) [auto]
-af62f9c Auto-update repository list - 2026-01-30
-c0ee94e Update project summaries (overview & development status) [auto]
-eff132e Auto-update repository list - 2026-01-29
-edc54fd Update project summaries (overview & development status) [auto]
+0d33f51 Merge pull request #21 from cat2151/copilot/migrate-cat-oscilloscope-action
+e054a36 Add __pycache__ to exclusion patterns
+17ef713 Address PR review: add Python <3.11 support, config_path param, pagination, tests, and improvements
+d357e55 Fix security: add explicit permissions to caller workflow
+170ac2c Address code review comments: fix comment typo and improve pattern logic
+3ba3278 Fix config to exclude test files properly
+632a7db Add README documentation for check-large-files automation
+e8673f3 Add check-large-files automation with reusable workflow
+f8d5857 Initial plan
+9c75878 Add issue note for #20 [auto]
 
 ### 変更されたファイル:
+.github/workflows/call-check-large-files.yml
+.github/workflows/check-large-files-reusable.yml
+.github_automation/check_large_files/README.md
+.github_automation/check_large_files/check-large-files.toml
+.github_automation/check_large_files/scripts/check_large_files.py
 generated-docs/development-status-generated-prompt.md
 generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
 index.md
+issue-notes/20.md
+tests/test_check_large_files.py
 
 
 ---
-Generated at: 2026-02-06 07:08:58 JST
+Generated at: 2026-02-07 07:06:15 JST
