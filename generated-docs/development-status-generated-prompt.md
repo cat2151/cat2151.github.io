@@ -1,4 +1,4 @@
-Last updated: 2026-02-07
+Last updated: 2026-02-08
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -271,6 +271,8 @@ Last updated: 2026-02-07
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+37dcf47 Auto-update repository list - 2026-02-06
+4309ebc Update project summaries (overview & development status) [auto]
 0d33f51 Merge pull request #21 from cat2151/copilot/migrate-cat-oscilloscope-action
 e054a36 Add __pycache__ to exclusion patterns
 17ef713 Address PR review: add Python <3.11 support, config_path param, pagination, tests, and improvements
@@ -279,8 +281,6 @@ d357e55 Fix security: add explicit permissions to caller workflow
 3ba3278 Fix config to exclude test files properly
 632a7db Add README documentation for check-large-files automation
 e8673f3 Add check-large-files automation with reusable workflow
-f8d5857 Initial plan
-9c75878 Add issue note for #20 [auto]
 
 ### 変更されたファイル:
 .github/workflows/call-check-large-files.yml
@@ -298,4 +298,4 @@ tests/test_check_large_files.py
 
 
 ---
-Generated at: 2026-02-07 07:06:15 JST
+Generated at: 2026-02-08 07:07:20 JST
