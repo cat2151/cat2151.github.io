@@ -1,4 +1,4 @@
-Last updated: 2026-02-08
+Last updated: 2026-02-10
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -110,6 +110,7 @@ Last updated: 2026-02-08
 - .github/actions-tmp/.github/workflows/call-rust-windows-check.yml
 - .github/actions-tmp/.github/workflows/call-translate-readme.yml
 - .github/actions-tmp/.github/workflows/callgraph.yml
+- .github/actions-tmp/.github/workflows/check-large-files.yml
 - .github/actions-tmp/.github/workflows/check-recent-human-commit.yml
 - .github/actions-tmp/.github/workflows/daily-project-summary.yml
 - .github/actions-tmp/.github/workflows/issue-note.yml
@@ -132,6 +133,9 @@ Last updated: 2026-02-08
 - .github/actions-tmp/.github_automation/callgraph/scripts/find-process-results.cjs
 - .github/actions-tmp/.github_automation/callgraph/scripts/generate-html-graph.cjs
 - .github/actions-tmp/.github_automation/callgraph/scripts/generateHTML.cjs
+- .github/actions-tmp/.github_automation/check-large-files/README.md
+- .github/actions-tmp/.github_automation/check-large-files/check-large-files.toml.example
+- .github/actions-tmp/.github_automation/check-large-files/scripts/check_large_files.py
 - .github/actions-tmp/.github_automation/check_recent_human_commit/scripts/check-recent-human-commit.cjs
 - .github/actions-tmp/.github_automation/project_summary/docs/daily-summary-setup.md
 - .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
@@ -188,6 +192,7 @@ Last updated: 2026-02-08
 - .github/actions-tmp/issue-notes/29.md
 - .github/actions-tmp/issue-notes/3.md
 - .github/actions-tmp/issue-notes/30.md
+- .github/actions-tmp/issue-notes/31.md
 - .github/actions-tmp/issue-notes/4.md
 - .github/actions-tmp/issue-notes/7.md
 - .github/actions-tmp/issue-notes/8.md
@@ -271,6 +276,9 @@ Last updated: 2026-02-08
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+9fdfd4c Auto-update repository list - 2026-02-08
+bb2df2b Auto-update repository list - 2026-02-07
+e64e9ec Update project summaries (overview & development status) [auto]
 37dcf47 Auto-update repository list - 2026-02-06
 4309ebc Update project summaries (overview & development status) [auto]
 0d33f51 Merge pull request #21 from cat2151/copilot/migrate-cat-oscilloscope-action
@@ -278,9 +286,6 @@ e054a36 Add __pycache__ to exclusion patterns
 17ef713 Address PR review: add Python <3.11 support, config_path param, pagination, tests, and improvements
 d357e55 Fix security: add explicit permissions to caller workflow
 170ac2c Address code review comments: fix comment typo and improve pattern logic
-3ba3278 Fix config to exclude test files properly
-632a7db Add README documentation for check-large-files automation
-e8673f3 Add check-large-files automation with reusable workflow
 
 ### 変更されたファイル:
 .github/workflows/call-check-large-files.yml
@@ -298,4 +303,4 @@ tests/test_check_large_files.py
 
 
 ---
-Generated at: 2026-02-08 07:07:20 JST
+Generated at: 2026-02-10 07:14:08 JST

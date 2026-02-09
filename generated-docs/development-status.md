@@ -1,64 +1,50 @@
-Last updated: 2026-02-08
+Last updated: 2026-02-10
 
 # Development Status
 
 ## 現在のIssues
-- 現在オープン中のIssueはありません。
-- プロジェクトは安定した状態にあり、直接的な修正を要する課題は未検出です。
-- 次のステップとして、既存機能の改善、既存機能のテストカバレッジ向上、または新たな開発を検討するフェーズです。
+現在、プロジェクトには対応が必要なオープンIssueがありません。
+全ての既知の課題は解決済み、またはクローズされています。
+この良好な状態を維持しつつ、次の開発フェーズを計画することが可能です。
 
 ## 次の一手候補
-1. `check-large-files` 自動化機能の網羅性と信頼性の検証
-   - 最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml` の設定をレビューし、現行のリポジトリ構造に対して適切に機能しているか、特に除外パスが正しく適用されているかを手動で確認する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github_automation/check_large_files/check-large-files.toml
-                 .github_automation/check_large_files/scripts/check_large_files.py
-                 tests/test_check_large_files.py
+1.  generate_repo_list スクリプトのテストカバレッジ強化（新規作成を推奨）
+    -   最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の既存のテストファイル (`tests/test_repository_processor.py` など) を分析し、まだテストされていない主要な関数やモジュールを特定する。特に `generate_repo_list.py` の中心ロジックを確認する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `src/generate_repo_list/` ディレクトリ配下の全ての `.py` ファイル、および `tests/test_*.py` ファイル
 
-     実行内容: `check-large-files.toml` の設定が、現在のリポジトリのファイル構造や開発慣行に合致しているかを分析し、潜在的な改善点や不足している設定（例: 新たに追加された大規模なディレクトリの除外漏れなど）を特定してください。特に、`path_patterns` および `exclude_path_patterns` の有効性を検証してください。
+        実行内容: `src/generate_repo_list/` 内の各Pythonモジュールの主要な関数（特に副作用を持つものや複雑なロジックを持つもの）について、既存のテストカバレッジを分析し、カバレッジが低い、または存在しない関数を特定してください。その後、それらの関数に対する単体テストを追加するための計画をmarkdown形式で出力してください。
 
-     確認事項: `check_large_files.py` スクリプトの実装と、`tests/test_check_large_files.py` のテストカバレッジを確認し、設定変更がスクリプトの意図と合致するか、既存テストでカバーできるかを確認してください。
+        確認事項: 既存のpytest設定（`pytest.ini`）とテスト実行方法（`tests/test_environment.py`など）を確認し、追加するテストが既存のテストスイートに容易に統合できることを確認してください。また、モック化が必要な外部依存関係（API呼び出し、ファイルI/O）を特定してください。
 
-     期待する出力: `check-large-files.toml` のレビュー結果と、必要であれば更新案をMarkdown形式で出力してください。また、テストカバレッジを向上させるための追加テストケースの提案も含めてください。
-     ```
+        期待する出力: `src/generate_repo_list/` 内のモジュールごとのテストカバレッジの現状評価と、優先度の高いテスト追加対象リスト、および各項目に対してどのようなテストケースを追加すべきかの具体的な提案をmarkdown形式で出力してください。
+        ```
 
-2. 自動生成されるプロジェクトサマリーの品質と開発者への有用性評価
-   - 最初の小さな一歩: `generated-docs/development-status.md` と `generated-docs/project-overview.md` の最近の生成結果を読み込み、開発者にとっての情報としての価値、分かりやすさ、過不足について主観的に評価する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: generated-docs/development-status.md
-                 generated-docs/project-overview.md
-                 .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
-                 .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
+2.  daily-project-summary ワークフローのプロンプト設定の汎用性向上（新規作成を推奨）
+    -   最初の小さな一歩: 現在の `development-status-prompt.md` と `project-overview-prompt.md` の内容を確認し、ワークフロー (`daily-project-summary.yml`) がこれらのプロンプトをどのように利用しているか、`ProjectSummaryCoordinator.cjs` などのスクリプトのコードを調査する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `.github/actions-tmp/.github/workflows/daily-project-summary.yml`、`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`、`.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`、`.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs`
 
-     実行内容: 自動生成された `development-status.md` および `project-overview.md` の内容を分析し、開発者がプロジェクトの現状を把握するために十分な情報を提供しているか、また情報が冗長でないかを評価してください。特に、それぞれの生成に用いられているプロンプト（`development-status-prompt.md`, `project-overview-prompt.md`）の観点から、改善の余地があるかを検討してください。
+        実行内容: `daily-project-summary.yml` ワークフローが現在プロンプトファイルを静的に参照している箇所を特定し、これらのプロンプトの内容をワークフローの入力パラメータ (`with`句) または環境変数を通じて動的に設定できるようにするための変更点を分析してください。
 
-     確認事項: 自動生成されたドキュメントが、プロジェクトの実際の状況を正確に反映しているか、ハルシネーションが含まれていないかを確認してください。また、プロンプトがガイドラインに沿って生成されているかを確認してください。
+        確認事項: ワークフローが実行されるGitHub Actions環境での入力パラメータの取り扱い、およびNode.jsスクリプト (`ProjectSummaryCoordinator.cjs`) でそれらのパラメータを安全に読み込む方法を確認してください。プロンプト内容のセキュリティとインジェクションリスクについて考慮してください。
 
-     期待する出力: 現在のサマリー生成の課題点と、プロンプトまたは生成スクリプトの改善提案をMarkdown形式で出力してください。具体的な改善例や、より開発者に価値のある情報を提供するための新しい観点の提案を含めてください。
-     ```
+        期待する出力: `daily-project-summary.yml` の `jobs.build.steps` 内にプロンプトを動的に渡すための新しい入力パラメータの定義案と、`ProjectSummaryCoordinator.cjs` でそのパラメータを読み込み、プロンプト生成ロジックに適用するための擬似コードを含む変更提案をmarkdown形式で出力してください。
+        ```
 
-3. 既存の`issue-notes`の棚卸しと実際のIssue状態との同期確認
-   - 最初の小さな一歩: `issue-notes/` ディレクトリ内の最も古いファイル（例: [Issue #2](../issue-notes/2.md), [Issue #4](../issue-notes/4.md)）の内容を読み込み、そこに記載されている課題が現在のプロジェクトで解決済みか、または未解決のまま放置されているかを判断する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: issue-notes/2.md
-                 issue-notes/4.md
-                 issue-notes/6.md
-                 issue-notes/8.md
-                 issue-notes/10.md
-                 issue-notes/12.md
-                 issue-notes/14.md
-                 issue-notes/16.md
-                 issue-notes/18.md
-                 issue-notes/20.md
+3.  check-large-files 設定ファイル (`check-large-files.toml`) のドキュメント拡充（新規作成を推奨）
+    -   最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml` の現在の内容と、関連するスクリプト (`.github_automation/check_large_files/scripts/check_large_files.py`) をレビューし、どの設定項目がどのような挙動に影響するかを理解する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `.github_automation/check_large_files/check-large-files.toml`、`.github_automation/check_large_files/README.md`、`.github_automation/check_large_files/scripts/check_large_files.py`
 
-     実行内容: `issue-notes/` ディレクトリ内の各Markdownファイルを読み込み、そこに記述されている課題や検討事項が、現在のプロジェクトのステータスにおいて「解決済み」または「対応不要」と判断できるかを確認してください。もし、まだ対応が必要な内容であれば、GitHub Issuesとして改めて登録する必要があるかを検討してください。特に、最新の変更履歴に関連する [Issue #20](../issue-notes/20.md) を優先的に確認してください。
+        実行内容: `check-large-files.toml` 設定ファイル内の各パラメータ（例: `max_file_size`, `exclude_patterns`, `exclude_dirs` など）について、その目的、許容される値の形式、具体的な使用例、および`check_large_files.py`スクリプトでの処理方法を詳細に記述したドキュメントを生成してください。
 
-     確認事項: 各issue-noteの内容がコードベースの現状と乖離していないか、また過去のコミットで既に解決済みのタスクが含まれていないかを確認してください。
+        確認事項: `check-large-files.toml.example` と `check-large-files.toml` の違い、および`check_large_files.py`スクリプトがtomlファイルをどのようにパースし、設定を適用しているかを正確に理解してください。README.mdに既存の説明があれば、それとの重複を避けつつ補完するようにしてください。
 
-     期待する出力: 各issue-noteの状態評価（解決済み/未解決/対応不要）をまとめたMarkdown形式のレポートを出力してください。未解決と判断されたものについては、新規GitHub Issueとして起票すべきか、あるいは既存の何らかのタスクに統合すべきかの提案を含めてください。
+        期待する出力: `.github_automation/check_large_files/docs/` ディレクトリに新しいMarkdownファイルとして、`check-large-files.toml` の詳細な設定ガイド（各パラメータの説明、使用例、注意事項を含む）をmarkdown形式で出力してください。
 
 ---
-Generated at: 2026-02-08 07:07:42 JST
+Generated at: 2026-02-10 07:14:31 JST
