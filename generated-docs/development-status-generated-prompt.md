@@ -1,4 +1,4 @@
-Last updated: 2026-02-10
+Last updated: 2026-02-11
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -193,6 +193,8 @@ Last updated: 2026-02-10
 - .github/actions-tmp/issue-notes/3.md
 - .github/actions-tmp/issue-notes/30.md
 - .github/actions-tmp/issue-notes/31.md
+- .github/actions-tmp/issue-notes/33.md
+- .github/actions-tmp/issue-notes/35.md
 - .github/actions-tmp/issue-notes/4.md
 - .github/actions-tmp/issue-notes/7.md
 - .github/actions-tmp/issue-notes/8.md
@@ -276,6 +278,8 @@ Last updated: 2026-02-10
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+a71cd23 Auto-update repository list - 2026-02-09
+b9d5891 Update project summaries (overview & development status) [auto]
 9fdfd4c Auto-update repository list - 2026-02-08
 bb2df2b Auto-update repository list - 2026-02-07
 e64e9ec Update project summaries (overview & development status) [auto]
@@ -284,23 +288,14 @@ e64e9ec Update project summaries (overview & development status) [auto]
 0d33f51 Merge pull request #21 from cat2151/copilot/migrate-cat-oscilloscope-action
 e054a36 Add __pycache__ to exclusion patterns
 17ef713 Address PR review: add Python <3.11 support, config_path param, pagination, tests, and improvements
-d357e55 Fix security: add explicit permissions to caller workflow
-170ac2c Address code review comments: fix comment typo and improve pattern logic
 
 ### 変更されたファイル:
-.github/workflows/call-check-large-files.yml
-.github/workflows/check-large-files-reusable.yml
-.github_automation/check_large_files/README.md
-.github_automation/check_large_files/check-large-files.toml
-.github_automation/check_large_files/scripts/check_large_files.py
 generated-docs/development-status-generated-prompt.md
 generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
 index.md
-issue-notes/20.md
-tests/test_check_large_files.py
 
 
 ---
-Generated at: 2026-02-10 07:14:08 JST
+Generated at: 2026-02-11 07:17:09 JST

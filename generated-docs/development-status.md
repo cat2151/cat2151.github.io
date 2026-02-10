@@ -1,50 +1,50 @@
-Last updated: 2026-02-10
+Last updated: 2026-02-11
 
 # Development Status
 
 ## 現在のIssues
-現在、プロジェクトには対応が必要なオープンIssueがありません。
-全ての既知の課題は解決済み、またはクローズされています。
-この良好な状態を維持しつつ、次の開発フェーズを計画することが可能です。
+オープン中のIssueはありません。
+プロジェクトは正常に稼働しており、最近は自動更新や機能改善のコミットが頻繁に行われています。
+特に、リポジトリリストの自動更新とプロジェクトサマリーの生成が活発です。
 
 ## 次の一手候補
-1.  generate_repo_list スクリプトのテストカバレッジ強化（新規作成を推奨）
-    -   最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の既存のテストファイル (`tests/test_repository_processor.py` など) を分析し、まだテストされていない主要な関数やモジュールを特定する。特に `generate_repo_list.py` の中心ロジックを確認する。
+1.  「開発状況生成プロンプト」の改善検討
+    -   最初の小さな一歩: 現在の`development-status-prompt.md`の内容を分析し、より具体的で実行可能な「次の一手候補」を、ハルシネーションを避けて生成できるように改善点を洗い出す。
     -   Agent実行プロンプト:
         ```
-        対象ファイル: `src/generate_repo_list/` ディレクトリ配下の全ての `.py` ファイル、および `tests/test_*.py` ファイル
+        対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
 
-        実行内容: `src/generate_repo_list/` 内の各Pythonモジュールの主要な関数（特に副作用を持つものや複雑なロジックを持つもの）について、既存のテストカバレッジを分析し、カバレッジが低い、または存在しない関数を特定してください。その後、それらの関数に対する単体テストを追加するための計画をmarkdown形式で出力してください。
+        実行内容: このプロンプトが、今回の指示「ハルシネーションしそうなものは生成しない」「「今日のissue目標」などuserに提案するものを生成しない」を遵守しつつ、かつ「オープン中のIssueがない場合でも、プロジェクトの現状や最近の変更に基づいて、実行可能で価値のある『次の一手候補』を提示できる」ように、改善点を洗い出し、提案内容をmarkdown形式で出力してください。
 
-        確認事項: 既存のpytest設定（`pytest.ini`）とテスト実行方法（`tests/test_environment.py`など）を確認し、追加するテストが既存のテストスイートに容易に統合できることを確認してください。また、モック化が必要な外部依存関係（API呼び出し、ファイルI/O）を特定してください。
+        確認事項: このプロンプトの変更が、他のプロジェクトサマリー関連のスクリプトやワークフロー（例: `ProjectSummaryCoordinator.cjs`, `DevelopmentStatusGenerator.cjs`, `call-daily-project-summary.yml`）に影響を与えないことを確認してください。また、現在の出力形式ガイドラインとの整合性を維持すること。
 
-        期待する出力: `src/generate_repo_list/` 内のモジュールごとのテストカバレッジの現状評価と、優先度の高いテスト追加対象リスト、および各項目に対してどのようなテストケースを追加すべきかの具体的な提案をmarkdown形式で出力してください。
+        期待する出力: 改善案の概要、具体的な変更提案（例: 「最近のコミット履歴から、どの領域で改善が見込まれるかを分析し、具体的なアクションを提案する」といった指示の追加）、および変更後のプロンプトのドラフトをmarkdown形式で出力してください。
         ```
 
-2.  daily-project-summary ワークフローのプロンプト設定の汎用性向上（新規作成を推奨）
-    -   最初の小さな一歩: 現在の `development-status-prompt.md` と `project-overview-prompt.md` の内容を確認し、ワークフロー (`daily-project-summary.yml`) がこれらのプロンプトをどのように利用しているか、`ProjectSummaryCoordinator.cjs` などのスクリプトのコードを調査する。
+2.  `generate_repo_list`の最近の機能強化に関するドキュメント化
+    -   最初の小さな一歩: `src/generate_repo_list/`ディレクトリ内の主要ファイル（`generate_repo_list.py`, `config_manager.py`など）と、関連する最近のコミット（`17ef713`）をレビューし、追加された機能（Python <3.11サポート、config_path、paginationなど）の概要を把握する。
     -   Agent実行プロンプト:
         ```
-        対象ファイル: `.github/actions-tmp/.github/workflows/daily-project-summary.yml`、`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`、`.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`、`.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs`
+        対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/config_manager.py, src/generate_repo_list/repository_processor.py
 
-        実行内容: `daily-project-summary.yml` ワークフローが現在プロンプトファイルを静的に参照している箇所を特定し、これらのプロンプトの内容をワークフローの入力パラメータ (`with`句) または環境変数を通じて動的に設定できるようにするための変更点を分析してください。
+        実行内容: 最近のコミット`17ef713`で導入された「Python <3.11サポート、config_pathパラメータ、pagination、テスト、および改善」について、その機能と使い方を分析してください。特に、新しい設定オプションや利用方法に焦点を当てます。
 
-        確認事項: ワークフローが実行されるGitHub Actions環境での入力パラメータの取り扱い、およびNode.jsスクリプト (`ProjectSummaryCoordinator.cjs`) でそれらのパラメータを安全に読み込む方法を確認してください。プロンプト内容のセキュリティとインジェクションリスクについて考慮してください。
+        確認事項: 既存のコードドキュメンテーションやコメントとの整合性を確認し、新しい機能が既存の機能に与える影響がないことを確認してください。また、`src/generate_repo_list/config.yml`との関連性も考慮してください。
 
-        期待する出力: `daily-project-summary.yml` の `jobs.build.steps` 内にプロンプトを動的に渡すための新しい入力パラメータの定義案と、`ProjectSummaryCoordinator.cjs` でそのパラメータを読み込み、プロンプト生成ロジックに適用するための擬似コードを含む変更提案をmarkdown形式で出力してください。
+        期待する出力: markdown形式で、これらの新しい機能の利用ガイド、設定方法、および注意点をまとめたドキュメントの草案を生成してください。このドキュメントは、他の開発者がこれらの新機能を効果的に利用するための参考となることを期待します。
         ```
 
-3.  check-large-files 設定ファイル (`check-large-files.toml`) のドキュメント拡充（新規作成を推奨）
-    -   最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml` の現在の内容と、関連するスクリプト (`.github_automation/check_large_files/scripts/check_large_files.py`) をレビューし、どの設定項目がどのような挙動に影響するかを理解する。
+3.  `check-large-files`関連ワークフローのレビューと最適化
+    -   最初の小さな一歩: `.github/workflows/call-check-large-files.yml`と`.github/workflows/check-large-files-reusable.yml`の目的と役割を比較し、重複や統合の可能性を特定する。
     -   Agent実行プロンプト:
         ```
-        対象ファイル: `.github_automation/check_large_files/check-large-files.toml`、`.github_automation/check_large_files/README.md`、`.github_automation/check_large_files/scripts/check_large_files.py`
+        対象ファイル: .github/workflows/call-check-large-files.yml, .github/workflows/check-large-files-reusable.yml, .github_automation/check_large_files/scripts/check_large_files.py
 
-        実行内容: `check-large-files.toml` 設定ファイル内の各パラメータ（例: `max_file_size`, `exclude_patterns`, `exclude_dirs` など）について、その目的、許容される値の形式、具体的な使用例、および`check_large_files.py`スクリプトでの処理方法を詳細に記述したドキュメントを生成してください。
+        実行内容: `call-check-large-files.yml`と`check-large-files-reusable.yml`の構造、呼び出し方法、および依存関係を分析し、両ワークフローがどのように連携しているかを明確にしてください。特に、`check-large-files-reusable.yml`が独立して利用可能なのか、`call-check-large-files.yml`がそのラッパーとして機能しているのかを検証します。
 
-        確認事項: `check-large-files.toml.example` と `check-large-files.toml` の違い、および`check_large_files.py`スクリプトがtomlファイルをどのようにパースし、設定を適用しているかを正確に理解してください。README.mdに既存の説明があれば、それとの重複を避けつつ補完するようにしてください。
+        確認事項: 現在のワークフローが意図通りに機能しているか、冗長なステップがないか、将来的な保守性を考慮して最適化の余地があるかを確認してください。また、`check_large_files.py`スクリプトがどのように各ワークフローで利用されているかを理解してください。
 
-        期待する出力: `.github_automation/check_large_files/docs/` ディレクトリに新しいMarkdownファイルとして、`check-large-files.toml` の詳細な設定ガイド（各パラメータの説明、使用例、注意事項を含む）をmarkdown形式で出力してください。
+        期待する出力: markdown形式で、両ワークフローの現在の役割、潜在的な重複、および統合または簡素化の提案を含む分析結果を生成してください。具体的には、リファクタリングの方向性（例: 一方を他方から呼び出す形に統一する、共通部分を抽出するなど）を提示してください。
 
 ---
-Generated at: 2026-02-10 07:14:31 JST
+Generated at: 2026-02-11 07:17:25 JST
