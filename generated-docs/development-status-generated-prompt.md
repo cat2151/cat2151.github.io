@@ -1,4 +1,4 @@
-Last updated: 2026-02-11
+Last updated: 2026-02-12
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -192,9 +192,8 @@ Last updated: 2026-02-11
 - .github/actions-tmp/issue-notes/29.md
 - .github/actions-tmp/issue-notes/3.md
 - .github/actions-tmp/issue-notes/30.md
-- .github/actions-tmp/issue-notes/31.md
-- .github/actions-tmp/issue-notes/33.md
 - .github/actions-tmp/issue-notes/35.md
+- .github/actions-tmp/issue-notes/38.md
 - .github/actions-tmp/issue-notes/4.md
 - .github/actions-tmp/issue-notes/7.md
 - .github/actions-tmp/issue-notes/8.md
@@ -278,6 +277,8 @@ Last updated: 2026-02-11
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+28d8871 Auto-update repository list - 2026-02-10
+dc50654 Update project summaries (overview & development status) [auto]
 a71cd23 Auto-update repository list - 2026-02-09
 b9d5891 Update project summaries (overview & development status) [auto]
 9fdfd4c Auto-update repository list - 2026-02-08
@@ -286,8 +287,6 @@ e64e9ec Update project summaries (overview & development status) [auto]
 37dcf47 Auto-update repository list - 2026-02-06
 4309ebc Update project summaries (overview & development status) [auto]
 0d33f51 Merge pull request #21 from cat2151/copilot/migrate-cat-oscilloscope-action
-e054a36 Add __pycache__ to exclusion patterns
-17ef713 Address PR review: add Python <3.11 support, config_path param, pagination, tests, and improvements
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -298,4 +297,4 @@ index.md
 
 
 ---
-Generated at: 2026-02-11 07:17:09 JST
+Generated at: 2026-02-12 07:10:22 JST

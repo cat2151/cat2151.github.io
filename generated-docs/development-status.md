@@ -1,50 +1,50 @@
-Last updated: 2026-02-11
+Last updated: 2026-02-12
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。
-プロジェクトは正常に稼働しており、最近は自動更新や機能改善のコミットが頻繁に行われています。
-特に、リポジトリリストの自動更新とプロジェクトサマリーの生成が活発です。
+- 現在オープン中のIssueはありません。
+- プロジェクトは自動更新プロセスにより順調に稼働しています。
+- 主要な機能は定期的なコミットによってメンテナンスされています。
 
 ## 次の一手候補
-1.  「開発状況生成プロンプト」の改善検討
-    -   最初の小さな一歩: 現在の`development-status-prompt.md`の内容を分析し、より具体的で実行可能な「次の一手候補」を、ハルシネーションを避けて生成できるように改善点を洗い出す。
-    -   Agent実行プロンプト:
+1.  開発状況生成プロンプトのレビューと改善 [Issue #39](../issue-notes/39.md)
+    - 最初の小さな一歩: `generated-docs/development-status-generated-prompt.md` の内容を読み込み、現在の出力との整合性を確認する。
+    - Agent実行プロンプト:
         ```
         対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
 
-        実行内容: このプロンプトが、今回の指示「ハルシネーションしそうなものは生成しない」「「今日のissue目標」などuserに提案するものを生成しない」を遵守しつつ、かつ「オープン中のIssueがない場合でも、プロジェクトの現状や最近の変更に基づいて、実行可能で価値のある『次の一手候補』を提示できる」ように、改善点を洗い出し、提案内容をmarkdown形式で出力してください。
+        実行内容: 対象ファイルの内容を分析し、現在の開発状況の自動生成出力（generated-docs/development-status.md）がより洞察に富むものになるよう、プロンプトの改善点を提案してください。具体的には、過去の変更履歴の分析方法、未解決の課題の提示方法、次の一手候補の選定ロジックを強化する観点から検討してください。
 
-        確認事項: このプロンプトの変更が、他のプロジェクトサマリー関連のスクリプトやワークフロー（例: `ProjectSummaryCoordinator.cjs`, `DevelopmentStatusGenerator.cjs`, `call-daily-project-summary.yml`）に影響を与えないことを確認してください。また、現在の出力形式ガイドラインとの整合性を維持すること。
+        確認事項: プロンプトの変更がハルシネーションの増加につながらないか、また、既存の生成ロジックと矛盾しないかを確認してください。出力形式のガイドラインを遵守し、ユーザーに提案する形式にならないように注意してください。
 
-        期待する出力: 改善案の概要、具体的な変更提案（例: 「最近のコミット履歴から、どの領域で改善が見込まれるかを分析し、具体的なアクションを提案する」といった指示の追加）、および変更後のプロンプトのドラフトをmarkdown形式で出力してください。
+        期待する出力: 提案された改善点と、それに基づくプロンプトの具体的な変更案をMarkdown形式で出力してください。
         ```
 
-2.  `generate_repo_list`の最近の機能強化に関するドキュメント化
-    -   最初の小さな一歩: `src/generate_repo_list/`ディレクトリ内の主要ファイル（`generate_repo_list.py`, `config_manager.py`など）と、関連する最近のコミット（`17ef713`）をレビューし、追加された機能（Python <3.11サポート、config_path、paginationなど）の概要を把握する。
-    -   Agent実行プロンプト:
+2.  リポジトリリスト生成スクリプトのテストカバレッジ向上 [Issue #40](../issue-notes/40.md)
+    - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` の現在のテストカバレッジを把握する。
+    - Agent実行プロンプト:
         ```
-        対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/config_manager.py, src/generate_repo_list/repository_processor.py
+        対象ファイル: src/generate_repo_list/generate_repo_list.py および tests/test_integration.py, tests/test_repository_processor.py
 
-        実行内容: 最近のコミット`17ef713`で導入された「Python <3.11サポート、config_pathパラメータ、pagination、テスト、および改善」について、その機能と使い方を分析してください。特に、新しい設定オプションや利用方法に焦点を当てます。
+        実行内容: `src/generate_repo_list/generate_repo_list.py` の主要な関数について、既存のテストファイル（特に `test_integration.py` と `test_repository_processor.py`）におけるテストカバレッジを分析してください。特に、リポジトリ情報の取得、処理、マークダウン生成の流れが十分にテストされているかを確認してください。
 
-        確認事項: 既存のコードドキュメンテーションやコメントとの整合性を確認し、新しい機能が既存の機能に与える影響がないことを確認してください。また、`src/generate_repo_list/config.yml`との関連性も考慮してください。
+        確認事項: 分析する前に、関連するテストファイルの依存関係と、テストが実行される環境のセットアップ要件を確認してください。既存のテストケースを破壊しないよう注意してください。
 
-        期待する出力: markdown形式で、これらの新しい機能の利用ガイド、設定方法、および注意点をまとめたドキュメントの草案を生成してください。このドキュメントは、他の開発者がこれらの新機能を効果的に利用するための参考となることを期待します。
+        期待する出力: `generate_repo_list.py` のテストカバレッジの現状をMarkdown形式で記述し、不足しているテストケースや、カバレッジを向上させるための具体的な提案をリストアップしてください。
         ```
 
-3.  `check-large-files`関連ワークフローのレビューと最適化
-    -   最初の小さな一歩: `.github/workflows/call-check-large-files.yml`と`.github/workflows/check-large-files-reusable.yml`の目的と役割を比較し、重複や統合の可能性を特定する。
-    -   Agent実行プロンプト:
+3.  新しいバッジ生成オプションの検討 [Issue #41](../issue-notes/41.md)
+    - 最初の小さな一歩: `src/generate_repo_list/badge_generator.py` の既存の機能と、どのような種類のバッジが現在生成されているかを確認する。
+    - Agent実行プロンプト:
         ```
-        対象ファイル: .github/workflows/call-check-large-files.yml, .github/workflows/check-large-files-reusable.yml, .github_automation/check_large_files/scripts/check_large_files.py
+        対象ファイル: src/generate_repo_list/badge_generator.py および src/generate_repo_list/markdown_generator.py
 
-        実行内容: `call-check-large-files.yml`と`check-large-files-reusable.yml`の構造、呼び出し方法、および依存関係を分析し、両ワークフローがどのように連携しているかを明確にしてください。特に、`check-large-files-reusable.yml`が独立して利用可能なのか、`call-check-large-files.yml`がそのラッパーとして機能しているのかを検証します。
+        実行内容: `src/generate_repo_list/badge_generator.py` の現在のバッジ生成能力を分析し、GitHubリポジトリのリスト表示においてユーザーエンゲージメントや情報提供を向上させることができる新しいバッジのアイデアを3つ提案してください。例えば、スター数に応じたバッジ、最終更新からの期間を示すバッジ、特定のCI/CDステータスを示すバッジなどです。提案は技術的な実現可能性と情報の有用性を考慮してください。
 
-        確認事項: 現在のワークフローが意図通りに機能しているか、冗長なステップがないか、将来的な保守性を考慮して最適化の余地があるかを確認してください。また、`check_large_files.py`スクリプトがどのように各ワークフローで利用されているかを理解してください。
+        確認事項: 提案するバッジが既存のMarkdown生成ロジック（`markdown_generator.py`）にどのように統合できるか、および、必要なデータが `project_overview_fetcher.py` などから取得可能かを確認してください。
 
-        期待する出力: markdown形式で、両ワークフローの現在の役割、潜在的な重複、および統合または簡素化の提案を含む分析結果を生成してください。具体的には、リファクタリングの方向性（例: 一方を他方から呼び出す形に統一する、共通部分を抽出するなど）を提示してください。
+        期待する出力: 提案する新しいバッジのアイデアをMarkdown形式で3つリストアップし、それぞれのバッジが示す情報、生成ロジックの概要、および表示例を記述してください。
 
 ---
-Generated at: 2026-02-11 07:17:25 JST
+Generated at: 2026-02-12 07:10:33 JST
