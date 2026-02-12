@@ -1,4 +1,4 @@
-Last updated: 2026-02-12
+Last updated: 2026-02-13
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -277,6 +277,8 @@ Last updated: 2026-02-12
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+9386248 Auto-update repository list - 2026-02-11
+0cd4fa3 Update project summaries (overview & development status) [auto]
 28d8871 Auto-update repository list - 2026-02-10
 dc50654 Update project summaries (overview & development status) [auto]
 a71cd23 Auto-update repository list - 2026-02-09
@@ -285,8 +287,6 @@ b9d5891 Update project summaries (overview & development status) [auto]
 bb2df2b Auto-update repository list - 2026-02-07
 e64e9ec Update project summaries (overview & development status) [auto]
 37dcf47 Auto-update repository list - 2026-02-06
-4309ebc Update project summaries (overview & development status) [auto]
-0d33f51 Merge pull request #21 from cat2151/copilot/migrate-cat-oscilloscope-action
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -297,4 +297,4 @@ index.md
 
 
 ---
-Generated at: 2026-02-12 07:10:22 JST
+Generated at: 2026-02-13 07:10:20 JST
