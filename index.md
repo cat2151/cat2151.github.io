@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-02-11 (UTC) / 2026-02-12 (JST)
+Last Updated: 2026-02-12 (UTC) / 2026-02-13 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,20 @@ Last Updated: 2026-02-11 (UTC) / 2026-02-12 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
+[WIP] smf-to-ym2151log のRust版
+
+<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://cat2151.github.io/smf-to-ym2151log-rust/"><img src="https://img.shields.io/badge/📦-Library%20Demo-blue.svg" alt="Library Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
+- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
+
+### Project Highlights
+- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製のツールです。
+- ネイティブアプリケーションのコマンドラインツールとして、またWebブラウザ向けWebAssembly (WASM) ライブラリとして利用可能です。
+- MIDIイベント解析、YM2151チャンネル割り当て、カスタム音色適用などを行い、高精度なYM2151再現を目指します。
+- 📅 2026-02-12 (UTC) / 2026-02-13 (JST)
+
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
@@ -93,9 +107,106 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、GitHub Pages向けにリポジトリ一覧を自動生成するシステムです。
-- SEOを最適化し、各リポジトリの検索エンジンへのインデックス登録を促進します。
-- リポジトリごとのプロジェクト概要やバッジ表示をサポートし、LLMによる参照を容易にします。
+- GitHub APIを活用し、ユーザーのリポジトリ情報を取得・整理します。
+- JekyllベースのGitHub Pages向けに、SEO最適化されたリポジトリ一覧を自動生成するシステムです。
+- 検索エンジンでの視認性を高め、LLMによるリポジトリ参照の精度向上を目指します。
+- 📅 2026-02-12 (UTC) / 2026-02-13 (JST)
+
+## [wavlpf](https://cat2151.github.io/wavlpf/)
+Software synthesizer. Simple. Non-realtime rendering
+
+<a href="https://cat2151.github.io/wavlpf/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/wavlpf"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a> <a href="https://cat2151.github.io/wavlpf/"><img src="https://img.shields.io/badge/🌐-Live_Demo-green.svg" alt="Live Demo"></a> <a href="https://github.com/cat2151/wavlpf/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/cat2151/wavlpf/ci.yml?branch=main&label=CI" alt="CI Status"></a>
+
+- **Repository**: [https://github.com/cat2151/wavlpf](https://github.com/cat2151/wavlpf)
+- **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
+
+### Project Highlights
+- Rust WASMで実装された、ローパスフィルター（LPF）を搭載したシンプルなソフトウェアシンセサイザーです。
+- ノコギリ波またはパルス波ジェネレーターとインタラクティブなBiquadフィルターにより、動的なサウンドを生成します。
+- リアルタイムオシロスコープ表示、WAVファイル生成、設定の永続化機能を備えたWebアプリケーションです。
+- 📅 2026-02-12 (UTC) / 2026-02-13 (JST)
+
+## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
+
+<a href="https://cat2151.github.io/voicevox-playground/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/voicevox-playground"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/voicevox-playground](https://github.com/cat2151/voicevox-playground)
+- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground/](https://cat2151.github.io/voicevox-playground/)
+- **Overview**: No description available
+
+### Project Highlights
+- VOICEVOXローカルサーバーと連携し、テキストから音声を生成・再生するWebアプリケーションです。
+- 音声のイントネーションやピッチを調整できる高度な機能と、波形・スペクトログラム表示を提供します。
+- Vite、TypeScript、Tone.js v15を利用し、GitHub Pagesへ自動デプロイされます。
+- 📅 2026-02-12 (UTC) / 2026-02-13 (JST)
+
+## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
+
+<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
+- **Overview**: No description available
+
+### Project Highlights
+- GitHub CopilotによるPRの自動実装フェーズを監視し、適切な通知やアクションを実行するPythonツールです。
+- 認証済みユーザーの全リポジトリを対象に、GraphQL APIでPRのフェーズ（Draft、レビュー指摘対応中、レビュー待ち、LLM作業中）を効率的に自動判定します。
+- レビュー待ち通知、Draft PRのReady化、自動コメント、issue自動割り当てなど、開発ワークフローを支援する多様な自動化機能を提供します。
+- 📅 2026-02-12 (UTC) / 2026-02-13 (JST)
+
+## [cross-origin-hub](https://cat2151.github.io/cross-origin-hub/)
+
+<a href="https://cat2151.github.io/cross-origin-hub/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+
+- **Repository**: [https://github.com/cat2151/cross-origin-hub](https://github.com/cat2151/cross-origin-hub)
+- **GitHub Pages**: [https://cat2151.github.io/cross-origin-hub/](https://cat2151.github.io/cross-origin-hub/)
+- **Overview**: No description available
+- 📅 2026-02-12 (UTC) / 2026-02-13 (JST)
+
+## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
+- **Overview**: No description available
+- 📅 2026-02-12 (UTC) / 2026-02-13 (JST)
+
+## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
+Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
+
+<a href="https://cat2151.github.io/tonejs-json-sequencer/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/tonejs-json-sequencer"><img src="https://img.shields.io/badge/DeepWiki-Documentation-blue?logo=book" alt="DeepWiki"></a> <a href="https://cat2151.github.io/tonejs-json-sequencer/index.html"><img src="https://img.shields.io/badge/🚀-Live%20Demo-brightgreen.svg" alt="Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/tonejs-json-sequencer](https://github.com/cat2151/tonejs-json-sequencer)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-json-sequencer/](https://cat2151.github.io/tonejs-json-sequencer/)
+
+### Project Highlights
+- Tone.jsの音色・エフェクト・演奏をJSONで記述できる軽量ライブラリ
+- コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
+- 時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
+- 📅 2026-02-12 (UTC) / 2026-02-12 (JST)
+
+## [web-ym2151](https://cat2151.github.io/web-ym2151/)
+
+<a href="https://cat2151.github.io/web-ym2151/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue)
+
+- **Repository**: [https://github.com/cat2151/web-ym2151](https://github.com/cat2151/web-ym2151)
+- **GitHub Pages**: [https://cat2151.github.io/web-ym2151/](https://cat2151.github.io/web-ym2151/)
+- **Overview**: No description available
+- 📅 2026-02-12 (UTC) / 2026-02-12 (JST)
+
+## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
+This oscilloscope visualizes audio from your microphone or wav-file with zero-cross detection for stable waveform display.
+
+<a href="https://cat2151.github.io/cat-oscilloscope/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: audio-analysis](https://img.shields.io/badge/Topic-audio--analysis-lightblue) ![Topic: audio-visualizer](https://img.shields.io/badge/Topic-audio--visualizer-lightblue) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: oscilloscope](https://img.shields.io/badge/Topic-oscilloscope-lightblue) ![Topic: typescript](https://img.shields.io/badge/Topic-typescript-lightblue) ![Topic: wav](https://img.shields.io/badge/Topic-wav-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-oscilloscope"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a> <a href="https://cat2151.github.io/cat-oscilloscope/"><img src="https://img.shields.io/badge/🌐-Live_Demo-green.svg" alt="Live Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-oscilloscope](https://github.com/cat2151/cat-oscilloscope)
+- **GitHub Pages**: [https://cat2151.github.io/cat-oscilloscope/](https://cat2151.github.io/cat-oscilloscope/)
+
+### Project Highlights
+- `cat-oscilloscope`は、ブラウザ上でリアルタイムに音波形を視覚化するオシロスコープ風のアプリケーションです。
+- マイク入力やオーディオファイルから音源を取得し、様々なアルゴリズムを用いて周波数や波形の特性を分析・表示します。
+- 高速なデータ処理にはRust/WebAssemblyを活用し、高精度な音響解析と視覚的なフィードバックをウェブ環境で提供します。
 - 📅 2026-02-11 (UTC) / 2026-02-12 (JST)
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
@@ -112,20 +223,6 @@ collection of reusable GitHub Actions workflows for multiple projects
 - ✅ ワークフローのメンテナンスは一元化され、個々のプロジェクト開発者は自身の開発に集中できます。
 - 📅 2026-02-11 (UTC) / 2026-02-12 (JST)
 
-## [wavlpf](https://cat2151.github.io/wavlpf/)
-Software synthesizer. Simple. Non-realtime rendering
-
-<a href="https://cat2151.github.io/wavlpf/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/wavlpf"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a> <a href="https://cat2151.github.io/wavlpf/"><img src="https://img.shields.io/badge/🌐-Live_Demo-green.svg" alt="Live Demo"></a> <a href="https://github.com/cat2151/wavlpf/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/cat2151/wavlpf/ci.yml?branch=main&label=CI" alt="CI Status"></a>
-
-- **Repository**: [https://github.com/cat2151/wavlpf](https://github.com/cat2151/wavlpf)
-- **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
-
-### Project Highlights
-- Rust WASMで実装された、シンプルなソフトウェアシンセサイザーのWebアプリケーションです。
-- 高速な信号処理により、ノコギリ波やパルス波を生成し、マウス操作でインタラクティブに多機能なBiquadフィルターを適用します。
-- リアルタイム波形ビジュアライゼーション、WAVファイル生成、設定のインポート/エクスポート機能を提供します。
-- 📅 2026-02-11 (UTC) / 2026-02-12 (JST)
-
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
 
@@ -139,75 +236,6 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - サーバーとクライアントの分散アーキテクチャで構成され、JSON形式の音楽データを柔軟に制御できます。
 - プログラムからのライブラリ利用やCLI操作に対応し、音楽制作や編集の体験を向上させます。
 - 📅 2026-02-11 (UTC) / 2026-02-12 (JST)
-
-## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
-
-<a href="https://cat2151.github.io/voicevox-playground/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/voicevox-playground"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground](https://github.com/cat2151/voicevox-playground)
-- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground/](https://cat2151.github.io/voicevox-playground/)
-- **Overview**: No description available
-
-### Project Highlights
-- VOICEVOXローカルサーバーと連携し、テキストを音声に変換して再生するWebアプリケーションです。
-- 音声の波形やイントネーションを可視化し、ユーザーがテキスト入力と再生を直感的に操作できます。
-- GitHub Pagesで簡単にデプロイされ、手軽に利用できる環境が提供されています。
-- 📅 2026-02-11 (UTC) / 2026-02-12 (JST)
-
-## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
-
-<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
-- **Overview**: No description available
-
-### Project Highlights
-- GitHub Copilotが自動実装を行うPull Requestのフェーズを効率的に監視するPythonツールです。
-- 認証済みGitHubユーザーの所有リポジトリを対象に、GraphQL APIを用いてPRの状態を自動判定し、通知や特定のアクションを実行します。
-- Dry-runモード、自動コメント投稿、モバイル通知、Issue自動割り当て機能などを備え、開発ワークフローをサポートします。
-- 📅 2026-02-11 (UTC) / 2026-02-12 (JST)
-
-## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
-- **Overview**: No description available
-- 📅 2026-02-11 (UTC) / 2026-02-12 (JST)
-
-## [cross-origin-hub](https://cat2151.github.io/cross-origin-hub/)
-
-<a href="https://cat2151.github.io/cross-origin-hub/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
-
-- **Repository**: [https://github.com/cat2151/cross-origin-hub](https://github.com/cat2151/cross-origin-hub)
-- **GitHub Pages**: [https://cat2151.github.io/cross-origin-hub/](https://cat2151.github.io/cross-origin-hub/)
-- **Overview**: No description available
-- 📅 2026-02-11 (UTC) / 2026-02-12 (JST)
-
-## [web-ym2151](https://cat2151.github.io/web-ym2151/)
-
-<a href="https://cat2151.github.io/web-ym2151/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue)
-
-- **Repository**: [https://github.com/cat2151/web-ym2151](https://github.com/cat2151/web-ym2151)
-- **GitHub Pages**: [https://cat2151.github.io/web-ym2151/](https://cat2151.github.io/web-ym2151/)
-- **Overview**: No description available
-- 📅 2026-02-11 (UTC) / 2026-02-11 (JST)
-
-## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
-Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
-
-<a href="https://cat2151.github.io/tonejs-json-sequencer/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: sequencer](https://img.shields.io/badge/Topic-sequencer-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/tonejs-json-sequencer"><img src="https://img.shields.io/badge/DeepWiki-Documentation-blue?logo=book" alt="DeepWiki"></a> <a href="https://cat2151.github.io/tonejs-json-sequencer/index.html"><img src="https://img.shields.io/badge/🚀-Live%20Demo-brightgreen.svg" alt="Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/tonejs-json-sequencer](https://github.com/cat2151/tonejs-json-sequencer)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-json-sequencer/](https://cat2151.github.io/tonejs-json-sequencer/)
-
-### Project Highlights
-- Tone.jsの音色・エフェクト・演奏をJSONで記述できる軽量ライブラリです。
-- コードを書かずに音をデータで制御できるため、UIやストリーミングと自然に連携します。
-- 時間順のイベントをデータとして扱い、緻密な演奏表現を可能にします。
-- 📅 2026-02-11 (UTC) / 2026-02-11 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -240,34 +268,6 @@ MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
 - **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
 - **GitHub Pages**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
 - 📅 2026-02-10 (UTC) / 2026-02-10 (JST)
-
-## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
-This oscilloscope visualizes audio from your microphone or wav-file with zero-cross detection for stable waveform display.
-
-<a href="https://cat2151.github.io/cat-oscilloscope/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: audio-analysis](https://img.shields.io/badge/Topic-audio--analysis-lightblue) ![Topic: audio-visualizer](https://img.shields.io/badge/Topic-audio--visualizer-lightblue) ![Topic: browser](https://img.shields.io/badge/Topic-browser-lightblue) ![Topic: oscilloscope](https://img.shields.io/badge/Topic-oscilloscope-lightblue) ![Topic: typescript](https://img.shields.io/badge/Topic-typescript-lightblue) ![Topic: wav](https://img.shields.io/badge/Topic-wav-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-oscilloscope"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a> <a href="https://cat2151.github.io/cat-oscilloscope/"><img src="https://img.shields.io/badge/🌐-Live_Demo-green.svg" alt="Live Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-oscilloscope](https://github.com/cat2151/cat-oscilloscope)
-- **GitHub Pages**: [https://cat2151.github.io/cat-oscilloscope/](https://cat2151.github.io/cat-oscilloscope/)
-
-### Project Highlights
-- `cat-oscilloscope`は、ブラウザ上でリアルタイムに音波形を視覚化するオシロスコープ風のアプリケーションです。
-- マイク入力やオーディオファイルから音源を取得し、様々なアルゴリズムを用いて周波数や波形の特性を分析・表示します。
-- 高速なデータ処理にはRust/WebAssemblyを活用し、高精度な音響解析と視覚的なフィードバックをウェブ環境で提供します。
-- 📅 2026-02-09 (UTC) / 2026-02-10 (JST)
-
-## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
-[WIP] smf-to-ym2151log のRust版
-
-<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://cat2151.github.io/smf-to-ym2151log-rust/"><img src="https://img.shields.io/badge/📦-Library%20Demo-blue.svg" alt="Library Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
-- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
-
-### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製のツールおよびライブラリです。
-- WebAssembly (WASM) に対応しており、ブラウザ環境での利用や、他のRustプロジェクトからのライブラリとしての統合が可能です。
-- 和音数ベースの静的チャンネル割り当て戦略とドラムチャンネル優先割り当てにより、YM2151の8チャンネルを効率的に利用し、音質を最適化します。
-- 📅 2026-02-09 (UTC) / 2026-02-10 (JST)
 
 ## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
 YM2151 event log editor with TUI interface. Written in Rust
