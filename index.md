@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-02-15 (UTC) / 2026-02-16 (JST)
+Last Updated: 2026-02-16 (UTC) / 2026-02-17 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,34 @@ Last Updated: 2026-02-15 (UTC) / 2026-02-16 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub Pagesサイト（`<username>.github.io`）用に、リポジトリ一覧を自動生成するシステムです。
+- GitHub APIからリポジトリ情報を取得し、SEO最適化されたMarkdownファイルを生成することで検索エンジンへの露出を向上させます。
+- 各リポジトリの概要説明やバッジも自動で表示し、LLMからの参照性向上と開発効率の改善を目指します。
+- 📅 2026-02-16 (UTC) / 2026-02-17 (JST)
+
+## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
+
+<a href="https://cat2151.github.io/voicevox-playground/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/voicevox-playground"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a> <a href="https://cat2151.github.io/voicevox-playground/"><img src="https://img.shields.io/badge/Demo-brightgreen" alt="Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/voicevox-playground](https://github.com/cat2151/voicevox-playground)
+- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground/](https://cat2151.github.io/voicevox-playground/)
+- **Overview**: No description available
+
+### Project Highlights
+- VOICEVOXローカルサーバーと連携し、テキストを音声に変換して再生するWebアプリケーションです。
+- ユーザーはウェブブラウザから任意のテキストを入力し、VOICEVOXの多様な音声スタイルで読み上げを生成・再生できます。
+- VOICEVOXクライアントアプリの容易な開発を実証し、ウェブ上での手軽な音声再生機能の提供を目指します。
+- 📅 2026-02-16 (UTC) / 2026-02-17 (JST)
+
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
 
@@ -98,20 +126,6 @@ Last Updated: 2026-02-15 (UTC) / 2026-02-16 (JST)
 - WebAssembly (WASM) にも対応しており、ブラウザ環境でのMIDIファイル変換とYM2151音源エミュレーションを可能にします。
 - 📅 2026-02-15 (UTC) / 2026-02-16 (JST)
 
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを活用し、ユーザーのリポジトリ情報を自動で取得・整理するシステムです。
-- JekyllベースのGitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧をMarkdown形式で生成します。
-- GitHubユーザーページのリポジトリが検索エンジンにクロールされにくい課題を解決し、LLMによる参照失敗の緩和を目指します。
-- 📅 2026-02-15 (UTC) / 2026-02-16 (JST)
-
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 
@@ -124,20 +138,6 @@ A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 - Music Macro Language (MML) 形式の音楽データをStandard MIDI File (SMF) へ変換するRustライブラリです。
 - ネイティブアプリケーション (`cat-play-mml`など) やWebブラウザ向けのWebAssembly (WASM) アプリケーションで利用可能です。
 - MMLの構文解析からSMFの生成までを4段階の処理パス（トークン化、AST構築、MIDIイベント生成、SMF作成）で実現します。
-- 📅 2026-02-15 (UTC) / 2026-02-16 (JST)
-
-## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
-
-<a href="https://cat2151.github.io/voicevox-playground/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/voicevox-playground"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a> <a href="https://cat2151.github.io/voicevox-playground/"><img src="https://img.shields.io/badge/Demo-brightgreen" alt="Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground](https://github.com/cat2151/voicevox-playground)
-- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground/](https://cat2151.github.io/voicevox-playground/)
-- **Overview**: No description available
-
-### Project Highlights
-- VOICEVOXローカルサーバーと連携し、テキストを音声に変換して再生するWebアプリケーションです。
-- 様々なキャラクターの音声を選択し、任意のテキストを読み上げることが可能です。
-- さらに、生成された音声のイントネーションを詳細に編集する機能を提供します。
 - 📅 2026-02-15 (UTC) / 2026-02-16 (JST)
 
 ## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
