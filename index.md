@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-02-16 (UTC) / 2026-02-17 (JST)
+Last Updated: 2026-02-17 (UTC) / 2026-02-18 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト（`<username>.github.io`）用に、リポジトリ一覧を自動生成するシステムです。
-- GitHub APIからリポジトリ情報を取得し、SEO最適化されたMarkdownファイルを生成することで検索エンジンへの露出を向上させます。
-- 各リポジトリの概要説明やバッジも自動で表示し、LLMからの参照性向上と開発効率の改善を目指します。
-- 📅 2026-02-16 (UTC) / 2026-02-17 (JST)
+- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages用のMarkdownファイルを自動生成するシステムです。
+- 検索エンジンにクロールされにくいGitHubユーザーページの課題を解消し、SEOを最適化します。
+- 各リポジトリの概要、バッジ表示、アクティブ・アーカイブ分類など多様な情報を自動的に提供します。
+- 📅 2026-02-17 (UTC) / 2026-02-18 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-02-17 (UTC) / 2026-02-17 (JST)
 
 ## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
 
@@ -259,15 +268,6 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - サーバーとクライアントの分散アーキテクチャで構成され、JSON形式の音楽データを柔軟に制御できます。
 - プログラムからのライブラリ利用やCLI操作に対応し、音楽制作や編集の体験を向上させます。
 - 📅 2026-02-11 (UTC) / 2026-02-12 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-02-10 (UTC) / 2026-02-11 (JST)
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
 File Change Monitoring Tool - Detects file changes and executes commands
