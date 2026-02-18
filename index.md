@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-02-17 (UTC) / 2026-02-18 (JST)
+Last Updated: 2026-02-18 (UTC) / 2026-02-19 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,19 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages用のMarkdownファイルを自動生成するシステムです。
-- 検索エンジンにクロールされにくいGitHubユーザーページの課題を解消し、SEOを最適化します。
-- 各リポジトリの概要、バッジ表示、アクティブ・アーカイブ分類など多様な情報を自動的に提供します。
-- 📅 2026-02-17 (UTC) / 2026-02-18 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-02-17 (UTC) / 2026-02-17 (JST)
+- GitHub APIを利用し、自身の公開リポジトリ情報を自動的に収集します。
+- 収集した情報に基づき、JekyllベースのGitHub Pagesサイト向けに最適化されたMarkdown形式のリポジトリ一覧ページを生成します。
+- これにより、プロジェクトの検索エンジンでの可視性を高め、LLMによるリポジトリ参照の精度向上を支援します。
+- 📅 2026-02-18 (UTC) / 2026-02-19 (JST)
 
 ## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
 
@@ -116,10 +107,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Overview**: No description available
 
 ### Project Highlights
-- VOICEVOXローカルサーバーと連携し、テキストを音声に変換して再生するWebアプリケーションです。
-- ユーザーはウェブブラウザから任意のテキストを入力し、VOICEVOXの多様な音声スタイルで読み上げを生成・再生できます。
-- VOICEVOXクライアントアプリの容易な開発を実証し、ウェブ上での手軽な音声再生機能の提供を目指します。
-- 📅 2026-02-16 (UTC) / 2026-02-17 (JST)
+-   VOICEVOXローカルサーバーと連携し、テキストを音声に変換して再生するWebアプリケーションです。
+-   多様なVOICEVOXキャラクターの音声で、任意のテキストを簡単に読み上げ、イントネーション調整も可能です。
+-   手軽にVOICEVOXクライアントを試せるデモ環境を提供し、迅速な音声再生体験を実現します。
+- 📅 2026-02-18 (UTC) / 2026-02-19 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-02-17 (UTC) / 2026-02-18 (JST)
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
