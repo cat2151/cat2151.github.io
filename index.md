@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-02-18 (UTC) / 2026-02-19 (JST)
+Last Updated: 2026-02-19 (UTC) / 2026-02-20 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、自身の公開リポジトリ情報を自動的に収集します。
-- 収集した情報に基づき、JekyllベースのGitHub Pagesサイト向けに最適化されたMarkdown形式のリポジトリ一覧ページを生成します。
-- これにより、プロジェクトの検索エンジンでの可視性を高め、LLMによるリポジトリ参照の精度向上を支援します。
-- 📅 2026-02-18 (UTC) / 2026-02-19 (JST)
+- GitHub Pagesサイト向けにリポジトリ一覧を自動生成し、動的なコンテンツを提供します。
+- GitHub APIから取得したリポジトリ情報を基に、SEO最適化されたMarkdownファイルを生成します。
+- 検索エンジンでの発見性を高め、LLMによるリポジトリ参照の効率を向上させることを目指します。
+- 📅 2026-02-19 (UTC) / 2026-02-20 (JST)
 
 ## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
 
@@ -107,10 +107,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Overview**: No description available
 
 ### Project Highlights
--   VOICEVOXローカルサーバーと連携し、テキストを音声に変換して再生するWebアプリケーションです。
--   多様なVOICEVOXキャラクターの音声で、任意のテキストを簡単に読み上げ、イントネーション調整も可能です。
--   手軽にVOICEVOXクライアントを試せるデモ環境を提供し、迅速な音声再生体験を実現します。
-- 📅 2026-02-18 (UTC) / 2026-02-19 (JST)
+- VOICEVOXローカルサーバーと連携し、テキストを音声に変換して再生するWebアプリケーションです。
+- 誰でも簡単にVOICEVOXクライアントアプリを開発できることを実証し、手軽な利用を可能にします。
+- VOICEVOXサーバー起動済みであれば、Webページを開くだけで音声再生が可能な体験を提供します。
+- 📅 2026-02-19 (UTC) / 2026-02-20 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
