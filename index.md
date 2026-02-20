@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-02-19 (UTC) / 2026-02-20 (JST)
+Last Updated: 2026-02-20 (UTC) / 2026-02-21 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,9 +93,18 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けにリポジトリ一覧を自動生成し、動的なコンテンツを提供します。
-- GitHub APIから取得したリポジトリ情報を基に、SEO最適化されたMarkdownファイルを生成します。
-- 検索エンジンでの発見性を高め、LLMによるリポジトリ参照の効率を向上させることを目指します。
+- GitHub APIを利用してリポジトリ情報を取得し、自動で整理します。
+- GitHub Pagesサイト用にSEOに最適化されたMarkdown形式のリポジトリ一覧を生成します。
+- 検索エンジンでの発見性を高め、LLMによるリポジトリ参照の精度向上に貢献します。
+- 📅 2026-02-20 (UTC) / 2026-02-21 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
 - 📅 2026-02-19 (UTC) / 2026-02-20 (JST)
 
 ## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
@@ -111,15 +120,6 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - 誰でも簡単にVOICEVOXクライアントアプリを開発できることを実証し、手軽な利用を可能にします。
 - VOICEVOXサーバー起動済みであれば、Webページを開くだけで音声再生が可能な体験を提供します。
 - 📅 2026-02-19 (UTC) / 2026-02-20 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-02-17 (UTC) / 2026-02-18 (JST)
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
