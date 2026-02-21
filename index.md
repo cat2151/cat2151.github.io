@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-02-20 (UTC) / 2026-02-21 (JST)
+Last Updated: 2026-02-21 (UTC) / 2026-02-22 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用してリポジトリ情報を取得し、自動で整理します。
-- GitHub Pagesサイト用にSEOに最適化されたMarkdown形式のリポジトリ一覧を生成します。
-- 検索エンジンでの発見性を高め、LLMによるリポジトリ参照の精度向上に貢献します。
-- 📅 2026-02-20 (UTC) / 2026-02-21 (JST)
+- GitHub APIを利用してリポジトリ情報を取得し、GitHub Pages向けのMarkdownファイルを自動生成するシステムです。
+- 検索エンジン最適化を図り、リポジトリ一覧や個々のリポジトリページがより発見されやすくします。
+- 各リポジトリの概要表示、分類、Jekyll/GitHub Pages対応など、豊富な機能を備えています。
+- 📅 2026-02-21 (UTC) / 2026-02-22 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -105,7 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2026-02-19 (UTC) / 2026-02-20 (JST)
+- 📅 2026-02-21 (UTC) / 2026-02-21 (JST)
 
 ## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
 
