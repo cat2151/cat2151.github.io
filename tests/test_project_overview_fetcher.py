@@ -357,8 +357,8 @@ class TestProjectOverviewFetcher:
         assert "プロジェクト概要セクション" in str(exc_info.value)
         assert "が見つかりません" in str(exc_info.value)
 
-    def test_fetch_overview_section_not_found_raises_exception(self, fetcher):
-        """fetch_overview: ファイルは存在するがセクションが見つからない場合は例外発生"""
+    def test_fetch_overview_section_not_found_returns_fallback(self, fetcher):
+        """fetch_overview: ファイルは存在するがセクションが見つからない場合はフォールバックメッセージを返す"""
         # モック設定: ファイルは存在するが、プロジェクト概要セクションがない
         markdown_content = """# プロジェクトタイトル
 
@@ -376,5 +376,8 @@ class TestProjectOverviewFetcher:
         mock_repo.get_contents.return_value = mock_file_content
         fetcher.github.get_repo.return_value = mock_repo
 
-        with pytest.raises(ProjectOverviewSectionNotFoundError):
-            fetcher.fetch_overview("test-repo", "test-user")
+        result = fetcher.fetch_overview("test-repo", "test-user")
+
+        # 例外を発生させず、フォールバックメッセージを返す
+        assert len(result) == 1
+        assert "プロジェクト概要を取得できませんでした" in result[0]

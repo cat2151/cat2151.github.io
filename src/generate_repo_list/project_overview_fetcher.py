@@ -75,9 +75,13 @@ class ProjectOverviewFetcher:
                     result = []
 
         except ProjectOverviewSectionNotFoundError as e:
-            # ファイルは存在するがセクションが見つからない場合は重要なエラーとして例外を再発生
-            print(f"❌ {repo_name}: {str(e)}")
-            raise
+            # ファイルは存在するがセクションが見つからない場合はフォールバックメッセージを使用
+            # (fail fastせず可用性を優先し、不具合を生成物に表示する)
+            print(f"⚠️  {repo_name}: {str(e)}")
+            fallback_message = self.config.get("project_overview", {}).get(
+                "error_fallback_message", "- (プロジェクト概要を取得できませんでした)"
+            )
+            result = [fallback_message]
         except Exception as e:
             print(f"⚠️  {repo_name}: プロジェクト概要の取得でエラーが発生しました - {str(e)}")
             result = []

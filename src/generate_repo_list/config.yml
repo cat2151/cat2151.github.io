@@ -17,6 +17,8 @@ project_overview:
   # パフォーマンス設定
   enable_cache: true
   parallel_fetch: false  # 将来の拡張用
+  # エラー時のフォールバックメッセージ（セクションが見つからない場合に表示）
+  error_fallback_message: "- (プロジェクト概要を取得できませんでした)"
 
 # 言語バッジ設定
 language_badge:
