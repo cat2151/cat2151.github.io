@@ -21,15 +21,17 @@ class ProjectOverviewSectionNotFoundError(Exception):
 class ProjectOverviewFetcher:
     """プロジェクト概要自動取得クラス"""
 
-    def __init__(self, github_api: Github, config: Dict):
+    def __init__(self, github_api: Github, config: Dict, strings: Dict = None):
         """初期化
 
         Args:
             github_api: GitHub APIクライアント
             config: 設定辞書
+            strings: 文字列リソース辞書（フォールバックメッセージ等に使用）
         """
         self.github = github_api
         self.config = config
+        self.strings = strings or {}
         self.cache = {}  # 同一実行内でのキャッシュ
 
         # 設定値の取得（デフォルト値付き）
@@ -50,6 +52,7 @@ class ProjectOverviewFetcher:
 
         Returns:
             プロジェクト概要の行リスト（最大3行）。取得できない場合は空リスト。
+            ファイルが存在するがセクションが見つからない場合はフォールバックメッセージ1行のリスト。
         """
         if not self.enabled:
             return []
@@ -78,8 +81,10 @@ class ProjectOverviewFetcher:
             # ファイルは存在するがセクションが見つからない場合はフォールバックメッセージを使用
             # (fail fastせず可用性を優先し、不具合を生成物に表示する)
             print(f"⚠️  {repo_name}: {str(e)}")
-            fallback_message = self.config.get("project_overview", {}).get(
-                "error_fallback_message", "- (プロジェクト概要を取得できませんでした)"
+            fallback_message = (
+                self.strings.get("markdown", {})
+                .get("repo_details", {})
+                .get("project_overview_error_fallback", "- (プロジェクト概要を取得できませんでした)")
             )
             result = [fallback_message]
         except Exception as e:

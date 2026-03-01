@@ -42,6 +42,7 @@ markdown:
     pages_label: "GitHub Pages"
     description_label: "Overview"
     project_highlights: "Project Highlights"
+    project_overview_error_fallback: "- (プロジェクト概要を取得できませんでした)"
     fork_description: "Forked from upstream repository"
 
   # Processing Status Messages

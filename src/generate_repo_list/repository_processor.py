@@ -29,7 +29,7 @@ class RepositoryProcessor:
 
         # プロジェクト概要取得機能の初期化
         if self.github_api is not None:
-            self.project_overview_fetcher = ProjectOverviewFetcher(self.github_api, self.config)
+            self.project_overview_fetcher = ProjectOverviewFetcher(self.github_api, self.config, self.strings)
         else:
             self.project_overview_fetcher = None
 
