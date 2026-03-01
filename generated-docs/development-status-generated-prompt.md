@@ -1,4 +1,4 @@
-Last updated: 2026-02-23
+Last updated: 2026-03-02
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -105,6 +105,7 @@ Last updated: 2026-02-23
 ## プロジェクトのファイル一覧
 - .editorconfig
 - .github/actions-tmp/.github/workflows/call-callgraph.yml
+- .github/actions-tmp/.github/workflows/call-check-large-files.yml
 - .github/actions-tmp/.github/workflows/call-daily-project-summary.yml
 - .github/actions-tmp/.github/workflows/call-issue-note.yml
 - .github/actions-tmp/.github/workflows/call-rust-windows-check.yml
@@ -134,7 +135,7 @@ Last updated: 2026-02-23
 - .github/actions-tmp/.github_automation/callgraph/scripts/generate-html-graph.cjs
 - .github/actions-tmp/.github_automation/callgraph/scripts/generateHTML.cjs
 - .github/actions-tmp/.github_automation/check-large-files/README.md
-- .github/actions-tmp/.github_automation/check-large-files/check-large-files.toml.example
+- .github/actions-tmp/.github_automation/check-large-files/check-large-files.toml.default
 - .github/actions-tmp/.github_automation/check-large-files/scripts/check_large_files.py
 - .github/actions-tmp/.github_automation/check_recent_human_commit/scripts/check-recent-human-commit.cjs
 - .github/actions-tmp/.github_automation/project_summary/docs/daily-summary-setup.md
@@ -196,7 +197,8 @@ Last updated: 2026-02-23
 - .github/actions-tmp/issue-notes/38.md
 - .github/actions-tmp/issue-notes/4.md
 - .github/actions-tmp/issue-notes/40.md
-- .github/actions-tmp/issue-notes/42.md
+- .github/actions-tmp/issue-notes/44.md
+- .github/actions-tmp/issue-notes/46.md
 - .github/actions-tmp/issue-notes/7.md
 - .github/actions-tmp/issue-notes/8.md
 - .github/actions-tmp/issue-notes/9.md
@@ -225,16 +227,7 @@ Last updated: 2026-02-23
 - generated-docs/project-overview-generated-prompt.md
 - googled947dc864c270e07.html
 - index.md
-- issue-notes/10.md
-- issue-notes/12.md
-- issue-notes/14.md
-- issue-notes/16.md
-- issue-notes/18.md
-- issue-notes/2.md
-- issue-notes/20.md
-- issue-notes/4.md
-- issue-notes/6.md
-- issue-notes/8.md
+- issue-notes/22.md
 - manifest.json
 - pytest.ini
 - requirements-dev.txt
@@ -279,16 +272,13 @@ Last updated: 2026-02-23
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
-bd6bdc7 Auto-update repository list - 2026-02-21
-574e578 Update project summaries (overview & development status) [auto]
-da3b22d Auto-update repository list - 2026-02-20
-d0a3305 Update project summaries (overview & development status) [auto]
-818bbdc Auto-update repository list - 2026-02-19
-6619cf6 Update project summaries (overview & development status) [auto]
-0d6d772 Auto-update repository list - 2026-02-18
-596ed3d Update project summaries (overview & development status) [auto]
-1a64277 Auto-update repository list - 2026-02-17
-7cf5855 Update project summaries (overview & development status) [auto]
+bf8fd88 Merge pull request #23 from cat2151/copilot/fix-markdown-generation-issue
+4b65655 Address review comments: move fallback message to strings.yml, update docstring, add custom strings test
+f37604e Fix: prioritize availability over fail-fast for project overview fetch errors
+2f48907 Initial plan
+7c88ce2 Add issue note for #22 [auto]
+b039caf Auto-update repository list - 2026-02-22
+57a6043 Update project summaries (overview & development status) [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -296,7 +286,22 @@ generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
 index.md
+issue-notes/10.md
+issue-notes/12.md
+issue-notes/14.md
+issue-notes/16.md
+issue-notes/18.md
+issue-notes/2.md
+issue-notes/20.md
+issue-notes/22.md
+issue-notes/4.md
+issue-notes/6.md
+issue-notes/8.md
+src/generate_repo_list/project_overview_fetcher.py
+src/generate_repo_list/repository_processor.py
+src/generate_repo_list/strings.yml
+tests/test_project_overview_fetcher.py
 
 
 ---
-Generated at: 2026-02-23 07:07:03 JST
+Generated at: 2026-03-02 07:06:42 JST

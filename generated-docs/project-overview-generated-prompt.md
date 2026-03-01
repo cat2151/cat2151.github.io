@@ -1,4 +1,4 @@
-Last updated: 2026-02-23
+Last updated: 2026-03-02
 
 
 # プロジェクト概要生成プロンプト（来訪者向け）
@@ -207,16 +207,7 @@ project_overview:
 🌐 googled947dc864c270e07.html
 📖 index.md
 📁 issue-notes/
-  📖 10.md
-  📖 12.md
-  📖 14.md
-  📖 16.md
-  📖 18.md
-  📖 2.md
-  📖 20.md
-  📖 4.md
-  📖 6.md
-  📖 8.md
+  📖 22.md
 📊 manifest.json
 📄 pytest.ini
 📄 requirements-dev.txt
@@ -269,16 +260,7 @@ project_overview:
 README.md
 googled947dc864c270e07.html
 index.md
-issue-notes/10.md
-issue-notes/12.md
-issue-notes/14.md
-issue-notes/16.md
-issue-notes/18.md
-issue-notes/2.md
-issue-notes/20.md
-issue-notes/4.md
-issue-notes/6.md
-issue-notes/8.md
+issue-notes/22.md
 manifest.json
 src/generate_repo_list/json_ld_template.json
 
@@ -292,4 +274,4 @@ src/generate_repo_list/json_ld_template.json
 
 
 ---
-Generated at: 2026-02-23 07:07:03 JST
+Generated at: 2026-03-02 07:06:42 JST
