@@ -59,9 +59,20 @@ class TestProjectOverviewFetcher:
         }
 
     @pytest.fixture
-    def fetcher(self, mock_github_api, mock_config):
+    def mock_strings(self):
+        """文字列リソースのフィクスチャ"""
+        return {
+            "markdown": {
+                "repo_details": {
+                    "project_overview_error_fallback": "- (プロジェクト概要を取得できませんでした)",
+                }
+            }
+        }
+
+    @pytest.fixture
+    def fetcher(self, mock_github_api, mock_config, mock_strings):
         """ProjectOverviewFetcherのフィクスチャ"""
-        return ProjectOverviewFetcher(mock_github_api, mock_config)
+        return ProjectOverviewFetcher(mock_github_api, mock_config, mock_strings)
 
     @pytest.fixture
     def sample_markdown_content(self):
@@ -357,8 +368,8 @@ class TestProjectOverviewFetcher:
         assert "プロジェクト概要セクション" in str(exc_info.value)
         assert "が見つかりません" in str(exc_info.value)
 
-    def test_fetch_overview_section_not_found_raises_exception(self, fetcher):
-        """fetch_overview: ファイルは存在するがセクションが見つからない場合は例外発生"""
+    def test_fetch_overview_section_not_found_returns_fallback(self, fetcher):
+        """fetch_overview: ファイルは存在するがセクションが見つからない場合はフォールバックメッセージを返す"""
         # モック設定: ファイルは存在するが、プロジェクト概要セクションがない
         markdown_content = """# プロジェクトタイトル
 
@@ -376,5 +387,42 @@ class TestProjectOverviewFetcher:
         mock_repo.get_contents.return_value = mock_file_content
         fetcher.github.get_repo.return_value = mock_repo
 
-        with pytest.raises(ProjectOverviewSectionNotFoundError):
-            fetcher.fetch_overview("test-repo", "test-user")
+        result = fetcher.fetch_overview("test-repo", "test-user")
+
+        # 例外を発生させず、フォールバックメッセージを返す
+        assert len(result) == 1
+        assert "プロジェクト概要を取得できませんでした" in result[0]
+
+    def test_fetch_overview_section_not_found_returns_configured_fallback(self, mock_github_api, mock_config):
+        """fetch_overview: strings経由でカスタムフォールバックメッセージが使われる"""
+        markdown_content = """# プロジェクトタイトル
+
+## はじめに
+説明文
+
+## 機能
+- 機能1
+- 機能2
+"""
+        mock_file_content = Mock()
+        mock_file_content.content = base64.b64encode(markdown_content.encode("utf-8")).decode("utf-8")
+
+        mock_repo = Mock()
+        mock_repo.get_contents.return_value = mock_file_content
+        mock_github_api.get_repo.return_value = mock_repo
+
+        custom_message = "カスタムのプロジェクト概要取得エラーメッセージです"
+        custom_strings = {
+            "markdown": {
+                "repo_details": {
+                    "project_overview_error_fallback": custom_message,
+                }
+            }
+        }
+        fetcher = ProjectOverviewFetcher(mock_github_api, mock_config, custom_strings)
+
+        result = fetcher.fetch_overview("test-repo", "test-user")
+
+        # strings経由で設定した文言がそのまま返る
+        assert len(result) == 1
+        assert result[0] == custom_message
