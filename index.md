@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-01 (UTC) / 2026-03-02 (JST)
+Last Updated: 2026-03-02 (UTC) / 2026-03-03 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、SEO最適化されたMarkdownファイルを生成します。
-- 検索エンジンからのクロールを容易にし、LLMによるリポジトリ参照の精度向上を目指します。
-- 📅 2026-03-01 (UTC) / 2026-03-02 (JST)
+- GitHub API を活用し、指定されたGitHubユーザーのリポジトリ情報を自動的に取得します。
+- 取得した情報から、GitHub Pages サイト向けにSEO最適化されたリポジトリ一覧ページをMarkdown形式で生成します。
+- GitHubユーザーページの検索エンジンでの可視性を高め、リポジトリの発見性向上とLLMによる参照失敗の緩和を目的としています。
+- 📅 2026-03-02 (UTC) / 2026-03-03 (JST)
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
@@ -107,10 +107,10 @@ A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 - **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
 
 ### Project Highlights
--   このプロジェクトは、Music Macro Language（MML）形式の楽譜データをStandard MIDI File（SMF）に変換するRust製のライブラリです。
--   MML解析からSMF生成までを4段階のアーキテクチャで処理し、ネイティブアプリケーションおよびWebAssembly（WASM）対応のブラウザアプリケーションへの組み込みが可能です。
--   多チャンネル対応、CLI、JSONデバッグ出力、包括的なテストを備え、音楽プログラミングの基盤として利用されます。
-- 📅 2026-03-01 (UTC) / 2026-03-02 (JST)
+- 本プロジェクトは、Music Macro Language (MML) 形式の文字列をStandard MIDI File (SMF) へ変換するRust製ライブラリです。
+- MML構文解析にtree-sitterを活用した4パスアーキテクチャを採用し、堅牢かつ拡張性の高い設計を実現しています。
+- ネイティブアプリケーション向けRustクレートとして利用されるほか、WebAssemblyを通じてブラウザ上でのMML音楽生成デモも提供します。
+- 📅 2026-03-02 (UTC) / 2026-03-03 (JST)
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
 collection of reusable GitHub Actions workflows for multiple projects
@@ -121,10 +121,10 @@ collection of reusable GitHub Actions workflows for multiple projects
 - **GitHub Pages**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
 
 ### Project Highlights
-- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽にするための共通ワークフロー集です。
-- 🔗 共通化されたワークフローを提供し、様々なプロジェクトから簡単に再利用できます。
-- ✅ ワークフローの一括メンテナンスを可能にし、各プロジェクトの開発者は本質的な開発に集中できます。
-- 📅 2026-03-01 (UTC) / 2026-03-02 (JST)
+- 🚀 プロジェクトごとのGitHub Actions管理を効率化し、共通化されたワークフローを提供します。
+- 🔗 どのプロジェクトからも簡単に呼び出せる共通ワークフローにより、導入の手間を削減します。
+- ✅ ワークフローのメンテナンスを一元化し、プロジェクト開発者は自身のコードに集中できる環境を支援します。
+- 📅 2026-03-02 (UTC) / 2026-03-03 (JST)
 
 ## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
 YM2151 event log editor with TUI interface. Written in Rust
@@ -135,10 +135,10 @@ YM2151 event log editor with TUI interface. Written in Rust
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-log-editor/](https://cat2151.github.io/ym2151-log-editor/)
 
 ### Project Highlights
-- YM2151シンセサイザーのイベントログを編集・可視化するためのターミナルユーザーインターフェース（TUI）アプリケーションです。
-- JSON形式のイベントデータを直感的に表示し、タイミング調整やイベント検査を支援することを目的としています。
-- イベントの挿入、削除、待機時間設定、ファイル操作などの基本的な編集機能を提供します。
-- 📅 2026-03-01 (UTC) / 2026-03-02 (JST)
+-   YM2151シンセサイザーのイベントログを編集・可視化するためのターミナルユーザーインターフェース (TUI) エディタです。
+-   JSON形式のイベントデータを読み込み、タイミング調整やイベント検査を支援し、KeyON表示や時刻表示モードを提供します。
+-   Rust言語で開発されており、ターミナル上で直感的かつ効率的な操作でイベントログを管理できます。
+- 📅 2026-03-02 (UTC) / 2026-03-03 (JST)
 
 ## [wavlpf](https://cat2151.github.io/wavlpf/)
 Software synthesizer. Simple. Non-realtime rendering
@@ -149,10 +149,10 @@ Software synthesizer. Simple. Non-realtime rendering
 - **GitHub Pages**: [https://cat2151.github.io/wavlpf/](https://cat2151.github.io/wavlpf/)
 
 ### Project Highlights
-- Rust WASM技術を核とした、ブラウザで動作するシンプルなソフトウェアシンセサイザーです。
-- インタラクティブなBiquadローパスフィルターとリアルタイム波形ビジュアライゼーションを提供します。
-- 非リアルタイムレンダリングによるWAVファイル生成や設定の永続化機能を備えています。
-- 📅 2026-03-01 (UTC) / 2026-03-02 (JST)
+- `wavlpf`は、RustとWebAssembly（WASM）で実装された高性能なソフトウェアシンセサイザーです。
+- 直感的なマウス操作で、ローパスフィルターやノコギリ波/パルス波形をリアルタイムで制御できます。
+- リアルタイムオシロスコープ表示、WAVファイル出力、設定の保存・読み込み機能も備えています。
+- 📅 2026-03-02 (UTC) / 2026-03-03 (JST)
 
 ## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
 
@@ -163,24 +163,52 @@ Software synthesizer. Simple. Non-realtime rendering
 - **Overview**: No description available
 
 ### Project Highlights
-- VOICEVOXローカルサーバーと連携し、テキストを音声に変換して再生するWebアプリケーションです。
-- 任意のテキストを複数のキャラクターの音声で読み上げ、イントネーションの編集も可能です。
-- VOICEVOXクライアントアプリの簡易構築を実証し、手軽な音声再生体験を提供することを目指します。
-- 📅 2026-03-01 (UTC) / 2026-03-02 (JST)
+- VOICEVOXローカルサーバーと連携し、Webブラウザからテキストを音声に変換して再生するアプリケーションです。
+- ユーザーはテキスト入力やイントネーション調整を通じて、多様なキャラクターの音声での読み上げを体験できます。
+- VOICEVOXクライアントアプリの容易な開発実証と、即座な音声再生体験の提供を目指しています。
+- 📅 2026-03-02 (UTC) / 2026-03-03 (JST)
 
-## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
-A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
+## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
+File Change Monitoring Tool - Detects file changes and executes commands
 
-<a href="https://cat2151.github.io/quartz-transformer-mmlabc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/quartz-transformer-mmlabc"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-file-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 
-- **Repository**: [https://github.com/cat2151/quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
-- **GitHub Pages**: [https://cat2151.github.io/quartz-transformer-mmlabc/](https://cat2151.github.io/quartz-transformer-mmlabc/)
+- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
 
 ### Project Highlights
-- Markdown形式で書かれたコード進行やMML記法から、五線譜を生成しブラウザ上に表示します。
-- 表示された楽譜はクリックすることで演奏可能であり、Quartz v4の静的サイトジェネレーターにプラグインとして組み込まれます。
-- MML (Music Macro Language) とABC Notationの両方に対応し、コード進行の表現を豊かにします。
-- 📅 2026-03-01 (UTC) / 2026-03-02 (JST)
+- ファイルのタイムスタンプ変更を監視し、指定されたファイルやディレクトリが更新された際にカスタムコマンドを実行します。
+- 複数のファイルやディレクトリを同時に監視し、TOML設定ファイルを通じて柔軟な監視条件やコマンド実行オプションを定義できます。
+- 軽量でありながら、プロセス抑制、時間帯指定、Windowsでのフォーカス非奪取など、様々なユースケースに対応する機能を備えています。
+- 📅 2026-03-02 (UTC) / 2026-03-03 (JST)
+
+## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
+
+<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
+- **Overview**: No description available
+
+### Project Highlights
+- GitHub CopilotなどAIエージェントによる自動実装のプルリクエスト（PR）フェーズを効率的に監視するPythonツールです。
+- 認証済みGitHubユーザーの所有リポジトリを対象に、GraphQL APIを用いてPRの状態を判定し、適切な通知やアクションを自動実行します。
+- ドライランモード、モバイル通知、自動コメント、Draft PRのReady化、PRマージ、そしてローカルリポジトリの自動同期など、豊富な自動化機能を柔軟に設定可能です。
+- 📅 2026-03-02 (UTC) / 2026-03-03 (JST)
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151 FM音源の音色をターミナル上で編集するためのアプリケーションです。
+- Windows環境で動作し、リアルタイムで音色の変化を音声で確認できます。
+- 直感的なTUI（Terminal User Interface）とキーボード・マウス操作で音色作成を楽しめます。
+- 📅 2026-03-02 (UTC) / 2026-03-02 (JST)
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
@@ -194,35 +222,44 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - YM2151（OPM）音源チップのレジスタイベントログをリアルタイムで再生するサーバー・クライアントシステムです。
 - サーバーはバックグラウンドで常駐し、クライアントからJSON形式の音楽データを送信して演奏を制御します。
 - プログラマティックな利用やコマンドラインからの操作が可能で、低遅延のインタラクティブな音楽制御もサポートします。
-- 📅 2026-03-01 (UTC) / 2026-03-02 (JST)
+- 📅 2026-03-02 (UTC) / 2026-03-02 (JST)
 
-## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
+## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
+A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
 
-<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+<a href="https://cat2151.github.io/quartz-transformer-mmlabc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/quartz-transformer-mmlabc"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 
-- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
+- **Repository**: [https://github.com/cat2151/quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
+- **GitHub Pages**: [https://cat2151.github.io/quartz-transformer-mmlabc/](https://cat2151.github.io/quartz-transformer-mmlabc/)
+
+### Project Highlights
+- Markdown形式で書かれたコード進行やMML記法から、五線譜を生成しブラウザ上に表示します。
+- 表示された楽譜はクリックすることで演奏可能であり、Quartz v4の静的サイトジェネレーターにプラグインとして組み込まれます。
+- MML (Music Macro Language) とABC Notationの両方に対応し、コード進行の表現を豊かにします。
+- 📅 2026-03-02 (UTC) / 2026-03-02 (JST)
+
+## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
 - **Overview**: No description available
+- 📅 2026-03-02 (UTC) / 2026-03-02 (JST)
+
+## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
+[WIP] smf-to-ym2151log のRust版
+
+<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://cat2151.github.io/smf-to-ym2151log-rust/"><img src="https://img.shields.io/badge/📦-Library%20Demo-blue.svg" alt="Library Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
+- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
 
 ### Project Highlights
-- GitHub CopilotなどAIエージェントによる自動実装のプルリクエスト(PR)監視に特化したPythonツールです。
-- 認証済みユーザーの全リポジトリを対象に、PRの進捗フェーズを自動検知し、適切な通知やアクションを実行します。
-- GraphQL APIによる効率的な監視と、Dry-runモードや自動更新などの豊富な機能で開発フローを支援します。
-- 📅 2026-03-01 (UTC) / 2026-03-02 (JST)
-
-## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
-File Change Monitoring Tool - Detects file changes and executes commands
-
-<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-file-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
-
-### Project Highlights
-- このプロジェクトは、ファイルやディレクトリの変更をリアルタイムで監視し、変更が検知された際に指定されたコマンドを自動実行するツールです。
-- TOML形式の設定ファイルを通じて、監視対象のパス、実行コマンド、監視間隔、特定の条件でのコマンド抑制など、柔軟な設定が可能です。
-- 軽量で使いやすく、Windows環境でのフォーカスを奪わないコマンド実行機能など、特定のユースケースにも対応した設計が特徴です。
-- 📅 2026-03-01 (UTC) / 2026-03-02 (JST)
+- Standard MIDI Files (SMF) をヤマハYM2151 FM音源のレジスタ操作ログ（JSON形式）に変換するRust製ライブラリです。
+- ネイティブアプリケーションとWebAssembly (WASM) 対応のWebブラウザ環境の両方で利用可能です。
+- 高度なチャンネル割り当て戦略とプログラムチェンジ対応により、忠実なYM2151エミュレーションをサポートします。
+- 📅 2026-03-02 (UTC) / 2026-03-02 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -250,43 +287,6 @@ WIP
 - **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
 - **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
 - 📅 2026-03-01 (UTC) / 2026-03-02 (JST)
-
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FM音源の音色をターミナル上で編集するためのアプリケーションです。
-- Windows環境で動作し、リアルタイムで音色の変化を音声で確認できます。
-- 直感的なTUI（Terminal User Interface）とキーボード・マウス操作で音色作成を楽しめます。
-- 📅 2026-03-01 (UTC) / 2026-03-01 (JST)
-
-## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
-[WIP] smf-to-ym2151log のRust版
-
-<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://cat2151.github.io/smf-to-ym2151log-rust/"><img src="https://img.shields.io/badge/📦-Library%20Demo-blue.svg" alt="Library Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
-- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
-
-### Project Highlights
-- Standard MIDI Files (SMF) をヤマハYM2151 FM音源のレジスタ操作ログ（JSON形式）に変換するRust製ライブラリです。
-- ネイティブアプリケーションとWebAssembly (WASM) 対応のWebブラウザ環境の両方で利用可能です。
-- 高度なチャンネル割り当て戦略とプログラムチェンジ対応により、忠実なYM2151エミュレーションをサポートします。
-- 📅 2026-03-01 (UTC) / 2026-03-01 (JST)
-
-## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
-- **Overview**: No description available
-- 📅 2026-03-01 (UTC) / 2026-03-01 (JST)
 
 ## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
 Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
