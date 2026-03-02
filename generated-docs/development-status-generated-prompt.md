@@ -1,4 +1,4 @@
-Last updated: 2026-03-02
+Last updated: 2026-03-03
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -198,7 +198,7 @@ Last updated: 2026-03-02
 - .github/actions-tmp/issue-notes/4.md
 - .github/actions-tmp/issue-notes/40.md
 - .github/actions-tmp/issue-notes/44.md
-- .github/actions-tmp/issue-notes/46.md
+- .github/actions-tmp/issue-notes/49.md
 - .github/actions-tmp/issue-notes/7.md
 - .github/actions-tmp/issue-notes/8.md
 - .github/actions-tmp/issue-notes/9.md
@@ -272,13 +272,13 @@ Last updated: 2026-03-02
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+d1c32c3 Auto-update repository list - 2026-03-01
+2be7eb9 Update project summaries (overview & development status) [auto]
 bf8fd88 Merge pull request #23 from cat2151/copilot/fix-markdown-generation-issue
 4b65655 Address review comments: move fallback message to strings.yml, update docstring, add custom strings test
 f37604e Fix: prioritize availability over fail-fast for project overview fetch errors
 2f48907 Initial plan
 7c88ce2 Add issue note for #22 [auto]
-b039caf Auto-update repository list - 2026-02-22
-57a6043 Update project summaries (overview & development status) [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -304,4 +304,4 @@ tests/test_project_overview_fetcher.py
 
 
 ---
-Generated at: 2026-03-02 07:06:42 JST
+Generated at: 2026-03-03 07:09:45 JST
