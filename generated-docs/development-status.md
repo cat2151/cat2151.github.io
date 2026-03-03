@@ -1,56 +1,52 @@
-Last updated: 2026-03-03
+Last updated: 2026-03-04
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。
+オープン中のIssueはありません。最近のコミットでは、[Issue #23](../issue-notes/23.md) に関連するMarkdown生成の問題が修正され、[Issue #22](../issue-notes/22.md) に関連してプロジェクト概要フェッチャーのエラーハンドリングが改善されました。日次でのプロジェクトサマリー（概要と開発状況）およびリポジトリリストの自動更新が継続的に実行されています。
 
 ## 次の一手候補
-1.  GitHub Actionsワークフローの整理と効率化
-    -   最初の小さな一歩: `.github/actions-tmp` ディレクトリとルートの `.github/workflows` ディレクトリ内の `.yml` ファイルを比較し、機能的な重複や冗長性がないか初期調査を行う。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: .github/actions-tmp/**/*.yml, .github/workflows/**/*.yml
+1. プロジェクト概要フェッチャーのエラー回復力強化 [Issue #22](../issue-notes/22.md)
+   - 最初の小さな一歩: `src/generate_repo_list/project_overview_fetcher.py` の既存のエラーハンドリングロジックをレビューし、外部APIの様々なエラーケースや不安定性に対する回復策（リトライ戦略、タイムアウト処理、フォールバック機構など）を具体的に検討する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `src/generate_repo_list/project_overview_fetcher.py`, `tests/test_project_overview_fetcher.py`
 
-        実行内容: 上記ファイルについて、ファイル名、含まれるジョブ名、トリガーイベントをリストアップし、以下の観点から分析してください：
-        1) 機能的に重複している可能性のあるワークフローのペア
-        2) `.github/actions-tmp` にのみ存在するが、ルートのワークフローに統合すべきと思われるワークフロー
-        3) 明らかに不要と思われる一時ファイルや古いファイル
+     実行内容: `src/generate_repo_list/project_overview_fetcher.py` 内の外部API呼び出しに関するエラーハンドリングおよび回復ロジックを分析し、より堅牢な設計を提案してください。具体的には、リトライメカニズム、タイムアウト設定、フォールバックデータ、およびテストケースの追加・強化に関する推奨事項を含めてください。
 
-        確認事項: 各ワークフローが依存しているスクリプトやアクション（特に `.github_automation` 内のスクリプト）との関連性を考慮してください。
+     確認事項: 既存のテストコードとの整合性、および外部APIの利用規約やレートリミット制約を確認してください。
 
-        期待する出力: 分析結果をMarkdown形式で出力し、重複/冗長性の可能性、統合の提案、および削除候補のリストを提示してください。
-        ```
+     期待する出力: 提案された改善案と、それらを検証するための具体的なテストシナリオをmarkdown形式で出力してください。
+     ```
 
-2.  プロジェクトサマリー（開発状況、プロジェクト概要）生成スクリプトの品質改善点の特定
-    -   最初の小さな一歩: `generated-docs/development-status.md` と `generated-docs/project-overview.md` の現在の出力内容を確認し、改善の余地がある具体的な項目（例: 情報の粒度、表現の明確さ、不足している情報）を特定する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: generated-docs/development-status.md, generated-docs/project-overview.md, .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
+2. 自動生成ドキュメント (開発状況/プロジェクト概要) の表現力と情報密度の向上 [Issue #23](../issue-notes/23.md)
+   - 最初の小さな一歩: 現在の `generated-docs/development-status.md` と `generated-docs/project-overview.md` の内容を読み込み、開発者やステークホルダーにとって特に有用と思われる情報や、さらに詳細化できる領域を特定する。特に、プロンプトファイル (`development-status-prompt.md`, `project-overview-prompt.md`) の調整で改善できる可能性を探る。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `generated-docs/development-status.md`, `generated-docs/project-overview.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`
 
-        実行内容: 現在生成されている `development-status.md` と `project-overview.md` の内容をレビューし、それがそれぞれの生成プロンプト（`development-status-prompt.md` および `project-overview-prompt.md`）の意図をどの程度反映しているかを評価してください。特に以下の点を分析してください：
-        1) 現在の出力で不足している情報や、より明確にすべき点
-        2) プロンプトの指示と出力の間に乖離がある場合、その原因となる可能性のある箇所（例: プロンプト自体の不明確さ、情報収集スクリプトの限界）
+     実行内容: 現在の自動生成された開発状況およびプロジェクト概要ドキュメントを評価し、その内容の網羅性、具体性、および読解しやすさについて分析してください。上記のプロンプトファイルの内容も考慮に入れ、ドキュメントの品質と表現力を向上させるための具体的な改善案（例: 記載すべき情報の追加、要約の改善、構造の見直しなど）を提案してください。
 
-        確認事項: 生成されたドキュメントが、開発者にとって本当に有用な情報を提供しているか、ハルシネーションがないかという観点を含めてください。
+     確認事項: プロンプトの変更がハルシネーションを引き起こさないこと、および生成される情報が常に最新かつ正確であることを確認してください。
 
-        期待する出力: レビュー結果をMarkdown形式で出力し、各ドキュメントの改善提案（具体的な情報の追加、表現の修正など）、および必要であればプロンプトファイルの修正案の方向性を提示してください。
-        ```
+     期待する出力: ドキュメント品質向上のための具体的な改善提案と、プロンプトの修正案をmarkdown形式で出力してください。
+     ```
 
-3.  リポジトリリスト自動更新処理におけるエラーハンドリングとロギングの強化
-    -   最初の小さな一歩: `src/generate_repo_list/project_overview_fetcher.py` の既存のエラーハンドリングをレビューし、他に外部サービス連携やファイル操作を行う `src/generate_repo_list` ディレクトリ内のスクリプトを特定する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: src/generate_repo_list/project_overview_fetcher.py, src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py
+3. GitHub Actions ワークフローのクリーンアップと効率化 [Issue #2](../issue-notes/2.md)
+   - 最初の小さな一歩: プロジェクトの `.github/workflows/` および `.github/actions-tmp/.github/workflows/` ディレクトリ内の全ワークフローファイルをリストアップし、それぞれの目的、トリガー、実行頻度、および依存関係を把握する。特に、類似または重複する機能を持つワークフローを特定する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `.github/workflows/*.yml`, `.github/actions-tmp/.github/workflows/*.yml`
 
-        実行内容: `src/generate_repo_list/` ディレクトリ内の主要なスクリプト、特に外部API呼び出し、ファイルI/O、ネットワーク通信を伴う箇所のエラーハンドリングとロギングの実装状況を分析してください。以下の観点に焦点を当ててください：
-        1) 未処理の例外が発生する可能性のあるコードパス
-        2) エラー発生時に適切なコンテキスト情報がログに出力されているか
-        3) リトライメカニズムやフォールバック処理が導入されているか（特に外部API呼び出し箇所）
+     実行内容: 対象ファイル内のGitHub Actionsワークフローを分析し、冗長性、非効率性、または改善の余地がある箇所を特定してください。特に、以下の観点から検討してください：
+     1) 重複するステップやジョブの統合
+     2) 古くなったアクションや非推奨の構文の更新
+     3) 実行時間の最適化（例: キャッシュの利用、並列処理の検討）
+     4) 未使用または機能が重複しているワークフローの特定
 
-        確認事項: エラーがシステム全体に波及しないように適切に捕捉・処理されているか、また、デバッグや問題解決に役立つ十分な情報が提供されているかを重視してください。
+     確認事項: ワークフローの変更が既存のCI/CDパイプラインの機能や安定性を損なわないことを確認してください。
 
-        期待する出力: 各ファイルの分析結果をMarkdown形式で出力し、エラーハンドリングの強化が必要な箇所とその具体的な改善提案（例: try-exceptブロックの追加、カスタム例外の導入、より詳細なロギングの追加）を提示してください。
+     期待する出力: ワークフローのクリーンアップと効率化に関する具体的な提案をmarkdown形式で出力してください。これには、削除、統合、更新を推奨するワークフローファイルとその理由を含めてください。
 
 ---
-Generated at: 2026-03-03 07:10:06 JST
+Generated at: 2026-03-04 07:09:45 JST
