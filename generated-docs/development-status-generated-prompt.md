@@ -1,4 +1,4 @@
-Last updated: 2026-03-04
+Last updated: 2026-03-05
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -272,6 +272,8 @@ Last updated: 2026-03-04
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+cd02035 Auto-update repository list - 2026-03-03
+ff513c0 Update project summaries (overview & development status) [auto]
 5cc5435 Auto-update repository list - 2026-03-02
 6d1ec96 Update project summaries (overview & development status) [auto]
 d1c32c3 Auto-update repository list - 2026-03-01
@@ -280,7 +282,6 @@ bf8fd88 Merge pull request #23 from cat2151/copilot/fix-markdown-generation-issu
 4b65655 Address review comments: move fallback message to strings.yml, update docstring, add custom strings test
 f37604e Fix: prioritize availability over fail-fast for project overview fetch errors
 2f48907 Initial plan
-7c88ce2 Add issue note for #22 [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -288,17 +289,6 @@ generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
 generated-docs/project-overview.md
 index.md
-issue-notes/10.md
-issue-notes/12.md
-issue-notes/14.md
-issue-notes/16.md
-issue-notes/18.md
-issue-notes/2.md
-issue-notes/20.md
-issue-notes/22.md
-issue-notes/4.md
-issue-notes/6.md
-issue-notes/8.md
 src/generate_repo_list/project_overview_fetcher.py
 src/generate_repo_list/repository_processor.py
 src/generate_repo_list/strings.yml
@@ -306,4 +296,4 @@ tests/test_project_overview_fetcher.py
 
 
 ---
-Generated at: 2026-03-04 07:09:09 JST
+Generated at: 2026-03-05 07:09:59 JST
