@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-04 (UTC) / 2026-03-05 (JST)
+Last Updated: 2026-03-05 (UTC) / 2026-03-06 (JST)
 
 ## 📋 Table of Contents
 
@@ -75,7 +75,7 @@ Last Updated: 2026-03-04 (UTC) / 2026-03-05 (JST)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-25_(26.3%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-14_(14.7%25)-3572A5?style=flat&logo=python) ![TypeScript](https://img.shields.io/badge/TypeScript-12_(12.6%25)-3178c6?style=flat&logo=typescript) ![Rust](https://img.shields.io/badge/Rust-12_(12.6%25)-dea584?style=flat&logo=rust) ![HTML](https://img.shields.io/badge/HTML-6_(6.3%25)-e34c26?style=flat&logo=html5)
+![JavaScript](https://img.shields.io/badge/JavaScript-24_(25.3%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-14_(14.7%25)-3572A5?style=flat&logo=python) ![TypeScript](https://img.shields.io/badge/TypeScript-13_(13.7%25)-3178c6?style=flat&logo=typescript) ![Rust](https://img.shields.io/badge/Rust-12_(12.6%25)-dea584?style=flat&logo=rust) ![HTML](https://img.shields.io/badge/HTML-6_(6.3%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -93,10 +93,42 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、個人のリポジトリ情報を自動で取得・集約するシステムです。
-- 取得した情報から、JekyllベースのGitHub Pagesサイト向けにSEO最適化されたリポジトリ一覧のMarkdownファイルを生成します。
-- これにより、検索エンジンでのリポジトリの可視性を高め、大規模言語モデル（LLM）による参照精度向上に貢献します。
-- 📅 2026-03-04 (UTC) / 2026-03-05 (JST)
+- GitHub PagesサイトのSEOを強化し、リポジトリ情報を検索エンジンに最適化して公開します。
+- GitHub APIを利用してリポジトリ情報を自動取得し、Jekyll対応のMarkdownファイルを生成。
+- 各リポジトリの概要表示やバッジ、分類機能で、訪問者へ魅力的にプロジェクトを紹介します。
+- 📅 2026-03-05 (UTC) / 2026-03-06 (JST)
+
+## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
+
+<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
+- **Overview**: No description available
+
+### Project Highlights
+- GitHub Copilotが自動実装を行うPull Requestのフェーズを監視するツールです。
+- 認証済みGitHubユーザーが所有するリポジトリのPRを自動検出し、その進捗を追跡します。
+- PRの状態（Draft、レビュー対応中、レビュー待ちなど）に応じて、自動コメント投稿、PRのReady化、モバイル通知などのアクションを実行します。
+- 📅 2026-03-05 (UTC) / 2026-03-06 (JST)
+
+## [voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+
+<a href="https://github.com/cat2151/voicevox-playground-tui/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-03-05 (UTC) / 2026-03-06 (JST)
+
+## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+
+![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-03-05 (UTC) / 2026-03-06 (JST)
 
 ## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
 
@@ -111,38 +143,6 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - ユーザーはテキストの入力、話者の選択、イントネーションの編集、音声の視覚化が可能です。
 - 手軽にVOICEVOXのクライアントアプリを開発・試作できる環境を提供することを目的としています。
 - 📅 2026-03-04 (UTC) / 2026-03-05 (JST)
-
-## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
-
-<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
-- **Overview**: No description available
-
-### Project Highlights
-- GitHub Copilotによる自動実装フェーズのプルリクエスト（PR）を監視するPythonツールです。
-- 認証済みGitHubユーザーの所有リポジトリを対象に、PRのフェーズ判定と適切なアクションを実行します。
-- GraphQL APIを活用し、Dry-runモード、自動マージ、モバイル通知などの豊富な自動化機能を提供します。
-- 📅 2026-03-04 (UTC) / 2026-03-05 (JST)
-
-## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-
-![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
-
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-03-04 (UTC) / 2026-03-05 (JST)
-
-## [voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-
-<a href="https://github.com/cat2151/voicevox-playground-tui/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-03-04 (UTC) / 2026-03-04 (JST)
 
 ## [zenn-qiita-mute-warning](https://cat2151.github.io/zenn-qiita-mute-warning/)
 
