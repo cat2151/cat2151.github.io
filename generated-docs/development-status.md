@@ -1,50 +1,61 @@
-Last updated: 2026-03-05
+Last updated: 2026-03-06
 
 # Development Status
 
 ## 現在のIssues
-- オープン中のIssueはありません。
-- 現在、プロジェクトは定義された課題に直面しておらず、安定した状態です。
-- 次のステップとして、既存機能の品質向上や将来的な拡張を検討する段階にあります。
+- 現在、オープン中のIssueはありません。
+- プロジェクトは安定しており、直接的なバグ修正や新機能開発の緊急なタスクは存在しません。
+- 今後は既存機能の改善やプロジェクトの健全性向上に注力するフェーズです。
 
 ## 次の一手候補
-1. [Issue #53](../issue-notes/53.md) `development-status-prompt.md` の精度と表現力の向上
-   - 最初の小さな一歩: 現在の `development-status-prompt.md` の内容と、それに基づいて生成された結果（今回の出力を含む）を比較し、プロンプトの指示（特に「生成しないもの」の項目）への準拠度と改善点を特定します。
-   - Agent実行プロンプト:
+1. 自動生成プロンプトのレビューと改善 [Issue #N/A]
+   - 最初の小さな一歩: 現在使用されている`development-status-prompt.md`と`project-overview-prompt.md`を読み込み、これらプロンプトが生成しているドキュメント（`development-status.md`と`project-overview.md`）の内容と比較し、より明確で簡潔な出力にするための改善点を洗い出す。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, generated-docs/development-status.md
+     対象ファイル:
+     - .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+     - .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
+     - generated-docs/development-status.md
+     - generated-docs/project-overview.md
 
-     実行内容: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` の内容を精査し、現在の開発状況生成プロセスにおいて、プロンプトの指示がどの程度正確に反映されているか（特に「生成しないもの」の項目）を分析してください。また、より明確で簡潔な表現、または追加すべき具体的な指示がないか検討し、改善提案をmarkdown形式で出力してください。
+     実行内容: 上記のプロンプトファイルと、それによって生成されたドキュメントを詳細に比較分析してください。特に、プロンプトが意図する出力と実際の出力の乖離、冗長な表現、情報の欠落、またはハルシネーションの兆候がないかを評価し、改善提案を具体的に記述してください。
 
-     確認事項: 現行のプロンプトと、それによって生成された結果（今回の出力を含む）を照らし合わせ、指示がどの程度反映されているか、ハルシネーションが発生していないか、あるいはプロンプトの解釈に曖昧な点がないかを確認してください。
+     確認事項: プロンプトの変更が、過去の生成出力と大きく乖離しないこと、および新たなハルシネーションを誘発しないことを確認してください。また、`development-status-prompt.md`の改善は本プロンプト自体の品質向上にも貢献するかを考慮してください。
 
-     期待する出力: `development-status-prompt.md` の改善点と、その具体的な修正案をmarkdown形式で出力してください。改善案は、特に指示の明確化とハルシネーション防止の観点から記述してください。
-     ```
-
-2. [Issue #54](../issue-notes/54.md) プロジェクト概要フェッチャーのエラーハンドリングとロギング強化
-   - 最初の小さな一歩: `src/generate_repo_list/project_overview_fetcher.py` を開き、既存のエラーハンドリング (`try-except` ブロック) を確認します。特に外部API呼び出しに関連する箇所に焦点を当て、不足しているログ情報や、デバッグを困難にしている要因を特定します。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/project_overview_fetcher.py
-
-     実行内容: `project_overview_fetcher.py` 内の `fetch_project_overview` メソッドおよび関連するエラーハンドリング箇所を詳細に分析してください。特に、外部API呼び出しの失敗やレスポンスのパースエラー発生時に、デバッグに役立つ十分な情報がログに出力されているか、またエラーが適切に伝播されているかを確認してください。必要に応じて、より詳細なログ出力やエラータイプに応じた個別ハンドリングの導入を提案してください。
-
-     確認事項: 既存の例外処理が網羅的であるか、特定のAPIエラーコードへの対応が考慮されているか、ロギングレベルが適切に設定されているかを確認してください。また、エラー発生時にユーザーまたは自動システムが問題を診断しやすくするための情報が含まれているかを評価してください。
-
-     期待する出力: `project_overview_fetcher.py` のエラーハンドリングとロギングを改善するための具体的なコード変更案をmarkdown形式で出力してください。変更案には、ロギングメッセージの改善例や、追加すべき例外処理のタイプを含めてください。
+     期待する出力: 現在のプロンプトの評価、およびそれぞれのプロンプト（development-status-prompt.md, project-overview-prompt.md）に対する具体的な改善提案をMarkdown形式で出力してください。提案には、変更後のプロンプトの例、期待される効果、およびなぜその変更が必要かの理由を含めてください。
      ```
 
-3. [Issue #55](../issue-notes/55.md) 自動リポジトリリスト更新ワークフローの健全性自動検証
-   - 最初の小さな一歩: `.github/workflows/generate_repo_list.yml` ワークフローの直近の実行ログをレビューし、リポジトリリストの生成・更新ステップがエラーなく完了していることを確認します。また、更新された `index.md` ファイルの内容を簡易的にチェックし、予期せぬ変更や欠落がないか確認します。
-   - Agent実行プロンプト:
+2. `src/generate_repo_list` コア機能のテストカバレッジ拡充 [Issue #N/A]
+   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` および `src/generate_repo_list/repository_processor.py` の既存のテストファイル（`tests/test_markdown_generator.py`, `tests/test_repository_processor.py`）の内容を確認し、特にエッジケースやエラー処理に関するテストケースが不足していないかを特定する。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: .github/workflows/generate_repo_list.yml, src/generate_repo_list/generate_repo_list.py, index.md
+     対象ファイル:
+     - src/generate_repo_list/markdown_generator.py
+     - tests/test_markdown_generator.py
+     - src/generate_repo_list/repository_processor.py
+     - tests/test_repository_processor.py
 
-     実行内容: 自動リポジトリリスト更新ワークフロー（`.github/workflows/generate_repo_list.yml` と `src/generate_repo_list/generate_repo_list.py`）の現在の処理フローを分析し、生成された `index.md` ファイルの内容が期待通りであることを自動的に検証するための新しいステップまたはスクリプトを提案してください。提案は、例えば、更新されたリポジトリ数の基本的なチェック、特定のキーリポジトリの存在確認、または特定のパターンの一貫性チェックなど、シンプルな健全性チェックを対象とします。
+     実行内容: `src/generate_repo_list/markdown_generator.py` および `src/generate_repo_list/repository_processor.py` 内の主要な関数やクラスメソッドについて、既存のテストファイルにおけるテストカバレッジを分析してください。特に、入力値のバリデーション、空のデータ処理、特殊文字を含む入力、外部API呼び出しのモック化、エラーパスのテストなど、不足しているテストシナリオを特定し、追加すべきテストケースの概要を具体的にリストアップしてください。
 
-     確認事項: 現在のワークフローに破壊的な変更を加えないこと、検証プロセスが迅速かつ軽量であること、および誤検知のリスクが低いことを確認してください。また、提案されたチェックが既存のシステムと容易に統合できるか評価してください。
+     確認事項: 提案されるテストケースが既存のコードの意図しない動作を引き起こさないか、また既存のテストスイートとの整合性が保たれるかを確認してください。
 
-     期待する出力: `generate_repo_list.yml` ワークフローに組み込むことができる、リポジトリリスト更新の健全性を確認するための新しいステップ（例: Pythonスクリプトの実行やGitHub Actionsの既存機能の活用）の提案をmarkdown形式で出力してください。提案には、スクリプトの概要と、ワークフローファイルへの追加方法の例を含めてください。
+     期待する出力: 各対象ファイルのテストカバレッジの現状分析、および追加すべきテストケース（対象関数/メソッド、テストする具体的なシナリオ、期待される結果）をMarkdown形式で出力してください。
+     ```
+
+3. `issue-notes` ディレクトリのクリーンアップポリシー検討 [Issue #N/A]
+   - 最初の小さな一歩: `issue-notes/` ディレクトリ内の全ファイルをリストアップし、それぞれのファイルの作成日または最終更新日を調査して、最も古いファイルと最も新しいファイルを特定する。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: `issue-notes/` ディレクトリ内の全てのMarkdownファイル（例: `issue-notes/10.md`, `issue-notes/11.md`, ...）
+
+     実行内容: `issue-notes/` ディレクトリ内のMarkdownファイルについて、以下の観点から分析し、現状の課題と将来的な管理方法に関する具体的な提案を記述してください。
+     1. 現在のファイル数とその傾向（増加傾向か、安定しているか）。
+     2. 各ファイルの作成/更新日時から読み取れる、Issueの活動期間とアーカイブの必要性。
+     3. オープン中のIssueがない現状を踏まえ、これらのノートファイルがどのように扱われるべきか（例: 古いものをアーカイブする、一定期間経過後に自動削除する、参照性を維持しつつ整理する）。
+
+     確認事項: 提案されるクリーンアップポリシーが、将来的に過去のIssue履歴を追跡する必要が生じた際に情報が失われないか、およびIssueノートの自動生成プロセスに影響を与えないかを確認してください。
+
+     期待する出力: `issue-notes/` ディレクトリの現状分析（ファイル数、日付範囲、サイズなど）と、その管理ポリシーに関する具体的な提案（例: アーカイブ戦略、自動化の可能性、ファイル命名規則の改善など）をMarkdown形式で出力してください。
 
 ---
-Generated at: 2026-03-05 07:10:25 JST
+Generated at: 2026-03-06 07:10:00 JST
