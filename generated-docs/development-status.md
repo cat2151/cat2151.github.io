@@ -1,61 +1,55 @@
-Last updated: 2026-03-06
+Last updated: 2026-03-07
 
 # Development Status
 
 ## 現在のIssues
-- 現在、オープン中のIssueはありません。
-- プロジェクトは安定しており、直接的なバグ修正や新機能開発の緊急なタスクは存在しません。
-- 今後は既存機能の改善やプロジェクトの健全性向上に注力するフェーズです。
+オープン中のIssueはありません。
 
 ## 次の一手候補
-1. 自動生成プロンプトのレビューと改善 [Issue #N/A]
-   - 最初の小さな一歩: 現在使用されている`development-status-prompt.md`と`project-overview-prompt.md`を読み込み、これらプロンプトが生成しているドキュメント（`development-status.md`と`project-overview.md`）の内容と比較し、より明確で簡潔な出力にするための改善点を洗い出す。
-   - Agent実行プロンプ:
+1. プロジェクトサマリー生成の精度と効率の向上 [Issue #N/A](../issue-notes/N/A.md)
+   - 最初の小さな一歩: `DevelopmentStatusGenerator.cjs` と `ProjectOverviewGenerator.cjs` がどのような情報を収集し、どのようにサマリーを生成しているか、そのロジックを把握する。
+   - Agent実行プロンプト:
      ```
-     対象ファイル:
-     - .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
-     - .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
-     - generated-docs/development-status.md
-     - generated-docs/project-overview.md
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs および .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs
 
-     実行内容: 上記のプロンプトファイルと、それによって生成されたドキュメントを詳細に比較分析してください。特に、プロンプトが意図する出力と実際の出力の乖離、冗長な表現、情報の欠落、またはハルシネーションの兆候がないかを評価し、改善提案を具体的に記述してください。
+     実行内容: 対象ファイルの内容を分析し、それぞれが以下の観点でどのように情報を収集・処理しているか、markdown形式で説明してください。
+     1) どのファイルを読み込んでいるか（特にissue-notesなど）
+     2) どのようなロジックで情報を要約しているか
+     3) 改善の余地があると思われる箇所（例: パフォーマンス、情報の網羅性、要約の品質）
 
-     確認事項: プロンプトの変更が、過去の生成出力と大きく乖離しないこと、および新たなハルシネーションを誘発しないことを確認してください。また、`development-status-prompt.md`の改善は本プロンプト自体の品質向上にも貢献するかを考慮してください。
+     確認事項: `ProjectSummaryCoordinator.cjs` との連携、および `prompts` ディレクトリ内のプロンプトファイルとの関係性を考慮してください。
 
-     期待する出力: 現在のプロンプトの評価、およびそれぞれのプロンプト（development-status-prompt.md, project-overview-prompt.md）に対する具体的な改善提案をMarkdown形式で出力してください。提案には、変更後のプロンプトの例、期待される効果、およびなぜその変更が必要かの理由を含めてください。
-     ```
-
-2. `src/generate_repo_list` コア機能のテストカバレッジ拡充 [Issue #N/A]
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` および `src/generate_repo_list/repository_processor.py` の既存のテストファイル（`tests/test_markdown_generator.py`, `tests/test_repository_processor.py`）の内容を確認し、特にエッジケースやエラー処理に関するテストケースが不足していないかを特定する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル:
-     - src/generate_repo_list/markdown_generator.py
-     - tests/test_markdown_generator.py
-     - src/generate_repo_list/repository_processor.py
-     - tests/test_repository_processor.py
-
-     実行内容: `src/generate_repo_list/markdown_generator.py` および `src/generate_repo_list/repository_processor.py` 内の主要な関数やクラスメソッドについて、既存のテストファイルにおけるテストカバレッジを分析してください。特に、入力値のバリデーション、空のデータ処理、特殊文字を含む入力、外部API呼び出しのモック化、エラーパスのテストなど、不足しているテストシナリオを特定し、追加すべきテストケースの概要を具体的にリストアップしてください。
-
-     確認事項: 提案されるテストケースが既存のコードの意図しない動作を引き起こさないか、また既存のテストスイートとの整合性が保たれるかを確認してください。
-
-     期待する出力: 各対象ファイルのテストカバレッジの現状分析、および追加すべきテストケース（対象関数/メソッド、テストする具体的なシナリオ、期待される結果）をMarkdown形式で出力してください。
+     期待する出力: 各スクリプトの動作概要と、上記3つの観点からの分析結果をmarkdown形式で出力してください。
      ```
 
-3. `issue-notes` ディレクトリのクリーンアップポリシー検討 [Issue #N/A]
-   - 最初の小さな一歩: `issue-notes/` ディレクトリ内の全ファイルをリストアップし、それぞれのファイルの作成日または最終更新日を調査して、最も古いファイルと最も新しいファイルを特定する。
-   - Agent実行プロンプ:
+2. リポジトリリスト自動更新の安定性向上と機能強化 [Issue #N/A](../issue-notes/N/A.md)
+   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` のメイン処理フローと、関連する設定ファイル (`config.yml`, `seo_template.yml`, `strings.yml`) との連携方法を理解する。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: `issue-notes/` ディレクトリ内の全てのMarkdownファイル（例: `issue-notes/10.md`, `issue-notes/11.md`, ...）
+     対象ファイル: src/generate_repo_list/generate_repo_list.py および src/generate_repo_list/config.yml, src/generate_repo_list/seo_template.yml, src/generate_repo_list/strings.yml
 
-     実行内容: `issue-notes/` ディレクトリ内のMarkdownファイルについて、以下の観点から分析し、現状の課題と将来的な管理方法に関する具体的な提案を記述してください。
-     1. 現在のファイル数とその傾向（増加傾向か、安定しているか）。
-     2. 各ファイルの作成/更新日時から読み取れる、Issueの活動期間とアーカイブの必要性。
-     3. オープン中のIssueがない現状を踏まえ、これらのノートファイルがどのように扱われるべきか（例: 古いものをアーカイブする、一定期間経過後に自動削除する、参照性を維持しつつ整理する）。
+     実行内容: `generate_repo_list.py` がどのように設定ファイルを読み込み、リポジトリリストを生成しているか、その全体的な処理フローとデータ連携をmarkdown形式で説明してください。特に以下の点を明確にしてください。
+     1) どの設定ファイルがどの情報を制御しているか
+     2) エラーが発生した場合の挙動について、現在のスクリプトがどのように対応しているか
 
-     確認事項: 提案されるクリーンアップポリシーが、将来的に過去のIssue履歴を追跡する必要が生じた際に情報が失われないか、およびIssueノートの自動生成プロセスに影響を与えないかを確認してください。
+     確認事項: `markdown_generator.py` や `repository_processor.py` などの関連スクリプトとの連携、および `generate_repo_list.yml` ワークフローからの呼び出し方法を確認してください。
 
-     期待する出力: `issue-notes/` ディレクトリの現状分析（ファイル数、日付範囲、サイズなど）と、その管理ポリシーに関する具体的な提案（例: アーカイブ戦略、自動化の可能性、ファイル命名規則の改善など）をMarkdown形式で出力してください。
+     期待する出力: `generate_repo_list.py` の設定ファイルとの連携および処理フローの概要、エラーハンドリングに関する現状の分析結果をmarkdown形式で出力してください。
+     ```
+
+3. GitHub Actions ワークフローの依存関係の整理とドキュメント化 [Issue #N/A](../issue-notes/N/A.md)
+   - 最初の小さな一歩: `.github/workflows/` および `.github/actions-tmp/.github/workflows/` 内の `call-*.yml` ファイルを洗い出し、それぞれの `uses` キーワードでどのワークフローを呼び出しているかをリストアップする。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: .github/workflows/*.yml および .github/actions-tmp/.github/workflows/*.yml (特に 'call-' で始まるファイル)
+
+     実行内容: 対象ファイル群を分析し、以下の観点からワークフローの依存関係マップ（呼び出し階層）を作成してください。
+     1) 各 `call-*.yml` ワークフローがどのリユーザブルワークフローを `uses` で呼び出しているか
+     2) 各リユーザブルワークフローの主な役割
+
+     確認事項: 各ワークフローの入力パラメータと出力について、簡易的に確認し、依存関係を把握する上で必要な情報として含めてください。
+
+     期待する出力: ワークフロー間の呼び出し関係を示す依存関係マップを、簡潔なテキストまたはMermaid形式（Mermaid記法を使用できない場合はテキストで代替）でmarkdown形式で出力してください。
 
 ---
-Generated at: 2026-03-06 07:10:00 JST
+Generated at: 2026-03-07 07:09:02 JST
