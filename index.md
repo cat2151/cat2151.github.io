@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-05 (UTC) / 2026-03-06 (JST)
+Last Updated: 2026-03-06 (UTC) / 2026-03-07 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,20 @@ Last Updated: 2026-03-05 (UTC) / 2026-03-06 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
+[WIP] smf-to-ym2151log のRust版
+
+<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://cat2151.github.io/smf-to-ym2151log-rust/"><img src="https://img.shields.io/badge/📦-Library%20Demo-blue.svg" alt="Library Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
+- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
+
+### Project Highlights
+- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製のライブラリおよびCLIツールです。
+- ネイティブアプリケーションとWebAssembly (WASM) を通じてWebブラウザの両方で利用可能で、高いパフォーマンスと型安全性を兼ね備えています。
+- 和音数に基づく動的なYM2151チャンネル割り当て戦略、プログラムチェンジによるカスタム音色対応など、高度なMIDIイベント処理を提供します。
+- 📅 2026-03-06 (UTC) / 2026-03-07 (JST)
+
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
@@ -93,42 +107,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub PagesサイトのSEOを強化し、リポジトリ情報を検索エンジンに最適化して公開します。
-- GitHub APIを利用してリポジトリ情報を自動取得し、Jekyll対応のMarkdownファイルを生成。
-- 各リポジトリの概要表示やバッジ、分類機能で、訪問者へ魅力的にプロジェクトを紹介します。
-- 📅 2026-03-05 (UTC) / 2026-03-06 (JST)
-
-## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
-
-<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
-- **Overview**: No description available
-
-### Project Highlights
-- GitHub Copilotが自動実装を行うPull Requestのフェーズを監視するツールです。
-- 認証済みGitHubユーザーが所有するリポジトリのPRを自動検出し、その進捗を追跡します。
-- PRの状態（Draft、レビュー対応中、レビュー待ちなど）に応じて、自動コメント投稿、PRのReady化、モバイル通知などのアクションを実行します。
-- 📅 2026-03-05 (UTC) / 2026-03-06 (JST)
-
-## [voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-
-<a href="https://github.com/cat2151/voicevox-playground-tui/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-03-05 (UTC) / 2026-03-06 (JST)
-
-## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-
-![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-03-05 (UTC) / 2026-03-06 (JST)
+- GitHub Pagesサイト向けに、自身の全リポジトリ一覧を自動生成するシステムです。
+- SEO対策を強化し、検索エンジンからのアクセスやLLMによる情報参照性を向上させます。
+- 各リポジトリの概要、技術スタック、バッジなどを自動で取得・表示し、訪問者に魅力的な情報を提供します。
+- 📅 2026-03-06 (UTC) / 2026-03-07 (JST)
 
 ## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
 
@@ -139,19 +121,56 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Overview**: No description available
 
 ### Project Highlights
-- VOICEVOXローカルサーバーと連携し、テキストから音声を生成するWebアプリケーションです。
-- ユーザーはテキストの入力、話者の選択、イントネーションの編集、音声の視覚化が可能です。
-- 手軽にVOICEVOXのクライアントアプリを開発・試作できる環境を提供することを目的としています。
-- 📅 2026-03-04 (UTC) / 2026-03-05 (JST)
+- VOICEVOXローカルサーバーと連携し、テキストを音声に変換してWebブラウザで再生するアプリケーションです。
+- ユーザーは任意のテキストを多様なキャラクターボイスで読み上げさせ、イントネーションを視覚的に編集できます。
+- 本プロジェクトは、WebブラウザからVOICEVOXを手軽に操作できるクライアントアプリの実証を目指しています。
+- 📅 2026-03-06 (UTC) / 2026-03-07 (JST)
 
-## [zenn-qiita-mute-warning](https://cat2151.github.io/zenn-qiita-mute-warning/)
+## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
+A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
 
-<a href="https://cat2151.github.io/zenn-qiita-mute-warning/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+<a href="https://cat2151.github.io/quartz-transformer-mmlabc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/quartz-transformer-mmlabc"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 
-- **Repository**: [https://github.com/cat2151/zenn-qiita-mute-warning](https://github.com/cat2151/zenn-qiita-mute-warning)
-- **GitHub Pages**: [https://cat2151.github.io/zenn-qiita-mute-warning/](https://cat2151.github.io/zenn-qiita-mute-warning/)
+- **Repository**: [https://github.com/cat2151/quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
+- **GitHub Pages**: [https://cat2151.github.io/quartz-transformer-mmlabc/](https://cat2151.github.io/quartz-transformer-mmlabc/)
+
+### Project Highlights
+- コード進行をMarkdownのコードブロックに書くだけで、五線譜表示とクリック演奏を可能にするQuartzトランスフォーマープラグインです。
+- Music Macro Language (MML) とABC Notationのコードブロックもサポートし、音楽表現を豊かにします。
+- Quartz v4のSPAナビゲーションに対応しており、ページ遷移後もスムーズに楽譜をレンダリング・再生できます。
+- 📅 2026-03-06 (UTC) / 2026-03-07 (JST)
+
+## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
+
+<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
 - **Overview**: No description available
-- 📅 2026-03-04 (UTC) / 2026-03-04 (JST)
+
+### Project Highlights
+- GitHub Copilotによる自動実装フェーズのプルリクエスト (PR) を効率的に監視するPythonツールです。
+- PRのフェーズ（Draft、レビュー対応中、レビュー待ちなど）を自動判定し、通知や自動コメント投稿、Ready化、マージといった適切なアクションを実行します。
+- 全ユーザー所有リポジトリを対象にGraphQL APIを活用して高速監視し、安全なDry-runモードや省電力機能も備えています。
+- 📅 2026-03-06 (UTC) / 2026-03-07 (JST)
+
+## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+
+<a href="https://github.com/cat2151/bluesky-text-to-audio/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-03-06 (UTC) / 2026-03-07 (JST)
+
+## [voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+
+<a href="https://github.com/cat2151/voicevox-playground-tui/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-03-06 (UTC) / 2026-03-07 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -160,7 +179,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2026-03-03 (UTC) / 2026-03-04 (JST)
+- 📅 2026-03-06 (UTC) / 2026-03-06 (JST)
 
 ## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
 Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
@@ -174,21 +193,39 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 - Tone.jsの音色・エフェクト・演奏をJSONで記述できる軽量ライブラリ
 - コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
 - 時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
-- 📅 2026-03-03 (UTC) / 2026-03-04 (JST)
+- 📅 2026-03-06 (UTC) / 2026-03-06 (JST)
 
-## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
-[WIP] smf-to-ym2151log のRust版
+## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
+File Change Monitoring Tool - Detects file changes and executes commands
 
-<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://cat2151.github.io/smf-to-ym2151log-rust/"><img src="https://img.shields.io/badge/📦-Library%20Demo-blue.svg" alt="Library Demo"></a>
+<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-file-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
 
-- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
-- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
+- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
 
 ### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製ツールおよびライブラリです。
-- ネイティブアプリケーションとWebAssembly (WASM) を介したブラウザ環境の両方で利用可能で、高パフォーマンスと型安全性を特徴とします。
-- 和音数ベースの静的チャンネル割り当てやカスタム音色対応、2パス処理アーキテクチャによりSMFの高度な変換を実現します。
-- 📅 2026-03-03 (UTC) / 2026-03-04 (JST)
+- ファイルの変更を監視し、変更が検知された際に指定されたコマンドを自動で実行するツールです。
+- TOML形式の設定ファイルを通じて、監視対象のファイルやディレクトリ、実行するコマンド、監視間隔などを柔軟に設定できます。
+- 軽量で使いやすく、複数のファイルやディレクトリの同時監視、特定のプロセス実行時のコマンド抑制、時間帯ごとの監視などの高度な機能を備えています。
+- 📅 2026-03-06 (UTC) / 2026-03-06 (JST)
+
+## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
+MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
+
+<a href="https://cat2151.github.io/tonejs-mml-to-json/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/tonejs-mml-to-json"><img src="https://img.shields.io/badge/DeepWiki-Documentation-blue?logo=book" alt="DeepWiki"></a> <a href="https://cat2151.github.io/tonejs-mml-to-json/index.html"><img src="https://img.shields.io/badge/🚀-Live%20Demo-brightgreen.svg" alt="Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
+- 📅 2026-03-06 (UTC) / 2026-03-06 (JST)
+
+## [zenn-qiita-mute-warning](https://cat2151.github.io/zenn-qiita-mute-warning/)
+
+<a href="https://cat2151.github.io/zenn-qiita-mute-warning/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+
+- **Repository**: [https://github.com/cat2151/zenn-qiita-mute-warning](https://github.com/cat2151/zenn-qiita-mute-warning)
+- **GitHub Pages**: [https://cat2151.github.io/zenn-qiita-mute-warning/](https://cat2151.github.io/zenn-qiita-mute-warning/)
+- **Overview**: No description available
+- 📅 2026-03-04 (UTC) / 2026-03-04 (JST)
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
 collection of reusable GitHub Actions workflows for multiple projects
@@ -217,29 +254,6 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - Windowsプラットフォームに特化し、プロセス間通信に名前付きパイプを利用して高速な演奏制御を実現します。
 - ライブラリとしても提供され、他のアプリケーションからの音楽データ送信やリアルタイム操作が可能です。
 - 📅 2026-03-03 (UTC) / 2026-03-04 (JST)
-
-## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
-File Change Monitoring Tool - Detects file changes and executes commands
-
-<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-file-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
-
-### Project Highlights
-- ファイルの変更を監視し、変更が検知された際に指定されたコマンドを自動で実行するツールです。
-- TOML形式の設定ファイルを通じて、監視対象のファイルやディレクトリ、実行するコマンド、監視間隔などを柔軟に設定できます。
-- 軽量で使いやすく、複数のファイルやディレクトリの同時監視、特定のプロセス実行時のコマンド抑制、時間帯ごとの監視などの高度な機能を備えています。
-- 📅 2026-03-03 (UTC) / 2026-03-04 (JST)
-
-## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
-MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
-
-<a href="https://cat2151.github.io/tonejs-mml-to-json/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/tonejs-mml-to-json"><img src="https://img.shields.io/badge/DeepWiki-Documentation-blue?logo=book" alt="DeepWiki"></a> <a href="https://cat2151.github.io/tonejs-mml-to-json/index.html"><img src="https://img.shields.io/badge/🚀-Live%20Demo-brightgreen.svg" alt="Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
-- 📅 2026-03-02 (UTC) / 2026-03-03 (JST)
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
@@ -295,20 +309,6 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - YM2151 FM音源の音色をターミナル上で編集するためのアプリケーションです。
 - Windows環境で動作し、リアルタイムで音色の変化を音声で確認できます。
 - 直感的なTUI（Terminal User Interface）とキーボード・マウス操作で音色作成を楽しめます。
-- 📅 2026-03-02 (UTC) / 2026-03-02 (JST)
-
-## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
-A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
-
-<a href="https://cat2151.github.io/quartz-transformer-mmlabc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/quartz-transformer-mmlabc"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/quartz-transformer-mmlabc](https://github.com/cat2151/quartz-transformer-mmlabc)
-- **GitHub Pages**: [https://cat2151.github.io/quartz-transformer-mmlabc/](https://cat2151.github.io/quartz-transformer-mmlabc/)
-
-### Project Highlights
-- Markdown形式で書かれたコード進行やMML記法から、五線譜を生成しブラウザ上に表示します。
-- 表示された楽譜はクリックすることで演奏可能であり、Quartz v4の静的サイトジェネレーターにプラグインとして組み込まれます。
-- MML (Music Macro Language) とABC Notationの両方に対応し、コード進行の表現を豊かにします。
 - 📅 2026-03-02 (UTC) / 2026-03-02 (JST)
 
 ## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
