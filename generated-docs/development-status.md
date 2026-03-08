@@ -1,50 +1,64 @@
-Last updated: 2026-03-08
+Last updated: 2026-03-09
 
 # Development Status
 
 ## 現在のIssues
-現在、オープン中のIssueはありません。これは、プロジェクトが安定した状態にあることを示唆しています。
-しかし、Issueがない場合でも、既存の機能の改善やメンテナンス、将来的な拡張を見越した準備など、次の開発ステップを検討することが可能です。
-特に、自動化されたワークフローの効率化や生成されるドキュメントの品質向上は継続的な取り組みとなります。
+- 現在、オープン状態のイシューは存在しません。
+- 全ての既知の課題は解決済み、またはクローズされています。
+- そのため、特定のイシューに基づく開発状況の要約は行いません。
 
 ## 次の一手候補
-1. 自動生成されるドキュメントのプロンプト改善
-   - 最初の小さな一歩: 現在の`development-status-prompt.md`が実際に生成する`development-status.md`の内容と、このプロンプトの意図が合致しているか、具体的な乖離点を洗い出す。
+1. プロジェクトサマリー生成プロンプトの定期的な見直しと改善 (Issue未登録)
+   - 最初の小さな一歩: `generated-docs/development-status.md` と `generated-docs/project-overview.md` の内容をレビューし、現状の出力と要求される品質とのギャップを分析する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md と generated-docs/development-status.md
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
 
-     実行内容: 対象ファイルの内容を比較し、現在の開発状況生成プロンプト（development-status-prompt.md）が、実際に生成された開発状況ドキュメント（development-status.md）に対してどのような影響を与えているかを分析してください。特に、出力要件との乖離、情報過多、情報不足、またはハルシネーション傾向がないかを確認してください。
+     実行内容:
+     1. 各プロンプトファイルの内容を読み込みます。
+     2. 現在のプロジェクトの状況と生成されるドキュメント（development-status.md, project-overview.md）の内容を比較し、プロンプトが意図通りに機能しているか、または改善の余地があるかを分析します。
+     3. 特に、以下の観点から改善点を検討してください:
+        - 出力の具体性、明確性、簡潔性
+        - ハルシネーションのリスク低減
+        - 最新の開発状況をより適切に反映するための情報の引き出し方
 
-     確認事項: 自動生成プロセスを理解するため、.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs および関連するスクリプトの構成を確認してください。
+     確認事項: 現在のプロンプトが生成する出力例（generated-docs/development-status.md, generated-docs/project-overview.md）と、本プロンプトのガイドライン（例、ハルシネーションを避ける、特定の形式に従う等）との整合性を確認してください。
 
-     期待する出力: development-status-prompt.md の改善提案をMarkdown形式で出力してください。具体的な修正案、または現在のプロンプトの問題点と改善の方向性（例：より焦点を絞った情報抽出、特定の情報源の活用方法の調整）を含めてください。
+     期待する出力: 各プロンプトに対する分析結果と、具体的な改善提案をmarkdown形式で出力してください。改善提案には、変更すべきプロンプトの具体的な箇所と、その理由を含めてください。
      ```
 
-2. GitHub Actionsの一時ディレクトリ（`actions-tmp`）の整理と最適化
-   - 最初の小さな一歩: `.github/actions-tmp/`ディレクトリ内の全ての`.yml`ファイルをリストアップし、それぞれのワークフローのトリガーと、どのリポジトリ/アクションから呼び出されているかを把握する。
+2. `generate_repo_list` モジュール群のテストカバレッジ強化 (Issue未登録)
+   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の主要なモジュール（例: `repository_processor.py`, `markdown_generator.py`）について、対応するテストファイル(`tests/test_*.py`)が存在するかどうかを確認し、テストカバレッジの現状を把握する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/ 以下の全ての .yml ファイル
+     対象ファイル: src/generate_repo_list/, tests/test_*.py
 
-     実行内容: .github/actions-tmp/ ディレクトリ内のGitHub Actionsワークフローファイルをリストアップし、それぞれのワークフローの目的、トリガー条件、および他のワークフローやスクリプトとの依存関係を分析してください。特に、重複する機能、非推奨の記述、あるいは現在使用されていない可能性があるワークフローがないかを確認し、整理・統合の可能性を探ってください。
+     実行内容:
+     1. `src/generate_repo_list/` ディレクトリ内のPythonモジュールとその機能リストを抽出します。
+     2. 抽出したモジュールそれぞれに対し、`tests/` ディレクトリ内の既存のテストファイルがどの程度機能をカバーしているかを分析します。
+     3. 特に、テストカバレッジが低い、または全くテストされていないと見られるモジュールや機能について特定します。
 
-     確認事項: 各ワークフローが現在もリポジトリのCI/CDプロセスでアクティブに使用されているか、また actions-tmp というディレクトリ名の意図（一時的なものか、モジュール化されたアクション群か）について考慮に入れてください。
+     確認事項: `pytest.ini` や `requirements.txt` を参照し、テスト実行環境の依存関係と設定を確認してください。テストコードは実際に実行せず、ファイル構造とコード内容からカバレッジを推測してください。
 
-     期待する出力: .github/actions-tmp/ 以下のGitHub Actionsワークフローの現状分析結果と、整理・最適化のための具体的な提案をMarkdown形式で出力してください。不要なファイルの削除案、機能の統合、またはより効率的な構成へのリファクタリングの方向性を含めてください。
+     期待する出力:
+     テストカバレッジが不十分または不足している`src/generate_repo_list`内のモジュールと機能のリストをmarkdown形式で出力してください。また、それぞれのモジュールに対して、どのようなテストケースを追加すべきか具体的な提案を含めてください。
      ```
 
-3. リポジトリリスト生成スクリプトのテストカバレッジ分析と強化
-   - 最初の小さな一歩: `src/generate_repo_list/`内の主要なPythonスクリプト（`generate_repo_list.py`, `repository_processor.py`, `markdown_generator.py`など）を特定し、`tests/`ディレクトリ内にこれらのスクリプトに対応するテストファイルが存在するかを確認する。
+3. `check-large-files` ワークフローの機能とドキュメントの同期 (Issue未登録)
+   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/check-large-files/README.md` の内容と `.github/actions-tmp/.github_automation/check-large-files/check-large-files.toml.default` の設定項目を比較し、ドキュメントが設定の全てのオプションを網羅しているか、説明が最新であるかを確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/ 以下のPythonスクリプト群と tests/ 以下の関連テストファイル
+     対象ファイル: .github/actions-tmp/.github_automation/check-large-files/check-large-files.toml.default, .github/actions-tmp/.github_automation/check-large-files/README.md
 
-     実行内容: src/generate_repo_list/ モジュール内の主要なPythonスクリプトについて、tests/ ディレクトリ内の既存のテストがどの程度コードをカバーしているかを分析してください。具体的には、pytestとカバレッジツール（例: coverage.py）を利用してテストカバレッジを測定し、カバレッジが低い、またはテストが存在しない重要なロジック（関数、クラスメソッドなど）を特定してください。
+     実行内容:
+     1. `.github/actions-tmp/.github_automation/check-large-files/check-large-files.toml.default` ファイルを分析し、設定可能な全てのパラメータとそのデフォルト値を抽出します。
+     2. `.github/actions-tmp/.github_automation/check-large-files/README.md` を分析し、抽出した設定パラメータが全てドキュメント内で説明されているか、また説明内容が最新かつ正確であるかを確認します。
+     3. ドキュメントに不足している情報や、誤っている情報、またはより明確にすべき説明箇所を特定します。
 
-     確認事項: テスト環境の設定（pytest.ini、requirements-dev.txt）と、テストの実行方法（例: pytest --cov=src/generate_repo_list）を確認してください。
+     確認事項: `.github/actions-tmp/.github_automation/check-large-files/scripts/check_large_files.py` の実装も軽く参照し、`check-large-files.toml.default` のパラメータが実際にどのように使用されているかを把握してください。
 
-     期待する出力: src/generate_repo_list モジュールのテストカバレッジ分析結果をMarkdown形式で出力してください。カバレッジが不足している主要なファイルと関数をリストアップし、それらに対する新しいテストケースの追加方針（どのファイルに、どのような種類のテストを追加すべきか、例えばユニットテストや統合テスト）を具体的に提案してください。
+     期待する出力:
+     `check-large-files` ワークフローのREADME.mdに対する改善提案をmarkdown形式で出力してください。具体的には、ドキュメントに追加すべき設定パラメータの説明、既存の説明の修正案、および利用例の追加などを含めてください。
 
 ---
-Generated at: 2026-03-08 07:06:38 JST
+Generated at: 2026-03-09 07:06:55 JST
