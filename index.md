@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-08 (UTC) / 2026-03-09 (JST)
+Last Updated: 2026-03-09 (UTC) / 2026-03-10 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,24 +93,10 @@ Last Updated: 2026-03-08 (UTC) / 2026-03-09 (JST)
 - **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
 
 ### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製のツールおよびライブラリです。
-- 独自の2パス処理アーキテクチャとYM2151チャンネル割り当て戦略により、高精度な音色変換と同時発音管理を実現します。
-- ネイティブアプリケーションとWebAssembly（ブラウザ）の両方に対応し、幅広い用途でSMFのYM2151音源変換を可能にします。
-- 📅 2026-03-08 (UTC) / 2026-03-09 (JST)
-
-## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
-A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
-
-<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: mml-compiler](https://img.shields.io/badge/Topic-mml--compiler-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mmlabc-to-smf-rust"><img src="https://img.shields.io/badge/📖-DeepWiki-blue.svg" alt="DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
-- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
-
-### Project Highlights
-- Music Macro Language (MML) から Standard MIDI File (SMF) への変換をRustで実現するライブラリです。
-- ネイティブCLIアプリケーション、およびWebAssembly (WASM) を通じてブラウザアプリケーションで利用可能です。
-- tree-sitterを用いた精密なMML構文解析と4パスアーキテクチャにより、効率的にMIDIイベントを生成します。
-- 📅 2026-03-08 (UTC) / 2026-03-09 (JST)
+- Standard MIDI Files (SMF) を、YM2151 FM音源チップ向けのレジスタ書き込みログ（JSON形式）に変換するRust製のツールおよびライブラリです。
+- WebAssembly (WASM) に対応しており、ブラウザ環境での利用や、他のRustプロジェクトからのライブラリとしての組み込みが可能です。
+- 2パス処理、プログラムチェンジ対応、YM2151チャンネル割り当て戦略、型安全性、高パフォーマンスなどの特徴を持ちます。
+- 📅 2026-03-09 (UTC) / 2026-03-10 (JST)
 
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
@@ -121,10 +107,24 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けに、GitHubリポジトリ一覧を自動生成するシステムです。
-- リポジトリ情報をGitHub APIから取得し、SEO最適化されたMarkdownファイルを生成します。
-- 検索エンジンやLLMからのリポジトリ参照性を向上させ、開発効率の課題解決を目指します。
-- 📅 2026-03-08 (UTC) / 2026-03-09 (JST)
+- GitHub APIを利用し、指定ユーザーのリポジトリ情報を自動取得・処理します。
+- JekyllベースのGitHub Pages向けに、SEO最適化されたリポジトリ一覧を自動生成するシステムです。
+- 検索エンジンからの参照性向上とLLMの参照失敗緩和を目指し、詳細なリポジトリ概要を提供します。
+- 📅 2026-03-09 (UTC) / 2026-03-10 (JST)
+
+## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
+A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
+
+<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: mml-compiler](https://img.shields.io/badge/Topic-mml--compiler-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mmlabc-to-smf-rust"><img src="https://img.shields.io/badge/📖-DeepWiki-blue.svg" alt="DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
+- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
+
+### Project Highlights
+- Music Macro Language (MML) 形式の楽譜をStandard MIDI File (SMF) へ変換するRust製ライブラリです。
+- 独自の4パスアーキテクチャ（トークン化、AST変換、MIDIイベント生成、SMF作成）により、堅牢な変換を実現します。
+- ネイティブCLIツールとしてだけでなく、WebAssembly (WASM) を介してブラウザアプリケーションでも利用可能です。
+- 📅 2026-03-09 (UTC) / 2026-03-10 (JST)
 
 ## [voicevox-playground](https://cat2151.github.io/voicevox-playground/)
 
@@ -135,10 +135,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Overview**: No description available
 
 ### Project Highlights
-- VOICEVOXローカルサーバーと連携し、Webブラウザ上でテキストを音声に変換して再生するWebアプリケーションです。
-- 複数のキャラクターの音声を選択し、入力されたテキストを即座に読み上げ、イントネーションの編集も可能です。
-- VOICEVOXをWebから簡単に操作できることを実証し、手軽なクライアントアプリ開発を支援することを目的としています。
-- 📅 2026-03-08 (UTC) / 2026-03-09 (JST)
+- VOICEVOXローカルサーバーと連携し、入力されたテキストを音声に変換して再生するWebアプリケーションです。
+- ユーザーは任意のテキストを多様なキャラクターの音声で即座に読み上げさせ、イントネーション調整も可能です。
+- VOICEVOXクライアントアプリを簡単に構築できることを実証し、手軽な音声生成体験を提供することを目指しています。
+- 📅 2026-03-09 (UTC) / 2026-03-10 (JST)
 
 ## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
 
@@ -149,10 +149,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Overview**: No description available
 
 ### Project Highlights
-- GitHub Copilotによる自動実装フェーズのプルリクエスト（PR）を効率的に監視するPythonツールです。
-- PRのフェーズ（Draft、レビュー指摘対応中、レビュー待ち、LLM作業中）を自動検知し、適切なタイミングで通知やアクションを実行します。
-- 認証済みGitHubユーザーの所有リポジトリを対象に、GraphQL APIとブラウザ自動操作を活用して運用を支援します。
-- 📅 2026-03-08 (UTC) / 2026-03-09 (JST)
+- GitHub CopilotなどAIエージェントによる自動実装中のプルリクエスト(PR)のフェーズを監視するPythonツールです。
+- PRの状態（ドラフト、レビュー対応中、レビュー待ち、LLM作業中）を自動判定し、適切なタイミングで通知やアクションを実行します。
+- 認証済みGitHubユーザーのユーザー所有リポジトリを対象に、GraphQL APIやブラウザ自動操作を活用し、開発プロセスを効率化します。
+- 📅 2026-03-09 (UTC) / 2026-03-10 (JST)
+
+## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+
+<a href="https://github.com/cat2151/bluesky-text-to-audio/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-03-09 (UTC) / 2026-03-09 (JST)
 
 ## [voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
 
@@ -161,7 +170,16 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
 - **GitHub Pages**: None
 - **Overview**: No description available
-- 📅 2026-03-08 (UTC) / 2026-03-09 (JST)
+- 📅 2026-03-09 (UTC) / 2026-03-09 (JST)
+
+## [zenn-qiita-mute-warning](https://cat2151.github.io/zenn-qiita-mute-warning/)
+
+<a href="https://cat2151.github.io/zenn-qiita-mute-warning/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+
+- **Repository**: [https://github.com/cat2151/zenn-qiita-mute-warning](https://github.com/cat2151/zenn-qiita-mute-warning)
+- **GitHub Pages**: [https://cat2151.github.io/zenn-qiita-mute-warning/](https://cat2151.github.io/zenn-qiita-mute-warning/)
+- **Overview**: No description available
+- 📅 2026-03-09 (UTC) / 2026-03-09 (JST)
 
 ## [web-ym2151](https://cat2151.github.io/web-ym2151/)
 
@@ -180,24 +198,6 @@ MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
 - **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
 - **GitHub Pages**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
 - 📅 2026-03-08 (UTC) / 2026-03-09 (JST)
-
-## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-
-<a href="https://github.com/cat2151/bluesky-text-to-audio/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
-
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-03-08 (UTC) / 2026-03-08 (JST)
-
-## [zenn-qiita-mute-warning](https://cat2151.github.io/zenn-qiita-mute-warning/)
-
-<a href="https://cat2151.github.io/zenn-qiita-mute-warning/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
-
-- **Repository**: [https://github.com/cat2151/zenn-qiita-mute-warning](https://github.com/cat2151/zenn-qiita-mute-warning)
-- **GitHub Pages**: [https://cat2151.github.io/zenn-qiita-mute-warning/](https://cat2151.github.io/zenn-qiita-mute-warning/)
-- **Overview**: No description available
-- 📅 2026-03-08 (UTC) / 2026-03-08 (JST)
 
 ## [chord2mml](https://cat2151.github.io/chord2mml/)
 A library transpiles Chord notation into Music Macro Language.
