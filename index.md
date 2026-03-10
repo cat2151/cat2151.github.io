@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-09 (UTC) / 2026-03-10 (JST)
+Last Updated: 2026-03-10 (UTC) / 2026-03-11 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ Last Updated: 2026-03-09 (UTC) / 2026-03-10 (JST)
 - **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
 
 ### Project Highlights
-- Standard MIDI Files (SMF) を、YM2151 FM音源チップ向けのレジスタ書き込みログ（JSON形式）に変換するRust製のツールおよびライブラリです。
-- WebAssembly (WASM) に対応しており、ブラウザ環境での利用や、他のRustプロジェクトからのライブラリとしての組み込みが可能です。
-- 2パス処理、プログラムチェンジ対応、YM2151チャンネル割り当て戦略、型安全性、高パフォーマンスなどの特徴を持ちます。
-- 📅 2026-03-09 (UTC) / 2026-03-10 (JST)
+- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製ライブラリおよびツールです。
+- ネイティブアプリケーションとWebAssembly (WASM) 対応のブラウザアプリケーションの両方で利用可能で、高度なチャンネル割り当て戦略とカスタム音色に対応しています。
+- YM2151の特性を考慮した2パス変換処理により、デバッグ用中間イベントと最終YM2151レジスタログを生成し、高精度な音源再現を目指します。
+- 📅 2026-03-10 (UTC) / 2026-03-11 (JST)
 
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
@@ -107,10 +107,65 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、指定ユーザーのリポジトリ情報を自動取得・処理します。
-- JekyllベースのGitHub Pages向けに、SEO最適化されたリポジトリ一覧を自動生成するシステムです。
-- 検索エンジンからの参照性向上とLLMの参照失敗緩和を目指し、詳細なリポジトリ概要を提供します。
-- 📅 2026-03-09 (UTC) / 2026-03-10 (JST)
+- GitHub API を活用し、GitHub Pages サイト用のリポジトリ一覧を自動生成するシステムです。
+- 生成されたコンテンツはSEOに最適化され、検索エンジンやLLMによるリポジトリ参照を促進します。
+- 各リポジトリの概要、バッジ、分類などを自動で表示し、GitHub Pagesでのポートフォリオ公開を効率化します。
+- 📅 2026-03-10 (UTC) / 2026-03-11 (JST)
+
+## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
+
+<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
+- **Overview**: No description available
+
+### Project Highlights
+- GitHub Copilotによる自動実装フェーズのPRを監視し、その状態に応じて適切な通知やアクションを実行するPythonツールです。
+- 認証済みGitHubユーザーのユーザー所有リポジトリを対象に、GraphQL APIを用いて効率的にPRの進捗を管理します。
+- レビュー待ちの通知、Draft PRの自動Ready化、レビュー指摘対応コメント投稿、issueの自動割り当てなど、開発ワークフローを効率化する機能を備えています。
+- 📅 2026-03-10 (UTC) / 2026-03-11 (JST)
+
+## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+
+<a href="https://github.com/cat2151/bluesky-text-to-audio/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-03-10 (UTC) / 2026-03-11 (JST)
+
+## [voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+
+<a href="https://github.com/cat2151/voicevox-playground-tui/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-03-10 (UTC) / 2026-03-10 (JST)
+
+## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
+- **Overview**: No description available
+- 📅 2026-03-10 (UTC) / 2026-03-10 (JST)
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151 FM音源の音色をターミナル上で編集するためのアプリケーションです。
+- Windows環境で動作し、リアルタイムで音色の変化を音声で確認できます。
+- 直感的なTUI（Terminal User Interface）とキーボード・マウス操作で音色作成を楽しめます。
+- 📅 2026-03-10 (UTC) / 2026-03-10 (JST)
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
@@ -139,38 +194,6 @@ A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 - ユーザーは任意のテキストを多様なキャラクターの音声で即座に読み上げさせ、イントネーション調整も可能です。
 - VOICEVOXクライアントアプリを簡単に構築できることを実証し、手軽な音声生成体験を提供することを目指しています。
 - 📅 2026-03-09 (UTC) / 2026-03-10 (JST)
-
-## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
-
-<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
-- **Overview**: No description available
-
-### Project Highlights
-- GitHub CopilotなどAIエージェントによる自動実装中のプルリクエスト(PR)のフェーズを監視するPythonツールです。
-- PRの状態（ドラフト、レビュー対応中、レビュー待ち、LLM作業中）を自動判定し、適切なタイミングで通知やアクションを実行します。
-- 認証済みGitHubユーザーのユーザー所有リポジトリを対象に、GraphQL APIやブラウザ自動操作を活用し、開発プロセスを効率化します。
-- 📅 2026-03-09 (UTC) / 2026-03-10 (JST)
-
-## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-
-<a href="https://github.com/cat2151/bluesky-text-to-audio/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
-
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-03-09 (UTC) / 2026-03-09 (JST)
-
-## [voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-
-<a href="https://github.com/cat2151/voicevox-playground-tui/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-03-09 (UTC) / 2026-03-09 (JST)
 
 ## [zenn-qiita-mute-warning](https://cat2151.github.io/zenn-qiita-mute-warning/)
 
@@ -333,29 +356,6 @@ Software synthesizer. Simple. Non-realtime rendering
 - 直感的なマウス操作で、ローパスフィルターやノコギリ波/パルス波形をリアルタイムで制御できます。
 - リアルタイムオシロスコープ表示、WAVファイル出力、設定の保存・読み込み機能も備えています。
 - 📅 2026-03-02 (UTC) / 2026-03-03 (JST)
-
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FM音源の音色をターミナル上で編集するためのアプリケーションです。
-- Windows環境で動作し、リアルタイムで音色の変化を音声で確認できます。
-- 直感的なTUI（Terminal User Interface）とキーボード・マウス操作で音色作成を楽しめます。
-- 📅 2026-03-02 (UTC) / 2026-03-02 (JST)
-
-## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
-- **Overview**: No description available
-- 📅 2026-03-02 (UTC) / 2026-03-02 (JST)
 
 ## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
 WIP
