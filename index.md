@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 95 projects (⭐55 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 96 projects (⭐55 stars). Open source project collection using diverse technologies including JavaScript、Python、TypeScript."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 95 projects (⭐55 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 96 projects (⭐55 stars). Open source project collection using diverse technologies including JavaScript、Python、TypeScript."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 95 open source projects.",
+      "description": "Programmer and developer. Publishing 96 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 95 projects (⭐55 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 96 projects (⭐55 stars). Open source project collection using diverse technologies including JavaScript、Python、TypeScript.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-10 (UTC) / 2026-03-11 (JST)
+Last Updated: 2026-03-11 (UTC) / 2026-03-12 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2026-03-10 (UTC) / 2026-03-11 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-95-blue) ![Active](https://img.shields.io/badge/Active-67-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-55-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-96-blue) ![Active](https://img.shields.io/badge/Active-68-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-55-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-26_(27.4%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-14_(14.7%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-12_(12.6%25)-dea584?style=flat&logo=rust) ![TypeScript](https://img.shields.io/badge/TypeScript-12_(12.6%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(6.3%25)-e34c26?style=flat&logo=html5)
+![JavaScript](https://img.shields.io/badge/JavaScript-26_(27.1%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-15_(15.6%25)-3572A5?style=flat&logo=python) ![TypeScript](https://img.shields.io/badge/TypeScript-12_(12.5%25)-3178c6?style=flat&logo=typescript) ![Rust](https://img.shields.io/badge/Rust-12_(12.5%25)-dea584?style=flat&logo=rust) ![HTML](https://img.shields.io/badge/HTML-6_(6.2%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -83,20 +83,6 @@ Last Updated: 2026-03-10 (UTC) / 2026-03-11 (JST)
 ## 🚀 Active Development
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
-
-## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
-[WIP] smf-to-ym2151log のRust版
-
-<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://cat2151.github.io/smf-to-ym2151log-rust/"><img src="https://img.shields.io/badge/📦-Library%20Demo-blue.svg" alt="Library Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
-- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
-
-### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製ライブラリおよびツールです。
-- ネイティブアプリケーションとWebAssembly (WASM) 対応のブラウザアプリケーションの両方で利用可能で、高度なチャンネル割り当て戦略とカスタム音色に対応しています。
-- YM2151の特性を考慮した2パス変換処理により、デバッグ用中間イベントと最終YM2151レジスタログを生成し、高精度な音源再現を目指します。
-- 📅 2026-03-10 (UTC) / 2026-03-11 (JST)
 
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
@@ -107,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub API を活用し、GitHub Pages サイト用のリポジトリ一覧を自動生成するシステムです。
-- 生成されたコンテンツはSEOに最適化され、検索エンジンやLLMによるリポジトリ参照を促進します。
-- 各リポジトリの概要、バッジ、分類などを自動で表示し、GitHub Pagesでのポートフォリオ公開を効率化します。
-- 📅 2026-03-10 (UTC) / 2026-03-11 (JST)
+- GitHub APIを活用し、リポジトリ情報を自動取得するシステムです。
+- 取得した情報から、GitHub Pages向けのSEO最適化されたMarkdownファイルを自動生成します。
+- 検索エンジンからの発見性を高め、LLMによるリポジトリ参照の精度向上に貢献します。
+- 📅 2026-03-11 (UTC) / 2026-03-12 (JST)
 
 ## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
 
@@ -121,19 +107,28 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Overview**: No description available
 
 ### Project Highlights
-- GitHub Copilotによる自動実装フェーズのPRを監視し、その状態に応じて適切な通知やアクションを実行するPythonツールです。
-- 認証済みGitHubユーザーのユーザー所有リポジトリを対象に、GraphQL APIを用いて効率的にPRの進捗を管理します。
-- レビュー待ちの通知、Draft PRの自動Ready化、レビュー指摘対応コメント投稿、issueの自動割り当てなど、開発ワークフローを効率化する機能を備えています。
-- 📅 2026-03-10 (UTC) / 2026-03-11 (JST)
+- GitHub Copilotによる自動実装のプルリクエスト（PR）フェーズを効率的に監視するPythonツールです。
+- 認証済みGitHubユーザーの所有リポジトリを対象に、PRの状態に応じた通知や自動アクションを実行します。
+- ブラウザ自動化によるissue割り当てやPRマージ、ローカルリポジトリの自動更新などの豊富な機能を備えています。
+- 📅 2026-03-11 (UTC) / 2026-03-12 (JST)
 
-## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+## [cat2151-hatena-blog-contents](https://cat2151.github.io/cat2151-hatena-blog-contents/)
 
-<a href="https://github.com/cat2151/bluesky-text-to-audio/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: None
+- **Repository**: [https://github.com/cat2151/cat2151-hatena-blog-contents](https://github.com/cat2151/cat2151-hatena-blog-contents)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151-hatena-blog-contents/](https://cat2151.github.io/cat2151-hatena-blog-contents/)
 - **Overview**: No description available
-- 📅 2026-03-10 (UTC) / 2026-03-11 (JST)
+- 📅 2026-03-11 (UTC) / 2026-03-12 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-03-11 (UTC) / 2026-03-12 (JST)
 
 ## [voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
 
@@ -142,7 +137,30 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
 - **GitHub Pages**: None
 - **Overview**: No description available
-- 📅 2026-03-10 (UTC) / 2026-03-10 (JST)
+- 📅 2026-03-11 (UTC) / 2026-03-11 (JST)
+
+## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+
+<a href="https://github.com/cat2151/bluesky-text-to-audio/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-03-11 (UTC) / 2026-03-11 (JST)
+
+## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
+[WIP] smf-to-ym2151log のRust版
+
+<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://cat2151.github.io/smf-to-ym2151log-rust/"><img src="https://img.shields.io/badge/📦-Library%20Demo-blue.svg" alt="Library Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
+- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
+
+### Project Highlights
+- Standard MIDIファイル (SMF) をヤマハYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製のツールおよびライブラリです。
+- ネイティブアプリケーションやWebブラウザ (WebAssembly) で利用可能な変換機能を提供し、FM音源の再生データを生成します。
+- 和音数ベースの静的チャンネル割り当てやプログラムチェンジによる音色切り替えに対応し、YM2151の多様な表現を可能にします。
+- 📅 2026-03-11 (UTC) / 2026-03-11 (JST)
 
 ## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
 
@@ -151,7 +169,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
 - **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
 - **Overview**: No description available
-- 📅 2026-03-10 (UTC) / 2026-03-10 (JST)
+- 📅 2026-03-11 (UTC) / 2026-03-11 (JST)
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
@@ -162,10 +180,10 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
 
 ### Project Highlights
-- YM2151 FM音源の音色をターミナル上で編集するためのアプリケーションです。
-- Windows環境で動作し、リアルタイムで音色の変化を音声で確認できます。
-- 直感的なTUI（Terminal User Interface）とキーボード・マウス操作で音色作成を楽しめます。
-- 📅 2026-03-10 (UTC) / 2026-03-10 (JST)
+- YM2151（OPM）FM音源の音色を編集するための、Windows向けターミナルユーザーインターフェース（TUI）エディタです。
+- Rustで実装されており、リアルタイムな音声フィードバックを提供しながら、音色パラメータの直感的な編集が可能です。
+- カーソル、キーボード、マウス操作に対応し、編集中の音色プレビュー、自動セーブ・ロード、キーバインド設定などの機能を備えています。
+- 📅 2026-03-11 (UTC) / 2026-03-11 (JST)
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
@@ -262,15 +280,6 @@ A Quartz transformer plugin that converts MML (Music Macro Language) and chord n
 - このプロジェクトは、Quartz静的サイトでMarkdown内の音楽記法を五線譜として表示するプラグインです。
 - コード進行、MML（Music Macro Language）、ABC記法に対応し、楽譜のレンダリングとクリックによる演奏機能を提供します。
 - ブラウザ上で動的に楽譜を生成し、QuartzのSPA（Single Page Application）ナビゲーションにも完全対応しています。
-- 📅 2026-03-07 (UTC) / 2026-03-08 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
 - 📅 2026-03-07 (UTC) / 2026-03-08 (JST)
 
 ## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
