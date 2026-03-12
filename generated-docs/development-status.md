@@ -1,53 +1,64 @@
-Last updated: 2026-03-12
+Last updated: 2026-03-13
 
 # Development Status
 
 ## 現在のIssues
-- 現在オープン中のIssueはありません。これは、既存の機能が安定して稼働していることを示唆しています。
-- 直近の活動は、リポジトリリストの自動更新とプロジェクトサマリーの自動生成に集約されています。
-- 今後の開発は、既存の自動化プロセスのさらなる洗練や、新しい機能の追加に焦点を当てることになります。
+- 現在オープンされているIssueはありません。
+- そのため、特定の開発タスクは現在存在しません。
+- 直近の変更は、リポジトリリストの自動更新とプロジェクトサマリーの自動生成が中心です。
 
 ## 次の一手候補
-1.  プロジェクトサマリーの「開発状況」プロンプトを改善する [Future Issue #DS001](../issue-notes/DS001.md)
-    -   最初の小さな一歩: 現在使用されている`development-status-prompt.md`の構成と内容をレビューし、より具体的で実用的な開発状況を生成するための改善点を洗い出す。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+1. プロジェクトの自動更新スクリプトのテストカバレッジ向上
+   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` の主要な関数に対する既存の単体テストの有無と、そのカバレッジを調査します。特に、リポジトリデータの取得、処理、Markdown生成といった核心部分に焦点を当てます。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: src/generate_repo_list/generate_repo_list.py, tests/test_*.py
 
-        実行内容: 対象ファイルの内容を分析し、以下の観点から改善点を提案してください：
-        1) 現在のプロジェクト活動（自動更新）をより適切に反映させるための表現
-        2) 開発者が次のアクションを決定しやすくなるような、より具体的な情報抽出の指示
-        3) ハルシネーションを避けつつ、有用な「次の一手候補」を導き出すためのプロンプト構造の強化
+     実行内容: src/generate_repo_list/generate_repo_list.pyの主要な関数（例: fetch_repositories, process_repository, generate_markdownなど）について、既存のテストカバレッジを分析し、特にカバレッジが低い、またはテストが不足している箇所を特定してください。そして、その不足部分をカバーするための新しいテストケースのアイデアをmarkdown形式で出力してください。
 
-        確認事項: 改善案が「開発状況生成プロンプト」の生成ガイドライン（特に「生成しないもの」の項目）に完全に準拠していることを確認してください。
+     確認事項: `pytest.ini`や`requirements.txt`を参照し、テスト実行に必要な環境や依存関係に問題がないかを確認してください。既存のテストがどのように構造化されているかを理解し、それに沿った提案となるようにしてください。
 
-        期待する出力: Markdown形式で、現在のプロンプトの分析結果、具体的な改善案、およびその修正後のプロンプト内容を提示してください。
-        ```
+     期待する出力: Markdown形式で、以下の内容を含めてください：
+     - カバレッジが低い、またはテストが不足している関数のリスト
+     - 各関数について、具体的なテストケースのアイデア（入力、期待される出力、考慮すべきエッジケース）
+     - 提案されるテストケースを既存のテストファイルに追加する場合の推奨ファイル名または構造
+     ```
 
-2.  リポジトリリスト生成におけるメタデータ収集を強化する [Future Issue #RL001](../issue-notes/RL001.md)
-    -   最初の小さな一歩: `src/generate_repo_list/project_overview_fetcher.py` を調査し、現在どのリポジトリメタデータが取得されているか、また、GitHub APIからさらにどのような有用な情報を取得できるかを特定する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: src/generate_repo_list/project_overview_fetcher.py, src/generate_repo_list/repository_processor.py
+2. 自動生成されるプロジェクトサマリーのプロンプト改善
+   - 最初の小さな一歩: 現在の `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` と `project-overview-prompt.md` の内容をレビューし、現在の出力 `generated-docs/development-status.md` と `generated-docs/project-overview.md` が要求された形式と詳細度を満たしているか評価します。特に、今回の要約と次の一手生成に関する指示をより明確にするための改善点を特定します。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, generated-docs/development-status.md
 
-        実行内容: `project_overview_fetcher.py`がどのようにリポジトリの基本情報（スター数、最終コミット日、言語等）を収集しているか、および`repository_processor.py`でその情報がどのように利用・加工されているかを分析してください。特に、リポジトリの活動状況を示すより詳細な指標（例：プルリクエスト数、イシューの平均解決時間など）を追加で取得可能か調査してください。
+     実行内容: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md の内容を分析し、現在生成されている generated-docs/development-status.md が、以下の要件をより具体的に満たすようにプロンプトを改善する提案をしてください：
+     1. 現在のIssuesの要約がより具体的で洞察に富むものになるように
+     2. 次の一手候補が、プロジェクトの現状と今後の方向性をより明確に示唆するように
+     3. ハルシネーションを避けつつ、建設的な提案を導出できるように
+     具体的なプロンプトの変更案と、その変更が期待する出力にどう影響するかを記述してください。
 
-        確認事項: GitHub APIのレートリミットを考慮した実装になっているか、また、新たなメタデータを追加する際のパフォーマンス影響とエラーハンドリングの必要性を確認してください。
+     確認事項: プロンプトの変更が、出力されるドキュメントのフォーマット（Markdown形式）や、ハルシネーションを避けるという上位の制約と矛盾しないことを確認してください。また、他のproject-summary関連のプロンプトとの整合性も考慮してください。
 
-        期待する出力: Markdown形式で、現在のメタデータ収集の限界と、追加で取得すべき有用なメタデータ、それらを取得するための`project_overview_fetcher.py`の修正案、および`repository_processor.py`での加工方法の概要を提案してください。
-        ```
+     期待する出力: Markdown形式で、以下の内容を含めてください：
+     - 改善された `development-status-prompt.md` の内容案
+     - 提案された変更点とその理由、期待される効果
+     - 変更による潜在的なリスク（例: ハルシネーションの増加）とその回避策
+     ```
 
-3.  `check-large-files`ワークフローの誤検出・見落としルールを最適化する [Future Issue #CLF001](../issue-notes/CLF001.md)
-    -   最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml`に定義されている現在のファイルサイズ制限と除外ルールを詳細に確認し、プロジェクトの実際のニーズとの乖離がないか検討する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: .github_automation/check_large_files/check-large-files.toml, .github_automation/check_large_files/scripts/check_large_files.py
+3. GitHub Actions ワークフローの整理と効率化
+   - 最初の小さな一歩: `.github/workflows/` ディレクトリと `.github/actions-tmp/.github/workflows/` ディレクトリ内の `.yml` ファイルをすべてリストアップし、それぞれのワークフローが何を実行しているのか、簡単な説明を付加して一覧化します。特に、`call-` プレフィックスを持つワークフローの呼び出し関係を把握します。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: .github/workflows/, .github/actions-tmp/.github/workflows/
 
-        実行内容: `check-large-files.toml`で設定されているファイルサイズの閾値、除外パターン、およびこれらの設定が`check_large_files.py`スクリプト内でどのように適用されているかを分析してください。特に、`generated-docs`ディレクトリ内の自動生成ファイルが誤って大きなファイルとして検出されないような、より堅牢な除外ルールを検討してください。
+     実行内容: 対象の2つのディレクトリにあるGitHub Actionsワークフローファイル (.yml) をすべてリストアップし、それぞれのファイル名、簡単な目的、そしてそれがどのワークフローによって呼び出されているか、あるいはどのワークフローを呼び出しているか（もしあれば）をMarkdown形式でまとめてください。
+     特に、`.github/actions-tmp/` ディレクトリ内のワークフローがどのような役割を担っており、メインの `.github/workflows/` ディレクトリ内のワークフローとどのように関連しているかについて考察を加えてください。
 
-        確認事項: 現在の設定で、本当にチェックすべき大容量ファイルが見落とされていないか、また、チェック不要なファイル（例：一時ファイルやビルド成果物）が誤って検出されていないかを確認してください。
+     確認事項: ワークフローの依存関係や、再利用可能なワークフロー (reusable workflow) の利用状況を正確に把握してください。この分析が将来的な整理・最適化の土台となるため、現状を正確に反映することが重要です。
 
-        期待する出力: Markdown形式で、現在の`check-large-files.toml`の設定に対する評価、誤検出や見落としを防ぐための具体的な設定変更案、および`check_large_files.py`スクリプトへの影響分析を提案してください。
+     期待する出力: Markdown形式で、以下の内容を含めてください：
+     - 全てのワークフローファイル名とその目的、呼び出し関係の一覧表
+     - `.github/actions-tmp/` ディレクトリ内のワークフローの役割と、メインディレクトリとの関連性に関する考察
+     - 重複や非効率性の可能性についての初期的な見解
 
 ---
-Generated at: 2026-03-12 07:08:58 JST
+Generated at: 2026-03-13 07:08:06 JST
