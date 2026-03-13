@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 96 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+og_description: "Featuring 97 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 96 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
+twitter_description: "Featuring 97 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 96 open source projects.",
+      "description": "Programmer and developer. Publishing 97 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 96 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
+    "description": "Featuring 97 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Python、Rust.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-12 (UTC) / 2026-03-13 (JST)
+Last Updated: 2026-03-13 (UTC) / 2026-03-14 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2026-03-12 (UTC) / 2026-03-13 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-96-blue) ![Active](https://img.shields.io/badge/Active-68-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-56-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-97-blue) ![Active](https://img.shields.io/badge/Active-69-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-56-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-26_(27.1%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-15_(15.6%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-12_(12.5%25)-dea584?style=flat&logo=rust) ![TypeScript](https://img.shields.io/badge/TypeScript-12_(12.5%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(6.2%25)-e34c26?style=flat&logo=html5)
+![JavaScript](https://img.shields.io/badge/JavaScript-26_(26.8%25)-f1e05a?style=flat&logo=javascript) ![Python](https://img.shields.io/badge/Python-15_(15.5%25)-3572A5?style=flat&logo=python) ![Rust](https://img.shields.io/badge/Rust-13_(13.4%25)-dea584?style=flat&logo=rust) ![TypeScript](https://img.shields.io/badge/TypeScript-12_(12.4%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(6.2%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -93,10 +93,10 @@ Last Updated: 2026-03-12 (UTC) / 2026-03-13 (JST)
 - **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
 
 ### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRustライブラリです。
-- ネイティブアプリケーションとして、またWebAssembly (WASM) を介してブラウザでの利用をサポートしています。
-- 和音数ベースの静的チャンネル割り当て、ドラムチャンネル優先、およびプログラムチェンジによるカスタム音色適用機能を備えています。
-- 📅 2026-03-12 (UTC) / 2026-03-13 (JST)
+- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製のツールおよびライブラリです。
+- ネイティブアプリケーションとして、またはWebAssembly (WASM) ライブラリとしてブラウザ上で動作し、高度なチャンネル割り当て戦略に対応します。
+- カスタム音色定義や2パス処理アーキテクチャ、充実したテストによる堅牢性が特徴です。
+- 📅 2026-03-13 (UTC) / 2026-03-14 (JST)
 
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
@@ -107,10 +107,74 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、GitHub Pagesサイト向けのリポジトリ一覧Markdownを自動生成するシステムです。
-- 検索エンジン最適化された表示により、プロジェクトのリポジトリ情報を効果的に公開・発見可能にします。
-- 各リポジトリのプロジェクト概要を自動取得し、動的で魅力的な一覧ページを構築します。
-- 📅 2026-03-12 (UTC) / 2026-03-13 (JST)
+- GitHub APIを利用し、指定したGitHubユーザーのリポジトリ情報を自動で取得します。
+- 取得した情報をもとに、GitHub Pagesサイト（Jekyllベース）向けにSEO最適化されたMarkdown形式のリポジトリ一覧ページを生成します。
+- 各リポジトリの概要、バッジ、分類などを自動で表示し、リポジトリの可視性と検索エンジンによるインデックス化を向上させます。
+- 📅 2026-03-13 (UTC) / 2026-03-14 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Overview**: No description available
+- 📅 2026-03-13 (UTC) / 2026-03-14 (JST)
+
+## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
+MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
+
+### Project Highlights
+- Rustで構築された、MML（Music Macro Language）用のシンプルなTUIエディタです。
+- テキスト編集、カーソル移動、MMLノート入力時の自動再生、MMLテンプレート切り替えなどの機能を提供します。
+- コマンドラインから手軽にMMLの作曲と再生を試せる、ミニマムな体験を目指しています。
+- 📅 2026-03-13 (UTC) / 2026-03-14 (JST)
+
+## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
+Music Macro Language (MML) Parser and Player and Server and Client
+
+<a href="https://cat2151.github.io/cat-play-mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
+
+### Project Highlights
+- Music Macro Language (MML) を解釈し、音楽を再生するCLIツールです。
+- コマンドラインからMML文字列（例: "cde"）を入力するだけで、リアルタイムに音楽を演奏します。
+- Windows向けにRustで開発されており、シンプルで低レイテンシな音楽体験を提供します。
+- 📅 2026-03-13 (UTC) / 2026-03-13 (JST)
+
+## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
+- **Overview**: No description available
+- 📅 2026-03-13 (UTC) / 2026-03-13 (JST)
+
+## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
+
+<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
+- **Overview**: No description available
+- 📅 2026-03-13 (UTC) / 2026-03-13 (JST)
+
+## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+
+<a href="https://github.com/cat2151/bluesky-text-to-audio/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-03-13 (UTC) / 2026-03-13 (JST)
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
@@ -124,6 +188,15 @@ A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 - Music Macro Language (MML) 形式の音楽データをStandard MIDI File (SMF) へ変換するRust製ライブラリです。
 - tree-sitterを用いた構文解析を含む4パスアーキテクチャにより、MMLの正確かつ効率的な変換を実現します。
 - ネイティブアプリケーション（CLI）としてMMLの再生・SMF出力が可能であり、WebAssembly (WASM) を介してブラウザデモでの利用も想定されています。
+- 📅 2026-03-13 (UTC) / 2026-03-13 (JST)
+
+## [cat2151-hatena-blog-contents](https://cat2151.github.io/cat2151-hatena-blog-contents/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151-hatena-blog-contents](https://github.com/cat2151/cat2151-hatena-blog-contents)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151-hatena-blog-contents/](https://cat2151.github.io/cat2151-hatena-blog-contents/)
+- **Overview**: No description available
 - 📅 2026-03-12 (UTC) / 2026-03-13 (JST)
 
 ## [cat-oscillator-sync](https://cat2151.github.io/cat-oscillator-sync/)
@@ -148,42 +221,6 @@ A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 - **GitHub Pages**: [https://cat2151.github.io/web-ym2151/](https://cat2151.github.io/web-ym2151/)
 - **Overview**: No description available
 - 📅 2026-03-12 (UTC) / 2026-03-13 (JST)
-
-## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
-- **Overview**: No description available
-- 📅 2026-03-12 (UTC) / 2026-03-13 (JST)
-
-## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
-
-<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
-- **Overview**: No description available
-- 📅 2026-03-12 (UTC) / 2026-03-12 (JST)
-
-## [cat2151-hatena-blog-contents](https://cat2151.github.io/cat2151-hatena-blog-contents/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151-hatena-blog-contents](https://github.com/cat2151/cat2151-hatena-blog-contents)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151-hatena-blog-contents/](https://cat2151.github.io/cat2151-hatena-blog-contents/)
-- **Overview**: No description available
-- 📅 2026-03-12 (UTC) / 2026-03-12 (JST)
-
-## [bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-
-<a href="https://github.com/cat2151/bluesky-text-to-audio/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
-
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-03-12 (UTC) / 2026-03-12 (JST)
 
 ## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
 A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
@@ -613,20 +650,6 @@ An experimental project for MIDI connections and audio transmission between mult
 - 将来の安定版「postmate-midi」リリースに向け、広範な機能と仕様を網羅するための実験と実証を目的としています。
 - 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
 
-## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
-MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
-- **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
-
-### Project Highlights
-- Rustで構築された、MML（Music Macro Language）用のシンプルなTUIエディタです。
-- テキスト編集、カーソル移動、MMLノート入力時の自動再生、MMLテンプレート切り替えなどの機能を提供します。
-- コマンドラインから手軽にMMLの作曲と再生を試せる、ミニマムな体験を目指しています。
-- 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
-
 ## [easymmlabc](https://cat2151.github.io/easymmlabc/)
 A library for using mml2abc and abcjs easily in the browser.
 
@@ -681,20 +704,6 @@ A library for using abcjs easily in the browser.
 - easyabcjs6は、ウェブブラウザ上でABC音楽記譜法を簡単に表示し、再生するためのJavaScriptライブラリです。
 - 人気の`abcjs`ライブラリをラップし、シンプルなHTMLとJavaScriptコードで五線譜の描画とMIDI音源による演奏を可能にします。
 - 将来的にABC音楽記譜法以外のテキストベースの音楽フォーマットにも対応し、多様な音楽表示・演奏システム構築への基盤となることを目指しています。
-- 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
-
-## [cat-play-mml](https://cat2151.github.io/cat-play-mml/)
-Music Macro Language (MML) Parser and Player and Server and Client
-
-<a href="https://cat2151.github.io/cat-play-mml/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-play-mml](https://github.com/cat2151/cat-play-mml)
-- **GitHub Pages**: [https://cat2151.github.io/cat-play-mml/](https://cat2151.github.io/cat-play-mml/)
-
-### Project Highlights
-- Music Macro Language (MML) を解釈し、音楽を再生するCLIツールです。
-- コマンドラインからMML文字列（例: "cde"）を入力するだけで、リアルタイムに音楽を演奏します。
-- Windows向けにRustで開発されており、シンプルで低レイテンシな音楽体験を提供します。
 - 📅 2025-12-01 (UTC) / 2025-12-02 (JST)
 
 ## [cat-jekyll-config-generator](https://cat2151.github.io/cat-jekyll-config-generator/)
