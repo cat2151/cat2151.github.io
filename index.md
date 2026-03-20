@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 98 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python."
+og_description: "Featuring 100 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 98 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python."
+twitter_description: "Featuring 100 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 98 open source projects.",
+      "description": "Programmer and developer. Publishing 100 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 98 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python.",
+    "description": "Featuring 100 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-19 (UTC) / 2026-03-20 (JST)
+Last Updated: 2026-03-20 (UTC) / 2026-03-21 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2026-03-19 (UTC) / 2026-03-20 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-98-blue) ![Active](https://img.shields.io/badge/Active-70-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-56-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-100-blue) ![Active](https://img.shields.io/badge/Active-72-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-56-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-26_(26.5%25)-f1e05a?style=flat&logo=javascript) ![Rust](https://img.shields.io/badge/Rust-15_(15.3%25)-dea584?style=flat&logo=rust) ![Python](https://img.shields.io/badge/Python-14_(14.3%25)-3572A5?style=flat&logo=python) ![TypeScript](https://img.shields.io/badge/TypeScript-12_(12.2%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(6.1%25)-e34c26?style=flat&logo=html5)
+![JavaScript](https://img.shields.io/badge/JavaScript-26_(26.0%25)-f1e05a?style=flat&logo=javascript) ![Rust](https://img.shields.io/badge/Rust-17_(17.0%25)-dea584?style=flat&logo=rust) ![Python](https://img.shields.io/badge/Python-14_(14.0%25)-3572A5?style=flat&logo=python) ![TypeScript](https://img.shields.io/badge/TypeScript-12_(12.0%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(6.0%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -93,9 +93,123 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pages向けにリポジトリ一覧を自動生成し、検索エンジン最適化を図るシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、Jekyll対応のMarkdown形式で出力します。
-- これにより、GitHubリポジトリの発見性を高め、Large Language Models (LLM) からの参照品質向上に貢献します。
+- GitHub Pages向けリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、Markdownを生成します。
+- SEOを意識した出力で、リポジトリの検索エンジンからの発見性を高めます。
+- 📅 2026-03-20 (UTC) / 2026-03-21 (JST)
+
+## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
+[WIP] smf-to-ym2151log のRust版
+
+<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://cat2151.github.io/smf-to-ym2151log-rust/"><img src="https://img.shields.io/badge/📦-Library%20Demo-blue.svg" alt="Library Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
+- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
+
+### Project Highlights
+- Standard MIDI Files (SMF) をヤマハYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製ツールです。
+- ネイティブアプリケーション向けライブラリおよびWebAssemblyとしてWebブラウザでも利用可能なクロスプラットフォーム対応が特徴です。
+- 2パス処理アーキテクチャ、プログラムチェンジ対応、型安全性、高パフォーマンスにより、堅牢な変換機能を提供します。
+- 📅 2026-03-20 (UTC) / 2026-03-21 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Overview**: No description available
+- 📅 2026-03-20 (UTC) / 2026-03-21 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
+
+## [sixel-playground](https://github.com/cat2151/sixel-playground)
+
+<a href="https://github.com/cat2151/sixel-playground/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/sixel-playground](https://github.com/cat2151/sixel-playground)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
+
+## [norenwake](https://cat2151.github.io/norenwake/)
+A TUI for Windows to create new repositories by 'norenwake' (branching off) your own public GitHub repositories. Written in Rust.
+
+<a href="https://cat2151.github.io/norenwake/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clone](https://img.shields.io/badge/Topic-clone-lightblue) ![Topic: fork](https://img.shields.io/badge/Topic-fork-lightblue) ![Topic: github](https://img.shields.io/badge/Topic-github-lightblue) ![Topic: repository](https://img.shields.io/badge/Topic-repository-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
+
+- **Repository**: [https://github.com/cat2151/norenwake](https://github.com/cat2151/norenwake)
+- **GitHub Pages**: [https://cat2151.github.io/norenwake/](https://cat2151.github.io/norenwake/)
+- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
+
+## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
+
+<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
+- **Overview**: No description available
+- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
+
+## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
+WIP
+
+<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
+
+- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
+- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
+- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
+
+## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
+MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
+
+### Project Highlights
+- Rustで構築された、MML（Music Macro Language）用のシンプルなTUIエディタです。
+- テキスト編集、カーソル移動、MMLノート入力時の自動再生、MMLテンプレート切り替えなどの機能を提供します。
+- コマンドラインから手軽にMMLの作曲と再生を試せる、ミニマムな体験を目指しています。
+- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
+
+## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
+
+<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
+- **Overview**: No description available
+- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
+
+## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
+
+<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
+- **Overview**: No description available
+- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
+
+## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
+YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
+
+<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
+
+- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
+- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
+
+### Project Highlights
+- YM2151 FM音源の音色をリアルタイムで編集・プレビューできるWindows用ターミナルUIエディタです。
+- 直感的なマウス・キーボード操作に対応し、音色パラメータの変更を即座に音声でフィードバックします。
+- 音色データの自動保存・ロード機能を備え、シンプルな操作性と視覚的な分かりやすさを重視して開発されています。
 - 📅 2026-03-19 (UTC) / 2026-03-20 (JST)
 
 ## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
@@ -112,65 +226,6 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - PRのフェーズ（Draft、レビュー指摘対応中、レビュー待ち、LLM作業中）を自動判定し、自動コメント投稿、PR Ready化、モバイル通知、自動マージなどの機能を提供します。
 - 📅 2026-03-19 (UTC) / 2026-03-20 (JST)
 
-## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
-
-<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
-- **Overview**: No description available
-- 📅 2026-03-19 (UTC) / 2026-03-20 (JST)
-
-## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
-YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
-
-<a href="https://cat2151.github.io/ym2151-tone-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: ratatui](https://img.shields.io/badge/Topic-ratatui-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: synthesizer](https://img.shields.io/badge/Topic-synthesizer-lightblue) ![Topic: tone](https://img.shields.io/badge/Topic-tone-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) ![Topic: crossterm](https://img.shields.io/badge/Topic-crossterm-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
-
-- **Repository**: [https://github.com/cat2151/ym2151-tone-editor](https://github.com/cat2151/ym2151-tone-editor)
-- **GitHub Pages**: [https://cat2151.github.io/ym2151-tone-editor/](https://cat2151.github.io/ym2151-tone-editor/)
-
-### Project Highlights
-- YM2151 FM音源の音色をリアルタイムで編集・プレビューできるWindows用ターミナルUIエディタです。
-- 直感的なマウス・キーボード操作に対応し、音色パラメータの変更を即座に音声でフィードバックします。
-- 音色データの自動保存・ロード機能を備え、シンプルな操作性と視覚的な分かりやすさを重視して開発されています。
-- 📅 2026-03-19 (UTC) / 2026-03-20 (JST)
-
-## [sixel-playground](https://github.com/cat2151/sixel-playground)
-
-![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/sixel-playground](https://github.com/cat2151/sixel-playground)
-- **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-03-19 (UTC) / 2026-03-19 (JST)
-
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- **Overview**: No description available
-- 📅 2026-03-19 (UTC) / 2026-03-19 (JST)
-
-## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
-WIP
-
-<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
-
-- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
-- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
-- 📅 2026-03-19 (UTC) / 2026-03-19 (JST)
-
-## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
-
-<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
-
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
-- **Overview**: No description available
-- 📅 2026-03-19 (UTC) / 2026-03-19 (JST)
-
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 
@@ -184,29 +239,6 @@ A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 - MMLの解析からMIDIファイル生成までを4つの明確なパスで処理するアーキテクチャを採用しています。
 - ネイティブアプリおよびWebAssembly (WASM) を介したブラウザアプリとして利用可能で、多チャンネル対応やデバッグ機能も備えています。
 - 📅 2026-03-18 (UTC) / 2026-03-19 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-03-17 (UTC) / 2026-03-18 (JST)
-
-## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
-[WIP] smf-to-ym2151log のRust版
-
-<a href="https://cat2151.github.io/smf-to-ym2151log-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://cat2151.github.io/smf-to-ym2151log-rust/"><img src="https://img.shields.io/badge/📦-Library%20Demo-blue.svg" alt="Library Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/smf-to-ym2151log-rust](https://github.com/cat2151/smf-to-ym2151log-rust)
-- **GitHub Pages**: [https://cat2151.github.io/smf-to-ym2151log-rust/](https://cat2151.github.io/smf-to-ym2151log-rust/)
-
-### Project Highlights
-- Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRustライブラリです。
-- ネイティブアプリケーションとWebAssembly (WASM) の両方で利用可能で、2パス処理とプログラムチェンジに対応しています。
-- 高いパフォーマンスと型安全性を持ち、包括的なテスト駆動開発によって堅牢性が確保されています。
-- 📅 2026-03-17 (UTC) / 2026-03-18 (JST)
 
 ## [cat-window-watcher](https://cat2151.github.io/cat-window-watcher/)
 WIP
@@ -312,20 +344,6 @@ cdefgabを入力するごとにその音が鳴るMMLエディタ（実験用）
 - MML（Music Macro Language）をリアルタイムで編集し、インタラクティブに音を再生できるウェブアプリケーションです。
 - キーボード入力やカーソル移動に連動して即座にMMLの音を鳴らし、音楽制作の試行錯誤サイクルを高速化します。
 - フレーズ作成、コード進行の試行、転調などのMMLベースの音楽制作を直感的に支援するツールです。
-- 📅 2026-03-16 (UTC) / 2026-03-17 (JST)
-
-## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
-MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
-- **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
-
-### Project Highlights
-- Rustで構築された、MML（Music Macro Language）用のシンプルなTUIエディタです。
-- テキスト編集、カーソル移動、MMLノート入力時の自動再生、MMLテンプレート切り替えなどの機能を提供します。
-- コマンドラインから手軽にMMLの作曲と再生を試せる、ミニマムな体験を目指しています。
 - 📅 2026-03-16 (UTC) / 2026-03-17 (JST)
 
 ## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
