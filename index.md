@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-20 (UTC) / 2026-03-21 (JST)
+Last Updated: 2026-03-21 (UTC) / 2026-03-22 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,37 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pages向けリポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、Markdownを生成します。
-- SEOを意識した出力で、リポジトリの検索エンジンからの発見性を高めます。
-- 📅 2026-03-20 (UTC) / 2026-03-21 (JST)
+- GitHub APIを利用してリポジトリ情報を取得し、自動でMarkdown形式のリポジトリ一覧を生成します。
+- GitHub PagesサイトのSEOを最適化し、リポジトリの発見性を向上させることを目的としています。
+- 各リポジトリの概要表示やバッジ、分類機能を提供し、情報 rich な一覧ページを作成します。
+- 📅 2026-03-21 (UTC) / 2026-03-22 (JST)
+
+## [sixel-playground](https://github.com/cat2151/sixel-playground)
+
+<a href="https://github.com/cat2151/sixel-playground/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/sixel-playground](https://github.com/cat2151/sixel-playground)
+- **GitHub Pages**: None
+- **Overview**: No description available
+- 📅 2026-03-21 (UTC) / 2026-03-21 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Overview**: No description available
+- 📅 2026-03-21 (UTC) / 2026-03-21 (JST)
+
+## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
+
+<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
+- **Overview**: No description available
+- 📅 2026-03-21 (UTC) / 2026-03-21 (JST)
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
@@ -112,30 +139,12 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - 2パス処理アーキテクチャ、プログラムチェンジ対応、型安全性、高パフォーマンスにより、堅牢な変換機能を提供します。
 - 📅 2026-03-20 (UTC) / 2026-03-21 (JST)
 
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- **Overview**: No description available
-- 📅 2026-03-20 (UTC) / 2026-03-21 (JST)
-
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
 ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
 
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
-
-## [sixel-playground](https://github.com/cat2151/sixel-playground)
-
-<a href="https://github.com/cat2151/sixel-playground/blob/main/README.ja.md"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/sixel-playground](https://github.com/cat2151/sixel-playground)
-- **GitHub Pages**: None
 - **Overview**: No description available
 - 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
 
@@ -186,15 +195,6 @@ MML(Music Macro Language)用のTUI(テキストユーザーインターフェー
 
 - **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
-- **Overview**: No description available
-- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
-
-## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
-
-<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
-
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
 - **Overview**: No description available
 - 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
 
