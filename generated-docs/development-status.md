@@ -1,53 +1,53 @@
-Last updated: 2026-03-23
+Last updated: 2026-03-24
 
 # Development Status
 
 ## 現在のIssues
-- 現在、プロジェクトにオープン中のIssueはありません。
-- 自動化されたプロジェクトサマリー生成やリポジトリリスト更新などのタスクは安定稼働しています。
-- 今後は、既存の自動化ワークフローの改善や生成される情報の質向上に注力します。
+- 現在、オープンされているIssueはありません。
+- プロジェクトは自動化されたタスクの実行とレポート生成に注力しています。
+- 今後の開発は、既存の自動化機能の改善や安定性向上を視野に入れます。
 
 ## 次の一手候補
-1. `daily-project-summary` がIssue不在時に適切な「次の一手」を提案するようプロンプトを改善 [Issue #None]
-   - 最初の小さな一歩: 現在の `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` を分析し、オープンIssueがない場合の「次の一手候補」生成ロジックがどのように機能しているか、または不足しているかを特定する。
+1. `generate_repo_list`機能の設定柔軟性向上 [新規]
+   - 最初の小さな一歩: `src/generate_repo_list/config.yml` と `src/generate_repo_list/config_manager.py` を分析し、現在の設定項目と、リポジトリのフィルタリングや出力形式のオプションなど、拡張可能な点を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+     対象ファイル: src/generate_repo_list/config.yml, src/generate_repo_list/config_manager.py
 
-     実行内容: 上記プロンプトの内容を分析し、オープンIssueが存在しない場合に「次の一手候補」を生成するための具体的な指示が不足していないかを確認してください。特に、プロジェクトの現在の状態（例：Issueがないこと、最近のコミット履歴、ファイル一覧）から、どのような種類のタスク（例：既存機能の改善、技術的負債の解消、テスト強化）を提案すべきかに関する指示を見つけてください。
+     実行内容: `generate_repo_list` 機能の設定をより柔軟にするため、`config.yml`で管理できる項目を洗い出し、`config_manager.py`がこれらの設定をどのように読み込み、利用しているかを分析してください。具体的には、リポジトリのフィルタリングオプション（例: 特定のトピックを持つリポジトリのみ含める）や、出力されるMarkdownのセクション構成を動的に指定できるような拡張可能性に焦点を当ててください。
 
-     確認事項: 現在の development-status-prompt.md が持つ指示と、実際の出力要件（ハルシネーション回避、具体的なアクションの提案）との間に乖離がないかを確認してください。また、他のプロンプトファイル（例: .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md）との整合性も考慮に入れてください。
+     確認事項: 既存の設定が変更によって影響を受けないこと。新たな設定項目が`config_manager.py`によって適切にパース・利用される設計が可能か。
 
-     期待する出力: 分析結果をMarkdown形式で出力し、もし改善点があれば、development-status-prompt.md に追加すべき具体的な指示内容（例：# 「現在のオープンIssues」がない場合の提案 のようなセクション追加と内容）を提案してください。
+     期待する出力: `config.yml`に追加可能な設定項目とその説明、および`config_manager.py`での実装変更の概要をmarkdown形式で提案してください。
      ```
 
-2. 類似するGitHub Actionsワークフローの共通化とリファクタリングの可能性調査 [Issue #None]
-   - 最初の小さな一歩: `.github/actions-tmp/.github/workflows/` ディレクトリ内のワークフローファイルをリストアップし、共通するパターンや再利用可能な部分がないかを概観する。
+2. `src/generate_repo_list`モジュールのテストカバレッジ強化 [新規]
+   - 最初の小さな一歩: `src/generate_repo_list/` 配下の主要なスクリプトのうち、特に `generate_repo_list.py` と `repository_processor.py` について、現在のテストファイル(`tests/test_repository_processor.py`, `tests/test_integration.py`など)でカバーされていないロジックやエッジケースを特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github/workflows/ ディレクトリ内の全YAMLファイル
+     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, tests/test_repository_processor.py, tests/test_integration.py
 
-     実行内容: 上記ディレクトリ内の各ワークフローファイルを分析し、以下の観点から共通化やリファクタリングの可能性を調査してください：
-     1. 複数のワークフローで共通して使用されているステップやジョブのパターン。
-     2. Reusable Workflowとしてさらに抽象化できる可能性のある部分。
-     3. call-check-large-files.yml と check-large-files.yml のような、呼び出し元と実体が存在するワークフローが、適切に分離・管理されているか。
+     実行内容: `src/generate_repo_list/generate_repo_list.py` と `src/generate_repo_list/repository_processor.py` のコードを分析し、現在のテストスイートでカバーされていない重要なビジネスロジックや、潜在的なエラーケース、エッジケースを特定してください。特に、APIからのデータ取得失敗時の挙動や、特定のデータ形式が予期せぬ結果を生む可能性について考慮してください。
 
-     確認事項: ワークフローの依存関係や、各ワークフローが目的とするタスクの特異性を考慮してください。共通化によって複雑さが増さないか、またはデバッグが困難にならないかを検討してください。
+     確認事項: 新たなテストケースが既存のテストを重複させないこと。モック化が必要な外部依存（GitHub APIなど）の特定。
 
-     期待する出力: 調査結果をMarkdown形式で出力し、具体的な共通化の候補（ファイル名、共通化する内容の概要）と、もしあればそのメリット・デメリットを記述してください。
+     期待する出力: 強化すべきテストケースのリストと、それらを実装するための`pytest`形式のサンプルコード（各テストケースで期待される入力と出力、検証内容を記述）をmarkdown形式で提案してください。
      ```
 
-3. `generate_repo_list` におけるリポジトリ統計情報の拡充 [Issue #None]
-   - 最初の小さな一歩: 現在 `src/generate_repo_list/statistics_calculator.py` がどのような統計情報を計算しているかを把握し、他に有用な統計情報（例: 平均コミット頻度、平均Issueクローズ時間）がないか検討する。
+3. GitHub Actions `generate_repo_list.yml` の安定性と効率改善 [新規]
+   - 最初の小さな一歩: `.github/workflows/generate_repo_list.yml` の実行ログ（利用可能であれば）を分析し、最も時間がかかっているステップや、潜在的な失敗ポイント（例: APIレートリミット、ネットワークエラー）を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/statistics_calculator.py と src/generate_repo_list/markdown_generator.py
+     対象ファイル: .github/workflows/generate_repo_list.yml
 
-     実行内容: statistics_calculator.py が現在計算しているリポジトリ統計情報を分析し、Markdown出力（markdown_generator.py が使用する可能性）に追加すると有用な統計情報（例: 総スター数、平均オープンIssue数、最近のアクティビティ指標など）を3つ提案してください。提案する統計情報は、プロジェクトの全体像をより深く理解するために役立つものとします。
+     実行内容: `generate_repo_list.yml` ワークフローの内容を分析し、実行の安定性と効率を向上させるための改善点を特定してください。具体的には、以下の観点から分析を行ってください：
+     1. APIレートリミット対策（GitHub APIの使用状況と対策の有無）
+     2. エラーハンドリングの強化（ステップ失敗時の再試行、通知など）
+     3. 実行時間の最適化（不要なステップの削除、キャッシュの利用検討）
 
-     確認事項: 新しい統計情報を計算するために必要なデータが、現在の src/generate_repo_list/repository_processor.py や src/generate_repo_list/project_overview_fetcher.py で取得可能か、または追加のAPI呼び出しが必要かを確認してください。また、統計情報が過度に複雑にならないように注意してください。
+     確認事項: 変更がワークフローの既存の機能に影響を与えないこと。GitHub Actionsのベストプラクティスに準拠していること。
 
-     期待する出力: 提案する新しい統計情報3つのリストと、それぞれの統計情報がどのようにプロジェクトの理解に貢献するか、および実装の際に考慮すべき点をMarkdown形式で記述してください。可能であれば、statistics_calculator.py および markdown_generator.py の変更点の概要も示してください。
+     期待する出力: `generate_repo_list.yml` に対する具体的な変更提案（YAML形式）、およびそれぞれの変更がもたらすメリットをmarkdown形式で説明してください。
 
 ---
-Generated at: 2026-03-23 07:08:04 JST
+Generated at: 2026-03-24 07:10:34 JST
