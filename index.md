@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-23 (UTC) / 2026-03-24 (JST)
+Last Updated: 2026-03-24 (UTC) / 2026-03-25 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,19 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けに、公開リポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、SEO最適化されたMarkdown形式で出力します。
-- リポジトリの発見性を高め、検索エンジンやLLMによる参照の課題を緩和することを目指します。
-- 📅 2026-03-23 (UTC) / 2026-03-24 (JST)
-
-## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
-WIP
-
-<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
-
-- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
-- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
-- 📅 2026-03-23 (UTC) / 2026-03-24 (JST)
+- GitHub APIを活用し、ユーザーのリポジトリ情報を自動取得するシステムです。
+- 取得した情報に基づき、SEOに最適化されたGitHub Pages向けリポジトリ一覧をMarkdownで生成します。
+- これにより、GitHub Pagesサイトの検索エンジン可視性を高め、リポジトリ参照を改善することを目指します。
+- 📅 2026-03-24 (UTC) / 2026-03-25 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -114,7 +105,16 @@ WIP
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
-- 📅 2026-03-23 (UTC) / 2026-03-23 (JST)
+- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
+
+## [claude-chat-code](https://cat2151.github.io/claude-chat-code/)
+
+<a href="https://cat2151.github.io/claude-chat-code/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/claude-chat-code](https://github.com/cat2151/claude-chat-code)
+- **GitHub Pages**: [https://cat2151.github.io/claude-chat-code/](https://cat2151.github.io/claude-chat-code/)
+- **Overview**: No description available
+- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
 
 ## [cat-gh-repo-creator](https://cat2151.github.io/cat-gh-repo-creator/)
 
@@ -123,16 +123,7 @@ WIP
 - **Repository**: [https://github.com/cat2151/cat-gh-repo-creator](https://github.com/cat2151/cat-gh-repo-creator)
 - **GitHub Pages**: [https://cat2151.github.io/cat-gh-repo-creator/](https://cat2151.github.io/cat-gh-repo-creator/)
 - **Overview**: No description available
-- 📅 2026-03-23 (UTC) / 2026-03-23 (JST)
-
-## [norenwake](https://cat2151.github.io/norenwake/)
-A TUI for Windows to create new repositories by 'norenwake' (branching off) your own public GitHub repositories. Written in Rust.
-
-<a href="https://cat2151.github.io/norenwake/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clone](https://img.shields.io/badge/Topic-clone-lightblue) ![Topic: fork](https://img.shields.io/badge/Topic-fork-lightblue) ![Topic: github](https://img.shields.io/badge/Topic-github-lightblue) ![Topic: repository](https://img.shields.io/badge/Topic-repository-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
-
-- **Repository**: [https://github.com/cat2151/norenwake](https://github.com/cat2151/norenwake)
-- **GitHub Pages**: [https://cat2151.github.io/norenwake/](https://cat2151.github.io/norenwake/)
-- 📅 2026-03-23 (UTC) / 2026-03-23 (JST)
+- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
 
 ## [cat-self-update](https://cat2151.github.io/cat-self-update/)
 
@@ -141,7 +132,7 @@ A TUI for Windows to create new repositories by 'norenwake' (branching off) your
 - **Repository**: [https://github.com/cat2151/cat-self-update](https://github.com/cat2151/cat-self-update)
 - **GitHub Pages**: [https://cat2151.github.io/cat-self-update/](https://cat2151.github.io/cat-self-update/)
 - **Overview**: No description available
-- 📅 2026-03-23 (UTC) / 2026-03-23 (JST)
+- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
 
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
 
@@ -150,6 +141,38 @@ A TUI for Windows to create new repositories by 'norenwake' (branching off) your
 - **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
 - **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
 - **Overview**: No description available
+- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
+
+## [github-actions](https://cat2151.github.io/github-actions/)
+collection of reusable GitHub Actions workflows for multiple projects
+
+<a href="https://cat2151.github.io/github-actions/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: github-actions](https://img.shields.io/badge/Topic-github--actions-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
+
+- **Repository**: [https://github.com/cat2151/github-actions](https://github.com/cat2151/github-actions)
+- **GitHub Pages**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
+
+### Project Highlights
+- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽にします
+- 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOKです
+- ✅ メンテナンスは一括で済むため、プロジェクト開発に集中できます
+- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
+
+## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
+WIP
+
+<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
+
+- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
+- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
+- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
+
+## [norenwake](https://cat2151.github.io/norenwake/)
+A TUI for Windows to create new repositories by 'norenwake' (branching off) your own public GitHub repositories. Written in Rust.
+
+<a href="https://cat2151.github.io/norenwake/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clone](https://img.shields.io/badge/Topic-clone-lightblue) ![Topic: fork](https://img.shields.io/badge/Topic-fork-lightblue) ![Topic: github](https://img.shields.io/badge/Topic-github-lightblue) ![Topic: repository](https://img.shields.io/badge/Topic-repository-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
+
+- **Repository**: [https://github.com/cat2151/norenwake](https://github.com/cat2151/norenwake)
+- **GitHub Pages**: [https://cat2151.github.io/norenwake/](https://cat2151.github.io/norenwake/)
 - 📅 2026-03-23 (UTC) / 2026-03-23 (JST)
 
 ## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
@@ -209,15 +232,6 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 
 - **Repository**: [https://github.com/cat2151/sixel-playground](https://github.com/cat2151/sixel-playground)
 - **GitHub Pages**: None
-- **Overview**: No description available
-- 📅 2026-03-22 (UTC) / 2026-03-22 (JST)
-
-## [claude-chat-code](https://cat2151.github.io/claude-chat-code/)
-
-<a href="https://cat2151.github.io/claude-chat-code/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/claude-chat-code](https://github.com/cat2151/claude-chat-code)
-- **GitHub Pages**: [https://cat2151.github.io/claude-chat-code/](https://cat2151.github.io/claude-chat-code/)
 - **Overview**: No description available
 - 📅 2026-03-22 (UTC) / 2026-03-22 (JST)
 
@@ -538,20 +552,6 @@ File Change Monitoring Tool - Detects file changes and executes commands
 - TOML形式の設定ファイルを通じて、監視対象のファイルやディレクトリ、実行するコマンド、監視間隔などを柔軟に設定できます。
 - 軽量で使いやすく、複数のファイルやディレクトリの同時監視、特定のプロセス実行時のコマンド抑制、時間帯ごとの監視などの高度な機能を備えています。
 - 📅 2026-03-06 (UTC) / 2026-03-06 (JST)
-
-## [github-actions](https://cat2151.github.io/github-actions/)
-collection of reusable GitHub Actions workflows for multiple projects
-
-<a href="https://cat2151.github.io/github-actions/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: github-actions](https://img.shields.io/badge/Topic-github--actions-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
-
-- **Repository**: [https://github.com/cat2151/github-actions](https://github.com/cat2151/github-actions)
-- **GitHub Pages**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
-
-### Project Highlights
-- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽にします
-- 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOKです
-- ✅ メンテナンスは一括で済むため、プロジェクト開発に集中できます
-- 📅 2026-03-03 (UTC) / 2026-03-04 (JST)
 
 ## [ym2151-log-play-server](https://cat2151.github.io/ym2151-log-play-server/)
 Server and client that receive YM2151 (OPM) register event logs and perform real-time playback.
