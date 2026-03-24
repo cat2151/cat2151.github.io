@@ -1,4 +1,4 @@
-Last updated: 2026-03-24
+Last updated: 2026-03-25
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -198,7 +198,9 @@ Last updated: 2026-03-24
 - .github/actions-tmp/issue-notes/4.md
 - .github/actions-tmp/issue-notes/40.md
 - .github/actions-tmp/issue-notes/44.md
-- .github/actions-tmp/issue-notes/52.md
+- .github/actions-tmp/issue-notes/54.md
+- .github/actions-tmp/issue-notes/56.md
+- .github/actions-tmp/issue-notes/57.md
 - .github/actions-tmp/issue-notes/7.md
 - .github/actions-tmp/issue-notes/8.md
 - .github/actions-tmp/issue-notes/9.md
@@ -272,6 +274,8 @@ Last updated: 2026-03-24
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+3cd54aa Auto-update repository list - 2026-03-23
+7e9eb9e Update project summaries (overview & development status) [auto]
 065f6a4 Auto-update repository list - 2026-03-22
 69d79fb Update project summaries (overview & development status) [auto]
 047b5fe Auto-update repository list - 2026-03-21
@@ -280,8 +284,6 @@ Last updated: 2026-03-24
 4f9012d Update project summaries (overview & development status) [auto]
 a8b766c Auto-update repository list - 2026-03-19
 275ad99 Update project summaries (overview & development status) [auto]
-a9d7d3d Auto-update repository list - 2026-03-18
-a33d1a4 Update project summaries (overview & development status) [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -292,4 +294,4 @@ index.md
 
 
 ---
-Generated at: 2026-03-24 07:10:18 JST
+Generated at: 2026-03-25 07:11:09 JST

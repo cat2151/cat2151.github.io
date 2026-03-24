@@ -1,53 +1,62 @@
-Last updated: 2026-03-24
+Last updated: 2026-03-25
 
 # Development Status
 
 ## 現在のIssues
-- 現在、オープンされているIssueはありません。
-- プロジェクトは自動化されたタスクの実行とレポート生成に注力しています。
-- 今後の開発は、既存の自動化機能の改善や安定性向上を視野に入れます。
+- 現在、オープン中の開発課題は存在しません。
+- これは、既存の課題がすべて解決済みであることを示しています。
+- そのため、今後の開発は新規の改善や機能追加に注力する段階です。
 
 ## 次の一手候補
-1. `generate_repo_list`機能の設定柔軟性向上 [新規]
-   - 最初の小さな一歩: `src/generate_repo_list/config.yml` と `src/generate_repo_list/config_manager.py` を分析し、現在の設定項目と、リポジトリのフィルタリングや出力形式のオプションなど、拡張可能な点を特定する。
+1. [新規課題] `src/generate_repo_list/markdown_generator.py` の出力品質向上
+   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` が生成するMarkdownの内容をレビューし、現在の出力で改善できる点を洗い出す。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/config.yml, src/generate_repo_list/config_manager.py
+     対象ファイル: src/generate_repo_list/markdown_generator.py, index.md, generated-docs/project-overview.md
 
-     実行内容: `generate_repo_list` 機能の設定をより柔軟にするため、`config.yml`で管理できる項目を洗い出し、`config_manager.py`がこれらの設定をどのように読み込み、利用しているかを分析してください。具体的には、リポジトリのフィルタリングオプション（例: 特定のトピックを持つリポジトリのみ含める）や、出力されるMarkdownのセクション構成を動的に指定できるような拡張可能性に焦点を当ててください。
+     実行内容: `src/generate_repo_list/markdown_generator.py` のコードを分析し、それがどのようなMarkdown構造と内容を生成しているかを把握してください。特に、以下の点を評価してください：
+     1. 生成されるMarkdownの可読性
+     2. SEO観点からの最適化の余地（`src/generate_repo_list/seo_template.yml` や `src/generate_repo_list/json_ld_template.json` との連携）
+     3. 表現の多様性や情報の網羅性
 
-     確認事項: 既存の設定が変更によって影響を受けないこと。新たな設定項目が`config_manager.py`によって適切にパース・利用される設計が可能か。
+     確認事項: `src/generate_repo_list/config.yml` や `src/generate_repo_list/strings.yml` など、Markdown生成に影響を与える設定ファイルや文字列定義ファイルとの連携を確認してください。また、`src/generate_repo_list/project_overview_fetcher.py` など、データソースとなるスクリプトとの連携も考慮してください。
 
-     期待する出力: `config.yml`に追加可能な設定項目とその説明、および`config_manager.py`での実装変更の概要をmarkdown形式で提案してください。
+     期待する出力: `src/generate_repo_list/markdown_generator.py` の現在の出力の評価結果と、具体的な改善提案（例: 特定のセクションの追加、既存情報の表現改善、SEOメタデータの統合強化など）をmarkdown形式で出力してください。
      ```
 
-2. `src/generate_repo_list`モジュールのテストカバレッジ強化 [新規]
-   - 最初の小さな一歩: `src/generate_repo_list/` 配下の主要なスクリプトのうち、特に `generate_repo_list.py` と `repository_processor.py` について、現在のテストファイル(`tests/test_repository_processor.py`, `tests/test_integration.py`など)でカバーされていないロジックやエッジケースを特定する。
+2. [新規課題] 開発状況生成プロンプトの精度と有用性の向上
+   - 最初の小さな一歩: 現在の `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` の内容と、それに基づいて実際に生成された `generated-docs/development-status.md` を比較し、改善点を見つける。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, tests/test_repository_processor.py, tests/test_integration.py
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, generated-docs/development-status.md
 
-     実行内容: `src/generate_repo_list/generate_repo_list.py` と `src/generate_repo_list/repository_processor.py` のコードを分析し、現在のテストスイートでカバーされていない重要なビジネスロジックや、潜在的なエラーケース、エッジケースを特定してください。特に、APIからのデータ取得失敗時の挙動や、特定のデータ形式が予期せぬ結果を生む可能性について考慮してください。
+     実行内容: `development-status-prompt.md` の指示が、実際に生成された `generated-docs/development-status.md` の内容にどの程度反映されているかを分析してください。特に、以下の観点から評価してください：
+     1. 生成された要約が、開発状況の現状を正確かつ簡潔に捉えているか。
+     2. 「次の一手候補」が具体的で実行可能か、またハルシネーションを避ける指示が遵守されているか。
+     3. 指定されたフォーマット（issue番号のリンク形式など）が正確に適用されているか。
+     4. プロンプト自体を改善することで、より質の高い開発状況レポートを生成できるか。
 
-     確認事項: 新たなテストケースが既存のテストを重複させないこと。モック化が必要な外部依存（GitHub APIなど）の特定。
+     確認事項: `ProjectSummaryCoordinator.cjs` や `DevelopmentStatusGenerator.cjs` など、このプロンプトと連携してレポートを生成するスクリプトの動作ロジックを考慮し、プロンプト変更がシステム全体に与える影響を確認してください。
 
-     期待する出力: 強化すべきテストケースのリストと、それらを実装するための`pytest`形式のサンプルコード（各テストケースで期待される入力と出力、検証内容を記述）をmarkdown形式で提案してください。
+     期待する出力: 現在の `development-status-prompt.md` の評価結果と、より質の高い開発状況レポートを生成するための具体的なプロンプト改善案をmarkdown形式で出力してください。改善案は、現在のガイドライン（生成するもの、しないもの、必須要素など）をさらに強化する形であるべきです。
      ```
 
-3. GitHub Actions `generate_repo_list.yml` の安定性と効率改善 [新規]
-   - 最初の小さな一歩: `.github/workflows/generate_repo_list.yml` の実行ログ（利用可能であれば）を分析し、最も時間がかかっているステップや、潜在的な失敗ポイント（例: APIレートリミット、ネットワークエラー）を特定する。
+3. [新規課題] `call-translate-readme.yml` の外部プロジェクト向け導入ドキュメント作成
+   - 最初の小さな一歩: `.github/actions-tmp/.github/workflows/translate-readme.yml` および `.github/actions-tmp/.github/workflows/call-translate-readme.yml` のワークフロー定義を読み解き、外部プロジェクトで利用する際に必要なパラメータ、シークレット、前提条件をリストアップする。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/workflows/generate_repo_list.yml
+     対象ファイル: .github/actions-tmp/.github/workflows/translate-readme.yml, .github/actions-tmp/.github/workflows/call-translate-readme.yml, .github/actions-tmp/.github_automation/translate/docs/TRANSLATION_SETUP.md
 
-     実行内容: `generate_repo_list.yml` ワークフローの内容を分析し、実行の安定性と効率を向上させるための改善点を特定してください。具体的には、以下の観点から分析を行ってください：
-     1. APIレートリミット対策（GitHub APIの使用状況と対策の有無）
-     2. エラーハンドリングの強化（ステップ失敗時の再試行、通知など）
-     3. 実行時間の最適化（不要なステップの削除、キャッシュの利用検討）
+     実行内容: 対象ファイルについて、外部プロジェクトから利用する際に必要な設定項目を洗い出し、以下の観点から分析してください：
+     1. 必須入力パラメータ（target-branch等）
+     2. 必須シークレット（GEMINI_API_KEY）
+     3. ファイル配置の前提条件（README.ja.mdの存在）
+     4. 外部プロジェクトでの利用時に必要な追加設定や考慮事項
+     5. 既存の `TRANSLATION_SETUP.md` がカバーしている範囲と不足している情報
 
-     確認事項: 変更がワークフローの既存の機能に影響を与えないこと。GitHub Actionsのベストプラクティスに準拠していること。
+     確認事項: 作業前に既存のワークフローファイルとの依存関係、および他のREADME関連ファイル（README.md, README.ja.md）との整合性を確認してください。また、`translate-readme.cjs` スクリプトがどのように動作するかも考慮に入れてください。
 
-     期待する出力: `generate_repo_list.yml` に対する具体的な変更提案（YAML形式）、およびそれぞれの変更がもたらすメリットをmarkdown形式で説明してください。
+     期待する出力: 外部プロジェクトがこの `call-translate-readme.yml` を導入する際の手順書をmarkdown形式で生成してください。具体的には：必須パラメータの設定方法、シークレットの登録手順、前提条件の確認項目、および既存ドキュメント `TRANSLATION_SETUP.md` の更新提案を含めてください。
 
 ---
-Generated at: 2026-03-24 07:10:34 JST
+Generated at: 2026-03-25 07:11:41 JST
