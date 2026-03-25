@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-24 (UTC) / 2026-03-25 (JST)
+Last Updated: 2026-03-25 (UTC) / 2026-03-26 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,55 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、ユーザーのリポジトリ情報を自動取得するシステムです。
-- 取得した情報に基づき、SEOに最適化されたGitHub Pages向けリポジトリ一覧をMarkdownで生成します。
-- これにより、GitHub Pagesサイトの検索エンジン可視性を高め、リポジトリ参照を改善することを目指します。
-- 📅 2026-03-24 (UTC) / 2026-03-25 (JST)
-
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- **Overview**: No description available
-- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
-
-## [claude-chat-code](https://cat2151.github.io/claude-chat-code/)
-
-<a href="https://cat2151.github.io/claude-chat-code/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/claude-chat-code](https://github.com/cat2151/claude-chat-code)
-- **GitHub Pages**: [https://cat2151.github.io/claude-chat-code/](https://cat2151.github.io/claude-chat-code/)
-- **Overview**: No description available
-- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
-
-## [cat-gh-repo-creator](https://cat2151.github.io/cat-gh-repo-creator/)
-
-<a href="https://cat2151.github.io/cat-gh-repo-creator/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-gh-repo-creator](https://github.com/cat2151/cat-gh-repo-creator)
-- **GitHub Pages**: [https://cat2151.github.io/cat-gh-repo-creator/](https://cat2151.github.io/cat-gh-repo-creator/)
-- **Overview**: No description available
-- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
-
-## [cat-self-update](https://cat2151.github.io/cat-self-update/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-self-update](https://github.com/cat2151/cat-self-update)
-- **GitHub Pages**: [https://cat2151.github.io/cat-self-update/](https://cat2151.github.io/cat-self-update/)
-- **Overview**: No description available
-- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
-
-## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
-
-<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
-- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
-- **Overview**: No description available
-- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
+- GitHub APIを活用し、ユーザーのリポジトリ情報を自動で取得・整理します。
+- GitHub Pagesサイト（`*.github.io`）向けにSEOに最適化されたリポジトリ一覧Markdownファイルを生成します。
+- 各リポジトリの概要文を自動取得し、検索エンジンのクロール対象となりやすい形で公開することで、プロジェクトの可視性を高めます。
+- 📅 2026-03-25 (UTC) / 2026-03-26 (JST)
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
 collection of reusable GitHub Actions workflows for multiple projects
@@ -153,9 +108,18 @@ collection of reusable GitHub Actions workflows for multiple projects
 
 ### Project Highlights
 - 🚀 プロジェクトごとのGitHub Actions管理をもっと楽にします
-- 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOKです
-- ✅ メンテナンスは一括で済むため、プロジェクト開発に集中できます
-- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
+- 🔗 共通化されたワークフローを提供し、どのプロジェクトからも簡単に呼び出せます
+- ✅ ワークフローのメンテナンスを一括化し、プロジェクト開発に集中できる環境を構築します
+- 📅 2026-03-25 (UTC) / 2026-03-26 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Overview**: No description available
+- 📅 2026-03-25 (UTC) / 2026-03-25 (JST)
 
 ## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
 WIP
@@ -164,6 +128,60 @@ WIP
 
 - **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
 - **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
+- 📅 2026-03-25 (UTC) / 2026-03-25 (JST)
+
+## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
+
+<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
+- **Overview**: No description available
+- 📅 2026-03-25 (UTC) / 2026-03-25 (JST)
+
+## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
+
+<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
+- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
+- **Overview**: No description available
+- 📅 2026-03-25 (UTC) / 2026-03-25 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-03-24 (UTC) / 2026-03-25 (JST)
+
+## [cat-gh-repo-creator](https://cat2151.github.io/cat-gh-repo-creator/)
+
+<a href="https://cat2151.github.io/cat-gh-repo-creator/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-gh-repo-creator](https://github.com/cat2151/cat-gh-repo-creator)
+- **GitHub Pages**: [https://cat2151.github.io/cat-gh-repo-creator/](https://cat2151.github.io/cat-gh-repo-creator/)
+- **Overview**: No description available
+- 📅 2026-03-24 (UTC) / 2026-03-25 (JST)
+
+## [claude-chat-code](https://cat2151.github.io/claude-chat-code/)
+
+<a href="https://cat2151.github.io/claude-chat-code/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/claude-chat-code](https://github.com/cat2151/claude-chat-code)
+- **GitHub Pages**: [https://cat2151.github.io/claude-chat-code/](https://cat2151.github.io/claude-chat-code/)
+- **Overview**: No description available
+- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
+
+## [cat-self-update](https://cat2151.github.io/cat-self-update/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-self-update](https://github.com/cat2151/cat-self-update)
+- **GitHub Pages**: [https://cat2151.github.io/cat-self-update/](https://cat2151.github.io/cat-self-update/)
+- **Overview**: No description available
 - 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
 
 ## [norenwake](https://cat2151.github.io/norenwake/)
@@ -234,24 +252,6 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - **GitHub Pages**: None
 - **Overview**: No description available
 - 📅 2026-03-22 (UTC) / 2026-03-22 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
-
-## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
-
-<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
-- **Overview**: No description available
-- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
 
 ## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
 MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
