@@ -1,4 +1,4 @@
-Last updated: 2026-03-25
+Last updated: 2026-03-26
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -108,6 +108,8 @@ Last updated: 2026-03-25
 - .github/actions-tmp/.github/workflows/call-check-large-files.yml
 - .github/actions-tmp/.github/workflows/call-daily-project-summary.yml
 - .github/actions-tmp/.github/workflows/call-issue-note.yml
+- .github/actions-tmp/.github/workflows/call-rust-fmt-commit.yml
+- .github/actions-tmp/.github/workflows/call-rust-windows-cargo-check.yml
 - .github/actions-tmp/.github/workflows/call-rust-windows-check.yml
 - .github/actions-tmp/.github/workflows/call-translate-readme.yml
 - .github/actions-tmp/.github/workflows/callgraph.yml
@@ -115,6 +117,8 @@ Last updated: 2026-03-25
 - .github/actions-tmp/.github/workflows/check-recent-human-commit.yml
 - .github/actions-tmp/.github/workflows/daily-project-summary.yml
 - .github/actions-tmp/.github/workflows/issue-note.yml
+- .github/actions-tmp/.github/workflows/rust-fmt-commit.yml
+- .github/actions-tmp/.github/workflows/rust-windows-cargo-check.yml
 - .github/actions-tmp/.github/workflows/rust-windows-check.yml
 - .github/actions-tmp/.github/workflows/translate-readme.yml
 - .github/actions-tmp/.github_automation/callgraph/codeql-queries/callgraph.ql
@@ -158,6 +162,7 @@ Last updated: 2026-03-25
 - .github/actions-tmp/.github_automation/translate/scripts/translate-readme.cjs
 - .github/actions-tmp/.gitignore
 - .github/actions-tmp/.vscode/settings.json
+- .github/actions-tmp/AGENTS.md
 - .github/actions-tmp/LICENSE
 - .github/actions-tmp/README.ja.md
 - .github/actions-tmp/README.md
@@ -198,9 +203,8 @@ Last updated: 2026-03-25
 - .github/actions-tmp/issue-notes/4.md
 - .github/actions-tmp/issue-notes/40.md
 - .github/actions-tmp/issue-notes/44.md
-- .github/actions-tmp/issue-notes/54.md
-- .github/actions-tmp/issue-notes/56.md
 - .github/actions-tmp/issue-notes/57.md
+- .github/actions-tmp/issue-notes/59.md
 - .github/actions-tmp/issue-notes/7.md
 - .github/actions-tmp/issue-notes/8.md
 - .github/actions-tmp/issue-notes/9.md
@@ -274,6 +278,8 @@ Last updated: 2026-03-25
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+2fb4062 Auto-update repository list - 2026-03-24
+8a27048 Update project summaries (overview & development status) [auto]
 3cd54aa Auto-update repository list - 2026-03-23
 7e9eb9e Update project summaries (overview & development status) [auto]
 065f6a4 Auto-update repository list - 2026-03-22
@@ -282,8 +288,6 @@ Last updated: 2026-03-25
 4014a82 Update project summaries (overview & development status) [auto]
 18ce19e Auto-update repository list - 2026-03-20
 4f9012d Update project summaries (overview & development status) [auto]
-a8b766c Auto-update repository list - 2026-03-19
-275ad99 Update project summaries (overview & development status) [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -294,4 +298,4 @@ index.md
 
 
 ---
-Generated at: 2026-03-25 07:11:09 JST
+Generated at: 2026-03-26 07:14:03 JST
