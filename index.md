@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-26 (UTC) / 2026-03-27 (JST)
+Last Updated: 2026-03-27 (UTC) / 2026-03-28 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,55 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用してリポジトリ情報を取得し、GitHub Pages向けに一覧ページを自動生成します。
-- 検索エンジン最適化されたMarkdownを出力することで、リポジトリの発見性を向上させます。
-- 各リポジトリの概要を自動取得・表示し、開発者のLLM参照問題を緩和することを目指します。
-- 📅 2026-03-26 (UTC) / 2026-03-27 (JST)
-
-## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
-MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
-
-<a href="https://cat2151.github.io/tonejs-mml-to-json/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/tonejs-mml-to-json"><img src="https://img.shields.io/badge/DeepWiki-Documentation-blue?logo=book" alt="DeepWiki"></a> <a href="https://cat2151.github.io/tonejs-mml-to-json/index.html"><img src="https://img.shields.io/badge/🚀-Live%20Demo-brightgreen.svg" alt="Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
-- 📅 2026-03-26 (UTC) / 2026-03-27 (JST)
-
-## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
-WIP
-
-<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
-
-- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
-- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
-- 📅 2026-03-26 (UTC) / 2026-03-27 (JST)
-
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- **Overview**: No description available
-- 📅 2026-03-26 (UTC) / 2026-03-27 (JST)
-
-## [claude-chat-code](https://cat2151.github.io/claude-chat-code/)
-
-<a href="https://cat2151.github.io/claude-chat-code/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/claude-chat-code](https://github.com/cat2151/claude-chat-code)
-- **GitHub Pages**: [https://cat2151.github.io/claude-chat-code/](https://cat2151.github.io/claude-chat-code/)
-- **Overview**: No description available
-- 📅 2026-03-26 (UTC) / 2026-03-26 (JST)
-
-## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
-
-<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
-- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
-- **Overview**: No description available
-- 📅 2026-03-26 (UTC) / 2026-03-26 (JST)
+- GitHub Pagesサイト向けにリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを活用し、リポジトリ情報からSEO最適化されたMarkdownファイルを生成します。
+- 検索エンジンでの発見性を高め、LLMによるリポジトリ参照精度向上を支援します。
+- 📅 2026-03-27 (UTC) / 2026-03-28 (JST)
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
 collection of reusable GitHub Actions workflows for multiple projects
@@ -152,10 +107,87 @@ collection of reusable GitHub Actions workflows for multiple projects
 - **GitHub Pages**: [https://cat2151.github.io/github-actions/](https://cat2151.github.io/github-actions/)
 
 ### Project Highlights
-- 🚀 プロジェクトごとのGitHub Actions管理をもっと楽にします
-- 🔗 共通化されたワークフローを提供し、どのプロジェクトからも簡単に呼び出せます
-- ✅ ワークフローのメンテナンスを一括化し、プロジェクト開発に集中できる環境を構築します
-- 📅 2026-03-25 (UTC) / 2026-03-26 (JST)
+- 🚀 このプロジェクトは、GitHub Actionsのワークフロー管理を効率化し、複数のプロジェクトで再利用可能な共通ワークフローを提供します。
+- 🔗 開発者は共通化されたワークフローを呼び出すだけで済むため、各プロジェクトでのGitHub Actionsの設定とメンテナンスの手間を大幅に削減できます。
+- ✅ ワークフローのメンテナンスは一元的に行えるため、各プロジェクトは本来の開発業務に集中できるよう設計されています。
+- 📅 2026-03-27 (UTC) / 2026-03-28 (JST)
+
+## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
+
+<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
+- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
+- **Overview**: No description available
+- 📅 2026-03-27 (UTC) / 2026-03-27 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Overview**: No description available
+- 📅 2026-03-27 (UTC) / 2026-03-27 (JST)
+
+## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
+WIP
+
+<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
+
+- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
+- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
+- 📅 2026-03-27 (UTC) / 2026-03-27 (JST)
+
+## [cat-self-update](https://cat2151.github.io/cat-self-update/)
+
+<a href="https://cat2151.github.io/cat-self-update/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-self-update](https://github.com/cat2151/cat-self-update)
+- **GitHub Pages**: [https://cat2151.github.io/cat-self-update/](https://cat2151.github.io/cat-self-update/)
+- **Overview**: No description available
+- 📅 2026-03-27 (UTC) / 2026-03-27 (JST)
+
+## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
+MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
+- **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
+
+### Project Highlights
+- Rustで構築された、MML（Music Macro Language）用のシンプルなTUIエディタです。
+- テキスト編集、カーソル移動、MMLノート入力時の自動再生、MMLテンプレート切り替えなどの機能を提供します。
+- コマンドラインから手軽にMMLの作曲と再生を試せる、ミニマムな体験を目指しています。
+- 📅 2026-03-27 (UTC) / 2026-03-27 (JST)
+
+## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
+MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
+
+<a href="https://cat2151.github.io/tonejs-mml-to-json/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: json](https://img.shields.io/badge/Topic-json-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/tonejs-mml-to-json"><img src="https://img.shields.io/badge/DeepWiki-Documentation-blue?logo=book" alt="DeepWiki"></a> <a href="https://cat2151.github.io/tonejs-mml-to-json/index.html"><img src="https://img.shields.io/badge/🚀-Live%20Demo-brightgreen.svg" alt="Demo"></a>
+
+- **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
+- 📅 2026-03-27 (UTC) / 2026-03-27 (JST)
+
+## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
+- **Overview**: No description available
+- 📅 2026-03-27 (UTC) / 2026-03-27 (JST)
+
+## [claude-chat-code](https://cat2151.github.io/claude-chat-code/)
+
+<a href="https://cat2151.github.io/claude-chat-code/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/claude-chat-code](https://github.com/cat2151/claude-chat-code)
+- **GitHub Pages**: [https://cat2151.github.io/claude-chat-code/](https://cat2151.github.io/claude-chat-code/)
+- **Overview**: No description available
+- 📅 2026-03-26 (UTC) / 2026-03-27 (JST)
 
 ## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
 
@@ -183,15 +215,6 @@ collection of reusable GitHub Actions workflows for multiple projects
 - **GitHub Pages**: [https://cat2151.github.io/cat-gh-repo-creator/](https://cat2151.github.io/cat-gh-repo-creator/)
 - **Overview**: No description available
 - 📅 2026-03-24 (UTC) / 2026-03-25 (JST)
-
-## [cat-self-update](https://cat2151.github.io/cat-self-update/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-self-update](https://github.com/cat2151/cat-self-update)
-- **GitHub Pages**: [https://cat2151.github.io/cat-self-update/](https://cat2151.github.io/cat-self-update/)
-- **Overview**: No description available
-- 📅 2026-03-24 (UTC) / 2026-03-24 (JST)
 
 ## [norenwake](https://cat2151.github.io/norenwake/)
 A TUI for Windows to create new repositories by 'norenwake' (branching off) your own public GitHub repositories. Written in Rust.
@@ -261,20 +284,6 @@ YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
 - **GitHub Pages**: None
 - **Overview**: No description available
 - 📅 2026-03-22 (UTC) / 2026-03-22 (JST)
-
-## [cat-edit-mml](https://cat2151.github.io/cat-edit-mml/)
-MML(Music Macro Language)用のTUI(テキストユーザーインターフェース)エディタ。即時再生可
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-edit-mml](https://github.com/cat2151/cat-edit-mml)
-- **GitHub Pages**: [https://cat2151.github.io/cat-edit-mml/](https://cat2151.github.io/cat-edit-mml/)
-
-### Project Highlights
-- Rustで構築された、MML（Music Macro Language）用のシンプルなTUIエディタです。
-- テキスト編集、カーソル移動、MMLノート入力時の自動再生、MMLテンプレート切り替えなどの機能を提供します。
-- コマンドラインから手軽にMMLの作曲と再生を試せる、ミニマムな体験を目指しています。
-- 📅 2026-03-20 (UTC) / 2026-03-20 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
@@ -404,15 +413,6 @@ cdefgabを入力するごとにその音が鳴るMMLエディタ（実験用）
 - キーボード入力やカーソル移動に連動して即座にMMLの音を鳴らし、音楽制作の試行錯誤サイクルを高速化します。
 - フレーズ作成、コード進行の試行、転調などのMMLベースの音楽制作を直感的に支援するツールです。
 - 📅 2026-03-16 (UTC) / 2026-03-17 (JST)
-
-## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
-- **Overview**: No description available
-- 📅 2026-03-16 (UTC) / 2026-03-16 (JST)
 
 ## [web-ym2151](https://cat2151.github.io/web-ym2151/)
 
