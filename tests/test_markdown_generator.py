@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""MarkdownGeneratorのユニットテスト"""
+"""MarkdownGeneratorのユニットテスト
+
+このモジュールはMarkdownGeneratorクラスの各機能をpytestでテストします。
+"""
 
 import sys
 from datetime import datetime

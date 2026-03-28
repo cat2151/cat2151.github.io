@@ -1,4 +1,4 @@
-"""Shared pytest fixtures for repository tests."""
+"""リポジトリテスト用の共有pytestフィクスチャ。"""
 
 import os
 import sys
