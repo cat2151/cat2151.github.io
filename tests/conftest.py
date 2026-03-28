@@ -8,10 +8,9 @@ import pytest
 
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 src_dir = os.path.join(project_root, "src", "generate_repo_list")
-if src_dir not in sys.path:
-    sys.path.insert(0, src_dir)
-
-from markdown_generator import MarkdownGenerator  # noqa: E402
+if src_dir in sys.path:
+    sys.path.remove(src_dir)
+sys.path.insert(0, src_dir)
 
 
 @pytest.fixture
@@ -88,6 +87,8 @@ def mock_strings():
 @pytest.fixture
 def generator(mock_config, mock_strings):
     """MarkdownGeneratorのフィクスチャ"""
+    from markdown_generator import MarkdownGenerator
+
     return MarkdownGenerator(mock_config, mock_strings)
 
 
