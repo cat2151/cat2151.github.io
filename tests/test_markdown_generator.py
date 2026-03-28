@@ -6,7 +6,6 @@ from datetime import datetime
 from unittest.mock import patch
 
 import pytest
-
 from markdown_generator import MarkdownGenerator  # noqa: E402
 
 
