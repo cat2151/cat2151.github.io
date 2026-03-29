@@ -1,4 +1,4 @@
-Last updated: 2026-03-29
+Last updated: 2026-03-30
 
 
 # プロジェクト概要生成プロンプト（来訪者向け）
@@ -236,6 +236,7 @@ project_overview:
     📄 url_utils.py
 📄 test_project_overview.py
 📁 tests/
+  📄 conftest.py
   📄 test_badge_generator_integration.py
   📄 test_check_large_files.py
   📄 test_config.py
@@ -274,4 +275,4 @@ src/generate_repo_list/json_ld_template.json
 
 
 ---
-Generated at: 2026-03-29 07:08:23 JST
+Generated at: 2026-03-30 07:09:12 JST
