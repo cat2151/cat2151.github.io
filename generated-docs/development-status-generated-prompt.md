@@ -1,4 +1,4 @@
-Last updated: 2026-03-30
+Last updated: 2026-03-31
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -278,6 +278,8 @@ Last updated: 2026-03-30
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+96849df Auto-update repository list - 2026-03-29
+96d37ab Update project summaries (overview & development status) [auto]
 00149e2 Merge pull request #25 from cat2151/copilot/refactor-large-file-test-markdown-generator
 68669d0 fix: harden shared test fixture imports
 b1aed1b docs: align refactored test docstrings
@@ -286,8 +288,6 @@ b1aed1b docs: align refactored test docstrings
 638ccda Initial plan
 8d37346 Auto-update repository list - 2026-03-28
 f9e452a Update project summaries (overview & development status) [auto]
-643296b CI整頓
-22dd812 Auto-update repository list - 2026-03-27
 
 ### 変更されたファイル:
 .github/workflows/call-check-large-files.yml
@@ -302,4 +302,4 @@ tests/test_markdown_generator.py
 
 
 ---
-Generated at: 2026-03-30 07:09:12 JST
+Generated at: 2026-03-31 07:13:49 JST
