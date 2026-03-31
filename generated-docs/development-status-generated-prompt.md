@@ -1,4 +1,4 @@
-Last updated: 2026-03-31
+Last updated: 2026-04-01
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -278,6 +278,8 @@ Last updated: 2026-03-31
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+b5ee113 Auto-update repository list - 2026-03-30
+39e7da0 Update project summaries (overview & development status) [auto]
 96849df Auto-update repository list - 2026-03-29
 96d37ab Update project summaries (overview & development status) [auto]
 00149e2 Merge pull request #25 from cat2151/copilot/refactor-large-file-test-markdown-generator
@@ -286,12 +288,8 @@ b1aed1b docs: align refactored test docstrings
 1a3e1a9 chore: apply formatting after fixture extraction
 22594b1 refactor: extract markdown generator test fixtures
 638ccda Initial plan
-8d37346 Auto-update repository list - 2026-03-28
-f9e452a Update project summaries (overview & development status) [auto]
 
 ### 変更されたファイル:
-.github/workflows/call-check-large-files.yml
-.github/workflows/check-large-files-reusable.yml
 generated-docs/development-status-generated-prompt.md
 generated-docs/development-status.md
 generated-docs/project-overview-generated-prompt.md
@@ -302,4 +300,4 @@ tests/test_markdown_generator.py
 
 
 ---
-Generated at: 2026-03-31 07:13:49 JST
+Generated at: 2026-04-01 07:13:17 JST
