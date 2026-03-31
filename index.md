@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-03-30 (UTC) / 2026-03-31 (JST)
+Last Updated: 2026-03-31 (UTC) / 2026-04-01 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用してリポジトリ情報を自動取得するシステムです。
-- 取得した情報から、JekyllベースのGitHub Pagesサイト向けにSEO最適化されたリポジトリ一覧Markdownを生成します。
-- 検索エンジンからの参照性やLLMによるリポジトリ参照の精度向上を目指し、各リポジトリの概要自動取得機能などを提供します。
-- 📅 2026-03-30 (UTC) / 2026-03-31 (JST)
+- GitHub APIを活用し、自身のGitHubリポジトリ情報を自動で取得します。
+- 取得した情報から、GitHub Pages向けのSEOに強いリポジトリ一覧を生成します。
+- 検索エンジンやLLMによる参照性を高め、情報アクセスを容易にすることを目的としています。
+- 📅 2026-03-31 (UTC) / 2026-04-01 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -105,16 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
-- 📅 2026-03-30 (UTC) / 2026-03-31 (JST)
-
-## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
-
-<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
-- **Overview**: No description available
-- 📅 2026-03-30 (UTC) / 2026-03-30 (JST)
+- 📅 2026-03-31 (UTC) / 2026-04-01 (JST)
 
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
 
@@ -123,7 +114,25 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
 - **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
 - **Overview**: No description available
-- 📅 2026-03-30 (UTC) / 2026-03-30 (JST)
+- 📅 2026-03-31 (UTC) / 2026-03-31 (JST)
+
+## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
+
+<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
+- **Overview**: No description available
+- 📅 2026-03-31 (UTC) / 2026-03-31 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-03-31 (UTC) / 2026-03-31 (JST)
 
 ## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
 File Change Monitoring Tool - Detects file changes and executes commands
@@ -252,15 +261,6 @@ MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
 - **GitHub Pages**: [https://cat2151.github.io/claude-chat-code/](https://cat2151.github.io/claude-chat-code/)
 - **Overview**: No description available
 - 📅 2026-03-26 (UTC) / 2026-03-27 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-03-24 (UTC) / 2026-03-25 (JST)
 
 ## [cat-gh-repo-creator](https://cat2151.github.io/cat-gh-repo-creator/)
 
