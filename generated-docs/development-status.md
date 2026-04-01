@@ -1,49 +1,59 @@
-Last updated: 2026-04-01
+Last updated: 2026-04-02
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。
+- 現在オープン中のIssueはありません。
+- プロジェクトは安定しており、既存機能の定期的な自動更新が継続されています。
+- 主にリポジトリリストの自動更新やプロジェクトサマリーの自動生成に関する活動が行われています。
 
 ## 次の一手候補
-1. プロジェクトサマリー生成のロバスト性向上 [Issue #70](../issue-notes/70.md)
-   - 最初の小さな一歩: `ProjectSummaryCoordinator.cjs` が `ProjectOverviewGenerator.cjs` を呼び出す際のエラーハンドリング機構を分析し、より堅牢にするための改善点を洗い出す。
+1. `generate_repo_list` workflowのロバスト性向上と設定の柔軟化
+   - 最初の小さな一歩: `src/generate_repo_list/config.yml` と `src/generate_repo_list/config_manager.py` を確認し、現在どのような設定が可能か、またエラーハンドリングの余地があるかを分析する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs
+     対象ファイル: src/generate_repo_list/config.yml, src/generate_repo_list/config_manager.py, src/generate_repo_list/generate_repo_list.py
 
-     実行内容: `ProjectSummaryCoordinator.cjs` が `ProjectOverviewGenerator.cjs` を呼び出す際のプロセスとエラーハンドリングの仕組みを分析してください。特に、`ProjectOverviewGenerator.cjs` がデータ収集や生成中に失敗した場合、`ProjectSummaryCoordinator.cjs` がどのようにそれを検知し、適切に処理するか（例: リトライ、エラーログの出力、部分的な結果の保存など）を詳細に調査してください。
+     実行内容: `generate_repo_list`スクリプトが利用する設定ファイルと設定管理ロジックを分析し、以下の観点から改善点を洗い出してください。
+     1) 外部からの入力（環境変数やGitHub Actionsの`with`パラメータなど）に対する設定の柔軟性
+     2) 設定値のバリデーションや不足時のデフォルト値処理のロバスト性
+     3) エラー発生時のログ出力や通知メカニズム
 
-     確認事項: 既存のエラーハンドリングロジック、`BaseGenerator.cjs` など共有されるユーティリティの利用状況、およびワークフロー全体の失敗シナリオを確認してください。
+     確認事項: `src/generate_repo_list/generate_repo_list.py`がこれらの設定をどのように利用しているか、既存のワークフロー（例: `.github/workflows/generate_repo_list.yml`）との連携を確認してください。
 
-     期待する出力: 分析結果をMarkdown形式で出力し、現在のエラーハンドリングの課題点と、潜在的な改善策（例: タイムアウト処理、リソース不足時のフォールバック、詳細なエラーメッセージのログ記録）を提案してください。
+     期待する出力: 設定の柔軟性とロバスト性向上のための具体的な改善提案をmarkdown形式で出力してください。これには、新しい設定オプションの提案や、既存のエラーハンドリング強化案を含めてください。
      ```
 
-2. 大容量ファイルチェックワークフローの最適化 [Issue #71](../issue-notes/71.md)
-   - 最初の小さな一歩: `check_large_files.py` スクリプトのパフォーマンスと、`.github_automation/check_large_files/check-large-files.toml` の設定が最適であるかを分析する。
+2. `development-status-prompt.md` の明確化と精度向上
+   - 最初の小さな一歩: 現在の `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` の内容を読み込み、特に「次の一手候補」と「Agent実行プロンプト」の生成部分について、より具体的で実行可能な指示を生成できるよう、改善の余地があるか検討する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github_automation/check_large_files/scripts/check_large_files.py, .github_automation/check_large_files/check-large-files.toml
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
 
-     実行内容: `check_large_files.py` スクリプトのロジックと、`check-large-files.toml` の設定内容を分析し、特に大規模リポジトリでの実行効率と誤検知の可能性について評価してください。既存のファイルサイズ閾値や除外パスが適切であるか、またパフォーマンス向上のための最適化（例: 並行処理の導入、より効率的なファイル走査方法）の余地があるかを検討してください。
+     実行内容: 上記ファイルを分析し、「次の一手候補」およびその「Agent実行プロンプト」の品質と具体性を向上させるためのプロンプト改訂案を提案してください。特に以下の点を考慮してください：
+     1) 提案される「次の一手候補」が、よりプロジェクトの現状と直結し、解決すべき課題を明確に示すようにするための指示
+     2) 「Agent実行プロンプト」の各必須要素（対象ファイル、実行内容、確認事項、期待する出力）が、より具体的かつアクション可能になるための指示
 
-     確認事項: スクリプトの依存関係、`check-large-files.toml` のデフォルト設定、およびテストスイート (`tests/test_check_large_files.py`) でカバーされているシナリオを確認してください。
+     確認事項: 現在のプロンプトがどのように「Agent実行プロンプト」を生成しているか、および過去の生成結果と比較して、どの部分に改善の余地があるかを評価してください。
 
-     期待する出力: 分析結果をMarkdown形式で出力し、現在の実装の効率性と設定の妥当性について結論を述べ、具体的な改善提案（設定の調整、スクリプトの最適化）を記述してください。
+     期待する出力: `development-status-prompt.md` の改訂版草稿をmarkdown形式で出力してください。変更点については、コメントなどで rationale を付記してください。
      ```
 
-3. README翻訳ワークフローの検証と品質改善 [Issue #72](../issue-notes/72.md)
-   - 最初の小さな一歩: `translate-readme.cjs` スクリプトがどのように翻訳を実行しているかを分析し、使用している翻訳APIやその設定を確認する。
+3. `check_large_files` アクションのカスタマイズ性強化
+   - 最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml.default` と `.github_automation/check_large_files/scripts/check_large_files.py` をレビューし、現在の設定項目と、それらがスクリプトでどのように処理されているかを理解する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/translate/scripts/translate-readme.cjs, .github/workflows/call-translate-readme.yml
+     対象ファイル: .github_automation/check_large_files/check-large-files.toml.default, .github_automation/check_large_files/scripts/check_large_files.py, .github/workflows/call-check-large-files.yml
 
-     実行内容: `translate-readme.cjs` スクリプトがREADMEの翻訳に利用している翻訳サービス（例: Google Translate API, Gemini APIなど）とその設定方法を分析してください。特に、翻訳の品質を向上させるためのパラメータ（例: スタイル、用語集の利用）や、コスト効率を最適化するための設定変更の可能性を調査してください。
+     実行内容: `check_large_files` アクションについて、以下の観点からカスタマイズ性を向上させるための改修案を分析し、提案してください：
+     1) 除外パスの指定方法の柔軟性（ワイルドカード、複数指定など）
+     2) ファイルサイズの閾値設定の動的な調整機能
+     3) レポート出力形式のオプション（例：より詳細なログ、サマリーのみ）
 
-     確認事項: ワークフロー (`call-translate-readme.yml`) でシークレット (`GEMINI_API_KEY` のようなもの) がどのように渡されているか、翻訳対象言語、および既存の翻訳済みファイル (`README.ja.md`) の内容を確認してください。
+     確認事項: 既存の`.github/workflows/call-check-large-files.yml`がどのように`check_large_files.py`を呼び出し、設定を渡しているかを確認してください。既存の機能が損なわれないように注意してください。
 
-     期待する出力: 分析結果をMarkdown形式で出力し、現在の翻訳プロセスの課題点と、翻訳品質や効率性を向上させるための具体的な提案（例: 翻訳APIのプロンプト調整、特定の用語に対する用語集の導入、他の翻訳サービスの検討）を記述してください。
+     期待する出力: `check_large_files.py` と `check-large-files.toml.default` の変更を伴う、カスタマイズ性強化のための具体的なコード変更案と、それを説明するmarkdown形式のドキュメントを出力してください。
      ```
 
 ---
-Generated at: 2026-04-01 07:13:34 JST
+Generated at: 2026-04-02 07:14:27 JST

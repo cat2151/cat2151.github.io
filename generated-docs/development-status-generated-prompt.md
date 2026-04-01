@@ -1,4 +1,4 @@
-Last updated: 2026-04-01
+Last updated: 2026-04-02
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -278,6 +278,8 @@ Last updated: 2026-04-01
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+857a25a Auto-update repository list - 2026-03-31
+a74df75 Update project summaries (overview & development status) [auto]
 b5ee113 Auto-update repository list - 2026-03-30
 39e7da0 Update project summaries (overview & development status) [auto]
 96849df Auto-update repository list - 2026-03-29
@@ -286,8 +288,6 @@ b5ee113 Auto-update repository list - 2026-03-30
 68669d0 fix: harden shared test fixture imports
 b1aed1b docs: align refactored test docstrings
 1a3e1a9 chore: apply formatting after fixture extraction
-22594b1 refactor: extract markdown generator test fixtures
-638ccda Initial plan
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -300,4 +300,4 @@ tests/test_markdown_generator.py
 
 
 ---
-Generated at: 2026-04-01 07:13:17 JST
+Generated at: 2026-04-02 07:14:12 JST
