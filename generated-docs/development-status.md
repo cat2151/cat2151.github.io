@@ -1,59 +1,59 @@
-Last updated: 2026-04-02
+Last updated: 2026-04-03
 
 # Development Status
 
 ## 現在のIssues
-- 現在オープン中のIssueはありません。
-- プロジェクトは安定しており、既存機能の定期的な自動更新が継続されています。
-- 主にリポジトリリストの自動更新やプロジェクトサマリーの自動生成に関する活動が行われています。
+- 現在オープン中の重要なIssueはありません。
+- プロジェクトは自動更新とメンテナンスサイクルを順調に継続しています。
+- 今後の改善点や新機能の計画については、継続的に検討を進めています。
 
 ## 次の一手候補
-1. `generate_repo_list` workflowのロバスト性向上と設定の柔軟化
-   - 最初の小さな一歩: `src/generate_repo_list/config.yml` と `src/generate_repo_list/config_manager.py` を確認し、現在どのような設定が可能か、またエラーハンドリングの余地があるかを分析する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/config.yml, src/generate_repo_list/config_manager.py, src/generate_repo_list/generate_repo_list.py
-
-     実行内容: `generate_repo_list`スクリプトが利用する設定ファイルと設定管理ロジックを分析し、以下の観点から改善点を洗い出してください。
-     1) 外部からの入力（環境変数やGitHub Actionsの`with`パラメータなど）に対する設定の柔軟性
-     2) 設定値のバリデーションや不足時のデフォルト値処理のロバスト性
-     3) エラー発生時のログ出力や通知メカニズム
-
-     確認事項: `src/generate_repo_list/generate_repo_list.py`がこれらの設定をどのように利用しているか、既存のワークフロー（例: `.github/workflows/generate_repo_list.yml`）との連携を確認してください。
-
-     期待する出力: 設定の柔軟性とロバスト性向上のための具体的な改善提案をmarkdown形式で出力してください。これには、新しい設定オプションの提案や、既存のエラーハンドリング強化案を含めてください。
-     ```
-
-2. `development-status-prompt.md` の明確化と精度向上
-   - 最初の小さな一歩: 現在の `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` の内容を読み込み、特に「次の一手候補」と「Agent実行プロンプト」の生成部分について、より具体的で実行可能な指示を生成できるよう、改善の余地があるか検討する。
+1. 自動生成される開発状況レポートの品質向上 [Issue #なし]
+   - 最初の小さな一歩: `development-status-prompt.md` の内容を分析し、オープンIssueがない場合の記述がより具体的で建設的になるように改善案を検討する。
    - Agent実行プロンプト:
      ```
      対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
 
-     実行内容: 上記ファイルを分析し、「次の一手候補」およびその「Agent実行プロンプト」の品質と具体性を向上させるためのプロンプト改訂案を提案してください。特に以下の点を考慮してください：
-     1) 提案される「次の一手候補」が、よりプロジェクトの現状と直結し、解決すべき課題を明確に示すようにするための指示
-     2) 「Agent実行プロンプト」の各必須要素（対象ファイル、実行内容、確認事項、期待する出力）が、より具体的かつアクション可能になるための指示
+     実行内容: 現在の開発状況レポート生成プロンプトの内容を分析し、オープン中のIssueがない場合に、より具体的で建設的な内容が出力されるような改善案を検討してください。特に、「現在のIssues」セクションが空欄の場合の代替記述や、「次の一手候補」の選定ロジックの改善に焦点を当ててください。
 
-     確認事項: 現在のプロンプトがどのように「Agent実行プロンプト」を生成しているか、および過去の生成結果と比較して、どの部分に改善の余地があるかを評価してください。
+     確認事項: 現在の`development-status-prompt.md`の内容と、本プロンプトの生成ガイドライン（特に「生成しないもの」）との整合性を確認してください。ハルシネーションを避けるための制約を考慮に入れてください。
 
-     期待する出力: `development-status-prompt.md` の改訂版草稿をmarkdown形式で出力してください。変更点については、コメントなどで rationale を付記してください。
+     期待する出力: 改善提案をMarkdown形式で出力してください。提案には、具体的なプロンプトの変更点と、それによって期待される出力の変化の例を含めてください。
      ```
 
-3. `check_large_files` アクションのカスタマイズ性強化
-   - 最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml.default` と `.github_automation/check_large_files/scripts/check_large_files.py` をレビューし、現在の設定項目と、それらがスクリプトでどのように処理されているかを理解する。
+2. GitHub Actionsワークフローの整理と最適化 [Issue #なし]
+   - 最初の小さな一歩: `.github/actions-tmp/.github/workflows/` ディレクトリ内の全`.yml`ファイルをリストアップし、それぞれの目的と`call-`プレフィックスを持つワークフローが何を呼び出しているかをマッピングする。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github_automation/check_large_files/check-large-files.toml.default, .github_automation/check_large_files/scripts/check_large_files.py, .github/workflows/call-check-large-files.yml
+     対象ファイル: .github/actions-tmp/.github/workflows/*.yml (ディレクトリ内の全.ymlファイル)
 
-     実行内容: `check_large_files` アクションについて、以下の観点からカスタマイズ性を向上させるための改修案を分析し、提案してください：
-     1) 除外パスの指定方法の柔軟性（ワイルドカード、複数指定など）
-     2) ファイルサイズの閾値設定の動的な調整機能
-     3) レポート出力形式のオプション（例：より詳細なログ、サマリーのみ）
+     実行内容: 対象ディレクトリ内のすべてのGitHub Actionsワークフローファイルについて、以下の観点から分析してください：
+     1. 各ワークフローの主な目的。
+     2. `call-`プレフィックスを持つワークフローが、どのワークフローを呼び出しているか、またはどのGitHub Actionを利用しているか。
+     3. 全体的なワークフローの依存関係と実行フロー。
 
-     確認事項: 既存の`.github/workflows/call-check-large-files.yml`がどのように`check_large_files.py`を呼び出し、設定を渡しているかを確認してください。既存の機能が損なわれないように注意してください。
+     確認事項: ワークフロー間の依存関係を正確に把握し、既存の機能に影響を与えないように注意してください。特に、`on: workflow_call` の使用状況に注目してください。
 
-     期待する出力: `check_large_files.py` と `check-large-files.toml.default` の変更を伴う、カスタマイズ性強化のための具体的なコード変更案と、それを説明するmarkdown形式のドキュメントを出力してください。
+     期待する出力: 分析結果をMarkdown形式で出力してください。各ワークフローの目的と呼び出し関係を図やリスト形式で分かりやすく整理し、将来的な整理・最適化の方向性を示唆する簡単なコメントを含めてください。
+     ```
+
+3. リポジトリリスト生成スクリプトのテストカバレッジ向上 [Issue #なし]
+   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の主要なモジュール（例: `repository_processor.py`, `markdown_generator.py`）について、現在のテストファイル（`tests/` ディレクトリ内）との対応関係を確認し、テストが不足していると思われる部分を特定する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル:
+     - src/generate_repo_list/repository_processor.py
+     - src/generate_repo_list/markdown_generator.py
+     - tests/test_repository_processor.py
+     - tests/test_markdown_generator.py
+     - tests/conftest.py
+
+     実行内容: `src/generate_repo_list/`内の主要なPythonモジュール（`repository_processor.py`, `markdown_generator.py`など）について、現在のテストカバレッジの状況を分析してください。具体的には、既存のテストファイル（`tests/`ディレクトリ内）がこれらのモジュールのどの部分（関数、メソッド、エッジケース）をカバーしているか評価し、テストが不足している領域を特定してください。
+
+     確認事項: テストファイルの依存関係やモックの利用状況を理解し、実際にテストが不足している箇所を明確にしてください。単にテストがないだけでなく、重要性の高い機能に対するテスト不足に焦点を当ててください。
+
+     期待する出力: Markdown形式で分析結果を出力してください。各モジュールについて、テストカバレッジの現状と、特に拡充すべきテストケースの具体的な提案（例: 特定の関数の異常系テスト、特定の入力パターンに対するテストなど）を含めてください。
      ```
 
 ---
-Generated at: 2026-04-02 07:14:27 JST
+Generated at: 2026-04-03 07:13:28 JST
