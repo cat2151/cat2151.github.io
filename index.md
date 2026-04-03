@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-04-02 (UTC) / 2026-04-03 (JST)
+Last Updated: 2026-04-03 (UTC) / 2026-04-04 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub PagesサイトのSEOを向上させるため、リポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、Jekyll対応のMarkdownファイルを生成します。
-- 各リポジトリの概要表示や分類、JSON-LDによるSEO最適化機能を提供します。
-- 📅 2026-04-02 (UTC) / 2026-04-03 (JST)
+- GitHub APIを利用してリポジトリ情報を取得し、JekyllベースのGitHub Pagesサイト用のコンテンツを自動生成するシステムです。
+- 生成されたリポジトリ一覧や各リポジトリへのリンクをGitHub Pagesで公開し、検索エンジン最適化（SEO）を促進します。
+- これにより、リポジトリの可視性を高め、検索エンジンやLLMからの参照を容易にすることを目的としています。
+- 📅 2026-04-03 (UTC) / 2026-04-04 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -105,7 +105,16 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
-- 📅 2026-04-02 (UTC) / 2026-04-02 (JST)
+- 📅 2026-04-03 (UTC) / 2026-04-03 (JST)
+
+## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
+WIP
+
+<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
+
+- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
+- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
+- 📅 2026-04-03 (UTC) / 2026-04-03 (JST)
 
 ## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
 
@@ -114,7 +123,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
 - **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
 - **Overview**: No description available
-- 📅 2026-04-02 (UTC) / 2026-04-02 (JST)
+- 📅 2026-04-03 (UTC) / 2026-04-03 (JST)
 
 ## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
 
@@ -123,7 +132,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
 - **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
 - **Overview**: No description available
-- 📅 2026-04-02 (UTC) / 2026-04-02 (JST)
+- 📅 2026-04-03 (UTC) / 2026-04-03 (JST)
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
@@ -137,7 +146,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - Standard MIDI Files (SMF) をYM2151 FM音源チップ向けのレジスタ書き込みログ（JSON形式）へ変換するツールです。
 - Rust言語で開発されており、ネイティブアプリケーションおよびWebAssemblyによるブラウザ環境で利用可能です。
 - 和音数ベースのチャンネル割り当てやプログラムチェンジによる音色変更に対応し、高精度な音源再現を目指します。
-- 📅 2026-04-02 (UTC) / 2026-04-02 (JST)
+- 📅 2026-04-02 (UTC) / 2026-04-03 (JST)
 
 ## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
 
@@ -188,15 +197,6 @@ File Change Monitoring Tool - Detects file changes and executes commands
 - TOML形式の設定ファイルにより、複数のファイルやディレクトリの監視、カスタムコマンドの実行、監視間隔の調整が可能です。
 - 軽量かつ柔軟な設定で、開発や自動化タスクにおいてファイル更新トリガーの処理を効率化します。
 - 📅 2026-03-29 (UTC) / 2026-03-30 (JST)
-
-## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
-WIP
-
-<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
-
-- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
-- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
-- 📅 2026-03-28 (UTC) / 2026-03-29 (JST)
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
 A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
