@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 104 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python."
+og_description: "Featuring 105 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 104 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python."
+twitter_description: "Featuring 105 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 104 open source projects.",
+      "description": "Programmer and developer. Publishing 105 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 104 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python.",
+    "description": "Featuring 105 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-04-03 (UTC) / 2026-04-04 (JST)
+Last Updated: 2026-04-04 (UTC) / 2026-04-05 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2026-04-03 (UTC) / 2026-04-04 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-104-blue) ![Active](https://img.shields.io/badge/Active-76-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-56-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-105-blue) ![Active](https://img.shields.io/badge/Active-77-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-56-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-26_(25.0%25)-f1e05a?style=flat&logo=javascript) ![Rust](https://img.shields.io/badge/Rust-21_(20.2%25)-dea584?style=flat&logo=rust) ![Python](https://img.shields.io/badge/Python-14_(13.5%25)-3572A5?style=flat&logo=python) ![TypeScript](https://img.shields.io/badge/TypeScript-12_(11.5%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(5.8%25)-e34c26?style=flat&logo=html5)
+![JavaScript](https://img.shields.io/badge/JavaScript-26_(24.8%25)-f1e05a?style=flat&logo=javascript) ![Rust](https://img.shields.io/badge/Rust-21_(20.0%25)-dea584?style=flat&logo=rust) ![Python](https://img.shields.io/badge/Python-14_(13.3%25)-3572A5?style=flat&logo=python) ![TypeScript](https://img.shields.io/badge/TypeScript-13_(12.4%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(5.7%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -93,19 +93,28 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用してリポジトリ情報を取得し、JekyllベースのGitHub Pagesサイト用のコンテンツを自動生成するシステムです。
-- 生成されたリポジトリ一覧や各リポジトリへのリンクをGitHub Pagesで公開し、検索エンジン最適化（SEO）を促進します。
-- これにより、リポジトリの可視性を高め、検索エンジンやLLMからの参照を容易にすることを目的としています。
-- 📅 2026-04-03 (UTC) / 2026-04-04 (JST)
+- GitHub APIを利用し、リポジトリ情報を自動で取得・整形するシステムです。
+- ユーザーのGitHub Pagesサイト向けに、検索エンジン最適化(SEO)されたMarkdown形式のリポジトリ一覧ページを自動生成します。
+- 各リポジトリの概要、バッジ、分類などを表示し、LLMによる参照性の向上と訪問者への情報提供を目的としています。
+- 📅 2026-04-04 (UTC) / 2026-04-05 (JST)
 
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+## [norenwake](https://cat2151.github.io/norenwake/)
+A TUI for Windows to create new repositories by 'norenwake' (branching off) your own public GitHub repositories. Written in Rust.
 
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+<a href="https://cat2151.github.io/norenwake/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clone](https://img.shields.io/badge/Topic-clone-lightblue) ![Topic: fork](https://img.shields.io/badge/Topic-fork-lightblue) ![Topic: github](https://img.shields.io/badge/Topic-github-lightblue) ![Topic: repository](https://img.shields.io/badge/Topic-repository-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
 
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Repository**: [https://github.com/cat2151/norenwake](https://github.com/cat2151/norenwake)
+- **GitHub Pages**: [https://cat2151.github.io/norenwake/](https://cat2151.github.io/norenwake/)
+- 📅 2026-04-04 (UTC) / 2026-04-05 (JST)
+
+## [own-repos-curator-data](https://cat2151.github.io/own-repos-curator-data/)
+
+<a href="https://cat2151.github.io/own-repos-curator-data/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/own-repos-curator-data](https://github.com/cat2151/own-repos-curator-data)
+- **GitHub Pages**: [https://cat2151.github.io/own-repos-curator-data/](https://cat2151.github.io/own-repos-curator-data/)
 - **Overview**: No description available
-- 📅 2026-04-03 (UTC) / 2026-04-03 (JST)
+- 📅 2026-04-04 (UTC) / 2026-04-05 (JST)
 
 ## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
 WIP
@@ -114,7 +123,34 @@ WIP
 
 - **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
 - **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
-- 📅 2026-04-03 (UTC) / 2026-04-03 (JST)
+- 📅 2026-04-04 (UTC) / 2026-04-04 (JST)
+
+## [cat-gh-repo-creator](https://cat2151.github.io/cat-gh-repo-creator/)
+
+<a href="https://cat2151.github.io/cat-gh-repo-creator/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-gh-repo-creator](https://github.com/cat2151/cat-gh-repo-creator)
+- **GitHub Pages**: [https://cat2151.github.io/cat-gh-repo-creator/](https://cat2151.github.io/cat-gh-repo-creator/)
+- **Overview**: No description available
+- 📅 2026-04-04 (UTC) / 2026-04-04 (JST)
+
+## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
+
+<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
+- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
+- **Overview**: No description available
+- 📅 2026-04-04 (UTC) / 2026-04-04 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Overview**: No description available
+- 📅 2026-04-04 (UTC) / 2026-04-04 (JST)
 
 ## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
 
@@ -154,15 +190,6 @@ WIP
 
 - **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
 - **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
-- **Overview**: No description available
-- 📅 2026-04-02 (UTC) / 2026-04-02 (JST)
-
-## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
-
-<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
-- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
 - **Overview**: No description available
 - 📅 2026-04-02 (UTC) / 2026-04-02 (JST)
 
@@ -275,24 +302,6 @@ MML(Music Macro Language)用のTUI(テキストユーザーインターフェー
 - **GitHub Pages**: [https://cat2151.github.io/claude-chat-code/](https://cat2151.github.io/claude-chat-code/)
 - **Overview**: No description available
 - 📅 2026-03-26 (UTC) / 2026-03-27 (JST)
-
-## [cat-gh-repo-creator](https://cat2151.github.io/cat-gh-repo-creator/)
-
-<a href="https://cat2151.github.io/cat-gh-repo-creator/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-gh-repo-creator](https://github.com/cat2151/cat-gh-repo-creator)
-- **GitHub Pages**: [https://cat2151.github.io/cat-gh-repo-creator/](https://cat2151.github.io/cat-gh-repo-creator/)
-- **Overview**: No description available
-- 📅 2026-03-24 (UTC) / 2026-03-25 (JST)
-
-## [norenwake](https://cat2151.github.io/norenwake/)
-A TUI for Windows to create new repositories by 'norenwake' (branching off) your own public GitHub repositories. Written in Rust.
-
-<a href="https://cat2151.github.io/norenwake/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clone](https://img.shields.io/badge/Topic-clone-lightblue) ![Topic: fork](https://img.shields.io/badge/Topic-fork-lightblue) ![Topic: github](https://img.shields.io/badge/Topic-github-lightblue) ![Topic: repository](https://img.shields.io/badge/Topic-repository-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue)
-
-- **Repository**: [https://github.com/cat2151/norenwake](https://github.com/cat2151/norenwake)
-- **GitHub Pages**: [https://cat2151.github.io/norenwake/](https://cat2151.github.io/norenwake/)
-- 📅 2026-03-23 (UTC) / 2026-03-23 (JST)
 
 ## [ym2151-tone-editor](https://cat2151.github.io/ym2151-tone-editor/)
 YM2151 (OPM) FM synthesizer tone editor for Windows. TUI. Written in Rust
