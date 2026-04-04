@@ -1,50 +1,48 @@
-Last updated: 2026-04-04
+Last updated: 2026-04-05
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。
+- オープン中のIssueはありません。
 
 ## 次の一手候補
-現在オープンされているIssueが存在しないため、「issue番号を必ず書く」および「[Issue #番号](../issue-notes/番号.md) の形式でMarkdownリンクとして記載」という指示に沿った具体的な次の一手候補を提示することはできません。しかし、プロジェクトの継続的な健全性のために、将来的に検討すべき領域を一般的な観点から3つ提示します。これらは、必要に応じて新規Issueとして起票されることが期待されます。
-
-1. プロジェクト自動化ワークフローのパフォーマンス最適化
-   - 最初の小さな一歩: 現在実行されているGitHub Actionsワークフロー（例: `generate_repo_list.yml`, `call-daily-project-summary.yml`など）の実行時間とリソース消費に関する統計データを収集し、最適化の可能性を評価する。
+1. [Issue #22](../issue-notes/22.md) 開発状況生成プロンプトにおけるIssue番号扱いの改善検討
+   - 最初の小さな一歩: `development-status-prompt.md` 内の「issue番号を必ず書く」という制約と「[Issue #番号](../issue-notes/番号.md)」の形式について、オープンIssueがない場合の代替案（例: 新規Issueとして提案する場合の記述方法、既存のクローズ済みIssue参照の是非）を具体的に複数案検討し、それぞれの利点と欠点を整理する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `.github/workflows/generate_repo_list.yml`, `.github/workflows/call-daily-project-summary.yml`, `.github/workflows/call-check-large-files.yml`
+     対象ファイル: `development-status-prompt.md`
 
-     実行内容: プロジェクト内の自動化されたGitHub Actionsワークフロー（`generate_repo_list.yml`, `call-daily-project-summary.yml`, `call-check-large-files.yml`）の定義ファイルを分析し、各ステップの実行効率と全体的な実行時間を改善するための潜在的な最適化ポイントを特定してください。例えば、キャッシュの活用、並列化、不要なステップの削除などを検討してください。
+     実行内容: `development-status-prompt.md`内の「issue番号を必ず書く」という指示と「[Issue #番号](../issue-notes/番号.md)」の出力形式について、現在オープンIssueがない状況で「次の一手候補」を生成する際の具体的な代替案（例: 新規Issueとして提案する場合の記述方法、既存のクローズ済みIssue参照の是非）を3案以上検討し、それぞれの案のメリット・デメリットを比較分析してください。特に、ハルシネーション防止の観点と、開発者への有用性提供の観点を重視してください。
 
-     確認事項: 既存のワークフローの目的と機能が損なわれないこと、および変更が他の依存関係に悪影響を与えないことを確認してください。
+     確認事項: プロンプトの生成しないものリスト（「userに提案するもの」「ハルシネーションしそうなもの」）との整合性を確認してください。
 
-     期待する出力: 各ワークフローの最適化案をmarkdown形式でリストアップしてください。提案には、現在の課題、具体的な改善案、および期待される効果を含めてください。
+     期待する出力: 検討した代替案のリストと、それぞれのメリット・デメリット、推奨案をmarkdown形式で出力してください。
      ```
 
-2. 生成ドキュメントの正確性と網羅性の向上
-   - 最初の小さな一歩: `generated-docs/project-overview.md` と `generated-docs/development-status.md` が提供する情報が、プロジェクトの現状を正確に反映しており、かつ開発者やコントリビューターにとって十分な情報を提供しているかを確認する。
+2. [Issue #22](../issue-notes/22.md) 開発状況生成プロンプトにおけるハルシネーション防止と「次の一手」提示バランスの改善
+   - 最初の小さな一歩: `development-status-prompt.md` における「ハルシネーションしそうなものは生成しない」という制約と「次の一手候補を3つlistする」という生成目的の間の最適なバランス点を探るため、具体的なシナリオ（例: オープンIssueがない場合、一般的な保守タスクを提案する際の基準）を複数考案する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `generated-docs/project-overview.md`, `generated-docs/development-status.md`, `.github/actions-tmp/.github_automation/project_summary/scripts/generate-project-summary.cjs`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`
+     対象ファイル: `development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`
 
-     実行内容: 現在生成されているプロジェクト概要と開発状況ドキュメント（`project-overview.md`, `development-status.md`）の内容を、提供されているプロンプトと生成スクリプトの観点から評価してください。情報が古い、不足している、または誤解を招く可能性のある箇所がないかを特定し、改善の機会を洗い出してください。
+     実行内容: `development-status-prompt.md` の「ハルシネーション防止」と「次の一手提示」のバランス改善のため、オープンIssueがない場合にどのような種類のタスクであれば「ハルシネーションではない客観的な提案」として許容されるか、具体的なタスク例（例: コア機能のコード品質レビュー、主要ワークフローのパフォーマンス最適化）を挙げ、その判断基準をmarkdown形式で記述してください。
 
-     確認事項: プロンプトとスクリプトが生成されるドキュメントの品質にどのように影響しているかを分析し、変更の必要性を評価してください。
+     確認事項: 「無価値なtaskや新issueを勝手に妄想してそれをuserに提案する等」の禁止事項と「今日のissue目標」などuserに提案するものの禁止事項を再度確認し、提案がこれらに抵触しないことを保証してください。
 
-     期待する出力: ドキュメントの正確性、網羅性、および有用性を向上させるための具体的な提案をmarkdown形式で出力してください。それぞれの提案には、現在の課題、提案される変更内容、および期待されるメリットを含めてください。
+     期待する出力: オープンIssueがない状況で許容される「次の一手候補」の判断基準と具体的なタスク例をmarkdown形式で出力してください。
      ```
 
-3. プロジェクトの依存関係とセキュリティのレビュー
-   - 最初の小さな一歩: プロジェクトの主要な依存関係（例: `package.json`, `requirements.txt`など）のリストを作成し、それぞれのライブラリについて最新バージョンと現在のバージョンの差分を確認する。
+3. [Issue #22](../issue-notes/22.md) 開発状況生成プロンプトにおけるオープンIssueがない場合の挙動明確化
+   - 最初の小さな一歩: Issue #22 の「オープンIssueが存在しない場合、プロンプトが何を生成すべきか、または何も生成しないべきかについての明確なガイドラインがない」という課題に対し、このシナリオにおける `## 現在のIssues` および `## 次の一手候補` セクションの具体的な出力内容と、その背景にあるロジックを文書化する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `.github/actions-tmp/package.json`, `requirements.txt`, `requirements-dev.txt`
+     対象ファイル: `development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`
 
-     実行内容: プロジェクトで使用されている依存関係ライブラリを洗い出し、それぞれのライブラリについて、既知の脆弱性情報や最新の安定バージョンへの更新の必要性を調査してください。特に、依存関係の更新がプロジェクトに与える潜在的な影響（互換性の問題、パフォーマンス向上など）を評価してください。
+     実行内容: 開発状況生成プロンプトにおいて、オープンIssueが全く存在しない場合の `## 現在のIssues` セクションと `## 次の一手候補` セクションの生成ルールを具体的に定義してください。これには、各セクションに何を表示するか（例: 「オープン中のIssueはありません。」、または空にする）、そして「次の一手候補」を生成しない場合のロジックや、生成する場合のタスク選定基準（Issue #22で検討されている内容を含む）を含めてmarkdown形式で記述してください。
 
-     確認事項: 依存関係の更新が他の機能に影響を与えないか、およびテストカバレッジが十分であることを確認してください。
+     確認事項: プロンプトの「生成するもの」「生成しないもの」の全ての制約と出力フォーマットを遵守できるようなルールであるかを確認してください。
 
-     期待する出力: 依存関係の健全性に関するレポートをmarkdown形式で出力してください。このレポートには、更新が推奨されるライブラリのリスト、それぞれのライブラリの現在のバージョンと推奨バージョン、および簡単な説明を含めてください。また、依存関係の定期的なレビューと更新を自動化するための提案（例: Dependabotの導入）もあれば記述してください。
+     期待する出力: オープンIssueがない場合の具体的な生成ルールとロジックを、開発状況生成プロンプトのガイドラインに追記できる形式のmarkdownで出力してください。
 
 ---
-Generated at: 2026-04-04 07:11:25 JST
+Generated at: 2026-04-05 07:09:17 JST
