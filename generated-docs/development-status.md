@@ -1,48 +1,55 @@
-Last updated: 2026-04-05
+Last updated: 2026-04-06
 
 # Development Status
 
 ## 現在のIssues
-- オープン中のIssueはありません。
+- 現在、オープン中のIssueはありません。
+- プロジェクトは主にリポジトリリストの自動更新と日次プロジェクトサマリーの生成を行っています。
+- これにより、プロジェクトの最新状況が常に自動で反映・可視化されています。
 
 ## 次の一手候補
-1. [Issue #22](../issue-notes/22.md) 開発状況生成プロンプトにおけるIssue番号扱いの改善検討
-   - 最初の小さな一歩: `development-status-prompt.md` 内の「issue番号を必ず書く」という制約と「[Issue #番号](../issue-notes/番号.md)」の形式について、オープンIssueがない場合の代替案（例: 新規Issueとして提案する場合の記述方法、既存のクローズ済みIssue参照の是非）を具体的に複数案検討し、それぞれの利点と欠点を整理する。
+1. プロジェクトサマリー生成プロンプトの精緻化
+   - 最初の小さな一歩: `development-status-prompt.md` と `project-overview-prompt.md` を読み込み、現状の出力との乖離や改善点を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `development-status-prompt.md`
+     対象ファイル: 
+     - .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+     - .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
+     - .github/actions-tmp/generated-docs/development-status.md
+     - .github/actions-tmp/generated-docs/project-overview.md
 
-     実行内容: `development-status-prompt.md`内の「issue番号を必ず書く」という指示と「[Issue #番号](../issue-notes/番号.md)」の出力形式について、現在オープンIssueがない状況で「次の一手候補」を生成する際の具体的な代替案（例: 新規Issueとして提案する場合の記述方法、既存のクローズ済みIssue参照の是非）を3案以上検討し、それぞれの案のメリット・デメリットを比較分析してください。特に、ハルシネーション防止の観点と、開発者への有用性提供の観点を重視してください。
+     実行内容: 上記のプロンプトファイルと生成されたドキュメントを比較分析し、より明確で網羅性の高いサマリーを生成するためのプロンプト改善点をMarkdown形式で提案してください。特に、「現在のIssues」セクションが空の場合の振る舞いや、「次の一手候補」の提案ロジックに焦点を当ててください。
 
-     確認事項: プロンプトの生成しないものリスト（「userに提案するもの」「ハルシネーションしそうなもの」）との整合性を確認してください。
+     確認事項: プロンプトの変更が既存の要約ロジックに予期せぬ影響を与えないか、またハルシネーションを誘発しないかを確認してください。
 
-     期待する出力: 検討した代替案のリストと、それぞれのメリット・デメリット、推奨案をmarkdown形式で出力してください。
+     期待する出力: `development-status-prompt.md` と `project-overview-prompt.md` の具体的な修正案と、その改善理由をMarkdown形式で出力してください。
      ```
 
-2. [Issue #22](../issue-notes/22.md) 開発状況生成プロンプトにおけるハルシネーション防止と「次の一手」提示バランスの改善
-   - 最初の小さな一歩: `development-status-prompt.md` における「ハルシネーションしそうなものは生成しない」という制約と「次の一手候補を3つlistする」という生成目的の間の最適なバランス点を探るため、具体的なシナリオ（例: オープンIssueがない場合、一般的な保守タスクを提案する際の基準）を複数考案する。
+2. GitHub Actionsワークフローのレビューと最適化
+   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml` を選択し、その内容を読み込み、冗長なステップや潜在的な改善点がないかを確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`
+     対象ファイル: .github/workflows/call-daily-project-summary.yml
 
-     実行内容: `development-status-prompt.md` の「ハルシネーション防止」と「次の一手提示」のバランス改善のため、オープンIssueがない場合にどのような種類のタスクであれば「ハルシネーションではない客観的な提案」として許容されるか、具体的なタスク例（例: コア機能のコード品質レビュー、主要ワークフローのパフォーマンス最適化）を挙げ、その判断基準をmarkdown形式で記述してください。
+     実行内容: 対象ファイルを分析し、GitHub Actionsのベストプラクティスに基づいた効率性、保守性、可読性の観点から最適化案をMarkdown形式で提案してください。特に、依存関係の明示、キャッシュの利用、環境変数の管理に焦点を当ててください。
 
-     確認事項: 「無価値なtaskや新issueを勝手に妄想してそれをuserに提案する等」の禁止事項と「今日のissue目標」などuserに提案するものの禁止事項を再度確認し、提案がこれらに抵触しないことを保証してください。
+     確認事項: 提案された変更がワークフローの既存の機能や他のワークフローとの連携を破壊しないことを確認してください。また、実行時間の増加やコスト増大につながらないことを確認してください。
 
-     期待する出力: オープンIssueがない状況で許容される「次の一手候補」の判断基準と具体的なタスク例をmarkdown形式で出力してください。
+     期待する出力: `call-daily-project-summary.yml` の具体的な修正案（例: `- uses:` ステップの集約、`if:` 条件の改善、コメントの追加など）と、その最適化の根拠をMarkdown形式で出力してください。
      ```
 
-3. [Issue #22](../issue-notes/22.md) 開発状況生成プロンプトにおけるオープンIssueがない場合の挙動明確化
-   - 最初の小さな一歩: Issue #22 の「オープンIssueが存在しない場合、プロンプトが何を生成すべきか、または何も生成しないべきかについての明確なガイドラインがない」という課題に対し、このシナリオにおける `## 現在のIssues` および `## 次の一手候補` セクションの具体的な出力内容と、その背景にあるロジックを文書化する。
+3. `generate_repo_list`における堅牢なエラーハンドリングの導入
+   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py` を読み込み、外部API呼び出しやファイルシステム操作が発生しうる箇所を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`
+     対象ファイル: src/generate_repo_list/repository_processor.py
 
-     実行内容: 開発状況生成プロンプトにおいて、オープンIssueが全く存在しない場合の `## 現在のIssues` セクションと `## 次の一手候補` セクションの生成ルールを具体的に定義してください。これには、各セクションに何を表示するか（例: 「オープン中のIssueはありません。」、または空にする）、そして「次の一手候補」を生成しない場合のロジックや、生成する場合のタスク選定基準（Issue #22で検討されている内容を含む）を含めてmarkdown形式で記述してください。
+     実行内容: 対象ファイルを分析し、外部サービスへのAPI呼び出しやファイル操作に関連する箇所に、より堅牢なエラーハンドリング（例: `try-except` ブロック、リトライロジック、適切なログ出力）を導入するための具体的なコード改善案をMarkdown形式で提案してください。
 
-     確認事項: プロンプトの「生成するもの」「生成しないもの」の全ての制約と出力フォーマットを遵守できるようなルールであるかを確認してください。
+     確認事項: 提案されたエラーハンドリングが、アプリケーションの全体的なロジックに影響を与えず、エラー発生時に適切な回復処理または報告が行われることを確認してください。また、過度なエラーハンドリングによるコードの複雑化を避けてください。
 
-     期待する出力: オープンIssueがない場合の具体的な生成ルールとロジックを、開発状況生成プロンプトのガイドラインに追記できる形式のmarkdownで出力してください。
+     期待する出力: `repository_processor.py` 内の特定の関数またはメソッドに対する具体的なコード修正案と、そのエラーハンドリング改善がもたらすメリットをMarkdown形式で出力してください。
+     ```
 
 ---
-Generated at: 2026-04-05 07:09:17 JST
+Generated at: 2026-04-06 07:09:18 JST
