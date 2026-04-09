@@ -1,57 +1,51 @@
-Last updated: 2026-04-08
+Last updated: 2026-04-10
 
 # Development Status
 
 ## 現在のIssues
-- 現在、オープンされている課題（issue）は検出されませんでした。
-- これはプロジェクトが安定した状態にあることを示しています。
-- 今後の開発では、既存機能の品質向上や機能拡張に注力することが可能です。
+- 現在、オープン中の具体的なIssueはありません。
+- プロジェクトは安定した状態にあり、追跡すべき既存のバグや未完了のタスクは見当たりません。
+- 今後は、既存機能の改善、コード品質の向上、または新しい機能の検討に注力することが可能です。
 
 ## 次の一手候補
-1. GitHub Actionsワークフローのクリーンアップと最適化 [Issue #未登録](#)
-   - 最初の小さな一歩: `.github/workflows` と `.github/actions-tmp/.github/workflows` ディレクトリのファイルリストを比較し、重複や命名規則の不整合、非アクティブなワークフローがないか確認する。
-   - Agent実行プロンプ:
+1. [Issue #NEW] プロジェクト概要自動生成ワークフローのエラーハンドリング強化
+   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml` ファイルの内容を分析し、現在存在するエラー処理のメカニズムと、追加可能なエラーハンドリング（例: リトライ処理、通知メカニズム）について調査する。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: .github/workflows/, .github/actions-tmp/.github/workflows/
+     対象ファイル: .github/workflows/call-daily-project-summary.yml および .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs
 
-     実行内容: 対象ディレクトリ内のGitHub Actionsワークフローファイルを分析し、以下の観点から改善提案をMarkdown形式で出力してください：
-     1) 重複するワークフローや冗長なステップの洗い出し
-     2) 命名規則の不整合や一貫性の欠如
-     3) 現在利用されていない可能性のあるワークフロー
-     4) ワークフローの効率化（例: キャッシュの利用、依存関係の最適化）
+     実行内容: `call-daily-project-summary.yml` ワークフローと、それが呼び出す `ProjectSummaryCoordinator.cjs` スクリプトにおける既存のエラーハンドリングメカニズムを分析してください。特に、ネットワークエラー、APIレート制限、スクリプト実行時エラーが発生した場合の現在の挙動と、より堅牢にするための改善点を洗い出してください。
 
-     確認事項: 提案される変更が、既存のCI/CDパイプラインの機能や安定性を損なわないことを確認してください。特に、`actions-tmp`ディレクトリのワークフローが一時的なものか、本番環境で利用されているものかを考慮し、適切な管理方針を提案してください。
+     確認事項: 既存のワークフロー設定、利用されているアクション、およびスクリプト内の例外処理ロジックとの整合性を確認してください。潜在的なエラーシナリオとそれに対する既存の対応策を特定します。
 
-     期待する出力: ワークフローの整理・最適化に関する詳細な提案レポートをMarkdown形式で生成してください。各提案には、対象ファイル、具体的な改善点、期待される効果を含めてください。
+     期待する出力: 既存のエラーハンドリングの現状と、提案される改善点（例: `try/catch`ブロックの追加、特定の終了コードでの失敗検出、通知設定）をmarkdown形式でリストアップしてください。
      ```
 
-2. `generate_repo_list`モジュールのテストカバレッジ向上 [Issue #未登録](#)
-   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` およびその依存モジュール（例: `repository_processor.py`、`markdown_generator.py`）の現在のテストカバレッジを測定し、カバレッジが低い箇所を特定する。
-   - Agent実行プロンプ:
+2. [Issue #NEW] `generate_repo_list.py` および関連スクリプトのコードレビューとリファクタリング
+   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` を中心に、関連する`src/generate_repo_list/` ディレクトリ内の主要なPythonスクリプトを特定し、PythonのPEP8スタイルガイドに準拠しているか、一般的なコード品質の観点から簡易的なレビューを行う。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, src/generate_repo_list/markdown_generator.py, tests/
+     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, src/generate_repo_list/markdown_generator.py
 
-     実行内容: 上記`src`配下のファイルについて、既存のテスト（`tests/`配下）を分析し、テストカバレッジが低い関数やロジック、エッジケースを特定してください。その後、それらのカバレッジを向上させるための具体的なテストケース（pytest形式）の追加提案をMarkdown形式で出力してください。
+     実行内容: 指定されたPythonスクリプトについて、可読性、保守性、エラー処理、および重複コードの観点からコードレビューを実施し、改善が必要な箇所を特定してください。特に、マジックナンバーの排除、適切なコメントの有無、関数の凝集度と結合度を評価してください。
 
-     確認事項: 既存のテストスイートとの整合性を保ちつつ、テストの独立性と再現性を確保してください。モックやスタブが必要な場合は、その利用方法についても言及してください。
+     確認事項: スクリプト間の依存関係、設定ファイル (`src/generate_repo_list/config.yml` 等) との連携、および既存のテストファイル (`tests/test_integration.py` 等) との関連性を確認してください。
 
-     期待する出力: `src/generate_repo_list`モジュールのテストカバレッジレポートと、それを向上させるための新しいテストケースの具体的なコードスニペット（pytest形式）を含むMarkdown文書を生成してください。
+     期待する出力: 各ファイルで特定された改善点をmarkdown形式でリストアップし、それぞれの改善がコード品質にどのように貢献するかを説明してください。可能であれば、具体的なリファクタリング案も示してください。
      ```
 
-3. `development-status-prompt.md`の指示の明確化と拡張 [Issue #未登録](#)
-   - 最初の小さな一歩: 現在の`development-status-prompt.md`の内容を詳細にレビューし、開発者が誤解なく実行できるか、また必要な情報がすべて含まれているかを確認する。
-   - Agent実行プロンプ:
+3. [Issue #NEW] 主要機能に対するテストカバレッジの評価と向上
+   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の主要なPythonモジュールと、`tests/` ディレクトリ内の関連テストファイルとのマッピングを明らかにする。特に、`generate_repo_list.py` や `repository_processor.py` など、中心的なロジックを担うモジュールがどの程度テストされているかを把握する。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+     対象ファイル: src/generate_repo_list/*.py (全てのPythonファイル), tests/*.py (全てのテストファイル)
 
-     実行内容: `development-status-prompt.md`の内容を分析し、以下の観点からプロンプト自体の改善提案をMarkdown形式で出力してください：
-     1) 指示の曖昧な点や解釈の余地がある箇所の特定
-     2) 開発状況の要約、次の一手候補、Agent実行プロンプトの生成において、より高品質な出力を導くための追加指示や具体例
-     3) ハルシネーションをさらに防ぐための制約条件の追加
+     実行内容: `src/generate_repo_list/` 配下の主要なPythonモジュール（例: `generate_repo_list.py`, `repository_processor.py`, `markdown_generator.py`）について、`tests/` ディレクトリ内の既存のテストファイルがどの程度機能をカバーしているかを評価してください。特に、各モジュールの主要な関数やクラスに対する単体テスト、およびシステム全体の統合テストの有無を確認してください。
 
-     確認事項: 提案される変更が、既存の生成ロジックと矛盾しないこと、およびプロンプトの目的（開発者向けの開発状況生成）に合致していることを確認してください。過剰な指示による冗長化を避け、簡潔性を保つことも重要です。
+     確認事項: テスト環境の設定ファイル (`pytest.ini`, `requirements-dev.txt`)、およびプロジェクト全体のテスト戦略（もしあれば）を確認してください。ハルシネーションを避けるため、既存のテストファイルの内容に基づいた分析に限定してください。
 
-     期待する出力: `development-status-prompt.md`の改善提案をMarkdown形式で生成してください。提案は、具体的な修正案とその理由、および期待される効果を含んでください。
+     期待する出力: 各主要モジュールに対する現在のテストカバレッジの現状をmarkdown形式で要約し、テストが不足していると思われる領域（例: エラーパス、特定のエッジケース、未テストの関数）を具体的にリストアップしてください。
+     ```
 
 ---
-Generated at: 2026-04-08 07:15:56 JST
+Generated at: 2026-04-10 07:17:08 JST
