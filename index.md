@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 107 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript."
+og_description: "Featuring 107 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 107 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript."
+twitter_description: "Featuring 107 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -50,7 +50,7 @@ json_ld: |
       "description": "Programmer and developer. Publishing 107 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 107 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript.",
+    "description": "Featuring 107 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、Python.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-04-08 (UTC) / 2026-04-09 (JST)
+Last Updated: 2026-04-09 (UTC) / 2026-04-10 (JST)
 
 ## 📋 Table of Contents
 
@@ -75,7 +75,7 @@ Last Updated: 2026-04-08 (UTC) / 2026-04-09 (JST)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-25_(23.4%25)-f1e05a?style=flat&logo=javascript) ![Rust](https://img.shields.io/badge/Rust-23_(21.5%25)-dea584?style=flat&logo=rust) ![TypeScript](https://img.shields.io/badge/TypeScript-14_(13.1%25)-3178c6?style=flat&logo=typescript) ![Python](https://img.shields.io/badge/Python-14_(13.1%25)-3572A5?style=flat&logo=python) ![HTML](https://img.shields.io/badge/HTML-6_(5.6%25)-e34c26?style=flat&logo=html5)
+![JavaScript](https://img.shields.io/badge/JavaScript-25_(23.4%25)-f1e05a?style=flat&logo=javascript) ![Rust](https://img.shields.io/badge/Rust-23_(21.5%25)-dea584?style=flat&logo=rust) ![Python](https://img.shields.io/badge/Python-14_(13.1%25)-3572A5?style=flat&logo=python) ![TypeScript](https://img.shields.io/badge/TypeScript-14_(13.1%25)-3178c6?style=flat&logo=typescript) ![HTML](https://img.shields.io/badge/HTML-6_(5.6%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -84,6 +84,20 @@ Last Updated: 2026-04-08 (UTC) / 2026-04-09 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages用のMarkdownファイルを自動生成するシステムです。
+- 検索エンジン最適化（SEO）とLLMによる参照性向上を目的とし、リポジトリ一覧ページと各リポジトリへのリンクを提供します。
+- 各リポジトリの概要を自動取得し、バッジ付きで分類表示することで、訪問者にとって魅力的な情報提供を実現します。
+- 📅 2026-04-09 (UTC) / 2026-04-10 (JST)
+
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
 
 <a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
@@ -91,7 +105,16 @@ Last Updated: 2026-04-08 (UTC) / 2026-04-09 (JST)
 - **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
 - **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
 - **Overview**: No description available
-- 📅 2026-04-08 (UTC) / 2026-04-08 (JST)
+- 📅 2026-04-09 (UTC) / 2026-04-09 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Overview**: No description available
+- 📅 2026-04-09 (UTC) / 2026-04-09 (JST)
 
 ## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
 YM2151 event log editor with TUI interface. Written in Rust
@@ -105,16 +128,7 @@ YM2151 event log editor with TUI interface. Written in Rust
 - YM2151シンセサイザーのイベントログをターミナルで編集・可視化するためのRust製エディタです。
 - イベントのタイミング調整、データの検査、KeyONイベントの識別など、直感的な操作を提供します。
 - JSON形式のイベントデータを扱い、ファイル操作や時間表示モードの切り替えなどの機能を持ちます。
-- 📅 2026-04-08 (UTC) / 2026-04-08 (JST)
-
-## [own-repos-curator-data](https://cat2151.github.io/own-repos-curator-data/)
-
-<a href="https://cat2151.github.io/own-repos-curator-data/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/own-repos-curator-data](https://github.com/cat2151/own-repos-curator-data)
-- **GitHub Pages**: [https://cat2151.github.io/own-repos-curator-data/](https://cat2151.github.io/own-repos-curator-data/)
-- **Overview**: No description available
-- 📅 2026-04-08 (UTC) / 2026-04-08 (JST)
+- 📅 2026-04-09 (UTC) / 2026-04-09 (JST)
 
 ## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
 WIP
@@ -123,14 +137,14 @@ WIP
 
 - **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
 - **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
-- 📅 2026-04-08 (UTC) / 2026-04-08 (JST)
+- 📅 2026-04-09 (UTC) / 2026-04-09 (JST)
 
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+## [own-repos-curator-data](https://cat2151.github.io/own-repos-curator-data/)
 
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+<a href="https://cat2151.github.io/own-repos-curator-data/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
 
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Repository**: [https://github.com/cat2151/own-repos-curator-data](https://github.com/cat2151/own-repos-curator-data)
+- **GitHub Pages**: [https://cat2151.github.io/own-repos-curator-data/](https://cat2151.github.io/own-repos-curator-data/)
 - **Overview**: No description available
 - 📅 2026-04-08 (UTC) / 2026-04-08 (JST)
 
@@ -200,20 +214,6 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2026-04-07 (UTC) / 2026-04-08 (JST)
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを利用し、JekyllベースのGitHub Pages向けリポジトリ一覧を自動生成します。
-- SEO最適化とLLM参照性向上を目指し、ユーザーの全リポジトリ情報を可視化します。
-- 各リポジトリの`project-overview.md`から概要を自動抽出し、リッチな表示を実現します。
 - 📅 2026-04-07 (UTC) / 2026-04-08 (JST)
 
 ## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
