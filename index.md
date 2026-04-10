@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-04-09 (UTC) / 2026-04-10 (JST)
+Last Updated: 2026-04-10 (UTC) / 2026-04-11 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,19 +84,14 @@ Last Updated: 2026-04-09 (UTC) / 2026-04-10 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages用のMarkdownファイルを自動生成するシステムです。
-- 検索エンジン最適化（SEO）とLLMによる参照性向上を目的とし、リポジトリ一覧ページと各リポジトリへのリンクを提供します。
-- 各リポジトリの概要を自動取得し、バッジ付きで分類表示することで、訪問者にとって魅力的な情報提供を実現します。
-- 📅 2026-04-09 (UTC) / 2026-04-10 (JST)
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Overview**: No description available
+- 📅 2026-04-10 (UTC) / 2026-04-11 (JST)
 
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
 
@@ -105,16 +100,16 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
 - **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
 - **Overview**: No description available
-- 📅 2026-04-09 (UTC) / 2026-04-09 (JST)
+- 📅 2026-04-10 (UTC) / 2026-04-11 (JST)
 
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+## [cat-self-update](https://cat2151.github.io/cat-self-update/)
 
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+<a href="https://cat2151.github.io/cat-self-update/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Repository**: [https://github.com/cat2151/cat-self-update](https://github.com/cat2151/cat-self-update)
+- **GitHub Pages**: [https://cat2151.github.io/cat-self-update/](https://cat2151.github.io/cat-self-update/)
 - **Overview**: No description available
-- 📅 2026-04-09 (UTC) / 2026-04-09 (JST)
+- 📅 2026-04-10 (UTC) / 2026-04-10 (JST)
 
 ## [ym2151-log-editor](https://cat2151.github.io/ym2151-log-editor/)
 YM2151 event log editor with TUI interface. Written in Rust
@@ -128,7 +123,7 @@ YM2151 event log editor with TUI interface. Written in Rust
 - YM2151シンセサイザーのイベントログをターミナルで編集・可視化するためのRust製エディタです。
 - イベントのタイミング調整、データの検査、KeyONイベントの識別など、直感的な操作を提供します。
 - JSON形式のイベントデータを扱い、ファイル操作や時間表示モードの切り替えなどの機能を持ちます。
-- 📅 2026-04-09 (UTC) / 2026-04-09 (JST)
+- 📅 2026-04-10 (UTC) / 2026-04-10 (JST)
 
 ## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
 WIP
@@ -137,7 +132,21 @@ WIP
 
 - **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
 - **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
-- 📅 2026-04-09 (UTC) / 2026-04-09 (JST)
+- 📅 2026-04-09 (UTC) / 2026-04-10 (JST)
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages用のMarkdownファイルを自動生成するシステムです。
+- 検索エンジン最適化（SEO）とLLMによる参照性向上を目的とし、リポジトリ一覧ページと各リポジトリへのリンクを提供します。
+- 各リポジトリの概要を自動取得し、バッジ付きで分類表示することで、訪問者にとって魅力的な情報提供を実現します。
+- 📅 2026-04-09 (UTC) / 2026-04-10 (JST)
 
 ## [own-repos-curator-data](https://cat2151.github.io/own-repos-curator-data/)
 
@@ -371,15 +380,6 @@ A library transpiles Chord notation into Music Macro Language.
 - コード進行の表記（Chord notation）をMML（Music Macro Language）に変換するシンプルなJavaScriptライブラリです。
 - ブラウザやObsidianなどの環境で、コード進行を手軽に音として再生できるようにすることを目的としています。
 - 概念実証とシンプルさを優先し、作曲のアイデアスケッチに役立つツールを提供します。
-- 📅 2026-04-06 (UTC) / 2026-04-06 (JST)
-
-## [cat-self-update](https://cat2151.github.io/cat-self-update/)
-
-<a href="https://cat2151.github.io/cat-self-update/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-self-update](https://github.com/cat2151/cat-self-update)
-- **GitHub Pages**: [https://cat2151.github.io/cat-self-update/](https://cat2151.github.io/cat-self-update/)
-- **Overview**: No description available
 - 📅 2026-04-06 (UTC) / 2026-04-06 (JST)
 
 ## [zenn-qiita-mute-warning](https://cat2151.github.io/zenn-qiita-mute-warning/)
