@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-04-11 (UTC) / 2026-04-12 (JST)
+Last Updated: 2026-04-12 (UTC) / 2026-04-13 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages用のMarkdownファイルを自動生成するシステムです。
-- 生成されたリポジトリ一覧は検索エンジンによるクロールを促進し、検索結果への表示を向上させます。
-- LLMのリポジトリ参照失敗を緩和し、開発効率の向上に貢献することを目指します。
-- 📅 2026-04-11 (UTC) / 2026-04-12 (JST)
+- GitHub APIを活用し、JekyllベースのGitHub Pages向けにリポジトリ一覧を自動生成するシステムです。
+- 生成されたリポジトリ一覧は、検索エンジンやLLMからの参照性を向上させ、情報発見性を高めます。
+- リポジトリ情報の取得からSEO最適化されたMarkdown出力まで、一貫して自動化されたワークフローを提供します。
+- 📅 2026-04-12 (UTC) / 2026-04-13 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -105,16 +105,16 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
-- 📅 2026-04-11 (UTC) / 2026-04-11 (JST)
+- 📅 2026-04-12 (UTC) / 2026-04-13 (JST)
 
-## [cat-self-update](https://cat2151.github.io/cat-self-update/)
+## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
 
-<a href="https://cat2151.github.io/cat-self-update/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
 
-- **Repository**: [https://github.com/cat2151/cat-self-update](https://github.com/cat2151/cat-self-update)
-- **GitHub Pages**: [https://cat2151.github.io/cat-self-update/](https://cat2151.github.io/cat-self-update/)
+- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
 - **Overview**: No description available
-- 📅 2026-04-11 (UTC) / 2026-04-11 (JST)
+- 📅 2026-04-12 (UTC) / 2026-04-12 (JST)
 
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
 
@@ -122,6 +122,15 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
 - **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
 - **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
+- **Overview**: No description available
+- 📅 2026-04-12 (UTC) / 2026-04-12 (JST)
+
+## [cat-self-update](https://cat2151.github.io/cat-self-update/)
+
+<a href="https://cat2151.github.io/cat-self-update/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-self-update](https://github.com/cat2151/cat-self-update)
+- **GitHub Pages**: [https://cat2151.github.io/cat-self-update/](https://cat2151.github.io/cat-self-update/)
 - **Overview**: No description available
 - 📅 2026-04-11 (UTC) / 2026-04-11 (JST)
 
@@ -413,15 +422,6 @@ A library transpiles Chord notation into Music Macro Language.
 - **GitHub Pages**: None
 - **Overview**: No description available
 - 📅 2026-04-06 (UTC) / 2026-04-06 (JST)
-
-## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
-
-<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
-- **Overview**: No description available
-- 📅 2026-04-05 (UTC) / 2026-04-06 (JST)
 
 ## [cat-gh-repo-creator](https://cat2151.github.io/cat-gh-repo-creator/)
 
