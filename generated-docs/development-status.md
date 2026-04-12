@@ -1,54 +1,51 @@
-Last updated: 2026-04-12
+Last updated: 2026-04-13
 
 # Development Status
 
 ## 現在のIssues
-- オープン中のIssueはありません。
+- 現在、プロジェクトにオープン状態の具体的な開発Issueは存在しません。
+- Issueトラッカーは完全にクリアな状態を保っており、対応を要する項目はありません。
+- これは、直近の追跡課題が解決され、プロジェクトが安定した状態にあることを示しています。
 
 ## 次の一手候補
-1. 自動生成される開発状況レポートの精度向上
-   - 最初の小さな一歩: `generated-docs/development-status.md`と`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`を比較し、現在のレポートがプロンプトの意図を完全に反映しているか、また追加で含めるべき情報がないかをレビューする。
-   - Agent実行プロンプト:
+1. 開発状況生成プロンプトの記述内容の精査
+   - 最初の小さな一歩: 現在の「開発状況生成プロンプト」が、特に「現在のIssues」セクションにおいて、オープンIssueがない場合の記述で「生成しないもの」の制約を遵守しつつ「3行で要約する」要件を満たしているかレビューする。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, generated-docs/development-status.md
+     対象ファイル: (このプロンプトファイル自体), `generated-docs/development-status.md`
 
-     実行内容: `development-status-prompt.md`に記述されている指示と`generated-docs/development-status.md`の生成内容を比較分析し、以下の観点から改善点を特定してください：
-     1. プロンプトの指示が生成されたレポートに適切に反映されているか。
-     2. レポートの内容が開発者にとって十分に有用か、不足している情報はないか。
-     3. プロンプトを調整することで、より詳細で実行可能な次のステップを提案できるか。
+     実行内容: 「開発状況生成プロンプト」の「現在のIssues」セクションに関する指示について、オープンIssueがない場合の記述が「生成しないもの」の制約（特にハルシネーションの回避）を遵守しつつ、かつ「3行で要約する」という要件を満たすための改善点を分析し、具体的な記述例を提案してください。
 
-     確認事項: 生成されたレポートがプロジェクトの現在の状況を正確に反映しているか、またハルシネーションを避けるために具体的なデータに基づいて分析することを確認してください。
+     確認事項: 「ハルシネーションしそうなものは生成しない」という制約に厳密に従っているかを確認してください。また、ユーザーに具体的なタスクを提案する形になっていないかも確認してください。
 
-     期待する出力: Markdown形式で、現在の`development-status-prompt.md`の改善案と、その改善によって`development-status.md`がどのように変化するかを示すサンプルのスニペットを生成してください。
+     期待する出力: Markdown形式で、現在のプロンプトの該当箇所に対する改善提案と、それに基づいた「現在のIssues」セクションの記述例を3行で記述してください。
      ```
 
-2. `.github/actions-tmp`内のActionsワークフローのレビューと整理
-   - 最初の小さな一歩: `.github/actions-tmp/`ディレクトリ内の全`*.yml`ファイルをリストアップし、それぞれのファイルヘッダや内容からその目的を推測する。
-   - Agent実行プロンプト:
+2. `generate_repo_list`モジュールのテストカバレッジ向上
+   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の`repository_processor.py`ファイルの既存機能、特に`process_repository`メソッドについて、現在のテストカバレッジを評価し、テストが不足しているシナリオを特定する。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: .github/actions-tmp/.github/workflows/*.yml
+     対象ファイル: `src/generate_repo_list/repository_processor.py`, `tests/test_repository_processor.py`
 
-     実行内容: `.github/actions-tmp/.github/workflows/`ディレクトリ配下のすべてのYAMLファイルを分析し、各ワークフローの目的、トリガー条件、実行内容を特定してください。その後、これらのワークフローが現在のリポジトリ（特に`src/generate_repo_list`以下のPythonプロジェクト）とどのように関連しているか、または関連していないかを評価してください。
+     実行内容: `src/generate_repo_list/repository_processor.py`の`process_repository`メソッドに焦点を当て、既存のテストファイル`tests/test_repository_processor.py`がカバーしていないエッジケースや重要なロジックを特定してください。その後、これらの不足を補うための新しいpytest形式のテストケースを生成してください。
 
-     確認事項: 各ワークフローが依存する可能性のあるアクションやスクリプト（例：`.github/actions-tmp/.github_automation/`内のスクリプト）も考慮に入れて分析してください。また、誤って必要なファイルを削除しないように、各ファイルの利用状況について慎重に判断してください。
+     確認事項: 生成するテストケースが既存のテストを壊さないこと、および実際にカバレッジを向上させることを確認してください。また、テストコードは独立しており、外部依存性が最小限であることを確認してください。
 
-     期待する出力: Markdown形式で、各ワークフローファイル（例：`callgraph.yml`, `translate-readme.yml`など）の概要、現在のプロジェクトとの関連性の評価（関連あり/なし/不明）、および不要と判断される場合の整理案をリストアップしてください。
+     期待する出力: `tests/test_repository_processor.py`に追記すべきPythonのテストコードスニペット（pytest形式）をmarkdownコードブロックで出力してください。
      ```
 
-3. `generate_repo_list`機能のテストカバレッジ向上
-   - 最初の小さな一歩: `src/generate_repo_list`ディレクトリ内の各Pythonファイルがどのような機能を提供しているかを概観し、対応する`tests/`ディレクトリ内のテストファイルを確認する。
-   - Agent実行プロンプト:
+3. `check-large-files`アクションの設定見直しと最適化
+   - 最初の小さな一歩: プロジェクトの現在のリポジトリ構成とファイルサイズ分布を考慮し、`.github_automation/check_large_files/check-large-files.toml`内の`exclude_patterns`と`max_file_size_kb`設定が適切であるかを確認する。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: src/generate_repo_list/*.py, tests/test_*.py
+     対象ファイル: `.github_automation/check_large_files/check-large-files.toml`, `.github_automation/check_large_files/scripts/check_large_files.py`
 
-     実行内容: `src/generate_repo_list`ディレクトリ内のPythonスクリプト群と、`tests/`ディレクトリ内の既存のテストファイル（特に`tests/test_badge_generator_integration.py`, `tests/test_config.py`など`generate_repo_list`に関連するもの）を分析してください。以下の観点からテストカバレッジの現状を評価し、改善の提案を行ってください：
-     1. 各主要機能（例: リポジトリ情報取得、Markdown生成、バッジ生成、統計計算）に対応するテストが存在するか。
-     2. 既存のテストがエッジケースやエラーハンドリングを十分にカバーしているか。
-     3. カバレッジが不足していると思われる領域を特定し、具体的なテスト追加案を提示してください。
+     実行内容: プロジェクトのファイル一覧と`.github_automation/check_large_files/check-large-files.toml`の現在の設定を分析し、特に`exclude_patterns`と`max_file_size_kb`がプロジェクトの現在のニーズに最適化されているかを評価してください。例えば、生成されるドキュメントファイルや一時ファイルが誤ってチェック対象になっていないか、または特定の許容されるべき大きなファイルが常に警告を発していないかなどを考慮し、設定の改善案を提案してください。
 
-     確認事項: 既存のテストスイート（pytest.ini, requirements-dev.txt）の設定も考慮に入れ、テストの実行環境や依存関係に影響を与えないように分析してください。
+     確認事項: `check_large_files.py`の実行ロジックを理解した上で設定変更を提案してください。重要な開発ファイルやビルド成果物が誤って除外されたり、過度に制限されたりしないように注意してください。
 
-     期待する出力: Markdown形式で、`src/generate_repo_list`内の各主要モジュールのテストカバレッジ評価、不足しているテストのタイプ、およびそれらを満たすための具体的なテストケース（例: 新規テストファイルの提案、既存テストへの追加）の概要を記述してください。
+     期待する出力: Markdown形式で、現在の設定における潜在的な非効率性や問題点を説明し、それに対する`check-large-files.toml`の修正案（変更または追加すべき設定行のみをコードブロックで示す）を記述してください。
+     ```
 
 ---
-Generated at: 2026-04-12 07:09:58 JST
+Generated at: 2026-04-13 07:11:22 JST
