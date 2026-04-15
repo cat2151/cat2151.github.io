@@ -1,55 +1,59 @@
-Last updated: 2026-04-14
+Last updated: 2026-04-16
 
 # Development Status
 
 ## 現在のIssues
-- オープン中のIssueはありません。
-- 現在、特に対処すべき明確な課題は存在しません。
-- 既存の機能改善や保守作業に注力する段階です。
+- 現在、オープン中のIssueはありません。
+- すべての既知の課題は解決済みであり、プロジェクトは安定した状態です。
+- 次のステップとして、既存機能の品質向上や機能拡張の検討に注力します。
 
 ## 次の一手候補
-1. プロジェクトサマリー生成プロンプトの改善
-   - 最初の小さな一歩: `generated-docs/development-status-generated-prompt.md` と `generated-docs/project-overview-generated-prompt.md` の内容を比較し、現在のプロンプトが期待通りに機能しているか、または改善の余地があるかをレビューする。
+1. `generate_repo_list` モジュールのテストカバレッジ測定と向上
+   - 最初の小さな一歩: `pytest-cov` などのツールを用いて、現在の `src/generate_repo_list` モジュールのテストカバレッジを計測し、レポートを生成する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
+     対象ファイル: `src/generate_repo_list/*.py` および `tests/test_*.py`
 
-     実行内容: 上記プロンプトファイルの内容を分析し、より詳細で具体的な指示を追加することで、生成されるプロジェクトサマリーの品質（関連性、具体性、誤情報の少なさ）を向上させるための改善点を提案してください。特に、現在の開発状況やプロジェクト概要がより正確かつ有用になるような指示に焦点を当ててください。
+     実行内容: `src/generate_repo_list` ディレクトリ内のPythonファイルの現在のテストカバレッジを分析し、特にカバレッジが低い関数やメソッドを特定してください。その後、それらのカバレッジを向上させるための具体的なテストコードの追加提案を行ってください。
 
-     確認事項: プロンプトの変更が既存の`ProjectSummaryCoordinator.cjs`や`DevelopmentStatusGenerator.cjs`、`ProjectOverviewGenerator.cjs`の処理ロジックと矛盾しないことを確認してください。また、ハルシネーションを誘発しないよう、具体的な情報源（ファイルパス、コミット履歴など）を参照させる指示を検討してください。
+     確認事項: `pytest` および `pytest-cov` が環境にインストールされており、既存のテストスイートが正常に動作することを確認してください。
 
-     期待する出力: 改善されたプロンプトの変更案をMarkdown形式で出力してください。変更点と、それによって期待される効果についても説明を含めてください。
+     期待する出力: Markdown形式で、以下の内容を含めてください：
+     1. 現在のテストカバレッジの概要。
+     2. カバレッジが低いと特定されたファイルと関数/メソッドのリスト。
+     3. リストアップされた各項目に対し、カバレッジを向上させるための具体的なテストケースのアイデア（擬似コードまたは説明）を提案。
      ```
 
-2. リポジトリリスト生成スクリプトの堅牢性強化
-   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` を中心に、現在Pythonスクリプトでどのようにエラーが処理されているかを調査し、ロギングの有無と詳細度を確認する。
+2. `generate_repo_list` 設定ファイル (`config.yml`) の詳細ドキュメント作成
+   - 最初の小さな一歩: `src/generate_repo_list/config.yml` および `src/generate_repo_list/config_manager.py` を分析し、主要な設定項目とその使われ方を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, src/generate_repo_list/markdown_generator.py
+     対象ファイル: `src/generate_repo_list/config.yml`、`src/generate_repo_list/config_manager.py`
 
-     実行内容: 上記Pythonスクリプトのエラーハンドリングとロギングメカニズムを分析し、予期せぬ入力や外部APIエラー（例: GitHub API制限）が発生した場合に、よりロバストに動作し、問題のデバッグを容易にするための改善案を提案してください。具体的には、適切な例外処理の追加、詳細なロギング（エラーレベル、スタックトレース）、設定可能なロギングレベルの実装を検討してください。
+     実行内容: `src/generate_repo_list/config.yml` の各設定項目について、`config_manager.py` でどのように読み込まれ、利用されているかを分析してください。その分析に基づき、各設定項目の目的、許容される値、デフォルト値、設定例を詳細に説明するドキュメントを作成してください。
 
-     確認事項: 提案される変更が既存のスクリプトの主要な機能に影響を与えないこと。また、`tests/`ディレクトリ内の既存のテストが、これらの変更後も引き続きパスすることを確認してください。新しいエラーケースに対応するためのテストの追加も考慮してください。
+     確認事項: `config.yml` の構造と、`config_manager.py` での設定値の読み込みおよび適用ロジックとの整合性を確認してください。
 
-     期待する出力: エラーハンドリングとロギングを強化するためのコード変更案（擬似コードまたは具体的なPythonコードスニペット）と、その設計思想をMarkdown形式で記述してください。
+     期待する出力: `src/generate_repo_list/config_description.md` という新規ファイルとして、設定項目の詳細な説明をMarkdown形式で出力してください。ドキュメントには、各設定項目がどのような機能に影響するかを含めてください。
      ```
 
-3. 古いIssue Noteの自動アーカイブ機能の検討
-   - 最初の小さな一歩: `issue-notes` ディレクトリ内のファイルの数と、それぞれの最終更新日時を手動で確認し、どの程度の頻度でIssue Noteが作成され、更新されているかの傾向を把握する。
+3. プロジェクト概要生成スクリプト (`ProjectOverviewGenerator.cjs`) の改善点特定
+   - 最初の小さな一歩: 現在の `generated-docs/project-overview.md` の内容をレビューし、どのような情報が不足しているか、または改善できるかをブレインストーミングする。
    - Agent実行プロンプト:
      ```
-     対象ファイル: issue-notes/ ディレクトリ内の任意のIssue Noteファイル (例: issue-notes/22.md), .github/workflows/call-issue-note.yml
+     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`, `generated-docs/project-overview.md`
 
-     実行内容: `issue-notes` ディレクトリに存在する古い、または長期間更新されていないIssue Noteを自動的に識別し、アーカイブディレクトリへ移動させる、あるいは別の形で整理するGitHub Actionsワークフローの実現可能性について分析してください。この分析では、以下の点を考慮してください:
-     1) 「古い」と判断する基準（例: 最終更新日、特定のタグの有無）。
-     2) アーカイブの実行トリガー（例: 週次/月次スケジュール）。
-     3) 実行時の権限と安全性に関する考慮事項。
-     4) 既存の`issue-note.yml`ワークフローとの統合または独立性。
+     実行内容: 現在の `ProjectOverviewGenerator.cjs` が `project-overview.md` を生成する際のロジックと、`project-overview-prompt.md` の内容を詳細に分析してください。その分析に基づき、生成されるプロジェクト概要レポートの質を向上させるための具体的な改善案を3つ提案してください。提案は、より深い洞察の提供、新しい情報源の統合、レポートの構造改善といった観点を含めてください。
 
-     確認事項: この機能が誤ってアクティブなIssue Noteをアーカイブしないようにすること。また、アーカイブされたIssue Noteが後で参照可能な状態を維持できること（例: リンクの破損を避ける）を確認してください。
+     確認事項: `ProjectOverviewGenerator.cjs` の処理フロー、`project-overview-prompt.md` の内容、および現在の `generated-docs/project-overview.md` の出力形式の整合性を確認してください。
 
-     期待する出力: 自動アーカイブ機能の設計概要、関連するGitHub Actionsワークフローの構造案、および主要な処理ロジックをMarkdown形式で出力してください。潜在的なリスクとその軽減策についても言及してください。
-     ```
+     期待する出力: Markdown形式で、以下の内容を含めてください：
+     1. 現在の `generated-docs/project-overview.md` の現状と、その主な課題点。
+     2. 提案する3つの改善案。それぞれの案について、
+         - なぜその改善が必要か（現在の課題との関連）
+         - 具体的にどのような変更を `ProjectOverviewGenerator.cjs` やプロンプトに加えるか
+         - どのような効果（生成されるレポートの内容向上）が期待できるか
+     を記述してください。
 
 ---
-Generated at: 2026-04-14 07:22:34 JST
+Generated at: 2026-04-16 07:18:11 JST
