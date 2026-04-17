@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-04-16 (UTC) / 2026-04-17 (JST)
+Last Updated: 2026-04-17 (UTC) / 2026-04-18 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,19 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用して、ユーザーのGitHubリポジトリ情報を自動で取得します。
-- 取得した情報から、GitHub Pagesサイト向けにSEO最適化されたリポジトリ一覧Markdownを自動生成します。
-- 各リポジトリの概要を含め表示することで、検索エンジンやLLMからの参照性を向上させ、情報発見を容易にします。
-- 📅 2026-04-16 (UTC) / 2026-04-17 (JST)
-
-## [cmrt-client-playground](https://cat2151.github.io/cmrt-client-playground/)
-
-<a href="https://cat2151.github.io/cmrt-client-playground/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/cmrt-client-playground](https://github.com/cat2151/cmrt-client-playground)
-- **GitHub Pages**: [https://cat2151.github.io/cmrt-client-playground/](https://cat2151.github.io/cmrt-client-playground/)
-- **Overview**: No description available
-- 📅 2026-04-16 (UTC) / 2026-04-16 (JST)
+- GitHub Pages用にリポジトリ一覧ページを自動生成するシステムです。
+- GitHub APIを活用し、最新のリポジトリ情報をMarkdown形式で出力します。
+- サイトのSEOを強化し、検索エンジンやLLMからの可視性を高めます。
+- 📅 2026-04-17 (UTC) / 2026-04-18 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -114,7 +105,16 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
-- 📅 2026-04-16 (UTC) / 2026-04-16 (JST)
+- 📅 2026-04-17 (UTC) / 2026-04-17 (JST)
+
+## [cmrt-client-playground](https://cat2151.github.io/cmrt-client-playground/)
+
+<a href="https://cat2151.github.io/cmrt-client-playground/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/cmrt-client-playground](https://github.com/cat2151/cmrt-client-playground)
+- **GitHub Pages**: [https://cat2151.github.io/cmrt-client-playground/](https://cat2151.github.io/cmrt-client-playground/)
+- **Overview**: No description available
+- 📅 2026-04-17 (UTC) / 2026-04-17 (JST)
 
 ## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
 WIP
@@ -123,7 +123,7 @@ WIP
 
 - **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
 - **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
-- 📅 2026-04-16 (UTC) / 2026-04-16 (JST)
+- 📅 2026-04-16 (UTC) / 2026-04-17 (JST)
 
 ## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
 
