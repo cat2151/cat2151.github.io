@@ -1,4 +1,4 @@
-Last updated: 2026-04-18
+Last updated: 2026-04-19
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -104,6 +104,7 @@ Last updated: 2026-04-18
 
 ## プロジェクトのファイル一覧
 - .editorconfig
+- .github/actions-tmp/.gitattributes
 - .github/actions-tmp/.github/workflows/call-callgraph.yml
 - .github/actions-tmp/.github/workflows/call-check-large-files.yml
 - .github/actions-tmp/.github/workflows/call-daily-project-summary.yml
@@ -278,6 +279,8 @@ Last updated: 2026-04-18
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+bf5da14 Auto-update repository list - 2026-04-17
+5ddc204 Update project summaries (overview & development status) [auto]
 ad3b227 Auto-update repository list - 2026-04-16
 f39ec13 Update project summaries (overview & development status) [auto]
 f60a0cc Auto-update repository list - 2026-04-15
@@ -286,8 +289,6 @@ d5ccecc Auto-update repository list - 2026-04-14
 2918774 Update project summaries (overview & development status) [auto]
 84c0564 Auto-update repository list - 2026-04-12
 a342c79 Update project summaries (overview & development status) [auto]
-f243f46 Auto-update repository list - 2026-04-11
-2749ea0 Update project summaries (overview & development status) [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -298,4 +299,4 @@ index.md
 
 
 ---
-Generated at: 2026-04-18 07:15:46 JST
+Generated at: 2026-04-19 07:11:13 JST
