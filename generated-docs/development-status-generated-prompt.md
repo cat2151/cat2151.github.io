@@ -1,4 +1,4 @@
-Last updated: 2026-04-19
+Last updated: 2026-04-20
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -142,6 +142,7 @@ Last updated: 2026-04-19
 - .github/actions-tmp/.github_automation/check-large-files/README.md
 - .github/actions-tmp/.github_automation/check-large-files/check-large-files.toml.default
 - .github/actions-tmp/.github_automation/check-large-files/scripts/check_large_files.py
+- .github/actions-tmp/.github_automation/check-large-files/scripts/test_check_large_files.py
 - .github/actions-tmp/.github_automation/check_recent_human_commit/scripts/check-recent-human-commit.cjs
 - .github/actions-tmp/.github_automation/project_summary/docs/daily-summary-setup.md
 - .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
@@ -205,7 +206,7 @@ Last updated: 2026-04-19
 - .github/actions-tmp/issue-notes/40.md
 - .github/actions-tmp/issue-notes/44.md
 - .github/actions-tmp/issue-notes/57.md
-- .github/actions-tmp/issue-notes/67.md
+- .github/actions-tmp/issue-notes/69.md
 - .github/actions-tmp/issue-notes/7.md
 - .github/actions-tmp/issue-notes/8.md
 - .github/actions-tmp/issue-notes/9.md
@@ -279,6 +280,8 @@ Last updated: 2026-04-19
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+b44d586 Auto-update repository list - 2026-04-18
+3021d28 Update project summaries (overview & development status) [auto]
 bf5da14 Auto-update repository list - 2026-04-17
 5ddc204 Update project summaries (overview & development status) [auto]
 ad3b227 Auto-update repository list - 2026-04-16
@@ -287,8 +290,6 @@ f60a0cc Auto-update repository list - 2026-04-15
 864641a Update project summaries (overview & development status) [auto]
 d5ccecc Auto-update repository list - 2026-04-14
 2918774 Update project summaries (overview & development status) [auto]
-84c0564 Auto-update repository list - 2026-04-12
-a342c79 Update project summaries (overview & development status) [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -299,4 +300,4 @@ index.md
 
 
 ---
-Generated at: 2026-04-19 07:11:13 JST
+Generated at: 2026-04-20 07:11:36 JST
