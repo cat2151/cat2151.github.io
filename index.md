@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-04-20 (UTC) / 2026-04-21 (JST)
+Last Updated: 2026-04-21 (UTC) / 2026-04-22 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,34 @@ Last Updated: 2026-04-20 (UTC) / 2026-04-21 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを利用し、自身のGitHub Pagesサイト向けにリポジトリ一覧を自動生成するシステムです。
+- 生成されたMarkdownファイルはJekyllと連携し、リポジトリ情報をSEO最適化された形で公開します。
+- 検索エンジンからのクロール性向上と、LLMによるリポジトリ参照の精度向上に貢献します。
+- 📅 2026-04-21 (UTC) / 2026-04-22 (JST)
+
+## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
+A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
+
+<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: mml-compiler](https://img.shields.io/badge/Topic-mml--compiler-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mmlabc-to-smf-rust"><img src="https://img.shields.io/badge/📖-DeepWiki-blue.svg" alt="DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
+- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
+
+### Project Highlights
+- Music Macro Language (MML) をStandard MIDI File (SMF) へ変換するRust製のライブラリ兼CLIです。
+- MMLのパースからSMFバイト列生成までを4パス構成で処理し、ブラウザ向けWASM版も提供しています。
+- 音符、オクターブ、和音、テンポ、ベロシティなど多様なMML記法に対応し、CLIおよびライブラリAPIで柔軟な利用が可能です。
+- 📅 2026-04-21 (UTC) / 2026-04-22 (JST)
+
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
 <a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
@@ -91,16 +119,7 @@ Last Updated: 2026-04-20 (UTC) / 2026-04-21 (JST)
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
-- 📅 2026-04-20 (UTC) / 2026-04-20 (JST)
-
-## [cmrt-client-playground](https://cat2151.github.io/cmrt-client-playground/)
-
-<a href="https://cat2151.github.io/cmrt-client-playground/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: piano-roll](https://img.shields.io/badge/Topic-piano--roll-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cmrt-client-playground](https://github.com/cat2151/cmrt-client-playground)
-- **GitHub Pages**: [https://cat2151.github.io/cmrt-client-playground/](https://cat2151.github.io/cmrt-client-playground/)
-- **Overview**: No description available
-- 📅 2026-04-20 (UTC) / 2026-04-20 (JST)
+- 📅 2026-04-21 (UTC) / 2026-04-21 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
@@ -108,6 +127,15 @@ Last Updated: 2026-04-20 (UTC) / 2026-04-21 (JST)
 
 - **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
+- **Overview**: No description available
+- 📅 2026-04-21 (UTC) / 2026-04-21 (JST)
+
+## [cmrt-client-playground](https://cat2151.github.io/cmrt-client-playground/)
+
+<a href="https://cat2151.github.io/cmrt-client-playground/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: piano-roll](https://img.shields.io/badge/Topic-piano--roll-lightblue) ![Topic: tonejs](https://img.shields.io/badge/Topic-tonejs-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cmrt-client-playground](https://github.com/cat2151/cmrt-client-playground)
+- **GitHub Pages**: [https://cat2151.github.io/cmrt-client-playground/](https://cat2151.github.io/cmrt-client-playground/)
 - **Overview**: No description available
 - 📅 2026-04-20 (UTC) / 2026-04-20 (JST)
 
@@ -129,20 +157,6 @@ Last Updated: 2026-04-20 (UTC) / 2026-04-21 (JST)
 - **Overview**: No description available
 - 📅 2026-04-20 (UTC) / 2026-04-20 (JST)
 
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub Pagesサイト向けにリポジトリ一覧を自動生成し、検索エンジン最適化（SEO）を強化します。
-- GitHub APIを利用してリポジトリ情報を取得し、Jekyll対応のマークダウン形式で出力します。
-- 各リポジトリの概要表示、バッジ、分類機能を提供し、サイトの可視性と情報伝達力を高めます。
-- 📅 2026-04-19 (UTC) / 2026-04-20 (JST)
-
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
 
@@ -155,20 +169,6 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - Standard MIDI Files (SMF) をYM2151 FM音源チップのレジスタ書き込みログ（JSON形式）に変換するRust製アプリケーションおよびライブラリです。
 - WebAssembly (WASM) に対応し、ブラウザ環境での利用も可能で、`cat-play-mml`や`web-ym2151`などの関連プロジェクトで活用されています。
 - 2パス処理アーキテクチャ、外部JSONファイルからのカスタムYM2151音色読み込み、和音数に基づく静的なチャンネル割り当て戦略が特徴です。
-- 📅 2026-04-19 (UTC) / 2026-04-20 (JST)
-
-## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
-A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
-
-<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: mml-compiler](https://img.shields.io/badge/Topic-mml--compiler-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mmlabc-to-smf-rust"><img src="https://img.shields.io/badge/📖-DeepWiki-blue.svg" alt="DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
-- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
-
-### Project Highlights
-- Music Macro Language (MML) を Standard MIDI File (SMF) へ変換するRust製のライブラリ兼CLIツールです。
-- MMLからSMFへの変換は4つのパスで構成され、各パスの中間結果はJSON形式で出力可能です。
-- WebAssembly (WASM) に対応しており、ブラウザでの利用やライブラリ利用のデモも提供しています。
 - 📅 2026-04-19 (UTC) / 2026-04-20 (JST)
 
 ## [github-actions](https://cat2151.github.io/github-actions/)
