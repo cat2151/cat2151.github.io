@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-04-24 (UTC) / 2026-04-25 (JST)
+Last Updated: 2026-04-25 (UTC) / 2026-04-26 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages向けのMarkdownを自動生成します。
-- GitHubユーザーページでの検索エンジンクロール効率の課題を解決します。
-- リポジトリ一覧と各リポジトリへのリンクをGitHub Pagesに生成し、SEOとLLMからの参照性を向上させます。
-- 📅 2026-04-24 (UTC) / 2026-04-25 (JST)
+- GitHub APIを利用し、ユーザーのリポジトリ情報を取得してGitHub Pagesサイト向けにMarkdownを自動生成するシステムです。
+- SEOを最適化し、リポジトリ一覧や各リポジトリへのリンクを含むページを作成することで検索エンジンによるインデックスを促進します。
+- これにより、GitHubユーザーページのSEO課題や、LLMがリポジトリ参照に失敗する問題を緩和することを目指します。
+- 📅 2026-04-25 (UTC) / 2026-04-26 (JST)
+
+## [zenn-qiita-mute-warning](https://cat2151.github.io/zenn-qiita-mute-warning/)
+This is a Chrome extension that displays a warning banner at the top of the screen when you open an article by a user you've muted on Zenn or Qiita
+
+<a href="https://cat2151.github.io/zenn-qiita-mute-warning/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: chrome-extension](https://img.shields.io/badge/Topic-chrome--extension-lightblue) ![Topic: mute](https://img.shields.io/badge/Topic-mute-lightblue) ![Topic: qiita](https://img.shields.io/badge/Topic-qiita-lightblue) ![Topic: zenn](https://img.shields.io/badge/Topic-zenn-lightblue)
+
+- **Repository**: [https://github.com/cat2151/zenn-qiita-mute-warning](https://github.com/cat2151/zenn-qiita-mute-warning)
+- **GitHub Pages**: [https://cat2151.github.io/zenn-qiita-mute-warning/](https://cat2151.github.io/zenn-qiita-mute-warning/)
+- 📅 2026-04-25 (UTC) / 2026-04-25 (JST)
 
 ## [own-repos-curator](https://cat2151.github.io/own-repos-curator/)
 
@@ -105,25 +114,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/own-repos-curator](https://github.com/cat2151/own-repos-curator)
 - **GitHub Pages**: [https://cat2151.github.io/own-repos-curator/](https://cat2151.github.io/own-repos-curator/)
 - **Overview**: No description available
-- 📅 2026-04-24 (UTC) / 2026-04-24 (JST)
-
-## [cat2151-hatena-blog-contents](https://cat2151.github.io/cat2151-hatena-blog-contents/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151-hatena-blog-contents](https://github.com/cat2151/cat2151-hatena-blog-contents)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151-hatena-blog-contents/](https://cat2151.github.io/cat2151-hatena-blog-contents/)
-- **Overview**: No description available
-- 📅 2026-04-24 (UTC) / 2026-04-24 (JST)
-
-## [own-repos-curator-data](https://cat2151.github.io/own-repos-curator-data/)
-
-<a href="https://cat2151.github.io/own-repos-curator-data/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/own-repos-curator-data](https://github.com/cat2151/own-repos-curator-data)
-- **GitHub Pages**: [https://cat2151.github.io/own-repos-curator-data/](https://cat2151.github.io/own-repos-curator-data/)
-- **Overview**: No description available
-- 📅 2026-04-24 (UTC) / 2026-04-24 (JST)
+- 📅 2026-04-25 (UTC) / 2026-04-25 (JST)
 
 ## [gh-commit-ledger](https://cat2151.github.io/gh-commit-ledger/)
 A TUI that displays the commit count of your public repositories.
@@ -132,7 +123,25 @@ A TUI that displays the commit count of your public repositories.
 
 - **Repository**: [https://github.com/cat2151/gh-commit-ledger](https://github.com/cat2151/gh-commit-ledger)
 - **GitHub Pages**: [https://cat2151.github.io/gh-commit-ledger/](https://cat2151.github.io/gh-commit-ledger/)
-- 📅 2026-04-24 (UTC) / 2026-04-24 (JST)
+- 📅 2026-04-25 (UTC) / 2026-04-25 (JST)
+
+## [cat2151-hatena-blog-contents](https://cat2151.github.io/cat2151-hatena-blog-contents/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151-hatena-blog-contents](https://github.com/cat2151/cat2151-hatena-blog-contents)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151-hatena-blog-contents/](https://cat2151.github.io/cat2151-hatena-blog-contents/)
+- **Overview**: No description available
+- 📅 2026-04-24 (UTC) / 2026-04-25 (JST)
+
+## [own-repos-curator-data](https://cat2151.github.io/own-repos-curator-data/)
+
+<a href="https://cat2151.github.io/own-repos-curator-data/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/own-repos-curator-data](https://github.com/cat2151/own-repos-curator-data)
+- **GitHub Pages**: [https://cat2151.github.io/own-repos-curator-data/](https://cat2151.github.io/own-repos-curator-data/)
+- **Overview**: No description available
+- 📅 2026-04-24 (UTC) / 2026-04-25 (JST)
 
 ## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
 WIP
@@ -527,15 +536,6 @@ crisp-game-libを使って作ったゲーム
 - コード進行テキストをMML（Music Macro Language）へ変換するライブラリ・アプリケーションです。
 - RustとTree-sitterを活用し、堅牢な構文解析と高速な変換を実現しています。
 - コマンドラインツールとして、またRustライブラリとしても利用可能な純粋なネイティブアプリケーションです。
-- 📅 2026-04-06 (UTC) / 2026-04-06 (JST)
-
-## [zenn-qiita-mute-warning](https://cat2151.github.io/zenn-qiita-mute-warning/)
-
-<a href="https://cat2151.github.io/zenn-qiita-mute-warning/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript)
-
-- **Repository**: [https://github.com/cat2151/zenn-qiita-mute-warning](https://github.com/cat2151/zenn-qiita-mute-warning)
-- **GitHub Pages**: [https://cat2151.github.io/zenn-qiita-mute-warning/](https://cat2151.github.io/zenn-qiita-mute-warning/)
-- **Overview**: No description available
 - 📅 2026-04-06 (UTC) / 2026-04-06 (JST)
 
 ## [sixel-playground](https://github.com/cat2151/sixel-playground)
