@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-04-27 (UTC) / 2026-04-28 (JST)
+Last Updated: 2026-04-28 (UTC) / 2026-04-29 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,14 +84,19 @@ Last Updated: 2026-04-27 (UTC) / 2026-04-28 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
-## [digital-garden](https://cat2151.github.io/digital-garden/)
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
 
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-04-27 (UTC) / 2026-04-27 (JST)
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを活用し、自身のリポジトリ情報を自動取得するシステムです。
+- JekyllベースのGitHub Pages向けに、SEO最適化されたリポジトリ一覧を自動生成します。
+- 各リポジトリの概要を自動抽出し、検索エンジンからの発見性を高め、LLM連携も支援します。
+- 📅 2026-04-28 (UTC) / 2026-04-29 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -99,6 +104,15 @@ Last Updated: 2026-04-27 (UTC) / 2026-04-28 (JST)
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Overview**: No description available
+- 📅 2026-04-28 (UTC) / 2026-04-28 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
 - 📅 2026-04-27 (UTC) / 2026-04-27 (JST)
 
@@ -110,20 +124,6 @@ Last Updated: 2026-04-27 (UTC) / 2026-04-28 (JST)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
 - **Overview**: No description available
 - 📅 2026-04-27 (UTC) / 2026-04-27 (JST)
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを利用し、JekyllベースのGitHub Pages向けリポジトリ一覧を自動生成します。
-- SEO最適化されたMarkdown形式で、リポジトリ情報を整理し表示します。
-- 各リポジトリから概要を抽出し、検索エンジンでの発見性を高めることを目的としています。
-- 📅 2026-04-26 (UTC) / 2026-04-27 (JST)
 
 ## [zenn-qiita-mute-warning](https://cat2151.github.io/zenn-qiita-mute-warning/)
 This is a Chrome extension that displays a warning banner at the top of the screen when you open an article by a user you've muted on Zenn or Qiita
