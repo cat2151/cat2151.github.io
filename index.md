@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-04-30 (UTC) / 2026-05-01 (JST)
+Last Updated: 2026-05-01 (UTC) / 2026-05-02 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,15 +84,6 @@ Last Updated: 2026-04-30 (UTC) / 2026-05-01 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- **Overview**: No description available
-- 📅 2026-04-30 (UTC) / 2026-04-30 (JST)
-
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
@@ -102,10 +93,33 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けに、自身のGitHubリポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、SEO最適化されたMarkdownファイルを生成します。
-- 検索エンジンによるクロールを促進し、開発効率向上やLLMによるリポジトリ参照精度向上を目指します。
-- 📅 2026-04-29 (UTC) / 2026-04-30 (JST)
+- GitHub APIを利用し、リポジトリ情報を自動取得してGitHub Pages向けMarkdownを生成します。
+- SEOを考慮したリポジトリ一覧を自動作成し、検索エンジンやLLMからの参照性を向上させます。
+- リポジトリ概要、バッジ表示、カテゴリ分類など、豊富な情報を持つ一覧ページを生成可能です。
+- 📅 2026-05-01 (UTC) / 2026-05-02 (JST)
+
+## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
+GitHub Copilot Coding Agentを自動化し、人間はissueを投げてPRレビューすればよいだけにする
+
+<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
+
+### Project Highlights
+- GitHub Copilotによる自動実装フェーズのプルリクエスト（PR）を効率的に監視するPythonツールです。
+- 認証済みGitHubユーザーの所有リポジトリを対象に、GraphQL APIを用いてPRのフェーズを自動判定します。
+- PRの状態に応じて、通知送信、コメント投稿、PR Ready化、自動マージ、Issue割り当てなどのアクションを実行します。
+- 📅 2026-05-01 (UTC) / 2026-05-02 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Overview**: No description available
+- 📅 2026-05-01 (UTC) / 2026-05-01 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
@@ -114,7 +128,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
 - **Overview**: No description available
-- 📅 2026-04-29 (UTC) / 2026-04-29 (JST)
+- 📅 2026-05-01 (UTC) / 2026-05-01 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -393,20 +407,6 @@ Server and client that receive YM2151 (OPM) register event logs and perform real
 - **Repository**: [https://github.com/cat2151/own-repos-curator-to-hatena](https://github.com/cat2151/own-repos-curator-to-hatena)
 - **GitHub Pages**: [https://cat2151.github.io/own-repos-curator-to-hatena/](https://cat2151.github.io/own-repos-curator-to-hatena/)
 - **Overview**: No description available
-- 📅 2026-04-07 (UTC) / 2026-04-08 (JST)
-
-## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
-GitHub Copilot Coding Agentを自動化し、人間はissueを投げてPRレビューすればよいだけにする
-
-<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
-
-### Project Highlights
-- GitHub Copilotによる自動実装フェーズのプルリクエスト(PR)を効率的に監視するPythonツールです。
-- 認証済みGitHubユーザーのユーザー所有リポジトリを対象に、PRのフェーズ判定と適切なアクション（通知、コメント投稿、Ready化、マージ）を実行します。
-- GraphQL APIとブラウザ自動化を活用し、開発プロセスの自動化と省力化を支援します。
 - 📅 2026-04-07 (UTC) / 2026-04-08 (JST)
 
 ## [cat-oscilloscope](https://cat2151.github.io/cat-oscilloscope/)
