@@ -1,51 +1,51 @@
-Last updated: 2026-04-30
+Last updated: 2026-05-02
 
 # Development Status
 
 ## 現在のIssues
-- 現在、プロジェクトで追跡中のオープンIssueは存在しません。
-- これは、現行のタスクが完了しているか、あるいは新たな課題がまだ特定されていない状態を示しています。
-- 今後の開発は、既存システムのメンテナンス、改善、または新規機能の検討に焦点を当てることになります。
+- 現在、プロジェクトにオープン中のIssueはありません。
+- これは、以前の作業が順調に進み、現在報告されている問題がないことを示しています。
+- 今後は、既存機能の改善や品質向上、あるいは新規機能の検討に注力できます。
 
 ## 次の一手候補
-1. 自動生成される開発状況レポートの精度向上 (新規タスク #N/A)
-   - 最初の小さな一歩: `generated-docs/development-status.md` の最新の内容をレビューし、本プロンプトのガイドライン（特に「ハルシネーションしない」や「期待する出力フォーマット」）との整合性を確認する。
+1. リポジトリリスト自動更新処理の堅牢性向上
+   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の主要なPythonスクリプト（例: `generate_repo_list.py`, `repository_processor.py`）をレビューし、既存のエラーハンドリングの実装状況と、どのようなエラーケースが考慮されているかを確認する。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: `src/generate_repo_list/generate_repo_list.py`, `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/config_manager.py`
+
+     実行内容: 対象ファイルについて、現在のエラーハンドリングの実装（try-exceptブロック、ログ出力、エラー通知の仕組みなど）を分析し、GitHub Actionsでの実行時に発生しうる潜在的なエラーシナリオ（APIコール失敗、ファイルI/Oエラー、設定ファイル解析エラーなど）に対して、より堅牢なエラー処理を導入するための改善案をMarkdown形式で提案してください。
+
+     確認事項: 作業前に、現在のエラー処理がプロジェクト全体で一貫しているか、およびGitHub Actionsのワークフロー (`.github/workflows/generate_repo_list.yml`など) でエラーがどのように通知されているかを確認してください。
+
+     期待する出力: 既存のエラーハンドリングの評価と、具体的な改善点（例: 特定の例外処理の追加、詳細なログ出力、リトライ機構の検討など）をMarkdown形式で記述してください。
+     ```
+
+2. プロジェクトサマリー生成の精度と有用性の向上
+   - 最初の小さな一歩: `generated-docs/project-overview.md` と `generated-docs/development-status.md` の内容を読み込み、現在のプロジェクト状況や活動と照らし合わせて、情報が正確であるか、より具体的にできる箇所はないか、特に「次の一手」の提案が適切に行われているかをレビューする。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `generated-docs/development-status.md` と `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`
+     対象ファイル: `.github_automation/project_summary/prompts/development-status-prompt.md`, `.github_automation/project_summary/prompts/project-overview-prompt.md`, `generated-docs/development-status.md`, `generated-docs/project-overview.md`
 
-     実行内容: `generated-docs/development-status.md` の内容が、この開発状況生成プロンプトの「生成するもの」「生成しないもの」「出力フォーマット」のガイドラインにどの程度準拠しているかを分析し、改善点をmarkdown形式で出力してください。特に、ハルシネーションの有無、Issue番号の記載ルール、各セクションの行数制限（例：Issuesの3行要約）に注目してください。
+     実行内容: 上記ファイルを分析し、自動生成される開発状況とプロジェクト概要のサマリーが、現在のプロジェクトの活動とファイル構造をより正確かつ有用に反映できるよう、プロンプトまたは生成スクリプト（例: `DevelopmentStatusGenerator.cjs`, `ProjectOverviewGenerator.cjs`）の改善点を提案してください。特に、オープンIssueがない場合の「次の一手候補」の質を向上させる観点を含めてください。
 
-     確認事項: 分析前に、現在の開発状況生成プロンプトの最新版と生成された`development-status.md`の内容を比較検討してください。
+     確認事項: プロジェクトのファイル一覧や最近のコミット履歴が、生成されるサマリーの内容にどの程度反映されているかを確認し、ハルシネーションを避けるための制約を遵守しているかを評価してください。
 
-     期待する出力: 検出された改善点、具体的な修正案、およびそれらを適用した場合の想定される`development-status.md`の一部サンプルをmarkdown形式で生成してください。
+     期待する出力: プロンプトまたはスクリプトの具体的な修正案、およびそれによって改善されるサマリーの例をMarkdown形式で記述してください。
      ```
 
-2. プロジェクトサマリー生成ワークフローの安定性監視 (新規タスク #N/A)
-   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml` の過去数回の実行ログを確認し、エラーや警告が発生していないか、また実行時間が著しく増加していないかを調査する。
+3. `generate_repo_list` モジュール群のテストカバレッジ分析と強化
+   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の主要なPythonモジュール（例: `repository_processor.py`, `markdown_generator.py`, `language_info.py`）を特定し、それらに対応するテストファイルが `tests/` ディレクトリ内に存在するかを確認する。特に、テストが不足していると思われるモジュールを洗い出す。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `.github/workflows/call-daily-project-summary.yml` および関連するワークフロー実行ログ（もしアクセス可能であれば）
+     対象ファイル: `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/language_info.py` および `tests/test_repository_processor.py`, `tests/test_markdown_generator.py`, `tests/test_integration.py` 等の既存テストファイル
 
-     実行内容: `.github/workflows/call-daily-project-summary.yml` のワークフロー実行履歴を分析し、過去1週間の実行でエラーが発生していないか、また平均的な実行時間から大きく逸脱した実行がないかを調査してください。特に、ログから異常を示すパターン（例：特定ステップでの失敗、タイムアウト、異常な出力）を特定してください。
+     実行内容: `src/generate_repo_list/` 以下の主要なモジュールについて、既存のテストファイル (`tests/test_*.py`) の内容とカバレッジ（概念的に）を分析してください。特に、重要な関数やロジックがテストされていない箇所、エッジケースやエラーパスがカバーされていない箇所を特定し、テストカバレッジを向上させるために追加すべきテストケースの概要を提案してください。
 
-     確認事項: GitHub Actionsのワークフロー実行ログへのアクセス権限があることを前提とします。ワークフロー定義ファイル自体の変更は含みません。
+     確認事項: `pytest.ini` や `requirements-dev.txt` にテストツールやカバレッジツールの設定があるかを確認し、既存のテストフレームワークと整合性が取れるように提案してください。
 
-     期待する出力: 過去1週間のワークフロー実行サマリー（成功/失敗回数、平均実行時間、最大実行時間）、特定された潜在的な問題点（もしあれば）、およびログから得られた主要な観察結果をmarkdown形式で出力してください。
-     ```
-
-3. 主要な自動化スクリプトの依存関係チェックと更新 (新規タスク #N/A)
-   - 最初の小さな一歩: `.github/actions-tmp/package.json` ファイルを確認し、依存関係のリストとそのバージョンを把握する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `.github/actions-tmp/package.json` と `.github/actions-tmp/package-lock.json`
-
-     実行内容: `.github/actions-tmp/package.json` に記載されている依存関係を分析し、各依存パッケージについて、NPMレジストリ上の最新安定版バージョンと比較して、大幅なバージョン遅延がないかを調査してください。特に、既知のセキュリティ脆弱性やパフォーマンス改善が含まれるメジャーバージョンアップがあるかを確認してください。
-
-     確認事項: 依存関係の更新は、互換性の問題を引き起こす可能性があるため、慎重な検討が必要です。直接的な更新作業ではなく、更新の必要性の評価に留めてください。
-
-     期待する出力: 各依存パッケージの現在のバージョン、最新の安定バージョン、および推奨される更新の有無とその理由（セキュリティ修正、主要な機能改善など）をまとめたリストをmarkdown形式で生成してください。
+     期待する出力: 各モジュールで不足しているテストカテゴリ（例: ユニットテスト、結合テスト、エラーケーステスト）と、それぞれについて具体的なテストケースのタイトルと期待される動作の概要をMarkdown形式で記述してください。
      ```
 
 ---
-Generated at: 2026-04-30 07:23:31 JST
+Generated at: 2026-05-02 07:20:01 JST
