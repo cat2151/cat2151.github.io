@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-05-03 (UTC) / 2026-05-04 (JST)
+Last Updated: 2026-05-04 (UTC) / 2026-05-05 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けに、GitHub APIを利用してリポジトリ一覧を自動生成するシステムです。
-- SEO最適化されたMarkdownファイルを生成し、検索エンジンとLLMからの参照性を向上させます。
-- 各リポジトリの概要を自動取得・表示し、ユーザーへの情報提供を効率化します。
-- 📅 2026-05-03 (UTC) / 2026-05-04 (JST)
+- GitHub API を活用し、自身のGitHubリポジトリ情報を自動で取得します。
+- 取得した情報から、JekyllベースのGitHub Pagesサイト向けにSEOに最適化されたリポジトリ一覧Markdownを生成します。
+- これにより、リポジトリが検索エンジンにインデックスされやすくなり、LLMの参照失敗といった課題の緩和を目指します。
+- 📅 2026-05-04 (UTC) / 2026-05-05 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -105,7 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
-- 📅 2026-05-03 (UTC) / 2026-05-03 (JST)
+- 📅 2026-05-04 (UTC) / 2026-05-04 (JST)
 
 ## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
 GitHub Copilot Coding Agentを自動化し、人間はissueを投げてPRレビューすればよいだけにする
