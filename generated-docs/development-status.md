@@ -1,51 +1,55 @@
-Last updated: 2026-05-05
+Last updated: 2026-05-07
 
 # Development Status
 
 ## 現在のIssues
 現在オープン中のIssueはありません。
+そのため、新規の改善提案を「次の一手候補」として提示します。
+これらの提案は、プロジェクトの保守性、機能性、情報提供の質を高めることを目的としています。
 
 ## 次の一手候補
+1.  リポジトリリスト生成スクリプトのテストカバレッジ向上（新規タスク）
+    -   最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` 内の主要な関数（例: `generate_repository_list`）について、基本的なユニットテストケースを追加する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: src/generate_repo_list/generate_repo_list.py および tests/test_generate_repo_list.py (新規作成)
 
-*注: 現在オープン中のIssueがないため、以下の候補は新たな取り組みの提案であり、特定の既存Issue番号には紐づいていません。ハルシネーションを避けるため、ここに存在しないIssue番号やリンクは記載していません。*
+        実行内容: src/generate_repo_list/generate_repo_list.py 内の `generate_repository_list` 関数について、以下の点を考慮したユニットテストケースを `tests/test_generate_repo_list.py` として作成してください：
+        1) モックを使った外部依存（例: GitHub API呼び出し）のシミュレーション
+        2) 正常系、および想定される異常系のテストシナリオ（例: 設定ファイル読み込みエラー）
+        3) 設定ファイルの読み込みと処理結果の検証
+        テストファイルには、`pytest` フレームワークを使用してください。
 
-1. リポジトリリスト生成機能の拡張：最終コミット日時メトリックの追加
-   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py`内で各リポジトリの最終コミット日時を取得するGitHub APIコールまたはgitコマンド実行方法を調査し、その結果をデータ構造に追加する方法を検討する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/repository_processor.py, src/generate_repo_list/statistics_calculator.py, src/generate_repo_list/markdown_generator.py
+        確認事項: 既存のテストスイート（`tests/` ディレクトリ内）との整合性を確認し、新しいテストファイルが既存のテスト実行プロセスに干渉しないようにしてください。また、必要な依存関係（例: `pytest-mock`）があれば、`requirements-dev.txt` への追記を検討してください。
 
-     実行内容: リポジトリリスト生成機能に、各リポジトリの最終コミット日時を新しいメトリックとして追加する機能を分析し、実装に必要な変更点を洗い出してください。具体的には、repository_processor.pyでのデータ取得方法、statistics_calculator.pyでの集計方法（もし必要なら）、およびmarkdown_generator.pyでの表示方法について、既存のコードベースと整合性を保ちつつ提案してください。
+        期待する出力: `tests/test_generate_repo_list.py` という新規ファイルに、上記関数のユニットテストコードを記述してください。
+        ```
 
-     確認事項: GitHub APIのレートリミットや認証要件、既存のデータ構造への影響、および生成されるMarkdownファイルのフォーマット変更の有無を確認してください。
+2.  プロジェクトサマリーのコンテンツ拡充（新規タスク）
+    -   最初の小さな一歩: 現在の `development-status.md` に、最近のコミットで最も変更があったファイルトップ3をリストする機能を追加する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs および .github/actions-tmp/.github_automation/project_summary/scripts/development/GitUtils.cjs
 
-     期待する出力: 最終コミット日時メトリックを追加するためのコード変更案をmarkdown形式で出力してください。これには、関連ファイルへの変更箇所と、必要な設定（APIトークン等）に関するコメントを含めてください。
-     ```
+        実行内容: `DevelopmentStatusGenerator.cjs` に、最近のコミット（過去7日間）で変更されたファイルのうち、最も変更行数が多かった上位3ファイルを特定し、そのファイルパスと変更行数を取得するロジックを追加してください。この情報は、生成される `development-status.md` の「最近の変更」セクションに「変更されたファイルトップ3」として含めてください。変更行数を取得する機能が `GitUtils.cjs` にない場合は、同ファイルに適切な関数を追加してください。
 
-2. 日次プロジェクトサマリーワークフローの堅牢性向上
-   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml`と`.github/actions-tmp/.github/workflows/daily-project-summary.yml`の内容を確認し、特にエラーハンドリングやログ出力の現状を把握する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/workflows/call-daily-project-summary.yml, .github/actions-tmp/.github/workflows/daily-project-summary.yml, .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs
+        確認事項: `GitUtils.cjs` がファイルの変更行数を取得する既存の機能を持っているか、またはその機能の追加が必要かを確認してください。また、生成されるMarkdownのフォーマットに適切に組み込まれることを確認し、既存のセクションと自然に統合されるようにしてください。
 
-     実行内容: 日次プロジェクトサマリー生成ワークフローの堅牢性を向上させるための分析を実施してください。具体的には、エラー発生時の通知メカニズム、より詳細なログ出力の導入、および失敗時のリトライ戦略の可能性について、既存のワークフローとスクリプト（ProjectSummaryCoordinator.cjs）の観点から改善案を提案してください。
+        期待する出力: `DevelopmentStatusGenerator.cjs` と必要に応じて `GitUtils.cjs` を修正し、最も変更されたファイルをリストする機能を追加したJavaScriptコードを提供してください。
+        ```
 
-     確認事項: 既存のワークフローロジックへの影響、通知設定（例: Slack, GitHub Issues）の要件、およびログ出力の機密情報に関する制約を確認してください。
+3.  古いIssueノートの棚卸しとアーカイブ自動化の検討（新規タスク）
+    -   最初の小さな一歩: `issue-notes` ディレクトリ内のファイルと、GitHubのクローズ済みIssueを比較し、既にクローズされたIssueに対応するノートファイルを特定するスクリプトのプロトタイプを作成する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: issue-notes/ ディレクトリ内のファイル群、および scripts/check_closed_issue_notes.py (新規作成)
 
-     期待する出力: 堅牢性向上のための具体的な改善案をmarkdown形式で生成してください。これには、ワークフローファイルとスクリプトファイルにおける変更の概要、および導入が推奨されるGitHub Actionsの機能（例: `on.failure`, `continue-on-error`, `timeout-minutes`）に関する説明を含めてください。
-     ```
+        実行内容: `issue-notes` ディレクトリ内のMarkdownファイル名（例: `10.md` から Issue 番号 `10` を抽出）と、GitHub APIを通じて取得できるクローズ済みIssueのリストを比較し、対応するクローズ済みIssueがある `issue-notes` ファイルのリストを生成するPythonスクリプトを作成してください。スクリプトは、GitHub APIトークンを環境変数（例: `GITHUB_TOKEN`）から安全に読み込み、認証に使用するように実装してください。
 
-3. 開発状況生成プロンプトの最適化とテストカバレッジの向上
-   - 最初の小さな一歩: `github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`と`github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`を読み込み、現在のプロンプトがどのように利用されているか、またそれがどのような出力を生成しているかを確認する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/development/IssueTracker.cjs
+        確認事項: GitHub APIのレート制限と、必要なAPIスコープ（一般的にはリポジトリ情報への読み取りアクセス権 `public_repo` または `repo`）を確認してください。また、スクリプトが誤ってオープン中のIssueに対応するノートを誤認識しないよう、慎重にロジックを設計してください。
 
-     実行内容: 現在の開発状況生成プロンプト（development-status-prompt.md）の内容が、より的確な「開発状況」を生成できるように最適化できるか分析し、その生成ロジック（DevelopmentStatusGenerator.cjs）とIssueTracker.cjsとの連携に関して、テストカバレッジを向上させるための提案を行ってください。特に、オープンIssueがない場合の出力の質や、ハルシネーション防止の観点から、プロンプトの内容とスクリプトの連携を評価してください。
-
-     確認事項: プロンプトの変更が他のプロジェクトサマリー生成プロセスに与える影響、およびスクリプトのテストケース追加による既存のCI/CDパイプラインへの影響を確認してください。
-
-     期待する出力: 開発状況生成プロンプトの改善案と、DevelopmentStatusGenerator.cjsおよびIssueTracker.cjsに対するテストカバレッジを向上させるための具体的なテストケース案をmarkdown形式で出力してください。これには、プロンプトの修正例と、新しいテストシナリオ（例えば、オープンIssueが0件の場合の挙動確認）の記述を含めてください。
+        期待する出力: `scripts/check_closed_issue_notes.py` という新規ファイルに、上記比較ロジックを実装したPythonスクリプトを提供してください。
+        ```
 
 ---
-Generated at: 2026-05-05 07:24:24 JST
+Generated at: 2026-05-07 07:20:26 JST
