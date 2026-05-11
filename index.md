@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-05-10 (UTC) / 2026-05-11 (JST)
+Last Updated: 2026-05-11 (UTC) / 2026-05-12 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、ユーザーのリポジトリ情報を自動取得するシステムです。
-- GitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧Markdownファイルを生成します。
-- 検索エンジンでのリポジトリ発見性を高め、LLMによる参照失敗問題を緩和することを目指します。
-- 📅 2026-05-10 (UTC) / 2026-05-11 (JST)
+- GitHub Pagesサイト向けに、ユーザーのリポジトリ一覧ページを自動生成するシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、SEOに最適化されたMarkdown形式で出力します。
+- 検索エンジンによるクロールを促進し、リポジトリ参照におけるLLMの課題緩和に貢献します。
+- 📅 2026-05-11 (UTC) / 2026-05-12 (JST)
 
 ## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
 
@@ -105,7 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
 - **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
 - **Overview**: No description available
-- 📅 2026-05-10 (UTC) / 2026-05-10 (JST)
+- 📅 2026-05-11 (UTC) / 2026-05-11 (JST)
 
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
 
@@ -114,7 +114,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
 - **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
 - **Overview**: No description available
-- 📅 2026-05-09 (UTC) / 2026-05-09 (JST)
+- 📅 2026-05-11 (UTC) / 2026-05-11 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
