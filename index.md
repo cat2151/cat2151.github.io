@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-05-13 (UTC) / 2026-05-14 (JST)
+Last Updated: 2026-05-14 (UTC) / 2026-05-15 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,19 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けに、自身のGitHubリポジトリ一覧を自動生成するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、SEO最適化されたMarkdownファイルを生成します。
-- 検索エンジンへのクロールを促進し、LLMによるリポジトリ参照失敗の緩和を目指します。
-- 📅 2026-05-13 (UTC) / 2026-05-14 (JST)
-
-## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
-
-<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
-- **Overview**: No description available
-- 📅 2026-05-13 (UTC) / 2026-05-13 (JST)
+- GitHub APIを利用してリポジトリ情報を取得し、自動でリポジトリ一覧を生成するシステムです。
+- JekyllベースのGitHub Pagesサイト向けにSEO最適化されたMarkdownファイルを生成します。
+- これにより、検索エンジンでの発見性を高め、LLMによるリポジトリ参照の問題を緩和します。
+- 📅 2026-05-14 (UTC) / 2026-05-15 (JST)
 
 ## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
 
@@ -113,6 +104,15 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
 - **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
 - **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
+- **Overview**: No description available
+- 📅 2026-05-14 (UTC) / 2026-05-14 (JST)
+
+## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
+
+<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
 - **Overview**: No description available
 - 📅 2026-05-13 (UTC) / 2026-05-13 (JST)
 
