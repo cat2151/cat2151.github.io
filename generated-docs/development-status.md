@@ -1,54 +1,51 @@
-Last updated: 2026-05-15
+Last updated: 2026-05-16
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。現在のプロジェクトは、自動化されたリポジトリリストの更新と、プロジェクトサマリーの自動生成が定期的に実行されています。
-- 現在、主要な機能に関する未解決のバグや明確な改善要望は特定されていません。
-- プロジェクトは安定した運用状態にあり、自動化ワークフローの精度と網羅性の向上に注力する段階です。
-- 次のステップとして、既存の機能のさらなる洗練や、より詳細な情報提供の可能性を探ります。
+- 現在オープン中のIssueはありません。
+- プロジェクトは主に自動更新とメンテナンスのフェーズにあります。
+- 新しい機能開発や顕在化している不具合に関するタスクは存在しません。
 
 ## 次の一手候補
-※現在オープン中のIssueがないため、以下の候補は新たな改善提案であり、既存のIssue番号は持ちません。
+1.  自動生成される開発状況レポートの精度向上
+    -   最初の小さな一歩: `generated-docs/development-status-generated-prompt.md` と `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` の内容を確認し、現在のIssueが存在しない場合にどのような出力が生成されるかを分析する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` および `generated-docs/development-status-generated-prompt.md`
 
-1. 開発状況生成の精度向上（Issueなし時の情報活用）
-   - 最初の小さな一歩: `DevelopmentStatusGenerator.cjs`がオープン中のIssueがない場合に、どのような追加情報を利用して開発状況をより詳細に記述できるか、その可能性を分析する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
+        実行内容: 対象ファイルの内容を分析し、現在のプロジェクトのようにオープン中のIssueがない場合に、より有益で具体的な「次の一手候補」を提示できるようにプロンプトを改善するための提案をMarkdown形式で出力してください。特に、プロジェクトの最近の活動（自動更新など）から推測できる、継続的な改善タスクを抽出するロジックの改善点に焦点を当ててください。
 
-     実行内容: `DevelopmentStatusGenerator.cjs`のソースコードを分析し、オープン中のIssueがない場合にどのような情報源（例：最近のコミット履歴、変更されたファイルの傾向、他の自動生成ドキュメントのサマリー）を利用して、開発状況の記述をより具体的に、かつ洞察に富んだものにできるかを特定してください。特に、現在の「現在のIssues」セクションが「オープン中のIssueはありません」となる場合に、代替として活用できる情報と、そのロジックの改善点を提案してください。
+        確認事項: プロンプトの変更が、現状の自動生成ワークフロー全体に与える影響（ハルシネーションの増加など）がないことを確認してください。また、他のプロンプトファイル（例: `project-overview-prompt.md`）との整合性も考慮してください。
 
-     確認事項: `GitUtils.cjs`や`ProjectFileUtils.cjs`など、既存のユーティリティが提供するデータ範囲内で実現可能かを確認し、ハルシネーションを避けるため、プロジェクト内で実際に取得可能な情報源に限定して検討してください。
+        期待する出力: 開発状況プロンプトの改善案をMarkdown形式で生成してください。提案は、具体的なプロンプトの修正例、およびそれがどのような新しい「次の一手候補」を生成できるようになるかを説明する形で記述してください。
+        ```
 
-     期待する出力: 改善提案をMarkdown形式で出力し、具体的なコード変更の方向性（擬似コードまたは説明）を含めてください。
-     ```
+2.  リポジトリリスト自動生成ワークフローの堅牢性強化
+    -   最初の小さな一歩: `.github/workflows/generate_repo_list.yml` をレビューし、ワークフローの各ステップでどのようなエラーが発生する可能性があるか、またそれらがどのように処理されているかを特定する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `.github/workflows/generate_repo_list.yml` および `src/generate_repo_list/` ディレクトリ内の主要なPythonスクリプト（例: `generate_repo_list.py`, `repository_processor.py`）
 
-2. 大容量ファイルチェック結果のサマリーへの統合
-   - 最初の小さな一歩: `check-large-files`アクションの出力形式を理解し、`daily-project-summary`ワークフローがその結果をどのように取得・利用できるかを調査する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: .github/workflows/call-check-large-files.yml, .github/actions-tmp/.github_automation/check-large-files/scripts/check_large_files.py, .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
+        実行内容: 対象ファイルについて、リポジトリリストの自動生成ワークフローにおける潜在的なエラーポイント（APIレートリミット、ネットワークエラー、予期せぬデータ形式など）と、それらのエラーに対する既存のエラーハンドリングメカニズムを分析してください。より堅牢なワークフローを実現するための改善策（リトライメカニズム、通知機能、詳細なログ出力など）を提案してください。
 
-     実行内容: `check-large-files`アクションの実行結果（特に、大きなファイルが検出された場合の警告やリスト）がどのように出力され、`daily-project-summary`ワークフローがその情報を取得・消費できるかを調査してください。`DevelopmentStatusGenerator.cjs`が、これらの大容量ファイル情報を開発状況レポートに含めるための具体的な改修点を提案してください。これには、結果のパース方法とレポートへの組み込み方法が含まれます。
+        確認事項: 提案する改善策がGitHub Actionsの実行時間やリソース消費に大きな影響を与えないことを確認してください。また、既存のワークフローロジックや依存関係を損なわないことを保証してください。
 
-     確認事項: `check_large_files.py`の出力形式と、`ProjectSummaryCoordinator.cjs`が外部データを読み込むための既存のメカニズムを考慮してください。また、新たな複雑な依存関係や、過度なロギングを追加しないように注意してください。
+        期待する出力: リポジトリリスト自動生成ワークフローの堅牢性強化に関する分析結果と具体的な改善提案をMarkdown形式で生成してください。提案は、コードの修正案やGitHub Actionsのワークフロー定義の変更例を含めてください。
+        ```
 
-     期待する出力: 大容量ファイルチェック結果を開発状況レポートに統合するためのステップと、関連ファイル（`ProjectSummaryCoordinator.cjs`または`DevelopmentStatusGenerator.cjs`）における具体的な変更案をMarkdown形式で記述してください。
-     ```
+3.  コードベース全体の静的解析ルールおよびテストカバレッジの継続的な見直し
+    -   最初の小さな一歩: `ruff.toml` の現在の設定内容を確認し、適用されているリンティングルールと、除外されているルールやファイルパターンを把握する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `ruff.toml`, `pyproject.toml` (もし存在すれば), および `tests/` ディレクトリ内の既存のテストファイル
 
-3. リポジトリリスト生成機能の拡張（詳細統計の追加）
-   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py`で現在収集されているリポジトリ情報をレビューし、追加で収集可能な有用な統計情報（例：最終コミット日時、スター数、主要言語の割合）を特定する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, src/generate_repo_list/markdown_generator.py, src/generate_repo_list/statistics_calculator.py
+        実行内容: 対象ファイルとプロジェクトの主要なPythonコード（`src/` ディレクトリ）を分析し、現在の静的解析（ruff）の設定がプロジェクトのコード品質基準に適切であるかを評価してください。また、`tests/` ディレクトリの内容を分析し、主要な機能（特に`src/generate_repo_list/`）に対するテストカバレッジの現状と、改善の余地がある領域を特定してください。静的解析ルールの厳格化やテストカバレッジ向上のための具体的な提案をしてください。
 
-     実行内容: `generate_repo_list`機能が現在収集しているリポジトリ情報に加えて、新たにどのような統計情報（例：リポジトリの最終コミット日時、GitHubのスター数、フォーク数、トップ3のプログラミング言語とその割合など）を追加できるかを分析してください。これらの新しい統計情報を効果的に収集し、最終的なMarkdown形式の出力（`index.md`など）に含めるための具体的な変更点を提案してください。
+        確認事項: 提案する静的解析ルールの変更が、既存コードに大量の警告やエラーを発生させないか、またはその対応が現実的であることを確認してください。テストカバレッジの目標を設定する際は、重要度と実現可能性を考慮してください。
 
-     確認事項: 既存のGitHub API利用制限や、追加する統計情報がプロジェクトの実行時間やAPIレートリミットに過度な影響を与えないことを確認してください。また、`markdown_generator.py`が新しいデータをどのように表示し、ユーザーにとって分かりやすい形にできるかについても検討してください。
-
-     期待する出力: 追加したい統計情報のリスト、それらを`repository_processor.py`で収集する方法、`statistics_calculator.py`での計算（必要であれば）、および`markdown_generator.py`での表示方法を含む詳細な改善計画をMarkdown形式で出力してください。
-     ```
+        期待する出力: 静的解析ルールの見直しとテストカバレッジ向上に関する分析結果および具体的な提案をMarkdown形式で生成してください。提案には、`ruff.toml`の修正案、新たなテストの追加が必要なファイルや機能、およびその優先順位を含めてください。
+        ```
 
 ---
-Generated at: 2026-05-15 07:27:12 JST
+Generated at: 2026-05-16 07:23:50 JST
