@@ -1,51 +1,54 @@
-Last updated: 2026-05-16
+Last updated: 2026-05-17
 
 # Development Status
 
 ## 現在のIssues
-- 現在オープン中のIssueはありません。
-- プロジェクトは主に自動更新とメンテナンスのフェーズにあります。
-- 新しい機能開発や顕在化している不具合に関するタスクは存在しません。
+- 現在、プロジェクトにはオープン中のIssueは存在しません。
+- したがって、直ちに対応すべきバグや機能要望はありません。
+- 今後の開発は、既存機能の改善やプロジェクトの健全性向上に注力できます。
 
 ## 次の一手候補
-1.  自動生成される開発状況レポートの精度向上
-    -   最初の小さな一歩: `generated-docs/development-status-generated-prompt.md` と `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` の内容を確認し、現在のIssueが存在しない場合にどのような出力が生成されるかを分析する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` および `generated-docs/development-status-generated-prompt.md`
+1. リポジトリ情報処理のロバスト性向上 [Issue #70](../issue-notes/70.md)
+   - 最初の小さな一歩: `src/generate_repo_list/project_overview_fetcher.py`内のAPIエラーハンドリングを強化し、ログ出力を行う。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `src/generate_repo_list/project_overview_fetcher.py`
 
-        実行内容: 対象ファイルの内容を分析し、現在のプロジェクトのようにオープン中のIssueがない場合に、より有益で具体的な「次の一手候補」を提示できるようにプロンプトを改善するための提案をMarkdown形式で出力してください。特に、プロジェクトの最近の活動（自動更新など）から推測できる、継続的な改善タスクを抽出するロジックの改善点に焦点を当ててください。
+     実行内容: GitHub APIからのリポジトリ情報取得処理（例: `fetch_repository_overview`メソッド）において、API呼び出しが失敗した場合の例外処理を追加してください。具体的には、HTTPエラー（4xx, 5xx）やネットワークエラーを捕捉し、エラーメッセージと共にログに記録するロジックを実装してください。
 
-        確認事項: プロンプトの変更が、現状の自動生成ワークフロー全体に与える影響（ハルシネーションの増加など）がないことを確認してください。また、他のプロンプトファイル（例: `project-overview-prompt.md`）との整合性も考慮してください。
+     確認事項: 既存のメソッドシグネチャや、エラーが発生した場合の呼び出し元（例: `repository_processor.py`）への影響を確認してください。また、ログ出力の既存の実装パターン（もしあれば）に合わせるようにしてください。
 
-        期待する出力: 開発状況プロンプトの改善案をMarkdown形式で生成してください。提案は、具体的なプロンプトの修正例、およびそれがどのような新しい「次の一手候補」を生成できるようになるかを説明する形で記述してください。
-        ```
+     期待する出力: 変更内容を反映した`src/generate_repo_list/project_overview_fetcher.py`の更新版をmarkdown形式で出力してください。
+     ```
 
-2.  リポジトリリスト自動生成ワークフローの堅牢性強化
-    -   最初の小さな一歩: `.github/workflows/generate_repo_list.yml` をレビューし、ワークフローの各ステップでどのようなエラーが発生する可能性があるか、またそれらがどのように処理されているかを特定する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `.github/workflows/generate_repo_list.yml` および `src/generate_repo_list/` ディレクトリ内の主要なPythonスクリプト（例: `generate_repo_list.py`, `repository_processor.py`）
+2. 開発状況生成プロンプトの改善 [Issue #71](../issue-notes/71.md)
+   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`に、オープンIssueがない場合の次の一手候補の考慮事項を追加する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`
 
-        実行内容: 対象ファイルについて、リポジトリリストの自動生成ワークフローにおける潜在的なエラーポイント（APIレートリミット、ネットワークエラー、予期せぬデータ形式など）と、それらのエラーに対する既存のエラーハンドリングメカニズムを分析してください。より堅牢なワークフローを実現するための改善策（リトライメカニズム、通知機能、詳細なログ出力など）を提案してください。
+     実行内容: 現在の「生成するもの」セクションに、オープンIssueが存在しない場合に、**「既存機能の改善、コード品質の向上、ドキュメントの充実、テストカバレッジの拡張など、プロジェクトの健全性を高める提案を優先的に考慮する」**といった具体的な指示を追加し、ハルシネーションを避けるためのガイドラインを強化してください。
 
-        確認事項: 提案する改善策がGitHub Actionsの実行時間やリソース消費に大きな影響を与えないことを確認してください。また、既存のワークフローロジックや依存関係を損なわないことを保証してください。
+     確認事項: 既存のプロンプトの意図と整合性を保ち、冗長にならないように注意してください。また、提案される「次の一手」が開発者の実務に役立つよう、より具体的かつ実行可能な内容になるような指示であることを確認してください。
 
-        期待する出力: リポジトリリスト自動生成ワークフローの堅牢性強化に関する分析結果と具体的な改善提案をMarkdown形式で生成してください。提案は、コードの修正案やGitHub Actionsのワークフロー定義の変更例を含めてください。
-        ```
+     期待する出力: 変更内容を反映した`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`の更新版をmarkdown形式で出力してください。
+     ```
 
-3.  コードベース全体の静的解析ルールおよびテストカバレッジの継続的な見直し
-    -   最初の小さな一歩: `ruff.toml` の現在の設定内容を確認し、適用されているリンティングルールと、除外されているルールやファイルパターンを把握する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `ruff.toml`, `pyproject.toml` (もし存在すれば), および `tests/` ディレクトリ内の既存のテストファイル
+3. `src/generate_repo_list`のテストカバレッジ向上 [Issue #72](../issue-notes/72.md)
+   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py`の`generate_markdown_output`関数に対する単体テストを強化する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `tests/test_markdown_generator.py` および `src/generate_repo_list/markdown_generator.py` (参照用)
 
-        実行内容: 対象ファイルとプロジェクトの主要なPythonコード（`src/` ディレクトリ）を分析し、現在の静的解析（ruff）の設定がプロジェクトのコード品質基準に適切であるかを評価してください。また、`tests/` ディレクトリの内容を分析し、主要な機能（特に`src/generate_repo_list/`）に対するテストカバレッジの現状と、改善の余地がある領域を特定してください。静的解析ルールの厳格化やテストカバレッジ向上のための具体的な提案をしてください。
+     実行内容: `src/generate_repo_list/markdown_generator.py`の`generate_markdown_output`関数について、`tests/test_markdown_generator.py`に以下の観点からテストケースを追加してください：
+     1. 入力データ（リポジトリ情報）が空の場合の挙動を確認するテスト
+     2. 特殊文字を含む文字列（例: Markdown記法と衝突する文字）が適切にエスケープされて出力されるかを確認するテスト
+     3. 複数のリポジトリ情報が与えられた際に、それらが正しく整形されて結合されるかを確認するテスト
+     4. バッジの生成ロジックが期待通りに機能するか（`badge_generator.py`との連携部分をモック化して）確認するテスト
 
-        確認事項: 提案する静的解析ルールの変更が、既存コードに大量の警告やエラーを発生させないか、またはその対応が現実的であることを確認してください。テストカバレッジの目標を設定する際は、重要度と実現可能性を考慮してください。
+     確認事項: 既存のテストコードの記述スタイルに合わせるようにしてください。また、テストデータを適切にモック化し、外部依存を排除した単体テストであることを確認してください。`src/generate_repo_list/markdown_generator.py`自体への変更は不要です。
 
-        期待する出力: 静的解析ルールの見直しとテストカバレッジ向上に関する分析結果および具体的な提案をMarkdown形式で生成してください。提案には、`ruff.toml`の修正案、新たなテストの追加が必要なファイルや機能、およびその優先順位を含めてください。
-        ```
+     期待する出力: 上記テストケースを追加した`tests/test_markdown_generator.py`の更新版をmarkdown形式で出力してください。
 
 ---
-Generated at: 2026-05-16 07:23:50 JST
+Generated at: 2026-05-17 07:19:38 JST
