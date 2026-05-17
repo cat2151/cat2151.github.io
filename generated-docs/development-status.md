@@ -1,54 +1,53 @@
-Last updated: 2026-05-17
+Last updated: 2026-05-18
 
 # Development Status
 
 ## 現在のIssues
-- 現在、プロジェクトにはオープン中のIssueは存在しません。
-- したがって、直ちに対応すべきバグや機能要望はありません。
-- 今後の開発は、既存機能の改善やプロジェクトの健全性向上に注力できます。
+オープン中のIssueはありません。最近の活動は、主にリポジトリリストの自動更新とプロジェクトサマリー（概要および開発状況）の生成に集中しています。
+現在の開発状況レポートのプロンプトと出力は安定しており、主要な自動化ワークフローが継続的に機能しています。
+大規模ファイルチェックやRust関連のワークフローも継続的に監視され、問題なく動作しています。
 
 ## 次の一手候補
-1. リポジトリ情報処理のロバスト性向上 [Issue #70](../issue-notes/70.md)
-   - 最初の小さな一歩: `src/generate_repo_list/project_overview_fetcher.py`内のAPIエラーハンドリングを強化し、ログ出力を行う。
+1. `development-status-prompt.md` の出力品質向上とハルシネーション防止
+   - 最初の小さな一歩: 現在の `development-status-prompt.md` と `Development Status` の出力結果を比較し、「生成しないもの」ガイドラインとの乖離がないかレビューする。特に、具体的なタスク提案や無価値なタスクの生成リスクに注目する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/project_overview_fetcher.py`
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, generated-docs/development-status.md
 
-     実行内容: GitHub APIからのリポジトリ情報取得処理（例: `fetch_repository_overview`メソッド）において、API呼び出しが失敗した場合の例外処理を追加してください。具体的には、HTTPエラー（4xx, 5xx）やネットワークエラーを捕捉し、エラーメッセージと共にログに記録するロジックを実装してください。
+     実行内容: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` が「今日のissue目標」やハルシネーションを誘発していないか、また「Agent実行プロンプト」生成ガイドラインの必須要素が適切に反映されるような指示が含まれているかを分析してください。現在の `generated-docs/development-status.md` の出力結果も参考に、具体的な改善案があれば提案してください。
 
-     確認事項: 既存のメソッドシグネチャや、エラーが発生した場合の呼び出し元（例: `repository_processor.py`）への影響を確認してください。また、ログ出力の既存の実装パターン（もしあれば）に合わせるようにしてください。
+     確認事項: プロンプトの変更が、開発状況レポートの他のセクション（例：現在のIssues、次の一手候補のAgent実行プロンプト）に悪影響を与えないことを確認してください。また、生成される`Agent実行プロンプト`が「生成ガイドライン」に完全に準拠しているかを確認してください。
 
-     期待する出力: 変更内容を反映した`src/generate_repo_list/project_overview_fetcher.py`の更新版をmarkdown形式で出力してください。
+     期待する出力: `development-status-prompt.md` の改善点と、その理由をMarkdown形式で記述してください。変更提案がある場合は、修正されたプロンプトの抜粋を含めてください。
      ```
 
-2. 開発状況生成プロンプトの改善 [Issue #71](../issue-notes/71.md)
-   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`に、オープンIssueがない場合の次の一手候補の考慮事項を追加する。
+2. リポジトリリスト生成スクリプト `generate_repo_list.py` のコード品質向上
+   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` ファイルを読み込み、コードの可読性、重複、潜在的なパフォーマンスボトルネック（特にAPI呼び出しやファイルI/O関連）がないかを確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`
+     対象ファイル: src/generate_repo_list/generate_repo_list.py
 
-     実行内容: 現在の「生成するもの」セクションに、オープンIssueが存在しない場合に、**「既存機能の改善、コード品質の向上、ドキュメントの充実、テストカバレッジの拡張など、プロジェクトの健全性を高める提案を優先的に考慮する」**といった具体的な指示を追加し、ハルシネーションを避けるためのガイドラインを強化してください。
+     実行内容: 対象ファイルのコードを分析し、以下の観点から改善点を提案してください：
+     1. コードの重複やリファクタリングの機会
+     2. API呼び出しやファイル操作における潜在的なパフォーマンス最適化の可能性
+     3. 全体的なコードの可読性向上
 
-     確認事項: 既存のプロンプトの意図と整合性を保ち、冗長にならないように注意してください。また、提案される「次の一手」が開発者の実務に役立つよう、より具体的かつ実行可能な内容になるような指示であることを確認してください。
+     確認事項: 変更が既存の機能や生成されるリポジトリリストの正確性に影響を与えないことを確認してください。特に、`src/generate_repo_list/config.yml`や`src/generate_repo_list/json_ld_template.json`との連携に注意してください。
 
-     期待する出力: 変更内容を反映した`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`の更新版をmarkdown形式で出力してください。
+     期待する出力: 分析結果と、具体的な改善提案（コードスニペットを含む）をMarkdown形式で出力してください。
      ```
 
-3. `src/generate_repo_list`のテストカバレッジ向上 [Issue #72](../issue-notes/72.md)
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py`の`generate_markdown_output`関数に対する単体テストを強化する。
+3. GitHub Actions ワークフローの依存関係を可視化し、メンテナンス性を向上させる
+   - 最初の小さな一歩: `.github/workflows/` および `.github/actions-tmp/.github/workflows/` ディレクトリ内の `call-*.yml` ファイルと、それらが呼び出すワークフローファイル（例: `call-translate-readme.yml` が `translate-readme.yml` を呼び出す関係）をリストアップし、依存関係マップの草案を作成する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `tests/test_markdown_generator.py` および `src/generate_repo_list/markdown_generator.py` (参照用)
+     対象ファイル: .github/workflows/*.yml, .github/actions-tmp/.github/workflows/*.yml
 
-     実行内容: `src/generate_repo_list/markdown_generator.py`の`generate_markdown_output`関数について、`tests/test_markdown_generator.py`に以下の観点からテストケースを追加してください：
-     1. 入力データ（リポジトリ情報）が空の場合の挙動を確認するテスト
-     2. 特殊文字を含む文字列（例: Markdown記法と衝突する文字）が適切にエスケープされて出力されるかを確認するテスト
-     3. 複数のリポジトリ情報が与えられた際に、それらが正しく整形されて結合されるかを確認するテスト
-     4. バッジの生成ロジックが期待通りに機能するか（`badge_generator.py`との連携部分をモック化して）確認するテスト
+     実行内容: これらのファイル間の呼び出し関係（`uses: octo-org/repo-name/.github/workflows/workflow-name.yml@main` 形式や、`workflow_call`による呼び出し）を抽出し、ワークフローの依存関係図またはリストをMarkdown形式で作成してください。特に、`call-` プレフィックスを持つワークフローがどのメインワークフローを呼び出しているかを明確にしてください。
 
-     確認事項: 既存のテストコードの記述スタイルに合わせるようにしてください。また、テストデータを適切にモック化し、外部依存を排除した単体テストであることを確認してください。`src/generate_repo_list/markdown_generator.py`自体への変更は不要です。
+     確認事項: 全ての `.yml` ファイルを対象とし、見落としがないことを確認してください。また、GitHub Actionsの構文（`on:`トリガー、`inputs`、`secrets`など）も考慮に入れてください。
 
-     期待する出力: 上記テストケースを追加した`tests/test_markdown_generator.py`の更新版をmarkdown形式で出力してください。
+     期待する出力: ワークフロー間の依存関係を明記したMarkdown形式のリスト、またはMermaid形式のグラフ（可能であれば）で出力してください。また、現状の構造における潜在的な改善点や文書化の推奨事項があれば記述してください。
 
 ---
-Generated at: 2026-05-17 07:19:38 JST
+Generated at: 2026-05-18 07:21:12 JST
