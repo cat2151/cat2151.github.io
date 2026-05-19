@@ -1,54 +1,51 @@
-Last updated: 2026-05-19
+Last updated: 2026-05-20
 
 # Development Status
 
 ## 現在のIssues
-- 現在オープン中のIssueはありません。
--
--
+現在、プロジェクトにはオープンなIssueは存在しません。
+これは、プロジェクトが安定した状態にあり、既存の機能が適切に動作していることを示唆しています。
+今後の開発は、既存機能のさらなる改善や、新たな機能の追加に注力できる段階です。
 
 ## 次の一手候補
-1. [既存機能の改善] プロジェクトサマリー生成スクリプトのロギングを強化
-   - 最初の小さな一歩: `ProjectSummaryCoordinator.cjs` にデバッグログを追加し、各サブジェネレータ（`DevelopmentStatusGenerator.cjs`、`ProjectOverviewGenerator.cjs`）の実行開始・終了を記録する。
-   - Agent実行プロンプ:
+1. GitHub Actionsステータスバッジの自動追加 (対応するIssueなし)
+   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` が生成する `index.md` に、既存のGitHub Actions ワークフロー（例: `call-daily-project-summary.yml`）のステータスバッジを追加する処理を実装する。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs
+     対象ファイル: `src/generate_repo_list/generate_repo_list.py`, `src/generate_repo_list/markdown_generator.py`, `index.md`
 
-     実行内容: `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs` 内で、`generateDevelopmentStatus` メソッドおよび `generateProjectOverview` メソッドの呼び出し前後、またはそれらの内部で、処理の開始と終了を示すデバッグログ（例: `console.log('Starting DevelopmentStatusGenerator...');`）を追加してください。これにより、自動生成プロセスがどの段階にあるかを追跡しやすくします。
+     実行内容: `generate_repo_list.py`が`index.md`を生成する際に、プロジェクトのGitHub Actionsワークフロー（例: `.github/workflows/call-daily-project-summary.yml`）の現在のステータスを示すMarkdown形式のバッジを自動的に追加する機能を実装してください。バッジのURLはGitHub Actionsの標準形式（例: `https://github.com/{owner}/{repo}/workflows/{workflow_name}/badge.svg`）を使用してください。
 
-     確認事項: 既存のロギングメカニズムやエラーハンドリングを阻害しないことを確認してください。また、ログメッセージが明確で、処理の流れを追跡しやすいか確認してください。
+     確認事項: 既存のMarkdown生成ロジックとの整合性を確認し、`index.md`の既存コンテンツに影響を与えないことを確認してください。また、バッジが正しく表示されるURL形式であることを検証してください。
 
-     期待する出力: 変更された `ProjectSummaryCoordinator.cjs` ファイルの内容を出力してください。
-     ```
-
-2. [新規導入の準備] `check-large-files` アクションのメインリポジトリでの設定とテスト
-   - 最初の小さな一歩: メインリポジトリの `.github_automation/check_large_files/check-large-files.toml` にダミーの大きなファイルパスを設定し、`call-check-large-files.yml` を手動で実行して期待通りに動作するか確認する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: .github_automation/check_large_files/check-large-files.toml と .github/workflows/call-check-large-files.yml
-
-     実行内容: `.github_automation/check_large_files/check-large-files.toml` に、テスト目的で一時的にダミーの大きなファイルを検出するための設定を追加する変更案を生成してください。例えば、`max_size_kb = 1` とし、`include = ["path/to/some_existing_small_file.md"]` のように、既存の小さなファイルを意図的に大きなファイルとして検出させる設定を記述します。また、`.github/workflows/call-check-large-files.yml` のトリガーを一時的に手動実行 (`workflow_dispatch`) に設定する変更案も提示してください。
-
-     確認事項: `.github_automation/check_large_files/check-large-files.toml` の既存のフォーマットと競合しないことを確認してください。`call-check-large-files.yml` の変更が他のワークフローに影響を与えないか確認してください。
-
-     期待する出力: `check-large-files.toml` と `call-check-large-files.yml` の変更案をmarkdown形式で出力してください。
+     期待する出力: `src/generate_repo_list/generate_repo_list.py`と関連するMarkdown生成部分の変更を記述したコードスニペットと、変更後の`index.md`のサンプル出力（バッジが追加された状態）をmarkdown形式で出力してください。
      ```
 
-3. [コード品質向上] `repository_processor.py` の単体テストカバレッジを向上
-   - 最初の小さな一歩: `repository_processor.py` の `process_repository` メソッドに、様々な入力シナリオ（例: レポジトリ情報が不完全な場合、特定のフィールドが欠けている場合）をカバーする新しい単体テストケースを `tests/test_repository_processor.py` に追加する。
-   - Agent実行プロンプ:
+2. `check-large-files` ワークフローに除外パスオプションを追加 (対応するIssueなし)
+   - 最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml` に `exclude_paths` のサンプルオプションを追加し、`check_large_files.py` がこのオプションを読み込み、指定されたパスのファイルをチェック対象から除外するように修正する。
+   - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/repository_processor.py と tests/test_repository_processor.py
+     対象ファイル: `.github_automation/check_large_files/check-large-files.toml`, `.github_automation/check_large_files/scripts/check_large_files.py`
 
-     実行内容: `src/generate_repo_list/repository_processor.py` の `RepositoryProcessor` クラス内の `process_repository` メソッドの堅牢性を検証するため、`tests/test_repository_processor.py` に以下のケースを追加する単体テストを記述してください。
-         1. `description` フィールドが `None` または空文字列の場合に適切に処理されること。
-         2. `language` フィールドが `None` または存在しない場合に適切に処理されること。
-         3. `updated_at` が不正なフォーマット（例: `None` や空文字列）の場合に例外が発生せず、デフォルト値やエラーハンドリングが機能すること。
+     実行内容: `.github_automation/check_large_files/check-large-files.toml` に、特定のファイルパスをチェック対象から除外するための `exclude_paths = []` オプションを追加してください。その後、`.github_automation/check_large_files/scripts/check_large_files.py` を修正し、この `exclude_paths` 設定をTOMLファイルから読み込み、指定されたパスにマッチするファイルをファイルサイズチェックの対象から除外するロジックを実装してください。
 
-     確認事項: 既存のテスト構造（例: `unittest.TestCase` や `pytest` スタイル）と命名規則に準拠していることを確認してください。新しいテストが既存の機能を壊さないことを確認してください。
+     確認事項: TOMLファイルのパースロジックが正しく`exclude_paths`を読み込めることを確認し、除外ロジックが意図通りに機能すること（テストファイルなど既存の大きなファイルを一時的に除外パスに追加して動作確認）を確認してください。
 
-     期待する出力: 新しいテストケースが追加された `tests/test_repository_processor.py` の変更案をmarkdown形式で出力してください。
+     期待する出力: 変更後の`.github_automation/check_large_files/check-large-files.toml`の内容と、`.github_automation/check_large_files/scripts/check_large_files.py`の修正箇所（特に`exclude_paths`の読み込みと適用ロジック）を記述したコードスニペットをmarkdown形式で出力してください。
+     ```
+
+3. `translate-readme` ワークフローの翻訳対象言語パラメータ化 (対応するIssueなし)
+   - 最初の小さな一歩: `.github/workflows/call-translate-readme.yml` および `.github/actions-tmp/.github/workflows/translate-readme.yml` と、`.github/actions-tmp/.github_automation/translate/scripts/translate-readme.cjs` を修正し、`target-language` のような入力パラメータを追加し、それに基づいて翻訳対象のファイル名（例: `README.{target-language}.md`）を決定するように変更する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `.github/workflows/call-translate-readme.yml`, `.github/actions-tmp/.github/workflows/translate-readme.yml`, `.github/actions-tmp/.github_automation/translate/scripts/translate-readme.cjs`
+
+     実行内容: `call-translate-readme.yml`と`translate-readme.yml`ワークフローに `target-language` という入力パラメータを追加し、デフォルト値を `ja` と設定してください。次に、`.github/actions-tmp/.github_automation/translate/scripts/translate-readme.cjs` スクリプトを修正し、この `target-language` パラメータを受け取り、出力ファイル名を `README.{target-language}.md` の形式で動的に生成するように変更してください。これにより、日本語以外の言語への翻訳もサポート可能にします。
+
+     確認事項: ワークフローの入力パラメータが正しくスクリプトに渡されること、およびスクリプトが異なる言語コード（例: `zh`, `fr`）で実行された場合に正しい出力ファイル名が生成されることを確認してください。
+
+     期待する出力: 変更後の`call-translate-readme.yml`, `translate-readme.yml`および`translate-readme.cjs`の修正箇所（特にパラメータの定義と使用箇所）を記述したコードスニペットをmarkdown形式で出力してください。
      ```
 
 ---
-Generated at: 2026-05-19 07:24:30 JST
+Generated at: 2026-05-20 07:30:56 JST
