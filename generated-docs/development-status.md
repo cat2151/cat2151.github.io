@@ -1,51 +1,50 @@
-Last updated: 2026-05-20
+Last updated: 2026-05-21
 
 # Development Status
 
 ## 現在のIssues
-現在、プロジェクトにはオープンなIssueは存在しません。
-これは、プロジェクトが安定した状態にあり、既存の機能が適切に動作していることを示唆しています。
-今後の開発は、既存機能のさらなる改善や、新たな機能の追加に注力できる段階です。
+- 現在、オープン中のIssueは確認されておりません。
+- 特定の課題やタスクとして登録されている項目はありません。
+- 今後の開発活動は、プロジェクトの保守、改善、または新規機能の検討から開始されます。
 
 ## 次の一手候補
-1. GitHub Actionsステータスバッジの自動追加 (対応するIssueなし)
-   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` が生成する `index.md` に、既存のGitHub Actions ワークフロー（例: `call-daily-project-summary.yml`）のステータスバッジを追加する処理を実装する。
+1. プロジェクトサマリー生成の品質改善とレビュー (新規提案)
+   - 最初の小さな一歩: `generated-docs/project-overview.md` と `generated-docs/development-status.md` をレビューし、内容の正確性、明瞭さ、追加すべき情報がないかを確認する。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: generated-docs/project-overview.md, generated-docs/development-status.md, .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
+
+     実行内容: 自動生成されたプロジェクトサマリー (`project-overview.md`, `development-status.md`) の内容を分析し、より詳細で分かりやすく、かつ開発者が価値を感じる情報が含まれるように改善提案をmarkdown形式で出力してください。特に、関連するプロンプトファイル (`*-prompt.md`) が現在のサマリー生成にどのように影響しているかを考慮し、プロンプトの改善案も合わせて検討してください。
+
+     確認事項: 生成されたサマリーが最新のコミット履歴やファイル一覧と矛盾していないか、また現在の開発状況を正確に反映しているかを確認してください。
+
+     期待する出力: 改善提案をmarkdown形式で出力。具体的には、サマリー内容の具体例の改善、情報の追加、またはプロンプトの変更案を含めてください。
+     ```
+
+2. `generate_repo_list` スクリプトのテストカバレッジ強化 (新規提案)
+   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の主要なスクリプト (`generate_repo_list.py`, `repository_processor.py` など) と、対応するテストファイル (`tests/test_integration.py`, `tests/test_repository_processor.py` など) のリストを作成する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/generate_repo_list.py`, `src/generate_repo_list/markdown_generator.py`, `index.md`
+     対象ファイル: src/generate_repo_list/*.py, tests/*.py
 
-     実行内容: `generate_repo_list.py`が`index.md`を生成する際に、プロジェクトのGitHub Actionsワークフロー（例: `.github/workflows/call-daily-project-summary.yml`）の現在のステータスを示すMarkdown形式のバッジを自動的に追加する機能を実装してください。バッジのURLはGitHub Actionsの標準形式（例: `https://github.com/{owner}/{repo}/workflows/{workflow_name}/badge.svg`）を使用してください。
+     実行内容: `src/generate_repo_list/` ディレクトリ内のPythonスクリプト群（特に `src/generate_repo_list/generate_repo_list.py` や `src/generate_repo_list/repository_processor.py` など主要なロジックを持つファイル）を分析し、それらに対する既存のテスト（`tests/` ディレクトリ内）がどの程度カバーしているかを評価してください。その後、現在のテストで不足していると考えられる機能パスやエッジケースについて、新たなテストケースのアイデアをmarkdown形式で提案してください。
 
-     確認事項: 既存のMarkdown生成ロジックとの整合性を確認し、`index.md`の既存コンテンツに影響を与えないことを確認してください。また、バッジが正しく表示されるURL形式であることを検証してください。
+     確認事項: 提案するテストケースが既存のテストコードと重複せず、かつ実行可能であるかを確認してください。
 
-     期待する出力: `src/generate_repo_list/generate_repo_list.py`と関連するMarkdown生成部分の変更を記述したコードスニペットと、変更後の`index.md`のサンプル出力（バッジが追加された状態）をmarkdown形式で出力してください。
+     期待する出力: テストカバレッジの評価結果と、具体的な追加テストケースのアイデア（対象ファイル、テスト内容、期待される結果を含む）をmarkdown形式で出力。
      ```
 
-2. `check-large-files` ワークフローに除外パスオプションを追加 (対応するIssueなし)
-   - 最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml` に `exclude_paths` のサンプルオプションを追加し、`check_large_files.py` がこのオプションを読み込み、指定されたパスのファイルをチェック対象から除外するように修正する。
+3. `.github/actions-tmp` 内の未使用GitHub Actionsファイルの調査とクリーンアップ (新規提案)
+   - 最初の小さな一歩: `.github/actions-tmp/` ディレクトリに存在する `.yml` ファイルをすべてリストアップする。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `.github_automation/check_large_files/check-large-files.toml`, `.github_automation/check_large_files/scripts/check_large_files.py`
+     対象ファイル: .github/actions-tmp/**/*.yml, .github/workflows/*.yml
 
-     実行内容: `.github_automation/check_large_files/check-large-files.toml` に、特定のファイルパスをチェック対象から除外するための `exclude_paths = []` オプションを追加してください。その後、`.github_automation/check_large_files/scripts/check_large_files.py` を修正し、この `exclude_paths` 設定をTOMLファイルから読み込み、指定されたパスにマッチするファイルをファイルサイズチェックの対象から除外するロジックを実装してください。
+     実行内容: `.github/actions-tmp/` ディレクトリ配下のGitHub Actionsワークフローファイル（`.yml`）について、メインの `.github/workflows/` ディレクトリ内のワークフローや、プロジェクト内のその他の設定ファイル（例: `package.json`, `_config.yml`）から直接的または間接的に参照されているかどうかを調査してください。参照されていない、または複製された可能性のあるファイルを特定し、その根拠とクリーンアップの提案をmarkdown形式で出力してください。
 
-     確認事項: TOMLファイルのパースロジックが正しく`exclude_paths`を読み込めることを確認し、除外ロジックが意図通りに機能すること（テストファイルなど既存の大きなファイルを一時的に除外パスに追加して動作確認）を確認してください。
+     確認事項: ファイル削除が他の依存関係に影響を与えないことを確認するため、実行中のワークフローやドキュメントとの整合性を慎重に検証してください。
 
-     期待する出力: 変更後の`.github_automation/check_large_files/check-large-files.toml`の内容と、`.github_automation/check_large_files/scripts/check_large_files.py`の修正箇所（特に`exclude_paths`の読み込みと適用ロジック）を記述したコードスニペットをmarkdown形式で出力してください。
-     ```
-
-3. `translate-readme` ワークフローの翻訳対象言語パラメータ化 (対応するIssueなし)
-   - 最初の小さな一歩: `.github/workflows/call-translate-readme.yml` および `.github/actions-tmp/.github/workflows/translate-readme.yml` と、`.github/actions-tmp/.github_automation/translate/scripts/translate-readme.cjs` を修正し、`target-language` のような入力パラメータを追加し、それに基づいて翻訳対象のファイル名（例: `README.{target-language}.md`）を決定するように変更する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `.github/workflows/call-translate-readme.yml`, `.github/actions-tmp/.github/workflows/translate-readme.yml`, `.github/actions-tmp/.github_automation/translate/scripts/translate-readme.cjs`
-
-     実行内容: `call-translate-readme.yml`と`translate-readme.yml`ワークフローに `target-language` という入力パラメータを追加し、デフォルト値を `ja` と設定してください。次に、`.github/actions-tmp/.github_automation/translate/scripts/translate-readme.cjs` スクリプトを修正し、この `target-language` パラメータを受け取り、出力ファイル名を `README.{target-language}.md` の形式で動的に生成するように変更してください。これにより、日本語以外の言語への翻訳もサポート可能にします。
-
-     確認事項: ワークフローの入力パラメータが正しくスクリプトに渡されること、およびスクリプトが異なる言語コード（例: `zh`, `fr`）で実行された場合に正しい出力ファイル名が生成されることを確認してください。
-
-     期待する出力: 変更後の`call-translate-readme.yml`, `translate-readme.yml`および`translate-readme.cjs`の修正箇所（特にパラメータの定義と使用箇所）を記述したコードスニペットをmarkdown形式で出力してください。
-     ```
+     期待する出力: 未使用または冗長である可能性のある`.yml`ファイルの一覧、その根拠、およびクリーンアップのためのアクションプラン（例: 削除、アーカイブ）をmarkdown形式で出力。
 
 ---
-Generated at: 2026-05-20 07:30:56 JST
+Generated at: 2026-05-21 07:34:25 JST
