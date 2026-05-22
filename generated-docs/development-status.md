@@ -1,49 +1,50 @@
-Last updated: 2026-05-22
+Last updated: 2026-05-23
 
 # Development Status
 
 ## 現在のIssues
-現在オープン中のIssueはありません。
+- 現在、プロジェクトにはオープン中のIssueはありません。
+- すべての既知の課題は解決済みか、クローズされています。
+- 現在のフォーカスは、既存の自動化ワークフローの最適化と機能強化に移ります。
 
 ## 次の一手候補
-1.  プロジェクト概要 (`project-overview.md`) 生成の精度向上
-    -   最初の小さな一歩: 現在生成されている `generated-docs/project-overview.md` の内容をレビューし、情報が不足している点や改善可能な点を具体的に特定する。
-    -   Agent実行プロンプ:
-        ```
-        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md` および `generated-docs/project-overview.md`
+1. 「開発状況生成プロンプト」のレビューと最適化 [新規タスク]
+   - 最初の小さな一歩: 現在の`development-status-prompt.md`と`DevelopmentStatusGenerator.cjs`の内容を比較し、より具体的で網羅的な情報取得のための改善点を特定する。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
 
-        実行内容: `generated-docs/project-overview.md` の内容と、それを生成するために利用されているプロンプト (`.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`) を分析してください。特に、プロジェクトの全体像をより正確かつ詳細に伝えるために、プロンプトのどの部分を修正・追記すべきかを提案してください。
+     実行内容: `development-status-prompt.md`が`DevelopmentStatusGenerator.cjs`によってどのように利用され、結果としてどのような情報が生成されているかを分析してください。現状のプロンプトが開発状況生成の要件（特に「現在のIssues」と「次の一手候補」の生成精度）をどの程度満たしているかを評価し、改善提案をmarkdown形式で出力してください。
 
-        確認事項: プロンプトの変更が、他の自動生成ドキュメントの整合性に影響を与えないことを確認してください。また、現在のプロンプトが利用している情報源（コードベース、ファイル一覧など）が最大限に活用されているかを確認してください。
+     確認事項: `DevelopmentStatusGenerator.cjs`の`execute`または主要な生成ロジックと、`development-status-prompt.md`の内容が密接に関連していることを確認してください。また、生成される`development-status.md`が現在の出力形式ガイドラインに沿っているかも確認してください。
 
-        期待する出力: 既存の `project-overview-prompt.md` を改善するための具体的な修正案（差分形式または新しいプロンプト全文）と、その改善によって `project-overview.md` がどのように変化するかをmarkdown形式で説明してください。
-        ```
+     期待する出力: `development-status-prompt.md`の改善提案、およびそれに伴う`DevelopmentStatusGenerator.cjs`での情報取得ロジック変更の可能性に関する分析結果をmarkdown形式で出力してください。具体的な改善例として、より詳細な情報取得指示やハルシネーション抑制のための明確な制約追加などが挙げられます。
+     ```
 
-2.  開発状況 (`development-status.md`) 生成プロンプトの「Agent実行プロンプト」ガイドライン遵守の確認と改善
-    -   最初の小さな一歩: 本プロンプトで定義されている「Agent実行プロンプト」のガイドライン（必須要素4項目）と、既存の `development-status-prompt.md` の内容を比較し、準拠している点と不足している点を洗い出す。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`
+2. リポジトリリスト生成スクリプトの拡張または安定性向上 [新規タスク]
+   - 最初の小さな一歩: `src/generate_repo_list`ディレクトリ内の主要なスクリプト（例: `generate_repo_list.py`, `repository_processor.py`）を概観し、潜在的な改善点や新機能の候補（例: 詳細なログ出力、新しいバッジタイプサポート、エラーハンドリングの強化）をリストアップする。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, src/generate_repo_list/markdown_generator.py
 
-        実行内容: 本プロンプトで指定されている「Agent実行プロンプト」の生成ガイドライン（必須要素1.対象ファイル, 2.実行内容, 3.確認事項, 4.期待する出力）に、対象ファイルの内容がどの程度準拠しているかを分析してください。ガイドラインに不足している要素がある場合は、それを補完するための改善案を提案してください。
+     実行内容: `generate_repo_list`モジュールがどのようにリポジトリ情報を取得し、最終的な`index.md`（または同様のレポート）を生成しているかを分析してください。特に、既存の機能セット（バッジ生成、SEOメタデータ、統計計算）を考慮し、今後追加できる有用な機能、または既存処理の堅牢性を高めるための改善点を3つ提案してください。
 
-        確認事項: 提案される改善案が、ハルシネーションの温床にならないか、また無価値なタスクを生成しないかを確認してください。既存の `DevelopmentStatusGenerator.cjs` との整合性も考慮してください。
+     確認事項: `generate_repo_list.py`がエントリポイントであることを確認し、`repository_processor.py`がデータ処理、`markdown_generator.py`が最終出力整形を担当していることを確認してください。関連するテストファイル（`tests/test_integration.py`など）も参照し、既存のテストカバレッジが十分か評価してください。
 
-        期待する出力: `development-status-prompt.md` がガイドラインに準拠しているかどうかの評価結果と、準拠していない場合にプロンプトを改善するための具体的な修正案（差分形式または新しいプロンプト全文）をmarkdown形式で出力してください。
-        ```
+     期待する出力: `generate_repo_list`モジュールに対する3つの改善提案をmarkdown形式で出力してください。提案ごとに、その機能の概要、導入によるメリット、および最初の小さな一歩として検討すべき具体的なコード変更の方向性を記述してください。
+     ```
 
-3.  `src/generate_repo_list` モジュールの主要機能に対するテストカバレッジ向上
-    -   最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の主要なPythonスクリプト（例: `generate_repo_list.py`, `repository_processor.py`, `markdown_generator.py`）について、既存の `tests/` ディレクトリ内のテストファイルがどの機能をカバーしているかを確認する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `src/generate_repo_list/generate_repo_list.py` および `tests/test_integration.py`, `tests/test_repository_processor.py` など関連するテストファイル
+3. `check-large-files`設定のレビューと調整 [新規タスク]
+   - 最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml`の現在の設定内容を確認し、ファイル一覧から大規模なリポジトリで一般的なファイル（例: `node_modules`、バイナリファイル）に対する除外ルールが適切に定義されているかを評価する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: .github_automation/check_large_files/check-large-files.toml, .github_automation/check_large_files/scripts/check_large_files.py
 
-        実行内容: `src/generate_repo_list/generate_repo_list.py` の主要なロジックを分析し、既存のテストファイル（特に `test_integration.py` や `test_repository_processor.py` など）がカバーしていない重要な機能やエッジケースを特定してください。その後、それらの未カバー部分に対する新しいテストケースの追加方針を検討してください。
+     実行内容: `check-large-files.toml`の設定と`check_large_files.py`のロジックを分析し、現在のプロジェクトのファイル構造（特に`.github/actions-tmp`内の大規模になりがちなディレクトリ）を考慮して、大規模ファイルチェックの効率性と正確性を向上させるための改善点を特定してください。具体的には、誤検出を減らしつつ、実際にリポジトリサイズに影響を与えるファイルを適切に検出するための設定調整（除外パス、サイズ閾値）の提案を含めてください。
 
-        確認事項: 新しいテストケースが重複を避け、既存のテストフレームワーク（pytest）と互換性があることを確認してください。また、テストによって外部APIへの不必要な呼び出しが発生しないように、モックやスタブの利用を検討してください。
+     確認事項: `check-large_files.py`が`check-large-files.toml`をどのように読み込み、ファイルパスとサイズを比較しているかを確認してください。既存のファイルリストから、特に大きなファイルやディレクトリ（例: `node_modules`など、もし存在すれば）のパターンを考慮してください。
 
-        期待する出力: `generate_repo_list.py` のどの部分が未カバーであるかを示す分析結果と、その未カバー部分を補うための具体的なテストケースの提案（疑似コードまたはテスト関数の骨格）をmarkdown形式で出力してください。
-        ```
+     期待する出力: `check-large-files.toml`の設定ファイルに対する具体的な変更提案をmarkdown形式で出力してください。提案には、除外パスの追加、サイズ閾値の調整、または新しいチェックルールの導入に関する推奨事項を含めてください。
 
 ---
-Generated at: 2026-05-22 07:32:10 JST
+Generated at: 2026-05-23 07:25:51 JST
