@@ -1,58 +1,45 @@
-Last updated: 2026-05-24
+Last updated: 2026-05-25
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。そのため、既存の自動化ワークフローの改善と堅牢化に焦点を当てます。
+- 現在、オープンされているIssueはありません。
+- したがって、この時点での具体的な開発課題は存在しません。
+- 新規の課題や改善点は、今後の活動で特定され次第、Issueとして登録される見込みです。
 
 ## 次の一手候補
-1.  プロジェクトサマリー生成プロンプトの洗練 [Issue #None]
-    -   最初の小さな一歩: `development-status-prompt.md` と `project-overview-prompt.md` の内容を読み込み、現在の出力とのギャップや改善点を特定する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル:
-        - .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
-        - .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
-        - .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
-        - .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs
+1. 既存の自動更新ワークフローのエラーハンドリングとロギング機構の評価
+   - 最初の小さな一歩: `call-daily-project-summary.yml`と`generate_repo_list.yml`の内容を分析し、エラー発生時の通知やロギングの仕組みが適切に設定されているかを確認する。
+   - Agent実行プロンプト:
+     対象ファイル: `.github/workflows/call-daily-project-summary.yml`, `.github/workflows/generate_repo_list.yml`
 
-        実行内容: 上記プロンプトファイルの内容を分析し、生成されるサマリーの品質と詳細度を向上させるための改善点を提案してください。特に、プロジェクトの現在の状況と直近の変更点をより効果的に反映させるためのキーワードや構造の追加を検討してください。また、関連するGeneratorスクリプトがプロンプトの意図を適切に解釈・利用できているかを確認してください。
+     実行内容: これらのワークフロー定義ファイルを分析し、エラーハンドリング（例: `on-failure`、`continue-on-error`の設定）とロギング（例: ステップごとの出力、サマリーの生成）の仕組みが適切に設定されているかを評価してください。
 
-        確認事項: 提案する変更がハルシネーションを引き起こさないか、または現状のデータ収集能力を超えた要求にならないかを確認してください。既存のサマリー生成ロジックとの整合性を保ってください。
+     確認事項: ワークフローが期待通りに自動実行され、予期せぬエラー時に適切な通知やログが生成されるように設計されているかを確認します。Agentはファイルシステム内の情報のみにアクセス可能なため、ワークフロー定義ファイルの内容から判断します。
 
-        期待する出力: 提案するプロンプトの改善案をMarkdown形式で出力してください。具体的には、どのプロンプトにどのような変更を加えるべきか（具体的なテキスト例を含む）、そしてその変更が期待される出力にどう影響するかを記述してください。
-        ```
+     期待する出力: 各ワークフローのエラーハンドリングとロギングに関する評価結果、および改善点があれば具体的な提案をmarkdown形式で出力してください。
 
-2.  リポジトリリスト自動更新の堅牢性向上 [Issue #None]
-    -   最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` 内の既存のエラーハンドリング箇所を確認し、どのようなケースで失敗する可能性があるかをリストアップする。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル:
-        - src/generate_repo_list/generate_repo_list.py
-        - .github/workflows/generate_repo_list.yml
+2. 自動生成ドキュメントの品質向上とプロンプト改善
+   - 最初の小さな一歩: `generated-docs/development-status.md`と`generated-docs/project-overview.md`の内容を読み込み、記述に不明瞭な点や不足している情報がないかを確認する。
+   - Agent実行プロンプト:
+     対象ファイル: `generated-docs/development-status.md`, `generated-docs/project-overview.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`
 
-        実行内容: `generate_repo_list.py`のコードを分析し、リポジトリ情報の取得、処理、更新中に発生しうるエラー（API制限、ネットワーク問題、データ解析失敗など）に対する現在のエラーハンドリングが適切か評価してください。また、`generate_repo_list.yml`ワークフローにおけるエラー通知や再試行のメカニズムを確認し、より堅牢にするための改善策を提案してください。
+     実行内容: 生成されたドキュメントが、関連するプロンプトの指示を適切に反映し、かつ明確で分かりやすい内容になっているかを評価してください。特に、情報の正確性、網羅性、表現の自然さに注目してください。改善点があれば具体的に指摘してください。
 
-        確認事項: 提案する堅牢性向上が、既存のワークフローの複雑性を過度に増加させないか、および追加の依存関係を必要としないかを確認してください。変更はPythonスクリプトとGitHub Actionsワークフローに限定してください。
+     確認事項: プロンプトファイルと生成結果ドキュメントの内容が、Agentがアクセス可能なファイルとして提供されていること。
 
-        期待する出力: `generate_repo_list.py`および`generate_repo_list.yml`におけるエラーハンドリングと堅牢性向上のための具体的な改善提案をMarkdown形式で出力してください。エラーの種類ごとに、現在の挙動と提案される改善策（コードスニペットを含む）を記述してください。
-        ```
+     期待する出力: 評価結果と具体的な改善提案をmarkdown形式で出力してください。
 
-3.  `check-large-files` ワークフローの設定最適化 [Issue #None]
-    -   最初の小さな一歩: `check-large-files.toml` の現在の設定内容を読み込み、どのような種類のファイルがチェック対象になっているか、閾値は何かを把握する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル:
-        - .github_automation/check_large_files/check-large-files.toml
-        - .github_automation/check_large_files/scripts/check_large_files.py
-        - .github/workflows/call-check-large-files.yml
+3. Pythonスクリプトのテストカバレッジ見込み分析
+   - 最初の小さな一歩: `src/generate_repo_list`配下のPythonファイルと`tests`配下のテストファイルの対応関係を調査し、カバレッジが低いと思われるモジュールを特定する。
+   - Agent実行プロンプト:
+     対象ファイル: `src/generate_repo_list/**/*.py`, `tests/test_*.py`
 
-        実行内容: `check-large-files.toml`の設定と`check_large_files.py`スクリプトのロジックを分析し、プロジェクトのニーズに合わせた設定の最適化案を提案してください。特に、不要なファイルタイプやディレクトリを除外することでパフォーマンスを向上させたり、重要なファイルタイプにより厳格なチェックを適用したりする方法を検討してください。また、`call-check-large-files.yml`がこの設定変更を適切に利用できるか確認してください。
+     実行内容: `src/generate_repo_list`ディレクトリ内のPythonスクリプトについて、既存のテストファイル(`tests/test_*.py`)におけるテストカバレッジの"見込み"を分析してください。特に、ファイル名や関数名、クラス名の一致度、`src`ディレクトリ内のファイルの相対的な複雑さに基づき、テストが不足していると思われる機能やモジュールを特定し、その理由を考察してください。
 
-        確認事項: 提案する最適化が、誤って重要なファイルをチェック対象から外したり、あるいはCI/CDパイプラインに不必要なオーバーヘッドを追加したりしないかを確認してください。プロジェクトファイル一覧を参考に、現存する大規模ファイルのパターンを考慮してください。
+     確認事項: Agentは実際のテスト実行やカバレッジツールの実行は行いません。ファイル名、ディレクトリ構造、およびファイル内容（もしアクセス可能であれば）に基づいてテストカバレッジの可能性を推測します。
 
-        期待する出力: `check-large-files.toml`の具体的な設定変更案と、その変更が`check_large_files.py`の動作と`call-check-large-files.yml`に与える影響をMarkdown形式で出力してください。変更後のTOML設定例を含めてください。
-        ```
+     期待する出力: テストカバレッジの見込み評価と、テストを追加すべき具体的なファイルや機能のリストをmarkdown形式で出力してください。
 
 ---
-Generated at: 2026-05-24 07:20:31 JST
+Generated at: 2026-05-25 07:23:09 JST
