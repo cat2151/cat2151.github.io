@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-05-23 (UTC) / 2026-05-24 (JST)
+Last Updated: 2026-05-24 (UTC) / 2026-05-25 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用してリポジトリ情報を取得し、自動で一覧を生成します。
-- GitHub Pagesサイト用にSEOに配慮したMarkdown形式で出力を最適化します。
-- 検索エンジンからの可視性を高め、リポジトリ情報を効率的に共有するシステムです。
-- 📅 2026-05-23 (UTC) / 2026-05-24 (JST)
+- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pagesサイト用のMarkdownファイルを自動生成するシステムです。
+- 検索エンジンによるクロールを最適化し、LLMからのリポジトリ参照失敗を緩和することを目的としています。
+- リポジトリ一覧ページ、個別のリポジトリ概要、SEO最適化されたMarkdown生成などの機能を提供します。
+- 📅 2026-05-24 (UTC) / 2026-05-25 (JST)
+
+## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
+
+<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
+- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
+- **Overview**: No description available
+- 📅 2026-05-24 (UTC) / 2026-05-24 (JST)
 
 ## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
 
@@ -156,15 +165,6 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 - コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
 - 時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
 - 📅 2026-05-19 (UTC) / 2026-05-20 (JST)
-
-## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
-
-<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
-- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
-- **Overview**: No description available
-- 📅 2026-05-19 (UTC) / 2026-05-19 (JST)
 
 ## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
 
