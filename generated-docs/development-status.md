@@ -1,4 +1,4 @@
-Last updated: 2026-05-29
+Last updated: 2026-05-30
 
 # Development Status
 
@@ -6,43 +6,54 @@ Last updated: 2026-05-29
 オープン中のIssueはありません。
 
 ## 次の一手候補
-1. プロジェクトの自動更新プロセスの効率化
-   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` の主要な関数とロジックを読み込み、潜在的なボトルネックや改善点がないか特定する。
+1. `generate_repo_list` スクリプトのテストカバレッジ向上 [Issue #NEW-001](../issue-notes/NEW-001.md)
+   - 最初の小さな一歩: 現在の`src/generate_repo_list`ディレクトリのテストカバレッジレポートを生成し、不足している部分を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/generate_repo_list.py`
+     対象ファイル: `src/generate_repo_list/` ディレクトリ内のすべてのPythonファイル、および `tests/test_*.py` ファイル
 
-     実行内容: 対象ファイルのコードを分析し、特にリポジトリデータの取得、処理、マークダウン生成の各フェーズにおける効率性、保守性、およびエラーハンドリングの観点から改善点を検討してください。
+     実行内容: `src/generate_repo_list/` 配下のコードに対する現在のテストカバレッジを測定し、その結果をMarkdown形式で出力してください。特に、カバレッジが低いモジュールや未テストの機能があれば指摘してください。
 
-     確認事項: 既存のテストスイート（例: `tests/test_repository_processor.py`）との整合性、および他の関連スクリプト（`src/generate_repo_list/markdown_generator.py`、`src/generate_repo_list/repository_processor.py`）への影響を確認してください。
+     確認事項: `pytest` と `coverage.py` がインストールされていること。既存のテストコマンド（例: `pytest --cov=src/generate_repo_list`）があればそれを優先する。
 
-     期待する出力: 分析結果をmarkdown形式で出力してください。具体的には、コードの改善提案、パフォーマンス最適化の可能性、およびテストケースの追加・修正の必要性について記述してください。
+     期待する出力: Markdown形式で以下の情報を含むカバレッジレポート：
+     - 全体的なカバレッジ率
+     - モジュールごとのカバレッジ詳細
+     - カバレッジが低い上位3モジュールとその理由の推測
+     - 追加すべきテストケースの一般的な方向性
      ```
 
-2. プロジェクト概要自動生成ワークフローのドキュメント強化
-   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs`と`.github/actions-tmp/.github/workflows/daily-project-summary.yml`の処理フローを概観し、現状のドキュメント（例: `.github/actions-tmp/.github_automation/project_summary/docs/daily-summary-setup.md`）との差分を特定する。
+2. プロジェクト概要生成プロセスのドキュメント強化 [Issue #NEW-002](../issue-notes/NEW-002.md)
+   - 最初の小さな一歩: `generated-docs/project-overview.md` がどのように生成されているかを理解するため、関連するスクリプトとプロンプトファイルを洗い出す。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs`, `.github/actions-tmp/.github/workflows/daily-project-summary.yml`, `.github/actions-tmp/.github_automation/project_summary/docs/daily-summary-setup.md`
+     対象ファイル:
+     - `.github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs`
+     - `.github/actions-tmp/.github_automation/project_summary/scripts/generate-project-summary.cjs`
+     - `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`
+     - `.github/actions-tmp/.github_automation/project_summary/docs/daily-summary-setup.md`
 
-     実行内容: 上記ファイルを分析し、日次プロジェクトサマリー生成ワークフローの全体像、設定方法、および主要なスクリプトの役割を理解するためのドキュメントの改善点を洗い出してください。特に、新しい情報や変更点があるか、または既存のドキュメントが不足している点を特定してください。
+     実行内容: 上記ファイルを分析し、プロジェクト概要（project-overview.md）が自動生成されるプロセスと、生成時に使用されるプロンプトの内容、およびカスタマイズの可能性について詳細な説明をMarkdown形式で作成してください。
 
-     確認事項: 既存のドキュメントが現状のワークフローと一致しているか、および外部からの利用者が理解しやすい内容になっているかを確認してください。
+     確認事項: 既存のREADMEやドキュメントで既に同様の内容が説明されていないか確認し、重複を避けてください。
 
-     期待する出力: ドキュメント改善提案をmarkdown形式で出力してください。具体的には、追加すべきセクション、更新すべき情報、および図や例を含めるべき箇所について記述してください。
+     期待する出力: プロジェクト概要生成の自動化プロセス、関連スクリプトの役割、`project-overview-prompt.md` の利用方法、およびユーザーが生成内容をカスタマイズするための手順を説明する新しいMarkdownドキュメントの草稿。
      ```
 
-3. テストスイートの網羅性と効率性のレビュー
-   - 最初の小さな一歩: `tests/`ディレクトリ内の既存のテストファイル一覧を確認し、特に`src/generate_repo_list/`ディレクトリの主要なコンポーネントに対するカバレッジの現状を概観する。
+3. GitHub Actions ワークフローの依存関係可視化 [Issue #NEW-003](../issue-notes/NEW-003.md)
+   - 最初の小さな一歩: `.github/workflows/` ディレクトリ内の全 `.yml` ファイルをリストアップし、それぞれの `on:` トリガーと `uses:` や `workflow_call:` を抽出する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `tests/test_integration.py`, `tests/test_repository_processor.py`, `src/generate_repo_list/generate_repo_list.py`
+     対象ファイル: `.github/workflows/*.yml` および `.github/actions-tmp/.github/workflows/*.yml`
 
-     実行内容: `src/generate_repo_list/`ディレクトリ内の主要なロジックに対するテストの網羅性を分析してください。特に、重要なパスやエッジケースが十分にテストされているか、テストの実行時間が最適化されているか、そして冗長なテストがないかを評価してください。
+     実行内容: 対象ファイル群を解析し、各GitHub Actionsワークフローのトリガー、呼び出し関係（`workflow_call`による呼び出しや、`uses`による他のアクションの利用）、および依存関係を洗い出してください。これらの関係性をMermaid形式のフローチャートで表現し、その説明をMarkdown形式で出力してください。
 
-     確認事項: `pytest.ini`や`requirements-dev.txt`などのテスト環境設定ファイルとの整合性を確認し、現状のテスト実行プロセスに影響を与えないことを保証してください。
+     確認事項: `github/actions-tmp/` 内のワークフローも対象に含め、プロジェクト全体のワークフローを考慮すること。循環参照や複雑な依存関係がないか特に注意してください。
 
-     期待する出力: テストスイートの改善提案をmarkdown形式で出力してください。具体的には、追加すべきテストケース、リファクタリングすべきテスト、およびテスト実行の効率化のための変更点について記述してください。
+     期待する出力: Markdown形式で以下の情報：
+     - 主要なGitHub Actionsワークフローのリストとそれぞれの簡単な説明
+     - Mermaid形式（Graph TD）で表現されたワークフロー間の依存関係フローチャート
+     - フローチャートの各ノードとエッジに関する説明
 
 ---
-Generated at: 2026-05-29 07:36:39 JST
+Generated at: 2026-05-30 07:34:29 JST
