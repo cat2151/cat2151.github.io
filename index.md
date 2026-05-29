@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-05-28 (UTC) / 2026-05-29 (JST)
+Last Updated: 2026-05-29 (UTC) / 2026-05-30 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを用いてリポジトリ情報を取得し、GitHub Pages向けに自動生成するシステムです。
-- リポジトリ一覧や各リポジトリのページをSEO最適化されたMarkdown形式で出力します。
-- これにより検索エンジンからのクロールを促進し、LLMによるリポジトリ参照の精度向上に貢献します。
-- 📅 2026-05-28 (UTC) / 2026-05-29 (JST)
+- GitHub APIを利用してリポジトリ情報を取得し、GitHub Pages向けにマークダウンコンテンツを自動生成するシステムです。
+- 生成されたコンテンツは、ユーザーのGitHub Pagesサイトにリポジトリ一覧を公開し、SEOとLLMからの参照性を向上させます。
+- 各リポジトリの概要文やバッジの自動取得、Jekyll/GitHub Pagesに対応した出力により、効率的な情報公開を実現します。
+- 📅 2026-05-29 (UTC) / 2026-05-30 (JST)
 
 ## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
 
@@ -105,7 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
 - **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
 - **Overview**: No description available
-- 📅 2026-05-28 (UTC) / 2026-05-28 (JST)
+- 📅 2026-05-29 (UTC) / 2026-05-29 (JST)
 
 ## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
 
