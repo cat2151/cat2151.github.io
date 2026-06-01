@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-05-31 (UTC) / 2026-06-01 (JST)
+Last Updated: 2026-06-01 (UTC) / 2026-06-02 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,24 @@ Last Updated: 2026-05-31 (UTC) / 2026-06-01 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
+
+<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
+- **Overview**: No description available
+- 📅 2026-06-01 (UTC) / 2026-06-01 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-06-01 (UTC) / 2026-06-01 (JST)
+
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
@@ -97,15 +115,6 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - JekyllベースのGitHub Pages向けに、SEO最適化されたリポジトリ一覧をMarkdownで生成します。
 - リポジトリごとの概要表示や分類機能により、検索性向上とLLMの参照を支援します。
 - 📅 2026-05-31 (UTC) / 2026-06-01 (JST)
-
-## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
-
-<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
-- **Overview**: No description available
-- 📅 2026-05-31 (UTC) / 2026-05-31 (JST)
 
 ## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
 
@@ -142,15 +151,6 @@ MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
 - **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
 - **Overview**: No description available
 - 📅 2026-05-21 (UTC) / 2026-05-21 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-05-20 (UTC) / 2026-05-20 (JST)
 
 ## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
 Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
