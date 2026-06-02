@@ -1,49 +1,50 @@
-Last updated: 2026-06-01
+Last updated: 2026-06-03
 
 # Development Status
 
 ## 現在のIssues
-現在オープン中のIssueはありません。
+- 現在オープン中のIssueはありません。
+- プロジェクトは安定した状態にあり、未解決の課題やバグは確認されていません。
+- そのため、次なる機能改善やパフォーマンス向上に注力できる段階です。
 
 ## 次の一手候補
-1. 開発状況生成プロンプト自体の改善
-   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` の内容をレビューし、現在の出力と照らし合わせて、特に「現在のIssues」が空の場合の振る舞いと「次の一手候補」におけるIssue番号の扱いの明確化について検討します。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+1.  `generate_repo_list`の出力内容を拡充する
+    -   最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py`と`src/generate_repo_list/markdown_generator.py`を分析し、現在取得・利用されているリポジトリ情報を把握する。
+    -   Agent実行プロンプ:
+        ```
+        対象ファイル: `src/generate_repo_list/generate_repo_list.py`, `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/repository_processor.py`
 
-     実行内容: 対象ファイルの内容を分析し、特に「現在のオープンIssues」が空の場合の振る舞いと、「次の一手候補」セクションでIssue番号を記載する要件が満たせない場合の対応策について、プロンプトの明確化と改善案を提案してください。現状、「オープン中のIssueはありません」と報告されている状況で、Agentがハルシネーションを起こさずに有用な提案を生成できるような調整を検討します。
+        実行内容: `generate_repo_list.py`が現在取得しているリポジトリ情報と`markdown_generator.py`が利用しているデータを分析し、GitHub APIから取得可能な情報で、現在の`index.md`にまだ表示されていない有用なデータポイント（例: 最終更新日時、スター数、簡単な説明文など）を洗い出してください。
 
-     確認事項: 現在のプロンプトの指示と、「生成しないもの」にリストされている制約（特にハルシネーション防止）との間の整合性を確認してください。
+        確認事項: `repository_processor.py`でのデータ取得ロジックと、`markdown_generator.py`でのMarkdown整形ロジックの依存関係を確認してください。また、GitHub APIのレートリミットや必要な認証スコープについても考慮してください。
 
-     期待する出力: `development-status-prompt.md` を改訂するための具体的な提案をmarkdown形式で出力してください。これには、Issueが存在しない場合の「現在のIssues」セクションの扱い方、および「次の一手候補」セクションでのIssue番号の扱いに関する新たなガイドラインが含まれる可能性があります。
-     ```
+        期待する出力: 追加可能な情報候補のリストと、それを`index.md`に表示するために必要な変更の概要（どのファイルでどのデータを取得・加工し、どこで出力するか）をmarkdown形式で出力してください。
+        ```
 
-2. プロジェクトサマリー（開発状況・概要）の出力品質向上
-   - 最初の小さな一歩: `generated-docs/development-status.md` と `generated-docs/project-overview.md` の最新の生成物を読み、情報が不足していないか、冗長でないか、構成が適切かなどを評価し、改善点を特定します。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: generated-docs/development-status.md, generated-docs/project-overview.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs
+2.  プロジェクト概要生成スクリプトのパフォーマンスを改善する
+    -   最初の小さな一歩: `ProjectSummaryCoordinator.cjs`の処理フローを確認し、外部API呼び出しやファイルI/Oが集中する箇所を特定する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectDataCollector.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/IssueTracker.cjs`
 
-     実行内容: 現在生成されている開発状況レポートとプロジェクト概要レポートの品質を分析してください。特に、これらのレポートが開発者にとってどれだけ有用か、情報が過不足なく提供されているか、そして提示された情報が実行可能で明確であるかという観点から評価します。生成ロジックを担うCJSファイルも参照し、改善の可能性を検討してください。
+        実行内容: プロジェクト概要生成のワークフロー全体における潜在的なパフォーマンスボトルネックを特定するため、`ProjectSummaryCoordinator.cjs`がオーケストレーションする各スクリプト（特にデータ収集関連）の処理内容を分析してください。ファイルI/O、外部API呼び出し、大規模なデータ処理など、時間のかかる可能性のある箇所を洗い出してください。
 
-     確認事項: 生成ドキュメントと生成スクリプト間の整合性、およびユーザーが期待するであろう情報ニーズとの合致度を確認してください。
+        確認事項: 各スクリプトがどのようにデータを取得し、処理しているかの依存関係と、GitHub APIの呼び出し回数やファイルシステムへのアクセスパターンを確認してください。現状のワークフローが許容範囲内の実行時間であるかどうかの評価も行います。
 
-     期待する出力: 生成される開発状況とプロジェクト概要ドキュメントの品質（可読性、情報密度、実用性）を向上させるための具体的な改善案をmarkdown形式で出力してください。これには、スクリプトの調整やプロンプトの修正に関する提案も含まれます。
-     ```
+        期待する出力: パフォーマンス改善の可能性のある領域をリストアップし、それぞれの領域で考えられる最適化のアイデア（例: キャッシング、並列処理、API呼び出しの削減など）をmarkdown形式で出力してください。
+        ```
 
-3. 自動リポジトリリスト更新ワークフローのログ強化と堅牢化
-   - 最初の小さな一歩: `.github/workflows/generate_repo_list.yml` を確認し、現在のログ出力やエラーハンドリングの仕組みを把握します。また、関連するPythonスクリプト (`src/generate_repo_list/generate_repo_list.py`) の例外処理の実装状況を調査します。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: .github/workflows/generate_repo_list.yml, src/generate_repo_list/generate_repo_list.py
+3.  `check-large-files`設定を他のリポジトリにも展開可能にする
+    -   最初の小さな一歩: `check-large-files.toml.default`の内容を確認し、どのような設定項目があるかを理解する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `.github/actions-tmp/.github_automation/check-large-files/check-large-files.toml.default`, `.github/actions-tmp/.github_automation/check-large-files/scripts/check_large_files.py`, `.github/workflows/call-check-large-files.yml`
 
-     実行内容: `generate_repo_list` ワークフローのエラーハンドリングとログ出力機構を詳細に分析してください。特に、外部API呼び出しやファイルシステム操作中に発生しうるエラーに対する現在の対策、およびそれらのエラーがどのようにログに記録され、デバッグに利用できるかを確認します。
+        実行内容: `check-large-files.toml.default` と `check_large_files.py` の内容を分析し、現在の設定ファイルがどのようにファイルをチェックしているかを理解してください。このツールを他のGitHubリポジトリでも容易に利用できるようにするために、どの設定項目（例: 監視対象ディレクトリ、最大ファイルサイズ閾値、除外パターンなど）を外部からパラメータとして渡せるようにすべきかを特定してください。
 
-     確認事項: GitHub Actionsのログ出力設定、Pythonスクリプト内の例外処理、および潜在的なパフォーマンスボトルネックや競合状態がないか確認してください。
+        確認事項: `call-check-large-files.yml`でのActionの呼び出し方法と、`check_large_files.py`が設定ファイルをどのように読み込んでいるかの依存関係を確認してください。汎用的な利用を想定した場合のセキュリティと設定の柔軟性のバランスを考慮してください。
 
-     期待する出力: `generate_repo_list` ワークフローの堅牢性と診断容易性を向上させるための具体的な改善提案をmarkdown形式で出力してください。これには、より詳細なデバッグログの追加、効果的なエラー通知メカニズムの実装、およびリトライ戦略の導入に関する提案が含まれる可能性があります。
-     ```
+        期待する出力: `check-large-files`アクションを汎用化するために必要な設定項目とそのデフォルト値の提案、および`call-check-large-files.yml`や`check_large_files.py`において必要な変更の概要をmarkdown形式で出力してください。
 
 ---
-Generated at: 2026-06-01 07:24:26 JST
+Generated at: 2026-06-03 07:44:50 JST
