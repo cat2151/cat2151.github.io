@@ -1,50 +1,51 @@
-Last updated: 2026-06-03
+Last updated: 2026-06-04
 
 # Development Status
 
 ## 現在のIssues
 - 現在オープン中のIssueはありません。
-- プロジェクトは安定した状態にあり、未解決の課題やバグは確認されていません。
-- そのため、次なる機能改善やパフォーマンス向上に注力できる段階です。
+- そのため、既存の自動化ワークフローの改善や、新たな機能拡充を次の一手として検討します。
+- これらはプロジェクトの品質向上と保守性維持に貢献するでしょう。
 
 ## 次の一手候補
-1.  `generate_repo_list`の出力内容を拡充する
-    -   最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py`と`src/generate_repo_list/markdown_generator.py`を分析し、現在取得・利用されているリポジトリ情報を把握する。
-    -   Agent実行プロンプ:
-        ```
-        対象ファイル: `src/generate_repo_list/generate_repo_list.py`, `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/repository_processor.py`
-
-        実行内容: `generate_repo_list.py`が現在取得しているリポジトリ情報と`markdown_generator.py`が利用しているデータを分析し、GitHub APIから取得可能な情報で、現在の`index.md`にまだ表示されていない有用なデータポイント（例: 最終更新日時、スター数、簡単な説明文など）を洗い出してください。
-
-        確認事項: `repository_processor.py`でのデータ取得ロジックと、`markdown_generator.py`でのMarkdown整形ロジックの依存関係を確認してください。また、GitHub APIのレートリミットや必要な認証スコープについても考慮してください。
-
-        期待する出力: 追加可能な情報候補のリストと、それを`index.md`に表示するために必要な変更の概要（どのファイルでどのデータを取得・加工し、どこで出力するか）をmarkdown形式で出力してください。
-        ```
-
-2.  プロジェクト概要生成スクリプトのパフォーマンスを改善する
-    -   最初の小さな一歩: `ProjectSummaryCoordinator.cjs`の処理フローを確認し、外部API呼び出しやファイルI/Oが集中する箇所を特定する。
+1.  リポジトリリスト生成における追加情報の検討と実装 [Issue #70](../issue-notes/70.md)
+    -   最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` と `src/generate_repo_list/repository_processor.py` を確認し、GitHub APIから取得可能な追加情報（例: topics, license, last commit date for displayed branches）を特定する。
     -   Agent実行プロンプト:
         ```
-        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectDataCollector.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/IssueTracker.cjs`
+        対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, src/generate_repo_list/markdown_generator.py
 
-        実行内容: プロジェクト概要生成のワークフロー全体における潜在的なパフォーマンスボトルネックを特定するため、`ProjectSummaryCoordinator.cjs`がオーケストレーションする各スクリプト（特にデータ収集関連）の処理内容を分析してください。ファイルI/O、外部API呼び出し、大規模なデータ処理など、時間のかかる可能性のある箇所を洗い出してください。
+        実行内容: 上記ファイルにおけるGitHubリポジトリデータの取得、処理、およびMarkdown出力部分を分析し、現在取得されていないがユーザーにとって価値のある情報（例: リポジトリのトピック、ライセンス情報、最終コミット日）を追加するための変更点を洗い出してください。
 
-        確認事項: 各スクリプトがどのようにデータを取得し、処理しているかの依存関係と、GitHub APIの呼び出し回数やファイルシステムへのアクセスパターンを確認してください。現状のワークフローが許容範囲内の実行時間であるかどうかの評価も行います。
+        確認事項: GitHub APIのレートリミットへの影響、既存のデータ構造（markdown_generatorに渡されるデータ）への影響、および生成されるindex.mdの可読性への影響を確認してください。
 
-        期待する出力: パフォーマンス改善の可能性のある領域をリストアップし、それぞれの領域で考えられる最適化のアイデア（例: キャッシング、並列処理、API呼び出しの削減など）をmarkdown形式で出力してください。
+        期待する出力: 追加情報取得・処理・表示のための具体的なPythonコード変更案をmarkdown形式で出力してください。特に、どのファイルをどのように変更し、どのような新しい情報が追加されるかを明確にしてください。
         ```
 
-3.  `check-large-files`設定を他のリポジトリにも展開可能にする
-    -   最初の小さな一歩: `check-large-files.toml.default`の内容を確認し、どのような設定項目があるかを理解する。
+2.  開発状況生成プロンプトの構成と出力精度の向上 [Issue #71](../issue-notes/71.md)
+    -   最初の小さな一歩: 本プロンプト (`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`) の内容と、現在の出力結果 (`generated-docs/development-status.md`) を比較し、改善点を特定する。
     -   Agent実行プロンプト:
         ```
-        対象ファイル: `.github/actions-tmp/.github_automation/check-large-files/check-large-files.toml.default`, `.github/actions-tmp/.github_automation/check-large-files/scripts/check_large_files.py`, `.github/workflows/call-check-large-files.yml`
+        対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs, generated-docs/development-status.md
 
-        実行内容: `check-large-files.toml.default` と `check_large_files.py` の内容を分析し、現在の設定ファイルがどのようにファイルをチェックしているかを理解してください。このツールを他のGitHubリポジトリでも容易に利用できるようにするために、どの設定項目（例: 監視対象ディレクトリ、最大ファイルサイズ閾値、除外パターンなど）を外部からパラメータとして渡せるようにすべきかを特定してください。
+        実行内容: 提供された「開発状況生成プロンプト（開発者向け）」の要件とガイドラインに基づき、現在のdevelopment-status-prompt.mdの内容がこれらの要件をどの程度満たしているかを分析してください。特に、「生成するもの」「生成しないもの」のルール、および「Agent実行プロンプト」生成ガイドラインとの整合性を確認し、出力の精度と質を向上させるための具体的な改善案を提案してください。
 
-        確認事項: `call-check-large-files.yml`でのActionの呼び出し方法と、`check_large_files.py`が設定ファイルをどのように読み込んでいるかの依存関係を確認してください。汎用的な利用を想定した場合のセキュリティと設定の柔軟性のバランスを考慮してください。
+        確認事項: 提案する変更がハルシネーションを誘発しないか、出力フォーマットを厳守できるか、および将来的な拡張性とのバランスを確認してください。
 
-        期待する出力: `check-large-files`アクションを汎用化するために必要な設定項目とそのデフォルト値の提案、および`call-check-large-files.yml`や`check_large_files.py`において必要な変更の概要をmarkdown形式で出力してください。
+        期待する出力: development-status-prompt.mdの修正案をmarkdown形式で出力してください。提案する変更が現在のガイドラインをどのように満たし、どのように出力精度を向上させるかを具体的に説明してください。
+        ```
+
+3.  大容量ファイルチェックワークフローの閾値設定と除外ルールの最適化 [Issue #72](../issue-notes/72.md)
+    -   最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml` (または `check-large-files.toml.default`) の現在の設定内容をレビューし、プロジェクトの実際のファイルサイズ傾向と照らし合わせて、閾値や除外パスが適切かを確認する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: .github_automation/check_large_files/check-large-files.toml, .github_automation/check_large_files/scripts/check_large_files.py
+
+        実行内容: 大容量ファイルチェックワークフローのcheck-large-files.tomlとcheck_large_files.pyを分析し、現在の設定（閾値、除外パス、チェック対象ファイルタイプなど）がプロジェクトのニーズに合致しているか評価してください。特に、誤検知や不要なチェックを減らしつつ、実際に問題となる大容量ファイルを検出するための改善点を特定してください。
+
+        確認事項: 変更がワークフローの実行時間やリソース消費に与える影響、および他の自動化スクリプトとの競合がないかを確認してください。新しい設定が既存のファイル構造や開発習慣に与える影響も考慮してください。
+
+        期待する出力: check-large-files.tomlの修正案と、その変更によって期待される効果をmarkdown形式で出力してください。また、check_large_files.pyに変更が必要な場合は、その変更点も提示してください。
+        ```
 
 ---
-Generated at: 2026-06-03 07:44:50 JST
+Generated at: 2026-06-04 07:45:40 JST
