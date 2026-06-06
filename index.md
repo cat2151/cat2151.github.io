@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-06-05 (UTC) / 2026-06-06 (JST)
+Last Updated: 2026-06-06 (UTC) / 2026-06-07 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages用のMarkdownファイルを自動生成するシステムです。
-- 検索エンジンのクロールを最適化し、LLMがリポジトリを参照しやすくすることで開発効率の向上を目指します。
-- 各リポジトリの概要を自動取得し、バッジ付きでアクティブ・アーカイブ・フォーク別に一覧表示します。
-- 📅 2026-06-05 (UTC) / 2026-06-06 (JST)
+- GitHub APIを活用し、リポジトリ情報を取得・整理します。
+- JekyllベースのGitHub Pages向けに、SEOを意識したリポジトリ一覧を自動生成します。
+- 検索エンジンからのアクセス性とLLMによる参照性を向上させ、プロジェクト公開を支援します。
+- 📅 2026-06-06 (UTC) / 2026-06-07 (JST)
 
 ## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
 
@@ -105,7 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
 - **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
 - **Overview**: No description available
-- 📅 2026-06-05 (UTC) / 2026-06-05 (JST)
+- 📅 2026-06-06 (UTC) / 2026-06-06 (JST)
 
 ## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
 
