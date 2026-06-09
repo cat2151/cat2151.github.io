@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 111 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript."
+og_description: "Featuring 111 projects (⭐57 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 111 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript."
+twitter_description: "Featuring 111 projects (⭐57 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -50,7 +50,7 @@ json_ld: |
       "description": "Programmer and developer. Publishing 111 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 111 projects (⭐56 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript.",
+    "description": "Featuring 111 projects (⭐57 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-06-07 (UTC) / 2026-06-08 (JST)
+Last Updated: 2026-06-09 (UTC) / 2026-06-10 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2026-06-07 (UTC) / 2026-06-08 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-111-blue) ![Active](https://img.shields.io/badge/Active-83-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-56-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-111-blue) ![Active](https://img.shields.io/badge/Active-83-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-6-purple) ![Stars](https://img.shields.io/badge/Total Stars-57-gold)
 
 ### Core Technologies
 
-![JavaScript](https://img.shields.io/badge/JavaScript-25_(22.5%25)-f1e05a?style=flat&logo=javascript) ![Rust](https://img.shields.io/badge/Rust-25_(22.5%25)-dea584?style=flat&logo=rust) ![TypeScript](https://img.shields.io/badge/TypeScript-15_(13.5%25)-3178c6?style=flat&logo=typescript) ![Python](https://img.shields.io/badge/Python-14_(12.6%25)-3572A5?style=flat&logo=python) ![HTML](https://img.shields.io/badge/HTML-6_(5.4%25)-e34c26?style=flat&logo=html5)
+![Rust](https://img.shields.io/badge/Rust-25_(22.5%25)-dea584?style=flat&logo=rust) ![JavaScript](https://img.shields.io/badge/JavaScript-25_(22.5%25)-f1e05a?style=flat&logo=javascript) ![TypeScript](https://img.shields.io/badge/TypeScript-15_(13.5%25)-3178c6?style=flat&logo=typescript) ![Python](https://img.shields.io/badge/Python-14_(12.6%25)-3572A5?style=flat&logo=python) ![HTML](https://img.shields.io/badge/HTML-6_(5.4%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -83,6 +83,24 @@ Last Updated: 2026-06-07 (UTC) / 2026-06-08 (JST)
 ## 🚀 Active Development
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
+
+## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
+
+<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
+- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
+- **Overview**: No description available
+- 📅 2026-06-09 (UTC) / 2026-06-09 (JST)
+
+## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
+- **Overview**: No description available
+- 📅 2026-06-09 (UTC) / 2026-06-09 (JST)
 
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
@@ -93,10 +111,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用してリポジトリ情報を取得し、Jekyll向けMarkdownを自動生成するシステムです。
-- GitHub Pagesに公開することで、SEOを最適化し、検索エンジンやLLMによる参照性を向上させます。
-- 各リポジトリの概要、技術バッジ、カテゴリ分類など、豊富な情報を自動で提供します。
-- 📅 2026-06-07 (UTC) / 2026-06-08 (JST)
+- GitHub APIを活用し、ユーザーのリポジトリ情報を自動で収集・整理するシステムです。
+- GitHub Pagesサイト向けに最適化されたMarkdown形式のリポジトリ一覧を自動生成します。
+- 検索エンジンからのアクセス向上とLLMの参照効率改善を目的としたSEOフレンドリーな設計です。
+- 📅 2026-06-08 (UTC) / 2026-06-09 (JST)
 
 ## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
 MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
@@ -105,7 +123,30 @@ MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
 
 - **Repository**: [https://github.com/cat2151/tonejs-mml-to-json](https://github.com/cat2151/tonejs-mml-to-json)
 - **GitHub Pages**: [https://cat2151.github.io/tonejs-mml-to-json/](https://cat2151.github.io/tonejs-mml-to-json/)
-- 📅 2026-06-07 (UTC) / 2026-06-08 (JST)
+- 📅 2026-06-08 (UTC) / 2026-06-08 (JST)
+
+## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
+Obsidian plugin. Playing Music Macro Language and Chord notation.
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-8-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: obsidian-plugin](https://img.shields.io/badge/Topic-obsidian--plugin-lightblue)
+
+- **Repository**: [https://github.com/cat2151/obsidian-plugin-mmlabc](https://github.com/cat2151/obsidian-plugin-mmlabc)
+- **GitHub Pages**: [https://cat2151.github.io/obsidian-plugin-mmlabc/](https://cat2151.github.io/obsidian-plugin-mmlabc/)
+
+### Project Highlights
+- ObsidianでMMLやコード進行を記述し、五線譜表示と再生を可能にするプラグイン。
+- 音楽のアイデアスケッチに最適で、複数ペインでのフレーズやコード進行の再生もサポート。
+- 外部のMML/コード進行トランスパイラとabcjsを利用し、楽譜描画と音源再生を実現。
+- 📅 2026-06-08 (UTC) / 2026-06-08 (JST)
+
+## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
+
+<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
+- **Overview**: No description available
+- 📅 2026-06-08 (UTC) / 2026-06-08 (JST)
 
 ## [web-ym2151](https://cat2151.github.io/web-ym2151/)
 
@@ -153,15 +194,6 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 - 時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
 - 📅 2026-06-07 (UTC) / 2026-06-07 (JST)
 
-## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
-
-<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
-- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
-- **Overview**: No description available
-- 📅 2026-06-06 (UTC) / 2026-06-06 (JST)
-
 ## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
 
 <a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
@@ -171,15 +203,6 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 - **Overview**: No description available
 - 📅 2026-06-01 (UTC) / 2026-06-01 (JST)
 
-## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
-- **Overview**: No description available
-- 📅 2026-05-26 (UTC) / 2026-05-26 (JST)
-
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
 
 <a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
@@ -188,15 +211,6 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 - **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
 - **Overview**: No description available
 - 📅 2026-05-21 (UTC) / 2026-05-21 (JST)
-
-## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
-
-<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
-- **Overview**: No description available
-- 📅 2026-05-19 (UTC) / 2026-05-19 (JST)
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
@@ -865,20 +879,6 @@ Simple user scripts for the Obsidian Templater plugin.
 - サクラエディタのような「現在行のハイライト（ブックマーク）」や「指定ファイル挿入」などのマクロ機能を実現し、ノート編集の効率を高めます。
 - Templater API活用の具体的なサンプルを通じて、ユーザーが独自のスクリプト開発を行うためのノウハウを共有することを目的としています。
 - 📅 2026-01-07 (UTC) / 2026-01-08 (JST)
-
-## [obsidian-plugin-mmlabc](https://cat2151.github.io/obsidian-plugin-mmlabc/)
-Obsidian plugin. Playing Music Macro Language and Chord notation.
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-7-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: chord-progression](https://img.shields.io/badge/Topic-chord--progression-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: obsidian-plugin](https://img.shields.io/badge/Topic-obsidian--plugin-lightblue)
-
-- **Repository**: [https://github.com/cat2151/obsidian-plugin-mmlabc](https://github.com/cat2151/obsidian-plugin-mmlabc)
-- **GitHub Pages**: [https://cat2151.github.io/obsidian-plugin-mmlabc/](https://cat2151.github.io/obsidian-plugin-mmlabc/)
-
-### Project Highlights
-- ObsidianでMMLやコード進行を記述し、五線譜表示と再生を可能にするプラグイン。
-- 音楽のアイデアスケッチに最適で、複数ペインでのフレーズやコード進行の再生もサポート。
-- 外部のMML/コード進行トランスパイラとabcjsを利用し、楽譜描画と音源再生を実現。
-- 📅 2025-12-02 (UTC) / 2025-12-02 (JST)
 
 ## [postmate-midi-experimental](https://cat2151.github.io/postmate-midi-experimental/)
 An experimental project for MIDI connections and audio transmission between multiple webpages using only the browser and postMessage.
