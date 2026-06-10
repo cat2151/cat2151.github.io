@@ -1,57 +1,53 @@
-Last updated: 2026-06-09
+Last updated: 2026-06-11
 
 # Development Status
 
 ## 現在のIssues
-- 現在、プロジェクトにはオープンな課題は存在しません。
-- 全ての既知の課題は解決済みであり、新たな開発や改善に注力できる状態です。
-- 直近の活動は主に自動化されたリポジトリリストの更新とプロジェクトサマリーの生成に集中しています。
+- 現在オープン中のIssueはありません。
+- 全ての既知の課題は解決済み、またはクローズされています。
+- この状態はプロジェクトの安定性と健全性を示しています。
 
 ## 次の一手候補
-1. プロジェクトサマリー生成プロンプトの品質向上
-   - 最初の小さな一歩: 現在の開発状況生成プロンプト (`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`) の内容をレビューし、オープンIssueがない場合の出力品質を向上させるための改善点を検討する。
-   - Agent実行プロンプト:
+1. [改善] 日次プロジェクトサマリー生成処理の潜在的な課題点の特定
+   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/scripts/` ディレクトリ下のスクリプト群（`ProjectSummaryCoordinator.cjs`, `DevelopmentStatusGenerator.cjs`, `ProjectOverviewGenerator.cjs` など）を概観し、エラーハンドリングや効率性について改善の余地がないか初期調査を行う。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/**/*.cjs
+
+     実行内容: 対象となる日次プロジェクトサマリー生成関連のJavaScriptファイルを読み込み、現在の日次自動実行フローにおける潜在的なエラーポイント、非効率な処理、またはリファクタリングの機会を分析し、改善案のリストをmarkdown形式で出力してください。
+
+     確認事項: スクリプト間の依存関係や、GitHub Actionsワークフロー (`.github/workflows/call-daily-project-summary.yml`) との連携を確認してください。ハルシネーションを避けるため、既存コードベースに基づいて改善点を提案してください。
+
+     期待する出力: `ProjectSummaryCoordinator.cjs` の実行フローに沿って、各主要ステップでの潜在的な改善点（例: エラー処理の強化、ロギングの改善、冗長コードの排除）を列挙したmarkdownファイル。
+     ```
+
+2. [改善] 開発状況生成プロンプトの指示内容の明確化と追加要件の検討
+   - 最初の小さな一歩: 現在の `development-status-prompt.md` をレビューし、指示が曖昧な点や、Agentの出力品質をさらに高めるための追加指示がないか検討する。
+   - Agent実行プロンプ:
      ```
      対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
 
-     実行内容: 対象ファイルをレビューし、以下の観点から改善案を検討してください：
-     1. 提供される「開発状況情報」が「オープン中のIssueはありません」の場合の出力品質をさらに向上させるための表現や構造。
-     2. 次の一手候補の選定において、より適切な候補を導き出すための具体的なヒントやガイドラインの追加。
-     3. ハルシネーションを避けるための明確な指示の強化。
+     実行内容: このファイルの内容を分析し、以下の観点から改善提案を行ってください：
+     1) 指示の明確性：曖昧な表現や解釈の余地がある箇所がないか。
+     2) 網羅性：現状のガイドラインで不足している要素や、Agentがより高品質な出力を生成するために追加すべき指示がないか。
+     3) ハルシネーション防止：ハルシネーションを誘発しやすい記述がないか、その対策。
 
-     確認事項: プロンプトの変更が、`ProjectSummaryCoordinator.cjs`および`DevelopmentStatusGenerator.cjs`スクリプトの期待する動作に影響を与えないことを確認してください。また、`generated-docs/development-status-generated-prompt.md` の内容が適切に更新されるかどうかも考慮してください。
+     確認事項: 現在の出力フォーマット要件、生成・非生成ルール、および「Agent実行プロンプト」生成ガイドラインの意図と合致しているか確認してください。
 
-     期待する出力: `development-status-prompt.md` の改善提案をMarkdown形式で出力してください。提案には、具体的な変更点と、それによって期待される効果を含めてください。
+     期待する出力: `development-status-prompt.md` の改善案をmarkdown形式で出力してください。提案は具体的な変更箇所と理由を明確に記述し、新しいプロンプトの例を含むようにしてください。
      ```
 
-2. リポジトリリスト生成スクリプトのコードレビューとテストカバレッジ評価
-   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の主要なPythonスクリプト (`generate_repo_list.py`, `repository_processor.py`, `markdown_generator.py` など) を対象に、現在のテストカバレッジを測定する方法を調査し、実行計画を立てる。
-   - Agent実行プロンプト:
+3. [改善] `index.md`に生成されるリポジトリリストの情報拡充
+   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` を確認し、現在生成されている `index.md` にどのような情報が出力されているかを把握する。
+   - Agent実行プロンプ:
      ```
-     対象ファイル: src/generate_repo_list/*.py, tests/*.py, pytest.ini, requirements-dev.txt
+     対象ファイル: src/generate_repo_list/markdown_generator.py, src/generate_repo_list/repository_processor.py, index.md
 
-     実行内容: `src/generate_repo_list/` ディレクトリ内の主要なPythonスクリプトについて、既存のテストファイル (`tests/`) と構成ファイルを参照し、テストカバレッジを評価するための具体的な計画を立ててください。具体的には、テストカバレッジツール（例: pytest-cov）の導入方法、カバレッジレポートの生成コマンド、および未テストの主要機能がないかの調査方法を含めてください。
+     実行内容: `generate_repo_list` 処理によって生成される `index.md` のリポジトリリストに、追加で表示するとユーザーにとって有用な情報（例: 最終コミット日時、言語ごとの割合、簡単な説明文など）を特定し、それを実現するための `markdown_generator.py` および関連するPythonスクリプト (`repository_processor.py` など) の変更点を提案してください。
 
-     確認事項: 既存のテストスイートとの互換性、新しい依存関係（もしあれば）がプロジェクトの`requirements-dev.txt`に適切に統合されることを確認してください。
+     確認事項: 提案される変更が、既存のデータ取得メカニズム (`project_overview_fetcher.py` など) で取得可能な情報に基づいているか、または容易に追加取得できる情報であるかを確認してください。また、`index.md` の現在のレイアウトとの整合性も考慮してください。
 
-     期待する出力: テストカバレッジ測定とレポート生成のための詳細な手順書をMarkdown形式で出力してください。また、カバレッジが低いと予想される機能領域があれば、その特定と、テスト追加の初期アイデアを提示してください。
-     ```
-
-3. 自動更新ワークフローの実行時間と安定性の分析
-   - 最初の小さな一歩: GitHub ActionsのUIから、`call-daily-project-summary.yml`と`generate_repo_list.yml`ワークフローの過去1ヶ月間の実行履歴を調査し、平均実行時間、成功/失敗率、および発生している一般的なエラーパターンを把握する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/workflows/call-daily-project-summary.yml, .github/workflows/generate_repo_list.yml
-
-     実行内容: 指定されたGitHub Actionsワークフローについて、その実行効率と安定性を分析するための手順を考案してください。以下の点を網羅してください：
-     1. 過去の実行データ（GitHub Actionsの履歴）から平均実行時間と成功率を定量的に把握する方法。
-     2. 失敗が発生した場合のエラーログから、共通の失敗原因やボトルネックを特定するためのアプローチ。
-     3. 特に長時間かかっているステップや、繰り返し失敗しているステップの特定方法。
-
-     確認事項: GitHub APIの利用制限や、GitHub CLIなど外部ツールの利用の必要性を考慮し、実現可能性の高い方法を提案してください。
-
-     期待する出力: 上記の分析を行うための詳細な手順書をMarkdown形式で出力してください。分析結果をまとめるためのテンプレートや、もし可能であれば分析を補助するシンプルなスクリプトの概念も提案してください。
-     ```
+     期待する出力: `index.md` に追加する情報のリストと、それを生成するために必要なPythonスクリプト (`markdown_generator.py` など) の具体的なコード変更提案をmarkdown形式で出力してください。
 
 ---
-Generated at: 2026-06-09 07:35:53 JST
+Generated at: 2026-06-11 07:42:54 JST
