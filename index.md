@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-06-09 (UTC) / 2026-06-10 (JST)
+Last Updated: 2026-06-11 (UTC) / 2026-06-12 (JST)
 
 ## 📋 Table of Contents
 
@@ -91,16 +91,7 @@ Last Updated: 2026-06-09 (UTC) / 2026-06-10 (JST)
 - **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
 - **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
 - **Overview**: No description available
-- 📅 2026-06-09 (UTC) / 2026-06-09 (JST)
-
-## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
-- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
-- **Overview**: No description available
-- 📅 2026-06-09 (UTC) / 2026-06-09 (JST)
+- 📅 2026-06-11 (UTC) / 2026-06-11 (JST)
 
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
@@ -111,10 +102,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、ユーザーのリポジトリ情報を自動で収集・整理するシステムです。
-- GitHub Pagesサイト向けに最適化されたMarkdown形式のリポジトリ一覧を自動生成します。
-- 検索エンジンからのアクセス向上とLLMの参照効率改善を目的としたSEOフレンドリーな設計です。
-- 📅 2026-06-08 (UTC) / 2026-06-09 (JST)
+- GitHub APIを利用し、個人のGitHubリポジトリ一覧を自動で生成するシステムです。
+- 生成されたリポジトリ一覧は、GitHub Pages（`*.github.io`）サイト向けにSEO最適化されたMarkdown形式で出力されます。
+- 検索エンジンからのクロールを促進し、各リポジトリの発見性を高めることで、情報のアクセス性とLLM連携の改善を目指します。
+- 📅 2026-06-10 (UTC) / 2026-06-11 (JST)
+
+## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/tonejs-step-sequencer](https://github.com/cat2151/tonejs-step-sequencer)
+- **GitHub Pages**: [https://cat2151.github.io/tonejs-step-sequencer/](https://cat2151.github.io/tonejs-step-sequencer/)
+- **Overview**: No description available
+- 📅 2026-06-09 (UTC) / 2026-06-09 (JST)
 
 ## [tonejs-mml-to-json](https://cat2151.github.io/tonejs-mml-to-json/)
 MML(Music Macro Language) to Tone.js JSON Sequencer Format Converter
