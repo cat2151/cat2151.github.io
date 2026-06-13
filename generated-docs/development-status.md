@@ -1,59 +1,49 @@
-Last updated: 2026-06-13
+Last updated: 2026-06-14
 
 # Development Status
 
 ## 現在のIssues
-- 現在、プロジェクトにはオープンなIssueがありません。
-- 全ての既知の問題は解決済みか、またはクローズされています。
-- 開発はIssue駆動ではなく、定期的なメンテナンスと既存機能の改善が中心です。
+オープン中のIssueはありません。プロジェクトは安定した状態にあり、現在は顕著な課題は発生していません。
+継続的な機能改善と保守作業に焦点を当てることが推奨されます。
 
 ## 次の一手候補
-1. リポジトリリストのREADMEバッジ抽出ロジックの改善可能性分析 [Issue #N/A]
-   - 最初の小さな一歩: `src/generate_repo_list/readme_badge_extractor.py` の現在の実装をレビューし、READMEファイルからバッジ情報を正確に抽出するための主要な正規表現やロジックが、最新のバッジスタイルに対応できているか、あるいは改善の余地があるかを特定する。
+1. リポジトリ一覧の自動生成スクリプト (`src/generate_repo_list`) の出力情報を拡充する
+   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py` および `src/generate_repo_list/project_overview_fetcher.py` がGitHub APIから現在どのようなデータを取得しているかを確認し、`markdown_generator.py`で利用可能な追加情報（例: スター数、最終コミット日付、トピックタグ）を洗い出す。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/readme_badge_extractor.py`, `src/generate_repo_list/repository_processor.py`
+     対象ファイル: `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/project_overview_fetcher.py`, `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/strings.yml`
 
-     実行内容: `readme_badge_extractor.py` がどのようにREADMEファイルからバッジ情報を抽出し、`repository_processor.py` で利用されているかを分析してください。特に、新しい種類のバッジ（例: GitHub Actionsバッジ、特定のCI/CDサービスバッジ）や、既存のバッジの表現変更に対応するために、現在の正規表現や抽出ロジックにどのような改善の余地があるかを検討し、提案してください。
+     実行内容: `repository_processor.py`と`project_overview_fetcher.py`が取得可能なGitHubリポジトリ情報と、現在の`markdown_generator.py`で利用されている情報を比較してください。特に、スター数、最終コミット日付、トピックタグなど、追加で表示すると有用な情報を特定し、それらを`markdown_generator.py`でどのように組み込み、`strings.yml`で文言を定義できるか検討し、改善案を提案してください。
 
-     確認事項: `repository_processor.py` における `readme_badge_extractor` の利用箇所と、その抽出結果が最終的にどのようにMarkdownに変換されているか（`src/generate_repo_list/markdown_generator.py` など）の全体的なフローを確認してください。
+     確認事項: GitHub APIのレートリミットへの影響、既存のMarkdown出力フォーマットへの影響、情報追加による出力ファイルのサイズ増加。
 
-     期待する出力: `readme_badge_extractor.py` の改善提案をMarkdown形式で出力してください。具体的には、現在のロジックの評価、潜在的な課題、および具体的なコード変更案（擬似コードまたは正規表現の修正案）を含めてください。
+     期待する出力: リポジトリ一覧に表示する追加情報（例: スター数、最終コミット日）と、`markdown_generator.py`および`strings.yml`の変更を想定したMarkdown出力の改善案を記述してください。具体的なコード変更ではなく、どのような情報が追加され、どのように表示されるかの概念的な説明と例を含めてください。
      ```
 
-2. プロジェクト概要生成スクリプトのパフォーマンス分析 [Issue #N/A]
-   - 最初の小さな一歩: `ProjectSummaryCoordinator.cjs` のコードを読み、`DevelopmentStatusGenerator.cjs` や `ProjectAnalysisOrchestrator.cjs` との連携を含めた主要な処理フローを把握する。特に、ファイルシステム操作、Git操作、LLM呼び出しなど、外部とのI/Oが発生する部分を特定する。
+2. `development-status.md` レポートがIssue不在時でも建設的な改善提案を生成するよう改善
+   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`を分析し、Issueが存在しない場合にどのような情報源（例: 最近のコミット内容、クローズされたIssueの傾向、コードベースの特定領域）を参照して次の一手を提案できるか、そのプロンプトの拡張方向性を検討する。
    - Agent実行プロンプト:
      ```
-     対象ファイル:
-       - `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs`
-       - `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`
-       - `.github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectAnalysisOrchestrator.cjs`
-       - `.github/actions-tmp/.github_automation/project_summary/scripts/generate-project-summary.cjs`
+     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/GitUtils.cjs`
 
-     実行内容: `generate-project-summary.cjs` から `ProjectSummaryCoordinator.cjs` を経由してプロジェクト概要と開発状況が生成されるまでの主要な処理フローを分析してください。特に、以下の観点から潜在的なボトルネックとなる可能性のある処理（ファイルI/O、外部API呼び出し、大量のデータ処理など）を特定してください。
-       1) データの収集フェーズ (GitUtils, FileSystemUtilsなど)
-       2) データの分析・加工フェーズ (CodeAnalyzer, IssueTrackerなど)
-       3) 出力生成フェーズ (BaseGenerator)
+     実行内容: 現在の`development-status-prompt.md`と`DevelopmentStatusGenerator.cjs`が、オープンIssueがない場合にどのような出力を生成するかを確認してください。その上で、Issueがない場合でも、最近のコミット履歴やクローズされたIssueの分析（`GitUtils.cjs`の活用を検討）に基づいて、プロジェクトの健全性を維持・向上させるための具体的な改善点や潜在的な次のタスクを自動で推測・提案できるように、プロンプトと生成ロジックの改善点を洗い出してください。
 
-     確認事項: 処理が非同期で行われる箇所や、並列処理が可能な箇所があるかを確認してください。また、外部依存関係（例: LLMへのAPI呼び出し）がどのように扱われているかも考慮に入れてください。
+     確認事項: ハルシネーションの防止、提案内容の現実性・実現可能性、生成プロセスのパフォーマンスへの影響。
 
-     期待する出力: `ProjectSummaryCoordinator.cjs` を中心としたプロジェクト概要生成の処理フロー図（テキストベースまたは疑似コード）と、特定された潜在的なボトルネック箇所およびその改善可能性に関する分析結果をMarkdown形式で出力してください。
+     期待する出力: `development-status-prompt.md`と`DevelopmentStatusGenerator.cjs`をどのように修正すれば、Issueがない場合でも、最近のプロジェクト活動から将来のタスクや改善点を自動的に推測・提案できるかをMarkdown形式で記述してください。具体的なコード変更案は不要で、ロジックの改善方向性を明確にしてください。
      ```
 
-3. 未使用/冗長なアクション・ワークフローの棚卸し [Issue #N/A]
-   - 最初の小さな一歩: `.github/actions-tmp/.github/workflows/` ディレクトリ内の各YAMLファイル（例: `callgraph.yml`, `check-large-files.yml` など）を列挙し、それぞれが他の`call-*.yml`ファイルや、プロジェクトのメインの`.github/workflows`ディレクトリ内のワークフローから実際に呼び出されているか、あるいは直接使用されているかを確認する。
+3. GitHub Actionsワークフローの実行状況を定期的に監視し、開発状況レポートに含める
+   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml` と `.github/actions-tmp/.github/workflows/daily-project-summary.yml` を分析し、GitHub ActionsのAPIを利用して過去のワークフロー実行結果（成功/失敗、実行時間）を取得し、開発状況レポートで利用できるかを調査する。
    - Agent実行プロンプト:
      ```
-     対象ファイル:
-       - `.github/actions-tmp/.github/workflows/*.yml` (ディレクトリ内の全ての`.yml`ファイル)
-       - `.github/workflows/*.yml` (メインのワークフローディレクトリ内の全ての`.yml`ファイル)
+     対象ファイル: `.github/workflows/call-daily-project-summary.yml`, `.github/actions-tmp/.github/workflows/daily-project-summary.yml`, `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/shared/BaseGenerator.cjs`
 
-     実行内容: `.github/actions-tmp/.github/workflows/` ディレクトリに存在する各GitHub Actionsワークフローファイルについて、それが現在のプロジェクトのメインのワークフロー (`.github/workflows/*.yml`) や、他の `call-*.yml` ファイルから実際に呼び出されているか、または利用されているかを分析してください。利用されていない可能性のあるワークフローを特定し、その理由（例: テスト用、古いバージョン、未使用）を推測してください。
+     実行内容: `daily-project-summary`ワークフローおよび他の主要なGitHub Actionsワークフロー（例: `call-check-large-files.yml`, `call-translate-readme.yml`）の実行結果（成功/失敗、実行時間）を自動的に取得し、その健全性情報を`development-status.md`レポートに含めるための仕組みを検討してください。`ProjectSummaryCoordinator.cjs`や`BaseGenerator.cjs`を拡張し、ワークフローの状態を収集・要約するロジックの概念的な設計を提案してください。
 
-     確認事項: ワークフローの `on:` トリガーや `workflow_call:` 設定、`uses:` キーワードを重点的に確認し、呼び出し元と呼び出し先の関係を正確に把握してください。
+     確認事項: GitHub ActionsのAPI利用制限、既存のワークフローへの影響、レポート出力形式の変更、通知メカニズム（必要であれば）の選択。
 
-     期待する出力: 各ワークフローファイルについて、その利用状況（利用されている/利用されていない可能性が高い）と、利用されていない場合の推測理由をまとめたMarkdownテーブルを出力してください。また、削除またはアーカイブを検討すべきワークフローのリストを提案してください。
+     期待する出力: ワークフローの実行状況（成功/失敗、実行時間など）を開発状況レポートに含める、または別の監視・通知メカニズムを構築するための概念的な手順をMarkdown形式で提案してください。具体的な実装コードは不要ですが、GitHub Actionsの機能を使った実現可能性について言及し、どのような情報がレポートに追加されるかのイメージを記述してください。
 
 ---
-Generated at: 2026-06-13 07:35:30 JST
+Generated at: 2026-06-14 07:26:53 JST
