@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-06-15 (UTC) / 2026-06-16 (JST)
+Last Updated: 2026-06-16 (UTC) / 2026-06-17 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,15 +84,6 @@ Last Updated: 2026-06-15 (UTC) / 2026-06-16 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
-## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
-
-<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
-- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
-- **Overview**: No description available
-- 📅 2026-06-15 (UTC) / 2026-06-15 (JST)
-
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
@@ -102,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、GitHubリポジトリ情報を自動取得するシステムです。
-- JekyllベースのGitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧をMarkdownで生成します。
-- 検索エンジンへのインデックス促進とLLMによるリポジトリ参照精度向上を目指します。
-- 📅 2026-06-14 (UTC) / 2026-06-15 (JST)
+- GitHub APIを利用し、自身のGitHubリポジトリ情報を自動で取得するシステムです。
+- 取得した情報から、検索エンジンに最適化されたGitHub Pages用のリポジトリ一覧ページを自動生成します。
+- これにより、個々のリポジトリが検索エンジンやLLMに発見されやすくなり、情報参照の利便性を高めます。
+- 📅 2026-06-16 (UTC) / 2026-06-17 (JST)
 
 ## [trace-rush](https://cat2151.github.io/trace-rush/)
 
@@ -114,7 +105,16 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/trace-rush](https://github.com/cat2151/trace-rush)
 - **GitHub Pages**: [https://cat2151.github.io/trace-rush/](https://cat2151.github.io/trace-rush/)
 - **Overview**: No description available
-- 📅 2026-06-14 (UTC) / 2026-06-14 (JST)
+- 📅 2026-06-16 (UTC) / 2026-06-16 (JST)
+
+## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
+
+<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
+- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
+- **Overview**: No description available
+- 📅 2026-06-15 (UTC) / 2026-06-15 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
