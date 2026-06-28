@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-06-27 (UTC) / 2026-06-28 (JST)
+Last Updated: 2026-06-28 (UTC) / 2026-06-29 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、リポジトリ情報を自動取得してGitHub Pages向けMarkdownを生成するシステムです。
-- 生成されたリポジトリ一覧はSEO最適化され、検索エンジンやLLMによる参照性を高めます。
-- 各リポジトリの概要説明を自動抽出し、アクティブ・アーカイブ・フォーク別に分類して表示します。
-- 📅 2026-06-27 (UTC) / 2026-06-28 (JST)
+- GitHub Pagesサイト向けに、ユーザーのリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、SEO最適化されたMarkdownファイルを生成します。
+- これにより、プロジェクトの検索エンジンからの可視性を高め、LLMによる参照失敗の問題を緩和します。
+- 📅 2026-06-28 (UTC) / 2026-06-29 (JST)
 
 ## [trace-rush](https://cat2151.github.io/trace-rush/)
 
@@ -105,7 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/trace-rush](https://github.com/cat2151/trace-rush)
 - **GitHub Pages**: [https://cat2151.github.io/trace-rush/](https://cat2151.github.io/trace-rush/)
 - **Overview**: No description available
-- 📅 2026-06-27 (UTC) / 2026-06-27 (JST)
+- 📅 2026-06-28 (UTC) / 2026-06-28 (JST)
 
 ## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
 
