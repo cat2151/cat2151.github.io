@@ -1,50 +1,58 @@
-Last updated: 2026-06-29
+Last updated: 2026-06-30
 
 # Development Status
 
 ## 現在のIssues
-- 現在オープンしているIssueはございません。
-- そのため、既存のプロジェクト機能の改善や自動化プロセスの最適化に焦点を当てます。
-- 具体的には、リポジトリリスト生成スクリプトのコード品質向上、CI/CDワークフローの効率化、およびテストカバレッジの拡充を検討します。
+- 現在オープン中のIssueはありません。プロジェクトはクリーンな状態を維持しています。
+- これは、最近の変更が安定しており、直近で対応が必要な問題がないことを示しています。
+- 引き続き、定期的なメンテナンスと品質向上活動に注力できる段階です。
 
 ## 次の一手候補
-1. `generate_repo_list`のコード品質分析とリファクタリング (新規提案)
-   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py`内の主要な関数（例: `main`関数やリポジトリ処理の核となる関数）について、循環的複雑度や凝集度を分析し、リファクタリングの候補を特定する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py
+1.  プロジェクトサマリー生成プロセスの安定性向上
+    -   最初の小さな一歩: `ProjectSummaryCoordinator.cjs` にエラー発生時の詳細なログ出力と、重要なエラーを検出した場合の通知メカニズム（例: GitHub Actions の`fail()`関数によるジョブ失敗）を追加する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs
 
-     実行内容: 上記ファイルの主要な関数について、コードの可読性、保守性、およびテスト容易性を評価し、改善が必要な箇所を特定する。特に、関数の責任が過度に大きい、または依存関係が複雑な箇所に注目する。
+        実行内容: 対象ファイルのエラーハンドリング機構を分析し、以下の観点から改善案を提案してください：
+        1) 処理中の例外を捕捉し、詳細なエラーメッセージをログに出力する機能の追加。
+        2) 主要なステップ（例: `DevelopmentStatusGenerator` や `ProjectOverviewGenerator` の呼び出し）でエラーが発生した場合、それがジョブ失敗につながるようにする変更。
 
-     確認事項: 他の`src/generate_repo_list`配下のファイルや、`tests/`ディレクトリにある関連テストファイルとの依存関係を確認し、既存の機能が損なわれないことを確認してください。
+        確認事項: 既存のログ出力処理や、他のサマリー生成スクリプトとの連携に影響がないことを確認してください。
 
-     期待する出力: リファクタリングが必要な具体的な関数名と、その理由、および改善案をmarkdown形式で出力してください。
-     ```
+        期待する出力: 提案された変更点をまとめたmarkdown形式の要約と、具体的なコード変更（擬似コードまたは差分形式）を含めてください。
+        ```
 
-2. `call-daily-project-summary.yml`ワークフローの実行時間分析と最適化案の検討 (新規提案)
-   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml`の最近の実行履歴を調査し、最も実行に時間のかかっているステップやジョブを特定する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/workflows/call-daily-project-summary.yml
+2.  レポジトリリスト生成機能のパフォーマンス分析
+    -   最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` の主要な処理関数（例: リポジトリデータのフェッチ、Markdown生成）に、簡単な時間計測ログを追加し、実行に時間がかかっている箇所を特定できるようにする。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, src/generate_repo_list/project_overview_fetcher.py
 
-     実行内容: `.github/workflows/call-daily-project-summary.yml`ワークフローの定義を分析し、実行時間の最適化が可能なステップ（例: 不要な依存関係、並列化可能なタスク、より効率的なコマンド）を特定する。
+        実行内容: 対象ファイル群を分析し、レポジトリリスト生成処理における潜在的なパフォーマンスボトルネックを特定するための分析計画を立案してください。特に、以下の点を考慮してください：
+        1) GitHub APIへの呼び出し回数と応答時間。
+        2) 大量のデータを処理する際のメモリ使用量とCPU負荷。
+        3) ファイルI/Oの効率性。
 
-     確認事項: ワークフローが依存しているスクリプトやアクション（例: `ProjectSummaryCoordinator.cjs`, `generate-project-summary.cjs`）の変更の可能性と、ワークフローの目的（プロジェクトサマリーの自動生成）が達成され続けることを確認してください。
+        確認事項: プロジェクトの既存のテスト環境や、Pythonの標準プロファイリングツールとの互換性を確認してください。
 
-     期待する出力: ワークフローの実行時間を短縮するための具体的な変更案（例: キャッシュの導入、ステップの並列化、リソースの見直し）をmarkdown形式で出力してください。
-     ```
+        期待する出力: パフォーマンス分析のための具体的な手順（例: `cProfile` やカスタムロガーの使用方法）をmarkdown形式で提案し、各ボトルネック候補に対する改善の方向性（コード最適化、キャッシング導入など）を記述してください。
+        ```
 
-3. `src/generate_repo_list`モジュールのテストカバレッジ分析と改善提案 (新規提案)
-   - 最初の小さな一歩: `src/generate_repo_list`ディレクトリ内のPythonコードに対する現在のテストカバレッジを測定する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/**/*.py, tests/**/*.py
+3.  Callgraph生成機能の活用状況評価とドキュメント拡充
+    -   最初の小さな一歩: `.github/actions-tmp/.github_automation/callgraph/docs/callgraph.md` をレビューし、CodeQLによるCallgraph生成ワークフローの目的、実行方法、出力の確認方法について、明確さや情報量に不足がないか評価する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: .github/actions-tmp/.github/workflows/callgraph.yml, .github/actions-tmp/.github_automation/callgraph/docs/callgraph.md, .github/actions-tmp/generated-docs/callgraph.html
 
-     実行内容: `src/generate_repo_list`ディレクトリ内のPythonファイルのテストカバレッジを分析し、特にカバレッジが低い、または重要であるにも関わらずテストが不足しているモジュールや関数を特定する。
+        実行内容: 対象ファイル群を分析し、CodeQL Callgraph生成機能の以下の側面について、ドキュメントの現状を評価し、拡充案を提案してください：
+        1) `callgraph.yml` ワークフローのトリガー条件と実行頻度。
+        2) 生成される `generated-docs/callgraph.html` の内容と、それをどのように活用・解釈すべきか。
+        3) Callgraph結果を定期的にレビューする推奨プロセス。
 
-     確認事項: 既存のテストが正しく動作すること、および`pytest.ini`や`ruff.toml`などの設定ファイルがテスト実行に影響を与えていないことを確認してください。
+        確認事項: 既存のドキュメントが対象読者（他の開発者）にとって十分理解しやすいか、具体性を欠いていないかを確認してください。
 
-     期待する出力: テストカバレッジを向上させるために新しく追加すべきテストケースの概要、または既存テストを修正してカバレッジを増やすための具体的な提案をmarkdown形式で出力してください。
+        期待する出力: ドキュメントの改善提案をmarkdown形式で出力してください。具体的には、`callgraph.md` に追加すべきセクション、説明を補足すべき箇所、具体的な使用例を含めてください。
 
 ---
-Generated at: 2026-06-29 07:25:27 JST
+Generated at: 2026-06-30 07:26:28 JST
