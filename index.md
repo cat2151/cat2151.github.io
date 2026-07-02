@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-07-01 (UTC) / 2026-07-02 (JST)
+Last Updated: 2026-07-02 (UTC) / 2026-07-03 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、ユーザーのリポジトリ情報を自動的に取得・整理するシステムです。
-- 取得した情報から、検索エンジンに最適化されたMarkdown形式のリポジトリ一覧を生成します。
-- これにより、GitHub PagesサイトのSEOとリポジトリの可視性を向上させ、情報アクセシビリティを改善します。
-- 📅 2026-07-01 (UTC) / 2026-07-02 (JST)
+- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages用のMarkdownファイルを自動生成します。
+- 検索エンジンにインデックスされにくいGitHubユーザーページのリポジトリ一覧を最適化します。
+- GitHub Pagesを通じてリポジトリ情報を公開し、LLMによる参照失敗の緩和とSEO向上を目指します。
+- 📅 2026-07-02 (UTC) / 2026-07-03 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- **Overview**: No description available
+- 📅 2026-07-02 (UTC) / 2026-07-02 (JST)
 
 ## [trace-rush](https://cat2151.github.io/trace-rush/)
 
@@ -264,15 +273,6 @@ A TUI that displays the commit count of your public repositories.
 
 - **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
-- **Overview**: No description available
-- 📅 2026-05-17 (UTC) / 2026-05-17 (JST)
-
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
 - 📅 2026-05-17 (UTC) / 2026-05-17 (JST)
 
