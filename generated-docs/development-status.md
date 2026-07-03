@@ -1,61 +1,54 @@
-Last updated: 2026-07-03
+Last updated: 2026-07-04
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。
-現在のプロジェクトは、自動リポジトリリスト更新とプロジェクト概要・開発状況レポート生成の自動化を中心に安定稼働しています。
-直近の活動は、これらの自動生成プロセスがスケジュール通りに実行されていることを示しています。
+オープン中のIssueはありません。現在、プロジェクトは安定しており、直接的な開発タスクは存在しません。
+そのため、次の一手は、既存の自動化されたプロセスの品質向上や保守性の強化に焦点を当てます。
 
 ## 次の一手候補
-1. リポジトリリスト生成の出力内容カスタマイズ機能追加 [新規提案 #001](../issue-notes/001.md)
-   - 最初の小さな一歩: `src/generate_repo_list/config.yml`に新しい出力項目（例: スター数、最終更新日）を追加するための設定を検討し、その設定を読み込むロジックを`src/generate_repo_list/generate_repo_list.py`に追加する。
+1. 開発状況レポートの生成プロンプトの評価と改善
+   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` と `generated-docs/development-status.md` の内容を比較し、特にIssueがない場合のレポートの表現が、プロンプトの意図と合致しているか、また開発者にとって十分な情報を提供しているかを確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/config.yml`, `src/generate_repo_list/generate_repo_list.py`, `src/generate_repo_list/markdown_generator.py`
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/generated-docs/development-status.md
 
-     実行内容: `generate_repo_list.py`が生成するリポジトリリスト（`index.md`）のコンテンツを、`config.yml`を通じてカスタマイズできるように拡張してください。具体的には、`config.yml`に`output_fields`という新しいセクションを設け、表示したいリポジトリ情報を指定できるようにします（例: `name`, `description`, `stars`, `last_updated`）。`generate_repo_list.py`はこの設定を読み込み、`markdown_generator.py`を介して動的にMarkdownを生成するように変更します。
+     実行内容: 対象ファイルの内容を比較分析し、現在の開発状況（オープン中のIssueがない状態）において、`development-status.md` の出力が `development-status-prompt.md` の意図に沿っているか評価してください。特に「現在のIssues」セクションが空の場合に、開発者にとって最も有用な情報を提供するための改善点を提案してください。
 
-     確認事項: 既存のリポジトリリスト生成機能が意図しない形で変更されないことを確認してください。また、`config.yml`の新しい設定が正しくパースされ、`index.md`に反映されるかテスト計画を考慮してください。
+     確認事項: 現在の`development-status.md`の内容が、提供された「現在のオープンIssues」情報（「オープン中のIssueはありません」）に基づいて生成されていることを確認してください。
 
-     期待する出力:
-     1. `src/generate_repo_list/config.yml`の更新案（`output_fields`セクションの追加）。
-     2. `src/generate_repo_list/generate_repo_list.py`の、`config.yml`から`output_fields`を読み込み、リポジトリデータをフィルタリング・整形するロジックの変更点。
-     3. `src/generate_repo_list/markdown_generator.py`の、`output_fields`の設定に基づいてMarkdownを生成するロジックの変更点。
-     これら変更点を説明するmarkdown形式のドキュメントと、関連するコードスニペット。
+     期待する出力: `development-status-prompt.md`の改善提案をMarkdown形式で出力してください。具体的には、Issueがない場合の「現在のIssues」セクションの表現方法、および開発状況レポート全体の情報価値を高めるための提案を含めてください。
      ```
 
-2. プロジェクト概要・開発状況レポート生成プロンプトの品質向上 [新規提案 #002](../issue-notes/002.md)
-   - 最初の小さな一歩: `development-status-prompt.md`と`project-overview-prompt.md`の内容をレビューし、より具体的で詳細な情報抽出を促すための改善点を特定する。特に、コードの変更意図や今後の方向性について洞察を深めるための記述を追加する。
+2. リポジトリリスト自動生成スクリプトのテストカバレッジ確認
+   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` が依存している主要なモジュール（例: `repository_processor.py`, `markdown_generator.py`）を特定し、`tests/` ディレクトリ内でそれらに関連するテストファイルが存在するか、またテストがどの程度網羅的かを確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`
+     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, src/generate_repo_list/markdown_generator.py, tests/test_*.py
 
-     実行内容: 現在の`development-status-prompt.md`と`project-overview-prompt.md`を分析し、生成されるレポートの質を向上させるための具体的な改善案を提案してください。特に以下の点を強化する観点で検討してください：
-     - 最新のコミットがプロジェクト全体に与える影響の分析を促す記述
-     - 今後の開発ロードマップや優先順位に関する示唆を促す記述
-     - プロジェクトの健全性（技術的負債、パフォーマンスなど）に関する洞察を促す記述
+     実行内容: `src/generate_repo_list` ディレクトリ内の主要なPythonスクリプト（特に `generate_repo_list.py`, `repository_processor.py`, `markdown_generator.py`）について、対応するテストファイルが `tests/` ディレクトリに存在するかどうか、また主要な関数やロジックがテストされているかを確認し、テストカバレッジの現状を分析してください。
 
-     確認事項: 提案する変更が、ハルシネーションを誘発せず、既存の生成ロジックや利用可能な情報源の範囲内で実現可能であることを確認してください。プロンプトが長くなりすぎず、AIが処理しやすい簡潔さを保つことも重要です。
+     確認事項: 各スクリプトの主要な機能と、それらがどのようにテストされているか（あるいはされていないか）を具体的に特定してください。
 
-     期待する出力: 上記の観点に基づいた、`development-status-prompt.md`と`project-overview-prompt.md`の改善された内容をmarkdown形式で提案してください。変更理由とその期待される効果も併記してください。
+     期待する出力: `src/generate_repo_list` 関連スクリプトのテストカバレッジの現状をまとめたMarkdownレポートを出力してください。レポートには、カバレッジが不足していると思われる領域と、それに対するテスト追加の提案を含めてください。
      ```
 
-3. `check-large-files`ワークフローのメインリポジトリへの統合と調整 [新規提案 #003](../issue-notes/003.md)
-   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/check-large-files/`配下のファイルをメインの`.github_automation/check_large_files/`ディレクトリに移動し、`call-check-large-files.yml`が正しく参照するようにパスを修正する。
+3. プロジェクト概要レポートの生成プロンプトのレビュー
+   - 最初の小さな一歩: `generated-docs/project-overview.md` の内容を読み込み、プロジェクトの目的、主なコンポーネント、ターゲットユーザーなど、概要として必須の情報が明確に記述されているかを確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `.github/actions-tmp/.github/workflows/call-check-large-files.yml`, `.github/actions-tmp/.github_automation/check-large-files/`, `.github_automation/check_large_files/`配下のファイル全般
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md, .github/actions-tmp/generated-docs/project-overview.md
 
-     実行内容: `.github/actions-tmp/`ディレクトリ内に存在する`check-large-files`関連のワークフローとスクリプト（例: `.github/actions-tmp/.github/workflows/call-check-large-files.yml`, `.github/actions-tmp/.github_automation/check-large-files/*`）を、メインリポジトリの対応する場所（例: `.github/workflows/call-check-large-files.yml`, `.github_automation/check_large_files/*`）へ統合してください。統合後、`.github/workflows/call-check-large-files.yml`が正しく`check-large-files`アクションを参照するようにパスを調整し、不要になった`.github/actions-tmp/`内のファイルを削除する計画を立ててください。
+     実行内容: `project-overview-prompt.md` に基づいて生成された `project-overview.md` の内容をレビューし、以下の観点から分析してください：
+     1) プロジェクトの目的が明確に記述されているか
+     2) 主要な機能やコンポーネントが簡潔に説明されているか
+     3) ターゲットユーザーや利用シナリオが考慮されているか
+     4) 全体として、初見の読者にとって理解しやすい概要となっているか
 
-     確認事項: ファイルの移動とパスの修正により、`check-large-files`ワークフローの機能が損なわれないこと。また、重複するファイルが存在しないこと、そして`actions-tmp`ディレクトリ内の他のアクションとの依存関係がないことを確認してください。
+     確認事項: `project-overview.md`が、プロジェクトの現状を正確に反映していることを確認してください。
 
-     期待する出力:
-     1. ファイルの移動とパス修正の具体的な手順をmarkdown形式で記述。
-     2. 変更後の`.github/workflows/call-check-large-files.yml`の内容。
-     3. 削除すべき`.github/actions-tmp/`内のファイルリスト。
+     期待する出力: `project-overview.md` の内容に関するレビュー結果と、より質の高い概要を生成するための `project-overview-prompt.md` の改善提案をMarkdown形式で出力してください。
      ```
 
 ---
-Generated at: 2026-07-03 07:25:20 JST
+Generated at: 2026-07-04 07:24:39 JST
