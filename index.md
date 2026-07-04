@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-07-03 (UTC) / 2026-07-04 (JST)
+Last Updated: 2026-07-04 (UTC) / 2026-07-05 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、ユーザーのリポジトリ情報を自動取得します。
-- GitHub Pages向けにSEO最適化されたリポジトリ一覧を生成します。
-- 検索エンジンによるクロールとLLMからの参照性向上を目指します。
-- 📅 2026-07-03 (UTC) / 2026-07-04 (JST)
+- GitHub APIを利用し、個人のリポジトリ情報を自動的に取得するシステムです。
+- 取得した情報から、JekyllベースのGitHub Pagesサイト向けに最適化されたMarkdown形式のリポジトリ一覧を生成します。
+- これにより、リポジトリの検索エンジンからの参照性を高め、LLMによる情報取得の精度向上を目指します。
+- 📅 2026-07-04 (UTC) / 2026-07-05 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -105,7 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
-- 📅 2026-07-03 (UTC) / 2026-07-03 (JST)
+- 📅 2026-07-04 (UTC) / 2026-07-04 (JST)
 
 ## [trace-rush](https://cat2151.github.io/trace-rush/)
 
