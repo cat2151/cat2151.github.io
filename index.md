@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-07-05 (UTC) / 2026-07-06 (JST)
+Last Updated: 2026-07-06 (UTC) / 2026-07-07 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub PagesサイトのSEOを改善し、リポジトリ情報を効率的に公開するシステムです。
-- GitHub APIからリポジトリ情報を取得し、Jekyll対応のMarkdownファイルを自動生成します。
-- プロジェクト概要の自動抽出や分類表示により、検索エンジンとLLMの参照性を高めます。
-- 📅 2026-07-05 (UTC) / 2026-07-06 (JST)
+- GitHub APIでリポジトリ情報を取得し、GitHub Pages向けに一覧を自動生成します。
+- 生成されたマークダウンはSEOを考慮し、LLMからの参照性向上を目指します。
+- 各リポジトリの概要を自動取得し、視覚的なバッジと共に効果的に表示します。
+- 📅 2026-07-06 (UTC) / 2026-07-07 (JST)
+
+## [trace-rush](https://cat2151.github.io/trace-rush/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: browsergame](https://img.shields.io/badge/Topic-browsergame-lightblue) ![Topic: game](https://img.shields.io/badge/Topic-game-lightblue) ![Topic: touchpen](https://img.shields.io/badge/Topic-touchpen-lightblue) ![Topic: web](https://img.shields.io/badge/Topic-web-lightblue)
+
+- **Repository**: [https://github.com/cat2151/trace-rush](https://github.com/cat2151/trace-rush)
+- **GitHub Pages**: [https://cat2151.github.io/trace-rush/](https://cat2151.github.io/trace-rush/)
+- **Overview**: No description available
+- 📅 2026-07-06 (UTC) / 2026-07-06 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -106,15 +115,6 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
 - 📅 2026-07-04 (UTC) / 2026-07-04 (JST)
-
-## [trace-rush](https://cat2151.github.io/trace-rush/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: browsergame](https://img.shields.io/badge/Topic-browsergame-lightblue) ![Topic: game](https://img.shields.io/badge/Topic-game-lightblue) ![Topic: touchpen](https://img.shields.io/badge/Topic-touchpen-lightblue) ![Topic: web](https://img.shields.io/badge/Topic-web-lightblue)
-
-- **Repository**: [https://github.com/cat2151/trace-rush](https://github.com/cat2151/trace-rush)
-- **GitHub Pages**: [https://cat2151.github.io/trace-rush/](https://cat2151.github.io/trace-rush/)
-- **Overview**: No description available
-- 📅 2026-07-01 (UTC) / 2026-07-01 (JST)
 
 ## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
 
