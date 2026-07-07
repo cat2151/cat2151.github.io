@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-07-06 (UTC) / 2026-07-07 (JST)
+Last Updated: 2026-07-07 (UTC) / 2026-07-08 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,24 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIでリポジトリ情報を取得し、GitHub Pages向けに一覧を自動生成します。
-- 生成されたマークダウンはSEOを考慮し、LLMからの参照性向上を目指します。
-- 各リポジトリの概要を自動取得し、視覚的なバッジと共に効果的に表示します。
-- 📅 2026-07-06 (UTC) / 2026-07-07 (JST)
+- GitHub APIを活用し、ユーザーのリポジトリ情報を自動で取得・集約するシステムです。
+- 取得した情報からJekyllベースのGitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧を自動生成します。
+- GitHub Pagesをクロール対象とすることで、検索エンジンやLLMからのリポジトリ参照性を向上させ、情報発見の課題を解決します。
+- 📅 2026-07-07 (UTC) / 2026-07-08 (JST)
+
+## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
+
+<a href="https://cat2151.github.io/chord2mml-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
+
+- **Repository**: [https://github.com/cat2151/chord2mml-rust](https://github.com/cat2151/chord2mml-rust)
+- **GitHub Pages**: [https://cat2151.github.io/chord2mml-rust/](https://cat2151.github.io/chord2mml-rust/)
+- **Overview**: No description available
+
+### Project Highlights
+- コード進行テキストをMML（Music Macro Language）へ変換するライブラリ・アプリケーションです。
+- RustとTree-sitterを活用し、堅牢な構文解析と高速な変換を実現しています。
+- コマンドラインツールとして、またRustライブラリとしても利用可能な純粋なネイティブアプリケーションです。
+- 📅 2026-07-07 (UTC) / 2026-07-08 (JST)
 
 ## [trace-rush](https://cat2151.github.io/trace-rush/)
 
@@ -105,7 +119,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/trace-rush](https://github.com/cat2151/trace-rush)
 - **GitHub Pages**: [https://cat2151.github.io/trace-rush/](https://cat2151.github.io/trace-rush/)
 - **Overview**: No description available
-- 📅 2026-07-06 (UTC) / 2026-07-06 (JST)
+- 📅 2026-07-07 (UTC) / 2026-07-07 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -554,20 +568,6 @@ crisp-game-libを使って作ったゲーム
 - **Repository**: [https://github.com/cat2151/wsl2-docker-mingw-hello](https://github.com/cat2151/wsl2-docker-mingw-hello)
 - **GitHub Pages**: [https://cat2151.github.io/wsl2-docker-mingw-hello/](https://cat2151.github.io/wsl2-docker-mingw-hello/)
 - **Overview**: No description available
-- 📅 2026-04-06 (UTC) / 2026-04-06 (JST)
-
-## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
-
-<a href="https://cat2151.github.io/chord2mml-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
-
-- **Repository**: [https://github.com/cat2151/chord2mml-rust](https://github.com/cat2151/chord2mml-rust)
-- **GitHub Pages**: [https://cat2151.github.io/chord2mml-rust/](https://cat2151.github.io/chord2mml-rust/)
-- **Overview**: No description available
-
-### Project Highlights
-- コード進行テキストをMML（Music Macro Language）へ変換するライブラリ・アプリケーションです。
-- RustとTree-sitterを活用し、堅牢な構文解析と高速な変換を実現しています。
-- コマンドラインツールとして、またRustライブラリとしても利用可能な純粋なネイティブアプリケーションです。
 - 📅 2026-04-06 (UTC) / 2026-04-06 (JST)
 
 ## [sixel-playground](https://github.com/cat2151/sixel-playground)
