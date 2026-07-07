@@ -1,51 +1,49 @@
-Last updated: 2026-07-07
+Last updated: 2026-07-08
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。
+現在オープン中のIssueはありません。
 
 ## 次の一手候補
-1. 開発状況レポートの品質向上とプロンプトの改善
-   - 最初の小さな一歩: 現在の`generated-docs/development-status.md`の内容をレビューし、より詳細で有用な情報が追加できるか、特に「次の一手候補」の提案ロジックに改善の余地がないか検討します。
+1. development-status-prompt.md のガイドラインへの適合と品質向上
+   - 最初の小さな一歩: 現在の `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` の内容をレビューし、本プロンプトガイドラインとの整合性や、Issueがない場合の振る舞いについて改善点を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs, generated-docs/development-status.md
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
 
-     実行内容: `development-status-prompt.md`と`DevelopmentStatusGenerator.cjs`が`generated-docs/development-status.md`を生成するプロセスを分析し、現在の出力結果の課題点を特定してください。特に、情報の網羅性、要約の精度、次の一手候補の具体性について評価してください。
+     実行内容: 上記「開発状況生成プロンプト」のガイドラインと、今回生成される結果を参考に、対象ファイルのプロンプトを分析・改善してください。特に、オープン中のIssueがない場合の「現在のIssues」セクションの出力内容、および「次の一手候補」における「issue番号を必ず書く」という指示と、新規提案タスクにおけるIssue番号の扱いの明確化について、具体的な改善案を検討してください。また、Agent実行プロンプトの必須要素が満たされているか再確認してください。
 
-     確認事項: プロンプトと生成スクリプトの依存関係、及び`generated-docs/development-status.md`以外の関連ファイルへの影響がないことを確認してください。
+     確認事項: 既存の`development-status-prompt.md`の内容、本プロンプトのガイドライン、および生成される出力例の間の矛盾や改善点を詳細に分析してください。ハルシネーションを避けるための具体的な記述方法も考慮してください。
 
-     期待する出力: 開発状況レポートの品質を向上させるための具体的な改善案をmarkdown形式で出力してください。これには、プロンプトの修正案、または`DevelopmentStatusGenerator.cjs`のロジック修正案を含めてください。
+     期待する出力: `development-status-prompt.md`を更新するための、具体的なテキスト変更案（追加・修正箇所、または新しいプロンプトの提案）をMarkdown形式で提案してください。変更理由とその効果も併記してください。
      ```
 
-2. リポジトリリスト自動生成機能の動作検証とログ分析
-   - 最初の小さな一歩: 最新の`.github/workflows/generate_repo_list.yml`ワークフローの実行ログを確認し、エラーや警告がないか、また処理が期待通りに完了しているかチェックします。
+2. daily-project-summary ワークフローのエラー通知メカニズム強化
+   - 最初の小さな一歩: 最近の `.github/workflows/call-daily-project-summary.yml` の実行履歴から、失敗したジョブや警告を含むログを特定し、その内容を分析する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/workflows/generate_repo_list.yml
+     対象ファイル: .github/workflows/call-daily-project-summary.yml, .github/actions-tmp/.github/workflows/daily-project-summary.yml, .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs
 
-     実行内容: `.github/workflows/generate_repo_list.yml`の過去数回の実行ログを分析し、以下の観点から自動生成機能の安定性と潜在的な問題点を評価してください：
-     1) 実行成功率とエラー内容
-     2) 処理時間の変動
-     3) 期待される出力ファイル（例: `index.md`）の更新状況
+     実行内容: `call-daily-project-summary.yml`ワークフローにおいて、プロジェクトサマリー生成が失敗した場合の通知（例: Slack, GitHub Issuesへの自動コメント）メカニズムを追加する改善案を分析し、提案してください。特に、エラー発生時の詳細情報を含んだ通知がされるように、関連スクリプトとの連携を考慮してください。
 
-     確認事項: ワークフローのトリガー条件、および関連するスクリプト（例: `src/generate_repo_list/generate_repo_list.py`）への依存関係を確認してください。
+     確認事項: 現在のワークフローのエラーハンドリング、依存関係（例: 既存の通知アクションの有無）、およびGitHub Actionsの機能（`if: failure()`など）を考慮した実現可能性を確認してください。
 
-     期待する出力: リポジトリリスト自動生成機能の安定性に関する評価レポートと、検出された問題点に対する改善提案をmarkdown形式で出力してください。
+     期待する出力: ワークフローファイルおよび関連スクリプトへの具体的な変更提案をMarkdown形式で出力してください。通知の種類（Slack通知、Issueコメントなど）、通知内容のカスタマイズ方法、実装手順を含めてください。
      ```
 
-3. プロジェクト概要レポートの生成精度と網羅性の改善
-   - 最初の小さな一歩: `generated-docs/project-overview.md`の内容をレビューし、プロジェクトの目的、主要機能、技術スタック、アーキテクチャなど、不足している情報や改善すべき表現を特定します。
+3. src/generate_repo_list/generate_repo_list.py のユニットテスト拡充
+   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` ファイルのコード構造を理解し、主要な関数やロジックブロックを特定する。同時に、既存のテストファイル `tests/test_integration.py` や `tests/test_repository_processor.py` などで、このファイルがどの程度テストされているかを確認する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs, generated-docs/project-overview.md
+     対象ファイル: src/generate_repo_list/generate_repo_list.py, tests/ ディレクトリ内の既存テストファイル
 
-     実行内容: `project-overview-prompt.md`と`ProjectOverviewGenerator.cjs`が`generated-docs/project-overview.md`を生成するプロセスと結果を分析し、レポートの網羅性、正確性、読みやすさの観点から課題点を特定してください。
+     実行内容: `src/generate_repo_list/generate_repo_list.py` に対して、既存のテストファイルを参照し、現在ユニットテストが不足している主要な関数やクラスメソッドを特定してください。特に、リポジトリ情報の取得、整形、出力ロジックに関するテストケースを重視してください。
 
-     確認事項: プロンプトと生成スクリプトの依存関係、及び`generated-docs/project-overview.md`以外の関連ファイルへの影響がないことを確認してください。
+     確認事項: 既存のテストスイートの構成、モック化の必要性、およびテスト対象関数の外部依存関係を考慮してください。`pytest` を使用することを前提とします。
 
-     期待する出力: プロジェクト概要レポートの品質を向上させるための具体的な改善案をmarkdown形式で出力してください。これには、プロンプトの修正案、または`ProjectOverviewGenerator.cjs`のロジック修正案を含めてください。
+     期待する出力: `tests/test_generate_repo_list.py` （新規作成を想定）に記述すべき、不足しているユニットテストケースの具体的な提案をMarkdown形式で出力してください。各テストケースについて、テスト対象関数、テストシナリオ、期待される結果を記述してください。
+     ```
 
 ---
-Generated at: 2026-07-07 07:29:41 JST
+Generated at: 2026-07-08 07:26:51 JST
