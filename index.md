@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-07-09 (UTC) / 2026-07-10 (JST)
+Last Updated: 2026-07-10 (UTC) / 2026-07-11 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、リポジトリ情報を自動で取得するシステムです。
-- JekyllベースのGitHub Pages向けに、SEO最適化されたリポジトリ一覧Markdownを生成します。
-- これにより、GitHub Pagesの検索エンジン可視性を向上させ、LLMからの参照性も高めます。
-- 📅 2026-07-09 (UTC) / 2026-07-10 (JST)
+- GitHub APIを活用し、GitHub Pages向けリポジトリ一覧を自動生成するシステムです。
+- 生成されたMarkdownはSEO最適化され、検索エンジンによるリポジトリの発見性を高めます。
+- これにより、LLMを含む検索エンジン依存の参照における課題緩和に貢献します。
+- 📅 2026-07-10 (UTC) / 2026-07-11 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -105,7 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
-- 📅 2026-07-09 (UTC) / 2026-07-10 (JST)
+- 📅 2026-07-10 (UTC) / 2026-07-11 (JST)
 
 ## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
 
@@ -119,7 +119,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - コード進行テキストをMML（Music Macro Language）へ変換するライブラリ・アプリケーションです。
 - RustとTree-sitterを活用し、堅牢な構文解析と高速な変換を実現しています。
 - コマンドラインツールとして、またRustライブラリとしても利用可能な純粋なネイティブアプリケーションです。
-- 📅 2026-07-09 (UTC) / 2026-07-09 (JST)
+- 📅 2026-07-10 (UTC) / 2026-07-10 (JST)
 
 ## [trace-rush](https://cat2151.github.io/trace-rush/)
 
