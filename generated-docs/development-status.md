@@ -1,51 +1,51 @@
-Last updated: 2026-07-10
+Last updated: 2026-07-11
 
 # Development Status
 
 ## 現在のIssues
-- 現在オープン中のIssueはありません。
-- これはプロジェクトが安定しており、直近で緊急対応を要する問題がないことを示唆しています。
-- そのため、今後は既存の自動化ワークフローの改善やドキュメントの強化など、先を見越した開発に注力できます。
+オープン中のIssueはありません。
+現在、プロジェクトは安定しており、自動化されたワークフローが定期的に実行されています。
+主要なタスクは自動リポジトリリスト更新やプロジェクトサマリー生成など、メンテナンスフェーズにあります。
 
 ## 次の一手候補
-<!-- 注意: 現在オープン中のIssueがないため、以下の候補は既存の自動化システムに対するプロアクティブな改善提案です。ハルシネーションを避けるため、特定の既存Issue番号には紐づいておらず、Issue番号のリンクは提供していません。 -->
-1. 開発状況レポートの有用性向上 (Issue: N/A - 既存改善)
-   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`をレビューし、オープンIssueがない場合の追加情報（例: 最近完了したタスクのサマリー、主要な依存関係の更新状況）を含めるための改善点を特定する。
+1. `generate_repo_list` スクリプトのテストカバレッジ向上
+   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py` に不足しているユニットテストを特定し、新しいテストケースを追加するための計画を立てる。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+     対象ファイル: src/generate_repo_list/repository_processor.py, tests/test_repository_processor.py
 
-     実行内容: 現在の`development-status-prompt.md`を分析し、オープン中のissueがない場合に開発者にとってより価値のある情報（例: 直近の主要なコミット概要、安定性指標、次の開発サイクルで注力すべき領域の提案など）をどのように含めるかについての改善案をmarkdown形式で出力してください。
+     実行内容: src/generate_repo_list/repository_processor.py の主要なメソッドに対する既存のテストを分析し、テストカバレッジが低い、またはテストが不足している箇所を特定してください。特に、エッジケースやエラーハンドリングに関するテストケースが不足していないか確認してください。その上で、tests/test_repository_processor.py に新しいテストケースを追加するためのコード変更プランをMarkdown形式で提案してください。
 
-     確認事項: プロンプトの変更が、`DevelopmentStatusGenerator.cjs`の既存の解析ロジックとどのように連携できるか、または変更が必要かを確認してください。ハルシネーションを避け、既存の情報源から導き出せる内容に限定すること。
+     確認事項: repository_processor.py の依存関係（例: config_manager.py）を考慮し、モック化が必要な場合はその方法を含めてください。既存のテストフレームワーク（pytest）との整合性を確認してください。
 
-     期待する出力: 改善されたプロンプトの草案、およびその変更意図を説明するmarkdownドキュメント。
+     期待する出力: test_repository_processor.py に追加する新しいテストケース（関数名、テスト対象メソッド、簡単な説明）とその実装例をmarkdown形式で出力してください。
      ```
 
-2. リポジトリリスト自動更新ワークフローの最適化 (Issue: N/A - パフォーマンス)
-   - 最初の小さな一歩: `.github/workflows/generate_repo_list.yml`ワークフローの実行ログを調査し、潜在的なパフォーマンスボトルネックや冗長なステップがないかを確認する。
+2. GitHub Actions ワークフローの整理と`.github/actions-tmp` の目的明確化
+   - 最初の小さな一歩: `.github/actions-tmp/.github/workflows/call-daily-project-summary.yml` と `.github/workflows/call-daily-project-summary.yml` の内容を比較し、重複や差異を分析する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/workflows/generate_repo_list.yml, src/generate_repo_list/generate_repo_list.py
+     対象ファイル: .github/actions-tmp/.github/workflows/call-daily-project-summary.yml, .github/workflows/call-daily-project-summary.yml
 
-     実行内容: `generate_repo_list.yml`ワークフローとその関連スクリプト(`generate_repo_list.py`など)を分析し、実行時間の短縮やリソース消費の削減につながる最適化の機会を特定してください。特に、不要なAPI呼び出しやファイルI/Oの削減に焦点を当ててください。
+     実行内容: 両ファイルを比較し、機能的な重複、設定の差異、および目的の違いを分析してください。`.github/actions-tmp` ディレクトリの目的が一時的または開発用である場合、これらワークフローの最適な管理方法（本番環境への統合、削除、または専用の開発ワークフローとしての維持）を検討し、提案してください。
 
-     確認事項: 既存の機能が損なわれないこと。変更がGitHub APIレートリミットに与える影響、および既存のテストとの整合性を確認してください。
+     確認事項: 関連するスクリプト（例: .github/actions-tmp/.github_automation/project_summary/scripts/generate-project-summary.cjs）への影響を考慮してください。他の call-* ワークフローとの一貫性を確認してください。
 
-     期待する出力: 最適化案をまとめたmarkdownドキュメント。具体的なコード変更の提案（もしあれば）、およびその変更がもたらすであろう影響（例: 実行時間の見積もり）を含めてください。
+     期待する出力: 比較分析の結果、および提案されるワークフローの整理・統合/削除計画をMarkdown形式で出力してください。具体的なファイル変更のパスと内容を含めてください。
      ```
 
-3. 新規コントリビューター向けドキュメントの強化 (Issue: N/A - ドキュメント)
-   - 最初の小さな一歩: `AGENTS.md`や`README.md`を読み込み、プロジェクトの自動化機能の全体像や貢献方法について、特に初めてプロジェクトに触れる人にとって分かりにくい点を洗い出す。
+3. 自動生成される Project Overview ドキュメントの情報品質向上
+   - 最初の小さな一歩: `generated-docs/project-overview.md` の現在の内容をレビューし、不足している情報や改善すべき点をリストアップする。
    - Agent実行プロンプト:
      ```
-     対象ファイル: AGENTS.md, README.md, .github/copilot-instructions.md, 各`call-*.yml`ワークフロー
+     対象ファイル: generated-docs/project-overview.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs
 
-     実行内容: 上記ファイルを分析し、新規コントリビューターがプロジェクトの構造、自動化ワークフロー、および貢献方法を理解する上で不足している情報や改善すべき点を特定してください。特に、主要な自動化機能（例: `daily-project-summary`や`issue-note`など）の目的と基本的な使用法について焦点を当ててください。
+     実行内容: 現在生成されている `generated-docs/project-overview.md` の内容を、プロジェクトの全体像を理解する上で十分に有用であるかという観点で評価してください。特に、最近の変更や主要な機能に関する情報が適切に反映されているか、また、読み手が求めるであろう情報（例: 主要な依存関係、今後の方向性など）が不足していないかを確認してください。その評価に基づき、`project-overview-prompt.md` を改善するための具体的な変更案を提案してください。
 
-     確認事項: 既存のドキュメントと矛盾がないこと。ハルシネーションを避け、既存の情報を再構成または明確化する提案に限定すること。
+     確認事項: プロンプトの変更がハルシネーションを誘発しないか、また、既存のデータ収集ロジック（ProjectDataCollector.cjs）で取得可能な情報に基づいているかを確認してください。出力フォーマットの一貫性を維持してください。
 
-     期待する出力: ドキュメント改善の提案をまとめたmarkdownドキュメント。具体的には、どのファイルをどのように修正または追記すべきか、その内容の骨子を含めてください。
+     期待する出力: `generated-docs/project-overview.md` の現在の課題点をリストアップし、それを解決するための `project-overview-prompt.md` の具体的な変更提案をMarkdown形式で出力してください。
+     ```
 
 ---
-Generated at: 2026-07-10 07:32:54 JST
+Generated at: 2026-07-11 07:23:52 JST
