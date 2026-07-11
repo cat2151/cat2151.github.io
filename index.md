@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-07-10 (UTC) / 2026-07-11 (JST)
+Last Updated: 2026-07-11 (UTC) / 2026-07-12 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、GitHub Pages向けリポジトリ一覧を自動生成するシステムです。
-- 生成されたMarkdownはSEO最適化され、検索エンジンによるリポジトリの発見性を高めます。
-- これにより、LLMを含む検索エンジン依存の参照における課題緩和に貢献します。
-- 📅 2026-07-10 (UTC) / 2026-07-11 (JST)
+- GitHub APIを活用し、GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
+- 各リポジトリの情報を取得し、SEOに最適化されたMarkdown形式のページを自動的に生成します。
+- 検索エンジンからの発見性を高め、人工知能によるリポジトリ参照を支援することを目的としています。
+- 📅 2026-07-11 (UTC) / 2026-07-12 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -105,7 +105,16 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
-- 📅 2026-07-10 (UTC) / 2026-07-11 (JST)
+- 📅 2026-07-11 (UTC) / 2026-07-12 (JST)
+
+## [trace-rush](https://cat2151.github.io/trace-rush/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: browsergame](https://img.shields.io/badge/Topic-browsergame-lightblue) ![Topic: game](https://img.shields.io/badge/Topic-game-lightblue) ![Topic: touchpen](https://img.shields.io/badge/Topic-touchpen-lightblue) ![Topic: web](https://img.shields.io/badge/Topic-web-lightblue)
+
+- **Repository**: [https://github.com/cat2151/trace-rush](https://github.com/cat2151/trace-rush)
+- **GitHub Pages**: [https://cat2151.github.io/trace-rush/](https://cat2151.github.io/trace-rush/)
+- **Overview**: No description available
+- 📅 2026-07-11 (UTC) / 2026-07-11 (JST)
 
 ## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
 
@@ -120,15 +129,6 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - RustとTree-sitterを活用し、堅牢な構文解析と高速な変換を実現しています。
 - コマンドラインツールとして、またRustライブラリとしても利用可能な純粋なネイティブアプリケーションです。
 - 📅 2026-07-10 (UTC) / 2026-07-10 (JST)
-
-## [trace-rush](https://cat2151.github.io/trace-rush/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: browsergame](https://img.shields.io/badge/Topic-browsergame-lightblue) ![Topic: game](https://img.shields.io/badge/Topic-game-lightblue) ![Topic: touchpen](https://img.shields.io/badge/Topic-touchpen-lightblue) ![Topic: web](https://img.shields.io/badge/Topic-web-lightblue)
-
-- **Repository**: [https://github.com/cat2151/trace-rush](https://github.com/cat2151/trace-rush)
-- **GitHub Pages**: [https://cat2151.github.io/trace-rush/](https://cat2151.github.io/trace-rush/)
-- **Overview**: No description available
-- 📅 2026-07-07 (UTC) / 2026-07-07 (JST)
 
 ## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
 
