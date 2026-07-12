@@ -1,51 +1,48 @@
-Last updated: 2026-07-12
+Last updated: 2026-07-13
 
 # Development Status
 
 ## 現在のIssues
-- 現在、対応が必要なオープンIssueは存在しません。
-- プロジェクトは安定しており、現行のタスクに集中できる状態です。
-- 次の一手として、既存の自動化ワークフローの改善や機能拡張を検討できます。
+オープン中のIssueはありません。
 
 ## 次の一手候補
-1. 開発状況生成プロンプトの継続的な改善と適応
-   - 最初の小さな一歩: 現在の`development-status-prompt.md`（このプロンプトの基となるファイル）の内容を分析し、特に「生成するもの」と「生成しないもの」の指示が、実際のアウトプットとどれだけ一致しているかを確認します。
+1. .github/actions-tmp/ ディレクトリの管理方針の明確化
+   - 最初の小さな一歩: `.github/actions-tmp/` 内のファイルとメインのワークフロー/スクリプトとの関連性を調査し、その目的を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+     対象ファイル: .github/actions-tmp/ 以下の全ファイル、および対応するメインの .github/workflows/ および .github_automation/ 以下のファイル
 
-     実行内容: 上記ファイルの内容と、このプロンプトガイドライン（開発状況生成プロンプト）を比較し、矛盾点や改善点をmarkdown形式で列挙してください。特に、「生成するもの」「生成しないもの」「Agent実行プロンプトガイドライン」の項目に着目してください。
+     実行内容: .github/actions-tmp/ ディレクトリが存在する目的と、内部のファイル群がプロジェクトのメイン部分のファイルとどのように関連しているか（コピー、バージョン管理、テスト用、一時的なものなど）を分析し、現状の課題点を特定してください。
 
-     確認事項: 現在の生成物の品質が、プロンプトの指示通りになっているか（またはなっていないか）の評価結果があれば、それを考慮に入れてください。
+     確認事項: ディレクトリが作成された経緯や、関連するコミット履歴があれば参照し、その意図を可能な限り把握してください。プロジェクトのルートディレクトリにある package.json や _config.yml などの設定ファイルも参照し、関連性がないか確認してください。
 
-     期待する出力: `development-status-prompt.md`の改善案をmarkdown形式で出力してください。具体的な修正箇所と理由を説明してください。
+     期待する出力: .github/actions-tmp/ ディレクトリの現状と、考えられる管理上の課題、およびその解決に向けた提案をMarkdown形式で出力してください。
      ```
 
-2. GitHub Actions ワークフローの効率化と保守性向上
-   - 最初の小さな一歩: `.github/actions-tmp/.github/workflows/` ディレクトリ内のワークフローと、ルートディレクトリの `.github/workflows/` ディレクトリ内のワークフローとの間に、同じ名前のワークフローや機能的に重複している可能性のあるワークフローをリストアップし、これらの存在理由を推測します。
+2. src/generate_repo_list モジュールのテストカバレッジ向上
+   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py` の主要な関数やロジックについて、既存のテスト (`tests/test_repository_processor.py`) でカバーされていない部分を特定する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github/workflows/ ディレクトリ内の全`.yml`ファイルと、.github/workflows/ ディレクトリ内の全`.yml`ファイル
+     対象ファイル: src/generate_repo_list/repository_processor.py, tests/test_repository_processor.py, pytest.ini
 
-     実行内容: 両ディレクトリのワークフローファイルを比較し、同じ名前のワークフローや機能的に重複している可能性のあるワークフローを特定してください。その後、それぞれのワークフローの目的と違いを分析し、重複または非効率なワークフローの整理案をmarkdown形式で提案してください。
+     実行内容: src/generate_repo_list/repository_processor.py に含まれる関数やクラスメソッドのうち、tests/test_repository_processor.py でカバレッジが低い、または全くテストされていないものを特定してください。特に、重要なロジックや外部サービスとの連携部分に焦点を当ててください。
 
-     確認事項: ワークフローの呼び出し元（例: `call-xxx.yml`）や、各ワークフローが依存している他のアクション、スクリプトとの関連性を確認してください。
+     確認事項: 既存のテストスイート (pytest.ini など) の設定と、Pythonのテストカバレッジツール（例: coverage.py）が利用可能かを確認し、必要であれば導入手順を考慮してください。
 
-     期待する出力: 重複・非効率なワークフローのリスト、それぞれの役割の分析、および統合・削除・最適化の具体的な提案をmarkdown形式で出力してください。
+     期待する出力: repository_processor.py のカバレッジ分析結果をMarkdown形式で出力し、テストが不足している主要な機能とそのテストコード追加の優先順位を提案してください。
      ```
 
-3. `src/generate_repo_list` 機能のテストカバレッジの向上
-   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内のPythonファイルのうち、既存のテストファイル(`tests/test_*.py`)が存在しない、または明らかにテストが不十分と思われるモジュールを特定します。
+3. 自動生成される開発状況レポートの生成プロンプトのレビューと改善
+   - 最初の小さな一歩: `.github_automation/project_summary/prompts/development-status-prompt.md` と `generated-docs/development-status-generated-prompt.md` の内容を比較し、現在のレポート生成プロンプトがどのように適用されているかを理解する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/*.py と tests/test_*.py
+     対象ファイル: .github_automation/project_summary/prompts/development-status-prompt.md, generated-docs/development-status-generated-prompt.md
 
-     実行内容: `src/generate_repo_list/` ディレクトリ内のPythonモジュールについて、既存のテストファイル(`tests/test_*.py`)におけるテストカバレッジを評価してください。特に、まだテストコードが存在しない、または単体テストが不十分なモジュールや主要な関数を特定し、そのリストをmarkdown形式で出力してください。カバレッジツール（例: `coverage.py`）の実行は不要です。ファイルの存在と名前から類推してください。
+     実行内容: 現在の開発状況生成プロンプト (.github_automation/project_summary/prompts/development-status-prompt.md) が、オープンイシューがない状況で「次の一手候補」をより具体的かつ価値あるものにするために、どのように改善できるかを分析してください。特に、ハルシネーションを避けつつ、プロジェクトの継続的な改善を促すような視点を提案してください。
 
-     確認事項: `pytest.ini` や `requirements-dev.txt` など、テスト環境に関する設定ファイルも参照し、テストの実行方法や依存関係を把握してください。
+     確認事項: プロンプトのガイドラインと制約 (`生成しないもの`) を遵守し、現状のファイル一覧やコミット履歴から読み取れるプロジェクトの状況を考慮に入れてください。
 
-     期待する出力: テストカバレッジが低い、またはテストが不足しているモジュールと機能のリスト、およびそれらに対して作成すべきテストケースの概要をmarkdown形式で出力してください。
-     ```
+     期待する出力: 現行プロンプトの改善案をMarkdown形式で出力してください。改善案には、具体的な表現の修正や、考慮すべき追加の要素（例: 定期的なコードレビューの提案、依存関係の更新チェックなど）を含めてください。
 
 ---
-Generated at: 2026-07-12 07:18:47 JST
+Generated at: 2026-07-13 07:19:30 JST
