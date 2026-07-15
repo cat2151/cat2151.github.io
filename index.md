@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-07-14 (UTC) / 2026-07-15 (JST)
+Last Updated: 2026-07-15 (UTC) / 2026-07-16 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIでリポジトリ情報を取得し、GitHub Pages向けMarkdownを自動生成するシステムです。
-- Jekyllベースの個人サイトにリポジトリ一覧を公開し、検索エンジンからの発見性を高めます。
-- SEO最適化されたコンテンツ生成により、LLMによる参照失敗の緩和も目指します。
-- 📅 2026-07-14 (UTC) / 2026-07-15 (JST)
+- GitHub Pagesサイト向けに、GitHubリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、SEOに最適化されたMarkdownファイルを自動作成します。
+- これにより、サイトの検索エンジン可視性を高め、LLMによる参照失敗の緩和を目指します。
+- 📅 2026-07-15 (UTC) / 2026-07-16 (JST)
+
+## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
+
+<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
+- **Overview**: No description available
+- 📅 2026-07-15 (UTC) / 2026-07-15 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 
@@ -105,7 +114,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - **Overview**: No description available
-- 📅 2026-07-14 (UTC) / 2026-07-15 (JST)
+- 📅 2026-07-15 (UTC) / 2026-07-15 (JST)
 
 ## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
 A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
@@ -293,15 +302,6 @@ A TUI that displays the commit count of your public repositories.
 
 - **Repository**: [https://github.com/cat2151/gh-commit-ledger](https://github.com/cat2151/gh-commit-ledger)
 - **GitHub Pages**: [https://cat2151.github.io/gh-commit-ledger/](https://cat2151.github.io/gh-commit-ledger/)
-- 📅 2026-05-17 (UTC) / 2026-05-17 (JST)
-
-## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
-
-<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
-- **Overview**: No description available
 - 📅 2026-05-17 (UTC) / 2026-05-17 (JST)
 
 ## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
