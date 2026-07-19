@@ -1,75 +1,62 @@
-Last updated: 2026-07-19
+Last updated: 2026-07-20
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。
+- 現在、プロジェクトにオープン中のIssueはありません。
+- すべての追跡済みタスクは完了またはクローズされています。
+- 新たな開発項目については、次の「次の一手候補」を参照してください。
 
 ## 次の一手候補
-1.  `daily-project-summary` の開発状況生成品質向上
-    -   最初の小さな一歩: `DevelopmentStatusGenerator.cjs` および関連プロンプト (`development-status-prompt.md`) の内容を分析し、Issueが存在しない場合の「次の一手候補」生成ロジックの改善点を特定する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル:
-        - .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
-        - .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+1. `generate_repo_list`の処理効率とエラーハンドリングの改善 [新規Issue #TBD]
+   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py`内のリポジトリデータ取得ロジックを特定し、既存のエラー処理をレビューする。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `src/generate_repo_list/generate_repo_list.py`, `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/config_manager.py`
 
-        実行内容:
-        対象ファイルの内容を分析し、以下の観点から開発状況生成ロジックの改善点を特定してください：
-        1.  現在オープン中のIssueがない場合、どのような情報を基に「次の一手候補」を生成しているか。
-        2.  「生成しないもの」として「ハルシネーションしそうなものは生成しない」とあるが、Issueがない場合に、ハルシネーションを避けつつ価値ある提案を行うためのロジック改善案。
-        3.  「最近の変更」や「プロジェクトのファイル一覧」などの利用可能な情報を、より効果的に「次の一手候補」の生成に活用するための提案。
+     実行内容: `generate_repo_list.py`がリポジトリデータを取得・処理する際の現在の効率性（特にAPI呼び出し回数や並列処理の有無）と、エラー（ネットワークエラー、APIレート制限など）に対するハンドリングがどのように実装されているかを分析し、現状をmarkdown形式で出力してください。
 
-        確認事項:
-        `DevelopmentStatusGenerator.cjs` が他のスクリプトやモジュールにどのように依存しているか、また `development-status-prompt.md` がどのように利用されているかを確認し、変更が全体に与える影響を考慮してください。
+     確認事項: リポジトリデータ取得に使用されている外部API（GitHub APIなど）の制限とベストプラクティス、および設定ファイル(`config.yml`)による影響を確認してください。
 
-        期待する出力:
-        上記分析結果に基づき、`DevelopmentStatusGenerator.cjs` の擬似コードや変更方針、および `development-status-prompt.md` の改訂案をmarkdown形式で出力してください。特に、Issueがない場合の「次の一手候補」生成の新しいアルゴリズムや方針に焦点を当ててください。
-        ```
+     期待する出力: 以下の観点から分析結果をmarkdown形式で記述してください：
+     1. 現在の処理フローにおけるボトルネックとなりうる箇所
+     2. 既存のエラーハンドリングメカニズムとその網羅性
+     3. パフォーマンス改善（例: キャッシング、バッチ処理）またはエラー耐性強化（例: リトライ機構、より詳細なエラーロギング）のための提案
+     ```
 
-2.  GitHub ActionsのJavaScriptスクリプトに対する単体テストの導入
-    -   最初の小さな一歩: 最小限の依存関係で動作するテストフレームワーク（例: `node:test` または軽量なライブラリ）を選定し、`ProjectSummaryCoordinator.cjs` の主要な関数のうち一つに対し、簡単な単体テストケースを作成する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル:
-        - .github/actions-tmp/package.json
-        - .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs
-        - .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
+2. GitHub Actionsワークフローの整理と`.github/actions-tmp`ディレクトリのレビュー [新規Issue #TBD]
+   - 最初の小さな一歩: `.github/workflows/`と`.github/actions-tmp/.github/workflows/`内のファイルリストを比較し、重複や関連性のあるワークフローを特定する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `.github/workflows/`と`.github/actions-tmp/.github/workflows/`配下の全`.yml`ファイル
 
-        実行内容:
-        GitHub Actionsで利用されているJavaScript (.cjs) スクリプトに対する単体テストフレームワークの導入を検討し、以下の点を分析してください：
-        1.  プロジェクトの既存のファイル構造や依存関係（例: `package.json`）を考慮した、適切なテストフレームワーク（例: Node.js標準の `node:test`、または Jest/Mochaなど）の選定理由。
-        2.  `ProjectSummaryCoordinator.cjs` または `DevelopmentStatusGenerator.cjs` のいずれかから、単体テストを適用するのに適した関数やモジュールを特定し、そのテストケースの設計案。
-        3.  テストの実行方法とCI/CDワークフローへの統合方法の概要。
+     実行内容: `.github/workflows/`と`.github/actions-tmp/.github/workflows/`ディレクトリに存在するGitHub Actionsワークフローファイルを比較し、以下の観点から分析してください：
+     1. 両ディレクトリ間でのワークフローの重複、類似性、あるいは役割の分離
+     2. `.github/actions-tmp`ディレクトリが一時的なものなのか、意図的に分離されているのかの役割
+     3. ワークフロー間の呼び出し関係（`workflow_call`など）
 
-        確認事項:
-        既存のNode.js環境（バージョン等）と`package.json`の依存関係を確認し、新たなテストフレームワークの導入が他のツールやスクリプトに与える影響がないことを確認してください。
+     確認事項: `.github/actions-tmp`の意図された用途（例えば、CI/CDパイプラインの一部としてのステージング環境や実験的なワークフローなど）に関するプロジェクトの慣習やドキュメント（もしあれば）を確認してください。
 
-        期待する出力:
-        選定したテストフレームワークと、その導入手順、および`ProjectSummaryCoordinator.cjs`の特定の関数に対する具体的なテストコードの例（擬似コードまたは実コード）をmarkdown形式で出力してください。また、`package.json`への追加変更点も記述してください。
-        ```
+     期待する出力: 分析結果をmarkdown形式で出力し、以下の提案を含めてください：
+     1. ワークフローの整理、統合、または廃止の候補
+     2. `.github/actions-tmp`ディレクトリの目的が不明確な場合の、その役割を明確化するためのアクション案
+     3. 全体的なワークフロー管理の改善策
+     ```
 
-3.  プロジェクトの依存関係（Node.js/Python）の棚卸しと更新ロードマップ作成
-    -   最初の小さな一歩: `package.json` と `requirements.txt` にリストされている主要な依存ライブラリについて、現在のバージョンと利用可能な最新の安定バージョンを調査し、潜在的なアップグレードパスを特定する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル:
-        - .github/actions-tmp/package.json
-        - .github/actions-tmp/package-lock.json
-        - requirements.txt
-        - requirements-dev.txt
+3. プロジェクトサマリー生成プロンプトとロジックの最適化 [新規Issue #TBD]
+   - 最初の小さな一歩: `generated-docs/development-status.md`と`generated-docs/project-overview.md`の内容をレビューし、現在の出力が期待通りの品質と情報量を提供しているか評価する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs`
 
-        実行内容:
-        対象ファイルに記載されているNode.jsおよびPythonの依存ライブラリについて、以下の観点から棚卸しと更新のロードマップを分析・作成してください：
-        1.  各主要ライブラリ（特に頻繁に更新されるものやセキュリティリスクが報告されやすいもの）の現在のバージョンと、利用可能な最新の安定バージョンを特定。
-        2.  バージョンアップに伴う潜在的な互換性の問題や、メジャーバージョンアップが必要なライブラリ。
-        3.  依存関係の更新を自動化するためのツール（例: Dependabot）の導入可能性。
+     実行内容: 現在のプロジェクトサマリー生成に使われているプロンプトファイルと、それを利用して出力を生成するスクリプトを分析し、以下の観点から改善点を特定してください：
+     1. プロンプトの明確性、具体性、およびハルシネーション抑制の有効性
+     2. スクリプトがプロンプトの意図をどの程度正確に反映しているか
+     3. 生成されるサマリーの品質（関連性、簡潔さ、構造）
 
-        確認事項:
-        依存関係の更新が既存のスクリプト（特にGitHub ActionsのワークフローやPythonスクリプト）の動作に影響を与えないことを確認するため、互換性情報を十分に調査してください。
+     確認事項: `generated-docs/development-status.md`および`generated-docs/project-overview.md`の最新の生成結果を確認し、期待される出力との乖離がないか評価してください。
 
-        期待する出力:
-        各主要ライブラリのバージョン情報（現状と最新）、アップグレードの優先順位、および推奨される更新手順を含む依存関係更新ロードマップをmarkdown形式で出力してください。可能であれば、Dependabotの設定例も提案してください。
+     期待する出力: 分析結果に基づき、プロンプトの修正案、または生成ロジック (`.cjs`スクリプト) の改善案をmarkdown形式で提案してください。特に、出力の質を向上させるための具体的な変更点、例えば、より詳細な指示、禁止事項の追加、情報源の明確化などを記述してください。
 
 ---
-Generated at: 2026-07-19 07:18:57 JST
+Generated at: 2026-07-20 07:19:45 JST
