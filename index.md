@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-07-18 (UTC) / 2026-07-19 (JST)
+Last Updated: 2026-07-19 (UTC) / 2026-07-20 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,19 +93,74 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を自動取得します。
-- GitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧をMarkdownで生成します。
-- 検索エンジンのクロールとLLMによるリポジトリ参照性を向上させ、情報発見を支援します。
-- 📅 2026-07-18 (UTC) / 2026-07-19 (JST)
+- GitHub APIを利用し、自身のGitHub Pagesサイト向けにリポジトリ一覧を自動生成します。
+- 検索エンジンやLLMからの参照性を高め、リポジトリ情報の発見・利用を促進します。
+- 各リポジトリの概要、バッジ、分類などを自動抽出し、SEO最適化されたMarkdown形式で出力します。
+- 📅 2026-07-19 (UTC) / 2026-07-20 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- 📅 2026-07-19 (UTC) / 2026-07-19 (JST)
+
+## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
+
+<a href="https://cat2151.github.io/chord2mml-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c) ![Topic: chord](https://img.shields.io/badge/Topic-chord-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
+
+- **Repository**: [https://github.com/cat2151/chord2mml-rust](https://github.com/cat2151/chord2mml-rust)
+- **GitHub Pages**: [https://cat2151.github.io/chord2mml-rust/](https://cat2151.github.io/chord2mml-rust/)
 - **Overview**: No description available
-- 📅 2026-07-18 (UTC) / 2026-07-18 (JST)
+
+### Project Highlights
+- コード進行テキストをMML（Music Macro Language）へ変換するライブラリ・アプリケーションです。
+- RustとTree-sitterを活用し、堅牢な構文解析と高速な変換を実現しています。
+- コマンドラインツールとして、またRustライブラリとしても利用可能な純粋なネイティブアプリケーションです。
+- 📅 2026-07-19 (UTC) / 2026-07-19 (JST)
+
+## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
+A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
+
+<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: mml-compiler](https://img.shields.io/badge/Topic-mml--compiler-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mmlabc-to-smf-rust"><img src="https://img.shields.io/badge/📖-DeepWiki-blue.svg" alt="DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
+- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
+
+### Project Highlights
+- Music Macro Language (MML) をStandard MIDI File (SMF) へ変換するRust製のライブラリ兼CLIです。
+- MMLのパースからSMFバイト列生成までを4パス構成で処理し、ブラウザ向けWASM版も提供しています。
+- 音符、オクターブ、和音、テンポ、ベロシティなど多様なMML記法に対応し、CLIおよびライブラリAPIで柔軟な利用が可能です。
+- 📅 2026-07-19 (UTC) / 2026-07-19 (JST)
+
+## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
+
+<a href="https://cat2151.github.io/cat-music-patterns/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen)
+
+- **Repository**: [https://github.com/cat2151/cat-music-patterns](https://github.com/cat2151/cat-music-patterns)
+- **GitHub Pages**: [https://cat2151.github.io/cat-music-patterns/](https://cat2151.github.io/cat-music-patterns/)
+- **Overview**: No description available
+- 📅 2026-07-19 (UTC) / 2026-07-19 (JST)
+
+## [migemo-auto-install-for-windows-and-python](https://cat2151.github.io/migemo-auto-install-for-windows-and-python/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Batchfile](https://img.shields.io/badge/Batchfile-8b407a?style=flat&logo=windowsterminal)
+
+- **Repository**: [https://github.com/cat2151/migemo-auto-install-for-windows-and-python](https://github.com/cat2151/migemo-auto-install-for-windows-and-python)
+- **GitHub Pages**: [https://cat2151.github.io/migemo-auto-install-for-windows-and-python/](https://cat2151.github.io/migemo-auto-install-for-windows-and-python/)
+- **Overview**: No description available
+- 📅 2026-07-19 (UTC) / 2026-07-19 (JST)
+
+## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
+WIP
+
+<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
+
+- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
+- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
+- 📅 2026-07-19 (UTC) / 2026-07-19 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
@@ -114,7 +169,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
 - **Overview**: No description available
-- 📅 2026-07-15 (UTC) / 2026-07-15 (JST)
+- 📅 2026-07-19 (UTC) / 2026-07-19 (JST)
 
 ## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
 A Quartz transformer plugin that converts MML (Music Macro Language) and chord notation code blocks to interactive music notation using abcjs.
@@ -138,20 +193,6 @@ A Quartz transformer plugin that converts MML (Music Macro Language) and chord n
 - **GitHub Pages**: [https://cat2151.github.io/trace-rush/](https://cat2151.github.io/trace-rush/)
 - **Overview**: No description available
 - 📅 2026-07-12 (UTC) / 2026-07-13 (JST)
-
-## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
-
-<a href="https://cat2151.github.io/chord2mml-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c) ![Topic: chord](https://img.shields.io/badge/Topic-chord-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
-
-- **Repository**: [https://github.com/cat2151/chord2mml-rust](https://github.com/cat2151/chord2mml-rust)
-- **GitHub Pages**: [https://cat2151.github.io/chord2mml-rust/](https://cat2151.github.io/chord2mml-rust/)
-- **Overview**: No description available
-
-### Project Highlights
-- コード進行テキストをMML（Music Macro Language）へ変換するライブラリ・アプリケーションです。
-- RustとTree-sitterを活用し、堅牢な構文解析と高速な変換を実現しています。
-- コマンドラインツールとして、またRustライブラリとしても利用可能な純粋なネイティブアプリケーションです。
-- 📅 2026-07-10 (UTC) / 2026-07-10 (JST)
 
 ## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
 
@@ -304,15 +345,6 @@ A TUI that displays the commit count of your public repositories.
 - **GitHub Pages**: [https://cat2151.github.io/gh-commit-ledger/](https://cat2151.github.io/gh-commit-ledger/)
 - 📅 2026-05-17 (UTC) / 2026-05-17 (JST)
 
-## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
-WIP
-
-<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
-
-- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
-- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
-- 📅 2026-05-17 (UTC) / 2026-05-17 (JST)
-
 ## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
 GitHub Copilot Coding Agentを自動化し、人間はissueを投げてPRレビューすればよいだけにする
 
@@ -372,20 +404,6 @@ This is a Chrome extension that displays a warning banner at the top of the scre
 - **Overview**: No description available
 - 📅 2026-04-22 (UTC) / 2026-04-22 (JST)
 
-## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
-A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
-
-<a href="https://cat2151.github.io/mmlabc-to-smf-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: mml-compiler](https://img.shields.io/badge/Topic-mml--compiler-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: ym2151](https://img.shields.io/badge/Topic-ym2151-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mmlabc-to-smf-rust"><img src="https://img.shields.io/badge/📖-DeepWiki-blue.svg" alt="DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/mmlabc-to-smf-rust](https://github.com/cat2151/mmlabc-to-smf-rust)
-- **GitHub Pages**: [https://cat2151.github.io/mmlabc-to-smf-rust/](https://cat2151.github.io/mmlabc-to-smf-rust/)
-
-### Project Highlights
-- Music Macro Language (MML) をStandard MIDI File (SMF) へ変換するRust製のライブラリ兼CLIです。
-- MMLのパースからSMFバイト列生成までを4パス構成で処理し、ブラウザ向けWASM版も提供しています。
-- 音符、オクターブ、和音、テンポ、ベロシティなど多様なMML記法に対応し、CLIおよびライブラリAPIで柔軟な利用が可能です。
-- 📅 2026-04-21 (UTC) / 2026-04-22 (JST)
-
 ## [github-actions](https://cat2151.github.io/github-actions/)
 collection of reusable GitHub Actions workflows for multiple projects
 
@@ -399,15 +417,6 @@ collection of reusable GitHub Actions workflows for multiple projects
 - 🔗 共通化されたワークフローで、どのプロジェクトからも呼ぶだけでOK
 - ✅ メンテは一括、プロジェクト開発に集中できます
 - 📅 2026-04-19 (UTC) / 2026-04-20 (JST)
-
-## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
-
-<a href="https://cat2151.github.io/cat-music-patterns/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen)
-
-- **Repository**: [https://github.com/cat2151/cat-music-patterns](https://github.com/cat2151/cat-music-patterns)
-- **GitHub Pages**: [https://cat2151.github.io/cat-music-patterns/](https://cat2151.github.io/cat-music-patterns/)
-- **Overview**: No description available
-- 📅 2026-04-19 (UTC) / 2026-04-19 (JST)
 
 ## [chord2mml](https://cat2151.github.io/chord2mml/)
 A library transpiles Chord notation into Music Macro Language.
@@ -999,15 +1008,6 @@ webpageを開くだけでソフトシンセで音が鳴る、最小規模のソ�
 - **GitHub Pages**: None
 - **Overview**: No description available
 - 📅 2025-05-01 (UTC) / 2025-05-02 (JST)
-
-## [migemo-auto-install-for-windows-and-python](https://cat2151.github.io/migemo-auto-install-for-windows-and-python/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Batchfile](https://img.shields.io/badge/Batchfile-8b407a?style=flat&logo=windowsterminal)
-
-- **Repository**: [https://github.com/cat2151/migemo-auto-install-for-windows-and-python](https://github.com/cat2151/migemo-auto-install-for-windows-and-python)
-- **GitHub Pages**: [https://cat2151.github.io/migemo-auto-install-for-windows-and-python/](https://cat2151.github.io/migemo-auto-install-for-windows-and-python/)
-- **Overview**: No description available
-- 📅 2022-04-09 (UTC) / 2022-04-09 (JST)
 
 
 ---
