@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-07-19 (UTC) / 2026-07-20 (JST)
+Last Updated: 2026-07-20 (UTC) / 2026-07-21 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、自身のGitHub Pagesサイト向けにリポジトリ一覧を自動生成します。
-- 検索エンジンやLLMからの参照性を高め、リポジトリ情報の発見・利用を促進します。
-- 各リポジトリの概要、バッジ、分類などを自動抽出し、SEO最適化されたMarkdown形式で出力します。
-- 📅 2026-07-19 (UTC) / 2026-07-20 (JST)
+- GitHub APIを利用し、リポジトリ情報を自動で取得・集約するシステムです。
+- 取得した情報をもとにJekyll対応のMarkdownファイルを自動生成し、GitHub Pagesサイトに公開します。
+- これにより、リポジトリ一覧のSEOを最適化し、検索エンジンやLLMからの参照性を向上させます。
+- 📅 2026-07-20 (UTC) / 2026-07-21 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
@@ -105,7 +105,16 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-07-19 (UTC) / 2026-07-19 (JST)
+- 📅 2026-07-20 (UTC) / 2026-07-20 (JST)
+
+## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
+
+<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
+- **Overview**: No description available
+- 📅 2026-07-20 (UTC) / 2026-07-20 (JST)
 
 ## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
 
@@ -242,15 +251,6 @@ Obsidian plugin. Playing Music Macro Language and Chord notation.
 - ObsidianでMMLやコード進行を記述し、五線譜表示と再生を可能にするプラグイン。
 - 音楽のアイデアスケッチに最適で、複数ペインでのフレーズやコード進行の再生もサポート。
 - 外部のMML/コード進行トランスパイラとabcjsを利用し、楽譜描画と音源再生を実現。
-- 📅 2026-06-08 (UTC) / 2026-06-08 (JST)
-
-## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
-
-<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
-- **Overview**: No description available
 - 📅 2026-06-08 (UTC) / 2026-06-08 (JST)
 
 ## [web-ym2151](https://cat2151.github.io/web-ym2151/)
