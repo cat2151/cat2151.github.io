@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-07-21 (UTC) / 2026-07-22 (JST)
+Last Updated: 2026-07-22 (UTC) / 2026-07-23 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、ユーザーのリポジトリ情報を自動的に取得・整理するシステムです。
-- 取得した情報から、JekyllベースのGitHub Pages向けにSEO最適化されたリポジトリ一覧を自動生成します。
-- これにより、検索エンジンによるクロールを促進し、LLMを含む外部参照からのリポジトリ発見性を向上させます。
-- 📅 2026-07-21 (UTC) / 2026-07-22 (JST)
+- GitHub APIを利用してリポジトリ情報を取得し、GitHub Pages用のリポジトリ一覧Markdownを自動生成します。
+- 検索エンジンからのクロールを促進し、各リポジトリの発見性を高めることを目的としています。
+- LLMによるリポジトリ参照失敗の緩和も期待される、SEO最適化されたコンテンツ生成システムです。
+- 📅 2026-07-22 (UTC) / 2026-07-23 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
@@ -105,7 +105,7 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-07-21 (UTC) / 2026-07-21 (JST)
+- 📅 2026-07-22 (UTC) / 2026-07-22 (JST)
 
 ## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
 
