@@ -1,21 +1,21 @@
-Last updated: 2026-07-22
+Last updated: 2026-07-23
 
 # Project Overview
 
 ## プロジェクト概要
-- GitHub APIを利用し、ユーザーのリポジトリ情報を自動的に取得・整理するシステムです。
-- 取得した情報から、JekyllベースのGitHub Pages向けにSEO最適化されたリポジトリ一覧を自動生成します。
-- これにより、検索エンジンによるクロールを促進し、LLMを含む外部参照からのリポジトリ発見性を向上させます。
+- GitHub APIを利用してリポジトリ情報を取得し、GitHub Pages用のリポジトリ一覧Markdownを自動生成します。
+- 検索エンジンからのクロールを促進し、各リポジトリの発見性を高めることを目的としています。
+- LLMによるリポジトリ参照失敗の緩和も期待される、SEO最適化されたコンテンツ生成システムです。
 
 ## 技術スタック
-- フロントエンド: Jekyll (静的サイトジェネレーターとして最終的なウェブページを構築)、Markdown (GitHub Pagesのコンテンツ形式、SEO最適化された出力を生成)
-- 音楽・オーディオ: 該当なし
-- 開発ツール: Python (主要なスクリプト言語としてデータ取得、処理、ファイル生成を実行)、GitHub API (リポジトリ情報の取得元)、YAML (設定ファイル `config.yml`, `strings.yml`, `seo_template.yml` の定義に使用)
-- テスト: pytest (Pythonコードの単体・結合テストフレームワーク)
-- ビルドツール: Python (スクリプト自体がMarkdownファイルの生成・「ビルド」を担う)、pip/requirements.txt (Pythonパッケージの依存関係管理)
-- 言語機能: Python (汎用プログラミング言語としての各種機能)
-- 自動化・CI/CD: (このプロジェクト自体が「自動化」ツールとしての役割を持つ。ただし、CI/CDパイプラインとしての自動化ではなく、ローカル実行を重視している)
-- 開発標準: ruff (PythonコードのLinterおよびフォーマッター)、.editorconfig (異なるエディタ間でのコーディングスタイル統一設定)
+- フロントエンド: Jekyll (GitHub Pagesサイトの基盤として使用されており、生成されたMarkdownファイルを表示するために機能します。), Markdown (自動生成されるコンテンツの形式であり、JekyllによってHTMLに変換されます。)
+- 音楽・オーディオ: このプロジェクトでは音楽・オーディオ関連技術は使用されていません。
+- 開発ツール: Python (主要なスクリプト言語として、GitHub APIからの情報取得とMarkdown生成の中核を担います。), Pytest (Pythonコードの単体テストおよび結合テストを行うためのテストフレームワークです。), Ruff (Pythonコードのフォーマットとリンティングを自動的に行い、コード品質と一貫性を維持します。)
+- テスト: Pytest (Pythonコードの機能が期待通りに動作するかを検証するためのテストフレームワークです。)
+- ビルドツール: Pythonスクリプト (Pythonで書かれたメインスクリプト自体が、リポジトリ情報からMarkdownファイルを「ビルド」する役割を果たします。)
+- 言語機能: Python (汎用プログラミング言語として、API通信、データ処理、ファイルI/Oなど、プロジェクトの全般的なロジックを実装します。)
+- 自動化・CI/CD: このプロジェクトはローカル開発重視であり、CI/CDによる自動化は明示されていません。
+- 開発標準: Ruff (コードのスタイルを統一し、潜在的なエラーを検出するためのリンター/フォーマッターとして機能します。)
 
 ## ファイル階層ツリー
 ```
@@ -83,66 +83,83 @@ Last updated: 2026-07-22
 ```
 
 ## ファイル詳細説明
-- **`.editorconfig`**: 異なるエディタやIDE間で一貫したコーディングスタイルを維持するための設定ファイル。
-- **`.github_automation/`**: GitHub Actionsやその他の自動化スクリプトを格納するディレクトリ。
-    - **`check_large_files/README.md`**: 大容量ファイルチェック自動化スクリプトの説明。
-    - **`check-large-files.toml`**: 大容量ファイルチェックツールの設定ファイル。
-    - **`scripts/check_large_files.py`**: Gitリポジトリ内の大容量ファイルを検出するPythonスクリプト。
-- **`.gitignore`**: Gitが追跡しないファイルやディレクトリを指定するファイル。
-- **`LICENSE`**: プロジェクトのライセンス情報（MITライセンス）。
-- **`README.md`**: プロジェクトの目的、機能、使用方法など、全体的な説明を記述したメインドキュメント。
-- **`_config.yml`**: Jekyllサイト全体の構成設定ファイル。
-- **`assets/`**: ウェブサイトで使用される画像やアイコンなどの静的アセットを格納するディレクトリ。
-    - `favicon-*.png`: 各種サイズのファビコン画像。
-- **`debug_project_overview.py`**: プロジェクト概要取得機能のデバッグ用スクリプト。
-- **`generated-docs/`**: `project-overview.md` など、他のリポジトリから取得・生成されるドキュメントを格納するプレースホルダー。
-- **`googled947dc864c270e07.html`**: Google Search Consoleのサイト所有権確認用ファイル。
-- **`index.md`**: メインスクリプトによって自動生成される、リポジトリ一覧を含むGitHub Pagesのトップページ。
-- **`issue-notes/22.md`**: 特定のイシュー（課題）に関するメモや詳細情報。
-- **`manifest.json`**: プログレッシブウェブアプリ (PWA) の設定ファイル。
-- **`pytest.ini`**: `pytest` テストフレームワークの設定ファイル。
-- **`requirements-dev.txt`**: 開発時およびテスト時に必要なPythonパッケージの依存関係リスト。
-- **`requirements.txt`**: 本番環境で必要なPythonパッケージの依存関係リスト。
-- **`robots.txt`**: 検索エンジンのクローラーに対して、ウェブサイトのどの部分をクロールするか・しないかを指示するファイル。
-- **`ruff.toml`**: PythonコードのLinter/Formatterである `ruff` の設定ファイル。
-- **`src/`**: プロジェクトの主要なソースコードを格納するディレクトリ。
-    - **`src/generate_repo_list/`**: リポジトリ一覧生成機能の中核をなすモジュール群。
-        - **`badge_generator.py`**: リポジトリの各種バッジ（言語、スター数など）を生成する機能を提供。
-        - **`config.yml`**: プロジェクト概要取得機能など、スクリプトの技術的パラメータを設定するファイル。
-        - **`config_manager.py`**: 設定ファイル (`config.yml`, `secrets.toml` など) の読み込みと管理を行うモジュール。
-        - **`date_formatter.py`**: 日付や時刻の表示形式を整形する機能。
-        - **`generate_repo_list.py`**: GitHub APIからリポジトリ情報を取得し、Markdownファイルを生成するメインスクリプト。
-        - **`json_ld_template.json`**: JSON-LD形式のSEOメタデータテンプレート。
-        - **`language_info.py`**: リポジトリの使用言語情報を処理する機能。
-        - **`markdown_generator.py`**: リポジトリ一覧のMarkdownコンテンツを構造化して生成するモジュール。
-        - **`project_overview_fetcher.py`**: 各リポジトリの `generated-docs/project-overview.md` からプロジェクト概要を抽出する機能。
-        - **`readme_badge_extractor.py`**: READMEファイルから既存のバッジ情報を抽出する機能。
-        - **`repository_processor.py`**: 取得したGitHubリポジトリの生データを処理し、必要な情報に変換する中心的なロジック。
-        - **`seo_template.yml`**: SEO関連のメタデータやテンプレート設定。
-        - **`statistics_calculator.py`**: リポジトリの統計情報（スター数、フォーク数など）を計算する機能。
-        - **`strings.yml`**: 表示されるメッセージや文言を管理する国際化/ローカライズ対応ファイル。
-        - **`template_processor.py`**: MarkdownやJSON-LDのテンプレートを処理し、動的なデータを埋め込む機能。
-        - **`url_utils.py`**: URL関連のユーティリティ関数（生成、解析など）。
-- **`test_project_overview.py`**: `project_overview_fetcher` モジュールのテストスクリプト。
-- **`tests/`**: プロジェクト全体のテストコードを格納するディレクトリ。
-    - **`conftest.py`**: pytestのフィクスチャやヘルパー関数を定義するファイル。
-    - **`test_badge_generator_integration.py`**: バッジ生成機能の統合テスト。
-    - **`test_check_large_files.py`**: 大容量ファイルチェック機能のテスト。
-    - **`test_config.py`**: 設定管理機能のテスト。
-    - **`test_date_formatter.py`**: 日付フォーマット機能のテスト。
-    - **`test_environment.py`**: 開発環境のセットアップに関するテスト。
-    - **`test_integration.py`**: 主要な機能間の統合テスト。
-    - **`test_markdown_generator.py`**: Markdown生成機能のテスト。
-    - **`test_project_overview_fetcher.py`**: プロジェクト概要取得機能のテスト。
-    - **`test_readme_badge_extractor.py`**: READMEバッジ抽出機能のテスト。
-    - **`test_repository_processor.py`**: リポジトリデータ処理機能のテスト。
+- **`.editorconfig`**: 異なるエディタやIDEを使用する開発者間で、コードのインデントや文字コードなどの基本的な書式設定を統一するための設定ファイルです。
+- **`.github_automation/`**: GitHub Actionsなどの自動化関連スクリプトや設定を格納するディレクトリです。
+    - **`.github_automation/check_large_files/README.md`**: `check_large_files`スクリプトの説明が記述されています。
+    - **`.github_automation/check_large_files/check-large-files.toml`**: 大容量ファイル検出スクリプトの設定ファイルです。
+    - **`.github_automation/check_large_files/scripts/check_large_files.py`**: Gitリポジトリ内の大容量ファイルをチェックするためのPythonスクリプトです。
+- **`.gitignore`**: Gitが追跡すべきでないファイルやディレクトリ（例: ビルド生成物、ログファイル、一時ファイル）を指定するファイルです。
+- **`LICENSE`**: プロジェクトのソフトウェアライセンス情報（MITライセンス）が記載されています。
+- **`README.md`**: プロジェクトの概要、目的、機能、使用方法などが記述されたメインのドキュメントファイルです。
+- **`_config.yml`**: Jekyllサイトのグローバル設定ファイルです。サイトのタイトル、テーマ、プラグインなどの設定が含まれます。
+- **`assets/`**: ウェブサイトで使用される静的アセット（画像、アイコンなど）を格納するディレクトリです。
+    - **`assets/favicon-16x16.png`**, **`assets/favicon-192x192.png`**, **`assets/favicon-32x32.png`**, **`assets/favicon-512x512.png`**: 異なるサイズのファビコン（ウェブサイトのアイコン）画像ファイルです。
+- **`debug_project_overview.py`**: プロジェクト概要取得機能のデバッグや単体テストに使用されるスクリプトです。
+- **`generated-docs/`**: 自動生成されたドキュメントやデータが格納されるディレクトリです。
+- **`googled947dc864c270e07.html`**: Google Search Consoleなどのウェブマスターツールでサイトの所有権を確認するために配置されるHTMLファイルです。
+- **`index.md`**: GitHub Pagesサイトのメインページとして機能するMarkdownファイルです。このプロジェクトでは、ここにリポジトリ一覧が自動生成されます。
+- **`issue-notes/`**: 開発中の課題やメモを格納するためのディレクトリです。
+    - **`issue-notes/22.md`**: 特定の課題（ID: 22）に関するメモファイルです。
+- **`manifest.json`**: プログレッシブウェブアプリ（PWA）のメタデータを提供するJSONファイルで、ホーム画面への追加やオフライン機能の設定に使用されます。
+- **`pytest.ini`**: Pytestテストフレームワークの設定ファイルです。テストの実行方法やオプションが定義されます。
+- **`requirements-dev.txt`**: 開発およびテスト環境で必要なPythonパッケージとそのバージョンをリストアップしたファイルです。
+- **`requirements.txt`**: 本番環境で必要なPythonパッケージとそのバージョンをリストアップしたファイルです。
+- **`robots.txt`**: 検索エンジンのクローラーに対して、サイト内のどのページをクロールしてよいか、またはクロールしてはならないかを指示するファイルです。
+- **`ruff.toml`**: PythonコードのリンティングおよびフォーマットツールであるRuffの設定ファイルです。
+- **`src/`**: プロジェクトのソースコードを格納するディレクトリです。
+    - **`src/__init__.py`**: Pythonパッケージとして`src`ディレクトリを認識させるための空ファイルです。
+    - **`src/generate_repo_list/`**: リポジトリ一覧生成システムの主要なロジックが格納されているパッケージです。
+        - **`src/generate_repo_list/__init__.py`**: Pythonパッケージとして`generate_repo_list`ディレクトリを認識させるための空ファイルです。
+        - **`src/generate_repo_list/badge_generator.py`**: リポジトリに表示するバッジ（例: 言語、ライセンス）を生成するロジックを含みます。
+        - **`src/generate_repo_list/config.yml`**: リポジトリ一覧生成スクリプトの技術的な設定パラメータ（例: プロジェクト概要取得機能の有効/無効、タイムアウト設定）を定義するファイルです。
+        - **`src/generate_repo_list/config_manager.py`**: 設定ファイル(`config.yml`)の読み込みと管理を行うモジュールです。
+        - **`src/generate_repo_list/date_formatter.py`**: 日付や時刻の表示形式を整形するためのユーティリティ関数を提供します。
+        - **`src/generate_repo_list/generate_repo_list.py`**: GitHub APIからリポジトリ情報を取得し、Markdownファイルを生成するメインの実行スクリプトです。
+        - **`src/generate_repo_list/json_ld_template.json`**: SEOのためにJSON-LD形式の構造化データを生成するためのテンプレートファイルです。
+        - **`src/generate_repo_list/language_info.py`**: リポジトリで使用されているプログラミング言語に関する情報を処理および整形するモジュールです。
+        - **`src/generate_repo_list/markdown_generator.py`**: 取得したリポジトリ情報とテンプレートに基づいて、最終的なMarkdownコンテンツを生成するロジックを含みます。
+        - **`src/generate_repo_list/project_overview_fetcher.py`**: 各リポジトリの`generated-docs/project-overview.md`からプロジェクト概要の3行説明を抽出する機能を提供します。
+        - **`src/generate_repo_list/readme_badge_extractor.py`**: リポジトリのREADMEファイルから既存のバッジ情報を抽出するモジュールです。
+        - **`src/generate_repo_list/repository_processor.py`**: GitHub APIから取得した生のリポジトリデータを処理し、表示に適した形式に変換する主要なロジックを含みます。
+        - **`src/generate_repo_list/seo_template.yml`**: SEOメタデータ生成のためのテンプレート設定ファイルです。
+        - **`src/generate_repo_list/statistics_calculator.py`**: リポジトリに関する統計情報（例: スター数、フォーク数、最終更新日）を計算または集計するモジュールです。
+        - **`src/generate_repo_list/strings.yml`**: プロジェクト内で使用される表示メッセージや文言を管理するためのファイルです。多言語対応や文言の一元管理に利用されます。
+        - **`src/generate_repo_list/template_processor.py`**: Markdown生成時に使用されるテンプレートの読み込み、解析、およびデータ埋め込みを処理します。
+        - **`src/generate_repo_list/url_utils.py`**: URLの生成や解析、正規化など、URL関連のユーティリティ関数を提供します。
+- **`test_project_overview.py`**: `project_overview_fetcher.py`モジュールのテストコードです。
+- **`tests/`**: プロジェクト全体のテストコードを格納するディレクトリです。
+    - **`tests/conftest.py`**: Pytestのフィクスチャやヘルパー関数を定義し、複数のテストファイルで共有するためのファイルです。
+    - **`tests/test_badge_generator_integration.py`**: バッジ生成機能の統合テストコードです。
+    - **`tests/test_check_large_files.py`**: `.github_automation/check_large_files.py`スクリプトのテストコードです。
+    - **`tests/test_config.py`**: 設定ファイルの読み込みや管理に関するテストコードです。
+    - **`tests/test_date_formatter.py`**: 日付フォーマット機能のテストコードです。
+    - **`tests/test_environment.py`**: 開発環境や依存関係が正しく設定されているかを確認するテストコードです。
+    - **`tests/test_integration.py`**: プロジェクト全体の主要なモジュール間の連携を検証する統合テストコードです。
+    - **`tests/test_markdown_generator.py`**: Markdown生成機能のテストコードです。
+    - **`tests/test_project_overview_fetcher.py`**: プロジェクト概要取得機能のテストコードです。
+    - **`tests/test_readme_badge_extractor.py`**: READMEからのバッジ抽出機能のテストコードです。
+    - **`tests/test_repository_processor.py`**: リポジトリ情報処理機能のテストコードです。
 
 ## 関数詳細説明
-提供されたプロジェクト情報には、具体的な関数名、引数、戻り値、またはその機能に関する詳細な記述が含まれていませんでした。そのため、個々の関数の詳細な役割や仕様を説明することはできません。
+本プロジェクトの主要な機能はPythonスクリプトによって提供されており、以下の主要な役割を持つ関数群が存在すると考えられます。具体的な引数や戻り値は提供されていませんが、それぞれの役割は以下の通りです。
+
+- **`generate_repo_list.py` 内の主要関数**:
+    - **`main()`**: プログラムのエントリーポイント。コマンドライン引数をパースし、設定を読み込み、リポジトリ情報の取得からMarkdown生成までの全体のフローを orchestrate します。
+- **`repository_processor.py` 内の主要関数**:
+    - **`fetch_repositories(username, token)`**: 指定されたGitHubユーザー名のリポジトリ一覧をGitHub API経由で取得します。認証のためのトークンを使用します。
+    - **`process_repository_data(repo_data)`**: GitHub APIから取得した生のリポジトリデータを受け取り、表示に必要な情報（例: 説明、言語、スター数、最終更新日）を抽出・整形します。
+- **`project_overview_fetcher.py` 内の主要関数**:
+    - **`get_project_overview(repo_url, config)`**: 各リポジトリの特定のファイル（例: `generated-docs/project-overview.md`）からプロジェクト概要の3行説明を非同期的に取得します。設定ファイルで指定されたパスとタイムアウトを使用します。
+- **`markdown_generator.py` 内の主要関数**:
+    - **`generate_markdown(repositories_info, template_data)`**: 処理済みのリポジトリ情報とMarkdownテンプレートのデータを受け取り、最終的なリポジトリ一覧のMarkdownコンテンツを生成します。
+- **`config_manager.py` 内の主要関数**:
+    - **`load_config(config_path)`**: 指定されたパスから設定ファイル（例: `config.yml`）を読み込み、Pythonオブジェクトとして提供します。
+- **`badge_generator.py` 内の主要関数**:
+    - **`create_badge_markdown(badge_data)`**: リポジトリの言語やライセンスなどの情報に基づいて、対応するバッジのMarkdownスニペットを生成します。
 
 ## 関数呼び出し階層ツリー
 ```
 関数呼び出し階層を分析できませんでした
 
 ---
-Generated at: 2026-07-22 07:20:44 JST
+Generated at: 2026-07-23 07:24:03 JST
