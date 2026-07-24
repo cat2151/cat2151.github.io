@@ -1,48 +1,49 @@
-Last updated: 2026-07-24
+Last updated: 2026-07-25
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません
+オープン中のIssueはありません。
 
 ## 次の一手候補
-1. プロジェクトサマリー（開発状況）生成プロンプトの改善を検討する
-   - 最初の小さな一歩: 現在の `development-status-prompt.md` の内容と、実際に生成される `generated-docs/development-status.md` を比較し、このプロンプトの「生成するもの」「生成しないもの」のルールが守られているか確認する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, generated-docs/development-status.md
+1.  自動更新されるプロジェクトサマリー生成のログ強化
+    - 最初の小さな一歩: `ProjectSummaryCoordinator.cjs` 内で、主要な処理の開始時と完了時にログ出力処理を追加する。
+    - Agent実行プロンプ:
+      ```
+      対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs
 
-     実行内容: `development-status-prompt.md` の指示内容と、`generated-docs/development-status.md` の生成結果を比較分析し、現在のプロンプトが要件（特に「生成しないもの」の制約）をどの程度満たしているか評価してください。具体的に、ハルシネーションや不必要な提案がないか、出力フォーマットが守られているかを確認してください。
+      実行内容: `ProjectSummaryCoordinator.cjs` ファイル内の `runProjectSummaries` メソッドに、プロジェクト概要と開発状況サマリーの生成処理の開始時と完了時に、それぞれ情報ログ（例: "Starting project overview generation." や "Project overview generation completed."）を追加してください。エラーハンドリング部分には、より詳細なエラーメッセージとスタックトレースをログ出力するように修正してください。
 
-     確認事項: `ProjectSummaryCoordinator.cjs` や `DevelopmentStatusGenerator.cjs` といった関連スクリプトがプロンプトの指示をどのように解釈・利用しているか、その処理ロジックとの整合性を確認する。
+      確認事項: 既存のログ出力処理やエラーハンドリングロジックとの競合がないことを確認してください。変更が全体の処理フローに影響を与えないことを保証するために、最小限の変更に留めてください。
 
-     期待する出力: `development-status-prompt.md` の改善案をMarkdown形式で提案してください。改善案には、プロンプトのどの部分を修正すべきか、具体的な修正内容、そしてその修正によって期待される効果を含めてください。
-     ```
+      期待する出力: 変更された `ProjectSummaryCoordinator.cjs` ファイルの内容をmarkdown形式のコードブロックで出力してください。
+      ```
 
-2. リポジトリリスト生成機能に新たなメタデータ（例: 使用ライセンス）を追加する
-   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py` が現在取得しているリポジトリ情報を確認し、GitHub APIを通じてライセンス情報を取得可能か調査する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/repository_processor.py, src/generate_repo_list/markdown_generator.py, src/generate_repo_list/config.yml
+2.  リポジトリリスト生成スクリプトのテストカバレッジ向上
+    - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` の `main` 関数が依存する主要なサブ関数（例: `repository_processor.py` の `process_repository_data` など）に対して、新しいテストケースを `tests/test_integration.py` に追加する。
+    - Agent実行プロンプト:
+      ```
+      対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, tests/test_integration.py
 
-     実行内容: GitHub APIを使用してリポジトリのライセンス情報を取得し、それを`repository_processor.py`に追加するロジックを検討してください。また、取得したライセンス情報を`markdown_generator.py`でどのように表示するか、および`config.yml`でライセンス表示のオン/オフを設定できるようにするための変更点を提案してください。
+      実行内容: `src/generate_repo_list/repository_processor.py` にある `process_repository_data` 関数について、異なる入力データ（例: 特定のフィールドが欠落しているリポジトリデータ）を想定した新しいテストケースを `tests/test_integration.py` に追加してください。これにより、`generate_repo_list.py` が呼び出す主要な処理の堅牢性を検証します。
 
-     確認事項: GitHub APIのレートリミット、および既存のデータモデルへの影響、`config.yml`のスキーマ変更が他の部分に影響を与えないかを確認してください。
+      確認事項: 既存のテストスイートが正常に動作すること、および追加するテストケースが新しいエラーを発生させないことを確認してください。テストはモックを使用せず、実際のデータ構造に近い形で記述してください。
 
-     期待する出力: ライセンス情報取得・処理・表示に関するコード変更の概要と、`config.yml`の更新案をMarkdown形式で記述してください。変更箇所と具体的な実装の方向性を示すコードスニペットを含めること。
-     ```
+      期待する出力: 追加されたテストケースを含む `tests/test_integration.py` の変更内容をmarkdown形式のコードブロックで出力してください。
+      ```
 
-3. `src/generate_repo_list/` 配下の主要スクリプトの単体テストカバレッジを向上させる
-   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` および `src/generate_repo_list/repository_processor.py` の現在のテストカバレッジを測定し、カバレッジの低い関数やメソッドを特定する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/generate_repo_list.py, src/generate_repo_list/repository_processor.py, tests/test_repository_processor.py, tests/test_integration.py
+3.  `.github/actions-tmp` ディレクトリの棚卸しとクリーンアップ提案
+    - 最初の小さな一歩: `.github/actions-tmp/` ディレクトリ内の `.yml` 拡張子を持つワークフローファイルと、ルートの `.github/workflows/` ディレクトリ内のファイルを比較し、重複している可能性のあるファイルをリストアップする。
+    - Agent実行プロンプト:
+      ```
+      対象ファイル: .github/actions-tmp/**/*.yml, .github/workflows/*.yml
 
-     実行内容: `src/generate_repo_list/generate_repo_list.py`と`src/generate_repo_list/repository_processor.py`について、既存のテストファイル（`tests/`配下）を参考に、テストカバレッジを向上させるための新たな単体テストケースを設計してください。特に、エッジケースやエラーハンドリングのテストを重点的に検討してください。
+      実行内容: `.github/actions-tmp/` ディレクトリ配下にある全てのYAMLワークフローファイルと、ルートディレクトリの `.github/workflows/` ディレクトリにある全てのYAMLワークフローファイルを比較し、ファイル名または内容が重複している可能性があるファイルを特定してください。その結果を、重複の可能性が高い順にリストアップしてください。
 
-     確認事項: テストのモック化が必要な外部依存関係（GitHub API呼び出しなど）を特定し、テストが独立して実行できることを確認する。また、既存のテストスイートとの競合がないことを確認する。
+      確認事項: ファイル内容の厳密な比較ではなく、ファイル名やワークフローの目的（コメントなどから推測）に基づく重複の可能性を洗い出してください。単にファイル名が同じだけでなく、実質的に同じ機能を持つワークフローも考慮してください。
 
-     期待する出力: `tests/test_generate_repo_list.py` (新規作成を想定) と `tests/test_repository_processor.py` に追加すべきテストケースの具体的なPythonコードスニペットをMarkdown形式で記述してください。各テストケースの目的と、それがカバーする機能について説明を含めること。
+      期待する出力: 重複の可能性のあるファイルパスのリストと、その重複の理由に関する簡潔な説明をmarkdown形式で出力してください。
+      ```
 
 ---
-Generated at: 2026-07-24 07:23:25 JST
+Generated at: 2026-07-25 07:25:15 JST
