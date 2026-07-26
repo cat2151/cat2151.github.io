@@ -1,49 +1,51 @@
-Last updated: 2026-07-26
+Last updated: 2026-07-27
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。
+- 現在オープンされているIssueはありません。
+- 新規機能開発や既存コード改善の機会を探しています。
+- 直近のコミットは主に自動生成ファイル (`generated-docs/` や `index.md`) の更新です。
 
 ## 次の一手候補
-1.  generate_repo_listの出力項目拡張（リポジトリ統計情報追加）
-    -   最初の小さな一歩: `src/generate_repo_list/repository_processor.py` に、リポジトリのスター数と最終コミット日を取得する機能を仮実装し、その結果をログに出力できるようにする。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `src/generate_repo_list/repository_processor.py`
+1. 自動生成される開発状況レポートの品質向上 (新規タスク候補)
+   - 最初の小さな一歩: `generated-docs/development-status.md` と、その生成元となるプロンプトファイル `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` を比較し、現在の生成品質の評価基準を定義する。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: generated-docs/development-status.md, .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
 
-        実行内容: `repository_processor.py` 内の `fetch_repository_data` メソッド（または類似のデータ取得メソッド）を分析し、GitHub APIからリポジトリのスター数と最終コミット日を取得するロジックを追加するための調査を行う。既存のデータ構造にこれらを追加するための変更点も考慮し、具体的にどのように実装するかを提案してください。
+     実行内容: `generated-docs/development-status.md` の内容が、プロンプトファイル `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` の要件をどれだけ満たしているかを評価してください。特に、要約の正確性、候補の適切性、Agent実行プロンプトの具体性に着目し、改善が必要な点を洗い出してください。
 
-        確認事項: GitHub APIのレートリミット、必要な認証スコープ、既存のデータ処理フロー（特に`markdown_generator.py`など）への影響を確認してください。
+     確認事項: プロンプトと生成結果の間のロジックや依存関係を理解し、改善提案がハルシネーションに基づかないことを確認してください。
 
-        期待する出力: 既存の `repository_processor.py` の `fetch_repository_data` メソッドにスター数と最終コミット日を取得するコードを追加する提案をMarkdown形式で出力してください。変更後のメソッドの擬似コードと、変更による影響範囲についての考察を含めてください。
-        ```
+     期待する出力: 評価結果と、現在の生成ロジックやプロンプトの変更によって、レポートの品質を向上させるための具体的な提案をMarkdown形式で出力してください。
+     ```
 
-2.  daily-project-summaryの開発状況セクション強化（コミットメッセージからの開発ハイライト抽出）
-    -   最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs` がどのようにコミット履歴を処理しているかを調査し、最近のコミットメッセージからキーワード（例: "feat:", "fix:", "refactor:"）を抽出する簡単な正規表現を試作する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/GitUtils.cjs`
+2. `generate_repo_list` 機能のテストカバレッジ強化 (新規タスク候補)
+   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` 内の主要な関数やクラスを特定し、既存のテストファイル (`tests/test_repository_processor.py` など) でカバーされている範囲を概観する。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: src/generate_repo_list/generate_repo_list.py, tests/test_repository_processor.py, tests/test_markdown_generator.py
 
-        実行内容: `DevelopmentStatusGenerator.cjs` がどのようにGitのコミット履歴を取得・解析しているかを分析し、コミットメッセージから「feat:」「fix:」「refactor:」などのプレフィックスを持つコミットを抽出し、それらをサマリーに含めるためのロジック追加の可能性を検討してください。具体的には、`GitUtils.cjs`を利用してコミットメッセージを取得し、`DevelopmentStatusGenerator.cjs`で加工するフローを提案してください。
+     実行内容: `src/generate_repo_list/generate_repo_list.py` のコードベースを分析し、特に重要なビジネスロジックやデータ処理部分について、現在のテストカバレッジが不十分な箇所を特定してください。既存テストファイルの内容も踏まえ、カバレッジを向上させるために新しく追加すべきテストケースの概要を提案してください。
 
-        確認事項: `GitUtils.cjs` でのGitコマンド実行方法、既存のサマリー生成フローへの統合方法、サマリーの冗長化を防ぐための要約方法を考慮してください。
+     確認事項: 提案するテストケースが既存のコードに矛盾せず、具体的な入力と期待される出力を明確に記述できることを確認してください。
 
-        期待する出力: `DevelopmentStatusGenerator.cjs` にコミットメッセージから特定のキーワードを抽出し、開発状況サマリーに含めるための具体的なコード変更案と、そのための`GitUtils.cjs`の利用方法についてのMarkdown形式の報告を生成してください。
-        ```
+     期待する出力: `src/generate_repo_list/generate_repo_list.py` のどの部分についてテストを強化すべきか、およびそれぞれのテストケースで何を検証すべきかをMarkdown形式でリストアップしてください。
+     ```
 
-3.  Pythonコード品質チェックの自動化と強化（RuffのCI導入）
-    -   最初の小さな一歩: `ruff` をプロジェクトに導入し、既存のPythonファイルに対して静的解析を実行し、その結果を確認する。`requirements-dev.txt` に `ruff` を追加し、ローカルで実行できることを確認する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `requirements-dev.txt`, `ruff.toml` (新規作成の可能性あり), `.github/workflows/call-check-large-files.yml` (または既存のPython関連ワークフロー)
+3. GitHub Actionsワークフローの最適化検討 (新規タスク候補)
+   - 最初の小さな一歩: `.github/workflows/call-check-large-files.yml` と、それによって呼び出される `.github/actions-tmp/.github/workflows/check-large-files.yml` のワークフロー定義を詳細に読み込み、両者の関係と実行フローを把握する。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: .github/workflows/call-check-large-files.yml, .github/actions-tmp/.github/workflows/check-large-files.yml, .github_automation/check_large_files/scripts/check_large_files.py
 
-        実行内容: プロジェクトに `ruff` を導入し、静的解析ルールを定義するための `ruff.toml` の初期設定を提案してください。また、既存のCIワークフロー (`.github/workflows/call-check-large-files.yml` など) に `ruff` を組み込み、プルリクエスト時に自動でコード品質チェックが実行されるようにするための変更点を分析し、具体的なステップを記述してください。
+     実行内容: 上記のGitHub Actionsワークフローと関連スクリプトを分析し、現在の構成がGitHub Actionsのベストプラクティス（例: 再利用可能なワークフロー、効率的なトリガー設定、不要な依存関係の排除）に沿っているかを評価してください。特に、`call-` 形式のワークフローと実体ワークフローの連携において、冗長性や最適化の余地がないか検討してください。
 
-        確認事項: `ruff` の導入が既存のCIフローや開発環境に与える影響、既存のリンター（もしあれば）との競合、警告レベルの適切な設定、Pythonバージョン互換性を確認してください。
+     確認事項: 提案する最適化が既存の機能やセキュリティ要件を損なわないことを確認してください。また、GitHub Actionsのドキュメントや一般的なパターンを参照して、現実的な改善策を提示してください。
 
-        期待する出力: `ruff.toml` の推奨設定と、`requirements-dev.txt` に `ruff` を追加する変更、および `.github/workflows/call-check-large-files.yml` (または新規のCIワークフロー) に `ruff` の実行ステップを追加するためのMarkdown形式での手順書とコードスニペットを生成してください。
-        ```
+     期待する出力: ワークフローの現状の評価と、具体的な最適化の提案（例: 設定変更、構造改善）をMarkdown形式で出力してください。
+     ```
 
 ---
-Generated at: 2026-07-26 07:20:01 JST
+Generated at: 2026-07-27 07:21:49 JST
