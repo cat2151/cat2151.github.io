@@ -1,54 +1,55 @@
-Last updated: 2026-08-01
+Last updated: 2026-08-02
 
 # Development Status
 
 ## 現在のIssues
-- 現在、オープン中のIssueはありません。
-- プロジェクトは自動化されたリポジトリリスト更新とプロジェクトサマリー生成が継続的に実行されています。
-- 主な活動は、これらの自動処理の維持と改善にフォーカスしています。
+オープン中のIssueはありません。プロジェクトは安定した状態にあり、定期的な自動更新が継続されています。
 
 ## 次の一手候補
-1. 開発リポジトリリスト生成の出力内容拡張 [Issue #None]
-   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py` を分析し、リポジトリリストの各項目に新しい情報（例: 最終更新日の詳細、コミット頻度サマリー）を追加するための拡張ポイントを特定する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/markdown_generator.py, src/generate_repo_list/repository_processor.py, src/generate_repo_list/statistics_calculator.py
+1.  `src/generate_repo_list` のテストカバレッジ向上
+    -   最初の小さな一歩: `src/generate_repo_list` ディレクトリ内の全Pythonファイルと、`tests/` ディレクトリ内の既存のテストファイルの対応関係を調査し、未テストまたはテストが不十分なモジュールや主要な関数を特定します。
+    -   Agent実行プロンプ:
+        ```
+        対象ファイル: `src/generate_repo_list/**/*.py`, `tests/**/*.py`, `pytest.ini`, `ruff.toml`
 
-     実行内容: `markdown_generator.py` の `generate_markdown` 関数がリポジトリ情報をどのように受け取り、マークダウンを生成しているかを分析してください。特に、`repository_processor.py` や `statistics_calculator.py` からどのようなデータが渡され、それがマークダウンにどのように変換されているかを詳細に調査し、新しい情報（例: 最終更新日の詳細、コミット頻度サマリー）を追加するための適切な拡張ポイントを特定してください。
+        実行内容: `src/generate_repo_list` ディレクトリ内のPythonファイル群について、既存のテストファイル (`tests/`) との対応関係を分析し、以下の観点からテスト状況を評価してください：
+        1) テストファイルが存在しないPythonモジュール
+        2) 主要なクラスや関数で、テストケースが不足している、または存在しないもの
+        3) `pytest.ini` や `ruff.toml` の設定に基づくテスト実行環境の確認
 
-     確認事項: 既存のMarkdown構造や、`generate_repo_list.py` からの呼び出し方との互換性を損なわないことを確認してください。また、追加する情報が既存のデータ収集ロジックで取得可能か、または追加のデータ収集が必要かを検討してください。
+        確認事項: プロジェクトの主要なビジネスロジックが `src/generate_repo_list` 配下に存在することを前提とします。既存のテストスクリプトの実行方法やカバレッジツールの利用可能性も考慮してください。
 
-     期待する出力: 新しい情報（最終更新日の詳細、コミット頻度サマリーなど）をリポジトリリストに組み込むための拡張ポイントと、具体的なコード変更の概要をmarkdown形式で提案してください。
-     ```
+        期待する出力: 未テストまたはテストが不十分なコード部分をリストアップし、それぞれについて推奨されるテストの方向性（例：単体テスト、統合テストの追加）をmarkdown形式で出力してください。
+        ```
 
-2. 日次プロジェクトサマリーのコンテンツの具体性向上 [Issue #None]
-   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` をレビューし、より具体的で詳細な情報を引き出すための改善点を特定する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
+2.  `.github/actions-tmp` ディレクトリの目的調査と整理
+    -   最初の小さな一歩: `.github/actions-tmp` ディレクトリ内のファイルと、ルート直下の `.github` および `.github_automation` ディレクトリ内のファイルとの間で、ファイル名が重複しているものや内容が類似しているものを洗い出し、その差異を比較します。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `.github/actions-tmp/**`, `.github/workflows/**`, `.github_automation/**`, `package.json`, `.gitignore`
 
-     実行内容: `development-status-prompt.md` の内容を分析し、現在の開発状況をより具体的に、かつ詳細に要約するためのプロンプト改善案を検討してください。特に、「現在のIssues」と「次の一手候補」のセクションにおいて、AIがより深い分析を行い、ハルシネーションを避けつつも洞察に富んだ提案を生成できるよう、指示の明確化や追加すべき要素を提案してください。
+        実行内容: `.github/actions-tmp` ディレクトリ内のファイルと、メインの `.github` および `.github_automation` ディレクトリ内のファイルとの重複、差異、および関連性を詳細に分析してください。特に、GitHub Actionsのワークフロー定義 (`.yml`) やスクリプト (`.cjs`, `.py`) に焦点を当て、それらがどこで、なぜ、どのように使用されているのかを調査してください。
 
-     確認事項: 改善案が「ハルシネーションの温床なので生成しない」というガイドラインに反しないか、また、既存の生成ロジック (`DevelopmentStatusGenerator.cjs`) で処理可能かを確認してください。ユーザーに直接的な提案ではなく、あくまで現状分析と次に進むための情報提供に留まるように調整してください。
+        確認事項: `actions-tmp` が一時的なビルドアーティファクトである可能性、古い機能が残されている可能性、または意図的に隔離されている可能性を考慮してください。`package.json` や `.gitignore` も参照し、ファイルの管理状況を把握してください。
 
-     期待する出力: `development-status-prompt.md` の変更案をmarkdown形式で出力してください。変更箇所には具体的な改善内容と、なぜその変更が必要かという理由を付記してください。
-     ```
+        期待する出力: `.github/actions-tmp` ディレクトリの現状と、メインディレクトリとの関連性に関する詳細な分析結果をmarkdown形式で出力してください。具体的には、重複または類似ファイルのリスト、主要な差異の要約、そしてこのディレクトリの今後の取り扱いに関する提案（例：削除、統合、ドキュメント化）を含めてください。
+        ```
 
-3. GitHub Actionsにおける`.github/actions-tmp` の整理と安定化 [Issue #None]
-   - 最初の小さな一歩: `.github/actions-tmp/.github/workflows/` ディレクトリ内のワークフロー一覧をレビューし、どのワークフローが現在活発に利用されているか、あるいはプロジェクトにとって重要であるかを特定する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/actions-tmp/.github/workflows/, .github/workflows/
+3.  GitHub Actionsワークフローの依存関係ドキュメント作成
+    -   最初の小さな一歩: `.github/workflows/` および `.github/actions-tmp/.github/workflows/` 内の全ての `.yml` ファイルを対象に、各ワークフローがどのようなイベント（例: `on: push`, `on: schedule`）でトリガーされるか、また `workflow_call` を用いてどのワークフローを呼び出しているか（または呼び出されているか）を洗い出し、簡単なリストまたは表形式で整理します。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `.github/workflows/*.yml`, `.github/actions-tmp/.github/workflows/*.yml`
 
-     実行内容: `.github/actions-tmp/.github/workflows/` 内の各GitHub Actionsワークフロー（例: `callgraph.yml`, `check-large-files.yml`, `issue-note.yml` など）をリストアップし、それぞれの目的と、現在のメインプロジェクト (`.github/workflows/`) での利用状況または潜在的な統合可能性について分析してください。特に、`actions-tmp` に置かれている理由（一時的、実験的、外部依存など）を推測し、それらをメインのワークフローとして安定稼働させるために必要な手順を検討してください。
+        実行内容: プロジェクト内の全てのGitHub Actionsワークフロー (`.yml` ファイル) について、以下の観点から依存関係と実行トリガーを分析してください：
+        1) 各ワークフローがどのイベント（例: `push`, `pull_request`, `schedule`, `workflow_call`）で実行されるか。
+        2) `workflow_call` で呼び出されるワークフローは、どの他のワークフローから呼び出されているか。
+        3) 各ワークフローが他のワークフローを `uses` キーワードで呼び出している場合、その関係性。
 
-     確認事項: 各ワークフローが依存しているアクションやスクリプト（例: `.github_automation/` 以下）のパスが正しいか、また、メインプロジェクトへの移行に伴う設定変更や競合がないかを確認してください。不要なワークフローがないか、あるいは重複しているものがないかも確認してください。
+        確認事項: `.github/actions-tmp` 内のワークフローも分析対象に含め、全体的なフローを把握してください。複雑な条件分岐や環境変数による動的な挙動は、初期分析の範囲外として問題ありません。
 
-     期待する出力: `.github/actions-tmp/.github/workflows/` 内の主要なワークフローについて、その現状、役割、そしてメインプロジェクトへの統合または整理に関する推奨事項をmarkdown形式でまとめたレポートを生成してください。具体的には、各ワークフローに対する以下の項目を含めてください：
-         *   ワークフロー名と簡単な説明
-         *   `actions-tmp` に存在する理由の推測
-         *   メインプロジェクトへの統合/削除/維持の推奨と、その理由
-         *   統合する場合の具体的なアクションアイテム（例: ファイル移動、パス修正、設定変更）
+        期待する出力: プロジェクトのGitHub Actionsワークフロー全体の依存関係と実行フローを視覚的に理解しやすいように、Markdown形式の図（例: Mermaid Graphなど）または表形式で出力してください。
+        ```
 
 ---
-Generated at: 2026-08-01 07:23:12 JST
+Generated at: 2026-08-02 07:20:31 JST
