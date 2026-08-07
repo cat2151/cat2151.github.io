@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-08-07 (UTC) / 2026-08-07 (JST)
+Last Updated: 2026-08-07 (UTC) / 2026-08-08 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,47 @@ Last Updated: 2026-08-07 (UTC) / 2026-08-07 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
+- 検索エンジン最適化(SEO)を意識し、リポジトリ一覧や各リポジトリへのリンクを公開します。
+- 各リポジトリの「プロジェクト概要」を自動取得・表示し、バッジや分類機能も提供します。
+- 📅 2026-08-07 (UTC) / 2026-08-08 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- 📅 2026-08-07 (UTC) / 2026-08-07 (JST)
+
+## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
+
+<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
+- **Overview**: No description available
+- 📅 2026-08-07 (UTC) / 2026-08-07 (JST)
+
+## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
+
+<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
+- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
+- **Overview**: No description available
+- 📅 2026-08-07 (UTC) / 2026-08-07 (JST)
+
 ## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
 
 <a href="https://cat2151.github.io/chord2mml-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c) ![Topic: chord](https://img.shields.io/badge/Topic-chord-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
@@ -96,24 +137,6 @@ Last Updated: 2026-08-07 (UTC) / 2026-08-07 (JST)
 - コード進行テキストをMML（Music Macro Language）へ変換するライブラリ・アプリケーションです。
 - RustとTree-sitterを活用し、堅牢な構文解析と高速な変換を実現しています。
 - コマンドラインツールとして、またRustライブラリとしても利用可能な純粋なネイティブアプリケーションです。
-- 📅 2026-08-06 (UTC) / 2026-08-06 (JST)
-
-## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
-
-<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
-- **Overview**: No description available
-- 📅 2026-08-06 (UTC) / 2026-08-06 (JST)
-
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
-
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
 - 📅 2026-08-06 (UTC) / 2026-08-06 (JST)
 
 ## [mmlabc-to-smf-rust](https://cat2151.github.io/mmlabc-to-smf-rust/)
@@ -129,29 +152,6 @@ A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 - MMLのパースからSMFバイト列生成までを4パス構成で処理し、ブラウザ向けWASM版も提供しています。
 - 音符、オクターブ、和音、テンポ、ベロシティなど多様なMML記法に対応し、CLIおよびライブラリAPIで柔軟な利用が可能です。
 - 📅 2026-08-06 (UTC) / 2026-08-06 (JST)
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを活用し、リポジトリ情報を自動で収集・整理します。
-- JekyllベースのGitHub Pages向けにSEO最適化されたリポジトリ一覧を生成します。
-- 検索エンジンからの発見性を高め、開発リソースへのアクセスを容易にします。
-- 📅 2026-08-05 (UTC) / 2026-08-06 (JST)
-
-## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
-
-<a href="https://cat2151.github.io/bluesky-text-to-audio/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
-- **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
-- **Overview**: No description available
-- 📅 2026-07-20 (UTC) / 2026-07-20 (JST)
 
 ## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
 
