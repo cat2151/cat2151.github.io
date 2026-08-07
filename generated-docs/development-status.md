@@ -1,51 +1,60 @@
-Last updated: 2026-08-06
+Last updated: 2026-08-08
 
 # Development Status
 
 ## 現在のIssues
-- 現在、オープン中のIssueはありません。
-- プロジェクトは安定した状態にあり、定期的な自動更新が継続しています。
-- 今後は、既存の自動化スクリプトのさらなる改善や、機能拡張が次の一手となるでしょう。
+現在、プロジェクトにオープン中のIssueはありません。
+これは、報告されている問題や未完了のタスクがない状態を示しています。
+引き続き、プロジェクトの健全性維持と自動化プロセスの最適化に焦点を当てていきます。
 
 ## 次の一手候補
-1.  **リポジトリリスト生成スクリプトの堅牢性向上 [Issue #XX1](../issue-notes/XX1.md)**
-    -   最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` のメイン処理において、リポジトリデータのフェッチや処理中に発生しうる未ハンドリングの例外やエッジケースを特定し、簡単なエラーロギングを追加する。
+1.  `.github/actions-tmp` ディレクトリの役割とクリーンアップの検討
+    -   最初の小さな一歩: プロジェクトのファイル一覧に存在する `.github/actions-tmp` ディレクトリ内のファイルが、メインのプロジェクト構造内のファイルとどのように関連しているか（例: GitHub Actionsによる一時的なコピー、古い残骸など）を調査し、その役割を特定します。
+    -   Agent実行プロンプ:
+        ```
+        対象ファイル: `.github/actions-tmp/` ディレクトリ配下の全ファイル、およびプロジェクトルートのワークフローファイルやスクリプト
+
+        実行内容: `.github/actions-tmp/` ディレクトリの役割を特定するため、以下の観点から分析してください：
+        1) ディレクトリ内のファイルと、メインのプロジェクト構造（例: `.github/workflows/`, `.github_automation/`, `issue-notes/`）内のファイルとの重複度と差分。
+        2) GitHub Actionsのワークフロー定義（例: `.github/workflows/*.yml`）が `.github/actions-tmp/` 内のファイルをどのように利用しているか、または参照しているか。
+        3) このディレクトリが一時的なキャッシュ、ビルド成果物、または意図的に配置されたサブプロジェクトである可能性。
+
+        確認事項: 分析前に、GitHub Actionsのドキュメントや現在のワークフローが一時ディレクトリをどのように使用しているかの慣例を考慮してください。ファイルの削除や移動はプロジェクトの動作に影響を与える可能性があるため、慎重な検討が必要です。
+
+        期待する出力: `.github/actions-tmp` ディレクトリの役割に関する詳細な分析結果をmarkdown形式で出力してください。具体的には、その用途（一時的、永続的など）、重複ファイルの状況、そしてもしクリーンアップが必要な場合に推奨されるアプローチを含めてください。
+        ```
+
+2.  開発状況生成プロンプト（自身）の改善とロバスト性向上
+    -   最初の小さな一歩: 現在の `development-status-prompt.md` と関連するスクリプト（例: `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`）を確認し、オープンIssueがない状況での「次の一手候補」の生成ロジックがどのように機能しているかを理解します。
     -   Agent実行プロンプト:
         ```
-        対象ファイル: `src/generate_repo_list/generate_repo_list.py`
+        対象ファイル: `development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/IssueTracker.cjs`
 
-        実行内容: 対象ファイルのメイン処理 (repositoryデータの取得、処理、出力部分) を分析し、予期せぬAPIエラー、ネットワーク障害、データ構造の不整合など、エラーが発生しうる箇所を特定してください。そして、既存のエラーハンドリングが不十分な場合、try-exceptブロックでの捕捉と、エラーメッセージをログに出力する改善点を提案してください。
+        実行内容: 開発状況生成プロンプトが「オープン中のIssueはありません」という状況で「次の一手候補」をどのように生成しているか、そのロジックと潜在的な改善点を分析してください。特に、以下の点を考慮してください：
+        1) オープンIssueがない場合に、どのような情報源（例: 最近のコミット履歴、ファイル構造、一般的なプロジェクトの健全性指標）を元に候補を導き出すべきか。
+        2) ハルシネーションを避けつつ、価値のあるタスクを提案するための具体的な戦略。
+        3) 将来的にIssueがオープンされた場合に、それらを適切に要約し、次のアクションに繋げるためのロジック。
 
-        確認事項: スクリプトの既存の依存関係（例: `repository_processor.py`、`project_overview_fetcher.py`など）と、エラー発生時の全体フローへの影響を確認してください。既存のテストファイル (`tests/test_integration.py` 等) でエラーハンドリングがカバーされているかも確認してください。
+        確認事項: 現在のプロンプトの制約（ハルシネーション回避、具体的な出力フォーマット）を厳守しつつ、生成ロジックの柔軟性と有用性を高める方法を検討してください。
 
-        期待する出力: 特定されたエラー発生箇所と、それに対する具体的なエラーハンドリングの改善提案をMarkdown形式で出力してください。改善後のコードスニペットと、もし必要であれば追加すべきテストケースの概要を含めてください。
+        期待する出力: 開発状況生成プロンプトの改善案をmarkdown形式で出力してください。具体的には、オープンIssueがない場合の「次の一手候補」生成ロジックの強化策、およびそれがプロジェクトの効率と透明性にどのように貢献するかを記述してください。
         ```
 
-2.  **開発状況生成プロンプトの改善：課題不在時の proactive な提案 [Issue #XX2](../issue-notes/XX2.md)**
-    -   最初の小さな一歩: 現在の`development-status-prompt.md`をレビューし、「オープン中のIssueがありません」という状況下で、Agentがより具体的な改善提案や機能拡張のアイデアを生成できるよう、プロンプトの指示を追記する箇所を特定する。
+3.  主要な自動更新ワークフローの監視と最適化
+    -   最初の小さな一歩: 最近のコミット履歴で頻繁に実行されている「Auto-update repository list」および「Update project summaries (overview & development status) [auto]」に関連するワークフローファイル（例: `.github/workflows/call-daily-project-summary.yml`）およびスクリプト（例: `src/generate_repo_list/generate_repo_list.py`）を特定し、その実行ログを確認して、エラーや警告、異常な実行時間がないか初期的なチェックを行います。
     -   Agent実行プロンプト:
         ```
-        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`
+        対象ファイル: `.github/workflows/call-daily-project-summary.yml`, `.github/workflows/generate_repo_list.yml`, `src/generate_repo_list/*.py`, `.github/actions-tmp/.github_automation/project_summary/scripts/*.cjs`
 
-        実行内容: 対象ファイルの内容を分析し、現在オープンされているIssueが存在しない場合に、Agentがプロジェクトのファイル一覧や最近の変更履歴に基づいて、より具体的で価値のある「次の一手候補」を提案できるよう、プロンプトの指示を追加・改善してください。特に、「生成しないもの」の制約に抵触しない範囲での proactive な提案を促す方法を検討してください。
+        実行内容: 主要な自動更新ワークフロー（リポジトリリストの自動更新、プロジェクトサマリーの自動更新）のパフォーマンスと信頼性を分析してください。具体的には：
+        1) ワークフローの実行時間、成功/失敗率、リソース使用量（利用可能な場合）の傾向。
+        2) ワークフロー内のスクリプトやアクションに潜在的なボトルネックや改善の余地がないか。
+        3) エラーハンドリングの堅牢性と、異常発生時の通知メカニズム。
 
-        確認事項: プロンプトの変更が「ハルシネーションの温床」にならないよう、具体的なデータや既存のプロジェクト構造に基づいた提案を促すように設計されているか確認してください。また、既存のプロンプトガイドラインとの整合性も確認してください。
+        確認事項: 分析は、GitHub Actionsの過去の実行履歴データと、関連するスクリプトのコードレビューに基づいて実施してください。自動化がプロジェクトの主要な機能であるため、その安定性と効率性は最優先事項です。
 
-        期待する出力: 改善された`development-status-prompt.md`の全文をMarkdown形式で出力してください。変更点にはコメントなどで変更意図を明記してください。
-        ```
-
-3.  **ProjectSummaryCoordinatorの課題リスト処理の最適化 [Issue #XX3](../issue-notes/XX3.md)**
-    -   最初の小さな一歩: `github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`を精査し、Issueリストが空の場合のデータフローと処理ロジックを把握する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`
-
-        実行内容: 対象ファイルについて、Issueリストが空の状態で渡された場合に、どのように処理されるかを分析してください。具体的には、issueデータのロード、フィルタリング、要約ロジックにおいて、空のリストが渡された際に不必要な処理が行われていないか、あるいはより効率的なハンドリングが可能かを検討してください。
-
-        確認事項: `ProjectSummaryCoordinator.cjs` や `IssueTracker.cjs` など、関連するスクリプトとのデータ連携を確認し、変更が全体のサマリー生成プロセスに与える影響を評価してください。
-
-        期待する出力: Issueリストが空の場合の現状の処理フローの概要と、もし非効率な点や改善の余地がある場合、その具体的な改善提案（コードスニペットを含む）をMarkdown形式で出力してください。
+        期待する出力: 主要な自動更新ワークフローの現状評価と、パフォーマンス向上、信頼性強化のための具体的な改善提案をmarkdown形式で出力してください。例えば、キャッシュの利用、並列実行の最適化、エラーロギングの改善などを含めてください。
         ```
 
 ---
-Generated at: 2026-08-06 07:25:32 JST
+Generated at: 2026-08-08 07:13:31 JST
