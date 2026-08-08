@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-08-07 (UTC) / 2026-08-08 (JST)
+Last Updated: 2026-08-08 (UTC) / 2026-08-09 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
-- 検索エンジン最適化(SEO)を意識し、リポジトリ一覧や各リポジトリへのリンクを公開します。
-- 各リポジトリの「プロジェクト概要」を自動取得・表示し、バッジや分類機能も提供します。
-- 📅 2026-08-07 (UTC) / 2026-08-08 (JST)
+- GitHub APIを利用し、指定されたGitHubユーザーのリポジトリ情報を自動で収集・整理します。
+- 収集した情報に基づき、JekyllベースのGitHub Pagesサイト向けにSEOを考慮したリポジトリ一覧のMarkdownファイルを生成します。
+- 各リポジトリの概要、バッジ、分類などを自動で組み込み、サイトの検索エンジン最適化と可読性向上に貢献します。
+- 📅 2026-08-08 (UTC) / 2026-08-09 (JST)
+
+## [digital-garden](https://cat2151.github.io/digital-garden/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
+- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
+- **Overview**: No description available
+- 📅 2026-08-08 (UTC) / 2026-08-08 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
@@ -105,7 +114,7 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-08-07 (UTC) / 2026-08-07 (JST)
+- 📅 2026-08-08 (UTC) / 2026-08-08 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
@@ -211,15 +220,6 @@ A Quartz transformer plugin that converts MML (Music Macro Language) and chord n
 - **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
 - **Overview**: No description available
 - 📅 2026-06-23 (UTC) / 2026-06-23 (JST)
-
-## [digital-garden](https://cat2151.github.io/digital-garden/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/digital-garden](https://github.com/cat2151/digital-garden)
-- **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
-- **Overview**: No description available
-- 📅 2026-06-14 (UTC) / 2026-06-14 (JST)
 
 ## [tonejs-step-sequencer](https://cat2151.github.io/tonejs-step-sequencer/)
 
