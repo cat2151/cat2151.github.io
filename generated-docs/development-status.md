@@ -1,60 +1,51 @@
-Last updated: 2026-08-08
+Last updated: 2026-08-09
 
 # Development Status
 
 ## 現在のIssues
-現在、プロジェクトにオープン中のIssueはありません。
-これは、報告されている問題や未完了のタスクがない状態を示しています。
-引き続き、プロジェクトの健全性維持と自動化プロセスの最適化に焦点を当てていきます。
+- 現在オープン中のIssueはありません。
+- プロジェクトは自動化されたワークフローにより、定期的にリポジトリリストやプロジェクトサマリーの更新が行われています。
+- 今後の開発は、既存の自動化プロセスの信頼性向上や機能拡充に焦点を当てることができます。
 
 ## 次の一手候補
-1.  `.github/actions-tmp` ディレクトリの役割とクリーンアップの検討
-    -   最初の小さな一歩: プロジェクトのファイル一覧に存在する `.github/actions-tmp` ディレクトリ内のファイルが、メインのプロジェクト構造内のファイルとどのように関連しているか（例: GitHub Actionsによる一時的なコピー、古い残骸など）を調査し、その役割を特定します。
+1.  [Issue #なし] 生成される開発状況レポートのIssue追跡機能の正確性検証
+    -   最初の小さな一歩: `issue-notes/` ディレクトリの内容を精査し、GitHubのIssueトラッカーの現在の状態（オープン/クローズ）と照合して、Issue検出ロジックが正しく機能しているか手動で確認する。
     -   Agent実行プロンプ:
         ```
-        対象ファイル: `.github/actions-tmp/` ディレクトリ配下の全ファイル、およびプロジェクトルートのワークフローファイルやスクリプト
+        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/development/IssueTracker.cjs` および `issue-notes/` ディレクトリ内の全ファイル
 
-        実行内容: `.github/actions-tmp/` ディレクトリの役割を特定するため、以下の観点から分析してください：
-        1) ディレクトリ内のファイルと、メインのプロジェクト構造（例: `.github/workflows/`, `.github_automation/`, `issue-notes/`）内のファイルとの重複度と差分。
-        2) GitHub Actionsのワークフロー定義（例: `.github/workflows/*.yml`）が `.github/actions-tmp/` 内のファイルをどのように利用しているか、または参照しているか。
-        3) このディレクトリが一時的なキャッシュ、ビルド成果物、または意図的に配置されたサブプロジェクトである可能性。
+        実行内容: `IssueTracker.cjs` がIssueをどのように取得・解析し、そのステータスを判断しているかのロジックを分析してください。特に、Issueが「オープン中」と判断される条件と、`issue-notes/` にファイルが存在するIssueが最新の状態を反映しているかを確認してください。
 
-        確認事項: 分析前に、GitHub Actionsのドキュメントや現在のワークフローが一時ディレクトリをどのように使用しているかの慣例を考慮してください。ファイルの削除や移動はプロジェクトの動作に影響を与える可能性があるため、慎重な検討が必要です。
+        確認事項: GitHub APIの利用状況や、Issueの状態を判断するためのメタデータ（例: Issueのタイトル、ラベル、クローズ日時）の取得方法に依存関係がないか確認してください。
 
-        期待する出力: `.github/actions-tmp` ディレクトリの役割に関する詳細な分析結果をmarkdown形式で出力してください。具体的には、その用途（一時的、永続的など）、重複ファイルの状況、そしてもしクリーンアップが必要な場合に推奨されるアプローチを含めてください。
+        期待する出力: `IssueTracker.cjs` のIssueステータス判断ロジックの概要と、現状のIssue検出機能が正確であるかどうかについての評価をmarkdown形式で出力してください。もし不正確な点があれば、改善の方向性も提示してください。
         ```
 
-2.  開発状況生成プロンプト（自身）の改善とロバスト性向上
-    -   最初の小さな一歩: 現在の `development-status-prompt.md` と関連するスクリプト（例: `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`）を確認し、オープンIssueがない状況での「次の一手候補」の生成ロジックがどのように機能しているかを理解します。
-    -   Agent実行プロンプト:
+2.  [Issue #なし] プロジェクト概要/開発状況レポート生成プロンプトの評価と改善点の特定
+    -   最初の小さな一歩: `generated-docs/development-status.md` と `generated-docs/project-overview.md` を読み込み、現在の出力が期待通りに役立つ情報を提供しているか、具体的にどのような情報が不足しているか、または冗長であるかを評価する。
+    -   Agent実行プロンプ:
         ```
-        対象ファイル: `development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/IssueTracker.cjs`
+        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`, `generated-docs/development-status.md`, `generated-docs/project-overview.md`
 
-        実行内容: 開発状況生成プロンプトが「オープン中のIssueはありません」という状況で「次の一手候補」をどのように生成しているか、そのロジックと潜在的な改善点を分析してください。特に、以下の点を考慮してください：
-        1) オープンIssueがない場合に、どのような情報源（例: 最近のコミット履歴、ファイル構造、一般的なプロジェクトの健全性指標）を元に候補を導き出すべきか。
-        2) ハルシネーションを避けつつ、価値のあるタスクを提案するための具体的な戦略。
-        3) 将来的にIssueがオープンされた場合に、それらを適切に要約し、次のアクションに繋げるためのロジック。
+        実行内容: `development-status-prompt.md` と `project-overview-prompt.md` の内容を分析し、それらのプロンプトが現在のレポート出力（`generated-docs/development-status.md` と `generated-docs/project-overview.md`）にどの程度反映されているかを評価してください。また、レポートの品質を向上させるためのプロンプトの改善点を3つ提案してください。
 
-        確認事項: 現在のプロンプトの制約（ハルシネーション回避、具体的な出力フォーマット）を厳守しつつ、生成ロジックの柔軟性と有用性を高める方法を検討してください。
+        確認事項: プロンプトの変更が、ハルシネーションを引き起こしたり、現状の自動化フローに予期せぬ影響を与えたりしないか確認してください。
 
-        期待する出力: 開発状況生成プロンプトの改善案をmarkdown形式で出力してください。具体的には、オープンIssueがない場合の「次の一手候補」生成ロジックの強化策、およびそれがプロジェクトの効率と透明性にどのように貢献するかを記述してください。
+        期待する出力: 各プロンプトの評価結果と、レポート品質向上のための具体的なプロンプト改善案（例: 特定のセクションの強調、情報の追加要求など）をmarkdown形式で出力してください。
         ```
 
-3.  主要な自動更新ワークフローの監視と最適化
-    -   最初の小さな一歩: 最近のコミット履歴で頻繁に実行されている「Auto-update repository list」および「Update project summaries (overview & development status) [auto]」に関連するワークフローファイル（例: `.github/workflows/call-daily-project-summary.yml`）およびスクリプト（例: `src/generate_repo_list/generate_repo_list.py`）を特定し、その実行ログを確認して、エラーや警告、異常な実行時間がないか初期的なチェックを行います。
-    -   Agent実行プロンプト:
+3.  [Issue #なし] `src/generate_repo_list` モジュールにおけるPythonテストカバレッジの計測と目標設定
+    -   最初の小さな一歩: `pytest-cov` などのツールを使用して、現在の `src/generate_repo_list` ディレクトリ内のPythonコードのテストカバレッジを測定し、その結果を把握する。
+    -   Agent実行プロンプ:
         ```
-        対象ファイル: `.github/workflows/call-daily-project-summary.yml`, `.github/workflows/generate_repo_list.yml`, `src/generate_repo_list/*.py`, `.github/actions-tmp/.github_automation/project_summary/scripts/*.cjs`
+        対象ファイル: `src/generate_repo_list/` ディレクトリ内の全Pythonファイル、`tests/` ディレクトリ内の全Pythonテストファイル、`pytest.ini`, `requirements-dev.txt`
 
-        実行内容: 主要な自動更新ワークフロー（リポジトリリストの自動更新、プロジェクトサマリーの自動更新）のパフォーマンスと信頼性を分析してください。具体的には：
-        1) ワークフローの実行時間、成功/失敗率、リソース使用量（利用可能な場合）の傾向。
-        2) ワークフロー内のスクリプトやアクションに潜在的なボトルネックや改善の余地がないか。
-        3) エラーハンドリングの堅牢性と、異常発生時の通知メカニズム。
+        実行内容: `src/generate_repo_list` モジュールに対する現在のテストカバレッジを計測するために必要な手順とコマンドを特定し、実行してください。その後、主要な機能（例: リポジトリ情報取得、マークダウン生成、統計計算）のカバー率を評価し、テストが不足している箇所を3つ特定してください。
 
-        確認事項: 分析は、GitHub Actionsの過去の実行履歴データと、関連するスクリプトのコードレビューに基づいて実施してください。自動化がプロジェクトの主要な機能であるため、その安定性と効率性は最優先事項です。
+        確認事項: 既存のテスト環境（`requirements-dev.txt` や `pytest.ini`）との互換性を確認し、新たなテストツール（`pytest-cov`など）の導入が必要な場合は、その依存関係も考慮してください。
 
-        期待する出力: 主要な自動更新ワークフローの現状評価と、パフォーマンス向上、信頼性強化のための具体的な改善提案をmarkdown形式で出力してください。例えば、キャッシュの利用、並列実行の最適化、エラーロギングの改善などを含めてください。
+        期待する出力: 現在のテストカバレッジのレポート（テキスト形式またはmarkdown形式）と、特にテストを拡充すべき `src/generate_repo_list` 内のファイルまたは機能のリストをmarkdown形式で出力してください。
         ```
 
 ---
-Generated at: 2026-08-08 07:13:31 JST
+Generated at: 2026-08-09 07:08:04 JST
