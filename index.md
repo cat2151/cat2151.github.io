@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-08-12 (UTC) / 2026-08-13 (JST)
+Last Updated: 2026-08-13 (UTC) / 2026-08-14 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,19 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を自動取得してGitHub Pages用のMarkdownファイルを生成します。
-- 検索エンジンでのリポジトリ表示改善とLLMからの参照性向上を目的としたSEO最適化システムです。
-- リポジトリ概要の自動取得、バッジ表示、アクティブ/アーカイブ/フォーク分類などの機能を備えています。
-- 📅 2026-08-12 (UTC) / 2026-08-13 (JST)
-
-## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
-
-<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
-- **Overview**: No description available
-- 📅 2026-08-12 (UTC) / 2026-08-12 (JST)
+- GitHub APIを活用し、ユーザーのリポジトリ情報を自動的に取得するシステムです。
+- 取得した情報から、JekyllベースのGitHub Pagesサイト向けにSEOに最適化されたリポジトリ一覧ページを自動生成します。
+- これにより、リポジトリの検索エンジンへの可視性を高め、LLMなどからの参照性も向上させることを目指します。
+- 📅 2026-08-13 (UTC) / 2026-08-14 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
@@ -114,6 +105,15 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- 📅 2026-08-13 (UTC) / 2026-08-13 (JST)
+
+## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
+
+<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
+- **Overview**: No description available
 - 📅 2026-08-12 (UTC) / 2026-08-12 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
