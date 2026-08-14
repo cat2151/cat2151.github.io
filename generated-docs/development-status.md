@@ -1,50 +1,61 @@
-Last updated: 2026-08-14
+Last updated: 2026-08-15
 
 # Development Status
 
 ## 現在のIssues
-- 現在、このプロジェクトにはオープン中のIssueはありません。
-- すべての既知の問題は解決済みか、既にクローズされています。
-- 現在のチームは、既存システムの改善や新しい機能の実装に注力できる状態です。
+- 現在、オープン中のIssueはありません。
+- プロジェクトの継続的な改善と保守に注力できる状態です。
+- 新規機能や改善点の検討が次のステップとなります。
 
 ## 次の一手候補
-1. 自動生成されるプロジェクト概要/開発状況ドキュメントの品質向上 [Issue #新規]
-   - 最初の小さな一歩: `generated-docs/development-status-generated-prompt.md` と `generated-docs/project-overview-generated-prompt.md` の現在の内容を確認し、より明確で効果的なプロンプトにするための改善点を分析する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: generated-docs/development-status-generated-prompt.md, generated-docs/project-overview-generated-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
+1.  開発状況生成プロンプト（`development-status-prompt.md`）の改善とガイドラインとの整合性確認
+    - 最初の小さな一歩: プロンプトファイル `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` と本プロンプトのガイドラインを比較し、記述の差異や改善点をリストアップする。
+    - Agent実行プロンプト:
+        ```
+        対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
 
-     実行内容: 自動生成されるドキュメントの品質に直接影響を与えるこれらのプロンプトファイルについて、現在の指示が意図した通りの高品質な出力を導いているか分析してください。特に、冗長な指示、曖昧な表現、または欠落している重要なコンテキストがないかを確認し、改善点を具体的に記述してください。
+        実行内容: 対象ファイルを、この「開発状況生成プロンプト（開発者向け）」のガイドライン（生成するもの、生成しないもの、Agent実行プロンプト生成ガイドライン、出力フォーマット）と比較し、以下の観点から分析してください：
+        1. ガイドラインの各項目が適切に反映されているか。
+        2. 記述の曖昧さや不足している情報がないか。
+        3. ハルシネーションを誘発する可能性のある表現がないか。
+        分析結果に基づき、ガイドラインに完全に準拠するための具体的な改善提案をmarkdown形式で出力してください。
 
-     確認事項: プロンプトの変更が、関連するドキュメント生成スクリプト（例: .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs）の既存ロジックと衝突しないか、また、現在の出力フォーマット要件（例: このドキュメントの出力フォーマット）との整合性が保たれるかを確認してください。
+        確認事項: `development-status-prompt.md`が`ProjectSummaryCoordinator.cjs`や`DevelopmentStatusGenerator.cjs`などのスクリプトからどのように参照・利用されているかを確認し、提案する変更が既存のワークフローに不整合をもたらさないことを考慮してください。
 
-     期待する出力: 各プロンプトファイルに対する具体的な改善提案をMarkdown形式で生成してください。提案には、変更後のプロンプト内容の例、およびその変更によって期待されるドキュメント品質の向上効果を含めてください。
-     ```
+        期待する出力: `development-status-prompt.md`の現状の課題点と、ガイドラインに沿った具体的な改善案をMarkdown形式で出力。各改善案には、変更すべき箇所とその理由を含めてください。
+        ```
 
-2. GitHub Actionsワークフローの依存関係分析と実行時間の最適化 [Issue #新規]
-   - 最初の小さな一歩: `.github/workflows/` および `.github/actions-tmp/.github/workflows/` ディレクトリ内のワークフローファイルを調査し、特に `call-` プレフィックスを持つワークフローが他のワークフローをどのように呼び出しているか、その依存関係を特定する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/workflows/*.yml, .github/actions-tmp/.github/workflows/*.yml
+2.  `src/generate_repo_list`モジュールのテストカバレッジ向上
+    - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py` 内の主要なビジネスロジックを担う関数を特定し、既存の `tests/test_repository_processor.py` にそれらのテストケースが存在するかを確認する。
+    - Agent実行プロンプト:
+        ```
+        対象ファイル: src/generate_repo_list/repository_processor.py と tests/test_repository_processor.py
 
-     実行内容: プロジェクト内のすべてのGitHub Actionsワークフロー（特に`call-`プレフィックスを持つものとその呼び出し先）について、その実行順序、依存関係、および潜在的な並列化の機会を分析してください。不必要なシーケンシャル実行や、共通処理の重複がないかを確認し、ワークフロー全体の実行時間を短縮し、リソース消費を最適化するための改善点を洗い出してください。
+        実行内容: `src/generate_repo_list/repository_processor.py` 内の `RepositoryProcessor` クラスのメソッド群について、既存の `tests/test_repository_processor.py` のテストカバレッジを分析してください。特に、主要なデータ処理ロジック、外部API呼び出しのモック化、およびエラーハンドリングが適切にテストされているか評価し、カバレッジが不足している箇所を特定してください。
 
-     確認事項: ワークフローの変更が、プロジェクトの継続的な自動更新サイクル（例: `Auto-update repository list`、`Update project summaries`）に悪影響を与えないことを確認してください。また、変更がGitHub Actionsのベストプラクティスに準拠しているかも考慮してください。
+        確認事項: `repository_processor.py`が依存する`config_manager.py`や`url_utils.py`などの他のモジュールとの連携において、テストの分離が適切に行われているか、またモック化が必要な部分が特定されているかを確認してください。既存テストスイートの実行方法と依存関係も把握してください。
 
-     期待する出力: ワークフロー間の呼び出し関係と依存関係を説明するMarkdown形式のレポートを作成してください。レポートには、最適化の具体的な提案（例: ジョブの並列化、キャッシュの改善、トリガー条件の最適化）を含め、それぞれの提案がもたらす効果の概要も記述してください。
-     ```
+        期待する出力: `repository_processor.py`の各メソッドに対するテストカバレッジの現状評価（どのメソッドがテストされ、どのメソッドがテスト不足か）と、カバレッジを向上させるために追加すべき具体的なテストケースのリスト（メソッド名、テストシナリオの概要、期待される結果）をMarkdown形式で出力してください。
+        ```
 
-3. Pythonコードベースにおける静的解析ツールの導入または強化 [Issue #新規]
-   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ下のPythonファイル群に対し、既存の`ruff.toml`設定が最大限に活用されているか評価し、MyPyのような型チェックツールを導入した場合のメリットと潜在的な課題を調査する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/**/*.py, ruff.toml, requirements.txt, requirements-dev.txt
+3.  `check-large-files`ワークフローのメインリポジトリへの統合または再評価
+    - 最初の小さな一歩: メインリポジトリの `.github/workflows/` ディレクトリ内に `check-large-files` 関連のワークフロー（例: `call-check-large-files.yml`）が存在するかを確認する。存在しない場合、現状のラージファイルチェックの有無と必要性を検討する。
+    - Agent実行プロンプト:
+        ```
+        対象ファイル: .github/workflows/, .github/actions-tmp/.github/workflows/call-check-large-files.yml, .github_automation/check_large_files/
 
-     実行内容: 現在のPythonコードベース（特に`src/generate_repo_list/`以下）の品質と保守性を向上させるため、既存の`ruff.toml`設定の適用状況を評価し、さらに強化すべき点を特定してください。また、MyPyのような型チェックツールの導入の可能性を分析し、コードの堅牢性向上への寄与、および導入に必要な変更（例: 型ヒントの追加、CI/CDへの統合）とその影響について考察してください。
+        実行内容:
+        1. メインリポジトリの`.github/workflows/`ディレクトリを検索し、`check-large-files`アクションを呼び出すワークフローが存在するかを確認してください。
+        2. 存在しない場合、`.github/actions-tmp/.github/workflows/call-check-large-files.yml`と`.github_automation/check_large_files/`の内容を分析し、このラージファイルチェックワークフローをメインのCI/CDプロセスに統合することの技術的な実現可能性と、統合しない場合の潜在的なリスク（例: リポジトリ肥大化、クローン時間の増加）を評価してください。
 
-     確認事項: 新しい静的解析ツールの導入が既存の開発ワークフローやCI/CDパイプラインに与える影響、および誤検知（False Positives）による開発効率への影響を事前に検討してください。また、導入コスト（学習コスト、設定コスト）と得られるメリットのバランスを評価してください。
+        確認事項:
+        * `.github_automation/check_large_files/check-large-files.toml`の設定内容が現在のプロジェクトに適用可能か確認してください。
+        * `check-large-files`ワークフローが意図的に無効化された経緯がないか、または代替となるリポジトリ監視メカニズムが存在しないかを確認してください。
+        * `.github/actions-tmp/`ディレクトリのファイルがどのように扱われるか（サブモジュール、一時的なコピーなど）を明確にする必要があります。
 
-     期待する出力: `ruff.toml`の改善提案と、MyPyまたは類似の静的解析ツールの導入に関する詳細な分析レポートをMarkdown形式で生成してください。レポートには、導入のメリット・デメリット、推奨される導入手順の概要、および必要なコード変更の類型を含めてください。
+        期待する出力:
+        1. `check-large-files`ワークフローのメインリポジトリにおける現状（存在有無）と、統合する際の推奨される手順をMarkdown形式で記述してください。
+        2. 統合のメリット（例: リポジトリサイズの健全性維持、開発環境への影響軽減）とデメリット（例: CI実行時間の増加、誤検知によるCI失敗の可能性）を比較し、このワークフローの導入または再評価に関する具体的な提言をMarkdown形式で出力してください。
 
 ---
-Generated at: 2026-08-14 07:16:50 JST
+Generated at: 2026-08-15 07:06:15 JST
