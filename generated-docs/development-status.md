@@ -1,49 +1,48 @@
-Last updated: 2026-08-16
+Last updated: 2026-08-18
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。
+オープン中のIssueはありません。現在、自動更新が定期的に実行されており、コミット履歴からは主にリポジトリリストの自動更新とプロジェクトサマリー（概要と開発状況）の自動更新が行われていることが確認されます。プロジェクトは安定した状態にあると言えます。
 
 ## 次の一手候補
-1. GitHub Actions ワークフローの冗長性チェックと改善
-   - 最初の小さな一歩: `.github/workflows/` と `.github/actions-tmp/.github/workflows/` 内の各ワークフローファイルの内容を比較し、共通部分や重複部分をリストアップする。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/workflows/*.yml および .github/actions-tmp/.github/workflows/*.yml
+1.  生成される開発状況レポートのレビューと改善
+    -   最初の小さな一歩: `generated-docs/development-status.md`と`generated-docs/project-overview.md`を読み込み、現在の内容とこのプロンプトのガイドラインに照らして改善点を洗い出す。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `generated-docs/development-status.md`, `generated-docs/project-overview.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`
 
-     実行内容: これらのワークフローファイルの内容を比較し、機能が重複しているワークフロー、または同じような処理を異なるファイルで記述している箇所を特定する。特に `call-` プレフィックスを持つワークフローの呼び出し関係と、実体ワークフローの配置に着目する。
+        実行内容: 現在の自動生成された開発状況レポートとプロジェクト概要レポートの内容を分析し、特に「現在のIssues」セクションが空の場合の表現や、「次の一手候補」の提案ロジックに改善の余地がないかをレビューしてください。また、現在のプロンプト（`development-status-prompt.md`）が意図通りに機能しているか、または更なる精度向上が可能かを検討してください。
 
-     確認事項: 各ワークフローのトリガー、使用されているアクション、依存関係を考慮し、機能的な重複や非効率な構造がないかを確認してください。
+        確認事項: レポートが生成されるスクリプト（例: `ProjectSummaryCoordinator.cjs`, `DevelopmentStatusGenerator.cjs`, `ProjectOverviewGenerator.cjs`）のロジックとの整合性を確認してください。また、ユーザーにハルシネーションを提案しないという制約が守られているかを確認してください。
 
-     期待する出力: 冗長性が見られるワークフローファイルとその具体例、および改善案をMarkdown形式で出力してください。
-     ```
+        期待する出力: レポートとプロンプトの改善点、特に「オープン中のIssueはありません」の場合の「次の一手候補」の提案方法に関する具体的な提案をmarkdown形式で出力してください。必要であればプロンプトファイルの修正案も含むものとします。
+        ```
 
-2. `src/generate_repo_list` モジュールのリファクタリング計画
-   - 最初の小さな一歩: `src/generate_repo_list/__init__.py` を含むディレクトリ内のPythonファイル群を読み込み、各ファイルの主要な役割と、他のファイルへの依存関係をマップする。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/*.py
+2.  既存のテストスイートのレビューとカバレッジ向上
+    -   最初の小さな一歩: `tests/`ディレクトリ配下のテストファイルリストを取得し、それぞれのテストの目的を把握する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `tests/`ディレクトリ配下のすべてのファイル（例: `tests/test_integration.py`, `tests/test_config.py`など）、および`src/`ディレクトリ内の主要なコードファイル
 
-     実行内容: `src/generate_repo_list` ディレクトリ内のPythonファイル群を分析し、各モジュール（ファイル）の責任範囲と、モジュール間の依存関係を明確にする。特に、単一責任の原則（SRP）に照らし合わせて、機能が肥大化しているモジュールがないか特定する。
+        実行内容: 既存のテストファイルを分析し、プロジェクトの主要な機能に対するテストカバレッジが十分であるか、または不足している箇所がないかを特定してください。特に、自動更新される`src/generate_repo_list/`内のコードや、各種`ProjectSummary`関連スクリプトのテスト状況を確認してください。
 
-     確認事項: 既存のテストファイル（`tests/` ディレクトリ内）との関連性、および各モジュールが担う役割の記述があるかを確認してください。
+        確認事項: `pytest.ini`や`requirements.txt`などのテスト実行環境設定、および`src/`ディレクトリ内の主要なコードパスとの整合性を確認してください。テストの網羅性と信頼性を向上させる観点から分析を行ってください。
 
-     期待する出力: 各Pythonファイルの役割と依存関係をまとめたリスト、およびリファクタリングの候補となるモジュールとその理由をMarkdown形式で出力してください。
-     ```
+        期待する出力: テストカバレッジが不足している機能のリストと、それらに対する追加テストの簡単な提案をmarkdown形式で出力してください。
+        ```
 
-3. `project_summary` スクリプト群のドキュメント整備と理解促進
-   - 最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs` のコードを読み解き、それがどのように他のジェネレータースクリプト（`DevelopmentStatusGenerator.cjs`, `ProjectOverviewGenerator.cjs`）を呼び出し、全体を調整しているかを把握する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/*.cjs
+3.  GitHub Actionsワークフローの依存関係と効率性のレビュー
+    -   最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml`と`.github/actions-tmp/.github/workflows/daily-project-summary.yml`の依存関係をリストアップする。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: `.github/workflows/`、`.github/actions-tmp/.github/workflows/`配下の全ての`.yml`ファイル
 
-     実行内容: `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs` を中心に、関連する`BaseGenerator.cjs`、`DevelopmentStatusGenerator.cjs`、`ProjectOverviewGenerator.cjs` などのスクリプトを分析し、プロジェクトサマリー生成の全体的な処理フロー（データの収集、整形、生成、出力）を説明する。
+        実行内容: 既存のGitHub Actionsワークフローを分析し、利用されているアクションのバージョンが最新であるか、または非推奨の構文が使われていないかをチェックしてください。特に、プロジェクトの自動更新に関連するワークフロー（`daily-project-summary.yml`, `generate_repo_list.yml`など）の効率性や信頼性を評価し、改善の余地がないかを探してください。
 
-     確認事項: `prompts/development-status-prompt.md` や `prompts/project-overview-prompt.md` との連携方法も考慮に入れてください。
+        確認事項: GitHub Actionsの最新のベストプラクティス、および依存するアクションやツールの最新バージョン情報を確認してください。また、`package.json`などの依存関係ファイルも参照し、全体的な整合性を確保してください。
 
-     期待する出力: `project_summary` スクリプト群のアーキテクチャ概要と主要な処理フローを説明するMarkdown形式の技術ドキュメント（内部向け）を生成してください。
-     ```
+        期待する出力: アップデートが必要なアクションのリスト、非効率な部分の指摘、およびそれらの改善提案をmarkdown形式で出力してください。
 
 ---
-Generated at: 2026-08-16 07:07:41 JST
+Generated at: 2026-08-18 07:06:34 JST
