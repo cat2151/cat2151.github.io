@@ -1,49 +1,48 @@
-Last updated: 2026-08-20
+Last updated: 2026-08-21
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。現在、開発チームは既存機能の安定稼働と自動化されたプロセス維持に注力しています。
+オープン中のIssueはありません。
 
 ## 次の一手候補
-1.  生成されるリポジトリリストへの最新コミット日付と開発活動状況の追加
-    -   最初の小さな一歩: `src/generate_repo_list/repository_processor.py` にGitHub APIから各リポジトリの最新コミット情報を取得する機能を追加する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/markdown_generator.py`, `src/generate_repo_list/language_info.py`
+1. リポジトリリスト生成のデータ抽出を拡張し、より詳細な洞察を提供 [Issue #N/A](../issue-notes/N/A.md)
+   - 最初の小さな一歩: `src/generate_repo_list/readme_badge_extractor.py`と`src/generate_repo_list/repository_processor.py`を分析し、現在抽出されているデータポイントを確認し、追加で抽出可能な情報を特定する。特に、プロジェクトの目的や主要技術に関する情報に着目する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: src/generate_repo_list/readme_badge_extractor.py, src/generate_repo_list/repository_processor.py
 
-        実行内容: GitHub APIを使用して、各リポジトリの最新コミット日時と、過去3ヶ月間のコミットアクティビティ（コミット数）を取得するロジックを `repository_processor.py` に追加します。取得した情報を `markdown_generator.py` を介して生成されるMarkdownリストに、リポジトリごとに表示するよう修正してください。
+     実行内容: 上記ファイルを分析し、現在抽出されているリポジトリ情報（例: バッジ、言語、説明など）を洗い出す。その後、追加で抽出可能と思われるが現在取得されていない有用な情報（例: GitHub Topics、Contributionガイドラインへのリンク、主要な依存関係など）をリストアップし、それぞれの抽出方法について概要を記述してください。
 
-        確認事項: GitHub APIのレートリミットを考慮し、既存のデータ取得処理への影響がないことを確認してください。また、`language_info.py` から取得される既存のリポジトリ情報と適切に統合できるかを確認してください。
+     確認事項: 既存のデータ構造（markdown_generator.pyやtemplate_processor.pyで利用される形式）との整合性を維持しつつ、新しい情報が追加可能か確認してください。GitHub APIの利用頻度への影響も考慮してください。
 
-        期待する出力: `repository_processor.py` に最新コミット日時とアクティビティ取得ロジックが追加され、`markdown_generator.py` がそれらの情報をMarkdown形式で出力するように変更されたPythonコード。
-        ```
+     期待する出力: 分析結果をmarkdown形式で出力してください。具体的には、「現在の抽出情報リスト」と「提案する追加抽出情報とその抽出方法の概要」のセクションを含めてください。
+     ```
 
-2.  `generate_repo_list` が生成するMarkdownコンテンツの統合テスト追加
-    -   最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` を実行し、生成される `index.md` ファイルの内容の一部（例えば、特定のリポジトリ名やバッジの有無）をアサートするPytestテストケースを `tests/test_integration.py` に追加する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `src/generate_repo_list/generate_repo_list.py`, `tests/test_integration.py` (または新規作成)
+2. `daily-project-summary`ワークフローのエラーハンドリングとロギングを改善 [Issue #N/A](../issue-notes/N/A.md)
+   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml`と、その中で呼び出されている`ProjectSummaryCoordinator.cjs`および関連スクリプトをレビューし、現在のエラー処理およびログ出力の仕組みを理解する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: .github/workflows/call-daily-project-summary.yml, .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs
 
-        実行内容: `src/generate_repo_list/generate_repo_list.py` をテスト環境で実行し、その結果生成される `index.md` の特定の要素（例: `README.md` に記載されているリポジトリのタイトルが正しく含まれているか、または特定のバッジのMarkdownが生成されているか）を検証する統合テストをPythonで作成し、`tests/test_integration.py` に追加してください。テスト実行時に一時的な出力ファイルを生成し、テスト終了後にクリーンアップするロジックも組み込んでください。
+     実行内容: 上記ファイル群を分析し、現状のエラーハンドリングとログ出力がどの程度詳細であるか、また、どのようなケースで情報が不足するかを特定してください。特に、API呼び出し失敗時やファイルI/Oエラー発生時の挙動に焦点を当ててください。改善点として、より具体的なエラーメッセージ、実行ステップの進捗表示、重要な変数のログ出力に関する提案を記述してください。
 
-        確認事項: テスト実行に必要な環境設定（例: GitHubトークン、設定ファイルパス）や、既存のテストフレームワーク（pytest）との互換性を確認してください。また、テストが冪等であり、CI環境で安定して実行できることを確認してください。
+     確認事項: ログレベルの調整、GitHub Actionsの`set-output`や`add-mask`といった機能の利用可否、機密情報がログに出力されないこと、既存のワークフローへの影響を最小限に抑えることを確認してください。
 
-        期待する出力: `tests/test_integration.py` に、`generate_repo_list` の出力Markdownを検証する新しいテスト関数が追加されたPythonコード。
-        ```
+     期待する出力: 分析結果と改善提案をmarkdown形式で出力してください。具体的には、「現在のエラーハンドリングとロギングの評価」と「具体的な改善提案（コードスニペットを含む可能性あり）」のセクションを含めてください。
+     ```
 
-3.  `project_summary` スクリプトのコールグラフ生成とドキュメント化
-    -   最初の小さな一歩: `.github/actions-tmp/.github/workflows/callgraph.yml` の設定を確認し、`project_summary` 関連のJavaScriptファイル (`.github/actions-tmp/.github_automation/project_summary/scripts/`) を対象としてコールグラフを生成できるように調整する。
-    -   Agent実行プロンプト:
-        ```
-        対象ファイル: `.github/actions-tmp/.github/workflows/callgraph.yml`, `.github/actions-tmp/.github_automation/callgraph/config/example.json` (または新規設定ファイル), `.github/actions-tmp/.github_automation/project_summary/scripts/` 以下の全ての `.cjs` ファイル
+3. `generate_repo_list`の`markdown_generator.py`にユニットテストを追加 [Issue #N/A](../issue-notes/N/A.md)
+   - 最初の小さな一歩: `src/generate_repo_list/markdown_generator.py`の主要な関数と、対応する`tests/test_markdown_generator.py`をレビューし、テストカバレッジの現状と、特に重要な未テストのケースを特定する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: src/generate_repo_list/markdown_generator.py, tests/test_markdown_generator.py, src/generate_repo_list/config.yml
 
-        実行内容: `callgraph.yml` ワークフローが `.github_automation/project_summary/scripts/` 以下のJavaScriptファイル群のコールグラフを生成できるように、既存の `callgraph.yml` を分析し、必要に応じて設定を更新してください。具体的には、対象とするソースパスの設定や、出力形式の指定（HTML/Markdown）を確認・調整し、コールグラフを自動生成してドキュメント化するワークフローを確立します。
+     実行内容: src/generate_repo_list/markdown_generator.py内の`generate_markdown_for_repository`関数および他の主要なマークダウン生成関数について、既存のテストでカバーされていない、または不足しているテストケースを特定してください。その後、それらの未テストケース（例: 特定のフィールドが欠落している場合、URLが特殊な場合、多言語対応のテストなど）を網羅する新しいユニットテストのコードスニペットをPythonの`unittest`または`pytest`形式で記述してください。
 
-        確認事項: `callgraph` アクションがJavaScriptファイルを正しく解析できるか、および生成されるコールグラフが `project_summary` スクリプト間の依存関係を正確に反映しているかを確認してください。既存のワークフローや自動生成されるドキュメントとの整合性も考慮してください。
+     確認事項: `config.yml`に定義されているテンプレートや文字列が正しく反映されているかを検証できるテストであること。また、テストが独立しており、外部依存がないことを確認してください。
 
-        期待する出力: `callgraph.yml` の更新されたYAMLコードと、`project_summary` スクリプト群のコールグラフを生成するための設定ファイル (`config/` 配下に追加される可能性あり)。そして、生成されたコールグラフのHTMLまたはMarkdown形式のドキュメントへのリンク（自動生成されるもの）を明記した説明。
-        ```
+     期待する出力: `markdown_generator.py`のテストカバレッジの現状評価と、提案する新しいユニットテストのコードスニペットをmarkdown形式で出力してください。新しいテストがどのようなシナリオをカバーするかを明記してください。
 
 ---
-Generated at: 2026-08-20 07:07:05 JST
+Generated at: 2026-08-21 07:07:41 JST
