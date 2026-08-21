@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 112 projects (⭐58 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript."
+og_description: "Featuring 112 projects (⭐59 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 112 projects (⭐58 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript."
+twitter_description: "Featuring 112 projects (⭐59 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -50,7 +50,7 @@ json_ld: |
       "description": "Programmer and developer. Publishing 112 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 112 projects (⭐58 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript.",
+    "description": "Featuring 112 projects (⭐59 stars). Open source project collection using diverse technologies including JavaScript、Rust、TypeScript.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-08-20 (UTC) / 2026-08-21 (JST)
+Last Updated: 2026-08-21 (UTC) / 2026-08-22 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,7 +71,7 @@ Last Updated: 2026-08-20 (UTC) / 2026-08-21 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-112-blue) ![Active](https://img.shields.io/badge/Active-85-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-5-purple) ![Stars](https://img.shields.io/badge/Total Stars-58-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-112-blue) ![Active](https://img.shields.io/badge/Active-85-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-5-purple) ![Stars](https://img.shields.io/badge/Total Stars-59-gold)
 
 ### Core Technologies
 
@@ -84,24 +84,6 @@ Last Updated: 2026-08-20 (UTC) / 2026-08-21 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
-
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-08-20 (UTC) / 2026-08-20 (JST)
-
-## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
-
-<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
-- **Overview**: No description available
-- 📅 2026-08-20 (UTC) / 2026-08-20 (JST)
-
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
@@ -111,10 +93,60 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、ユーザーのリポジトリ情報を自動で取得するシステムです。
-- JekyllベースのGitHub Pagesサイト向けに、SEOを意識したリポジトリ一覧Markdownを自動生成します。
-- これにより、検索エンジンでのサイトの可視性を高め、各種AIからのリポジトリ参照を促進します。
-- 📅 2026-08-19 (UTC) / 2026-08-20 (JST)
+- GitHub Pages向けにリポジトリ一覧を自動生成し、検索エンジンからの可視性を高めます。
+- GitHub APIを活用し、各リポジトリの概要やバッジを含むSEO最適化されたMarkdownを作成します。
+- これにより、LLMがリポジトリ情報を参照しやすくなり、開発効率向上に貢献します。
+- 📅 2026-08-21 (UTC) / 2026-08-22 (JST)
+
+## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
+
+<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
+- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
+- **Overview**: No description available
+- 📅 2026-08-21 (UTC) / 2026-08-21 (JST)
+
+## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
+A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
+
+<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-3-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/fighting-game-button-challenge"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
+- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
+
+### Project Highlights
+- Windows用の格闘ゲームボタン練習アプリです。
+- ランダムに表示されるお題に合ったボタンを押して、スコアと反応速度を競います。
+- 常駐型でゲームの邪魔にならず、設定ファイルを編集することで様々なゲームに対応可能です。
+- 📅 2026-08-21 (UTC) / 2026-08-21 (JST)
+
+## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
+WIP
+
+<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
+
+- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
+- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
+- 📅 2026-08-21 (UTC) / 2026-08-21 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- 📅 2026-08-20 (UTC) / 2026-08-21 (JST)
+
+## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
+
+<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
+- **Overview**: No description available
+- 📅 2026-08-20 (UTC) / 2026-08-21 (JST)
 
 ## [bluesky-text-to-audio](https://cat2151.github.io/bluesky-text-to-audio/)
 
@@ -178,15 +210,6 @@ A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 - **Repository**: [https://github.com/cat2151/migemo-auto-install-for-windows-and-python](https://github.com/cat2151/migemo-auto-install-for-windows-and-python)
 - **GitHub Pages**: [https://cat2151.github.io/migemo-auto-install-for-windows-and-python/](https://cat2151.github.io/migemo-auto-install-for-windows-and-python/)
 - **Overview**: No description available
-- 📅 2026-07-19 (UTC) / 2026-07-19 (JST)
-
-## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
-WIP
-
-<a href="https://cat2151.github.io/cat-repo-auditor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) [![DeepWiki](https://img.shields.io/badge/DeepWiki-cat--repo--auditor-blue)](https://deepwiki.com/cat2151/cat-repo-auditor)
-
-- **Repository**: [https://github.com/cat2151/cat-repo-auditor](https://github.com/cat2151/cat-repo-auditor)
-- **GitHub Pages**: [https://cat2151.github.io/cat-repo-auditor/](https://cat2151.github.io/cat-repo-auditor/)
 - 📅 2026-07-19 (UTC) / 2026-07-19 (JST)
 
 ## [quartz-transformer-mmlabc](https://cat2151.github.io/quartz-transformer-mmlabc/)
@@ -298,15 +321,6 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 - **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
 - **Overview**: No description available
 - 📅 2026-06-01 (UTC) / 2026-06-01 (JST)
-
-## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
-
-<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
-- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
-- **Overview**: No description available
-- 📅 2026-05-21 (UTC) / 2026-05-21 (JST)
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
@@ -665,20 +679,6 @@ WIP
 - 生産性向上と集中力維持を目的とし、GUIを通じてリアルタイムでスコアを表示します。
 - クロスプラットフォームに対応し、正規表現とTOML設定ファイルで柔軟なカスタマイズが可能です。
 - 📅 2026-03-17 (UTC) / 2026-03-18 (JST)
-
-## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
-A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
-
-<a href="https://cat2151.github.io/fighting-game-button-challenge/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: fighting-game](https://img.shields.io/badge/Topic-fighting--game-lightblue) ![Topic: windows](https://img.shields.io/badge/Topic-windows-lightblue) ![Topic: xinput-controller](https://img.shields.io/badge/Topic-xinput--controller-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/fighting-game-button-challenge"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/fighting-game-button-challenge](https://github.com/cat2151/fighting-game-button-challenge)
-- **GitHub Pages**: [https://cat2151.github.io/fighting-game-button-challenge/](https://cat2151.github.io/fighting-game-button-challenge/)
-
-### Project Highlights
-- Windows用の格闘ゲームボタン練習アプリです。
-- ランダムに表示されるお題に合ったボタンを押して、スコアと反応速度を競います。
-- 常駐型でゲームの邪魔にならず、設定ファイルを編集することで様々なゲームに対応可能です。
-- 📅 2026-03-16 (UTC) / 2026-03-17 (JST)
 
 ## [mini-command-palette-sakura-editor](https://cat2151.github.io/mini-command-palette-sakura-editor/)
 
