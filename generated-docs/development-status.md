@@ -1,50 +1,51 @@
-Last updated: 2026-08-24
+Last updated: 2026-08-25
 
 # Development Status
 
 ## 現在のIssues
-- 現在、プロジェクトにおいてオープン中のIssueは検出されていません。
-- プロジェクトは安定した状態にあり、緊急で対応すべき既知の課題やバグはありません。
-- 次のフェーズとして、既存機能のさらなる最適化や、新たな改善機会の探索が中心となるでしょう。
+- 現在、プロジェクトにはオープンな機能開発やバグ修正に関するIssueは存在しません。
+- これは、既存のタスクが完了しているか、あるいは新たな開発項目がまだ定義されていない状態を示しています。
+- 安定した状況であるため、今後は内部品質向上や最適化、ドキュメント整備などが次の検討課題となります。
 
 ## 次の一手候補
-1. `generate_repo_list` スクリプトのパフォーマンス改善
-   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` の主要な処理フローと、関連モジュール (`src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/project_overview_fetcher.py` など) との連携を把握する。特にGitHub API呼び出しやファイルI/Oが発生する箇所を特定し、ボトルネックの可能性を探る。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `src/generate_repo_list/generate_repo_list.py`, `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/project_overview_fetcher.py`
+1.  .github/actions-tmp/ ディレクトリの役割と内容の整理
+    - 最初の小さな一歩: `.github/actions-tmp/` ディレクトリ内のファイル群が、どのワークフローやスクリプトから参照され、どのようなライフサイクルを持つのかを特定する。
+    - Agent実行プロンプト:
+      ```
+      対象ファイル: .github/actions-tmp/ ディレクトリ配下の全てのファイル、および .github/workflows/ ディレクトリ配下のワークフローファイル。
 
-     実行内容: `generate_repo_list.py` がどのように他のモジュールと連携し、リポジトリリストを生成しているか、その主要な処理フローとデータハンドリングを分析してください。特に、GitHub API呼び出し、外部サービス連携、または大規模なデータ処理に伴うファイルI/Oが発生する可能性のある箇所を特定し、潜在的なパフォーマンスボトルネックを洗い出してください。
+      実行内容: .github/actions-tmp/ ディレクトリ内のファイルが、他のワークフローやスクリプトによってどのように利用されているかを分析し、その役割と依存関係を明確にしてください。特に、これらのファイルが一時的なものなのか、恒久的なモジュールとして意図されているのかを調査してください。
 
-     確認事項: これらのスクリプトがGitHub APIやローカルファイルシステムとどのように対話しているか、および多数のリポジトリや大量のデータ処理に対応する際の潜在的なパフォーマンスボトルネックが存在しないかを確認してください。
+      確認事項: `git status` や `.gitignore` の内容を確認し、`actions-tmp` がバージョン管理されているか、または意図的に除外されているかを確認します。また、類似するファイルがプロジェクト内に他に存在しないか確認します。
 
-     期待する出力: `generate_repo_list` スクリプトの処理フロー図（または詳細な説明）と、現時点での性能改善の可能性のある領域をMarkdown形式で記述してください。
-     ```
+      期待する出力: `actions-tmp` ディレクトリの各主要ファイル（特にワークフローやスクリプト）について、その役割、依存関係、そして提案される管理方針（例: 削除、移動、モジュール化）をmarkdown形式で出力してください。
+      ```
 
-2. 自動生成されるプロジェクト概要ドキュメントの品質向上
-   - 最初の小さな一歩: `generated-docs/project-overview.md` の現在の出力を確認し、現状のドキュメントで提供されている情報と、プロジェクトの全体像をより分かりやすく伝えるために追加・改善できる情報を洗い出す。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `generated-docs/project-overview.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs`
+2.  src/generate_repo_list 機能のテストカバレッジレポート生成
+    - 最初の小さな一歩: `pytest-cov` などのツールを導入し、既存のテストに対するカバレッジレポートを生成する。
+    - Agent実行プロンプト:
+      ```
+      対象ファイル: src/generate_repo_list/ ディレクトリ配下のPythonファイル、tests/ ディレクトリ配下のテストファイル、requirements-dev.txt、pytest.ini。
 
-     実行内容: `generated-docs/project-overview.md` の現在の内容を分析し、その生成に使用されているプロンプト (`project-overview-prompt.md`) および生成スクリプト (`ProjectOverviewGenerator.cjs`) のロジックを確認してください。出力される情報の網羅性、可読性、およびプロジェクトの現状と方向性を的確に伝えるための具体的な改善点を特定してください。
+      実行内容: `pytest-cov` をプロジェクトに導入し、`src/generate_repo_list/` 以下のコードに対するテストカバレッジレポートを生成してください。`requirements-dev.txt` に `pytest-cov` を追加し、`pytest.ini` を設定してカバレッジ対象を指定してください。
 
-     確認事項: プロンプトとスクリプトがどのように連携して情報を収集・整形しているか、また、GitHub APIやその他のソースから取得可能な追加情報でドキュメントをより豊かにできる可能性がないかを確認してください。
+      確認事項: 既存の `pytest` 環境が正しく動作していることを確認します。`requirements-dev.txt` に他の競合する依存関係がないことを確認します。
 
-     期待する出力: `project-overview.md` の具体的な改善案をMarkdown形式で記述し、その改善案を実現するための`project-overview-prompt.md`の修正案を提案してください。
-     ```
+      期待する出力: `src/generate_repo_list/` のコードカバレッジレポートのサマリー（%）と、カバレッジが低い（例: 50%未満）主要なファイルリストをmarkdown形式で出力してください。また、`requirements-dev.txt` と `pytest.ini` の変更内容をコードブロックで示してください。
+      ```
 
-3. CI/CDワークフローの効率化と保守性向上
-   - 最初の小さな一歩: `.github/workflows/` ディレクトリ内の主要なワークフローファイル (`.github/workflows/call-daily-project-summary.yml`, `.github/workflows/generate_repo_list.yml` など) を一覧し、それぞれの役割、トリガー条件、および実行頻度を把握する。特に `.github/actions-tmp/` 内の類似ファイルとの関係性を確認する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `.github/workflows/call-daily-project-summary.yml`, `.github/workflows/call-translate-readme.yml`, `.github/workflows/generate_repo_list.yml`, および対応する `.github/actions-tmp/.github/workflows/` ディレクトリ内の類似ファイル
+3.  generated-docs/development-status.md の情報源と生成ロジックの改善提案
+    - 最初の小さな一歩: `development-status-prompt.md` と `DevelopmentStatusGenerator.cjs` を分析し、Issue情報の取得と要約のロジックを確認する。
+    - Agent実行プロンプト:
+      ```
+      対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md と .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs。
 
-     実行内容: 上記の主要なGitHub Actionsワークフローの構造と依存関係を分析してください。特に、冗長なステップ、非効率な実行タイミング、またはより明確にできる命名規則や構造の改善点を特定してください。また、`.github/actions-tmp/` 内に存在するワークフローファイル群の目的と、メインの `.github/workflows/` ファイルとの関係性についても考察してください。
+      実行内容: `development-status-prompt.md` の内容と `DevelopmentStatusGenerator.cjs` におけるIssue情報の取得および要約ロジックを分析し、オープンIssueがない場合に「現在のIssues」セクションがより有益な情報を提供できるよう、改善点を提案してください。具体的には、最新のコミット履歴やPull Request活動なども考慮した要約ができないかを検討してください。
 
-     確認事項: 各ワークフローがトリガーされる条件、実行されるジョブとステップ、および他のワークフローやカスタムアクションとの連携を詳細に確認してください。また、全体としてのCI/CDパイプラインの効率性と保守性を向上させる余地があるか検討してください。
+      確認事項: `ProjectSummaryCoordinator.cjs` や `IssueTracker.cjs` など、関連するスクリプトとの連携を確認し、情報フローを理解します。
 
-     期待する出力: 現在のCI/CDワークフロー全体の概要説明と、効率性、可読性、および保守性を向上させるための具体的な改善提案をMarkdown形式で記述してください。提案には、可能であればコードの変更案を含めてください。
+      期待する出力: `DevelopmentStatusGenerator.cjs` および `development-status-prompt.md` の改善提案をmarkdown形式で出力してください。提案には、オープンIssueがない場合の「現在のIssues」要約の代替案（例: 最近のマージされたPRや活動のサマリーなど）を含め、関連するコード変更の方向性も示してください。
+      ```
 
 ---
-Generated at: 2026-08-24 07:05:40 JST
+Generated at: 2026-08-25 07:07:41 JST
