@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-08-23 (UTC) / 2026-08-24 (JST)
+Last Updated: 2026-08-24 (UTC) / 2026-08-25 (JST)
 
 ## 📋 Table of Contents
 
@@ -94,18 +94,9 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
 ### Project Highlights
 - GitHub Pagesサイト用のリポジトリ一覧を自動生成するシステムです。
-- GitHub APIでリポジトリ情報を取得し、SEOを意識したMarkdownファイルを生成します。
-- 検索エンジンやLLMからの参照性を向上させ、開発効率を高めることを目的とします。
-- 📅 2026-08-23 (UTC) / 2026-08-24 (JST)
-
-## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
-
-<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
-- **Overview**: No description available
-- 📅 2026-08-23 (UTC) / 2026-08-24 (JST)
+- GitHub APIを用いてリポジトリ情報を取得し、SEOに最適化されたMarkdownファイルを生成します。
+- これにより、リポジトリの検索エンジンによる発見性を高め、LLMからの参照性向上も期待されます。
+- 📅 2026-08-24 (UTC) / 2026-08-25 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
@@ -114,7 +105,16 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-08-23 (UTC) / 2026-08-24 (JST)
+- 📅 2026-08-24 (UTC) / 2026-08-24 (JST)
+
+## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
+
+<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
+- **Overview**: No description available
+- 📅 2026-08-24 (UTC) / 2026-08-24 (JST)
 
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
 
