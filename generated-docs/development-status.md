@@ -1,51 +1,51 @@
-Last updated: 2026-08-25
+Last updated: 2026-08-26
 
 # Development Status
 
 ## 現在のIssues
-- 現在、プロジェクトにはオープンな機能開発やバグ修正に関するIssueは存在しません。
-- これは、既存のタスクが完了しているか、あるいは新たな開発項目がまだ定義されていない状態を示しています。
-- 安定した状況であるため、今後は内部品質向上や最適化、ドキュメント整備などが次の検討課題となります。
+- 現在、オープン中のIssueはありません。
+- プロジェクトは安定した状態にあり、直接対応すべき緊急の課題は見受けられません。
+- 新規の機能開発や既存機能の改善、メンテナンスに焦点を移すことができます。
 
 ## 次の一手候補
-1.  .github/actions-tmp/ ディレクトリの役割と内容の整理
-    - 最初の小さな一歩: `.github/actions-tmp/` ディレクトリ内のファイル群が、どのワークフローやスクリプトから参照され、どのようなライフサイクルを持つのかを特定する。
-    - Agent実行プロンプト:
-      ```
-      対象ファイル: .github/actions-tmp/ ディレクトリ配下の全てのファイル、および .github/workflows/ ディレクトリ配下のワークフローファイル。
+1. プロジェクトサマリー生成プロンプトのレビューと改善
+   - 最初の小さな一歩: `development-status-prompt.md` と `project-overview-prompt.md` の内容を読み込み、現在生成されているドキュメント (`generated-docs/development-status.md`, `generated-docs/project-overview.md`) と比較し、プロンプトの意図通りに情報が抽出・整理されているかを確認する。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md, generated-docs/development-status.md, generated-docs/project-overview.md
 
-      実行内容: .github/actions-tmp/ ディレクトリ内のファイルが、他のワークフローやスクリプトによってどのように利用されているかを分析し、その役割と依存関係を明確にしてください。特に、これらのファイルが一時的なものなのか、恒久的なモジュールとして意図されているのかを調査してください。
+     実行内容: 提供されたプロンプトファイル（`development-status-prompt.md`および`project-overview-prompt.md`）を分析し、それぞれが生成するドキュメント（`generated-docs/development-status.md`および`generated-docs/project-overview.md`）の出力がプロンプトの意図通りに情報を網羅・要約しているかを評価してください。特に、出力の簡潔さ、情報の正確性、および現在のプロジェクトの状況（オープンIssueがないこと）に対して、プロンプトが将来にわたって適切に機能するための改善点を検討してください。
 
-      確認事項: `git status` や `.gitignore` の内容を確認し、`actions-tmp` がバージョン管理されているか、または意図的に除外されているかを確認します。また、類似するファイルがプロジェクト内に他に存在しないか確認します。
+     確認事項: プロンプトの変更が既存の自動生成プロセスに与える影響を最小限に抑えつつ、より高品質なサマリーが生成されることを確認してください。また、ハルシネーションの誘発につながるような抽象的な指示を避けてください。
 
-      期待する出力: `actions-tmp` ディレクトリの各主要ファイル（特にワークフローやスクリプト）について、その役割、依存関係、そして提案される管理方針（例: 削除、移動、モジュール化）をmarkdown形式で出力してください。
-      ```
+     期待する出力: 各プロンプトに対する具体的な改善提案をmarkdown形式で出力してください。提案は、プロンプトのどの部分をどのように変更すべきか、変更によって期待される出力品質の向上点を明確に記述してください。
+     ```
 
-2.  src/generate_repo_list 機能のテストカバレッジレポート生成
-    - 最初の小さな一歩: `pytest-cov` などのツールを導入し、既存のテストに対するカバレッジレポートを生成する。
-    - Agent実行プロンプト:
-      ```
-      対象ファイル: src/generate_repo_list/ ディレクトリ配下のPythonファイル、tests/ ディレクトリ配下のテストファイル、requirements-dev.txt、pytest.ini。
+2. リポジトリリスト生成スクリプトのテストカバレッジ分析と改善計画
+   - 最初の小さな一歩: `src/generate_repo_list` ディレクトリ内の各Pythonスクリプトファイルと、`tests/test_*.py` に存在するテストファイルとの対応関係をマッピングし、テストがまだ書かれていない主要な機能やファイル群を特定する。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: src/generate_repo_list/*.py, tests/test_*.py, pytest.ini
 
-      実行内容: `pytest-cov` をプロジェクトに導入し、`src/generate_repo_list/` 以下のコードに対するテストカバレッジレポートを生成してください。`requirements-dev.txt` に `pytest-cov` を追加し、`pytest.ini` を設定してカバレッジ対象を指定してください。
+     実行内容: `src/generate_repo_list` ディレクトリ内のPythonスクリプト群（例: `badge_generator.py`, `config_manager.py`, `generate_repo_list.py`など）について、既存のテストファイル（`tests/test_badge_generator_integration.py`, `tests/test_config.py`, `tests/test_integration.py`など）との関連性を分析し、テストカバレッジが低い、または完全に欠如しているスクリプトや主要な関数、メソッドを特定してください。その後、それらの特定された部分に対するテストカバレッジ向上のための初期計画を策定してください。
 
-      確認事項: 既存の `pytest` 環境が正しく動作していることを確認します。`requirements-dev.txt` に他の競合する依存関係がないことを確認します。
+     確認事項: 既存のテストスイートが正常に動作することを確認し、新たなテストの追加が既存の機能にデグレードを引き起こさないことを検証してください。テスト対象のコードの意図を正確に反映したテストを提案してください。
 
-      期待する出力: `src/generate_repo_list/` のコードカバレッジレポートのサマリー（%）と、カバレッジが低い（例: 50%未満）主要なファイルリストをmarkdown形式で出力してください。また、`requirements-dev.txt` と `pytest.ini` の変更内容をコードブロックで示してください。
-      ```
+     期待する出力: テストカバレッジが不足しているファイルや機能のリストをmarkdown形式で出力してください。リストには、各項目に対して、どのような種類のテスト（ユニットテスト、結合テストなど）が必要か、およびそのテストで検証すべき主要な振る舞いの概要を含めてください。
+     ```
 
-3.  generated-docs/development-status.md の情報源と生成ロジックの改善提案
-    - 最初の小さな一歩: `development-status-prompt.md` と `DevelopmentStatusGenerator.cjs` を分析し、Issue情報の取得と要約のロジックを確認する。
-    - Agent実行プロンプト:
-      ```
-      対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md と .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs。
+3. `.github_automation/check_large_files` の設定とワークフローのレビュー
+   - 最初の小さな一歩: `check-large-files.toml` の内容を詳細に確認し、現在のリポジトリのファイル構成と照らし合わせながら、設定されているファイルサイズ制限や除外パスが適切であるかを評価する。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: .github_automation/check_large_files/check-large-files.toml, .github_automation/check_large_files/scripts/check_large_files.py, .github/workflows/call-check-large-files.yml
 
-      実行内容: `development-status-prompt.md` の内容と `DevelopmentStatusGenerator.cjs` におけるIssue情報の取得および要約ロジックを分析し、オープンIssueがない場合に「現在のIssues」セクションがより有益な情報を提供できるよう、改善点を提案してください。具体的には、最新のコミット履歴やPull Request活動なども考慮した要約ができないかを検討してください。
+     実行内容: `check-large-files.toml` の設定内容を詳細に分析し、それが `check_large_files.py` スクリプトおよび `call-check-large-files.yml` ワークフローでどのように利用されているかを評価してください。特に、現在のプロジェクトのニーズに合致しているか（例: 特定のタイプのファイルに対する適切な閾値、開発関連ファイルや生成物に対する除外設定など）、および将来的な拡張性（例: 新しいファイルタイプやディレクトリの追加に対する柔軟性）の観点から、設定ファイルの改善点を特定してください。
 
-      確認事項: `ProjectSummaryCoordinator.cjs` や `IssueTracker.cjs` など、関連するスクリプトとの連携を確認し、情報フローを理解します。
+     確認事項: 設定変更の提案が、既存のワークフローやスクリプトの動作に予期せぬ影響を与えないことを確認してください。特に、重要なファイルのチェックを見落とすことや、開発に不要な警告を発生させないように注意してください。
 
-      期待する出力: `DevelopmentStatusGenerator.cjs` および `development-status-prompt.md` の改善提案をmarkdown形式で出力してください。提案には、オープンIssueがない場合の「現在のIssues」要約の代替案（例: 最近のマージされたPRや活動のサマリーなど）を含め、関連するコード変更の方向性も示してください。
-      ```
+     期待する出力: `check-large-files.toml` の改善提案をmarkdown形式で出力してください。提案には、現在の設定の評価、推奨される変更点、およびそれらの変更がワークフローの堅牢性や保守性にもたらすメリットを含めてください。必要に応じて、設定構造の変更案も提示してください。
+     ```
 
 ---
-Generated at: 2026-08-25 07:07:41 JST
+Generated at: 2026-08-26 07:07:04 JST
