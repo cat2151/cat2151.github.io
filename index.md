@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-08-28 (UTC) / 2026-08-28 (JST)
+Last Updated: 2026-08-28 (UTC) / 2026-08-29 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,7 +71,7 @@ Last Updated: 2026-08-28 (UTC) / 2026-08-28 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-112-blue) ![Active](https://img.shields.io/badge/Active-85-green) ![Archived](https://img.shields.io/badge/Archived-22-yellow) ![Forks](https://img.shields.io/badge/Forks-5-purple) ![Stars](https://img.shields.io/badge/Total Stars-59-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-112-blue) ![Active](https://img.shields.io/badge/Active-84-green) ![Archived](https://img.shields.io/badge/Archived-23-yellow) ![Forks](https://img.shields.io/badge/Forks-5-purple) ![Stars](https://img.shields.io/badge/Total Stars-59-gold)
 
 ### Core Technologies
 
@@ -83,6 +83,20 @@ Last Updated: 2026-08-28 (UTC) / 2026-08-28 (JST)
 ## 🚀 Active Development
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages用のMarkdownファイルを自動生成するシステムです。
+- 検索エンジンでのリポジトリ発見性を高め、LLMによるリポジトリ参照失敗を緩和することを目的としています。
+- 各リポジトリの概要、言語、バッジ、アクティビティなどを動的に表示し、SEO最適化されたコンテンツを提供します。
+- 📅 2026-08-28 (UTC) / 2026-08-29 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
@@ -101,20 +115,6 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
 - **Overview**: No description available
 - 📅 2026-08-27 (UTC) / 2026-08-27 (JST)
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを活用し、リポジトリ情報を自動取得するシステムです。
-- 取得した情報から、GitHub Pages向けにSEO最適化されたMarkdown形式のリポジトリ一覧を生成します。
-- 検索エンジンからの発見性を高め、LLMがリポジトリ参照に失敗する課題を緩和することを目指します。
-- 📅 2026-08-26 (UTC) / 2026-08-27 (JST)
 
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
 
@@ -358,20 +358,6 @@ A TUI that displays the commit count of your public repositories.
 - **Repository**: [https://github.com/cat2151/gh-commit-ledger](https://github.com/cat2151/gh-commit-ledger)
 - **GitHub Pages**: [https://cat2151.github.io/gh-commit-ledger/](https://cat2151.github.io/gh-commit-ledger/)
 - 📅 2026-05-17 (UTC) / 2026-05-17 (JST)
-
-## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
-GitHub Copilot Coding Agentを自動化し、人間はissueを投げてPRレビューすればよいだけにする
-
-<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
-
-### Project Highlights
-- GitHub Copilotによる自動実装フェーズのプルリクエスト（PR）を効率的に監視するPythonツールです。
-- 認証済みGitHubユーザーの所有リポジトリを対象に、GraphQL APIを用いてPRのフェーズを自動判定します。
-- PRの状態に応じて、通知送信、コメント投稿、PR Ready化、自動マージ、Issue割り当てなどのアクションを実行します。
-- 📅 2026-05-01 (UTC) / 2026-05-02 (JST)
 
 ## [zenn-qiita-mute-warning](https://cat2151.github.io/zenn-qiita-mute-warning/)
 This is a Chrome extension that displays a warning banner at the top of the screen when you open an article by a user you've muted on Zenn or Qiita
@@ -1013,6 +999,20 @@ webpageを開くだけでソフトシンセで音が鳴る、最小規模のソ�
 ---
 
 ## 📦 Archived Projects
+
+## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
+GitHub Copilot Coding Agentを自動化し、人間はissueを投げてPRレビューすればよいだけにする
+
+<a href="https://cat2151.github.io/cat-github-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-github-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-github-watcher](https://github.com/cat2151/cat-github-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-github-watcher/](https://cat2151.github.io/cat-github-watcher/)
+
+### Project Highlights
+- GitHub Copilotによる自動実装フェーズのプルリクエスト（PR）を効率的に監視するPythonツールです。
+- 認証済みGitHubユーザーの所有リポジトリを対象に、GraphQL APIを用いてPRのフェーズを自動判定します。
+- PRの状態に応じて、通知送信、コメント投稿、PR Ready化、自動マージ、Issue割り当てなどのアクションを実行します。
+- 📅 2026-08-28 (UTC) / 2026-08-28 (JST)
 
 ## [STed2.07m](https://github.com/cat2151/STed2.07m)
 STed2 from STED_ALL.LZH
