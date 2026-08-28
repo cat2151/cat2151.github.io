@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-08-26 (UTC) / 2026-08-27 (JST)
+Last Updated: 2026-08-28 (UTC) / 2026-08-28 (JST)
 
 ## 📋 Table of Contents
 
@@ -91,7 +91,16 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-08-26 (UTC) / 2026-08-27 (JST)
+- 📅 2026-08-28 (UTC) / 2026-08-28 (JST)
+
+## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
+
+<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
+- **Overview**: No description available
+- 📅 2026-08-27 (UTC) / 2026-08-27 (JST)
 
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
@@ -105,16 +114,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - GitHub APIを活用し、リポジトリ情報を自動取得するシステムです。
 - 取得した情報から、GitHub Pages向けにSEO最適化されたMarkdown形式のリポジトリ一覧を生成します。
 - 検索エンジンからの発見性を高め、LLMがリポジトリ参照に失敗する課題を緩和することを目指します。
-- 📅 2026-08-25 (UTC) / 2026-08-26 (JST)
-
-## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
-
-<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
-- **Overview**: No description available
-- 📅 2026-08-24 (UTC) / 2026-08-24 (JST)
+- 📅 2026-08-26 (UTC) / 2026-08-27 (JST)
 
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
 
