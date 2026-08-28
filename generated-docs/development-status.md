@@ -1,51 +1,56 @@
-Last updated: 2026-08-26
+Last updated: 2026-08-29
 
 # Development Status
 
 ## 現在のIssues
-- 現在、オープン中のIssueはありません。
-- プロジェクトは安定した状態にあり、直接対応すべき緊急の課題は見受けられません。
-- 新規の機能開発や既存機能の改善、メンテナンスに焦点を移すことができます。
+オープン中のIssueはありません。
 
 ## 次の一手候補
-1. プロジェクトサマリー生成プロンプトのレビューと改善
-   - 最初の小さな一歩: `development-status-prompt.md` と `project-overview-prompt.md` の内容を読み込み、現在生成されているドキュメント (`generated-docs/development-status.md`, `generated-docs/project-overview.md`) と比較し、プロンプトの意図通りに情報が抽出・整理されているかを確認する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md, generated-docs/development-status.md, generated-docs/project-overview.md
+※現在オープン中のIssueがないため、以下の候補は新規の提案となります。Issue番号は未割当です。
 
-     実行内容: 提供されたプロンプトファイル（`development-status-prompt.md`および`project-overview-prompt.md`）を分析し、それぞれが生成するドキュメント（`generated-docs/development-status.md`および`generated-docs/project-overview.md`）の出力がプロンプトの意図通りに情報を網羅・要約しているかを評価してください。特に、出力の簡潔さ、情報の正確性、および現在のプロジェクトの状況（オープンIssueがないこと）に対して、プロンプトが将来にわたって適切に機能するための改善点を検討してください。
+1.  Development Status生成ロジックとプロンプトの改善
+    -   最初の小さな一歩: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` と `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs` を分析し、現在の開発状況をより的確に捉えるための改善点を特定する。
+    -   Agent実行プロンプト:
+      ```
+      対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`
 
-     確認事項: プロンプトの変更が既存の自動生成プロセスに与える影響を最小限に抑えつつ、より高品質なサマリーが生成されることを確認してください。また、ハルシネーションの誘発につながるような抽象的な指示を避けてください。
+      実行内容: `development-status-prompt.md` の内容と `DevelopmentStatusGenerator.cjs` の処理ロジックを分析し、以下の観点から改善提案をmarkdown形式で出力してください：
+      1) 現在のプロジェクト状況をより正確に反映するためのプロンプトの修正案
+      2) ハルシネーションを避けつつ、より具体的で実用的な「次の一手候補」を生成するためのロジック改善案
+      3) Issue情報がない場合の「現在のIssues」セクションの生成に関する最適化案
 
-     期待する出力: 各プロンプトに対する具体的な改善提案をmarkdown形式で出力してください。提案は、プロンプトのどの部分をどのように変更すべきか、変更によって期待される出力品質の向上点を明確に記述してください。
-     ```
+      確認事項: 既存の生成ロジックとプロンプトの意図を尊重し、不要な複雑性を追加しないようにしてください。生成物の品質向上とハルシネーションリスク低減を最優先とします。
 
-2. リポジトリリスト生成スクリプトのテストカバレッジ分析と改善計画
-   - 最初の小さな一歩: `src/generate_repo_list` ディレクトリ内の各Pythonスクリプトファイルと、`tests/test_*.py` に存在するテストファイルとの対応関係をマッピングし、テストがまだ書かれていない主要な機能やファイル群を特定する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: src/generate_repo_list/*.py, tests/test_*.py, pytest.ini
+      期待する出力: 分析結果と上記観点からの具体的な改善提案をまとめたmarkdownドキュメント。提案には、プロンプトの具体的な変更例や、ジェネレータのロジック修正に関する高レベルな説明を含めてください。
+      ```
 
-     実行内容: `src/generate_repo_list` ディレクトリ内のPythonスクリプト群（例: `badge_generator.py`, `config_manager.py`, `generate_repo_list.py`など）について、既存のテストファイル（`tests/test_badge_generator_integration.py`, `tests/test_config.py`, `tests/test_integration.py`など）との関連性を分析し、テストカバレッジが低い、または完全に欠如しているスクリプトや主要な関数、メソッドを特定してください。その後、それらの特定された部分に対するテストカバレッジ向上のための初期計画を策定してください。
+2.  リポジトリリスト生成における言語統計の強化
+    -   最初の小さな一歩: `src/generate_repo_list/language_info.py` および `src/generate_repo_list/statistics_calculator.py` をレビューし、現在収集・計算されている言語関連の統計情報を把握する。
+    -   Agent実行プロンプト:
+      ```
+      対象ファイル: `src/generate_repo_list/language_info.py`, `src/generate_repo_list/statistics_calculator.py`, `src/generate_repo_list/markdown_generator.py`
 
-     確認事項: 既存のテストスイートが正常に動作することを確認し、新たなテストの追加が既存の機能にデグレードを引き起こさないことを検証してください。テスト対象のコードの意図を正確に反映したテストを提案してください。
+      実行内容: 上記ファイルを分析し、リポジトリリストの生成時に、より詳細な言語利用統計（例: 各言語のファイル数の分布、上位N言語のコミット頻度、言語別ファイルサイズの割合など）を追加で収集・計算・表示するための改善案を検討してください。
 
-     期待する出力: テストカバレッジが不足しているファイルや機能のリストをmarkdown形式で出力してください。リストには、各項目に対して、どのような種類のテスト（ユニットテスト、結合テストなど）が必要か、およびそのテストで検証すべき主要な振る舞いの概要を含めてください。
-     ```
+      確認事項: 新しい統計情報の追加が、既存のデータ収集および表示ロジックに大きな影響を与えないこと。また、計算コストが増大しすぎないよう考慮してください。
 
-3. `.github_automation/check_large_files` の設定とワークフローのレビュー
-   - 最初の小さな一歩: `check-large-files.toml` の内容を詳細に確認し、現在のリポジトリのファイル構成と照らし合わせながら、設定されているファイルサイズ制限や除外パスが適切であるかを評価する。
-   - Agent実行プロンプ:
-     ```
-     対象ファイル: .github_automation/check_large_files/check-large-files.toml, .github_automation/check_large_files/scripts/check_large_files.py, .github/workflows/call-check-large-files.yml
+      期待する出力: 提案する新しい言語統計の詳細、それらを `language_info.py` や `statistics_calculator.py` でどのように実装するかに関する高レベルな設計案、および `markdown_generator.py` でどのように表示するかについての簡単な提案をmarkdown形式で出力してください。
+      ```
 
-     実行内容: `check-large-files.toml` の設定内容を詳細に分析し、それが `check_large_files.py` スクリプトおよび `call-check-large-files.yml` ワークフローでどのように利用されているかを評価してください。特に、現在のプロジェクトのニーズに合致しているか（例: 特定のタイプのファイルに対する適切な閾値、開発関連ファイルや生成物に対する除外設定など）、および将来的な拡張性（例: 新しいファイルタイプやディレクトリの追加に対する柔軟性）の観点から、設定ファイルの改善点を特定してください。
+3.  大規模ファイルチェックアクションの設定とレポート機能の改善
+    -   最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml` (または `.github/actions-tmp/.github_automation/check-large-files/check-large-files.toml.default`) と `.github_automation/check_large_files/scripts/check_large_files.py` を確認し、現在の設定方法とレポート出力を理解する。
+    -   Agent実行プロンプト:
+      ```
+      対象ファイル: `.github_automation/check_large_files/check-large-files.toml`, `.github_automation/check_large_files/scripts/check_large_files.py`, `.github/workflows/call-check-large-files.yml`
 
-     確認事項: 設定変更の提案が、既存のワークフローやスクリプトの動作に予期せぬ影響を与えないことを確認してください。特に、重要なファイルのチェックを見落とすことや、開発に不要な警告を発生させないように注意してください。
+      実行内容: 大規模ファイルチェックアクションの設定の柔軟性を高め、より分かりやすいレポートを生成するための改善策を分析し、提案してください。具体的には：
+      1) `check-large-files.toml` 以外の方法（例: workflow inputs）で閾値や除外パターンを設定できるようにする方法
+      2) GitHub Actionsのsummaryやcommentに、検出された大規模ファイルの詳細をより視覚的に、かつ要約して表示する方法
+      3) 検出されたファイルの種類（例: バイナリ、アセット、生成コード）に基づいてレポートをカテゴリ化する可能性
 
-     期待する出力: `check-large-files.toml` の改善提案をmarkdown形式で出力してください。提案には、現在の設定の評価、推奨される変更点、およびそれらの変更がワークフローの堅牢性や保守性にもたらすメリットを含めてください。必要に応じて、設定構造の変更案も提示してください。
-     ```
+      確認事項: 既存の機能との後方互換性を可能な限り維持し、設定の複雑さを不必要に増やさないこと。GitHub Actionsの利用規約や制限を考慮してください。
+
+      期待する出力: 提案された改善点について、それぞれの設計上の考慮事項、および関連ファイルの変更点に関する高レベルな説明をmarkdown形式で出力してください。具体的なworkflowの変更例や、Pythonスクリプトの拡張に関する概念的なコードスニペットを含めてください。
 
 ---
-Generated at: 2026-08-26 07:07:04 JST
+Generated at: 2026-08-29 07:21:15 JST
