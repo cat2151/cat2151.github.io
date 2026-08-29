@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-08-28 (UTC) / 2026-08-29 (JST)
+Last Updated: 2026-08-29 (UTC) / 2026-08-30 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を取得してGitHub Pages用のMarkdownファイルを自動生成するシステムです。
-- 検索エンジンでのリポジトリ発見性を高め、LLMによるリポジトリ参照失敗を緩和することを目的としています。
-- 各リポジトリの概要、言語、バッジ、アクティビティなどを動的に表示し、SEO最適化されたコンテンツを提供します。
-- 📅 2026-08-28 (UTC) / 2026-08-29 (JST)
+- GitHub APIを利用し、ユーザーのリポジトリ情報を取得・整理します。
+- JekyllベースのGitHub Pagesサイト向けに、検索エンジン最適化されたリポジトリ一覧Markdownを自動生成します。
+- 生成されたページは、検索エンジンやLLMによるリポジトリ情報の参照性を向上させることを目的としています。
+- 📅 2026-08-29 (UTC) / 2026-08-30 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
@@ -105,7 +105,39 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-08-28 (UTC) / 2026-08-28 (JST)
+- 📅 2026-08-29 (UTC) / 2026-08-29 (JST)
+
+## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
+
+<a href="https://cat2151.github.io/chord2mml-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c) ![Topic: chord](https://img.shields.io/badge/Topic-chord-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
+
+- **Repository**: [https://github.com/cat2151/chord2mml-rust](https://github.com/cat2151/chord2mml-rust)
+- **GitHub Pages**: [https://cat2151.github.io/chord2mml-rust/](https://cat2151.github.io/chord2mml-rust/)
+- **Overview**: No description available
+
+### Project Highlights
+- コード進行テキストをMML（Music Macro Language）へ変換するライブラリ・アプリケーションです。
+- RustとTree-sitterを活用し、堅牢な構文解析と高速な変換を実現しています。
+- コマンドラインツールとして、またRustライブラリとしても利用可能な純粋なネイティブアプリケーションです。
+- 📅 2026-08-29 (UTC) / 2026-08-29 (JST)
+
+## [own-repos-curator-data](https://cat2151.github.io/own-repos-curator-data/)
+
+<a href="https://cat2151.github.io/own-repos-curator-data/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
+
+- **Repository**: [https://github.com/cat2151/own-repos-curator-data](https://github.com/cat2151/own-repos-curator-data)
+- **GitHub Pages**: [https://cat2151.github.io/own-repos-curator-data/](https://cat2151.github.io/own-repos-curator-data/)
+- **Overview**: No description available
+- 📅 2026-08-29 (UTC) / 2026-08-29 (JST)
+
+## [cat2151-hatena-blog-contents](https://cat2151.github.io/cat2151-hatena-blog-contents/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151-hatena-blog-contents](https://github.com/cat2151/cat2151-hatena-blog-contents)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151-hatena-blog-contents/](https://cat2151.github.io/cat2151-hatena-blog-contents/)
+- **Overview**: No description available
+- 📅 2026-08-29 (UTC) / 2026-08-29 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
@@ -170,20 +202,6 @@ A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 - MMLのパースからSMFバイト列生成までを4パス構成で処理し、ブラウザ向けWASM版も提供しています。
 - 音符、オクターブ、和音、テンポ、ベロシティなど多様なMML記法に対応し、CLIおよびライブラリAPIで柔軟な利用が可能です。
 - 📅 2026-08-16 (UTC) / 2026-08-16 (JST)
-
-## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
-
-<a href="https://cat2151.github.io/chord2mml-rust/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![C](https://img.shields.io/badge/C-555555?style=flat&logo=c) ![Topic: chord](https://img.shields.io/badge/Topic-chord-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a>
-
-- **Repository**: [https://github.com/cat2151/chord2mml-rust](https://github.com/cat2151/chord2mml-rust)
-- **GitHub Pages**: [https://cat2151.github.io/chord2mml-rust/](https://cat2151.github.io/chord2mml-rust/)
-- **Overview**: No description available
-
-### Project Highlights
-- コード進行テキストをMML（Music Macro Language）へ変換するライブラリ・アプリケーションです。
-- RustとTree-sitterを活用し、堅牢な構文解析と高速な変換を実現しています。
-- コマンドラインツールとして、またRustライブラリとしても利用可能な純粋なネイティブアプリケーションです。
-- 📅 2026-08-14 (UTC) / 2026-08-14 (JST)
 
 ## [digital-garden](https://cat2151.github.io/digital-garden/)
 
@@ -368,15 +386,6 @@ This is a Chrome extension that displays a warning banner at the top of the scre
 - **GitHub Pages**: [https://cat2151.github.io/zenn-qiita-mute-warning/](https://cat2151.github.io/zenn-qiita-mute-warning/)
 - 📅 2026-04-26 (UTC) / 2026-04-26 (JST)
 
-## [own-repos-curator-data](https://cat2151.github.io/own-repos-curator-data/)
-
-<a href="https://cat2151.github.io/own-repos-curator-data/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript)
-
-- **Repository**: [https://github.com/cat2151/own-repos-curator-data](https://github.com/cat2151/own-repos-curator-data)
-- **GitHub Pages**: [https://cat2151.github.io/own-repos-curator-data/](https://cat2151.github.io/own-repos-curator-data/)
-- **Overview**: No description available
-- 📅 2026-04-25 (UTC) / 2026-04-26 (JST)
-
 ## [own-repos-curator](https://cat2151.github.io/own-repos-curator/)
 
 <a href="https://cat2151.github.io/own-repos-curator/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
@@ -385,15 +394,6 @@ This is a Chrome extension that displays a warning banner at the top of the scre
 - **GitHub Pages**: [https://cat2151.github.io/own-repos-curator/](https://cat2151.github.io/own-repos-curator/)
 - **Overview**: No description available
 - 📅 2026-04-25 (UTC) / 2026-04-25 (JST)
-
-## [cat2151-hatena-blog-contents](https://cat2151.github.io/cat2151-hatena-blog-contents/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151-hatena-blog-contents](https://github.com/cat2151/cat2151-hatena-blog-contents)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151-hatena-blog-contents/](https://cat2151.github.io/cat2151-hatena-blog-contents/)
-- **Overview**: No description available
-- 📅 2026-04-24 (UTC) / 2026-04-25 (JST)
 
 ## [cmrt-client-playground](https://cat2151.github.io/cmrt-client-playground/)
 
