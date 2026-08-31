@@ -1,48 +1,50 @@
-Last updated: 2026-08-31
+Last updated: 2026-09-01
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。
+現在オープンされているIssueは存在しません。
+プロジェクトはクリーンな状態を維持しており、新しい機能開発や改善に注力できる段階です。
+既存の`issue-notes`は、過去の議論やアイデアの参照として引き続き利用可能です。
 
 ## 次の一手候補
-1. 開発状況生成プロンプトの精度向上とハルシネーション対策の強化 (新規検討)
-   - 最初の小さな一歩: 現在の `development-status-prompt.md` を詳細にレビューし、「生成しないもの」セクションの指示をさらに明確化・具体化する表現がないか検討する。
+1. 開発状況レポートのIssue番号自動リンクの精度向上 [Issue #22](../issue-notes/22.md)
+   - 最初の小さな一歩: `issue-notes/22.md` の内容を分析し、開発状況レポートで自動的に参照・リンクされるべきIssue情報をどのように抽出・利用できるか検討します。
+   - Agent実行プロンプ:
+     ```
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/development/IssueTracker.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs, issue-notes/22.md
+
+     実行内容: `issue-notes/22.md` の内容を分析し、現在の開発状況レポートがオープンIssueを正確に反映していない原因を特定してください。特に、`IssueTracker.cjs` や `DevelopmentStatusGenerator.cjs` が `issue-notes/` ディレクトリのファイルをどのように処理しているか、また、GitHubのオープンIssueとどのように同期しているかを調査し、Issue #22の内容を現在の開発状況に反映させるための改善点を提案してください。
+
+     確認事項: `IssueTracker.cjs` と `DevelopmentStatusGenerator.cjs` の役割、`issue-notes/` ディレクトリの各ファイルがIssueトラッカー上のIssueとどのような関係にあるか（オープン/クローズ、メモなど）を理解してください。
+
+     期待する出力: 開発状況レポートでIssue #22の情報を適切に参照・表示するための改善提案をmarkdown形式で出力してください。具体的には、Issue情報の抽出ロジックの改善案や、現在の「オープン中のIssueはありません」という表示をより正確かつ有益な情報に置き換えるための実装案を含めてください。
+     ```
+
+2. Agent実行プロンプトのガイドラインと実装の整合性検証 [Issue #38](../issue-notes/38.md)
+   - 最初の小さな一歩: `generated-docs/development-status-generated-prompt.md` と `generated-docs/project-overview-generated-prompt.md` の内容を分析し、それぞれのAgent実行プロンプトが本ガイドラインに沿っているか評価します。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+     対象ファイル: generated-docs/development-status-generated-prompt.md, generated-docs/project-overview-generated-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
 
-     実行内容: 現在の開発状況生成プロンプトの内容を分析し、特に「生成しないもの」セクションにおいて、ハルシネーションを効果的に防止するための具体的な指示追加や表現の改善点を洗い出してください。例えば、無価値なタスクの提案や既存Issue外の妄想を防ぐための制約を追加することを検討してください。
+     実行内容: `generated-docs/development-status-generated-prompt.md` および `generated-docs/project-overview-generated-prompt.md` に出力されているAgent実行プロンプトの内容が、本プロンプトの「Agent実行プロンプト」生成ガイドライン（必須要素1-4）に準拠しているか検証してください。Issue #38に関連する潜在的なプロンプト改善点も考慮に入れてください。
 
-     確認事項: 提案する変更が、生成される開発状況レポートの有用性を損なわないか、また、他の自動生成プロセスに意図しない影響を与えないかを確認してください。変更内容が開発者にとって理解しやすく、実行可能であるか評価してください。
+     確認事項: 各生成プロンプトが「対象ファイル」「実行内容」「確認事項」「期待する出力」の4つの必須要素を具体的に含んでいるか、またハルシネーションを避ける内容になっているかを確認してください。
 
-     期待する出力: 開発状況生成プロンプトの改善提案をMarkdown形式で記述してください。具体的な変更点の概要と、それがハルシネーション防止にどのように寄与するかを説明してください。
+     期待する出力: 検証結果をmarkdown形式で出力してください。準拠状況の評価、ガイドラインからの逸脱箇所、および改善が必要な具体的なプロンプト部分と修正案を提示してください。
      ```
 
-2. daily-project-summary GitHub Actionsワークフローの実行効率最適化 (新規検討)
-   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml` のGitHub Actions実行履歴から、平均的な実行時間と特に時間のかかっているステップを調査し、潜在的なボトルネックを特定する。
+3. `.github/actions-tmp` ディレクトリの役割とクリーンアップ戦略の調査 [Issue #57](../issue-notes/57.md)
+   - 最初の小さな一歩: `.github/workflows/` ディレクトリ内のCI/CDワークフローファイルを確認し、`.github/actions-tmp/` ディレクトリへのファイルの書き込みや読み込みを行っているステップを特定します。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/workflows/call-daily-project-summary.yml
+     対象ファイル: .github/workflows/*.yml (特に callgraph.yml, daily-project-summary.yml, issue-note.yml, translate-readme.yml など), .github/actions-tmp/**/*
 
-     実行内容: `call-daily-project-summary.yml` ワークフローの構成と実行ロジックを分析し、GitHub Actionsのベストプラクティス（例: 依存関係のキャッシュ、不要なトリガーの削減、並列実行の可能性、アクションバージョンの固定など）に基づき、実行時間短縮およびリソース消費削減のための具体的な最適化案を検討してください。
+     実行内容: `.github/actions-tmp/` ディレクトリ内のファイルが、プロジェクトのCI/CDワークフローや他の自動化プロセスでどのように生成・利用されているかを調査し、その目的とライフサイクルを明確にしてください。特に、`issue-notes/57.md` に関連する潜在的なリソース管理やクリーンアップの必要性を検討してください。
 
-     確認事項: 提案される最適化が、日次プロジェクトサマリー（開発状況とプロジェクト概要）の正確性や完全性に影響を与えないことを確認してください。関連するスクリプト（例: .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs）との整合性も考慮してください。
+     確認事項: 各ワークフローが `.github/actions-tmp/` に依存しているか、または生成しているかを確認し、これらのファイルが永続的に必要なのか、それとも一時的なものなのかを判断するための情報を収集してください。
 
-     期待する出力: ワークフローの最適化案をMarkdown形式でリストアップし、それぞれの案が期待する効果（例: 実行時間のX%削減、コスト削減）と、実装に必要な変更点を具体的に記述してください。
-     ```
-
-3. generated-docsディレクトリ内の自動生成ドキュメントの冗長性・一貫性チェック (新規検討)
-   - 最初の小さな一歩: `generated-docs/` ディレクトリ内の全Markdownファイルを対象に、内容の重複や情報の一貫性の有無を大まかにレビューする。特に `project-overview.md` と `project-overview-generated-prompt.md` の関係に注目する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: generated-docs/project-overview.md, generated-docs/project-overview-generated-prompt.md, generated-docs/development-status.md, generated-docs/development-status-generated-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
-
-     実行内容: `generated-docs` ディレクトリ下の自動生成されるドキュメント（特にプロジェクト概要と開発状況に関するもの）の内容と生成ロジックを分析し、情報が重複していないか、一貫性が保たれているかを確認してください。もし重複や不整合がある場合、その原因となっている生成スクリプトやプロンプトの構成を特定し、改善策を提案してください。
-
-     確認事項: ドキュメントの再編や生成ロジックの変更が、利用者への情報提供の質を低下させないか、また他のドキュメントやプロンプト生成に悪影響を与えないか確認してください。変更案がプロジェクトの目的（情報整理と可視化）に合致しているか評価してください。
-
-     期待する出力: `generated-docs` 内ドキュメントの冗長性や一貫性に関する問題点をMarkdown形式で報告し、具体的な改善策（例: ファイルの統合、生成ロジックの修正、プロンプトの最適化）を提案してください。
+     期待する出力: `.github/actions-tmp/` ディレクトリの目的、主な内容、生成・利用・削除のメカニズムに関する調査結果をmarkdown形式で出力してください。また、不要なファイルのクリーンアップ戦略や、ディレクトリの管理を最適化するための提案を含めてください。
 
 ---
-Generated at: 2026-08-31 07:11:05 JST
+Generated at: 2026-09-01 07:11:51 JST
