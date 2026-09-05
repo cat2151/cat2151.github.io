@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-09-04 (UTC) / 2026-09-05 (JST)
+Last Updated: 2026-09-05 (UTC) / 2026-09-06 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,15 +84,6 @@ Last Updated: 2026-09-04 (UTC) / 2026-09-05 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
-## [trace-rush](https://cat2151.github.io/trace-rush/)
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: browsergame](https://img.shields.io/badge/Topic-browsergame-lightblue) ![Topic: game](https://img.shields.io/badge/Topic-game-lightblue) ![Topic: touchpen](https://img.shields.io/badge/Topic-touchpen-lightblue) ![Topic: web](https://img.shields.io/badge/Topic-web-lightblue)
-
-- **Repository**: [https://github.com/cat2151/trace-rush](https://github.com/cat2151/trace-rush)
-- **GitHub Pages**: [https://cat2151.github.io/trace-rush/](https://cat2151.github.io/trace-rush/)
-- **Overview**: No description available
-- 📅 2026-09-04 (UTC) / 2026-09-04 (JST)
-
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
@@ -102,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、JekyllベースのGitHub Pages向けにリポジトリ一覧を自動生成します。
-- SEO最適化、バッジ表示、分類機能により、リポジトリ情報の発見性を高めます。
-- 各リポジトリの概要を自動取得し、動的で魅力的な一覧ページを提供します。
-- 📅 2026-09-03 (UTC) / 2026-09-04 (JST)
+- GitHub APIを活用し、JekyllベースのGitHub Pages向けにリポジトリ一覧を自動生成するシステムです。
+- 検索エンジンでの発見性を高め、LLMによるリポジトリ参照を促進する目的で設計されています。
+- 各リポジトリの概要表示やSEO最適化されたMarkdown生成などの機能を備えています。
+- 📅 2026-09-05 (UTC) / 2026-09-06 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
@@ -114,7 +105,7 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-09-03 (UTC) / 2026-09-03 (JST)
+- 📅 2026-09-05 (UTC) / 2026-09-05 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
@@ -123,7 +114,16 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 - **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
 - **Overview**: No description available
-- 📅 2026-09-02 (UTC) / 2026-09-03 (JST)
+- 📅 2026-09-04 (UTC) / 2026-09-05 (JST)
+
+## [trace-rush](https://cat2151.github.io/trace-rush/)
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![TypeScript](https://img.shields.io/badge/TypeScript-3178c6?style=flat&logo=typescript) ![Topic: browsergame](https://img.shields.io/badge/Topic-browsergame-lightblue) ![Topic: game](https://img.shields.io/badge/Topic-game-lightblue) ![Topic: touchpen](https://img.shields.io/badge/Topic-touchpen-lightblue) ![Topic: web](https://img.shields.io/badge/Topic-web-lightblue)
+
+- **Repository**: [https://github.com/cat2151/trace-rush](https://github.com/cat2151/trace-rush)
+- **GitHub Pages**: [https://cat2151.github.io/trace-rush/](https://cat2151.github.io/trace-rush/)
+- **Overview**: No description available
+- 📅 2026-09-04 (UTC) / 2026-09-04 (JST)
 
 ## [chord2mml-rust](https://cat2151.github.io/chord2mml-rust/)
 
