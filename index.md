@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-09-06 (UTC) / 2026-09-07 (JST)
+Last Updated: 2026-09-08 (UTC) / 2026-09-09 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,15 @@ Last Updated: 2026-09-06 (UTC) / 2026-09-07 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- 📅 2026-09-07 (UTC) / 2026-09-08 (JST)
+
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
@@ -93,10 +102,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、GitHub Pages向けにリポジトリ一覧ページを自動生成するシステムです。
-- 検索エンジンにクロールされにくいGitHubユーザーページの問題を解決し、SEO最適化を促進します。
-- 各リポジトリの概要表示、バッジ、分類機能を提供し、GitHub Pagesの利便性を高めます。
-- 📅 2026-09-06 (UTC) / 2026-09-07 (JST)
+- GitHub APIを活用し、GitHub Pages向けのリポジトリ一覧Markdownを自動生成します。
+- 検索エンジン最適化されたコンテンツで、リポジトリの可視性を向上させます。
+- 各リポジトリの概要、バッジ、分類情報を自動で統合表示します。
+- 📅 2026-09-07 (UTC) / 2026-09-08 (JST)
 
 ## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
 
@@ -105,16 +114,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
 - **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
 - **Overview**: No description available
-- 📅 2026-09-06 (UTC) / 2026-09-06 (JST)
-
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
-
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-09-05 (UTC) / 2026-09-06 (JST)
+- 📅 2026-09-07 (UTC) / 2026-09-07 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
