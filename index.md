@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-09-11 (UTC) / 2026-09-12 (JST)
+Last Updated: 2026-09-13 (UTC) / 2026-09-14 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,24 @@ Last Updated: 2026-09-11 (UTC) / 2026-09-12 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- 📅 2026-09-13 (UTC) / 2026-09-13 (JST)
+
+## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
+
+<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
+- **Overview**: No description available
+- 📅 2026-09-13 (UTC) / 2026-09-13 (JST)
+
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
@@ -93,19 +111,24 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、GitHub Pages向けにリポジトリ一覧ページを自動生成するシステムです。
-- 検索エンジンでのクロール促進と、LLMによるリポジトリ参照精度の向上を目的としています。
-- 各リポジトリの概要、バッジ、分類を含むSEO最適化されたMarkdownコンテンツを出力します。
-- 📅 2026-09-11 (UTC) / 2026-09-12 (JST)
+- GitHub APIを利用し、個人のリポジトリ情報を自動で取得・処理するシステムです。
+- 取得した情報からGitHub Pagesサイト向けのSEO最適化されたリポジトリ一覧Markdownを生成します。
+- 検索エンジンへのインデックス化を促進し、LLMによるリポジトリ参照の信頼性向上に貢献します。
+- 📅 2026-09-12 (UTC) / 2026-09-13 (JST)
 
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
+## [mml2abc](https://cat2151.github.io/mml2abc/)
+A library transpiles Music Macro Language into ABC music notation.
 
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
+<a href="https://cat2151.github.io/mml2abc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mml2abc"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a> <a href="https://cat2151.github.io/mml2abc/dist/"><img src="https://img.shields.io/badge/🌐-Live%20Demo-green.svg" alt="Live Demo"></a>
 
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-09-11 (UTC) / 2026-09-11 (JST)
+- **Repository**: [https://github.com/cat2151/mml2abc](https://github.com/cat2151/mml2abc)
+- **GitHub Pages**: [https://cat2151.github.io/mml2abc/](https://cat2151.github.io/mml2abc/)
+
+### Project Highlights
+- Music Macro Language (MML) をABC記譜法に変換するJavaScriptライブラリです。
+- ブラウザでのMML音楽再生や、将来的なObsidianプラグインでの利用を目的としています。
+- 概念実証を重視し、シンプルなMMLパーサーとABC記譜法への変換機能を提供します。
+- 📅 2026-09-12 (UTC) / 2026-09-12 (JST)
 
 ## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
 
@@ -115,15 +138,6 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 - **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
 - **Overview**: No description available
 - 📅 2026-09-10 (UTC) / 2026-09-10 (JST)
-
-## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
-
-<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
-- **Overview**: No description available
-- 📅 2026-09-04 (UTC) / 2026-09-05 (JST)
 
 ## [trace-rush](https://cat2151.github.io/trace-rush/)
 
@@ -729,20 +743,6 @@ cdefgabを入力するごとにその音が鳴るMMLエディタ（実験用）
 - Webブラウザ、Python、Rust、Goなど複数のプログラミング言語で実装されており、それぞれ異なる特性を持ちます。
 - 「Simple版」と「Smooth版」の2種類のシンセシスモードを提供し、多様なサウンド体験が可能です。
 - 📅 2026-03-12 (UTC) / 2026-03-13 (JST)
-
-## [mml2abc](https://cat2151.github.io/mml2abc/)
-A library transpiles Music Macro Language into ABC music notation.
-
-<a href="https://cat2151.github.io/mml2abc/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-1-yellow) ![JavaScript](https://img.shields.io/badge/JavaScript-f1e05a?style=flat&logo=javascript) ![Topic: abc-music-notation](https://img.shields.io/badge/Topic-abc--music--notation-lightblue) ![Topic: abcjs](https://img.shields.io/badge/Topic-abcjs-lightblue) ![Topic: music-macro-language](https://img.shields.io/badge/Topic-music--macro--language-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/mml2abc"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a> <a href="https://cat2151.github.io/mml2abc/dist/"><img src="https://img.shields.io/badge/🌐-Live%20Demo-green.svg" alt="Live Demo"></a>
-
-- **Repository**: [https://github.com/cat2151/mml2abc](https://github.com/cat2151/mml2abc)
-- **GitHub Pages**: [https://cat2151.github.io/mml2abc/](https://cat2151.github.io/mml2abc/)
-
-### Project Highlights
-- Music Macro Language (MML) をABC記譜法に変換するJavaScriptライブラリです。
-- ブラウザでのMML音楽再生や、将来的なObsidianプラグインでの利用を目的としています。
-- 概念実証を重視し、シンプルなMMLパーサーとABC記譜法への変換機能を提供します。
-- 📅 2026-03-07 (UTC) / 2026-03-08 (JST)
 
 ## [super-easy-vim](https://cat2151.github.io/super-easy-vim/)
 [WIP] vim初心者に成功体験を与える用のジョークアプリ。vimのサブセット。極端に機能を削減し、モードとキーバインドを過剰に派手に表示する
