@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-09-23 (UTC) / 2026-09-24 (JST)
+Last Updated: 2026-09-24 (UTC) / 2026-09-25 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,9 +93,27 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、リポジトリ情報を取得・加工するシステムです。
-- 取得した情報からGitHub Pages向けにSEO最適化されたMarkdownを自動生成します。
-- これにより、リポジトリの検索エンジンインデックス促進とLLMからの参照改善を期待します。
+- GitHub APIを利用し、個人のリポジトリ情報を自動取得します。
+- GitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧のMarkdownファイルを生成します。
+- これにより、リポジトリが検索エンジンにインデックスされやすくなり、情報の可視性を高めます。
+- 📅 2026-09-24 (UTC) / 2026-09-25 (JST)
+
+## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
+
+<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
+- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
+- **Overview**: No description available
+- 📅 2026-09-24 (UTC) / 2026-09-24 (JST)
+
+## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
+
+<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
+- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
+- **Overview**: No description available
 - 📅 2026-09-23 (UTC) / 2026-09-24 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
@@ -179,15 +197,6 @@ A library transpiles Music Macro Language into ABC music notation.
 - **GitHub Pages**: [https://cat2151.github.io/cat2151-hatena-blog-contents/](https://cat2151.github.io/cat2151-hatena-blog-contents/)
 - **Overview**: No description available
 - 📅 2026-08-29 (UTC) / 2026-08-29 (JST)
-
-## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
-
-<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
-- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
-- **Overview**: No description available
-- 📅 2026-08-21 (UTC) / 2026-08-21 (JST)
 
 ## [fighting-game-button-challenge](https://cat2151.github.io/fighting-game-button-challenge/)
 A tool to practice button inputs for fighting games on Windows. Ideal for leverless controllers in games like Street Fighter 6.
@@ -344,15 +353,6 @@ Lightweight library enabling JSON-based description of Tone.js instruments, effe
 - コードを書かず、音をデータで制御できるため、UIやストリーミングと自然に連携
 - 時間順のイベントをデータとして扱い、緻密な演奏表現が可能に
 - 📅 2026-06-07 (UTC) / 2026-06-07 (JST)
-
-## [voicevox-playground-tui](https://cat2151.github.io/voicevox-playground-tui/)
-
-<a href="https://cat2151.github.io/voicevox-playground-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/voicevox-playground-tui](https://github.com/cat2151/voicevox-playground-tui)
-- **GitHub Pages**: [https://cat2151.github.io/voicevox-playground-tui/](https://cat2151.github.io/voicevox-playground-tui/)
-- **Overview**: No description available
-- 📅 2026-06-01 (UTC) / 2026-06-01 (JST)
 
 ## [smf-to-ym2151log-rust](https://cat2151.github.io/smf-to-ym2151log-rust/)
 [WIP] smf-to-ym2151log のRust版
