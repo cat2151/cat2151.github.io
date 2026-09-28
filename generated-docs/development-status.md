@@ -1,51 +1,50 @@
-Last updated: 2026-09-28
+Last updated: 2026-09-29
 
 # Development Status
 
 ## 現在のIssues
-現在、オープン中のIssueはありません。
-- プロジェクトは安定しており、報告されている未解決の課題はありません。
-- 現在のタスクは、既存の自動化プロセスやコードベースの品質向上に焦点を当てる良い機会です。
+現在オープン中のIssueはありません。プロジェクトは安定しており、定期的な自動更新が実行されています。
+主な活動はリポジトリリストの自動生成とプロジェクトサマリーの更新に集中しています。
+次のステップでは、既存の自動化スクリプトやディレクトリ構造の最適化に焦点を当てることが考えられます。
 
 ## 次の一手候補
-1.  `.github/actions-tmp` ディレクトリの目的と整理の検討 (特定のIssueなし)
-    - 最初の小さな一歩: `.github/actions-tmp` ディレクトリ内の主要なファイル（例: `callgraph.yml`, `issue-note.yml`など）のパスと、それらがどのワークフローで参照されているか、または元々どのソースからコピーされたものかを特定する。
-    - Agent実行プロンプ:
-      ```
-      対象ファイル: `.github/actions-tmp/` 以下の全ファイル
+1. .github/actions-tmp ディレクトリの目的と運用方針の明確化 [Issue #TBD-1](../issue-notes/TBD-1.md)
+   - 最初の小さな一歩: `.github/actions-tmp` 内のファイルと、ルートの `.github/workflows` および `.github_automation` 内のファイルを比較し、重複や差異をリストアップする。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: .github/actions-tmp/ 以下および .github/workflows/、.github_automation/ 以下
 
-      実行内容: `.github/actions-tmp` ディレクトリ内のファイル群が、どのような目的で存在し、現在のプロジェクトにおいてどのような役割を担っているかを調査してください。特に、`_automation` ディレクトリ内のアクションとの重複や、一時的なファイルの残存の可能性について焦点を当てて分析してください。各ファイルの生成元や利用箇所を特定してください。
+     実行内容: .github/actions-tmp/ 内のファイルと、ルートの .github/workflows/ および .github_automation/ 内のファイルを比較し、重複しているファイル、差異があるファイル、および actions-tmp にのみ存在するファイルをリストアップしてください。各ファイルの役割と、なぜ actions-tmp に存在するかについての仮説を立ててください。
 
-      確認事項: このディレクトリのファイルがGitHub Actionsの実行に直接影響を与えるか、または他のワークフロー（特に`.github/workflows/`下の`call-`で始まるワークフロー）から参照されているかどうかを確認してください。また、`actions-tmp`という命名が意図された一時的な使用を意味するのかも考慮してください。
+     確認事項: ファイルの内容だけでなく、ファイル名やパス構造も考慮に入れて比較してください。また、一時的なコピー、テスト用、またはモジュール化されたアクションとしての利用など、複数の可能性を検討してください。
 
-      期待する出力: `actions-tmp` ディレクトリの現状分析レポートをmarkdown形式で出力してください。具体的には、主要なファイル群の役割、潜在的な重複や不要なファイルの指摘、そしてこのディレクトリを整理または削除する際の考慮事項を含めてください。
-      ```
+     期待する出力: 比較結果と分析に基づいた、.github/actions-tmp ディレクトリの目的と運用方針に関する考察をMarkdown形式で出力してください。具体的には、重複ファイルのリスト、差異があるファイルのリスト、actions-tmp 固有ファイルのリスト、および各ファイルセットに対する仮説を含めてください。
+     ```
 
-2.  プロジェクトサマリー生成の堅牢性向上とエラーハンドリングの強化 (特定のIssueなし)
-    - 最初の小さな一歩: `ProjectSummaryCoordinator.cjs` および `DevelopmentStatusGenerator.cjs` 内で既に実装されているエラー捕捉メカニズム（`try-catch`ブロックやPromiseエラーハンドリング）を洗い出し、その適用範囲を文書化する。
-    - Agent実行プロンプ:
-      ```
-      対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectAnalysisOrchestrator.cjs`
+2. 自動生成されるプロジェクトサマリーの精度と最新性の確認 [Issue #TBD-2](../issue-notes/TBD-2.md)
+   - 最初の小さな一歩: `generated-docs/development-status.md` と `generated-docs/project-overview.md` の内容が、現在のリポジトリの状態（特にコミット履歴やファイル構造）と整合しているかを簡易的にレビューする。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: generated-docs/development-status.md, generated-docs/project-overview.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs
 
-      実行内容: プロジェクトサマリー生成処理の主要なスクリプトについて、現在のエラーハンドリングの実装状況と、データ取得・生成プロセスにおける潜在的な失敗シナリオ（APIレート制限、ファイル読み込み失敗、予期せぬデータ形式など）に対する堅牢性を分析してください。特に、各ステップでの失敗が全体プロセスにどのように影響するかを評価してください。
+     実行内容: 現在の generated-docs/development-status.md と generated-docs/project-overview.md の内容を読み込み、それが現在のリポジトリの実際の内容（特にコミット履歴やファイル一覧）とどの程度一致しているかを分析してください。また、これらのドキュメントを生成していると考えられる DevelopmentStatusGenerator.cjs および ProjectOverviewGenerator.cjs のスクリプトの概要を理解し、現在の生成結果との関連性を考察してください。
 
-      確認事項: 各スクリプトがどのようにエラーを捕捉し、ログ出力しているか、また失敗した場合にワークフロー全体にどのような影響を与えるかを確認してください。既存のテストケースやログ出力設定があれば、それらも参照してください。
+     確認事項: 生成されたドキュメントが、最新のコミット情報やファイルリスト、および「現在のオープンIssues」の情報（今回はオープンIssueがないため、その旨が正しく反映されているか）を正確に反映しているかを確認してください。生成スクリプトのロジックが、これらの情報源を適切に利用しているかを推測してください。
 
-      期待する出力: プロジェクトサマリー生成スクリプトの堅牢性に関する分析レポートをmarkdown形式で出力してください。潜在的な弱点と、それらを改善するための具体的な提案（例：より詳細なエラーロギング、リトライメカニズムの導入、入力バリデーションの強化、依存関係の明確化など）を含めてください。
-      ```
+     期待する出力: 自動生成ドキュメントの現状の精度と最新性に関する評価をMarkdown形式で出力してください。不一致や改善点があれば具体的に記述し、関連するスクリプトのどの部分が影響している可能性が高いかを指摘してください。
+     ```
 
-3.  `generate_repo_list` スクリプトのパフォーマンス最適化の検討 (特定のIssueなし)
-    - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` のコードをレビューし、外部API呼び出し（例: GitHub API）が行われている箇所を特定する。
-    - Agent実行プロンプ:
-      ```
-      対象ファイル: `src/generate_repo_list/generate_repo_list.py`, `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/project_overview_fetcher.py`
+3. src/generate_repo_list のPythonコードのテストカバレッジ拡充 [Issue #TBD-3](../issue-notes/TBD-3.md)
+   - 最初の小さな一歩: `pytest` を使用して既存のテストを実行し、テストレポート（カバレッジレポートがあればそれも）を生成し、現状のテストカバレッジを確認する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: src/generate_repo_list/ 以下すべてのPythonファイル, tests/ 以下すべてのPythonテストファイル
 
-      実行内容: `generate_repo_list.py` を中心に、リポジトリ情報の取得、処理、および出力生成の各ステップにおけるパフォーマンスボトルネックとなりうる箇所を特定し、分析してください。特に、外部API呼び出しの効率性、大規模なデータセットを扱う際のメモリ・CPU使用量、そしてファイルI/Oの頻度に焦点を当ててください。
+     実行内容: src/generate_repo_list ディレクトリ内のPythonコードについて、既存のテスト (tests/ ディレクトリ内) がどの程度のカバレッジを提供しているかを分析してください。特に、主要な機能を提供する generate_repo_list.py, repository_processor.py, markdown_generator.py などに対するテストの網羅性を評価してください。
 
-      確認事項: 現在の実装がAPIレート制限にどのように対応しているか、また並行処理やキャッシュ戦略が導入されているかを確認してください。将来的にリポジトリ数が大幅に増加した場合の影響も考慮に入れ、パフォーマンス監視の手段があるかも検討してください。
+     確認事項: pytest および pytest-cov (もしインストールされていれば) を使用してカバレッジレポートを生成できるかを確認し、その結果を元に分析を進めてください。カバレッジが低い、または重要なロジックがテストされていない部分がないかを確認してください。
 
-      期待する出力: `generate_repo_list` スクリプトのパフォーマンス最適化に関する分析レポートをmarkdown形式で出力してください。具体的には、ボトルネックの候補、潜在的な改善策（例：API呼び出しのバッチ処理、効率的なデータ構造の利用、非同期処理の導入、キャッシュの活用など）、およびそれらによる期待される効果を含めてください。
-      ```
+     期待する出力: src/generate_repo_list のPythonコードに対する現在のテストカバレッジの評価をMarkdown形式で出力してください。具体的なカバレッジの数値（可能であれば）と、テストが不足していると思われる主要なモジュールや関数、およびそれらに対して追加すべきテストケースのアイデアを記述してください。
 
 ---
-Generated at: 2026-09-28 07:11:02 JST
+Generated at: 2026-09-29 07:13:06 JST
