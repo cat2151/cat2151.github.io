@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-09-29 (UTC) / 2026-09-30 (JST)
+Last Updated: 2026-09-30 (UTC) / 2026-10-01 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub API を活用し、JekyllベースのGitHub Pagesサイト向けにリポジトリ一覧のMarkdownファイルを自動生成するシステムです。
-- GitHubユーザーページのリポジトリ一覧が抱えるSEO上の課題を解決し、検索エンジンやLLMからの参照性を向上させます。
-- リポジトリの概要、バッジ、分類、SEOメタデータを自動で表示し、情報の可読性とアクセス性を高めます。
-- 📅 2026-09-29 (UTC) / 2026-09-30 (JST)
+- GitHub APIでリポジトリ情報を取得し、GitHub Pages向けMarkdownを自動生成するシステムです。
+- Jekyllサイトのリポジトリ一覧と詳細ページをSEO最適化し、検索エンジンへの露出を向上させます。
+- 各リポジトリのプロジェクト概要を自動取得し、動的な情報表示を実現します。
+- 📅 2026-09-30 (UTC) / 2026-10-01 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
@@ -105,7 +105,7 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-09-29 (UTC) / 2026-09-30 (JST)
+- 📅 2026-09-30 (UTC) / 2026-09-30 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
@@ -114,7 +114,16 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 - **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
 - **Overview**: No description available
-- 📅 2026-09-29 (UTC) / 2026-09-29 (JST)
+- 📅 2026-09-30 (UTC) / 2026-09-30 (JST)
+
+## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
+
+<a href="https://cat2151.github.io/cat-music-patterns/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen)
+
+- **Repository**: [https://github.com/cat2151/cat-music-patterns](https://github.com/cat2151/cat-music-patterns)
+- **GitHub Pages**: [https://cat2151.github.io/cat-music-patterns/](https://cat2151.github.io/cat-music-patterns/)
+- **Overview**: No description available
+- 📅 2026-09-30 (UTC) / 2026-09-30 (JST)
 
 ## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
 WIP
@@ -252,15 +261,6 @@ A conversion library from Music Macro Language (MML) to Standard MIDI File (SMF)
 - **GitHub Pages**: [https://cat2151.github.io/digital-garden/](https://cat2151.github.io/digital-garden/)
 - **Overview**: No description available
 - 📅 2026-08-11 (UTC) / 2026-08-11 (JST)
-
-## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
-
-<a href="https://cat2151.github.io/cat-music-patterns/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen)
-
-- **Repository**: [https://github.com/cat2151/cat-music-patterns](https://github.com/cat2151/cat-music-patterns)
-- **GitHub Pages**: [https://cat2151.github.io/cat-music-patterns/](https://cat2151.github.io/cat-music-patterns/)
-- **Overview**: No description available
-- 📅 2026-07-19 (UTC) / 2026-07-19 (JST)
 
 ## [migemo-auto-install-for-windows-and-python](https://cat2151.github.io/migemo-auto-install-for-windows-and-python/)
 
