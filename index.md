@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-10-03 (UTC) / 2026-10-04 (JST)
+Last Updated: 2026-10-04 (UTC) / 2026-10-05 (JST)
 
 ## 📋 Table of Contents
 
@@ -84,6 +84,20 @@ Last Updated: 2026-10-03 (UTC) / 2026-10-04 (JST)
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
 
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを活用し、GitHub Pagesサイト向けにリポジトリ一覧を自動生成するシステムです。
+- SEO最適化されたMarkdownファイルを生成し、検索エンジンやLLMからのリポジトリ参照性を向上させます。
+- 各リポジトリの概要を自動取得・表示し、アクティブ/アーカイブ/フォークで分類された分かりやすい一覧を提供します。
+- 📅 2026-10-04 (UTC) / 2026-10-05 (JST)
+
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
@@ -91,7 +105,7 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-10-03 (UTC) / 2026-10-03 (JST)
+- 📅 2026-10-04 (UTC) / 2026-10-04 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
@@ -110,20 +124,6 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 - **GitHub Pages**: [https://cat2151.github.io/cat-music-patterns/](https://cat2151.github.io/cat-music-patterns/)
 - **Overview**: No description available
 - 📅 2026-10-03 (UTC) / 2026-10-03 (JST)
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub APIを活用し、リポジトリ情報を自動で収集・整理します。
-- JekyllベースのGitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧をMarkdown形式で生成します。
-- 検索エンジンでの発見性を高め、LLMによるリポジトリ参照の精度向上を支援します。
-- 📅 2026-10-02 (UTC) / 2026-10-03 (JST)
 
 ## [cat-repo-auditor](https://cat2151.github.io/cat-repo-auditor/)
 WIP
