@@ -1,48 +1,50 @@
-Last updated: 2026-10-03
+Last updated: 2026-10-05
 
 # Development Status
 
 ## 現在のIssues
-現在オープン中のIssueはありません。
+現在オープン中のIssueは検出されていません。
+プロジェクトは安定した状態にあり、既存の課題解決よりも、
+機能強化やコード品質向上に焦点を当てることが推奨されます。
 
 ## 次の一手候補
-1.  リポジトリリスト生成スクリプトのパフォーマンス改善（新規提案）
-    -   最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py`内のGitHub API呼び出し部分とデータ処理ロジックをレビューし、パフォーマンスボトルネックとなりうる箇所を特定する。
-    -   Agent実行プロンプ:
-        ```
-        対象ファイル: `src/generate_repo_list/generate_repo_list.py`, `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/project_overview_fetcher.py`
-
-        実行内容: 上記ファイルを対象に、リポジトリリスト生成処理のパフォーマンス改善の可能性を分析してください。特にGitHub APIの呼び出し回数、ファイルI/Oの効率、データ処理ロジックに着目し、ボトルネックとなりうる箇所を特定し、改善案を提案してください。
-
-        確認事項: 現在のGitHub APIレートリミット利用状況、既存のキャッシュ戦略（もしあれば）、およびスクリプトが生成するデータ量を確認してください。
-
-        期待する出力: パフォーマンスボトルネックの特定箇所と、それぞれの改善案（例: API呼び出しのバッチ処理、I/Oの最適化、並行処理の導入など）をmarkdown形式で出力してください。
-        ```
-
-2.  プロジェクトサマリー生成プロンプトの明確化と最適化（新規提案）
-    -   最初の小さな一歩: `_github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`を読み込み、現在の出力ガイドラインと照らし合わせ、冗長な表現や曖昧な指示がないかを確認する。
+1.  プロジェクト概要・開発状況レポートの生成ロジックを見直し、要約の精度と出力の安定性を向上させる [Issue #N/A](../issue-notes/N/A.md)
+    -   最初の小さな一歩: `DevelopmentStatusGenerator.cjs` と `ProjectOverviewGenerator.cjs` の主要なロジックを読み解き、特に要約生成部分の課題となりうる箇所を特定する。
     -   Agent実行プロンプト:
         ```
-        対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`
+        対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs, .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs, .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
 
-        実行内容: 対象ファイルの内容を分析し、より明確で、簡潔に、かつ意図する出力（開発状況レポート）を生成するためのプロンプト改善案を検討してください。特に、ハルシネーションを抑制し、必要な情報が確実に引き出されるような表現に着目してください。
+        実行内容: 上記ファイルの内容を分析し、現在の開発状況およびプロジェクト概要の生成ロジックにおいて、ハルシネーション抑制や要約精度の向上に寄与する改善点を特定してください。特に、プロンプトファイルと生成スクリプト間の連携に着目してください。
 
-        確認事項: 現在のプロンプトが過去に生成したレポートの品質、および「生成しないもの」のガイドラインに違反していないかを確認してください。
+        確認事項: 現在の生成ロジックがどのようなデータ（コミット履歴、ファイル一覧、issueなど）をどのように利用しているかを確認してください。また、生成されるMarkdownの構造が期待通りか確認してください。
 
-        期待する出力: 改善されたプロンプトのテキストをmarkdown形式で出力してください。変更点とその理由も合わせて記述してください。
+        期待する出力: 改善点とその理由、そして具体的な修正案をMarkdown形式で記述してください。特に、プロンプトの調整やスクリプトのデータ処理に関する提案を含めてください。
         ```
 
-3.  コアユーティリティ関数のテストカバレッジ拡充（新規提案）
-    -   最初の小さな一歩: `src/generate_repo_list/url_utils.py`内の関数について、既存のテストファイル(`tests/test_*.py`)に不足しているテストケース（特にエッジケースや異常系）を特定する。
+2.  `generate_repo_list.py` のリファクタリングとエラーハンドリング強化による安定性向上 [Issue #N/A](../issue-notes/N/A.md)
+    -   最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` のメイン処理フローを分析し、特に外部サービスAPI呼び出しやファイル書き込み部分での潜在的なエラーポイントを洗い出す。
     -   Agent実行プロンプト:
         ```
-        対象ファイル: `src/generate_repo_list/url_utils.py`, `tests/test_url_utils.py` (必要に応じて新規作成)
+        対象ファイル: src/generate_repo_list/generate_repo_list.py
 
-        実行内容: `src/generate_repo_list/url_utils.py`に含まれるURL処理関数について、既存のテストカバレッジを分析し、特にエッジケース（例: 無効なURL、特殊文字を含むURL）に対応するテストケースが不足しているかを特定してください。不足している場合、そのテストケースを記述してください。
+        実行内容: `generate_repo_list.py` のコードを分析し、外部API呼び出し（もしあれば）やファイルI/O処理におけるエラーハンドリングの現状と、改善の余地がある箇所を特定してください。特に、堅牢性を高めるためのtry-exceptブロックの導入や、リトライメカニズムの可能性について検討してください。
 
-        確認事項: `url_utils.py`の全ての公開関数と、それらが他のコンポーネントでどのように利用されているかを確認してください。既存の`tests/test_*.py`ファイルを参照し、重複を避けてください。
+        確認事項: 現在のスクリプトがどのようなエラーケースを想定しているか、またそれらが適切に処理されているかを確認してください。関連する設定ファイル (`src/generate_repo_list/config.yml` など) も参照し、エラー発生時の挙動に影響がないか確認してください。
 
-        期待する出力: `tests/test_url_utils.py`（新規作成または既存ファイルへの追加）として、不足しているテストケースをPythonコードでmarkdown形式で出力してください。各テストケースが何を検証しているかの簡単な説明も加えてください。
+        期待する出力: 既存のエラーハンドリングの評価、具体的な改善提案、およびそれらの実装によって期待される効果をMarkdown形式で記述してください。
+        ```
+
+3.  `src/generate_repo_list` ディレクトリ内のPythonモジュールのテストカバレッジを分析し、不足しているテストケースを特定する [Issue #N/A](../issue-notes/N/A.md)
+    -   最初の小さな一歩: `pytest.ini` と `tests/` ディレクトリ内の既存テストファイルを確認し、現在どのようにテストが実行され、どのモジュールが対象となっているかを把握する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: src/generate_repo_list/ ディレクトリ配下の全てのPythonファイル、および tests/ ディレクトリ配下の全てのPythonテストファイル
+
+        実行内容: `src/generate_repo_list/` 内のPythonコードと、それに対応する `tests/` 内のテストコードを分析し、カバレッジが低い、または全くテストされていない関数やロジックを特定してください。特に、複雑なビジネスロジックや外部依存性を持つ部分に注目してください。
+
+        確認事項: 現在の `pytest.ini` や `requirements-dev.txt` を確認し、カバレッジ計測ツール（例: `pytest-cov`）が導入可能か、または既に導入されているかを確認してください。テストの実行方法やカバレッジレポートの生成方法についても考慮してください。
+
+        期待する出力: 各モジュールごとのテストカバレッジの現状評価と、カバレッジを向上させるために追加すべき具体的なテストケース（テスト対象の関数名、想定される入力、期待される出力/挙動）をMarkdown形式で記述してください。
 
 ---
-Generated at: 2026-10-03 07:12:14 JST
+Generated at: 2026-10-05 07:12:24 JST
