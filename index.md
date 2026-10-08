@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-10-07 (UTC) / 2026-10-08 (JST)
+Last Updated: 2026-10-08 (UTC) / 2026-10-09 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、個人のGitHub Pagesサイト向けにリポジトリ一覧を自動生成するシステムです。
-- 生成されたページは検索エンジンにクロールされやすく、リポジトリの発見性向上とLLMによる参照失敗の緩和に貢献します。
-- 各リポジトリの概要、バッジ、分類などを自動でマークダウン形式で整形し、SEO最適化されたコンテンツを提供します。
-- 📅 2026-10-07 (UTC) / 2026-10-08 (JST)
+- このプロジェクトは、GitHub APIを利用してリポジトリ情報を自動取得し、JekyllベースのGitHub Pagesサイト用にMarkdownファイルとして一覧を生成します。
+- GitHubのユーザーページで生じるSEO上の課題や、LLMがリポジトリ参照に失敗する問題を解決することを目指しています。
+- 生成されたGitHub Pagesは検索エンジンにクロールされやすくなり、各リポジトリの可視性とアクセス性を向上させます。
+- 📅 2026-10-08 (UTC) / 2026-10-09 (JST)
 
 ## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
 オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
@@ -105,7 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
 - **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
 - **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
-- 📅 2026-10-06 (UTC) / 2026-10-07 (JST)
+- 📅 2026-10-08 (UTC) / 2026-10-08 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
