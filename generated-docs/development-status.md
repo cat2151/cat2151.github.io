@@ -1,50 +1,52 @@
-Last updated: 2026-10-12
+Last updated: 2026-10-13
 
 # Development Status
 
 ## 現在のIssues
-- 現在、プロジェクトにはオープン中のIssueはありません。
-- 全ての既存課題は解決されており、現在アクティブな開発タスクは存在しません。
-- 次の機能開発や既存システムの改善に向けた計画フェーズに進む準備が整っています。
+- 現在、オープン中のIssueはありません。
+- そのため、このプロジェクトには未解決の課題がありません。
+- 全ての報告済み問題は対応済みか、クローズされています。
 
 ## 次の一手候補
-1.  既存のプロジェクトサマリー生成ワークフローのパフォーマンス分析
-    -   最初の小さな一歩: `ProjectSummaryCoordinator.cjs` の実行時間を測定し、処理フロー内で最も時間がかかっている部分を特定する。
-    -   Agent実行プロンプ:
-        ```
-        対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs
+現在オープン中のIssueがないため、これらの候補は既存のIssueには紐付いていません。しかしながら、プロジェクトの継続的な改善のため、以下の開発タスクを提案します。
 
-        実行内容: .github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs の処理ロジックを分析し、特にファイルI/O、API呼び出し、または外部コマンド実行など、パフォーマンス上のボトルネックとなりうる箇所を特定してください。具体的な実行時間の測定は行わず、コードベースからの静的分析に留めます。
-
-        確認事項: ProjectSummaryCoordinator.cjs が呼び出すDevelopmentStatusGenerator.cjsやProjectOverviewGenerator.cjsなどの依存スクリプトの役割と処理内容を確認し、それらのスクリプトがProjectSummaryCoordinator.cjsの全体的なパフォーマンスにどのように影響しているかを考慮してください。
-
-        期待する出力: 静的コード分析の結果、ボトルネックとして考えられる箇所（例: 特定の関数呼び出し、ループ処理、外部I/Oなど）とその理由、および改善の可能性についてMarkdown形式で提案してください。
-        ```
-
-2.  リポジトリリスト生成スクリプトのテストカバレッジ向上
-    -   最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` の既存のテストカバレッジを測定し、カバレッジの低い関数またはテストされていない関数を特定する。
+1.  `generate_repo_list`の出力にリポジトリのスター数とフォーク数を追加する
+    -   最初の小さな一歩: `src/generate_repo_list/repository_processor.py`を分析し、GitHub APIからスター数とフォーク数を取得する方法を特定する。
     -   Agent実行プロンプト:
         ```
-        対象ファイル: src/generate_repo_list/generate_repo_list.py と tests/test_*.py
+        対象ファイル: src/generate_repo_list/repository_processor.py, src/generate_repo_list/markdown_generator.py
 
-        実行内容: プロジェクトのPythonテスト環境（pytest）を利用して、src/generate_repo_list/generate_repo_list.py の現在のテストカバレッジを測定してください。特に、カバレッジが低い、または全くテストされていない関数やメソッドをリストアップしてください。カバレッジ測定はpytest-covを使用することを想定します。
+        実行内容: `src/generate_repo_list/repository_processor.py`にGitHubリポジトリのスター数とフォーク数を取得する機能を追加してください。次に、`src/generate_repo_list/markdown_generator.py`を更新し、生成されるリポジトリリストにこれらの統計情報を含めてください。
 
-        確認事項: pytestがプロジェクトのルートディレクトリから実行可能であり、tests/ディレクトリに存在する既存のテストファイルが正常に動作することを確認してください。また、カバレッジ測定に必要なpytest-covがrequirements-dev.txtに含まれ、インストールされていることを前提とします。
+        確認事項: GitHub APIのレートリミットへの影響、および既存のデータ構造への影響を確認してください。出力形式の整合性を保つこと。
 
-        期待する出力: src/generate_repo_list/generate_repo_list.py の現在のテストカバレッジの概要（全体的な割合と、カバレッジが低い/ない具体的な関数名と行番号）をMarkdown形式で出力してください。
+        期待する出力: 変更された`repository_processor.py`と`markdown_generator.py`のコードをmarkdown形式で出力してください。また、変更後の`generate_repo_list`が生成する`index.md`のサンプル出力を含めてください。
         ```
 
-3.  メインREADMEと自動生成されるプロジェクト概要の整合性確認
-    -   最初の小さな一歩: `README.md` と `generated-docs/project-overview.md` の内容を比較し、最新の情報が両者に反映されているか、または矛盾がないかを確認する。
+2.  開発状況生成プロンプトの改善
+    -   最初の小さな一歩: 現在の`development-status-prompt.md`と`DevelopmentStatusGenerator.cjs`の内容を確認し、より精度の高い要約と次の一手を提案できるよう、改善点を洗い出す。
     -   Agent実行プロンプト:
         ```
-        対象ファイル: README.md と generated-docs/project-overview.md
+        対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs
 
-        実行内容: README.mdとgenerated-docs/project-overview.mdのテキスト内容を比較し、プロジェクトの目的、主要な機能、設定方法、開発状況などの重要な情報に矛盾や古い記述がないか分析してください。特に、generated-docs/project-overview.mdがREADME.mdの情報を適切に要約・反映しているかを確認します。
+        実行内容: `development-status-prompt.md`の内容を分析し、より詳細で具体的な「次の小さな一歩」と「Agent実行プロンプト」を生成できるよう、プロンプトの指示を改善してください。特に、現在のコミット履歴やファイル変更履歴をより効果的に活用する方法を検討してください。
 
-        確認事項: generated-docs/project-overview.mdはdaily-project-summaryワークフローによって自動生成されているため、手動での直接編集は避けるべきです。もし矛盾が見つかった場合、その原因が生成プロンプトやデータソースにある可能性を考慮してください。
+        確認事項: プロンプトの変更がハルシネーションの増加につながらないことを確認してください。既存の出力フォーマットとガイドラインを厳守すること。
 
-        期待する出力: 両ファイル間で発見された重要な矛盾点、古い情報、または改善が必要な箇所をMarkdown形式で具体的にリストアップしてください。もしREADME.mdの更新が必要な場合は、具体的な修正箇所と提案内容を提示してください。
+        期待する出力: 改善された`development-status-prompt.md`の内容をmarkdown形式で出力してください。変更点が適用された場合の効果について、簡潔な説明も含めてください。
+        ```
+
+3.  GitHub Actionsワークフローの定期的な見直しと最適化
+    -   最初の小さな一歩: 現在のワークフロー一覧をレビューし、特に`daily-project-summary.yml`や`generate_repo_list.yml`など、定期実行されているワークフローの実行時間とリソース消費状況を把握する。
+    -   Agent実行プロンプト:
+        ```
+        対象ファイル: .github/workflows/call-daily-project-summary.yml, .github/workflows/generate_repo_list.yml, .github/actions-tmp/.github/workflows/daily-project-summary.yml
+
+        実行内容: `.github/workflows/generate_repo_list.yml`および関連するワークフロー（例: `call-daily-project-summary.yml`）を分析し、パフォーマンスの最適化やリソース消費の削減の可能性を検討してください。具体的には、冗長なステップの削除、キャッシュの活用、より効率的なコマンドの使用などを提案してください。
+
+        確認事項: 提案された変更が既存の機能に影響を与えないこと、およびGitHub Actionsのベストプラクティスに沿っていることを確認してください。
+
+        期待する出力: 最適化案をまとめたmarkdown形式のレポートを出力してください。各最適化案について、対象となるワークフローファイルと具体的な変更内容、期待される効果を記述してください。
 
 ---
-Generated at: 2026-10-12 07:12:35 JST
+Generated at: 2026-10-13 07:13:10 JST
