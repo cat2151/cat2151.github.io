@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-10-14 (UTC) / 2026-10-15 (JST)
+Last Updated: 2026-10-15 (UTC) / 2026-10-16 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、個人のGitHub Pagesサイト向けにリポジトリ一覧を自動生成します。
-- SEO最適化されたMarkdown形式でリポジトリ情報を出力し、検索エンジンからの可視性を高めます。
-- 各リポジトリの概要、バッジ、分類機能を提供し、ポートフォリオサイトとしての利便性を向上させます。
-- 📅 2026-10-14 (UTC) / 2026-10-15 (JST)
+- GitHub Pagesサイト向けに、GitHubリポジトリ一覧を自動生成するシステムです。
+- GitHub APIを利用してリポジトリ情報を取得し、SEOに最適化されたMarkdownファイルを出力します。
+- 検索エンジンでの視認性を高め、LLMによるリポジトリ参照を支援することを目的としています。
+- 📅 2026-10-15 (UTC) / 2026-10-16 (JST)
 
 ## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
 
@@ -105,7 +105,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **Repository**: [https://github.com/cat2151/cat-music-patterns](https://github.com/cat2151/cat-music-patterns)
 - **GitHub Pages**: [https://cat2151.github.io/cat-music-patterns/](https://cat2151.github.io/cat-music-patterns/)
 - **Overview**: No description available
-- 📅 2026-10-14 (UTC) / 2026-10-14 (JST)
+- 📅 2026-10-15 (UTC) / 2026-10-15 (JST)
 
 ## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
 Lightweight library enabling JSON-based description of Tone.js instruments, effects, and playback.
