@@ -1,57 +1,54 @@
-Last updated: 2026-10-19
+Last updated: 2026-10-20
 
 # Development Status
 
 ## 現在のIssues
-- 現在オープンされているIssueはありません。
-- プロジェクトは安定した状態にあり、自動化されたワークフローが定期的に実行されています。
-- 今後の改善点や新機能については、次の一手候補を参照してください。
+- 現在オープン中のIssueはありません。
+- プロジェクトは安定した状態を維持しており、緊急に対処すべき既知のバグや機能不足は見当たりません。
+- これは、既存の自動化されたワークフローが効果的に機能していることを示唆しています。
 
 ## 次の一手候補
-1. .github/actions-tmp ディレクトリの役割と整理 (新規検討)
-   - 最初の小さな一歩: `.github/actions-tmp` ディレクトリの存在理由、含まれるファイルの目的、およびメインのリポジトリにおける位置付けについて調査する。このディレクトリが一時的なキャッシュ、サブモジュール、または単なるコピーであるかを確認する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `.github/actions-tmp/` ディレクトリ内の全ファイル
+1.  リポジトリリスト生成プロセスのパフォーマンス最適化
+    - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` の主要な処理ステップに簡単な時間計測ロギングを追加し、ボトルネックを特定する。
+    - Agent実行プロンプト:
+      ```
+      対象ファイル: `src/generate_repo_list/generate_repo_list.py`
 
-     実行内容: `.github/actions-tmp/` ディレクトリ内のファイルと、ルートディレクトリおよび `.github/workflows` ディレクトリ内の対応するファイルの重複、差異、および関連性を分析してください。このディレクトリの導入経緯や目的（例: 一時的な生成物、サブモジュール、コピーなど）について、ファイル名や内容から推測してください。
+      実行内容: `generate_repo_list.py` 内の `main` 関数または主要なデータ処理ループに対し、リポジトリ情報のフェッチ、処理、Markdown生成といった主要ステップの開始・終了時刻を記録する簡単な時間計測ロギングを追加してください。記録した時間差分を出力するように変更してください。
 
-     確認事項: このディレクトリがGitHub Actionsの実行にどのように影響しているか、または過去にどのような目的で使用されていたかを、関連するワークフローファイル（例: `.github/workflows/*.yml`）も参照して確認してください。
+      確認事項: 既存のロギング設定や出力形式との整合性を確認し、デバッグ実行に影響を与えないよう、環境変数などで時間計測の有効/無効を切り替えられるようにしてください。
 
-     期待する出力: `.github/actions-tmp/` ディレクトリの役割、含まれる主要なファイル、およびその整理（削除、統合、移動など）の可能性に関する分析結果をmarkdown形式で出力してください。具体的には、このディレクトリが不要であるか、整理が必要であるかの根拠と、そのための推奨される具体的なアクションを提案してください。
-     ```
+      期待する出力: 変更後の `src/generate_repo_list/generate_repo_list.py` のコード差分をmarkdown形式で提示してください。また、時間計測ロギングの有効化方法と出力例を説明してください。
+      ```
 
-2. src/generate_repo_list モジュールのテストカバレッジ向上 (新規検討)
-   - 最初の小さな一歩: `src/generate_repo_list` ディレクトリ内のPythonスクリプト（特に `generate_repo_list.py`, `repository_processor.py`, `markdown_generator.py` など主要なロジックを持つファイル）について、既存のテストファイル (`tests/test_*.py`) と比較し、テストされていない主要な関数やロジックを特定する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: `src/generate_repo_list/*.py` および `tests/test_*.py`
+2.  PythonコードベースのRuffリンティング自動化導入
+    - 最初の小さな一歩: `ruff.toml` の設定に基づき、Ruffリンティングを実行するGitHub Actionsワークフローのドラフトを作成し、手動でテストできる状態にする。
+    - Agent実行プロンプト:
+      ```
+      対象ファイル: `.github/workflows/` ディレクトリ配下に新規ファイルを作成（例: `call-ruff-lint.yml`）
 
-     実行内容: `src/generate_repo_list` ディレクトリ内の各Pythonファイルについて、既存の `tests/` ディレクトリ内のテストファイルがどの程度カバレッジしているかを静的分析により推定してください。特に、主要なビジネスロジックやデータ処理を担当する関数にテストが不足している箇所を特定してください。
+      実行内容: プロジェクトのPythonコードベース（特に `src/` ディレクトリ以下）に対してRuffリンティングを実行する新しいGitHub Actionsワークフローを作成してください。このワークフローは、プルリクエスト時と特定ブランチへのプッシュ時に自動的にトリガーされ、Ruffのキャッシュを活用して効率的なチェックが行われるように設定してください。
 
-     確認事項: 既存のテストスイートが実行可能であること、および `pytest.ini` や `requirements.txt` を参照して必要な依存関係を確認してください。
+      確認事項: 既存のCI/CDワークフロー（例: `call-check-large-files.yml`）との競合がないこと、および既存のPython開発環境（`requirements-dev.txt` など）と互換性があることを確認してください。
 
-     期待する出力: テストカバレッジが低い、またはテストが不足していると推定される `src/generate_repo_list` 内のファイルと関数をリストアップし、それぞれについて「不足しているテストのタイプ（例: ユニットテスト、統合テスト）」と「テストを追加する際の考慮点」をmarkdown形式で出力してください。また、改善されたカバレッジを測定するためのツール（例: `coverage.py`）の導入を検討してください。
-     ```
+      期待する出力: 新しいGitHub Actionsワークフローファイル（例: `.github/workflows/call-ruff-lint.yml`）の内容をmarkdown形式で提示してください。
+      ```
 
-3. プロジェクト概要生成プロンプトの改善 (新規検討)
-   - 最初の小さな一歩: `generated-docs/project-overview.md` の現在の内容を確認し、`.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md` のプロンプトがどのように現在の出力に影響しているかを分析する。改善の余地がある具体的なセクションや表現を特定する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル:
-     - .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
-     - .github/actions-tmp/generated-docs/project-overview.md
-     - .github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs
+3.  開発状況レポート（Development Status）の精度向上
+    - 最初の小さな一歩: `development-status-prompt.md` の内容を見直し、「オープン中のIssueがない」状況での出力が、プロジェクトの健康状態や次の開発フェーズへの示唆をより適切に含めるように調整する。
+    - Agent実行プロンプト:
+      ```
+      対象ファイル: `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`
 
-     実行内容:
-     `project-overview-prompt.md` の内容が `generated-docs/project-overview.md` の生成結果にどのように反映されているかを分析してください。特に、生成されるドキュメントの「情報の網羅性」「表現の明確さ」「読みやすさ」の観点から、現在のプロンプトに改善の余地があるかを検討してください。例えば、より具体的な指示を追加する、不要な制約を削除する、期待する出力形式をより詳細に記述するといった視点で分析してください。
+      実行内容: `development-status-prompt.md` の内容を編集し、現在の開発状況（オープン中のIssueがない場合を含む）をより深く分析し、次のアクション候補をより戦略的に提案できるようにプロンプトを改善してください。具体的には、以下の点を考慮してください。
+      - オープンIssueがない場合の要約を、単なる「Issueなし」ではなく、プロジェクトの安定性や次の焦点について言及するよう改善する。
+      - 次の一手候補の選定において、既存の機能改善、コード品質向上、ドキュメント強化など、幅広い観点から提案を促すように調整する。
+      - ハルシネーションを防ぐための指示をより明確にする。
 
-     確認事項:
-     現在のプロンプトが意図通りに機能しているか、またはハルシネーションを誘発するような曖昧な表現がないかを確認してください。また、`ProjectOverviewGenerator.cjs` のロジックがプロンプトの指示をどのように解釈・利用しているかも考慮に入れてください。
+      確認事項: プロンプトの変更が、開発状況生成プロンプトの「生成しないもの」の要件（ハルシネーションの回避、ユーザー提案の回避）と矛盾しないことを確認してください。
 
-     期待する出力:
-     `project-overview-prompt.md` の改善案をmarkdown形式で出力してください。具体的には、既存のプロンプトのどの部分をどのように変更するか（例: 箇条書きの追加、セクションの追加、表現の修正）を記述し、その変更が生成される `project-overview.md` の品質をどのように向上させるかを説明してください。
-     ```
+      期待する出力: 変更後の `development-status-prompt.md` の内容をmarkdown形式で提示してください。
+      ```
 
 ---
-Generated at: 2026-10-19 07:10:29 JST
+Generated at: 2026-10-20 07:12:00 JST
