@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-10-19 (UTC) / 2026-10-20 (JST)
+Last Updated: 2026-10-20 (UTC) / 2026-10-21 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、GitHub Pages向けにリポジトリ一覧を自動生成するシステムです。
-- 検索エンジンのクロールを促進し、LLMによるリポジトリ参照の精度向上に貢献します。
-- 各リポジトリの概要やバッジ表示、アクティブ/アーカイブ分類に対応しています。
-- 📅 2026-10-19 (UTC) / 2026-10-20 (JST)
+- GitHub APIを活用し、GitHub Pagesサイト向けにリポジトリ一覧を自動生成するシステムです。
+- 生成されたMarkdownファイルは、Jekyllベースのウェブサイトに最適化されています。
+- 検索エンジンからのクロールを促進し、LLMによるリポジトリ参照精度向上を目指します。
+- 📅 2026-10-20 (UTC) / 2026-10-21 (JST)
 
 ## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
 オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
@@ -105,7 +105,16 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
 - **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
 - **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
-- 📅 2026-10-19 (UTC) / 2026-10-19 (JST)
+- 📅 2026-10-20 (UTC) / 2026-10-20 (JST)
+
+## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
+
+<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
+- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
+- **Overview**: No description available
+- 📅 2026-10-20 (UTC) / 2026-10-20 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
@@ -263,15 +272,6 @@ A Quartz transformer plugin that converts MML (Music Macro Language) and chord n
 
 - **Repository**: [https://github.com/cat2151/bluesky-text-to-audio](https://github.com/cat2151/bluesky-text-to-audio)
 - **GitHub Pages**: [https://cat2151.github.io/bluesky-text-to-audio/](https://cat2151.github.io/bluesky-text-to-audio/)
-- **Overview**: No description available
-- 📅 2026-10-18 (UTC) / 2026-10-18 (JST)
-
-## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
-
-<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
-- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
 - **Overview**: No description available
 - 📅 2026-10-18 (UTC) / 2026-10-18 (JST)
 
