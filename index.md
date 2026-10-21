@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 113 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
+og_description: "Featuring 115 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 113 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
+twitter_description: "Featuring 115 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 113 open source projects.",
+      "description": "Programmer and developer. Publishing 115 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 113 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript.",
+    "description": "Featuring 115 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-10-20 (UTC) / 2026-10-21 (JST)
+Last Updated: 2026-10-21 (UTC) / 2026-10-22 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2026-10-20 (UTC) / 2026-10-21 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-113-blue) ![Active](https://img.shields.io/badge/Active-85-green) ![Archived](https://img.shields.io/badge/Archived-23-yellow) ![Forks](https://img.shields.io/badge/Forks-5-purple) ![Stars](https://img.shields.io/badge/Total Stars-60-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-115-blue) ![Active](https://img.shields.io/badge/Active-87-green) ![Archived](https://img.shields.io/badge/Archived-23-yellow) ![Forks](https://img.shields.io/badge/Forks-5-purple) ![Stars](https://img.shields.io/badge/Total Stars-60-gold)
 
 ### Core Technologies
 
-![Rust](https://img.shields.io/badge/Rust-25_(22.1%25)-dea584?style=flat&logo=rust) ![JavaScript](https://img.shields.io/badge/JavaScript-25_(22.1%25)-f1e05a?style=flat&logo=javascript) ![TypeScript](https://img.shields.io/badge/TypeScript-16_(14.2%25)-3178c6?style=flat&logo=typescript) ![Python](https://img.shields.io/badge/Python-14_(12.4%25)-3572A5?style=flat&logo=python) ![HTML](https://img.shields.io/badge/HTML-6_(5.3%25)-e34c26?style=flat&logo=html5)
+![Rust](https://img.shields.io/badge/Rust-27_(23.5%25)-dea584?style=flat&logo=rust) ![JavaScript](https://img.shields.io/badge/JavaScript-25_(21.7%25)-f1e05a?style=flat&logo=javascript) ![TypeScript](https://img.shields.io/badge/TypeScript-16_(13.9%25)-3178c6?style=flat&logo=typescript) ![Python](https://img.shields.io/badge/Python-14_(12.2%25)-3572A5?style=flat&logo=python) ![HTML](https://img.shields.io/badge/HTML-6_(5.2%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -93,10 +93,28 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、GitHub Pagesサイト向けにリポジトリ一覧を自動生成するシステムです。
-- 生成されたMarkdownファイルは、Jekyllベースのウェブサイトに最適化されています。
-- 検索エンジンからのクロールを促進し、LLMによるリポジトリ参照精度向上を目指します。
-- 📅 2026-10-20 (UTC) / 2026-10-21 (JST)
+- GitHub Pagesサイト向けにリポジトリ一覧を自動生成し、検索エンジン最適化（SEO）を強化します。
+- GitHub APIを活用してリポジトリ情報を取得し、Jekyllに対応したMarkdownファイルとして出力します。
+- 各リポジトリの概要を自動抽出し、訪問者にとって分かりやすく、魅力的な情報提供を目指します。
+- 📅 2026-10-21 (UTC) / 2026-10-22 (JST)
+
+## [lib-respect](https://cat2151.github.io/lib-respect/)
+自分のリポジトリの依存ライブラリを可視化し、その作者のGitHubをリスペクトを込めて訪問できるTUI。Rustで書かれています。
+
+<a href="https://cat2151.github.io/lib-respect/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: github](https://img.shields.io/badge/Topic-github-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
+
+- **Repository**: [https://github.com/cat2151/lib-respect](https://github.com/cat2151/lib-respect)
+- **GitHub Pages**: [https://cat2151.github.io/lib-respect/](https://cat2151.github.io/lib-respect/)
+- 📅 2026-10-21 (UTC) / 2026-10-21 (JST)
+
+## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
+Standard MIDI Fileを編集するeditorを目指している。まだほとんどeditできない
+
+<a href="https://cat2151.github.io/cat-smf-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: audio-processing](https://img.shields.io/badge/Topic-audio--processing-lightblue) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: midi](https://img.shields.io/badge/Topic-midi-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-smf-editor](https://github.com/cat2151/cat-smf-editor)
+- **GitHub Pages**: [https://cat2151.github.io/cat-smf-editor/](https://cat2151.github.io/cat-smf-editor/)
+- 📅 2026-10-21 (UTC) / 2026-10-21 (JST)
 
 ## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
 オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
@@ -105,7 +123,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
 - **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
 - **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
-- 📅 2026-10-20 (UTC) / 2026-10-20 (JST)
+- 📅 2026-10-20 (UTC) / 2026-10-21 (JST)
 
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
 
