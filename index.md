@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-10-21 (UTC) / 2026-10-22 (JST)
+Last Updated: 2026-10-22 (UTC) / 2026-10-23 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,37 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けにリポジトリ一覧を自動生成し、検索エンジン最適化（SEO）を強化します。
-- GitHub APIを活用してリポジトリ情報を取得し、Jekyllに対応したMarkdownファイルとして出力します。
-- 各リポジトリの概要を自動抽出し、訪問者にとって分かりやすく、魅力的な情報提供を目指します。
-- 📅 2026-10-21 (UTC) / 2026-10-22 (JST)
+- GitHub APIを利用し、個人のGitHubリポジトリ情報を自動で取得・処理します。
+- 取得した情報から、GitHub Pagesサイト（`<username>.github.io`）向けのSEO最適化されたリポジトリ一覧Markdownファイルを生成します。
+- これにより、リポジトリ一覧が検索エンジンにクロールされやすくなり、各リポジトリの発見性やLLMからの参照性を向上させます。
+- 📅 2026-10-22 (UTC) / 2026-10-23 (JST)
+
+## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
+
+<a href="https://cat2151.github.io/cat-music-patterns/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![LilyPond](https://img.shields.io/badge/LilyPond-6c757d?style=flat&logo=github)
+
+- **Repository**: [https://github.com/cat2151/cat-music-patterns](https://github.com/cat2151/cat-music-patterns)
+- **GitHub Pages**: [https://cat2151.github.io/cat-music-patterns/](https://cat2151.github.io/cat-music-patterns/)
+- **Overview**: No description available
+- 📅 2026-10-22 (UTC) / 2026-10-22 (JST)
+
+## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
+オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
+
+<a href="https://cat2151.github.io/cat-plugin-player/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: plugin-host](https://img.shields.io/badge/Topic-plugin--host-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
+- **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
+- 📅 2026-10-22 (UTC) / 2026-10-22 (JST)
+
+## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
+
+<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
+- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
+- **Overview**: No description available
+- 📅 2026-10-22 (UTC) / 2026-10-22 (JST)
 
 ## [lib-respect](https://cat2151.github.io/lib-respect/)
 自分のリポジトリの依存ライブラリを可視化し、その作者のGitHubをリスペクトを込めて訪問できるTUI。Rustで書かれています。
@@ -105,7 +132,7 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 
 - **Repository**: [https://github.com/cat2151/lib-respect](https://github.com/cat2151/lib-respect)
 - **GitHub Pages**: [https://cat2151.github.io/lib-respect/](https://cat2151.github.io/lib-respect/)
-- 📅 2026-10-21 (UTC) / 2026-10-21 (JST)
+- 📅 2026-10-22 (UTC) / 2026-10-22 (JST)
 
 ## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
 Standard MIDI Fileを編集するeditorを目指している。まだほとんどeditできない
@@ -115,24 +142,6 @@ Standard MIDI Fileを編集するeditorを目指している。まだほとん�
 - **Repository**: [https://github.com/cat2151/cat-smf-editor](https://github.com/cat2151/cat-smf-editor)
 - **GitHub Pages**: [https://cat2151.github.io/cat-smf-editor/](https://cat2151.github.io/cat-smf-editor/)
 - 📅 2026-10-21 (UTC) / 2026-10-21 (JST)
-
-## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
-オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
-
-<a href="https://cat2151.github.io/cat-plugin-player/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: plugin-host](https://img.shields.io/badge/Topic-plugin--host-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
-- **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
-- 📅 2026-10-20 (UTC) / 2026-10-21 (JST)
-
-## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
-
-<a href="https://cat2151.github.io/mascot-render-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/mascot-render-server](https://github.com/cat2151/mascot-render-server)
-- **GitHub Pages**: [https://cat2151.github.io/mascot-render-server/](https://cat2151.github.io/mascot-render-server/)
-- **Overview**: No description available
-- 📅 2026-10-20 (UTC) / 2026-10-20 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
@@ -327,15 +336,6 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-10-17 (UTC) / 2026-10-17 (JST)
-
-## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
-
-<a href="https://cat2151.github.io/cat-music-patterns/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![LilyPond](https://img.shields.io/badge/LilyPond-6c757d?style=flat&logo=github)
-
-- **Repository**: [https://github.com/cat2151/cat-music-patterns](https://github.com/cat2151/cat-music-patterns)
-- **GitHub Pages**: [https://cat2151.github.io/cat-music-patterns/](https://cat2151.github.io/cat-music-patterns/)
-- **Overview**: No description available
 - 📅 2026-10-17 (UTC) / 2026-10-17 (JST)
 
 ## [tonejs-json-sequencer](https://cat2151.github.io/tonejs-json-sequencer/)
