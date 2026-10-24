@@ -1,4 +1,4 @@
-Last updated: 2026-10-24
+Last updated: 2026-10-25
 
 # 開発状況生成プロンプト（開発者向け）
 
@@ -280,6 +280,8 @@ Last updated: 2026-10-24
 
 ## 最近の変更（過去7日間）
 ### コミット履歴:
+7070933 Auto-update repository list - 2026-10-23
+dd28c0f Update project summaries (overview & development status) [auto]
 eae2cb6 Auto-update repository list - 2026-10-22
 5e9176d Update project summaries (overview & development status) [auto]
 d9bc456 Auto-update repository list - 2026-10-21
@@ -288,8 +290,6 @@ ea45211 Update project summaries (overview & development status) [auto]
 c0f1bad Update project summaries (overview & development status) [auto]
 d3e1a05 Auto-update repository list - 2026-10-19
 b01f05f Update project summaries (overview & development status) [auto]
-4931c9d Auto-update repository list - 2026-10-18
-5d8a0c8 Update project summaries (overview & development status) [auto]
 
 ### 変更されたファイル:
 generated-docs/development-status-generated-prompt.md
@@ -300,4 +300,4 @@ index.md
 
 
 ---
-Generated at: 2026-10-24 07:10:53 JST
+Generated at: 2026-10-25 07:09:54 JST
