@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-10-23 (UTC) / 2026-10-24 (JST)
+Last Updated: 2026-10-24 (UTC) / 2026-10-25 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,33 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを活用し、ユーザーのリポジトリ情報を自動取得するシステムです。
-- 取得した情報をもとにGitHub Pages向けのSEO最適化されたリポジトリ一覧Markdownを生成します。
-- 検索エンジンでの発見性を高め、LLMによるリポジトリ参照精度を向上させることを目的としています。
-- 📅 2026-10-23 (UTC) / 2026-10-24 (JST)
+- GitHub APIを活用し、JekyllベースのGitHub Pagesサイト向けにリポジトリ一覧を自動生成するシステムです。
+- リポジトリ情報からSEOに最適化されたMarkdownファイルを生成し、Webサイトに公開します。
+- これにより、検索エンジンやLLMによるリポジトリの参照性を向上させ、情報発見と開発効率の向上を目指します。
+- 📅 2026-10-24 (UTC) / 2026-10-25 (JST)
+
+## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
+File Change Monitoring Tool - Detects file changes and executes commands
+
+<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-file-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
+
+- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
+- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
+
+### Project Highlights
+- `cat-file-watcher`は、ファイルの変更を監視し、変更が検知された際に指定されたコマンドを自動実行するツールです。
+- TOML形式の設定ファイルにより、複数のファイルやディレクトリの監視、カスタムコマンドの実行、監視間隔の調整が可能です。
+- 軽量かつ柔軟な設定で、開発や自動化タスクにおいてファイル更新トリガーの処理を効率化します。
+- 📅 2026-10-24 (UTC) / 2026-10-24 (JST)
+
+## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
+
+<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
+- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
+- **Overview**: No description available
+- 📅 2026-10-24 (UTC) / 2026-10-24 (JST)
 
 ## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
 Standard MIDI Fileを編集するeditorを目指している。まだほとんどeditできない
@@ -105,7 +128,7 @@ Standard MIDI Fileを編集するeditorを目指している。まだほとん�
 
 - **Repository**: [https://github.com/cat2151/cat-smf-editor](https://github.com/cat2151/cat-smf-editor)
 - **GitHub Pages**: [https://cat2151.github.io/cat-smf-editor/](https://cat2151.github.io/cat-smf-editor/)
-- 📅 2026-10-23 (UTC) / 2026-10-23 (JST)
+- 📅 2026-10-24 (UTC) / 2026-10-24 (JST)
 
 ## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
 オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
@@ -114,7 +137,7 @@ Standard MIDI Fileを編集するeditorを目指している。まだほとん�
 
 - **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
 - **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
-- 📅 2026-10-23 (UTC) / 2026-10-23 (JST)
+- 📅 2026-10-24 (UTC) / 2026-10-24 (JST)
 
 ## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
 
@@ -235,15 +258,6 @@ A TUI that displays the commit count of your public repositories.
 
 - **Repository**: [https://github.com/cat2151/trace-rush](https://github.com/cat2151/trace-rush)
 - **GitHub Pages**: [https://cat2151.github.io/trace-rush/](https://cat2151.github.io/trace-rush/)
-- **Overview**: No description available
-- 📅 2026-10-18 (UTC) / 2026-10-18 (JST)
-
-## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
-
-<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
-- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
 - **Overview**: No description available
 - 📅 2026-10-18 (UTC) / 2026-10-18 (JST)
 
@@ -646,20 +660,6 @@ crisp-game-libを使って作ったゲーム
 - **GitHub Pages**: None
 - **Overview**: No description available
 - 📅 2026-04-06 (UTC) / 2026-04-06 (JST)
-
-## [cat-file-watcher](https://cat2151.github.io/cat-file-watcher/)
-File Change Monitoring Tool - Detects file changes and executes commands
-
-<a href="https://cat2151.github.io/cat-file-watcher/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Stars](https://img.shields.io/badge/Stars-2-yellow) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python) ![Topic: execute-command](https://img.shields.io/badge/Topic-execute--command-lightblue) ![Topic: file-change-detection](https://img.shields.io/badge/Topic-file--change--detection-lightblue) ![Topic: process-monitoring](https://img.shields.io/badge/Topic-process--monitoring-lightblue) <a href="README.md"><img src="https://img.shields.io/badge/🇺🇸-English-blue.svg" alt="English"></a> <a href="https://deepwiki.com/cat2151/cat-file-watcher"><img src="https://deepwiki.com/badge.svg" alt="Ask DeepWiki"></a>
-
-- **Repository**: [https://github.com/cat2151/cat-file-watcher](https://github.com/cat2151/cat-file-watcher)
-- **GitHub Pages**: [https://cat2151.github.io/cat-file-watcher/](https://cat2151.github.io/cat-file-watcher/)
-
-### Project Highlights
-- `cat-file-watcher`は、ファイルの変更を監視し、変更が検知された際に指定されたコマンドを自動実行するツールです。
-- TOML形式の設定ファイルにより、複数のファイルやディレクトリの監視、カスタムコマンドの実行、監視間隔の調整が可能です。
-- 軽量かつ柔軟な設定で、開発や自動化タスクにおいてファイル更新トリガーの処理を効率化します。
-- 📅 2026-03-29 (UTC) / 2026-03-30 (JST)
 
 ## [msys2-auto-install](https://cat2151.github.io/msys2-auto-install/)
 MSYS2 auto install
