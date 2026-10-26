@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-10-25 (UTC) / 2026-10-26 (JST)
+Last Updated: 2026-10-26 (UTC) / 2026-10-27 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- このプロジェクトは、GitHub APIを利用してリポジトリ情報を取得し、JekyllベースのGitHub Pagesサイト用にMarkdownファイルを自動生成するシステムです。
-- GitHubユーザーページのリポジトリ一覧が検索エンジンにクロールされにくい課題に対し、GitHub Pages側でSEO最適化されたリポジトリ一覧を生成することで解決を試みます。
-- これにより、リポジトリが検索結果に表示されやすくなり、ClaudeなどのLLMがリポジトリ情報を参照しやすくなる効果が期待されます。
-- 📅 2026-10-25 (UTC) / 2026-10-26 (JST)
+- GitHub APIを利用し、指定されたユーザーのリポジトリ情報を取得します。
+- 取得した情報に基づき、SEO最適化されたGitHub Pages向けリポジトリ一覧のMarkdownファイルを自動生成します。
+- 検索エンジンからのクロールを促進し、LLMによるリポジトリ参照の精度向上を目指します。
+- 📅 2026-10-26 (UTC) / 2026-10-27 (JST)
+
+## [lib-respect](https://cat2151.github.io/lib-respect/)
+自分のリポジトリの依存ライブラリを可視化し、その作者のGitHubをリスペクトを込めて訪問できるTUI。Rustで書かれています。
+
+<a href="https://cat2151.github.io/lib-respect/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: github](https://img.shields.io/badge/Topic-github-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
+
+- **Repository**: [https://github.com/cat2151/lib-respect](https://github.com/cat2151/lib-respect)
+- **GitHub Pages**: [https://cat2151.github.io/lib-respect/](https://cat2151.github.io/lib-respect/)
+- 📅 2026-10-26 (UTC) / 2026-10-26 (JST)
 
 ## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
 Standard MIDI Fileを編集するeditorを目指している。まだほとんどeditできない
@@ -114,15 +123,6 @@ Standard MIDI Fileを編集するeditorを目指している。まだほとん�
 
 - **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
 - **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
-- 📅 2026-10-25 (UTC) / 2026-10-25 (JST)
-
-## [lib-respect](https://cat2151.github.io/lib-respect/)
-自分のリポジトリの依存ライブラリを可視化し、その作者のGitHubをリスペクトを込めて訪問できるTUI。Rustで書かれています。
-
-<a href="https://cat2151.github.io/lib-respect/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: github](https://img.shields.io/badge/Topic-github-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
-
-- **Repository**: [https://github.com/cat2151/lib-respect](https://github.com/cat2151/lib-respect)
-- **GitHub Pages**: [https://cat2151.github.io/lib-respect/](https://cat2151.github.io/lib-respect/)
 - 📅 2026-10-25 (UTC) / 2026-10-25 (JST)
 
 ## [cat-gh-repo-creator](https://cat2151.github.io/cat-gh-repo-creator/)
