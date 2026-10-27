@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-10-26 (UTC) / 2026-10-27 (JST)
+Last Updated: 2026-10-27 (UTC) / 2026-10-28 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、指定されたユーザーのリポジトリ情報を取得します。
-- 取得した情報に基づき、SEO最適化されたGitHub Pages向けリポジトリ一覧のMarkdownファイルを自動生成します。
-- 検索エンジンからのクロールを促進し、LLMによるリポジトリ参照の精度向上を目指します。
-- 📅 2026-10-26 (UTC) / 2026-10-27 (JST)
+- GitHub APIを活用し、GitHub Pages向けにリポジトリ一覧を自動生成します。
+- 検索エンジンやLLMからの参照性を向上させ、リポジトリ情報を効率的に公開します。
+- 各リポジトリの概要、技術バッジ、分類などを自動でマークダウンに出力します。
+- 📅 2026-10-27 (UTC) / 2026-10-28 (JST)
+
+## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
+
+<a href="https://cat2151.github.io/cat-music-patterns/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![LilyPond](https://img.shields.io/badge/LilyPond-6c757d?style=flat&logo=github)
+
+- **Repository**: [https://github.com/cat2151/cat-music-patterns](https://github.com/cat2151/cat-music-patterns)
+- **GitHub Pages**: [https://cat2151.github.io/cat-music-patterns/](https://cat2151.github.io/cat-music-patterns/)
+- **Overview**: No description available
+- 📅 2026-10-27 (UTC) / 2026-10-27 (JST)
 
 ## [lib-respect](https://cat2151.github.io/lib-respect/)
 自分のリポジトリの依存ライブラリを可視化し、その作者のGitHubをリスペクトを込めて訪問できるTUI。Rustで書かれています。
@@ -141,15 +150,6 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
 - **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-10-25 (UTC) / 2026-10-25 (JST)
-
-## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
-
-<a href="https://cat2151.github.io/cat-music-patterns/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![LilyPond](https://img.shields.io/badge/LilyPond-6c757d?style=flat&logo=github)
-
-- **Repository**: [https://github.com/cat2151/cat-music-patterns](https://github.com/cat2151/cat-music-patterns)
-- **GitHub Pages**: [https://cat2151.github.io/cat-music-patterns/](https://cat2151.github.io/cat-music-patterns/)
-- **Overview**: No description available
 - 📅 2026-10-25 (UTC) / 2026-10-25 (JST)
 
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
