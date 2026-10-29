@@ -1,57 +1,51 @@
-Last updated: 2026-10-29
+Last updated: 2026-10-30
 
 # Development Status
 
 ## 現在のIssues
-現在オープン中のIssueはありません。
-プロジェクトは自動更新プロセスが順調に機能しており、安定した運用状態にあります。
-次のステップとして、既存の自動化ワークフローやドキュメント生成プロセスのさらなる最適化が考えられます。
+- 現在オープン中のIssueはありません。プロジェクトは安定した状態にあります。
+- 最近の変更は主にリポジトリリストとプロジェクトサマリーの自動更新に関するものです。
+- 今後の開発は、既存の自動化の改善やコード品質の維持に焦点を当てることが考えられます。
 
 ## 次の一手候補
-1. [Issue #101](../issue-notes/101.md) 開発状況生成プロンプトの精度向上と具体化
-   - 最初の小さな一歩: 現在使用されている `development-status-prompt.md` の内容を分析し、より具体的で詳細な情報を引き出すための改善点を特定する。
+1. 自動生成ドキュメントの出力品質向上を検討 [Issue #None](../issue-notes/None.md)
+   - 最初の小さな一歩: `generated-docs/development-status.md` と `generated-docs/project-overview.md` の現在の内容を確認し、このプロンプトの指示とどれだけ乖離があるか、または改善の余地があるかを分析する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+     対象ファイル: generated-docs/development-status.md, generated-docs/project-overview.md, .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md
 
-     実行内容: 現在の開発状況生成プロンプトの内容を詳細に分析し、以下の観点から改善点を洗い出してください。
-     1. プロンプトの指示が不明瞭な箇所や、曖昧な表現はないか。
-     2. より網羅的で具体的な開発状況を報告させるための、追加すべき指示内容。
-     3. 不正確な情報やハルシネーションを抑制するための指示の強化。
-     4. 出力フォーマットの厳密さを向上させるための変更提案。
+     実行内容: `generated-docs/development-status.md` と `generated-docs/project-overview.md` の最新の出力を読み込み、その内容がプロジェクトの現状を正確かつ簡潔に反映しているか、またユーザー（開発者）にとって十分有用な情報を提供できているかを評価してください。特に、不要な情報の有無や、不足している情報の有無を観点とします。
 
-     確認事項: 現在のプロンプトがどのように利用され、どのような出力を生成しているかの現状を深く理解してください。特に「ハルシネーションの温床なので生成しない」という上位の制約との整合性を最優先で確認してください。
+     確認事項: 評価にあたり、各ドキュメントが生成される際に使用されているプロンプトファイル（`development-status-prompt.md`, `project-overview-prompt.md`）の内容も参照し、プロンプトの意図と出力の整合性を確認してください。
 
-     期待する出力: 分析結果をmarkdown形式で出力し、具体的な改善提案をリストアップしてください。提案には、元のプロンプトの該当箇所と、修正案、およびその修正の意図を明記してください。
+     期待する出力: 現在の自動生成ドキュメントの品質に関する評価レポートをMarkdown形式で出力してください。改善点や提案があれば具体的に記述してください。
      ```
 
-2. [Issue #102](../issue-notes/102.md) `.github/actions-tmp/` 内の自動化スクリプト・ワークフローの整理と最適化
-   - 最初の小さな一歩: `.github/actions-tmp/` ディレクトリ内に存在するGitHub Actionsワークフローファイル (`.yml` 拡張子) およびスクリプトファイルと、プロジェクトルートの `.github/workflows/` ディレクトリ内のファイルを比較し、機能的な重複や冗長なファイルがないか洗い出す。
+2. GitHub Actionsワークフローの整理と効率化を検討 [Issue #None](../issue-notes/None.md)
+   - 最初の小さな一歩: `.github/workflows/` および `.github/actions-tmp/.github/workflows/` ディレクトリ内の全ワークフローファイルの一覧を作成し、各ワークフローの目的と実行頻度を把握する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github/workflows/call-*.yml, .github/actions-tmp/.github/workflows/*.yml, .github/actions-tmp/.github_automation/**, .github/workflows/call-*.yml
+     対象ファイル: .github/workflows/*.yml, .github/actions-tmp/.github/workflows/*.yml
 
-     実行内容: 対象ファイル群を詳細に分析し、以下の観点から重複、未使用、または機能的に統合可能な自動化スクリプトやワークフローを特定してください。
-     1. `.github/actions-tmp/` 内のワークフローやスクリプトが、メインの `.github/workflows/` または `.github_automation/` 内のファイルと機能的に重複していないか。
-     2. `.github/actions-tmp/` 内のファイルが、現在プロジェクトのどの部分からも参照されていない、あるいは利用されていない可能性がないか。
-     3. 異なるファイルに分散しているが、論理的に一つのまとまりとして管理できる機能がないか。
+     実行内容: 対象ファイルに存在するGitHub Actionsワークフローをリストアップし、それぞれのワークフローのトリガー、実行するJob、そして使用されているActionsを概要として記述してください。特に、重複している可能性のあるワークフローや、利用されていない可能性のあるワークフローに注目してください。
 
-     確認事項: ファイル名だけでなく、スクリプトの内容、呼び出し元、目的、および実行頻度を考慮し、機能的な重複や利用状況を正確に判断してください。また、一時的なファイルやテスト用ファイルである可能性も考慮に入れ、誤って削除しないよう注意してください。
+     確認事項: ワークフローの依存関係や、他のスクリプト（`.github_automation/`以下）との連携を確認してください。
 
-     期待する出力: 重複または未使用の可能性のあるワークフローやスクリプトのリストをmarkdown形式で出力してください。それぞれの項目には、ファイルパス、簡単な説明、そしてなぜそれが整理対象となりうるかの具体的な理由、および提案される次のアクション（削除、統合、移動など）を記述してください。
+     期待する出力: ワークフローの棚卸し結果をMarkdown形式で出力してください。各ワークフローの概要、および整理や効率化の初期的な提案（例: 共通処理の集約、不要なワークフローの特定）を含めてください。
      ```
 
-3. [Issue #103](../issue-notes/103.md) `src/generate_repo_list/` ディレクトリ配下のPythonスクリプトに対するテストカバレッジの拡充
-   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の全てのPythonファイルをリストアップし、それぞれのファイルが `tests/` ディレクトリ内の既存のテストファイル (`test_*.py`) でどの程度カバーされているか、大まかな対応関係を把握する。
+3. `check-large-files`ワークフローの設定と効果を評価 [Issue #None](../issue-notes/None.md)
+   - 最初の小さな一歩: `.github/workflows/call-check-large-files.yml` と `.github_automation/check_large_files/check-large-files.toml` の内容を確認し、どのようなファイルが「large」とみなされ、どのようにチェックされているかを理解する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/*.py および tests/test_*.py
+     対象ファイル: .github/workflows/call-check-large-files.yml, .github_automation/check_large_files/check-large-files.toml, .github_automation/check_large_files/scripts/check_large_files.py
 
-     実行内容: `src/generate_repo_list/` ディレクトリ配下のPythonファイルについて、現在のテストカバレッジの状況を詳細に分析し、カバレッジが不足している、または全くテストが存在しないモジュールや関数を特定してください。特に、プロジェクトの主要なビジネスロジックやデータ処理を担うファイルに焦点を当て、その機能の信頼性を高めるためのテスト拡充を検討してください。
+     実行内容: `check-large-files`ワークフローがどのように設定されているか（トリガー、使用される設定ファイル、スクリプト）を分析してください。特に、`check-large-files.toml`で定義されている閾値や除外パスが現在のプロジェクトに適しているか、また`check_large_files.py`スクリプトが意図通りに機能しているかを評価してください。
 
-     確認事項: 既存の単体テスト、統合テストがどの程度までコードパスをカバーしているかを、静的分析ツール（例: coverage.pyのレポート）やコードレビューを通じて確認してください。各関数のエッジケースや異常系が適切にテストされているかどうかも評価対象とします。
+     確認事項: 実際のコミット履歴で、大規模ファイルの追加があった場合にこのワークフローが適切に警告を発したか、または発しなかったかを検証できる情報があるかを確認してください。もしそのような履歴がなければ、仮説として設定の妥当性を評価します。
 
-     期待する出力: テストカバレッジが不足している、またはテストが存在しないPythonファイルおよびその中の関数をリストアップし、それぞれに対してどのような種類のテストケース（例: 正常系、異常系、境界値）を追加すべきかの具体的な提案をmarkdown形式で記述してください。各提案には、テストによって担保されるべき機能や振る舞いを明確に記述してください。
+     期待する出力: `check-large-files`ワークフローの現在の構成に関する分析レポートをMarkdown形式で出力してください。設定の妥当性評価、潜在的な改善点、または設定ファイルの更新提案を含めてください。
+     ```
 
 ---
-Generated at: 2026-10-29 07:09:01 JST
+Generated at: 2026-10-30 07:08:52 JST
