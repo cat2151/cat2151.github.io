@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-10-30 (UTC) / 2026-10-31 (JST)
+Last Updated: 2026-10-31 (UTC) / 2026-11-01 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,19 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、リポジトリ情報を自動取得してGitHub Pagesサイト用のMarkdownファイルを生成します。
-- SEO最適化されたリポジトリ一覧ページと、各リポジトリの概要を自動取得し表示します。
-- これにより、GitHub Pages経由での検索エンジンクロールを促進し、LLMによるリポジトリ参照の精度向上を目指します。
-- 📅 2026-10-30 (UTC) / 2026-10-31 (JST)
+- GitHub Pages向けに、GitHub APIを利用してリポジトリ一覧ページを自動生成するシステムです。
+- 検索エンジンのクロールを最適化し、各リポジトリへのアクセス性向上とLLMによる参照問題を緩和します。
+- 各リポジトリの概要文、バッジ、分類などを自動抽出し、SEOに最適化されたMarkdownを出力します。
+- 📅 2026-10-31 (UTC) / 2026-11-01 (JST)
 
-## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
-Standard MIDI Fileを編集するeditorを目指している。まだほとんどeditできない
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 
-<a href="https://cat2151.github.io/cat-smf-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: audio-processing](https://img.shields.io/badge/Topic-audio--processing-lightblue) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: midi](https://img.shields.io/badge/Topic-midi-lightblue)
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
 
-- **Repository**: [https://github.com/cat2151/cat-smf-editor](https://github.com/cat2151/cat-smf-editor)
-- **GitHub Pages**: [https://cat2151.github.io/cat-smf-editor/](https://cat2151.github.io/cat-smf-editor/)
-- 📅 2026-10-30 (UTC) / 2026-10-30 (JST)
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- 📅 2026-10-31 (UTC) / 2026-11-01 (JST)
 
 ## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
 オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
@@ -114,7 +114,25 @@ Standard MIDI Fileを編集するeditorを目指している。まだほとん�
 
 - **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
 - **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
-- 📅 2026-10-29 (UTC) / 2026-10-29 (JST)
+- 📅 2026-10-31 (UTC) / 2026-10-31 (JST)
+
+## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
+Standard MIDI Fileを編集するeditorを目指している。まだほとんどeditできない
+
+<a href="https://cat2151.github.io/cat-smf-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: audio-processing](https://img.shields.io/badge/Topic-audio--processing-lightblue) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: midi](https://img.shields.io/badge/Topic-midi-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-smf-editor](https://github.com/cat2151/cat-smf-editor)
+- **GitHub Pages**: [https://cat2151.github.io/cat-smf-editor/](https://cat2151.github.io/cat-smf-editor/)
+- 📅 2026-10-31 (UTC) / 2026-10-31 (JST)
+
+## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
+
+<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
+- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
+- **Overview**: No description available
+- 📅 2026-10-31 (UTC) / 2026-10-31 (JST)
 
 ## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
 
@@ -143,15 +161,6 @@ Standard MIDI Fileを編集するeditorを目指している。まだほとん�
 - **Overview**: No description available
 - 📅 2026-10-25 (UTC) / 2026-10-25 (JST)
 
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
-
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-10-25 (UTC) / 2026-10-25 (JST)
-
 ## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
 
 <a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
@@ -173,15 +182,6 @@ File Change Monitoring Tool - Detects file changes and executes commands
 - `cat-file-watcher`は、ファイルの変更を監視し、変更が検知された際に指定されたコマンドを自動実行するツールです。
 - TOML形式の設定ファイルにより、複数のファイルやディレクトリの監視、カスタムコマンドの実行、監視間隔の調整が可能です。
 - 軽量かつ柔軟な設定で、開発や自動化タスクにおいてファイル更新トリガーの処理を効率化します。
-- 📅 2026-10-24 (UTC) / 2026-10-24 (JST)
-
-## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
-
-<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
-- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
-- **Overview**: No description available
 - 📅 2026-10-24 (UTC) / 2026-10-24 (JST)
 
 ## [mascot-render-server](https://cat2151.github.io/mascot-render-server/)
