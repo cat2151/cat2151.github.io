@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-10-31 (UTC) / 2026-11-01 (JST)
+Last Updated: 2026-11-01 (UTC) / 2026-11-02 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,28 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pages向けに、GitHub APIを利用してリポジトリ一覧ページを自動生成するシステムです。
-- 検索エンジンのクロールを最適化し、各リポジトリへのアクセス性向上とLLMによる参照問題を緩和します。
-- 各リポジトリの概要文、バッジ、分類などを自動抽出し、SEOに最適化されたMarkdownを出力します。
-- 📅 2026-10-31 (UTC) / 2026-11-01 (JST)
-
-## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
-MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
-
-<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
-- 📅 2026-10-31 (UTC) / 2026-11-01 (JST)
-
-## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
-オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
-
-<a href="https://cat2151.github.io/cat-plugin-player/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: plugin-host](https://img.shields.io/badge/Topic-plugin--host-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
-- **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
-- 📅 2026-10-31 (UTC) / 2026-10-31 (JST)
+- GitHub APIを利用してリポジトリ情報を取得し、JekyllベースのGitHub Pages用Markdownを自動生成します。
+- これにより、リポジトリ一覧や各リポジトリページが検索エンジンにインデックスされやすくなります。
+- LLMがGitHubリポジトリを参照できない課題を緩和し、開発効率向上を目指します。
+- 📅 2026-11-01 (UTC) / 2026-11-02 (JST)
 
 ## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
 Standard MIDI Fileを編集するeditorを目指している。まだほとんどeditできない
@@ -123,7 +105,34 @@ Standard MIDI Fileを編集するeditorを目指している。まだほとん�
 
 - **Repository**: [https://github.com/cat2151/cat-smf-editor](https://github.com/cat2151/cat-smf-editor)
 - **GitHub Pages**: [https://cat2151.github.io/cat-smf-editor/](https://cat2151.github.io/cat-smf-editor/)
-- 📅 2026-10-31 (UTC) / 2026-10-31 (JST)
+- 📅 2026-11-01 (UTC) / 2026-11-01 (JST)
+
+## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
+オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
+
+<a href="https://cat2151.github.io/cat-plugin-player/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: plugin-host](https://img.shields.io/badge/Topic-plugin--host-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
+- **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
+- 📅 2026-11-01 (UTC) / 2026-11-01 (JST)
+
+## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
+MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
+
+<a href="https://cat2151.github.io/clap-mml-render-tui/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: clack](https://img.shields.io/badge/Topic-clack-lightblue) ![Topic: clap](https://img.shields.io/badge/Topic-clap-lightblue) ![Topic: mml](https://img.shields.io/badge/Topic-mml-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue) ![Topic: surge-xt](https://img.shields.io/badge/Topic-surge--xt-lightblue) ![Topic: tui](https://img.shields.io/badge/Topic-tui-lightblue)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-render-tui](https://github.com/cat2151/clap-mml-render-tui)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-render-tui/](https://cat2151.github.io/clap-mml-render-tui/)
+- 📅 2026-11-01 (UTC) / 2026-11-01 (JST)
+
+## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
+
+<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
+- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
+- **Overview**: No description available
+- 📅 2026-11-01 (UTC) / 2026-11-01 (JST)
 
 ## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
 
@@ -158,15 +167,6 @@ Standard MIDI Fileを編集するeditorを目指している。まだほとん�
 
 - **Repository**: [https://github.com/cat2151/cat-gh-repo-creator](https://github.com/cat2151/cat-gh-repo-creator)
 - **GitHub Pages**: [https://cat2151.github.io/cat-gh-repo-creator/](https://cat2151.github.io/cat-gh-repo-creator/)
-- **Overview**: No description available
-- 📅 2026-10-25 (UTC) / 2026-10-25 (JST)
-
-## [clap-mml-play-server](https://cat2151.github.io/clap-mml-play-server/)
-
-<a href="https://cat2151.github.io/clap-mml-play-server/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/clap-mml-play-server](https://github.com/cat2151/clap-mml-play-server)
-- **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
 - **Overview**: No description available
 - 📅 2026-10-25 (UTC) / 2026-10-25 (JST)
 
