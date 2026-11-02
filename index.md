@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-11-01 (UTC) / 2026-11-02 (JST)
+Last Updated: 2026-11-02 (UTC) / 2026-11-03 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,19 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用してリポジトリ情報を取得し、JekyllベースのGitHub Pages用Markdownを自動生成します。
-- これにより、リポジトリ一覧や各リポジトリページが検索エンジンにインデックスされやすくなります。
-- LLMがGitHubリポジトリを参照できない課題を緩和し、開発効率向上を目指します。
-- 📅 2026-11-01 (UTC) / 2026-11-02 (JST)
+- GitHub APIを利用し、リポジトリ情報を自動的に取得します。
+- 取得した情報からGitHub Pages向けにSEO最適化されたリポジトリ一覧Markdownを生成します。
+- これにより、ユーザーのGitHub Pagesサイトの検索エンジンインデックス改善を促進します。
+- 📅 2026-11-02 (UTC) / 2026-11-03 (JST)
+
+## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
+
+<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
+
+- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
+- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
+- **Overview**: No description available
+- 📅 2026-11-02 (UTC) / 2026-11-02 (JST)
 
 ## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
 Standard MIDI Fileを編集するeditorを目指している。まだほとんどeditできない
@@ -133,15 +142,6 @@ MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
 - **GitHub Pages**: [https://cat2151.github.io/clap-mml-play-server/](https://cat2151.github.io/clap-mml-play-server/)
 - **Overview**: No description available
 - 📅 2026-11-01 (UTC) / 2026-11-01 (JST)
-
-## [cat-task-manager](https://cat2151.github.io/cat-task-manager/)
-
-<a href="https://cat2151.github.io/cat-task-manager/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust)
-
-- **Repository**: [https://github.com/cat2151/cat-task-manager](https://github.com/cat2151/cat-task-manager)
-- **GitHub Pages**: [https://cat2151.github.io/cat-task-manager/](https://cat2151.github.io/cat-task-manager/)
-- **Overview**: No description available
-- 📅 2026-10-31 (UTC) / 2026-10-31 (JST)
 
 ## [cat-music-patterns](https://cat2151.github.io/cat-music-patterns/)
 
