@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-11-04 (UTC) / 2026-11-05 (JST)
+Last Updated: 2026-11-05 (UTC) / 2026-11-06 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pagesサイト向けに、リポジトリ情報を自動取得し一覧を生成するシステムです。
-- GitHub APIを用いてリポジトリ詳細情報を取得し、SEO最適化されたMarkdownを出力します。
-- 検索エンジンやLLMからのリポジトリ参照性を高め、開発効率向上に貢献します。
-- 📅 2026-11-04 (UTC) / 2026-11-05 (JST)
+- GitHub APIを利用し、JekyllベースのGitHub Pages向けにリポジトリ一覧を自動生成するシステムです。
+- 生成された一覧は検索エンジンにクロールされやすく、LLMによるリポジトリ参照精度向上に貢献します。
+- SEO最適化されたMarkdown生成や、各リポジトリの概要自動取得機能などを提供します。
+- 📅 2026-11-05 (UTC) / 2026-11-06 (JST)
 
 ## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
 Standard MIDI Fileを編集するeditorを目指している。まだほとんどeditできない
@@ -105,7 +105,7 @@ Standard MIDI Fileを編集するeditorを目指している。まだほとん�
 
 - **Repository**: [https://github.com/cat2151/cat-smf-editor](https://github.com/cat2151/cat-smf-editor)
 - **GitHub Pages**: [https://cat2151.github.io/cat-smf-editor/](https://cat2151.github.io/cat-smf-editor/)
-- 📅 2026-11-04 (UTC) / 2026-11-04 (JST)
+- 📅 2026-11-05 (UTC) / 2026-11-05 (JST)
 
 ## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
 オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
@@ -114,7 +114,7 @@ Standard MIDI Fileを編集するeditorを目指している。まだほとん�
 
 - **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
 - **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
-- 📅 2026-11-04 (UTC) / 2026-11-04 (JST)
+- 📅 2026-11-05 (UTC) / 2026-11-05 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
