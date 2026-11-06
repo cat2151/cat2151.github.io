@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-11-05 (UTC) / 2026-11-06 (JST)
+Last Updated: 2026-11-06 (UTC) / 2026-11-07 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、JekyllベースのGitHub Pages向けにリポジトリ一覧を自動生成するシステムです。
-- 生成された一覧は検索エンジンにクロールされやすく、LLMによるリポジトリ参照精度向上に貢献します。
-- SEO最適化されたMarkdown生成や、各リポジトリの概要自動取得機能などを提供します。
-- 📅 2026-11-05 (UTC) / 2026-11-06 (JST)
+- GitHub APIを利用し、ユーザーのリポジトリ情報を自動で取得・整形します。
+- JekyllベースのGitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧Markdownを生成します。
+- 検索エンジンからの発見性を高め、LLMによるリポジトリ参照を改善することを目指します。
+- 📅 2026-11-06 (UTC) / 2026-11-07 (JST)
 
 ## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
 Standard MIDI Fileを編集するeditorを目指している。まだほとんどeditできない
