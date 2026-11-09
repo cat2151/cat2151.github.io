@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-11-08 (UTC) / 2026-11-09 (JST)
+Last Updated: 2026-11-09 (UTC) / 2026-11-10 (JST)
 
 ## 📋 Table of Contents
 
@@ -93,10 +93,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用してリポジトリ情報を取得し、GitHub Pages用のコンテンツを自動生成するシステムです。
-- JekyllとMarkdownを活用し、リポジトリ一覧や各プロジェクトの概要を効率的に公開します。
-- 検索エンジン最適化(SEO)と大規模言語モデル(LLM)からの参照性向上を目的としています。
-- 📅 2026-11-08 (UTC) / 2026-11-09 (JST)
+- GitHub APIを活用し、GitHub Pagesサイト向けにリポジトリ一覧のMarkdownファイルを自動生成します。
+- これにより、検索エンジンによるサイトのクロールを促進し、リポジトリの可視性を高めます。
+- 各リポジトリの概要自動取得や分類表示など、Jekyll/GitHub Pagesと連携した多彩な機能を提供します。
+- 📅 2026-11-09 (UTC) / 2026-11-10 (JST)
 
 ## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
 Standard MIDI Fileを編集するeditor。演奏はVST3やCLAPなどオーディオプラグインでリッチに
@@ -105,7 +105,7 @@ Standard MIDI Fileを編集するeditor。演奏はVST3やCLAPなどオーディ
 
 - **Repository**: [https://github.com/cat2151/cat-smf-editor](https://github.com/cat2151/cat-smf-editor)
 - **GitHub Pages**: [https://cat2151.github.io/cat-smf-editor/](https://cat2151.github.io/cat-smf-editor/)
-- 📅 2026-11-08 (UTC) / 2026-11-08 (JST)
+- 📅 2026-11-09 (UTC) / 2026-11-09 (JST)
 
 ## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
 オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
