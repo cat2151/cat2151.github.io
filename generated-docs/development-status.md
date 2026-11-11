@@ -1,4 +1,4 @@
-Last updated: 2026-11-11
+Last updated: 2026-11-12
 
 # Development Status
 
@@ -6,43 +6,53 @@ Last updated: 2026-11-11
 オープン中のIssueはありません。
 
 ## 次の一手候補
-1. プロジェクト概要生成スクリプトの改善
-   - 最初の小さな一歩: `development-status-prompt.md` の内容を解析し、`DevelopmentStatusGenerator.cjs` がより詳細な情報を生成できるよう現状のロジックを把握する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs, .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+1.  [Issue #22](../issue-notes/22.md) の内容確認と整理
+    -   最初の小さな一歩: `issue-notes/22.md`と`.github/actions-tmp/issue-notes/22.md`の内容を比較し、差分とそれぞれのファイルが存在する意図を調査する。
+    -   Agent実行プロンプ:
+        ```
+        対象ファイル: issue-notes/22.md, .github/actions-tmp/issue-notes/22.md
 
-     実行内容: `DevelopmentStatusGenerator.cjs` が `development-status-prompt.md` のガイドライン（特に「次の一手候補」と「Agent実行プロンプト」の生成に関する要件）をどれだけ満たしているかを分析し、現状の課題点をmarkdown形式で出力してください。
+        実行内容: 以下の手順で対象ファイルを分析してください。
+        1. 両方の`22.md`ファイルの内容を読み込み、テキストの差分を特定する。
+        2. 各ファイルが存在するディレクトリの文脈（ルートの`issue-notes/`と`.github/actions-tmp/issue-notes/`）から、それぞれの`22.md`の意図や役割を推測する。
+        3. 重複が存在する場合、それが意図的なものか、あるいは整理が必要な冗長性であるかを判断する。
 
-     確認事項: スクリプトの実行ロジック、プロンプトの解釈、および生成される出力フォーマットとの整合性を確認してください。
+        確認事項: `issue-notes/`ディレクトリと`.github/actions-tmp/issue-notes/`ディレクトリの他のファイルの構成や命名規則を確認し、`22.md`の重複が一般的なパターンであるかどうかを評価してください。
 
-     期待する出力: `DevelopmentStatusGenerator.cjs` の改善提案をmarkdown形式で出力。具体的には、プロンプトガイドラインを満たすための具体的なコード変更の方向性（例: 「次の一手候補」の粒度、Agent実行プロンプトの構成要素）を含めてください。
-     ```
+        期待する出力: `22.md`ファイルの重複状況、内容の差分、それぞれのファイルが存在する意図に関する分析結果をmarkdown形式で出力してください。また、重複を解消するか、それぞれの役割を明確にするための具体的な推奨案を含めてください。
+        ```
 
-2. `generate_repo_list` の多言語対応強化
-   - 最初の小さな一歩: `src/generate_repo_list/strings.yml` の現状の構造と、`src/generate_repo_list/markdown_generator.py` などでの利用状況を分析し、多言語化の拡張性を評価する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: src/generate_repo_list/strings.yml, src/generate_repo_list/markdown_generator.py, src/generate_repo_list/seo_template.yml
+2.  既存のissue-notesのレビューとアーカイブ戦略の検討 [Issue #10](../issue-notes/10.md) を例に
+    -   最初の小さな一歩: `issue-notes/`ディレクトリ内のファイルをリストアップし、最終更新日時が古いファイルをいくつかピックアップする。特に`issue-notes/10.md`の内容を確認する。
+    -   Agent実行プロンプ:
+        ```
+        対象ファイル: issue-notes/
 
-     実行内容: `generate_repo_list` が生成するコンテンツ（README内の統計バッジ、SEO情報、リポジトリの説明など）の多言語対応を強化するための改善点を洗い出し、具体的な実装方針をmarkdown形式で出力してください。
+        実行内容: `issue-notes/`ディレクトリ内の全`.md`ファイルを対象に、以下の分析を実施してください。
+        1. 各ファイルの最終更新日時を取得し、特定の期間（例: 過去1年以上）更新がないファイルを特定する。
+        2. 特定した古いファイルの中から代表的なもの（例: `issue-notes/10.md`）の内容を詳細に分析し、その課題が現在のプロジェクト状況において解決済みであるか、あるいは依然として未解決の課題であるかを評価する。
+        3. 解決済みと判断されるissue-noteをアーカイブするための、具体的なプロセスやディレクトリ構造（例: `archive/`ディレクトリの導入）を提案する。
 
-     確認事項: 既存の多言語対応（`README.ja.md`など）との整合性、および`strings.yml`が現在どのように利用されているかを確認してください。
+        確認事項: 各issue-noteの内容が、現在のプロジェクトの機能やコードベースとどのように関連しているか、また過去のコミット履歴や他のドキュメントで解決済みと示唆されている情報がないかを確認してください。
 
-     期待する出力: 多言語対応強化のための機能要件と、`strings.yml`や関連するPythonスクリプト（例: `markdown_generator.py`）の変更案をmarkdown形式で出力してください。
-     ```
+        期待する出力: `issue-notes/`ディレクトリ内の古いissue-noteのリスト（ファイル名、最終更新日時を含む）と、`issue-notes/10.md`の内容分析に基づく解決状況の評価をmarkdown形式で出力してください。加えて、解決済みのissue-noteを整理し、アーカイブするための具体的な戦略と手順案を提示してください。
+        ```
 
-3. `check_large_files` の設定と機能の改善
-   - 最初の小さな一歩: `.github_automation/check_large_files/check-large-files.toml` と `.github_automation/check_large_files/scripts/check_large_files.py` の内容をレビューし、設定の柔軟性やスクリプトの保守性を評価する。
-   - Agent実行プロンプト:
-     ```
-     対象ファイル: .github_automation/check_large_files/check-large-files.toml, .github_automation/check_large_files/scripts/check_large_files.py, .github/workflows/call-check-large-files.yml
+3.  GitHub Actionsワークフローの冗長性チェックと最適化 [Issue #15](../issue-notes/15.md) を例に
+    -   最初の小さな一歩: `.github/workflows/`と`.github/actions-tmp/.github/workflows/`の両方のディレクトリにあるワークフローファイルの名前を比較し、重複や類似しているものを特定する。
+    -   Agent実行プロンプ:
+        ```
+        対象ファイル: .github/workflows/, .github/actions-tmp/.github/workflows/
 
-     実行内容: `check_large_files` アクションの設定ファイル（`check-large-files.toml`）の柔軟性を向上させ、より多くのプロジェクトで簡単に再利用できるようにするための改善点を分析し、具体的な設定例とスクリプトの変更案をmarkdown形式で出力してください。また、`check_large_files.py` のコード品質（可読性、テスト容易性）の観点からリファクタリングの機会を特定してください。
+        実行内容: 両方のディレクトリ内のGitHub Actionsワークフローファイルを比較し、冗長性や非効率性を特定してください。
+        1. 両ディレクトリ内の全`.yml`ファイル名をリストアップし、重複する名前のワークフローを特定する。
+        2. 特定された重複ワークフロー（例: `call-check-large-files.yml`など）について、それぞれの内容を比較し、機能的な差異があるか、あるいは全く同じ内容であるかを評価する。
+        3. 冗長性が見られるワークフローに対し、統合、削除、または役割の明確化による最適化案を検討する。
 
-     確認事項: 現在の設定がどのように利用されているか、およびアクションがどのように呼び出されているか（`call-check-large-files.yml`）を確認してください。
+        確認事項: 各ワークフローのトリガー、実行するスクリプト、依存関係、およびプロジェクト全体におけるそのワークフローの目的を把握し、安易な統合や削除が既存のCI/CDパイプラインに悪影響を与えないことを確認してください。
 
-     期待する出力: `check-large-files.toml` の改善された設定構造案と、`check_large_files.py` のリファクタリングに関する具体的な提案をmarkdown形式で出力してください。
+        期待する出力: GitHub Actionsワークフローの重複状況と冗長性の詳細な分析結果をmarkdown形式で出力してください。また、ワークフローを効率化・最適化するための具体的な手順と、それに伴う利点（例: メンテナンス性の向上、実行時間の短縮など）についての説明を含めてください。この分析が、[Issue #15](../issue-notes/15.md) の議論を深めることに貢献するような洞察もあれば含めてください。
+        ```
 
 ---
-Generated at: 2026-11-11 07:08:03 JST
+Generated at: 2026-11-12 07:07:34 JST
