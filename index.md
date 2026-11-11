@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 115 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
+og_description: "Featuring 116 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 115 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
+twitter_description: "Featuring 116 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -47,10 +47,10 @@ json_ld: |
       "name": "cat2151",
       "url": "https://cat2151.github.io/",
       "sameAs": "https://github.com/cat2151",
-      "description": "Programmer and developer. Publishing 115 open source projects.",
+      "description": "Programmer and developer. Publishing 116 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 115 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript.",
+    "description": "Featuring 116 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-11-10 (UTC) / 2026-11-11 (JST)
+Last Updated: 2026-11-11 (UTC) / 2026-11-12 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,11 +71,11 @@ Last Updated: 2026-11-10 (UTC) / 2026-11-11 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-115-blue) ![Active](https://img.shields.io/badge/Active-87-green) ![Archived](https://img.shields.io/badge/Archived-23-yellow) ![Forks](https://img.shields.io/badge/Forks-5-purple) ![Stars](https://img.shields.io/badge/Total Stars-60-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-116-blue) ![Active](https://img.shields.io/badge/Active-88-green) ![Archived](https://img.shields.io/badge/Archived-23-yellow) ![Forks](https://img.shields.io/badge/Forks-5-purple) ![Stars](https://img.shields.io/badge/Total Stars-60-gold)
 
 ### Core Technologies
 
-![Rust](https://img.shields.io/badge/Rust-27_(23.5%25)-dea584?style=flat&logo=rust) ![JavaScript](https://img.shields.io/badge/JavaScript-25_(21.7%25)-f1e05a?style=flat&logo=javascript) ![TypeScript](https://img.shields.io/badge/TypeScript-16_(13.9%25)-3178c6?style=flat&logo=typescript) ![Python](https://img.shields.io/badge/Python-14_(12.2%25)-3572A5?style=flat&logo=python) ![HTML](https://img.shields.io/badge/HTML-6_(5.2%25)-e34c26?style=flat&logo=html5)
+![Rust](https://img.shields.io/badge/Rust-28_(24.1%25)-dea584?style=flat&logo=rust) ![JavaScript](https://img.shields.io/badge/JavaScript-25_(21.6%25)-f1e05a?style=flat&logo=javascript) ![TypeScript](https://img.shields.io/badge/TypeScript-16_(13.8%25)-3178c6?style=flat&logo=typescript) ![Python](https://img.shields.io/badge/Python-14_(12.1%25)-3572A5?style=flat&logo=python) ![HTML](https://img.shields.io/badge/HTML-6_(5.2%25)-e34c26?style=flat&logo=html5)
 
 
 ---
@@ -83,6 +83,29 @@ Last Updated: 2026-11-10 (UTC) / 2026-11-11 (JST)
 ## 🚀 Active Development
 
 *注意: 一部のプロジェクトには「Project Highlights」セクションが含まれていますが、これらはAIが自動生成した内容であり、不正確な場合があります。*
+
+## [repl-plugin-player](https://cat2151.github.io/repl-plugin-player/)
+オーディオプラグインをscriptで演奏
+
+<a href="https://cat2151.github.io/repl-plugin-player/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: audio-plugin-host](https://img.shields.io/badge/Topic-audio--plugin--host-lightblue) ![Topic: javascript](https://img.shields.io/badge/Topic-javascript-lightblue) ![Topic: rust-lang](https://img.shields.io/badge/Topic-rust--lang-lightblue)
+
+- **Repository**: [https://github.com/cat2151/repl-plugin-player](https://github.com/cat2151/repl-plugin-player)
+- **GitHub Pages**: [https://cat2151.github.io/repl-plugin-player/](https://cat2151.github.io/repl-plugin-player/)
+- 📅 2026-11-11 (UTC) / 2026-11-11 (JST)
+
+## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
+GitHub Pages サイト用のリポジトリ一覧自動生成システム
+
+![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
+
+- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
+- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
+
+### Project Highlights
+- GitHub APIを利用してリポジトリ情報を取得し、GitHub Pagesサイト用にMarkdownファイルを自動生成するシステムです。
+- SEOに最適化されたリポジトリ一覧ページをJekyll形式で出力し、Web検索やLLMからの参照性を向上させます。
+- 各リポジトリの概要文やバッジ、統計情報を自動で組み込み、情報の充実と可視化を実現します。
+- 📅 2026-11-10 (UTC) / 2026-11-11 (JST)
 
 ## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
 Standard MIDI Fileを編集するeditor。演奏はVST3やCLAPなどオーディオプラグインでリッチに
@@ -101,20 +124,6 @@ Standard MIDI Fileを編集するeditor。演奏はVST3やCLAPなどオーディ
 - **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
 - **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
 - 📅 2026-11-10 (UTC) / 2026-11-10 (JST)
-
-## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
-GitHub Pages サイト用のリポジトリ一覧自動生成システム
-
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Python](https://img.shields.io/badge/Python-3572A5?style=flat&logo=python)
-
-- **Repository**: [https://github.com/cat2151/cat2151.github.io](https://github.com/cat2151/cat2151.github.io)
-- **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
-
-### Project Highlights
-- GitHub API を活用し、GitHub Pages サイト用のリポジトリ一覧を自動生成するシステムです。
-- 検索エンジンに最適化されたマークダウンコンテンツを生成し、GitHubユーザーページの問題を解消します。
-- 各リポジトリの概要表示、バッジ、分類機能などを備え、開発プロジェクトの情報公開を強化します。
-- 📅 2026-11-09 (UTC) / 2026-11-10 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
