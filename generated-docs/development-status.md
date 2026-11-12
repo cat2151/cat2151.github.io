@@ -1,58 +1,54 @@
-Last updated: 2026-11-12
+Last updated: 2026-11-13
 
 # Development Status
 
 ## 現在のIssues
-オープン中のIssueはありません。
+- 現在オープン中のIssueはありません。
 
 ## 次の一手候補
-1.  [Issue #22](../issue-notes/22.md) の内容確認と整理
-    -   最初の小さな一歩: `issue-notes/22.md`と`.github/actions-tmp/issue-notes/22.md`の内容を比較し、差分とそれぞれのファイルが存在する意図を調査する。
-    -   Agent実行プロンプ:
-        ```
-        対象ファイル: issue-notes/22.md, .github/actions-tmp/issue-notes/22.md
+1. [改善] 開発状況生成プロンプトの精度向上と具体化 (新規提案)
+   - 最初の小さな一歩: 現在の`development-status-prompt.md`の内容を分析し、より具体的な指示や制約を追加できないか検討する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
 
-        実行内容: 以下の手順で対象ファイルを分析してください。
-        1. 両方の`22.md`ファイルの内容を読み込み、テキストの差分を特定する。
-        2. 各ファイルが存在するディレクトリの文脈（ルートの`issue-notes/`と`.github/actions-tmp/issue-notes/`）から、それぞれの`22.md`の意図や役割を推測する。
-        3. 重複が存在する場合、それが意図的なものか、あるいは整理が必要な冗長性であるかを判断する。
+     実行内容: `development-status-prompt.md`に記述されている現在の開発状況生成プロンプトを分析し、以下の観点から改善案をMarkdown形式で出力してください：
+     1) 生成されるサマリーがより具体的になるような指示の追加
+     2) ハルシネーションをさらに抑制するための制約強化
+     3) 開発者がすぐにアクションを起こせるような「次の一手候補」の生成精度向上
 
-        確認事項: `issue-notes/`ディレクトリと`.github/actions-tmp/issue-notes/`ディレクトリの他のファイルの構成や命名規則を確認し、`22.md`の重複が一般的なパターンであるかどうかを評価してください。
+     確認事項: このプロンプトが利用される`DevelopmentStatusGenerator.cjs`との連携、および過去に生成された`generated-docs/development-status.md`の内容との比較を考慮してください。
 
-        期待する出力: `22.md`ファイルの重複状況、内容の差分、それぞれのファイルが存在する意図に関する分析結果をmarkdown形式で出力してください。また、重複を解消するか、それぞれの役割を明確にするための具体的な推奨案を含めてください。
-        ```
+     期待する出力: `development-status-prompt.md`の改善案を記述したMarkdownファイル。具体的には、変更を提案する箇所と、その理由、期待する効果を含めてください。
+     ```
 
-2.  既存のissue-notesのレビューとアーカイブ戦略の検討 [Issue #10](../issue-notes/10.md) を例に
-    -   最初の小さな一歩: `issue-notes/`ディレクトリ内のファイルをリストアップし、最終更新日時が古いファイルをいくつかピックアップする。特に`issue-notes/10.md`の内容を確認する。
-    -   Agent実行プロンプ:
-        ```
-        対象ファイル: issue-notes/
+2. [改善] リポジトリリスト生成機能のエラーハンドリング強化 (新規提案)
+   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py`や`src/generate_repo_list/project_overview_fetcher.py`におけるAPI呼び出しやファイルI/O関連のエラーハンドリングの現状を調査する。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: src/generate_repo_list/repository_processor.py, src/generate_repo_list/project_overview_fetcher.py
 
-        実行内容: `issue-notes/`ディレクトリ内の全`.md`ファイルを対象に、以下の分析を実施してください。
-        1. 各ファイルの最終更新日時を取得し、特定の期間（例: 過去1年以上）更新がないファイルを特定する。
-        2. 特定した古いファイルの中から代表的なもの（例: `issue-notes/10.md`）の内容を詳細に分析し、その課題が現在のプロジェクト状況において解決済みであるか、あるいは依然として未解決の課題であるかを評価する。
-        3. 解決済みと判断されるissue-noteをアーカイブするための、具体的なプロセスやディレクトリ構造（例: `archive/`ディレクトリの導入）を提案する。
+     実行内容: 対象ファイル内のリポジトリ情報取得および処理ロジックを分析し、以下の観点からエラーハンドリングの強化が必要な箇所を洗い出し、改善案をMarkdown形式で出力してください：
+     1) GitHub APIからのデータ取得失敗時の挙動
+     2) 設定ファイルやテンプレートファイルの読み込み失敗時の挙動
+     3) 予期せぬデータ形式や値が入力された場合の堅牢性
 
-        確認事項: 各issue-noteの内容が、現在のプロジェクトの機能やコードベースとどのように関連しているか、また過去のコミット履歴や他のドキュメントで解決済みと示唆されている情報がないかを確認してください。
+     確認事項: 既存の`src/generate_repo_list/generate_repo_list.py`からの呼び出しフローと、エラー発生時の全体的な影響範囲を確認してください。エラーログの出力が適切に行われているかも確認すること。
 
-        期待する出力: `issue-notes/`ディレクトリ内の古いissue-noteのリスト（ファイル名、最終更新日時を含む）と、`issue-notes/10.md`の内容分析に基づく解決状況の評価をmarkdown形式で出力してください。加えて、解決済みのissue-noteを整理し、アーカイブするための具体的な戦略と手順案を提示してください。
-        ```
+     期待する出力: エラーハンドリングの強化が必要な箇所とその具体的なコード改善案をMarkdown形式で記述したファイル。`try-except`ブロックの追加や、適切なエラーメッセージ、リトライロジックの提案を含めてください。
+     ```
 
-3.  GitHub Actionsワークフローの冗長性チェックと最適化 [Issue #15](../issue-notes/15.md) を例に
-    -   最初の小さな一歩: `.github/workflows/`と`.github/actions-tmp/.github/workflows/`の両方のディレクトリにあるワークフローファイルの名前を比較し、重複や類似しているものを特定する。
-    -   Agent実行プロンプ:
-        ```
-        対象ファイル: .github/workflows/, .github/actions-tmp/.github/workflows/
+3. [ドキュメント] Callgraph GitHub Actionの利用手順書作成 (新規提案)
+   - 最初の小さな一歩: `.github/actions-tmp/.github/workflows/callgraph.yml`と`.github/actions-tmp/.github_automation/callgraph/docs/callgraph.md`の内容をレビューし、外部プロジェクトで利用するための情報を洗い出す。
+   - Agent実行プロンプト:
+     ```
+     対象ファイル: .github/actions-tmp/.github/workflows/callgraph.yml, .github/actions-tmp/.github_automation/callgraph/docs/callgraph.md
 
-        実行内容: 両方のディレクトリ内のGitHub Actionsワークフローファイルを比較し、冗長性や非効率性を特定してください。
-        1. 両ディレクトリ内の全`.yml`ファイル名をリストアップし、重複する名前のワークフローを特定する。
-        2. 特定された重複ワークフロー（例: `call-check-large-files.yml`など）について、それぞれの内容を比較し、機能的な差異があるか、あるいは全く同じ内容であるかを評価する。
-        3. 冗長性が見られるワークフローに対し、統合、削除、または役割の明確化による最適化案を検討する。
+     実行内容: 対象ファイルの内容を基に、`callgraph.yml`を外部プロジェクトでGitHub Actionとして利用する際に必要な設定項目（入力パラメータ、シークレット、前提条件など）を洗い出し、その利用手順書をMarkdown形式で作成してください。
 
-        確認事項: 各ワークフローのトリガー、実行するスクリプト、依存関係、およびプロジェクト全体におけるそのワークフローの目的を把握し、安易な統合や削除が既存のCI/CDパイプラインに悪影響を与えないことを確認してください。
+     確認事項: `callgraph.yml`が内部で依存するスクリプトやCodeQLクエリ（例: `.github/actions-tmp/.github_automation/callgraph/scripts/analyze-codeql.cjs`, `.github/actions-tmp/.github_automation/callgraph/codeql-queries/callgraph.ql`）の存在と、それらが利用プロジェクトにどのように配置されるべきか考慮してください。
 
-        期待する出力: GitHub Actionsワークフローの重複状況と冗長性の詳細な分析結果をmarkdown形式で出力してください。また、ワークフローを効率化・最適化するための具体的な手順と、それに伴う利点（例: メンテナンス性の向上、実行時間の短縮など）についての説明を含めてください。この分析が、[Issue #15](../issue-notes/15.md) の議論を深めることに貢献するような洞察もあれば含めてください。
-        ```
+     期待する出力: `callgraph.yml`を外部プロジェクトで利用するための具体的な導入手順、必須パラメータの設定方法、必要なシークレットの登録手順、および前提条件を詳細に記述したMarkdown形式のドキュメント。
 
 ---
-Generated at: 2026-11-12 07:07:34 JST
+Generated at: 2026-11-13 07:08:40 JST
