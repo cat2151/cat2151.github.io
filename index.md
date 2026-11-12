@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-11-11 (UTC) / 2026-11-12 (JST)
+Last Updated: 2026-11-12 (UTC) / 2026-11-13 (JST)
 
 ## 📋 Table of Contents
 
@@ -91,7 +91,25 @@ Last Updated: 2026-11-11 (UTC) / 2026-11-12 (JST)
 
 - **Repository**: [https://github.com/cat2151/repl-plugin-player](https://github.com/cat2151/repl-plugin-player)
 - **GitHub Pages**: [https://cat2151.github.io/repl-plugin-player/](https://cat2151.github.io/repl-plugin-player/)
-- 📅 2026-11-11 (UTC) / 2026-11-11 (JST)
+- 📅 2026-11-12 (UTC) / 2026-11-13 (JST)
+
+## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
+Standard MIDI Fileを編集するeditor。演奏はVST3やCLAPなどオーディオプラグインでリッチに
+
+<a href="https://cat2151.github.io/cat-smf-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: audio-processing](https://img.shields.io/badge/Topic-audio--processing-lightblue) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: midi](https://img.shields.io/badge/Topic-midi-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-smf-editor](https://github.com/cat2151/cat-smf-editor)
+- **GitHub Pages**: [https://cat2151.github.io/cat-smf-editor/](https://cat2151.github.io/cat-smf-editor/)
+- 📅 2026-11-12 (UTC) / 2026-11-13 (JST)
+
+## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
+オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
+
+<a href="https://cat2151.github.io/cat-plugin-player/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: plugin-host](https://img.shields.io/badge/Topic-plugin--host-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue)
+
+- **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
+- **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
+- 📅 2026-11-12 (UTC) / 2026-11-13 (JST)
 
 ## [cat2151.github.io](https://cat2151.github.io/cat2151.github.io/)
 GitHub Pages サイト用のリポジトリ一覧自動生成システム
@@ -102,28 +120,10 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用してリポジトリ情報を取得し、GitHub Pagesサイト用にMarkdownファイルを自動生成するシステムです。
-- SEOに最適化されたリポジトリ一覧ページをJekyll形式で出力し、Web検索やLLMからの参照性を向上させます。
-- 各リポジトリの概要文やバッジ、統計情報を自動で組み込み、情報の充実と可視化を実現します。
-- 📅 2026-11-10 (UTC) / 2026-11-11 (JST)
-
-## [cat-smf-editor](https://cat2151.github.io/cat-smf-editor/)
-Standard MIDI Fileを編集するeditor。演奏はVST3やCLAPなどオーディオプラグインでリッチに
-
-<a href="https://cat2151.github.io/cat-smf-editor/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: audio-processing](https://img.shields.io/badge/Topic-audio--processing-lightblue) ![Topic: editor](https://img.shields.io/badge/Topic-editor-lightblue) ![Topic: midi](https://img.shields.io/badge/Topic-midi-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cat-smf-editor](https://github.com/cat2151/cat-smf-editor)
-- **GitHub Pages**: [https://cat2151.github.io/cat-smf-editor/](https://cat2151.github.io/cat-smf-editor/)
-- 📅 2026-11-10 (UTC) / 2026-11-10 (JST)
-
-## [cat-plugin-player](https://cat2151.github.io/cat-plugin-player/)
-オーディオプラグインをすぐ鳴らす（exe実行から音が出るまで体感200ms）
-
-<a href="https://cat2151.github.io/cat-plugin-player/README.ja.html"><img src="https://img.shields.io/badge/🇯🇵-Japanese-red.svg"></a> ![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Available-brightgreen) ![Rust](https://img.shields.io/badge/Rust-dea584?style=flat&logo=rust) ![Topic: plugin-host](https://img.shields.io/badge/Topic-plugin--host-lightblue) ![Topic: rust](https://img.shields.io/badge/Topic-rust-lightblue)
-
-- **Repository**: [https://github.com/cat2151/cat-plugin-player](https://github.com/cat2151/cat-plugin-player)
-- **GitHub Pages**: [https://cat2151.github.io/cat-plugin-player/](https://cat2151.github.io/cat-plugin-player/)
-- 📅 2026-11-10 (UTC) / 2026-11-10 (JST)
+- GitHub APIを利用し、リポジトリ情報を自動取得するシステムです。
+- JekyllベースのGitHub Pagesサイト向けに、SEO最適化されたリポジトリ一覧をマークダウンで自動生成します。
+- これにより、リポジトリの検索エンジンへのインデックスを促進し、LLMによる参照失敗の緩和を目指します。
+- 📅 2026-11-11 (UTC) / 2026-11-12 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
 MML(Music Macro Language)が使えるDAW（のようなもの）。TUI
