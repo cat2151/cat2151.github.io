@@ -1,54 +1,90 @@
-Last updated: 2026-11-13
+Last updated: 2026-11-14
 
 # Development Status
 
 ## 現在のIssues
-- 現在オープン中のIssueはありません。
+オープン中のIssueはありません。
 
 ## 次の一手候補
-1. [改善] 開発状況生成プロンプトの精度向上と具体化 (新規提案)
-   - 最初の小さな一歩: 現在の`development-status-prompt.md`の内容を分析し、より具体的な指示や制約を追加できないか検討する。
+1. `src/generate_repo_list`モジュールのテストカバレッジを分析する [Issue #TBD (新規提案)](../issue-notes/TBD.md)
+   - 最初の小さな一歩: `pytest-cov`をインストールし、既存のテストに対する現在のカバレッジレポートを生成する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md
+     対象ファイル: `pytest.ini`, `requirements-dev.txt`, `tests/`, `src/generate_repo_list/` 配下の全`.py`ファイル
 
-     実行内容: `development-status-prompt.md`に記述されている現在の開発状況生成プロンプトを分析し、以下の観点から改善案をMarkdown形式で出力してください：
-     1) 生成されるサマリーがより具体的になるような指示の追加
-     2) ハルシネーションをさらに抑制するための制約強化
-     3) 開発者がすぐにアクションを起こせるような「次の一手候補」の生成精度向上
+     実行内容:
+     1. 現在の環境に `pytest-cov` がインストールされているか確認し、インストールされていない場合は `requirements-dev.txt` に追加してインストール手順を提示する。
+     2. `pytest` と `pytest-cov` を使用して `src/generate_repo_list/` モジュールのテストカバレッジを測定し、`--cov-report=term-missing` オプションでカバレッジが低い（または存在しない）ファイルと行を特定する。
+     3. 測定結果に基づき、テストカバレッジが特に低いまたは欠けている上位3つのファイルと、それらのファイルでカバーされていない主要な機能やロジックの概要を分析する。
 
-     確認事項: このプロンプトが利用される`DevelopmentStatusGenerator.cjs`との連携、および過去に生成された`generated-docs/development-status.md`の内容との比較を考慮してください。
+     確認事項:
+     - 既存の `pytest.ini` ファイルの設定内容。
+     - `requirements-dev.txt` の既存の依存関係。
+     - `tests/` ディレクトリ内の既存のテストファイルとその構造。
 
-     期待する出力: `development-status-prompt.md`の改善案を記述したMarkdownファイル。具体的には、変更を提案する箇所と、その理由、期待する効果を含めてください。
+     期待する出力: Markdown形式で以下の内容を出力してください：
+     1. `pytest-cov` のインストール状況と、必要であればインストールコマンド。
+     2. `src/generate_repo_list/` モジュールの現在の全体的なテストカバレッジ率。
+     3. カバレッジが特に低いまたは欠けている上位3つのファイル名と、それぞれのカバレッジ率、およびそれらのファイルでカバーされていないと思われる主要な機能のリスト。
+     4. これらのファイルに対して最初に書くべきテストケースの簡単な提案。
      ```
 
-2. [改善] リポジトリリスト生成機能のエラーハンドリング強化 (新規提案)
-   - 最初の小さな一歩: `src/generate_repo_list/repository_processor.py`や`src/generate_repo_list/project_overview_fetcher.py`におけるAPI呼び出しやファイルI/O関連のエラーハンドリングの現状を調査する。
+2. GitHub Actionsワークフローの冗長性を調査・整理する [Issue #TBD (新規提案)](../issue-notes/TBD.md)
+   - 最初の小さな一歩: `.github/workflows/` と `.github/actions-tmp/.github/workflows/` ディレクトリ内の全ワークフローファイル名をリストアップし、ファイル名や内容から類似性や重複の可能性を洗い出す。
    - Agent実行プロンプト:
      ```
-     対象ファイル: src/generate_repo_list/repository_processor.py, src/generate_repo_list/project_overview_fetcher.py
+     対象ファイル: `.github/workflows/` および `.github/actions-tmp/.github/workflows/` ディレクトリ内の全`.yml`ファイル
 
-     実行内容: 対象ファイル内のリポジトリ情報取得および処理ロジックを分析し、以下の観点からエラーハンドリングの強化が必要な箇所を洗い出し、改善案をMarkdown形式で出力してください：
-     1) GitHub APIからのデータ取得失敗時の挙動
-     2) 設定ファイルやテンプレートファイルの読み込み失敗時の挙動
-     3) 予期せぬデータ形式や値が入力された場合の堅牢性
+     実行内容:
+     1. 両ディレクトリに存在するすべての `.yml` ワークフローファイルの名前を列挙する。
+     2. 列挙したファイルの中で、ファイル名やワークフローのトリガー、ジョブ内容から、機能的に重複している可能性のあるペアを3つ特定する。
+     3. 特定した重複候補のペアについて、それぞれのワークフローの目的、主要なステップ、および現在の運用状況（例: 実行頻度、成功履歴）を分析し、統合または削除の可能性を評価する。
 
-     確認事項: 既存の`src/generate_repo_list/generate_repo_list.py`からの呼び出しフローと、エラー発生時の全体的な影響範囲を確認してください。エラーログの出力が適切に行われているかも確認すること。
+     確認事項:
+     - 各ワークフローファイルのヘッダー（`name`, `on`）とジョブ定義（`jobs`）の構造。
+     - `actions-tmp` ディレクトリの存在理由や管理ポリシー（もしあれば）。
 
-     期待する出力: エラーハンドリングの強化が必要な箇所とその具体的なコード改善案をMarkdown形式で記述したファイル。`try-except`ブロックの追加や、適切なエラーメッセージ、リトライロジックの提案を含めてください。
+     期待する出力: Markdown形式で以下の内容を出力してください：
+     1. 全ワークフローファイルのリスト。
+     2. 重複または統合の可能性があるワークフローペアを3つ、それぞれのファイルパスとともに提示。
+     3. 各ペアについて、重複の可能性の理由、現在の運用状況に関する分析、および統合・削除に向けた検討事項を記述。
      ```
 
-3. [ドキュメント] Callgraph GitHub Actionの利用手順書作成 (新規提案)
-   - 最初の小さな一歩: `.github/actions-tmp/.github/workflows/callgraph.yml`と`.github/actions-tmp/.github_automation/callgraph/docs/callgraph.md`の内容をレビューし、外部プロジェクトで利用するための情報を洗い出す。
+3. `generate_repo_list`の`config.yml`設定ファイルをドキュメント化する [Issue #TBD (新規提案)](../issue-notes/TBD.md)
+   - 最初の小さな一歩: `src/generate_repo_list/config.yml` ファイルの内容を読み込み、YAML構造からトップレベルのキーとその子要素をすべて抽出する。
    - Agent実行プロンプト:
      ```
-     対象ファイル: .github/actions-tmp/.github/workflows/callgraph.yml, .github/actions-tmp/.github_automation/callgraph/docs/callgraph.md
+     対象ファイル: `src/generate_repo_list/config.yml`
 
-     実行内容: 対象ファイルの内容を基に、`callgraph.yml`を外部プロジェクトでGitHub Actionとして利用する際に必要な設定項目（入力パラメータ、シークレット、前提条件など）を洗い出し、その利用手順書をMarkdown形式で作成してください。
+     実行内容:
+     1. `src/generate_repo_list/config.yml` ファイルを解析し、含まれるすべての設定キー（ネストされたキーも含む）とそのデフォルト値（もしあれば）を抽出する。
+     2. 抽出した各設定キーについて、その目的、期待される値の型、許容される値の範囲または例を推測し、説明を記述する。
+     3. この設定ファイルが `generate_repo_list` ツールにどのように影響するかを簡潔に説明する。
 
-     確認事項: `callgraph.yml`が内部で依存するスクリプトやCodeQLクエリ（例: `.github/actions-tmp/.github_automation/callgraph/scripts/analyze-codeql.cjs`, `.github/actions-tmp/.github_automation/callgraph/codeql-queries/callgraph.ql`）の存在と、それらが利用プロジェクトにどのように配置されるべきか考慮してください。
+     確認事項:
+     - `src/generate_repo_list/` ディレクトリ内の他のPythonファイル（特に `config_manager.py` や `generate_repo_list.py`）で `config.yml` がどのように読み込まれ、利用されているかの概要。
 
-     期待する出力: `callgraph.yml`を外部プロジェクトで利用するための具体的な導入手順、必須パラメータの設定方法、必要なシークレットの登録手順、および前提条件を詳細に記述したMarkdown形式のドキュメント。
+     期待する出力: Markdown形式で、`config.yml` の各設定項目を以下のような構造で説明するドキュメントを生成してください。
+     ```markdown
+     # `config.yml` 設定ファイルリファレンス
+
+     このファイルは `generate_repo_list` ツールの挙動を制御します。
+
+     ## 設定項目
+
+     ### `[トップレベルキー]`
+     - **説明**: [このキーの目的を記述]
+     - **型**: [期待されるデータ型 (例: string, boolean, integer, list)]
+     - **デフォルト値**: [デフォルト値。ない場合は「なし」]
+     - **例**: [設定例]
+
+     #### `[ネストされたキー]`
+     - **説明**: [このネストされたキーの目的を記述]
+     - **型**: [期待されるデータ型]
+     - **デフォルト値**: [デフォルト値。ない場合は「なし」]
+     - **例**: [設定例]
+     ```
+     ```
 
 ---
-Generated at: 2026-11-13 07:08:40 JST
+Generated at: 2026-11-14 07:08:20 JST
