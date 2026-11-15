@@ -9,7 +9,7 @@ author: "cat2151"
 canonical_url: "https://cat2151.github.io/"
 og_title: |
   cat2151's GitHub Repository List
-og_description: "Featuring 116 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
+og_description: "Featuring 116 projects (⭐61 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
 og_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 og_type: "website"
 og_locale: "ja_JP"
@@ -18,7 +18,7 @@ og_site_name: |
 twitter_card: "summary_large_image"
 twitter_title: |
   cat2151's GitHub Repository List
-twitter_description: "Featuring 116 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
+twitter_description: "Featuring 116 projects (⭐61 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript."
 twitter_image: "https://cat2151.github.io/assets/favicon-512x512.png"
 dns_prefetch: [//github.com, //avatars.githubusercontent.com, //img.shields.io]
 preconnect: [//fonts.googleapis.com, //fonts.gstatic.com]
@@ -50,7 +50,7 @@ json_ld: |
       "description": "Programmer and developer. Publishing 116 open source projects.",
       "image": "https://cat2151.github.io/assets/favicon-512x512.png"
     },
-    "description": "Featuring 116 projects (⭐60 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript.",
+    "description": "Featuring 116 projects (⭐61 stars). Open source project collection using diverse technologies including Rust、JavaScript、TypeScript.",
     "url": "https://cat2151.github.io/",
     "name": "cat2151's GitHub Repository List"
   }
@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-11-14 (UTC) / 2026-11-15 (JST)
+Last Updated: 2026-11-15 (UTC) / 2026-11-16 (JST)
 
 ## 📋 Table of Contents
 
@@ -71,7 +71,7 @@ Last Updated: 2026-11-14 (UTC) / 2026-11-15 (JST)
 
 ## 📊 Project Statistics
 
-![Repositories](https://img.shields.io/badge/Total Repositories-116-blue) ![Active](https://img.shields.io/badge/Active-88-green) ![Archived](https://img.shields.io/badge/Archived-23-yellow) ![Forks](https://img.shields.io/badge/Forks-5-purple) ![Stars](https://img.shields.io/badge/Total Stars-60-gold)
+![Repositories](https://img.shields.io/badge/Total Repositories-116-blue) ![Active](https://img.shields.io/badge/Active-88-green) ![Archived](https://img.shields.io/badge/Archived-23-yellow) ![Forks](https://img.shields.io/badge/Forks-5-purple) ![Stars](https://img.shields.io/badge/Total Stars-61-gold)
 
 ### Core Technologies
 
@@ -120,9 +120,9 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub Pages用のリポジトリ一覧を自動生成し、SEOを強化するシステムです。
-- GitHub APIを利用してリポジトリ情報を取得し、Jekyll対応のMarkdownを出力します。
-- 検索エンジンからのクロール向上とLLMの参照失敗緩和を目的としています。
+- GitHub APIを利用し、ユーザーのリポジトリ情報を自動的に取得します。
+- 取得した情報から、JekyllベースのGitHub Pagesサイト向けにSEO最適化されたリポジトリ一覧と詳細Markdownファイルを生成します。
+- これにより、リポジトリの検索エンジンでの発見性を高め、LLMによる参照失敗の課題を緩和します。
 - 📅 2026-11-11 (UTC) / 2026-11-12 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
@@ -1036,6 +1036,15 @@ webpageを開くだけでソフトシンセで音が鳴る、最小規模のソ�
 
 ## 📦 Archived Projects
 
+## [STed2.07m](https://github.com/cat2151/STed2.07m)
+STed2 from STED_ALL.LZH
+
+![Stars](https://img.shields.io/badge/Stars-7-yellow) ![C++](https://img.shields.io/badge/C++-f34b7d?style=flat&logo=cplusplus)
+
+- **Repository**: [https://github.com/cat2151/STed2.07m](https://github.com/cat2151/STed2.07m)
+- **GitHub Pages**: None
+- 📅 2026-11-15 (UTC) / 2026-11-16 (JST)
+
 ## [cat-github-watcher](https://cat2151.github.io/cat-github-watcher/)
 GitHub Copilot Coding Agentを自動化し、人間はissueを投げてPRレビューすればよいだけにする
 
@@ -1049,15 +1058,6 @@ GitHub Copilot Coding Agentを自動化し、人間はissueを投げてPRレビ�
 - 認証済みGitHubユーザーの所有リポジトリを対象に、GraphQL APIを用いてPRのフェーズを自動判定します。
 - PRの状態に応じて、通知送信、コメント投稿、PR Ready化、自動マージ、Issue割り当てなどのアクションを実行します。
 - 📅 2026-08-28 (UTC) / 2026-08-28 (JST)
-
-## [STed2.07m](https://github.com/cat2151/STed2.07m)
-STed2 from STED_ALL.LZH
-
-![Stars](https://img.shields.io/badge/Stars-6-yellow) ![C++](https://img.shields.io/badge/C++-f34b7d?style=flat&logo=cplusplus)
-
-- **Repository**: [https://github.com/cat2151/STed2.07m](https://github.com/cat2151/STed2.07m)
-- **GitHub Pages**: None
-- 📅 2025-12-07 (UTC) / 2025-12-07 (JST)
 
 ## [ym2151-log-player-rust](https://cat2151.github.io/ym2151-log-player-rust/)
 ym2151-log-player のRust版
