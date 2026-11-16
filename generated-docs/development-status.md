@@ -1,49 +1,62 @@
-Last updated: 2026-11-16
+Last updated: 2026-11-17
 
 # Development Status
 
 ## 現在のIssues
-- 現在オープン中のIssueはありません。プロジェクトは自動化された更新プロセスが順調に稼働しています。
+オープン中のIssueはありません。
 
 ## 次の一手候補
-1. `generate_repo_list.py` の出力内容を拡充する
-   - 最初の小さな一歩: `src/generate_repo_list/generate_repo_list.py` が現在どのような情報を取得し、どのように整形して出力しているかを把握する。
+1. プロジェクト概要・開発状況生成ロジックのレビューと最適化
+   - 最初の小さな一歩: `generated-docs/development-status-generated-prompt.md` と `generated-docs/project-overview-generated-prompt.md` の内容を読み、現在のプロジェクトの状況を正確に反映しているか、改善できる点がないかを洗い出します。特に、その元となるプロンプトファイル (`.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md` と `project-overview-prompt.md`) を分析します。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `src/generate_repo_list/generate_repo_list.py`, `src/generate_repo_list/repository_processor.py`, `src/generate_repo_list/markdown_generator.py`
+     対象ファイル: .github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md, .github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md, generated-docs/development-status-generated-prompt.md, generated-docs/project-overview-generated-prompt.md
 
-     実行内容: `generate_repo_list.py` がリポジトリ情報を収集し、最終的なMarkdown出力を生成するまでの主要なデータフローと、現在出力されている情報の種類を分析してください。
+     実行内容:
+     1. `generated-docs/` 配下の自動生成されたプロンプトファイルが、現状のプロジェクトの情報（ファイル一覧、コミット履歴など）を適切に抽出し、正確な指示をAgentに与えているかを分析してください。
+     2. 特に、元のプロンプトファイル (`.github/actions-tmp/.github_automation/project_summary/prompts/`) の内容が、`generated-docs/` に出力されるプロンプトにどのように影響しているかを調査し、改善の余地がないかを検討してください。
+     3. ハルシネーションを避けるために、生成されるプロンプトが具体的な情報に基づいているかを確認してください。
 
-     確認事項: `src/generate_repo_list/config.yml` や `src/generate_repo_list/strings.yml` など、設定ファイルが情報収集および出力にどのように影響しているかを確認してください。
+     確認事項:
+     - 元のプロンプトファイルと生成されたプロンプトファイルの内容の整合性。
+     - プロジェクトの現在の状態（ファイル構造、コミット履歴、Issueの有無）が、生成されるプロンプトに正しく反映されているか。
 
-     期待する出力: `generate_repo_list.py` の主要な処理フローを説明し、現状の出力項目、および今後追加できそうな有用な情報（例: スター数、最終コミット日時、トピックタグなど）をmarkdown形式でリストアップしてください。
+     期待する出力: 現状のプロンプト生成プロセスにおける課題点（もしあれば）と、改善提案をmarkdown形式で出力してください。具体的には、元のプロンプトのどの部分を修正することで、より正確で有用な「Agent実行プロンプト」を生成できるか、例を挙げて説明してください。
      ```
 
-2. Daily Project Summary の生成ロジックを分析・改善する
-   - 最初の小さな一歩: `ProjectSummaryCoordinator.cjs` がどのように `DevelopmentStatusGenerator.cjs` や `ProjectOverviewGenerator.cjs` を呼び出し、各ジェネレータがどのような情報を利用してサマリーを生成しているかを理解する。
+2. CI/CDワークフローの安定性向上とエラーハンドリングの強化
+   - 最初の小さな一歩: `.github/workflows/call-daily-project-summary.yml` と `.github/workflows/generate_repo_list.yml` を読み、現在どのようにエラーハンドリングが実装されているか、また失敗時の通知メカニズムが存在するかを確認します。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `.github/actions-tmp/.github_automation/project_summary/scripts/ProjectSummaryCoordinator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/development/DevelopmentStatusGenerator.cjs`, `.github/actions-tmp/.github_automation/project_summary/scripts/overview/ProjectOverviewGenerator.cjs`, `.github/actions-tmp/.github_automation/project_summary/prompts/development-status-prompt.md`, `.github/actions-tmp/.github_automation/project_summary/prompts/project-overview-prompt.md`
+     対象ファイル: .github/workflows/call-daily-project-summary.yml, .github/workflows/generate_repo_list.yml
 
-     実行内容: `ProjectSummaryCoordinator.cjs` を起点として、日次サマリー (`generated-docs/development-status.md` と `generated-docs/project-overview.md`) がどのように生成されるか、特にどのファイルから情報を取得し、どのプロンプトが利用されているかを分析してください。
+     実行内容:
+     1. 対象ワークフローファイルにおいて、ジョブの失敗時の通知設定（例: Slack通知、Issue作成など）や、エラーが発生した場合の再試行ロジック、詳細なログ出力設定がどのように実装されているかを分析してください。
+     2. 現在の実装が、ワークフローの安定運用に十分であるかを評価し、改善点があれば提案してください。
 
-     確認事項: 生成プロセス全体におけるファイルI/Oのポイントと、各ジェネレータが受け取る入力データの種類（例: コミット履歴、ファイルリストなど）を確認してください。
+     確認事項:
+     - GitHub Actionsの標準的なエラーハンドリング機能（`on: failure`, `continue-on-error` など）が適切に利用されているか。
+     - 外部サービス連携（通知など）が必要な場合、その設定方法と既存の連携の有無。
 
-     期待する出力: Daily Project Summaryの生成フローを簡潔なmarkdown形式で図示し、現状の出力品質を向上させるための改善ポイント（例えば、より詳細な情報取得源の追加やプロンプトの最適化）を提案してください。
+     期待する出力: 対象ワークフローの現行のエラーハンドリングと通知メカニズムに関する分析結果をmarkdown形式で出力してください。提案される改善点については、具体的な設定例（YAMLコードスニペットなど）を含めて説明してください。
      ```
 
-3. 既存のPythonテストの拡充による安定性向上
-   - 最初の小さな一歩: 現在の `tests/` ディレクトリにあるテストファイル (`test_integration.py`, `test_repository_processor.py` など) を確認し、`src/generate_repo_list/` モジュール内のどの機能が既にテストされているか、またどの機能についてテストケースが不足しているかを洗い出す。
+3. `src/generate_repo_list/` モジュール群の単体テストカバレッジの拡充
+   - 最初の小さな一歩: `src/generate_repo_list/` ディレクトリ内の各モジュールファイル (`.py` ファイル) と、対応する `tests/test_*.py` ファイルをリストアップし、テストが存在しない、または不十分と思われるモジュールを特定します。
    - Agent実行プロンプト:
      ```
-     対象ファイル: `tests/`, `src/generate_repo_list/` 配下のすべての `.py` ファイル
+     対象ファイル: src/generate_repo_list/ ディレクトリ内のすべての `.py` ファイル, tests/ ディレクトリ内のすべての `test_*.py` ファイル
 
-     実行内容: `src/generate_repo_list/` モジュール内の主要なクラスや関数について、現在のテストカバレッジを分析し、特にカバレッジが低い、または重要なビジネスロジックに対してテストケースが不足している箇所を特定してください。
+     実行内容:
+     1. `src/generate_repo_list/` 内の各Pythonモジュール (`badge_generator.py`, `config_manager.py`, `markdown_generator.py` など) について、現在の `tests/` ディレクトリ内のテストファイルがどの程度カバレッジをカバーしているかを分析してください。
+     2. 特にテストが不足していると思われるモジュール、またはテストケースが追加されることでシステムの堅牢性が向上すると思われるモジュールを特定し、そのモジュールに対する新しいテストケースのアイデアを提案してください。
 
-     確認事項: `pytest.ini` や `requirements-dev.txt` など、テスト実行に必要な環境設定や依存関係を確認し、テスト実行が可能な状態であることを確認してください。
+     確認事項:
+     - 既存のテストファイルが、`pytest` フレームワークの慣例に従って記述されているか。
+     - モックやスタブが必要な依存関係を適切に処理しているか。
 
-     期待する出力: `src/generate_repo_list/` 内の各主要モジュールとそれに対応するテストの現状をまとめた表をmarkdown形式で出力し、追加すべき具体的なテストケースの例を2-3点提案してください。
+     期待する出力: `src/generate_repo_list/` モジュール群のテストカバレッジに関する現状分析をmarkdown形式で出力してください。テストが不足しているモジュールとその理由、およびそのモジュールに対して追加すべき具体的なテストケース（簡単なコード例を含む）を提案してください。
      ```
 
 ---
-Generated at: 2026-11-16 07:06:59 JST
+Generated at: 2026-11-17 07:07:36 JST
