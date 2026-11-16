@@ -58,7 +58,7 @@ json_ld: |
 
 # cat2151's Open Source Projects
 
-Last Updated: 2026-11-15 (UTC) / 2026-11-16 (JST)
+Last Updated: 2026-11-16 (UTC) / 2026-11-17 (JST)
 
 ## 📋 Table of Contents
 
@@ -120,9 +120,9 @@ GitHub Pages サイト用のリポジトリ一覧自動生成システム
 - **GitHub Pages**: [https://cat2151.github.io/cat2151.github.io/](https://cat2151.github.io/cat2151.github.io/)
 
 ### Project Highlights
-- GitHub APIを利用し、ユーザーのリポジトリ情報を自動的に取得します。
-- 取得した情報から、JekyllベースのGitHub Pagesサイト向けにSEO最適化されたリポジトリ一覧と詳細Markdownファイルを生成します。
-- これにより、リポジトリの検索エンジンでの発見性を高め、LLMによる参照失敗の課題を緩和します。
+- GitHub Pagesサイト向けに、GitHub APIを活用しリポジトリ一覧を自動生成するシステムです。
+- リポジトリ情報を取得し、SEOに最適化されたMarkdownファイルを自動出力します。
+- これにより、リポジトリの検索性向上とLLMによる参照失敗の緩和を目指します。
 - 📅 2026-11-11 (UTC) / 2026-11-12 (JST)
 
 ## [clap-mml-render-tui](https://cat2151.github.io/clap-mml-render-tui/)
