@@ -1,4 +1,4 @@
-Last updated: 2026-11-18
+Last updated: 2026-11-19
 
 
 # プロジェクト概要生成プロンプト（来訪者向け）
@@ -275,4 +275,4 @@ src/generate_repo_list/json_ld_template.json
 
 
 ---
-Generated at: 2026-11-18 07:07:11 JST
+Generated at: 2026-11-19 07:06:55 JST
